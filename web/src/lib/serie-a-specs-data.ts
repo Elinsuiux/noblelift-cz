@@ -1,0 +1,171 @@
+export const SERIE_A_SPECS_MODELS = [
+  "CPD15-A2",
+  "CPD18-A2",
+  "CPD20-A2",
+  "CPD25-A2",
+  "CPD30-A2",
+  "CPD35-A2",
+  "CPD38-A2",
+] as const;
+
+export const SERIE_A_SPECS_SOURCE_URL =
+  "https://www.noblelift.com/wlbysb/info.aspx?itemid=805&lcid=50";
+
+export const SERIE_A_PDF_CONTENT = {
+  cz: {
+    seriesName: "A2 Series Lithium Battery Forklift",
+    capacity: "1500 - 3800 kg",
+    voltage: "76,8 V Li-ion",
+    title: "Noblelift Serie A - technicke parametry",
+    subtitle: "CPD15~38 | Elektricke celni voziky s lithiovou baterii",
+    intro:
+      "Rada A2 predstavuje nakladove efektivni a ekologickou alternativu k dieselovym celnim vozikum. Kombinuje vykon, ergonomii a spolehlivost pro kazdodenni skladove a vyrobni provozy. Lithiova baterie umoznuje rychle nabijeni, dlouhou zivotnost a provoz bez emisi.",
+    featuresTitle: "Robustni konstrukce a chytra technologie / Snadna udrzba",
+    features: [
+      "Standardni displej s prehledem nad vozikem (head-up display)",
+      "Siroky a efektivni vyhled",
+      "Plne LED osvetleni voziku",
+      "Snadna kontrola hladiny hydraulického oleje",
+      "Pristup ke komponentum pro snadnou udrzbu",
+      "Sedadlo s nemechanickym tlumenim vibraci",
+      "Maly prumer volantu pro komfortni rizeni",
+      "Litinova ridici naprava (steering axle)",
+      "Prepínač predniho a zadniho stirace",
+      "Nabijeci port pro lithiovou baterii",
+      "Zvetseny nastupni schod",
+    ],
+    paramsTitle: "Parametry",
+    paramHeader: "Parametr",
+    manufacturerRow: "Typ vyrobce",
+    sourceNote: "Zdroj dat: Noblelift CPD15~38 (item 805)",
+    distributor: "VZV GROUP s.r.o. | noblelift.cz",
+  },
+  en: {
+    seriesName: "A2 Series Lithium Battery Forklift",
+    capacity: "1500 - 3800 kg",
+    voltage: "76.8 V Li-ion",
+    title: "Noblelift Series A - technical parameters",
+    subtitle: "CPD15~38 | Lithium electric counterbalance forklifts",
+    intro:
+      "The A2 series is a cost-effective and eco-friendly alternative to internal combustion forklifts. It combines performance, ergonomics and reliability for everyday warehouse and production operations. The lithium battery enables fast charging, long service life and zero-emission operation.",
+    featuresTitle: "Rugged and smart design / Easy maintenance",
+    features: [
+      "Standard head-up display",
+      "Wide and efficient visibility",
+      "Full vehicle LED lighting",
+      "Convenient hydraulic oil level check",
+      "Easy maintenance access",
+      "Non-mechanical vibration damping seat",
+      "Small diameter steering wheel",
+      "Cast steering axle",
+      "Front and rear wiper switch",
+      "Lithium battery charging port",
+      "Enlarged boarding step",
+    ],
+    paramsTitle: "Parameters",
+    paramHeader: "Parameter",
+    manufacturerRow: "Manufacturer's type",
+    sourceNote: "Data source: Noblelift CPD15~38 (item 805)",
+    distributor: "VZV GROUP s.r.o. | noblelift.cz",
+  },
+} as const;
+
+/** Parameter table sourced from Noblelift item 805 (CPD15~38 A Series). */
+export const SERIE_A_SPECS_ROWS = [
+  {
+    labelCs: "Nosnost",
+    labelEn: "Load capacity",
+    unit: "kg",
+    values: ["1500", "1800", "2000", "2500", "3000", "3500", "3800"],
+  },
+  {
+    labelCs: "Vlastni hmotnost vč. baterie",
+    labelEn: "Service weight incl. battery",
+    unit: "kg",
+    values: ["3000", "3200", "3450", "3750", "4380", "4680", "4880"],
+  },
+  {
+    labelCs: "Zdvih",
+    labelEn: "Lift height",
+    unit: "mm",
+    values: ["3000", "3000", "3000", "3000", "3000", "3000", "3000"],
+  },
+  {
+    labelCs: "Celkova delka",
+    labelEn: "Overall length",
+    unit: "mm",
+    values: ["2290", "2605", "2605", "2770", "2770", "2775", "2775"],
+  },
+  {
+    labelCs: "Celkova sirka (ram / pneumatiky)",
+    labelEn: "Overall width (frame / tires)",
+    unit: "mm",
+    values: [
+      "1126/1118",
+      "1126/1118",
+      "1150/1163",
+      "1150/1163",
+      "1195/1228",
+      "1195/1228",
+      "1195/1228",
+    ],
+  },
+  {
+    labelCs: "Rozmery vidlic (d x s x v)",
+    labelEn: "Fork dimensions (L x W x H)",
+    unit: "mm",
+    values: [
+      "920x100x35",
+      "920x100x35",
+      "1070/120/40",
+      "1070/122/45",
+      "1070/122/50",
+      "1070/122/50",
+      "1070/122/50",
+    ],
+  },
+  {
+    labelCs: "Sirka vidl. uchytu",
+    labelEn: "Width of fork rack",
+    unit: "mm",
+    values: ["1040", "1040", "1040", "1100", "1100", "1100", "1100"],
+  },
+  {
+    labelCs: "Polomer otaceni",
+    labelEn: "Turning radius",
+    unit: "mm",
+    values: ["2030", "2250", "2250", "2450", "2450", "2450", "2450"],
+  },
+  {
+    labelCs: "Jizdni rychlost naloz. / bez nakl.",
+    labelEn: "Travel speed laden / unladen",
+    unit: "km/h",
+    values: ["15/15", "14.5/15", "14.5/15", "18/19", "18/19", "19/19", "19/19"],
+  },
+  {
+    labelCs: "Zdvihova rychlost naloz. / bez nakl.",
+    labelEn: "Lift speed laden / unladen",
+    unit: "mm/s",
+    values: ["350/430", "330/430", "500/580", "530/500", "400/500", "400/500", "400/500"],
+  },
+  {
+    labelCs: "Vykon pohonneho motoru S2 60 min",
+    labelEn: "Drive motor rating S2 60 min",
+    unit: "kW",
+    values: ["10", "10", "15", "15", "20", "20", "20"],
+  },
+  {
+    labelCs: "Napeti a kapacita baterie",
+    labelEn: "Battery voltage / capacity",
+    unit: "V/Ah",
+    values: [
+      "76.8/150",
+      "76.8/175",
+      "76.8/300",
+      "76.8/300",
+      "76.8/300",
+      "76.8/300",
+      "76.8/300",
+    ],
+  },
+] as const;

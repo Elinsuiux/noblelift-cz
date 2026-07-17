@@ -1,0 +1,274 @@
+﻿node.exe : npm warn Unknown env config "devdir". This will stop working in the next major version of npm. See `npm help
+ npmrc` for supported config options.
+At line:1 char:1
++ & "C:\Program Files\nodejs/node.exe" "C:\Program Files\nodejs/node_mo ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (npm warn Unknow...config options.:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+src/components/ProductModelDetailPage.tsx(56,73): error TS2353: Object literal may only specify known properties, and 'series' does not exist in type '{ category: string; subcategory: string; }'.
+src/components/ProductModelDetailPage.tsx(61,24): error TS2345: Argument of type '{ label: string; }' is not assignable to parameter of type '{ label: string; href: { pathname: string; params: { category: string; subcategory?: undefined; }; }; } | { label: string; href: { pathname: string; params: { category: string; subcategory: string; }; }; }'.
+  Property 'href' is missing in type '{ label: string; }' but required in type '{ label: string; href: { pathname: string; params: { category: string; subcategory: string; }; }; }'.
+src/components/ProductModelDetailPage.tsx(76,33): error TS2322: Type '({ label: string; href: { pathname: string; params: { category: string; subcategory?: undefined; }; }; } | { label: string; href: { pathname: string; params: { category: string; subcategory: string; }; }; })[]' is not assignable to type 'Crumb[]'.
+  Type '{ label: string; href: { pathname: string; params: { category: string; subcategory?: undefined; }; }; } | { label: string; href: { pathname: string; params: { category: string; subcategory: string; }; }; }' is not assignable to type 'Crumb'.
+    Type '{ label: string; href: { pathname: string; params: { category: string; subcategory?: undefined; }; }; }' is not assignable to type 'Crumb'.
+      Types of property 'href' are incompatible.
+        Type '{ pathname: string; params: { category: string; subcategory?: undefined; }; }' is not assignable to type '{ pathname: "/products"; } | { pathname: "/products/[category]"; params: { category: string; }; } | { pathname: "/products/[category]/[subcategory]"; params: { category: string; subcategory: string; }; } | undefined'.
+          Type '{ pathname: string; params: { category: string; subcategory?: undefined; }; }' is not assignable to type '{ pathname: "/products"; } | { pathname: "/products/[category]"; params: { category: string; }; } | { pathname: "/products/[category]/[subcategory]"; params: { category: string; subcategory: string; }; }'.
+            Type '{ pathname: string; params: { category: string; subcategory?: undefined; }; }' is not assignable to type '{ pathname: "/products/[category]/[subcategory]"; params: { category: string; subcategory: string; }; }'.
+              Types of property 'pathname' are incompatible.
+                Type 'string' is not assignable to type '"/products/[category]/[subcategory]"'.
+src/lib/countries.ts(11,44): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(12,44): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(13,44): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(14,43): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(15,42): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(16,42): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(17,44): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(18,44): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(19,44): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(20,43): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(21,42): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(22,43): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(23,43): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(24,44): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(25,44): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(26,44): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(27,44): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(28,42): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(29,44): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(30,43): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(31,44): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(32,44): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(33,44): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(34,44): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(35,44): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(36,44): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(37,42): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(38,44): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(39,44): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(40,44): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(41,43): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(42,42): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(43,44): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(44,44): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(45,44): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(46,44): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(47,42): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(48,43): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(49,44): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(50,44): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(51,44): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(52,44): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(53,44): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(54,43): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(55,44): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(56,43): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(57,43): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(58,44): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(59,43): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(60,44): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(61,44): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(62,43): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(63,44): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(64,44): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(65,43): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(66,44): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(67,43): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(68,42): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(69,42): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(70,44): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(71,44): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(72,44): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(73,43): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(74,44): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(75,44): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(76,43): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(77,44): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(78,44): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(79,44): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(80,44): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(81,44): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(82,44): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(83,43): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(84,44): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(85,43): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(86,42): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(87,44): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(88,44): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(89,43): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(90,44): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(91,44): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(92,44): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(93,44): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(94,44): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(95,44): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(96,44): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(97,43): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(98,44): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(99,42): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(100,44): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(101,44): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(102,44): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(103,44): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(104,44): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(105,44): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(106,43): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(107,43): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(108,43): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(109,44): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(110,44): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(111,43): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(112,43): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(113,44): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(114,44): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(115,43): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(116,44): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(117,43): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(118,43): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(119,42): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(120,44): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(121,43): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(122,44): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(123,44): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(124,44): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(125,44): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(126,44): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(127,42): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(128,44): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(129,43): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(130,44): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(131,42): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(132,42): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(133,44): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(134,44): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(135,42): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(136,44): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(137,43): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(138,44): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(139,44): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(140,44): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(141,44): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(142,44): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(143,44): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(144,44): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(145,44): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(146,44): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(147,44): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(148,44): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(149,44): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(150,44): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(151,44): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(152,44): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(153,43): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(154,44): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(155,44): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(156,42): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(157,44): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(158,44): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(159,42): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(160,44): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(161,44): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(162,44): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(163,44): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(164,43): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(165,43): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(166,44): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(167,44): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(168,44): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(169,44): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(170,44): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(171,44): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(172,44): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(173,43): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(174,43): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(175,44): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(176,44): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(177,44): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(178,43): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(179,44): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(180,44): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(181,43): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(182,44): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(183,44): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(184,43): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(185,43): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(186,43): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(187,44): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(188,42): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(189,44): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(190,44): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(191,44): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(192,44): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(193,44): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(194,44): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(195,43): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(196,44): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(197,42): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(198,44): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(199,44): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(200,44): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(201,44): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(202,44): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(203,43): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(204,43): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(205,44): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(206,44): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(207,43): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(208,44): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(209,44): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(210,44): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(211,44): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(212,44): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(213,44): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(214,44): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(215,44): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(216,44): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(217,42): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(218,44): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(219,44): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(220,42): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(221,44): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(222,44): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(223,43): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(224,44): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(225,44): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(226,44): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(227,44): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(228,44): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(229,44): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(230,43): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(231,42): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(232,44): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(233,44): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(234,44): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(235,44): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(236,44): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(237,42): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(238,44): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(239,44): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(240,43): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(241,42): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(242,43): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(243,42): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(244,42): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(245,43): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(246,44): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(247,44): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(248,44): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(249,44): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(250,44): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(251,44): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(252,43): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(253,44): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(254,44): error TS2353: Object literal may only specify known properties, and 'cz' does not exist in type '{ cs: string; en: string; }'.
+src/lib/countries.ts(268,10): error TS7053: Element implicitly has an 'any' type because expression of type 'LocaleKey' can't be used to index type '{ cs: string; en: string; }'.
+  Property 'cz' does not exist on type '{ cs: string; en: string; }'.
+src/lib/generate-diesel-lpg-specs-pdf.ts(321,34): error TS2345: Argument of type '{ readonly seriesName: "A Series IC Forklift"; readonly capacity: "2000 - 3800 kg"; readonly fuel: "Diesel / LPG"; readonly title: "Noblelift Diesel/LPG - technicke parametry"; ... 8 more ...; readonly distributor: "VZV GROUP s.r.o. | noblelift.cz"; } | { ...; }' is not assignable to parameter of type '{ readonly seriesName: "A Series IC Forklift"; readonly capacity: "2000 - 3800 kg"; readonly fuel: "Diesel / LPG"; readonly title: "Noblelift Diesel/LPG - technicke parametry"; ... 8 more ...; readonly distributor: "VZV GROUP s.r.o. | noblelift.cz"; }'.
+  Type '{ readonly seriesName: "A Series IC Forklift"; readonly capacity: "2000 - 3800 kg"; readonly fuel: "Diesel / LPG"; readonly title: "Noblelift Diesel/LPG - technical parameters"; ... 8 more ...; readonly distributor: "VZV GROUP s.r.o. | noblelift.cz"; }' is not assignable to type '{ readonly seriesName: "A Series IC Forklift"; readonly capacity: "2000 - 3800 kg"; readonly fuel: "Diesel / LPG"; readonly title: "Noblelift Diesel/LPG - technicke parametry"; ... 8 more ...; readonly distributor: "VZV GROUP s.r.o. | noblelift.cz"; }'.
+    Types of property 'title' are incompatible.
+      Type '"Noblelift Diesel/LPG - technical parameters"' is not assignable to type '"Noblelift Diesel/LPG - technicke parametry"'.
+src/lib/generate-serie-a-specs-pdf.ts(313,34): error TS2345: Argument of type '{ readonly seriesName: "A2 Series Lithium Battery Forklift"; readonly capacity: "1500 - 3800 kg"; readonly voltage: "76,8 V Li-ion"; readonly title: "Noblelift Serie A - technicke parametry"; ... 8 more ...; readonly distributor: "VZV GROUP s.r.o. | noblelift.cz"; } | { ...; }' is not assignable to parameter of type '{ readonly seriesName: "A2 Series Lithium Battery Forklift"; readonly capacity: "1500 - 3800 kg"; readonly voltage: "76,8 V Li-ion"; readonly title: "Noblelift Serie A - technicke parametry"; ... 8 more ...; readonly distributor: "VZV GROUP s.r.o. | noblelift.cz"; }'.
+  Type '{ readonly seriesName: "A2 Series Lithium Battery Forklift"; readonly capacity: "1500 - 3800 kg"; readonly voltage: "76.8 V Li-ion"; readonly title: "Noblelift Series A - technical parameters"; ... 8 more ...; readonly distributor: "VZV GROUP s.r.o. | noblelift.cz"; }' is not assignable to type '{ readonly seriesName: "A2 Series Lithium Battery Forklift"; readonly capacity: "1500 - 3800 kg"; readonly voltage: "76,8 V Li-ion"; readonly title: "Noblelift Serie A - technicke parametry"; ... 8 more ...; readonly distributor: "VZV GROUP s.r.o. | noblelift.cz"; }'.
+    Types of property 'voltage' are incompatible.
+      Type '"76.8 V Li-ion"' is not assignable to type '"76,8 V Li-ion"'.

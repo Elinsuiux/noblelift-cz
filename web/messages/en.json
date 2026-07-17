@@ -1,0 +1,1917 @@
+{
+  "meta": {
+    "title": "Noblelift | VZV GROUP s.r.o.",
+    "description": "VZV GROUP s.r.o. – exclusive importer and distributor of Noblelift equipment for the Czech Republic and Slovakia. Material handling, service and spare parts."
+  },
+  "notFound": {
+    "badge": "404",
+    "title": "Page not found",
+    "description": "Sorry, the page you requested does not exist or has been moved.",
+    "hint": "Please check the URL, or continue to the homepage or Noblelift product catalog.",
+    "homeCta": "Back to home",
+    "productsCta": "View products",
+    "contactCta": "Contact us"
+  },
+  "brand": {
+    "sub": "VZV GROUP s.r.o."
+  },
+  "nav": {
+    "products": "Products",
+    "service": "Service & spare parts",
+    "about": "About us",
+    "contact": "Contact",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "openProductsMenu": "Open product categories"
+  },
+  "productsMenu": {
+    "categoryTitle": "Categories",
+    "categories": {
+      "all": "All products"
+    }
+  },
+  "hero": {
+    "title": "NOBLELIFT",
+    "subtitle": "VZV GROUP s.r.o. – exclusive importer and distributor of the Noblelift brand for the Czech Republic and Slovakia.",
+    "ctaPrimary": "View machine catalog",
+    "mediaNote": "Noblelift forklift photo",
+    "carousel": {
+      "prev": "Previous slide",
+      "next": "Next slide",
+      "slides": "Hero slides",
+      "goTo": "Go to slide {index}"
+    }
+  },
+  "why": {
+    "title": "Why choose Noblelift from VZV GROUP?",
+    "lead": "As the exclusive importer for CZ and SK, we offer complete support – from equipment selection and delivery to service and spare parts.",
+    "learnMore": "Learn more +",
+    "steps": {
+      "1": {
+        "title": "Global brand with proven quality",
+        "desc": "Noblelift is among the world's leading manufacturers of material handling equipment with modern R&D and production."
+      },
+      "2": {
+        "title": "Wide equipment portfolio",
+        "desc": "Counterbalanced forklifts, stackers, pallet trucks, reach trucks, rough terrain machines and work platforms."
+      },
+      "3": {
+        "title": "Expert consulting",
+        "desc": "We help you choose the right machine type, capacity, lift height, battery and accessories for your needs."
+      },
+      "4": {
+        "title": "Service and genuine parts",
+        "desc": "Warranty and post-warranty service plus original Noblelift spare parts supply."
+      },
+      "5": {
+        "title": "Fast delivery across Europe",
+        "desc": "We work with European logistics partners to deliver equipment directly to you."
+      },
+      "6": {
+        "title": "Exclusive official importer",
+        "desc": "We are the only authorized Noblelift importer for CZ and SK. Every machine comes with full manufacturer warranty and direct factory technical support."
+      }
+    }
+  },
+  "video": {
+    "note": "Official Noblelift video",
+    "play": "Play Noblelift video",
+    "close": "Close video"
+  },
+  "media": {
+    "whyBannerAlt": "Noblelift headquarters building",
+    "whyBannerHint": "Wide photo of Noblelift headquarters",
+    "logisticsAlt": "Noblelift equipment delivery and logistics",
+    "logisticsHint": "Photo of unloading, transport or forklift in front of a hall",
+    "dealerAlt": "Row of Noblelift Avant pallet trucks in the warehouse",
+    "dealerHint": "Warehouse photo with Noblelift pallet trucks",
+    "categoryHint": "Equipment category photo",
+    "categoryAlt": {
+      "1": "Noblelift counterbalance forklifts in a warehouse",
+      "2": "Manual stackers in a warehouse hall",
+      "3": "Pallet trucks in warehouse operation",
+      "4": "Rough-terrain trucks and manipulators",
+      "5": "Reach trucks in warehouse aisles",
+      "6": "Noblelift scissor lifts"
+    }
+  },
+  "categories": {
+    "titlePrefix": "",
+    "titleBrand": "Noblelift",
+    "titleSuffix": "equipment categories",
+    "cta": "Full catalog",
+    "viewModels": "View models",
+    "catalogCta": "Browse the full Noblelift catalog",
+    "items": {
+      "1": {
+        "tags": "Electric / Diesel",
+        "title": "Counterbalanced forklifts",
+        "desc": "Three- and four-wheel electric and diesel counterbalanced forklifts. Available in lithium (Li-Ion) versions. Load capacity 2.5 to 10 t."
+      },
+      "2": {
+        "tags": "Without platform / With platform / Straddle",
+        "title": "Stackers",
+        "desc": "Electric pedestrian stackers and stackers with an operator platform. Compact design, high residual capacity and lift height up to 13 m."
+      },
+      "3": {
+        "tags": "Manual / Electric / With scales",
+        "title": "Pallet trucks",
+        "desc": "Manual, electric pedestrian and rider pallet trucks. Variants with scales, low entry and lithium drive."
+      },
+      "4": {
+        "tags": "Outdoor / Diesel / Construction",
+        "title": "Rough terrain forklifts & telehandlers",
+        "desc": "Diesel rough-terrain forklifts and telehandlers for construction and agriculture. Independent operation on uneven ground."
+      },
+      "5": {
+        "tags": "High lift / up to 13 m / Narrow aisles",
+        "title": "Reach trucks & order pickers",
+        "desc": "Reach trucks for high racks up to 13 m. Narrow-aisle models, double-deep versions and order pickers for efficient warehousing."
+      },
+      "6": {
+        "tags": "Electric",
+        "title": "Scissor lifts",
+        "desc": "Electric scissor work platforms for safe work at height during maintenance, assembly and warehouse operations."
+      }
+    }
+  },
+  "logistics": {
+    "title": "Transport & Logistics",
+    "intro": "Fast delivery throughout Europe. We handle everything from standard truck transport to special transport of heavy loads.",
+    "deliveryNote": "Standard delivery time 24–48 hours within CZ and SK",
+    "items": {
+      "1": {
+        "title": "Truck transport",
+        "desc": "Loading onto the ramp — standard delivery across CZ, SK and the EU"
+      },
+      "2": {
+        "title": "Special low-loader transport",
+        "desc": "Heavy and oversized machinery — safe special transport"
+      },
+      "3": {
+        "title": "Container transport",
+        "desc": "International container shipments — cost-effective for larger volumes"
+      }
+    }
+  },
+  "dealer": {
+    "titleLine1": "Want to become a",
+    "titleDealer": "dealer for",
+    "titleBrand": "Noblelift?",
+    "lead": "Join our growing network of authorized Noblelift dealers in Central and Eastern Europe. We offer competitive margins, full training, marketing support and backing from the manufacturer.",
+    "benefits": {
+      "1": "Competitive dealer pricing and margins",
+      "2": "Noblelift technical training and certification",
+      "3": "Marketing materials and support",
+      "4": "Direct technical support from the manufacturer",
+      "5": "Guaranteed spare parts availability"
+    }
+  },
+  "form": {
+    "heading": "Write to us",
+    "name": "First and last name",
+    "namePlaceholder": "Jan Novák",
+    "company": "Company",
+    "companyPlaceholder": "Your company name",
+    "email": "Email",
+    "emailPlaceholder": "jan.novak@company.com",
+    "phone": "Mobile phone",
+    "phoneDialCode": "Dial code",
+    "phonePlaceholder": "601 123 456",
+    "message": "Message",
+    "messagePlaceholder": "Describe your needs or question",
+    "country": "Country",
+    "countryPlaceholder": "Select country",
+    "search": "Search",
+    "noResults": "No results",
+    "send": "Send message",
+    "sending": "Sending…",
+    "error": "Submission failed. Please try again or contact us by phone.",
+    "orCall": "or call",
+    "fine": "By submitting, you agree to the <privacy>processing of personal data</privacy> to respond to your inquiry.",
+    "success": {
+      "title": "Quote request submitted",
+      "body": "We have received your inquiry and it is currently being processed.",
+      "bodyFollowUp": "We'll be in touch soon.",
+      "close": "Close"
+    }
+  },
+  "footer": {
+    "sub": "Exclusive importer and distributor of Noblelift for CZ and SK",
+    "nav": "Links",
+    "cats": "Categories",
+    "contact": "Contact",
+    "legal": "Legal",
+    "privacy": "Privacy policy",
+    "cookies": "Cookies",
+    "terms": "Terms & conditions",
+    "company": "Company details",
+    "fine": "noblelift.cz"
+  },
+  "cookieBanner": {
+    "title": "We use cookies",
+    "description": "Essential cookies keep the website working. Optional cookies are used only with your consent. You can refuse or change your choices at any time.",
+    "more": "Learn more",
+    "rejectAll": "Reject all",
+    "settings": "Settings",
+    "acceptAll": "Accept all",
+    "essentialOnly": "Essential only",
+    "save": "Save settings",
+    "manage": "Cookie settings",
+    "settingsTitle": "Cookie settings",
+    "settingsIntro": "Choose which optional cookies to allow. Essential cookies cannot be disabled because the website needs them to function.",
+    "close": "Close",
+    "categories": {
+      "necessary": {
+        "title": "Essential cookies",
+        "description": "Required for basic website functions, e.g. language preference and storing your cookie choice.",
+        "alwaysActive": "Always active"
+      },
+      "analytics": {
+        "title": "Analytics cookies",
+        "description": "Help us understand how the website is used (e.g. visit counts). Enabled only with your consent."
+      },
+      "marketing": {
+        "title": "Marketing cookies",
+        "description": "Used to measure advertising effectiveness and personalize content. Enabled only with your consent."
+      }
+    }
+  },
+  "servicePage": {
+    "meta": {
+      "title": "Service & spare parts | Noblelift | VZV GROUP s.r.o.",
+      "description": "Authorized Noblelift service in CZ and SK, genuine spare parts in stock and fast dispatch. VZV GROUP s.r.o. – exclusive Noblelift importer."
+    },
+    "title": "Service & spare parts",
+    "intro": "We provide complete care for your fleet across the Czech Republic and Slovakia. Warranty and post-warranty service, genuine parts and direct support from Noblelift.",
+    "pillars": {
+      "service": {
+        "title": "Authorized service in CZ and SK",
+        "desc": "Our certified technicians perform warranty and post-warranty service on Noblelift equipment at your site or in our service facilities.",
+        "imageAlt": "Noblelift equipment service and maintenance",
+        "imageHint": "Service or technician repair photo",
+        "points": {
+          "1": "Diagnostics, repairs and regular machine inspections",
+          "2": "Direct technical support and training from Noblelift",
+          "3": "Service coverage across the Czech Republic and Slovakia"
+        }
+      },
+      "parts": {
+        "title": "Genuine spare parts in stock",
+        "desc": "We keep common genuine Noblelift spare parts in stock to minimize downtime and ensure fast dispatch.",
+        "imageAlt": "Noblelift spare parts warehouse",
+        "imageHint": "Parts warehouse or shelving photo",
+        "points": {
+          "1": "Only genuine Noblelift parts with full warranty",
+          "2": "Fast parts dispatch across CZ and SK",
+          "3": "Advice on choosing the right part for your machine"
+        }
+      }
+    },
+    "benefits": {
+      "warranty": {
+        "title": "Warranty service",
+        "desc": "Complete warranty repairs in line with Noblelift manufacturer terms."
+      },
+      "genuine": {
+        "title": "Genuine parts",
+        "desc": "We supply only genuine spare parts directly from the manufacturer."
+      },
+      "dispatch": {
+        "title": "Fast dispatch",
+        "desc": "Common parts are shipped promptly from our warehouse."
+      },
+      "factory": {
+        "title": "Factory support",
+        "desc": "As the exclusive importer, we have direct contact with the Noblelift factory."
+      }
+    },
+    "urgent": {
+      "title": "Need fast service?",
+      "desc": "Our service line is available for reporting faults, spare parts inquiries and scheduling service visits."
+    },
+    "process": {
+      "title": "How service works",
+      "steps": {
+        "1": {
+          "title": "Contact us",
+          "desc": "Call or fill in the form — describe the machine type, fault or parts you need."
+        },
+        "2": {
+          "title": "Diagnosis and quote",
+          "desc": "We propose a solution, service quote or confirm parts availability."
+        },
+        "3": {
+          "title": "Service or dispatch",
+          "desc": "A technician visits your site, or we ship parts from our warehouse."
+        },
+        "4": {
+          "title": "Back in operation",
+          "desc": "After repair or part replacement, your equipment is ready to work again."
+        }
+      }
+    },
+    "formHeading": "Service inquiry",
+    "formLead": "Fill in the form and we will get back to you with a service or spare parts offer.",
+    "messagePlaceholder": "Include machine type, serial number, fault description or parts required…",
+    "formOrCall": "Or call us directly:",
+    "aboutLinkLead": "Want to know more about us?",
+    "aboutLink": "About us"
+  },
+  "contactPage": {
+    "meta": {
+      "title": "Contact | Noblelift | VZV GROUP s.r.o.",
+      "description": "Contact VZV GROUP s.r.o. – exclusive Noblelift importer for CZ and SK. Sales representative, contact form and company headquarters."
+    },
+    "title": "Contact us",
+    "intro": "Need help choosing Noblelift material handling equipment? Our team will help you find the right solution for your warehouse, production or operations. We are the exclusive importer for the Czech Republic and Slovakia.",
+    "contactHeading": "Contact",
+    "repsLabel": "Sales representatives",
+    "repPhotoHint": "Photo: {name}",
+    "headquarters": "Company headquarters",
+    "formHeading": "Contact form",
+    "messagePlaceholder": "I am interested in a quote for…",
+    "showOnMap": "Show on map",
+    "detailsTitle": "Contact details",
+    "depotsHeading": "Warehouses",
+    "billingHeading": "Billing information",
+    "billingBank": "Bank",
+    "billingAccount": "Account number",
+    "billingDirector": "Managing director",
+    "ico": "Company ID",
+    "dic": "VAT ID",
+    "depots": {
+      "cervenaVoda": {
+        "name": "Červená Voda",
+        "addressLine1": "Červená Voda 535",
+        "addressLine2": "561 61 Červená Voda, Czech Republic",
+        "hours": "Mon–Fri 7:30–16:00"
+      },
+      "prague": {
+        "name": "Prague",
+        "addressLine1": "Do Čertous 2717/5",
+        "addressLine2": "193 00 Prague 20, Czech Republic",
+        "hours": "Mon–Fri 8:00–16:30"
+      }
+    },
+    "warehouses": {
+      "cervenaVoda": {
+        "title": "Main warehouse Červená Voda",
+        "line1": "561 61 Červená Voda 535",
+        "line2": "Czech Republic",
+        "imageAlt": "VZV GROUP main warehouse in Červená Voda",
+        "imageHint": "Červená Voda warehouse photo"
+      },
+      "prague": {
+        "title": "Central warehouse Prague",
+        "line1": "Do Čertous 2717/5",
+        "line2": "193 00 Prague 20, Czech Republic",
+        "imageAlt": "VZV GROUP central warehouse in Prague",
+        "imageHint": "Prague warehouse photo"
+      }
+    }
+  },
+  "aboutPage": {
+    "meta": {
+      "title": "About us | Noblelift | VZV GROUP s.r.o.",
+      "description": "Noblelift.cz – exclusive Noblelift representation for the Czech Republic and Slovakia. VZV GROUP s.r.o. offers material handling equipment, service, spare parts and expert consulting."
+    },
+    "title": "About us",
+    "intro": {
+      "lead": "Noblelift.cz is part of VZV GROUP s.r.o., the exclusive representative of the NOBLELIFT brand for the Czech and Slovak markets.",
+      "p1": "We are the official authorized representative of the global NOBLELIFT brand. This lets us bring not only top-tier material handling equipment to the region, but also service, expert support and access to genuine spare parts.",
+      "p2": "We also take full regional responsibility for sales and service of Noblelift machines in the Czech Republic and Slovakia.",
+      "cta": "Choose your equipment"
+    },
+    "commitment": {
+      "heading": "Our commitment",
+      "pillarsLabel": "We build on three pillars",
+      "pillars": {
+        "quality": "quality",
+        "reliability": "reliability",
+        "innovation": "innovative approach"
+      },
+      "body": "We are here to help companies optimize their internal material flow. We offer high-performance intralogistics solutions — from manual pallet trucks to electric reach trucks."
+    },
+    "mission": {
+      "heading": "Our mission",
+      "p1": "We believe a business relationship should be a comprehensive partnership — combining spare parts availability, training and service. That is how we help minimize downtime and maximize the efficiency of your operation.",
+      "tagline": "Noblelift.cz – professional equipment you can rely on.",
+      "caption": "Warehouses in Červená Voda and Prague — equipment and parts within reach"
+    },
+    "gallery": {
+      "title": "In operation and in the warehouse",
+      "lead": "See where we work — from warehouses and dispatch to Noblelift equipment in real operation.",
+      "items": {
+        "warehouse": {
+          "alt": "Main material handling warehouse in Červená Voda",
+          "hint": "Červená Voda warehouse photo",
+          "caption": "Main warehouse Červená Voda"
+        },
+        "forklift": {
+          "alt": "Noblelift pallet trucks on warehouse racks",
+          "hint": "Noblelift warehouse equipment photo",
+          "caption": "Noblelift equipment in operation"
+        },
+        "logistics": {
+          "alt": "Transport and unloading of material handling equipment",
+          "hint": "Transport or unloading photo",
+          "caption": "Own transport and logistics"
+        },
+        "prague": {
+          "alt": "VZV GROUP central warehouse in Prague – aerial view",
+          "hint": "Prague warehouse photo",
+          "caption": "Central warehouse Prague"
+        }
+      }
+    },
+    "stats": {
+      "warehouses": {
+        "value": "2",
+        "label": "warehouses in CZ"
+      },
+      "territory": {
+        "value": "CZ + SK",
+        "label": "exclusive representation"
+      },
+      "delivery": {
+        "value": "24–48 h",
+        "label": "standard delivery"
+      },
+      "parts": {
+        "value": "100 %",
+        "label": "genuine Noblelift parts"
+      }
+    },
+    "strengths": {
+      "title": "Where we excel",
+      "items": {
+        "warehouse": {
+          "title": "Exclusive Noblelift representative with the largest material handling warehouse",
+          "desc": "We are the only authorized Noblelift importer for the Czech Republic and Slovakia. Our regional warehouse — the largest of its kind — keeps machines and all spare parts immediately available for you."
+        },
+        "trust": {
+          "title": "Lowest price guarantee and full manufacturer warranty",
+          "desc": "Buy Noblelift equipment with complete confidence. If you have a better offer on a comparable truck, contact us and we will beat it. Every machine we deliver also comes with full warranty directly from the manufacturer."
+        },
+        "serviceParts": {
+          "title": "Authorized service & spare parts in stock immediately",
+          "desc": "We offer warranty and post-warranty service in CZ and SK with direct support from Noblelift. We keep common genuine parts in stock for fast dispatch and minimal downtime. Call us or use the contact form — we will advise you on service and help you choose the right part."
+        },
+        "rental": {
+          "title": "Free trial rental",
+          "desc": "Not sure if it is the right fit? We will lend you a truck free for 24 hours to try. You only pay for transport."
+        },
+        "delivery": {
+          "title": "Own transport",
+          "desc": "Lightning-fast dispatch across the Czech Republic and Slovakia. Standard delivery time 24–48 hours."
+        },
+        "consulting": {
+          "title": "Individual consulting",
+          "desc": "Our experienced team will design a solution tailored exactly to your logistics."
+        }
+      }
+    },
+    "team": {
+      "title": "Your contact in one place",
+      "lead": "Noblelift sales representatives for CZ and SK will advise you on equipment selection, service and spare parts.",
+      "role": "Noblelift sales representative",
+      "photoAlt": "Photo: {name}",
+      "contactCta": "Full contact details"
+    },
+    "catalogCta": "Complete overview of material handling equipment",
+    "media": {
+      "introMainAlt": "Rows of Noblelift forklifts in the VZV GROUP warehouse",
+      "introMainHint": "Warehouse photo with Noblelift equipment",
+      "introInsetAlt": "Material handling warehouse Červená Voda",
+      "introInsetHint": "Warehouse photo",
+      "introAccentAlt": "Noblelift sales representative",
+      "introAccentHint": "Representative photo",
+      "commitmentAlt": "Noblelift warehouse equipment on racks at VZV GROUP",
+      "commitmentHint": "Warehouse photo with pallet trucks"
+    }
+  },
+  "legalPrivacy": {
+    "meta": {
+      "title": "Privacy policy | Noblelift | VZV GROUP s.r.o.",
+      "description": "Information on personal data processing on noblelift.cz operated by VZV GROUP s.r.o."
+    },
+    "title": "Privacy policy",
+    "updated": "Effective from 10 July 2026",
+    "intro": "This policy describes how VZV GROUP s.r.o. processes personal data of visitors to noblelift.cz and persons who contact us regarding the offer, sale, service and distribution of Noblelift material handling equipment.",
+    "sections": [
+      {
+        "title": "Data controller",
+        "paragraphs": [
+          "The data controller is VZV GROUP s.r.o., registered office Okružní 1144, 500 03 Hradec Králové, Czech Republic, Company ID 27469662, VAT ID CZ27469662, registered in the Commercial Register maintained by the Regional Court in Hradec Králové, file no. C 20857 (the “controller”).",
+          "Contact e-mail for privacy matters: info@noblelift.cz."
+        ]
+      },
+      {
+        "title": "Categories of data processed",
+        "paragraphs": [
+          "We mainly process the following categories of personal data:"
+        ],
+        "list": [
+          "identification and contact details (name, e-mail, phone, company, country)",
+          "content of contact form messages or e-mail communication",
+          "inquiry, order, service or complaint data",
+          "technical website usage data (IP address, browser type, cookies – see our Cookie policy)"
+        ]
+      },
+      {
+        "title": "Purposes and legal bases",
+        "paragraphs": [
+          "We process personal data only for defined purposes and on the relevant legal basis under GDPR Article 6:"
+        ],
+        "list": [
+          "handling inquiries and communication – legitimate interest / steps prior to contract",
+          "contract performance, delivery, service and warranty care – contract",
+          "compliance with legal obligations (accounting, tax, archiving) – legal obligation",
+          "website security and operation – legitimate interest",
+          "marketing communication – only with your consent, which you may withdraw at any time"
+        ]
+      },
+      {
+        "title": "Retention period",
+        "paragraphs": [
+          "We retain data for as long as necessary for the processing purpose. Inquiries and business communication are usually kept for 3 years from the last contact unless a contractual relationship is established. Contract data is kept for the duration of the contract and thereafter as required by law (typically 10 years for accounting and tax). Technical logs and cookies are retained for the periods stated in the cookie information."
+        ]
+      },
+      {
+        "title": "Recipients and processors",
+        "paragraphs": [
+          "Personal data may be disclosed to IT, hosting, e-mail, accounting and other processors who perform these activities for us under a data processing agreement. We do not share data with third parties for their own marketing without your consent.",
+          "Some processors may be located outside the European Union; in such cases we ensure appropriate transfer safeguards under the GDPR."
+        ]
+      },
+      {
+        "title": "Your rights",
+        "paragraphs": [
+          "Under the GDPR you have the right to:"
+        ],
+        "list": [
+          "request access to your personal data",
+          "request rectification or erasure",
+          "request restriction of processing",
+          "object to processing",
+          "request data portability",
+          "withdraw consent where processing is based on consent",
+          "lodge a complaint with the Czech Office for Personal Data Protection (www.uoou.cz)"
+        ]
+      },
+      {
+        "title": "Data security",
+        "paragraphs": [
+          "We implement appropriate technical and organisational measures to protect personal data against loss, misuse, unauthorised access or disclosure."
+        ]
+      },
+      {
+        "title": "Cookies",
+        "paragraphs": [
+          "Detailed information on cookies is available on the Cookies page. Optional analytics cookies are enabled only with your consent via the cookie banner."
+        ]
+      },
+      {
+        "title": "Changes to this policy",
+        "paragraphs": [
+          "We may update this policy from time to time. The current version is always published on this website with the effective date."
+        ]
+      }
+    ]
+  },
+  "legalCookies": {
+    "meta": {
+      "title": "Cookies | Noblelift | VZV GROUP s.r.o.",
+      "description": "Information on cookie use on noblelift.cz."
+    },
+    "title": "Cookie policy",
+    "updated": "Effective from 10 July 2026",
+    "intro": "This page explains how noblelift.cz, operated by VZV GROUP s.r.o., uses cookies and similar technologies.",
+    "sections": [
+      {
+        "title": "What are cookies",
+        "paragraphs": [
+          "Cookies are small text files stored in your browser. They help the website function correctly, remember your choices or measure traffic."
+        ]
+      },
+      {
+        "title": "Essential cookies",
+        "paragraphs": [
+          "These cookies are required for basic website functions. Without them the site may not work properly. We do not need your consent for these cookies."
+        ],
+        "list": [
+          "NEXT_LOCALE – stores your selected website language (cs/en)",
+          "noblelift-cookie-consent – stores your cookie choice in the browser"
+        ]
+      },
+      {
+        "title": "Analytics and marketing cookies",
+        "paragraphs": [
+          "Optional cookies for traffic measurement or marketing are used only if you consent via the cookie banner. If you do not consent, we do not enable them.",
+          "At present the website primarily uses essential cookies. Any addition of analytics tools (e.g. Google Analytics) will always require your consent and this page will be updated accordingly."
+        ]
+      },
+      {
+        "title": "Managing cookies",
+        "paragraphs": [
+          "You can change your preferences at any time via the Cookie settings link in the website footer or by deleting cookies in your browser.",
+          "In the cookie banner you can choose Reject all, Accept all, or open Settings to enable individual categories. Optional categories remain off until you turn them on.",
+          "If your browser blocks all cookies, some website features may be unavailable."
+        ]
+      },
+      {
+        "title": "Contact",
+        "paragraphs": [
+          "For cookie-related questions contact info@noblelift.cz. Further information on personal data processing is available in our Privacy policy."
+        ]
+      }
+    ]
+  },
+  "legalTerms": {
+    "meta": {
+      "title": "Terms & conditions | Noblelift | VZV GROUP s.r.o.",
+      "description": "General terms and conditions of VZV GROUP s.r.o. for the offer, sale, service and distribution of Noblelift equipment."
+    },
+    "title": "Terms & conditions",
+    "updated": "Effective from 10 July 2026",
+    "intro": "These terms govern the rights and obligations between VZV GROUP s.r.o. and its business partners regarding the offer, sale, delivery, service and spare parts for Noblelift material handling equipment via noblelift.cz and other sales channels.",
+    "sections": [
+      {
+        "title": "Seller identification",
+        "paragraphs": [
+          "The seller is VZV GROUP s.r.o., Okružní 1144, 500 03 Hradec Králové, Company ID 27469662, VAT ID CZ27469662, e-mail info@noblelift.cz, phone +420 773 997 314."
+        ]
+      },
+      {
+        "title": "Scope and conclusion of contract",
+        "paragraphs": [
+          "Website content is for information purposes and does not constitute a binding offer unless expressly stated otherwise. A purchase contract is formed upon confirmation of the order by the seller or upon signature of the contract/order by both parties.",
+          "The website is primarily intended for business customers (B2B). For consumer contracts, the relevant provisions of the Civil Code and consumer protection legislation apply where applicable."
+        ]
+      },
+      {
+        "title": "Prices and payment",
+        "paragraphs": [
+          "Prices are quoted in Czech crowns or euros as agreed unless stated otherwise. VAT may be added in accordance with applicable law. Specific payment terms (deposit, due date, payment method) are set out in the contract or order confirmation."
+        ]
+      },
+      {
+        "title": "Delivery and risk transfer",
+        "paragraphs": [
+          "Delivery method, timing and transport costs are agreed in the contract or order confirmation. Risk of damage passes to the buyer upon handover to the carrier or personal collection, as agreed."
+        ]
+      },
+      {
+        "title": "Warranty and service",
+        "paragraphs": [
+          "Delivered equipment is covered by warranty under applicable law and Noblelift manufacturer warranty terms. Authorised service and warranty repairs are provided by VZV GROUP s.r.o. in accordance with manufacturer service procedures."
+        ]
+      },
+      {
+        "title": "Complaints",
+        "paragraphs": [
+          "The buyer must inspect the delivery on receipt and report any obvious defects without undue delay. Complaints must be submitted in writing to info@noblelift.cz or by post to the seller's registered office with a description of the defect and document number. The seller will handle complaints within statutory time limits."
+        ]
+      },
+      {
+        "title": "Liability",
+        "paragraphs": [
+          "The seller is not liable for damage caused by improper use of equipment, unauthorised intervention or failure to follow the operating manual. Liability for lost profit is excluded to the extent permitted by law."
+        ]
+      },
+      {
+        "title": "Personal data protection",
+        "paragraphs": [
+          "Personal data processing is governed by the Privacy policy published on this website."
+        ]
+      },
+      {
+        "title": "Final provisions",
+        "paragraphs": [
+          "These terms are governed by the laws of the Czech Republic. Disputes will be resolved primarily by amicable settlement; failing agreement, the competent courts of the Czech Republic at the seller's registered office shall have jurisdiction.",
+          "The seller reserves the right to amend these terms. For contracts already concluded, the version effective at the time of conclusion applies."
+        ]
+      }
+    ]
+  },
+  "productsCatalog": {
+    "meta": {
+      "hub": {
+        "title": "Product catalogue | Noblelift | VZV GROUP s.r.o.",
+        "description": "Full Noblelift material handling catalogue – counterbalance forklifts, stackers, pallet trucks, reach trucks, rough-terrain machines and work platforms."
+      },
+      "category": {
+        "title": "{category} | Noblelift catalogue"
+      },
+      "subcategory": {
+        "title": "{subcategory} | {category} | Noblelift"
+      },
+      "series": {
+        "title": "{series} | {subcategory} | Noblelift"
+      },
+      "model": {
+        "title": "{model} | {series} | Noblelift"
+      }
+    },
+    "breadcrumb": {
+      "home": "Home",
+      "products": "Products"
+    },
+    "hub": {
+      "titlePrefix": "Noblelift",
+      "titleBrand": "equipment",
+      "titleSuffix": "categories",
+      "lead": "Choose a category and browse Noblelift models. As the exclusive importer for the Czech Republic and Slovakia we help with selection and service.",
+      "contactCta": "Request a quote"
+    },
+    "categoryNav": {
+      "label": "Product categories"
+    },
+    "category": {
+      "chooseSubcategory": "Choose a subcategory"
+    },
+    "subcategory": {
+      "modelsTitle": "Available models",
+      "modelsCount": "{count, plural, one {# model} other {# models}}",
+      "seriesCount": "{count, plural, one {# series} other {# series}}",
+      "seriesPageTitle": "Noblelift electric counterbalance series",
+      "seriesPageLead": "Click \"Learn more\" for a detailed series description or \"View models\" to browse models in that series.",
+      "cta": "View equipment",
+      "contactCta": "Request a quote"
+    },
+    "stackers": {
+      "walkieHub": {
+        "badge": "Without initial lift / With initial lift",
+        "title": "Walkie stackers without operator platform",
+        "intro": "An efficient solution for warehouses that prioritise maximum compactness and easy operation. Electric walkie stackers without a platform are designed for precise handling in narrow aisles and space-constrained operations. They are ideal for loading, unloading and stacking pallets over short distances where agility, accuracy and efficient work in a limited handling area are key."
+      },
+      "riderHub": {
+        "badge": "Without initial lift / With initial lift",
+        "title": "Stackers with operator platform",
+        "intro": "An efficient solution for larger warehouses and operations with longer travel distances between racks. Electric rider stackers with an operator platform offer more comfortable operation, higher lift and faster pallet handling in warehouse aisles. The operator stands on the platform and travels with the truck between work locations, improving productivity when stacking, unloading and replenishing goods."
+      },
+      "straddleHub": {
+        "badge": "Straddle stackers",
+        "title": "Straddle electric stackers",
+        "intro": "Straddle electric stackers for handling non-standard pallets and maximum warehouse flexibility. Choose a specific model to view technical details, or go directly to the VZV GROUP e-shop."
+      }
+    },
+    "stackerVariants": {
+      "bezPrizdvihem": {
+        "badge": "Without initial lift",
+        "title": "Without initial lift",
+        "subtitle": "Compact variant",
+        "capacity": "1.3 - 2 t",
+        "modelRange": "SWB 130, PSE 15 L-C, PS 16 L, PS 20 L",
+        "productLine": "Walkie stacker without initial lift",
+        "desc": "Stackers without initial lift for maximum compactness and handling in the narrowest warehouse spaces.",
+        "uses": {
+          "1": "Narrow warehouse aisles",
+          "2": "Short pallet transfers",
+          "3": "Compact operations"
+        },
+        "detail": {
+          "title": "Noblelift stackers without initial lift — detailed overview",
+          "intro": "Walkie stacker without initial lift for highly compact pallet handling. Ideal for narrow aisles and space-limited operations where agility and precision matter.",
+          "features": {
+            "1": {
+              "title": "Compact design",
+              "desc": "Minimal dimensions for easy handling in narrow warehouse aisles"
+            },
+            "2": {
+              "title": "Electric drive",
+              "desc": "Quiet, clean operation suited to indoor warehouse environments"
+            },
+            "3": {
+              "title": "Safe operation",
+              "desc": "Ergonomic walkie tiller and stable driving characteristics"
+            },
+            "4": {
+              "title": "Low running costs",
+              "desc": "Simple construction and easy maintenance for daily use"
+            }
+          },
+          "specs": {
+            "capacity": { "label": "Capacity", "value": "1.3 - 2 t" },
+            "drive": { "label": "Drive", "value": "Electric" },
+            "lift": { "label": "Max. lift", "value": "up to 3,500 mm" },
+            "battery": { "label": "Battery", "value": "24 V" },
+            "operation": { "label": "Application", "value": "Indoor" },
+            "type": { "label": "Type", "value": "Without initial lift" }
+          }
+        }
+      },
+      "sPrizdvihem": {
+        "badge": "With initial lift",
+        "title": "With initial lift",
+        "subtitle": "Higher lift from floor",
+        "capacity": "1.2 - 1.6 t",
+        "modelRange": "PSE 12 ND, SWB 130 D, PS 16 DL",
+        "productLine": "Walkie stacker with initial lift",
+        "desc": "Stackers with initial lift for more comfortable pallet handling and higher efficiency in warehouse operations.",
+        "uses": {
+          "1": "Higher lift from floor",
+          "2": "Faster pallet loading",
+          "3": "Medium-sized warehouses"
+        },
+        "detail": {
+          "title": "Noblelift stackers with initial lift — detailed overview",
+          "intro": "Walkie stacker with initial lift for easier pallet handling in medium-sized warehouses. Higher lift from floor speeds up loading and improves operational efficiency.",
+          "features": {
+            "1": {
+              "title": "Initial lift",
+              "desc": "Easier pallet pick-up from floor level without extra manoeuvring"
+            },
+            "2": {
+              "title": "Electric drive",
+              "desc": "Quiet operation and low emissions for indoor warehouse use"
+            },
+            "3": {
+              "title": "Higher productivity",
+              "desc": "Faster cycles when loading and stacking pallets"
+            },
+            "4": {
+              "title": "Reliable build",
+              "desc": "Robust design for intensive daily operation"
+            }
+          },
+          "specs": {
+            "capacity": { "label": "Capacity", "value": "1.2 - 1.6 t" },
+            "drive": { "label": "Drive", "value": "Electric" },
+            "lift": { "label": "Max. lift", "value": "up to 4,500 mm" },
+            "battery": { "label": "Battery", "value": "24 V" },
+            "operation": { "label": "Application", "value": "Indoor" },
+            "type": { "label": "Type", "value": "With initial lift" }
+          }
+        }
+      }
+    },
+    "stackerRiderVariants": {
+      "bezPrizdvihem": {
+        "badge": "Without initial lift",
+        "title": "Without initial lift",
+        "subtitle": "With operator platform",
+        "capacity": "1.6 - 2 t",
+        "modelRange": "PS 16 N - PS 20 N",
+        "productLine": "Rider stacker without initial lift and with operator platform",
+        "desc": "Stackers with operator platform and without initial lift for efficient pallet handling in warehouse aisles.",
+        "uses": {
+          "1": "Operator platform",
+          "2": "Faster travel in the warehouse",
+          "3": "Indoor warehouse operations"
+        },
+        "detail": {
+          "title": "Noblelift rider stackers without initial lift — detailed overview",
+          "intro": "Rider stacker with operator platform and without initial lift. Ideal for larger warehouses where the operator needs more comfortable operation and faster travel between work locations.",
+          "features": {
+            "1": {
+              "title": "Operator platform",
+              "desc": "The operator stands on the platform and travels with the truck between work locations"
+            },
+            "2": {
+              "title": "Electric drive",
+              "desc": "Quiet, clean operation suited to indoor warehouse environments"
+            },
+            "3": {
+              "title": "Higher productivity",
+              "desc": "Faster travel and more efficient work in warehouse aisles"
+            },
+            "4": {
+              "title": "Reliable build",
+              "desc": "Robust design for intensive daily operation"
+            }
+          },
+          "specs": {
+            "capacity": { "label": "Capacity", "value": "1.6 - 2 t" },
+            "drive": { "label": "Drive", "value": "Electric" },
+            "lift": { "label": "Max. lift", "value": "up to 4,500 mm" },
+            "battery": { "label": "Battery", "value": "24 V" },
+            "operation": { "label": "Application", "value": "Indoor" },
+            "type": { "label": "Type", "value": "With platform, without initial lift" }
+          }
+        }
+      },
+      "sPrizdvihem": {
+        "badge": "With initial lift",
+        "title": "With initial lift",
+        "subtitle": "Higher lift from floor",
+        "capacity": "1.6 t",
+        "modelRange": "PS 16 DN",
+        "productLine": "Rider stacker with initial lift and operator platform",
+        "desc": "Stackers with operator platform and initial lift for more comfortable pallet handling and higher efficiency in the warehouse.",
+        "uses": {
+          "1": "Higher lift from floor",
+          "2": "Operator platform",
+          "3": "Medium-sized warehouses"
+        },
+        "detail": {
+          "title": "Noblelift PS 16 DN — detailed overview",
+          "intro": "Rider stacker with operator platform and initial lift. Higher lift from floor speeds up loading and improves operational efficiency in medium-sized warehouses.",
+          "features": {
+            "1": {
+              "title": "Initial lift",
+              "desc": "Easier pallet pick-up from floor level without extra manoeuvring"
+            },
+            "2": {
+              "title": "Operator platform",
+              "desc": "More comfortable operation and faster travel between work locations"
+            },
+            "3": {
+              "title": "Higher productivity",
+              "desc": "Faster cycles when loading and stacking pallets"
+            },
+            "4": {
+              "title": "Reliable build",
+              "desc": "Robust design for intensive daily operation"
+            }
+          },
+          "specs": {
+            "capacity": { "label": "Capacity", "value": "1.6 t" },
+            "drive": { "label": "Drive", "value": "Electric" },
+            "lift": { "label": "Max. lift", "value": "up to 5,000 mm" },
+            "battery": { "label": "Battery", "value": "24 V" },
+            "operation": { "label": "Application", "value": "Indoor" },
+            "type": { "label": "Type", "value": "With platform and initial lift" }
+          }
+        }
+      }
+    },
+    "series": {
+      "capacityLabel": "Capacity",
+      "learnMore": "Learn more",
+      "viewModels": "View models",
+      "downloadSpecsCta": "Download technical specifications",
+      "serieA": {
+        "badge": "Series A",
+        "title": "Basic model",
+        "subtitle": "Standard range",
+        "capacity": "1.5 – 3.8 t",
+        "modelRange": "CPD15~38",
+        "productLine": "Series A lithium forklifts",
+        "desc": "Reliable electric counterbalance trucks for standard warehouse operations. Balanced price and performance.",
+        "uses": {
+          "1": "Distribution and logistics centre",
+          "2": "Production hall and assembly",
+          "3": "Retail warehouse"
+        },
+        "detail": {
+          "title": "Noblelift Series A — detailed overview",
+          "intro": "Series A is Noblelift's entry-level electric counterbalance forklift designed for everyday warehouse operations. It offers an excellent price-to-performance ratio with long battery life and simple controls. Ideal for operators without extensive material handling experience.",
+          "features": {
+            "1": {
+              "title": "Efficient AC drive",
+              "desc": "Asynchronous AC motor with regenerative braking for maximum battery endurance"
+            },
+            "2": {
+              "title": "Long battery runtime",
+              "desc": "Standard lead-acid or optional lithium battery for full-shift operation"
+            },
+            "3": {
+              "title": "Safety systems",
+              "desc": "Operator presence system (OPS), automatic lift lockout"
+            },
+            "4": {
+              "title": "Easy maintenance",
+              "desc": "Tool-free access to components, low operating costs"
+            }
+          },
+          "specs": {
+            "capacity": {
+              "label": "Capacity",
+              "value": "1.5 – 3.8 t"
+            },
+            "drive": {
+              "label": "Drive",
+              "value": "Electric AC"
+            },
+            "tires": {
+              "label": "Tyres",
+              "value": "Cushion / Super elastic"
+            },
+            "battery": {
+              "label": "Battery",
+              "value": "48 V / Lithium"
+            },
+            "lift": {
+              "label": "Max. lift",
+              "value": "up to 7,000 mm"
+            },
+            "operation": {
+              "label": "Application",
+              "value": "Indoor"
+            }
+          }
+        }
+      },
+      "serieP": {
+        "badge": "Series P",
+        "title": "Premium",
+        "subtitle": "Lithium technology",
+        "capacity": "3.0 - 3.8 t",
+        "modelRange": "FEP 30 - 38 P",
+        "productLine": "Premium Li-Ion range for demanding multi-shift operation with zero emissions.",
+        "desc": "Premium Li-Ion range for demanding multi-shift operation with zero emissions.",
+        "uses": {
+          "1": "Multi-shift operation",
+          "2": "Cold stores",
+          "3": "Food industry"
+        },
+        "detail": {
+          "title": "Noblelift Series P — Premium",
+          "intro": "Series P delivers the highest equipment level among Noblelift electric counterbalance forklifts. LCD display, suspension seat, 4-way hydraulics and native lithium battery support for fast opportunity charging without battery swapping.",
+          "features": {
+            "1": {
+              "title": "LCD display",
+              "desc": "Large frame LCD display in the operator's field of vision for improved safety"
+            },
+            "2": {
+              "title": "Native lithium",
+              "desc": "Designed for lithium batteries — fast charging during operation"
+            },
+            "3": {
+              "title": "Ergonomic cabin",
+              "desc": "Spacious cabin with deluxe suspension seat, adjustable for all operator sizes"
+            },
+            "4": {
+              "title": "4-way hydraulics",
+              "desc": "Integrated sideshift for precise handling without repositioning"
+            }
+          },
+          "specs": {
+            "capacity": { "label": "Capacity", "value": "3.0 - 3.8 t" },
+            "drive": { "label": "Drive", "value": "Electric AC" },
+            "battery": { "label": "Battery", "value": "48–80 V Li" },
+            "lift": { "label": "Max. lift", "value": "up to 7,500 mm" },
+            "display": { "label": "Display", "value": "Frame LCD" },
+            "operation": { "label": "Application", "value": "Indoor / mixed" }
+          }
+        }
+      },
+      "serieN": {
+        "badge": "Series N",
+        "title": "Three-wheel",
+        "subtitle": "Narrow aisle",
+        "capacity": "1.2 – 2.0 t",
+        "modelRange": "FE3R 12 E, FE3D 16 N1, FE3D 20 N1",
+        "productLine": "Three-wheel trucks with excellent manoeuvrability for narrow aisles and tight spaces.",
+        "desc": "Three-wheel trucks with excellent manoeuvrability for narrow aisles and tight spaces.",
+        "uses": {
+          "1": "Narrow aisles",
+          "2": "Compact warehouses",
+          "3": "Fast manoeuvring"
+        },
+        "detail": {
+          "title": "Noblelift Series N — three-wheel trucks",
+          "intro": "Series N three-wheel trucks are built for narrow-aisle operation. Rear-wheel drive enables turning on the spot and passage through aisles from 2.8 m wide. Optional cushion or super-elastic tyres for different floor types.",
+          "features": {
+            "1": {
+              "title": "Compact dimensions",
+              "desc": "Minimum turning radius for manoeuvring in tight spaces"
+            },
+            "2": {
+              "title": "Rear-wheel drive",
+              "desc": "Rear axle drive ensures stability even when carrying loads"
+            },
+            "3": {
+              "title": "Lithium option",
+              "desc": "Available with lithium battery for food industry and cold storage"
+            },
+            "4": {
+              "title": "Tyre choice",
+              "desc": "Cushion, super-elastic or polyurethane for different floor types"
+            }
+          },
+          "specs": {
+            "capacity": { "label": "Capacity", "value": "1.2–2.0 t" },
+            "axles": { "label": "Axles", "value": "3 (rear drive)" },
+            "battery": { "label": "Battery", "value": "24–48 V Li" },
+            "aisle": { "label": "Min. aisle", "value": "from 2,800 mm" },
+            "lift": { "label": "Max. lift", "value": "up to 6,000 mm" },
+            "operation": { "label": "Application", "value": "Indoor" }
+          }
+        }
+      },
+      "serieQ": {
+        "badge": "Series Q",
+        "title": "Heavy duty",
+        "subtitle": "Heavy class",
+        "capacity": "2 – 10 t",
+        "modelRange": "FE4P 20 Q, FE4P 50 Q, FE4P 50 QL",
+        "productLine": "Powerful electric trucks for industrial and heavy-duty applications with high capacity.",
+        "desc": "Powerful electric trucks for industrial and heavy-duty applications with high capacity.",
+        "uses": {
+          "1": "Industrial halls",
+          "2": "Heavy loads",
+          "3": "Demanding operation"
+        },
+        "detail": {
+          "title": "Noblelift Series Q — heavy industrial class",
+          "intro": "Series Q covers heavy industry needs with capacities from 2 to 10 tonnes. Massive steel construction, extended front axle for stability and powerful AC motors ensure reliable operation even in the most demanding conditions.",
+          "features": {
+            "1": {
+              "title": "Heavy steel construction",
+              "desc": "Reinforced chassis, axles and mast for extreme loads and lift heights"
+            },
+            "2": {
+              "title": "High motor output",
+              "desc": "Powerful three-phase AC motors for lift speed even at maximum load"
+            },
+            "3": {
+              "title": "Extended stability",
+              "desc": "Wide wheelbase and low centre of gravity for heavy loads at height"
+            },
+            "4": {
+              "title": "Service accessibility",
+              "desc": "Air-suspended hoods for quick access to components"
+            }
+          },
+          "specs": {
+            "capacity": { "label": "Capacity", "value": "2–10 t" },
+            "drive": { "label": "Drive", "value": "Electric AC" },
+            "voltage": { "label": "Voltage", "value": "80 V / 96 V" },
+            "lift": { "label": "Max. lift", "value": "up to 9,000 mm" },
+            "tires": { "label": "Tyres", "value": "Pneumatic" },
+            "operation": { "label": "Application", "value": "Indoor / mixed" }
+          }
+        }
+      }
+    },
+    "dieselLpg": {
+      "modelRange": "CPC(D)20~38",
+      "capacity": "2.0 – 3.8 t",
+      "productLine": "Diesel & LPG counterbalance forklifts — A Series IC",
+      "detail": {
+        "title": "Noblelift Diesel/LPG — detailed description",
+        "intro": "The A IC series is a reliable Noblelift diesel and LPG counterbalance forklift for demanding warehouse, logistics yard and outdoor applications. It combines high output, long fuel endurance and rugged construction for everyday pallet handling.",
+        "features": {
+          "1": {
+            "title": "Powerful combustion engine",
+            "desc": "Diesel or LPG engine with high torque for demanding operations"
+          },
+          "2": {
+            "title": "Rugged construction",
+            "desc": "Steel chassis and mast designed for outdoor and mixed use"
+          },
+          "3": {
+            "title": "Long fuel endurance",
+            "desc": "Quick refuelling and long operating time without recharging"
+          },
+          "4": {
+            "title": "Easy maintenance",
+            "desc": "Component access and reliable hydraulic lift system"
+          }
+        },
+        "specs": {
+          "capacity": { "label": "Capacity", "value": "2.0 – 3.8 t" },
+          "drive": { "label": "Drive", "value": "Combustion engine" },
+          "fuel": { "label": "Fuel", "value": "Diesel / LPG" },
+          "lift": { "label": "Max. lift", "value": "up to 3,000 mm" },
+          "tires": { "label": "Tyres", "value": "Solid / pneumatic" },
+          "operation": { "label": "Application", "value": "Outdoor / mixed" }
+        }
+      }
+    },
+    "stackerStraddle": {
+      "modelRange": "PSE 12 NSL, PT 16 TSL, PS 18 TSL",
+      "capacity": "1.2 - 2.0 t",
+      "productLine": "Straddle electric stacker",
+      "detail": {
+        "title": "Noblelift straddle stackers — detailed description",
+        "intro": "Straddle electric stackers for handling non-standard pallets and irregular loads. The straddle design allows work with pallets of various sizes and delivers maximum flexibility in warehouse operations.",
+        "features": {
+          "1": {
+            "title": "Straddle design",
+            "desc": "Forks straddle the pallet from the side — ideal for non-standard and irregular pallets"
+          },
+          "2": {
+            "title": "Electric drive",
+            "desc": "Quiet, clean operation suited to indoor warehouse environments"
+          },
+          "3": {
+            "title": "Flexible handling",
+            "desc": "Efficient work with pallets of various sizes without precise alignment"
+          },
+          "4": {
+            "title": "Reliable build",
+            "desc": "Robust design for intensive daily warehouse use"
+          }
+        },
+        "specs": {
+          "capacity": { "label": "Capacity", "value": "1.2 - 2.0 t" },
+          "drive": { "label": "Drive", "value": "Electric" },
+          "lift": { "label": "Max. lift", "value": "up to 4,500 mm" },
+          "battery": { "label": "Battery", "value": "24 V" },
+          "operation": { "label": "Application", "value": "Indoor" },
+          "type": { "label": "Type", "value": "Straddle" }
+        }
+      }
+    },
+    "stackerStraddleModels": {
+      "pse12nsl": {
+        "badge": "PSE 12 NSL",
+        "title": "PSE 12 NSL",
+        "subtitle": "Compact straddle",
+        "capacity": "1.2 t",
+        "modelRange": "PSE 12 NSL",
+        "productLine": "Straddle electric stacker",
+        "desc": "Compact straddle stacker for non-standard pallets and flexible handling in tight warehouse spaces.",
+        "uses": {
+          "1": "Non-standard pallets",
+          "2": "Narrow warehouse aisles",
+          "3": "Compact operations"
+        }
+      },
+      "pt16tsl": {
+        "badge": "PT 16 TSL",
+        "title": "PT 16 TSL",
+        "subtitle": "Higher capacity",
+        "capacity": "1.6 t",
+        "modelRange": "PT 16 TSL",
+        "productLine": "Straddle electric stacker",
+        "desc": "Straddle stacker with higher capacity for more demanding handling cycles and irregular pallets.",
+        "uses": {
+          "1": "Non-standard pallets",
+          "2": "Higher capacity",
+          "3": "Intensive operation"
+        }
+      },
+      "ps18tsl": {
+        "badge": "PS 18 TSL",
+        "title": "PS 18 TSL",
+        "subtitle": "Maximum capacity",
+        "capacity": "1.8 t",
+        "modelRange": "PS 18 TSL",
+        "productLine": "Straddle electric stacker",
+        "desc": "Straddle stacker with the highest capacity in the range for demanding warehouse and handling applications.",
+        "uses": {
+          "1": "Non-standard pallets",
+          "2": "Heavier loads",
+          "3": "Flexible handling"
+        }
+      }
+    },
+    "palletPowered": {
+      "modelRange": "PWB 150, PTE 15 Q2, PWB 200, PTE 15N SC, PTE 15 Q2SC",
+      "capacity": "1.5 - 2.0 t",
+      "productLine": "Electric pallet truck",
+      "detail": {
+        "title": "Noblelift electric pallet trucks — detailed description",
+        "intro": "Electric walkie and rider pallet trucks from Noblelift for efficient horizontal handling. Available with lithium drive, weighing options and compact dimensions for narrow warehouse aisles and intensive daily use.",
+        "features": {
+          "1": {
+            "title": "Li-Ion drive",
+            "desc": "Fast charging and long battery life for continuous warehouse operation"
+          },
+          "2": {
+            "title": "Electric drive",
+            "desc": "Quiet, clean operation suited to indoor warehouse and production areas"
+          },
+          "3": {
+            "title": "Compact design",
+            "desc": "Walkie and rider variants including weighing models for accurate load tracking"
+          },
+          "4": {
+            "title": "Reliable build",
+            "desc": "Robust design for intensive daily pallet handling"
+          }
+        },
+        "specs": {
+          "capacity": { "label": "Capacity", "value": "1.5 - 2.0 t" },
+          "drive": { "label": "Drive", "value": "Electric" },
+          "lift": { "label": "Lift", "value": "Low-lift" },
+          "battery": { "label": "Battery", "value": "Li-Ion" },
+          "operation": { "label": "Application", "value": "Indoor" },
+          "type": { "label": "Type", "value": "Electric pallet truck" }
+        }
+      }
+    },
+    "palletManual": {
+      "modelRange": "HPT DF 25, HPT ACY 25",
+      "capacity": "2.5 t",
+      "productLine": "Manual pallet truck",
+      "detail": {
+        "title": "Noblelift manual pallet trucks — detailed description",
+        "intro": "Reliable Noblelift manual pallet trucks for everyday horizontal pallet handling. Simple operation, low running costs and a robust build make them an ideal choice for warehouses, production and retail.",
+        "features": {
+          "1": {
+            "title": "Simple operation",
+            "desc": "Intuitive controls with no training required — suited to everyday use"
+          },
+          "2": {
+            "title": "Low costs",
+            "desc": "No battery or charging — minimal running costs and easy maintenance"
+          },
+          "3": {
+            "title": "Hydraulic lift",
+            "desc": "Reliable hydraulics for fast and safe pallet lifting"
+          },
+          "4": {
+            "title": "Robust build",
+            "desc": "Durable design for intensive daily warehouse handling"
+          }
+        },
+        "specs": {
+          "capacity": { "label": "Capacity", "value": "2.5 t" },
+          "drive": { "label": "Drive", "value": "Manual" },
+          "lift": { "label": "Lift", "value": "Low-lift" },
+          "forks": { "label": "Forks", "value": "1150 mm" },
+          "operation": { "label": "Application", "value": "Indoor / mixed" },
+          "type": { "label": "Type", "value": "Manual pallet truck" }
+        }
+      }
+    },
+    "terrainForkliftsPage": {
+      "modelRange": "FD4 RT25, FD4 RT35, FD2 RT25, FD2 RT35KU, FD2 RT35, FE2 RT25",
+      "capacity": "2.5 – 3.5 t",
+      "productLine": "Rough terrain forklift",
+      "detail": {
+        "title": "Noblelift rough terrain forklifts — detailed description",
+        "intro": "Noblelift diesel rough terrain forklifts for construction, agriculture and work on uneven ground. A robust build, all-wheel drive and high ground clearance deliver reliable performance in demanding outdoor conditions.",
+        "features": {
+          "1": {
+            "title": "Terrain tires",
+            "desc": "Large tires and high ground clearance for soft and uneven surfaces"
+          },
+          "2": {
+            "title": "4x4 drive",
+            "desc": "All-wheel drive for maximum traction on sites and rough ground"
+          },
+          "3": {
+            "title": "Protective cabin",
+            "desc": "Safe operator space with good visibility for all-day outdoor work"
+          },
+          "4": {
+            "title": "Terrain stability",
+            "desc": "Stable chassis designed for safe handling on uneven surfaces"
+          }
+        },
+        "specs": {
+          "capacity": { "label": "Capacity", "value": "2.5 – 3.5 t" },
+          "drive": { "label": "Drive", "value": "Diesel" },
+          "driveType": { "label": "Wheel drive", "value": "4x4" },
+          "tires": { "label": "Tires", "value": "Terrain" },
+          "operation": { "label": "Application", "value": "Outdoor / terrain" },
+          "type": { "label": "Type", "value": "Rough terrain forklift" }
+        }
+      }
+    },
+    "telehandlersPage": {
+      "modelRange": "TH6036",
+      "capacity": "6.0 t",
+      "productLine": "Telehandler",
+      "detail": {
+        "title": "Noblelift telehandlers — detailed description",
+        "intro": "Noblelift telehandlers with long reach for construction and agricultural applications. A versatile machine for lifting, loading and working at height or distance.",
+        "features": {
+          "1": {
+            "title": "Long reach",
+            "desc": "Telescopic boom for work at height and greater distance"
+          },
+          "2": {
+            "title": "Strong hydraulics",
+            "desc": "Powerful hydraulics for precise and safe load handling"
+          },
+          "3": {
+            "title": "Terrain chassis",
+            "desc": "Robust chassis suited to construction sites, farms and uneven ground"
+          },
+          "4": {
+            "title": "Comfort cabin",
+            "desc": "Clear cabin with intuitive controls for all-day operation"
+          }
+        },
+        "specs": {
+          "capacity": { "label": "Capacity", "value": "6.0 t" },
+          "drive": { "label": "Drive", "value": "Diesel" },
+          "reach": { "label": "Reach", "value": "Telescopic" },
+          "lift": { "label": "Lift", "value": "High reach" },
+          "operation": { "label": "Application", "value": "Construction / agriculture" },
+          "type": { "label": "Type", "value": "Telehandler" }
+        }
+      }
+    },
+    "reachTrucksPage": {
+      "modelRange": "RT 16 C – RT 20 Pro",
+      "capacity": "1.6 – 2.0 t",
+      "productLine": "Reach truck",
+      "detail": {
+        "title": "Noblelift reach trucks — detailed description",
+        "intro": "Noblelift high-lift reach trucks for narrow aisles and racking up to 13 m. A compact build, high residual capacity and lithium battery deliver efficient storage even in demanding operations.",
+        "features": {
+          "1": {
+            "title": "Narrow aisles",
+            "desc": "Compact dimensions and a reach mast for work in tight warehouse aisles"
+          },
+          "2": {
+            "title": "High lift",
+            "desc": "Lift height up to 13 m for efficient use of racking height"
+          },
+          "3": {
+            "title": "Lithium battery",
+            "desc": "Fast charging and long runtime for multi-shift operation"
+          },
+          "4": {
+            "title": "Stability at height",
+            "desc": "Stable design for safe handling in high racking"
+          }
+        },
+        "specs": {
+          "capacity": { "label": "Capacity", "value": "1.6 – 2.0 t" },
+          "drive": { "label": "Drive", "value": "Electric" },
+          "lift": { "label": "Lift", "value": "Up to 13 m" },
+          "battery": { "label": "Battery", "value": "Li-Ion" },
+          "operation": { "label": "Application", "value": "Warehouse / narrow aisles" },
+          "type": { "label": "Type", "value": "Reach truck" }
+        }
+      }
+    },
+    "orderPickersPage": {
+      "modelRange": "OPH 01E",
+      "capacity": "1.0–2.5 t",
+      "productLine": "Order picker",
+      "detail": {
+        "title": "Noblelift order pickers — detailed description",
+        "intro": "Noblelift order pickers for efficient order completion in the warehouse. Ideal for e-commerce, distribution centres and high-frequency picking operations.",
+        "features": {
+          "1": {
+            "title": "Efficient picking",
+            "desc": "Designed for fast and accurate order picking in the warehouse"
+          },
+          "2": {
+            "title": "Electric drive",
+            "desc": "Quiet, zero-emission operation suited to enclosed warehouse halls"
+          },
+          "3": {
+            "title": "Safe operation",
+            "desc": "Stable platform and intuitive controls for safe work"
+          },
+          "4": {
+            "title": "Easy maintenance",
+            "desc": "Simple design and accessible service for continuous operation"
+          }
+        },
+        "specs": {
+          "capacity": { "label": "Capacity", "value": "1.0–2.5 t" },
+          "drive": { "label": "Drive", "value": "Electric" },
+          "lift": { "label": "Lift", "value": "Low / medium" },
+          "operation": { "label": "Application", "value": "Warehouse / e-commerce" },
+          "use": { "label": "Use", "value": "Order picking" },
+          "type": { "label": "Type", "value": "Order picker" }
+        }
+      }
+    },
+    "scissorLiftsPage": {
+      "modelRange": "SC12E-16E, SC06E-16E, SC08EC, SC08EN-10EN",
+      "capacity": "6 – 16 m",
+      "productLine": "Scissor work platform",
+      "detail": {
+        "title": "Noblelift scissor lifts — detailed description",
+        "intro": "Noblelift electric scissor work platforms for safe work at height. A stable platform and quiet electric drive make them ideal for maintenance, installation and warehouse tasks.",
+        "features": {
+          "1": {
+            "title": "Safe work at height",
+            "desc": "Stable scissor design and protective features for safe operation"
+          },
+          "2": {
+            "title": "Compact size",
+            "desc": "Easy doorway access and manoeuvring in confined spaces"
+          },
+          "3": {
+            "title": "Electric drive",
+            "desc": "Zero emissions and quiet operation for work inside buildings"
+          },
+          "4": {
+            "title": "Simple maintenance",
+            "desc": "Clear service access and a reliable design for long-term use"
+          }
+        },
+        "specs": {
+          "height": { "label": "Height", "value": "6 – 16 m" },
+          "drive": { "label": "Drive", "value": "Electric" },
+          "platform": { "label": "Platform", "value": "Scissor" },
+          "operation": { "label": "Application", "value": "Indoor" },
+          "use": { "label": "Use", "value": "Maintenance / install" },
+          "type": { "label": "Type", "value": "Scissor lift" }
+        }
+      }
+    },
+    "mastBoomLiftsPage": {
+      "modelRange": "AMT10",
+      "capacity": "10 m",
+      "productLine": "Mast work platform",
+      "detail": {
+        "title": "Noblelift mast and boom lifts — detailed description",
+        "intro": "Noblelift mast and boom work platforms for installation, maintenance and service at height. Precise reach and a compact design enable work even in hard-to-access areas.",
+        "features": {
+          "1": {
+            "title": "Precise reach",
+            "desc": "Mast and boom for work at height and further from the chassis"
+          },
+          "2": {
+            "title": "Strong hydraulics",
+            "desc": "Smooth, precise platform control for installation and service work"
+          },
+          "3": {
+            "title": "Safe operation",
+            "desc": "Protective features and a stable chassis for safe work at height"
+          },
+          "4": {
+            "title": "Comfortable platform",
+            "desc": "Clear controls and enough working space for installation tasks"
+          }
+        },
+        "specs": {
+          "height": { "label": "Height", "value": "10 m" },
+          "drive": { "label": "Drive", "value": "Electric" },
+          "reach": { "label": "Reach", "value": "Mast / boom" },
+          "operation": { "label": "Application", "value": "Indoor / mixed" },
+          "use": { "label": "Use", "value": "Install / maintenance" },
+          "type": { "label": "Type", "value": "Mast lift" }
+        }
+      }
+    },
+    "subcategories": {
+      "electric": {
+        "badge": "Electric",
+        "tags": {
+          "1": "Zero emissions",
+          "2": "Quiet operation",
+          "3": "Fast charging",
+          "4": "Li-Ion",
+          "5": "2.5–10 t",
+          "6": "3–4 wheel",
+          "7": "Warehouse"
+        }
+      },
+      "dieselLpg": {
+        "badge": "Diesel / LPG",
+        "tags": {
+          "1": "High power",
+          "2": "Long runtime",
+          "3": "Outdoor use",
+          "4": "Diesel",
+          "5": "LPG",
+          "6": "3–10 t",
+          "7": "Logistics yards"
+        }
+      },
+      "walkie": {
+        "badge": "Without platform",
+        "tags": {
+          "1": "Compact",
+          "2": "Electric",
+          "3": "Narrow aisles"
+        }
+      },
+      "rider": {
+        "badge": "With platform",
+        "tags": {
+          "1": "Operator platform",
+          "2": "High lift",
+          "3": "Warehouse",
+          "4": "Electric"
+        }
+      },
+      "straddle": {
+        "badge": "Straddle",
+        "tags": {
+          "1": "Non-standard pallets",
+          "2": "Flexible handling",
+          "3": "Electric"
+        }
+      },
+      "manual": {
+        "badge": "Manual",
+        "tags": {
+          "1": "Simple operation",
+          "2": "Low cost"
+        }
+      },
+      "powered": {
+        "badge": "Electric",
+        "tags": {
+          "1": "Walkie & rider",
+          "2": "Li-Ion",
+          "3": "With scales"
+        }
+      },
+      "terrainForklifts": {
+        "badge": "Rough terrain",
+        "tags": {
+          "1": "4×4",
+          "2": "Construction"
+        }
+      },
+      "telehandlers": {
+        "badge": "Telehandlers",
+        "tags": {
+          "1": "Telescopic",
+          "2": "Agriculture"
+        }
+      },
+      "reachTrucks": {
+        "badge": "Reach trucks",
+        "tags": {
+          "1": "Narrow aisle",
+          "2": "Lift up to 13 m",
+          "3": "Double-deep"
+        }
+      },
+      "orderPickers": {
+        "badge": "Order pickers",
+        "tags": {
+          "1": "Picking",
+          "2": "E-commerce"
+        }
+      },
+      "scissor": {
+        "badge": "Scissor lifts",
+        "tags": {
+          "1": "Electric",
+          "2": "Working at height"
+        }
+      },
+      "mastBoom": {
+        "badge": "Mast / boom lifts",
+        "tags": {
+          "1": "Assembly",
+          "2": "Maintenance"
+        }
+      }
+    },
+    "categories": {
+      "1": {
+        "subcategories": {
+          "electric": {
+            "title": "Electric counterbalance forklifts",
+            "desc": "Three- and four-wheel electric counterbalance trucks with 2.5–10 t capacity. Li-Ion batteries for zero emissions, quiet operation and intensive warehouse use."
+          },
+          "dieselLpg": {
+            "title": "Diesel & LPG counterbalance forklifts",
+            "desc": "Powerful diesel and LPG trucks with high output, long runtime and reliable outdoor operation for logistics yards and demanding conditions with 3–10 t capacity."
+          }
+        }
+      },
+      "2": {
+        "intro": "Looking for a simple and cost-effective solution for pallet handling? Manually guided stackers are ideal for smaller warehouses, workshops and large logistics operations. They stand out with compact dimensions, easy operation and low maintenance requirements. Models without a platform are suitable for narrow aisles and short distances, while stackers with an operator platform are ideal for greater comfort and more efficient travel in larger warehouses. Straddle versions serve non-standard pallets and offer maximum flexibility at work.",
+        "subcategories": {
+          "walkie": {
+            "title": "Without operator platform",
+            "desc": "Compact electric walk-behind stackers for narrow spaces, short distances and efficient pallet storage."
+          },
+          "rider": {
+            "title": "With operator platform",
+            "desc": "Stackers with operator platform, higher lift and faster travel in warehouse aisles."
+          },
+          "straddle": {
+            "title": "Straddle",
+            "desc": "Straddle stackers for non-standard pallets and maximum flexibility in warehouse operations."
+          }
+        }
+      },
+      "3": {
+        "subcategories": {
+          "manual": {
+            "title": "Manual pallet trucks",
+            "desc": "Reliable manual pallet trucks for everyday pallet movement."
+          },
+          "powered": {
+            "title": "Electric pallet trucks",
+            "desc": "Electric walkie and rider pallet trucks including scale and Li-Ion variants."
+          }
+        }
+      },
+      "4": {
+        "subcategories": {
+          "terrainForklifts": {
+            "title": "Rough-terrain forklifts",
+            "desc": "Diesel rough-terrain forklifts for construction, agriculture and uneven ground."
+          },
+          "telehandlers": {
+            "title": "Telehandlers",
+            "desc": "Telescopic handlers with long reach for construction and agricultural applications."
+          }
+        }
+      },
+      "5": {
+        "subcategories": {
+          "reachTrucks": {
+            "title": "Reach trucks",
+            "desc": "High-lift reach trucks for narrow aisles and racking up to 13 m."
+          },
+          "orderPickers": {
+            "title": "Order pickers",
+            "desc": "Order pickers for efficient warehouse order fulfilment."
+          }
+        }
+      },
+      "6": {
+        "subcategories": {
+          "scissor": {
+            "title": "Scissor lifts",
+            "desc": "Electric scissor lifts for safe work at height."
+          },
+          "mastBoom": {
+            "title": "Mast & boom lifts",
+            "desc": "Mast and boom lifts for assembly, maintenance and service at height."
+          }
+        }
+      }
+    },
+    "models": {
+      "fe3d": "Compact three-wheel electric counterbalance truck for tight spaces.",
+      "fe3d16": "Series N three-wheel electric counterbalance forklift, 1.6 t capacity.",
+      "fe3d18": "Series N three-wheel electric counterbalance forklift, 1.8 t capacity.",
+      "fe3d20": "Series N three-wheel electric counterbalance forklift, 2.0 t capacity.",
+      "fe4p": "Four-wheel electric counterbalance truck with high stability.",
+      "fe4p16": "Series P premium four-wheel forklift with lithium battery, 1.6 t capacity.",
+      "fe4p18": "Series P premium four-wheel forklift with lithium battery, 1.8 t capacity.",
+      "fe4p20": "Series P premium four-wheel forklift with lithium battery, 2.0 t capacity.",
+      "fe4p30": "Series P premium four-wheel forklift with lithium battery, 3.0 t capacity.",
+      "fe4a": "Standard four-wheel electric truck for everyday warehouse use.",
+      "fe4d16": "Series A four-wheel electric counterbalance forklift, 1.6 t capacity.",
+      "fe4d18": "Series A four-wheel electric counterbalance forklift, 1.8 t capacity.",
+      "fe4d20": "Series A four-wheel electric counterbalance forklift, 2.0 t capacity.",
+      "fe4d25": "Series A four-wheel electric counterbalance forklift, 2.5 t capacity.",
+      "fe4q": "Heavy-duty electric counterbalance truck for industrial applications.",
+      "fe4q60": "Series Q heavy-duty electric forklift, 6.0 t capacity.",
+      "fe4q80": "Series Q heavy-duty electric forklift, 8.0 t capacity.",
+      "rt16": "Li-Ion reach truck for narrow aisles.",
+      "fd30": "Diesel counterbalance truck for outdoor use, 3 t capacity.",
+      "fd50": "Heavy-duty diesel counterbalance truck, 5 t capacity.",
+      "pse12": "Walk-behind electric stacker up to 1.2 t.",
+      "swb130": "Walk-behind electric stacker without initial lift, 1.3 t capacity.",
+      "pse15lc": "Walk-behind electric stacker without initial lift, 1.5 t capacity.",
+      "ps16l": "Walk-behind electric stacker without initial lift, 1.6 t capacity.",
+      "ps20l": "Walk-behind electric stacker without initial lift, 2.0 t capacity.",
+      "ps15": "Walkie stacker with higher capacity and lift.",
+      "pse12nd": "Walk-behind electric stacker with initial lift, 1.2 t capacity.",
+      "swb130d": "Walk-behind electric stacker with initial lift, 1.3 t capacity.",
+      "ps16dl": "Walk-behind electric stacker with initial lift, 1.6 t capacity.",
+      "stk15": "Rider stacker with operator platform.",
+      "ps16n": "Rider stacker with operator platform without initial lift, 1.6 t capacity.",
+      "ps20n": "Rider stacker with operator platform without initial lift, 2.0 t capacity.",
+      "ps16dn": "Rider stacker with operator platform and initial lift.",
+      "pse12nsl": "Straddle electric stacker for non-standard pallets up to 1.2 t.",
+      "pt16tsl": "Straddle electric stacker with higher capacity up to 1.6 t.",
+      "ps18tsl": "Straddle electric stacker with capacity up to 1.8 t.",
+      "ac25": "Manual pallet truck, 2.5 t capacity.",
+      "hptdf25": "Manual pallet truck HPT DF 25 with 2.5 t capacity.",
+      "hptacy25": "Manual pallet truck HPT ACY 25 with 2.5 t capacity.",
+      "pte15": "Electric walkie pallet truck with Li-Ion drive.",
+      "pt20": "Electric pallet truck for intensive operation.",
+      "pwb150": "Compact electric pallet truck PWB 150 with 1.5 t capacity.",
+      "pte15q2": "Electric pallet truck PTE 15 Q2 with Li-Ion drive.",
+      "pwb200": "Electric pallet truck PWB 200 with 2.0 t capacity.",
+      "pte15nsc": "Electric pallet truck PTE 15N SC with weighing.",
+      "pte15q2sc": "Electric pallet truck PTE 15 Q2SC with weighing.",
+      "rt25": "Rough-terrain truck for demanding outdoor conditions.",
+      "rt35": "Rough-terrain truck for demanding outdoor conditions.",
+      "th6036": "Telescopic handler with long reach.",
+      "rt16reach": "Reach truck for high racking and narrow aisles.",
+      "oph01": "Low-level order picker for order fulfilment.",
+      "opl25": "Order picker for work at rack height.",
+      "sc12": "Electric scissor work platform.",
+      "amt10": "Mast work platform for assembly at height."
+    },
+    "modelDetails": {
+      "descriptionTitle": "Description",
+      "parametersTitle": "Technical parameters",
+      "viewDetails": "Technical parameters",
+      "buyCta": "Buy this model",
+      "buyShopCta": "Buy on e-shop",
+      "buyNote": "You will be redirected to the official VZV GROUP e-shop (vzv.cz), where you can purchase or reserve this model from stock.",
+      "common": {
+        "specs": {
+          "capacity": { "label": "Load capacity" },
+          "weight": { "label": "Service weight incl. battery" },
+          "liftHeight": { "label": "Lift height" },
+          "length": { "label": "Overall length" },
+          "width": { "label": "Overall width (frame / tyres)" },
+          "forkSize": { "label": "Fork dimensions (L / W / H)" },
+          "forkSpread": { "label": "Width of fork rack" },
+          "turningRadius": { "label": "Turning radius" },
+          "travelSpeed": { "label": "Travel speed laden / unladen" },
+          "liftSpeed": { "label": "Lift speed laden / unladen" },
+          "motor": { "label": "Drive motor rating S2 60 min" },
+          "battery": { "label": "Battery voltage & capacity" }
+        }
+      },
+      "fe4d16": {
+        "subtitle": "Series A electric counterbalance forklift, 1,600 kg capacity",
+        "longDesc": "The FE4D16N belongs to Series A — a reliable Noblelift electric counterbalance forklift with lithium battery for standard warehouse operations. It offers compact dimensions, efficient AC drive with regenerative braking and simple controls suited to everyday pallet handling in distribution, manufacturing and retail warehouses.",
+        "specs": {
+          "capacity": { "value": "1,600 kg" },
+          "weight": { "value": "3,000 kg" },
+          "liftHeight": { "value": "3,000 mm" },
+          "length": { "value": "2,290 mm" },
+          "width": { "value": "1,126 / 1,118 mm" },
+          "forkSize": { "value": "920 × 100 × 35 mm" },
+          "forkSpread": { "value": "1,040 mm" },
+          "turningRadius": { "value": "2,030 mm" },
+          "travelSpeed": { "value": "15 / 15 km/h" },
+          "liftSpeed": { "value": "350 / 430 mm/s" },
+          "motor": { "value": "10 kW" },
+          "battery": { "value": "76.8 V / 150 Ah Li" }
+        }
+      },
+      "fe4d18": {
+        "subtitle": "Series A electric counterbalance forklift, 1,800 kg capacity",
+        "longDesc": "The FE4D18N is a four-wheel Series A electric counterbalance forklift with 1,800 kg capacity. With lithium battery and AC drive it handles intensive warehouse and production floor operations. Its compact design enables efficient handling in confined spaces while maintaining high stability and operator safety.",
+        "specs": {
+          "capacity": { "value": "1,800 kg" },
+          "weight": { "value": "3,200 kg" },
+          "liftHeight": { "value": "3,000 mm" },
+          "length": { "value": "2,605 mm" },
+          "width": { "value": "1,150 / 1,163 mm" },
+          "forkSize": { "value": "920 × 100 × 35 mm" },
+          "forkSpread": { "value": "1,040 mm" },
+          "turningRadius": { "value": "2,250 mm" },
+          "travelSpeed": { "value": "14.5 / 15 km/h" },
+          "liftSpeed": { "value": "330 / 430 mm/s" },
+          "motor": { "value": "10 kW" },
+          "battery": { "value": "76.8 V / 175 Ah Li" }
+        }
+      },
+      "fe4d20": {
+        "subtitle": "Series A electric counterbalance forklift, 2,000 kg capacity",
+        "longDesc": "The FE4D20N is a versatile Series A electric counterbalance forklift with 2,000 kg capacity. Suited to medium-duty warehouse operations where performance, reliability and low running costs matter. The lithium battery enables fast charging and long service life with minimal maintenance.",
+        "specs": {
+          "capacity": { "value": "2,000 kg" },
+          "weight": { "value": "3,450 kg" },
+          "liftHeight": { "value": "3,000 mm" },
+          "length": { "value": "2,605 mm" },
+          "width": { "value": "1,150 / 1,163 mm" },
+          "forkSize": { "value": "1,070 × 120 × 40 mm" },
+          "forkSpread": { "value": "1,040 mm" },
+          "turningRadius": { "value": "2,250 mm" },
+          "travelSpeed": { "value": "18 / 19 km/h" },
+          "liftSpeed": { "value": "500 / 580 mm/s" },
+          "motor": { "value": "15 kW" },
+          "battery": { "value": "76.8 V / 300 Ah Li" }
+        }
+      },
+      "fe4d25": {
+        "subtitle": "Series A electric counterbalance forklift, 2,500 kg capacity",
+        "longDesc": "The FE4D25N is the most capable Series A model in the range with 2,500 kg capacity. Designed for more demanding operations requiring higher lift capacity and stability when handling heavier pallets. AC drive, lithium battery and robust construction ensure reliable operation even in multi-shift use.",
+        "specs": {
+          "capacity": { "value": "2,500 kg" },
+          "weight": { "value": "3,750 kg" },
+          "liftHeight": { "value": "3,000 mm" },
+          "length": { "value": "2,770 mm" },
+          "width": { "value": "1,195 / 1,228 mm" },
+          "forkSize": { "value": "1,070 × 122 × 45 mm" },
+          "forkSpread": { "value": "1,100 mm" },
+          "turningRadius": { "value": "2,450 mm" },
+          "travelSpeed": { "value": "19 / 19 km/h" },
+          "liftSpeed": { "value": "530 / 500 mm/s" },
+          "motor": { "value": "15 kW" },
+          "battery": { "value": "76.8 V / 300 Ah Li" }
+        }
+      }
+    }
+  },
+  "legalCompany": {
+    "meta": {
+      "title": "Company details | Noblelift | VZV GROUP s.r.o.",
+      "description": "Identification and contact details of the operator of noblelift.cz – VZV GROUP s.r.o."
+    },
+    "title": "Company details",
+    "intro": "The operator of noblelift.cz and exclusive Noblelift importer for the Czech Republic and Slovakia is:",
+    "sections": [
+      {
+        "title": "Company",
+        "list": [
+          "Legal name: VZV GROUP s.r.o.",
+          "Registered office: Okružní 1144, 500 03 Hradec Králové, Czech Republic",
+          "Company ID: 27469662",
+          "VAT ID: CZ27469662",
+          "Commercial register: file no. C 20857, Regional Court in Hradec Králové",
+          "Managing director: Milan Černohous"
+        ]
+      },
+      {
+        "title": "Contact",
+        "list": [
+          "E-mail: info@noblelift.cz",
+          "Phone: +420 773 997 314",
+          "Website: www.noblelift.cz"
+        ]
+      },
+      {
+        "title": "Bank details",
+        "list": [
+          "Bank: Komerční banka a.s.",
+          "Account number: 35-8106190267/0100 (CZK)"
+        ]
+      },
+      {
+        "title": "Business activity",
+        "paragraphs": [
+          "Exclusive import, distribution, sale, service and supply of spare parts for Noblelift material handling equipment in the Czech Republic and Slovakia."
+        ]
+      }
+    ]
+  }
+}

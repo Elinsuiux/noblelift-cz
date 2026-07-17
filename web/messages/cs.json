@@ -1,0 +1,1917 @@
+{
+  "meta": {
+    "title": "Noblelift | VZV GROUP s.r.o.",
+    "description": "VZV GROUP s.r.o. – výhradní dovozce a distributor techniky Noblelift pro ČR a SR. Manipulační technika, servis a náhradní díly."
+  },
+  "notFound": {
+    "badge": "404",
+    "title": "Stránka nenalezena",
+    "description": "Omlouváme se, ale požadovaná stránka neexistuje nebo byla přesunuta.",
+    "hint": "Zkontrolujte prosím adresu URL, nebo pokračujte na úvodní stránku či katalog produktů Noblelift.",
+    "homeCta": "Zpět na úvod",
+    "productsCta": "Zobrazit produkty",
+    "contactCta": "Kontaktujte nás"
+  },
+  "brand": {
+    "sub": "VZV GROUP s.r.o."
+  },
+  "nav": {
+    "products": "Produkty",
+    "service": "Servis a náhradní díly",
+    "about": "O nás",
+    "contact": "Kontakt",
+    "openMenu": "Otevřít menu",
+    "closeMenu": "Zavřít menu",
+    "openProductsMenu": "Otevřít kategorie produktů"
+  },
+  "productsMenu": {
+    "categoryTitle": "Kategorie",
+    "categories": {
+      "all": "Všechny produkty"
+    }
+  },
+  "hero": {
+    "title": "NOBLELIFT",
+    "subtitle": "VZV GROUP s.r.o. – výhradní dovozce a distributor značky Noblelift pro ČR a SR.",
+    "ctaPrimary": "Zobrazit katalog strojů",
+    "mediaNote": "Fotka vozíku Noblelift",
+    "carousel": {
+      "prev": "Předchozí snímek",
+      "next": "Další snímek",
+      "slides": "Hero snímky",
+      "goTo": "Přejít na snímek {index}"
+    }
+  },
+  "why": {
+    "title": "Proč zvolit Noblelift od VZV GROUP?",
+    "lead": "Jako výhradní dovozce pro ČR a SR nabízíme kompletní podporu – od výběru techniky přes dodání až po servis a náhradní díly.",
+    "learnMore": "Zjistit více +",
+    "steps": {
+      "1": {
+        "title": "Globální značka s ověřenou kvalitou",
+        "desc": "Noblelift patří mezi přední světové výrobce manipulační techniky s moderním vývojem a výrobou."
+      },
+      "2": {
+        "title": "Široké portfolio techniky",
+        "desc": "Čelní vozíky, zakladače, paletové vozíky, retraky, terénní stroje i pracovní plošiny pro různé provozy."
+      },
+      "3": {
+        "title": "Odborné poradenství",
+        "desc": "Pomůžeme vybrat správný typ stroje, nosnost, výšku zdvihu, baterii i příslušenství podle vašich potřeb."
+      },
+      "4": {
+        "title": "Servis a originální díly",
+        "desc": "Zajišťujeme záruční i pozáruční servis a dodávku originálních náhradních dílů Noblelift."
+      },
+      "5": {
+        "title": "Rychlé dodání napříč Evropou",
+        "desc": "Spolupracujeme s evropskou logistikou a zajistíme dopravu techniky až k vám."
+      },
+      "6": {
+        "title": "Výhradní oficiální dovozce",
+        "desc": "Jsme jediným autorizovaným dovozcem Noblelift pro ČR a SR. Každý stroj přichází s plnou zárukou výrobce a přímou technickou podporou z továrny."
+      }
+    }
+  },
+  "video": {
+    "note": "Video z oficiálního webu Noblelift",
+    "play": "Přehrát video o Noblelift",
+    "close": "Zavřít video"
+  },
+  "media": {
+    "whyBannerAlt": "Centrála společnosti Noblelift",
+    "whyBannerHint": "Panoramatická fotka centrály značky Noblelift",
+    "logisticsAlt": "Doprava a vykládka manipulační techniky Noblelift",
+    "logisticsHint": "Fotka vykládky, dopravy nebo vozíku před halou",
+    "dealerAlt": "Řada paletových vozíků Noblelift Avant ve skladu",
+    "dealerHint": "Foto skladu s paletovými vozíky Noblelift",
+    "categoryHint": "Fotka kategorie techniky",
+    "categoryAlt": {
+      "1": "Čelní vozíky Noblelift ve skladu",
+      "2": "Ruční vysokozdvižné vozíky ve skladové hale",
+      "3": "Paletové vozíky v provozu skladu",
+      "4": "Terénní vozíky a manipulátory",
+      "5": "Retraky ve skladových uličkách",
+      "6": "Nůžkové plošiny Noblelift"
+    }
+  },
+  "categories": {
+    "titlePrefix": "Kategorie",
+    "titleBrand": "Noblelift",
+    "titleSuffix": "techniky",
+    "cta": "Celý katalog",
+    "viewModels": "Zobrazit modely",
+    "catalogCta": "Prohlédnout celý katalog Noblelift",
+    "items": {
+      "1": {
+        "tags": "Elektrické / Dieselové",
+        "title": "Čelní vozíky",
+        "desc": "Tří- a čtyřkolové elektrické a dieselové čelní vysokozdvižné vozíky. K dispozici v litiové verzi (Li-Ion). Nosnost 2,5 až 10 t."
+      },
+      "2": {
+        "tags": "Bez plošiny / S plošinou / Obkročné",
+        "title": "Ruční vysokozdvižné vozíky",
+        "desc": "Elektrické zakladače s pěší obsluhou i zakladače s plošinou pro operátora. Kompaktní konstrukce, vysoká zbytková nosnost a zdvih až 13 m."
+      },
+      "3": {
+        "tags": "Ruční / Elektrické / S vážením",
+        "title": "Paletové vozíky",
+        "desc": "Ruční, elektrické pěší i řidičské paletové vozíky. Varianty s váhami, nízkým vstupem a lithiovým pohonem."
+      },
+      "4": {
+        "tags": "Venkovní / Diesel / Stavebnictví",
+        "title": "Terénní vozíky a manipulátory",
+        "desc": "Dieselové terénní vozíky a teleskopické manipulátory pro stavebnictví a zemědělství. Samostatná jízda na nerovném terénu."
+      },
+      "5": {
+        "tags": "Vysokozdvižné / do 13 m / Úzké uličky",
+        "title": "Retraky a vychystávací vozíky",
+        "desc": "Retrakty pro vysoké regály až 13 m. Modely pro úzké uličky, double-deep verze a vychystávací vozíky pro efektivní skladování."
+      },
+      "6": {
+        "tags": "Elektrické",
+        "title": "Nůžkové plošiny",
+        "desc": "Elektrické nůžkové pracovní plošiny pro bezpečnou práci ve výšce při údržbě, montážích a skladových operacích."
+      }
+    }
+  },
+  "logistics": {
+    "title": "Doprava & logistika",
+    "intro": "Rychlá dodávka po celé Evropě. Zajišťujeme vše od standardní kamionové přepravy až po speciální transport těžkých nákladů.",
+    "deliveryNote": "Standardní dodací lhůta 24–48 hodin v rámci ČR a SR",
+    "items": {
+      "1": {
+        "title": "Kamionová přeprava",
+        "desc": "Nakládka na rampu — standardní dodávka po ČR, SR a celé EU"
+      },
+      "2": {
+        "title": "Speciální nízkoložná přeprava",
+        "desc": "Těžké a nadrozměrné stroje — bezpečný speciální transport"
+      },
+      "3": {
+        "title": "Kontejnerová přeprava",
+        "desc": "Mezinárodní kontejnerové zásilky — cenová efektivita pro větší objemy"
+      }
+    }
+  },
+  "dealer": {
+    "titleLine1": "Chcete se stát",
+    "titleDealer": "dealerem",
+    "titleBrand": "Noblelift?",
+    "lead": "Připojte se k naší rostoucí síti autorizovaných dealerů Noblelift ve střední a východní Evropě. Nabízíme konkurenceschopné marže, plné zaškolení, marketingovou podporu a zázemí přímého výrobce.",
+    "benefits": {
+      "1": "Konkurenční dealerské ceny a marže",
+      "2": "Technická školení a certifikace Noblelift",
+      "3": "Marketingové materiály a podpora",
+      "4": "Přímá technická podpora od výrobce",
+      "5": "Garantovaná dostupnost náhradních dílů"
+    }
+  },
+  "form": {
+    "heading": "Napište nám",
+    "name": "Jméno a příjmení",
+    "namePlaceholder": "Jan Novák",
+    "company": "Společnost",
+    "companyPlaceholder": "Název vaší firmy",
+    "email": "E-mail",
+    "emailPlaceholder": "jan.novak@firma.cz",
+    "phone": "Mobilní telefon",
+    "phoneDialCode": "Předvolba",
+    "phonePlaceholder": "601 123 456",
+    "message": "Zpráva",
+    "messagePlaceholder": "Popište vaše potřeby nebo dotaz",
+    "country": "Země",
+    "countryPlaceholder": "Vyberte stát",
+    "search": "Hledat",
+    "noResults": "Žádné výsledky",
+    "send": "Odeslat zprávu",
+    "sending": "Odesílání…",
+    "error": "Odeslání se nezdařilo. Zkuste to prosím znovu nebo nás kontaktujte telefonicky.",
+    "orCall": "nebo zavolejte",
+    "fine": "Odesláním souhlasíte se <privacy>zpracováním osobních údajů</privacy> za účelem odpovědi na vaši poptávku.",
+    "success": {
+      "title": "Poptávka byla odeslána",
+      "body": "Vaši zprávu jsme obdrželi a právě ji zpracováváme.",
+      "bodyFollowUp": "Brzy se vám ozveme.",
+      "close": "Zavřít"
+    }
+  },
+  "footer": {
+    "sub": "Výhradní dovozce a distributor značky Noblelift pro ČR a SR",
+    "nav": "Odkazy",
+    "cats": "Kategorie",
+    "contact": "Kontakt",
+    "legal": "Právní informace",
+    "privacy": "Zásady zpracování osobních údajů",
+    "cookies": "Cookies",
+    "terms": "Obchodní podmínky",
+    "company": "Identifikační údaje",
+    "fine": "noblelift.cz"
+  },
+  "cookieBanner": {
+    "title": "Používáme cookies",
+    "description": "Nezbytné cookies zajišťují fungování webu. Volitelné cookies používáme pouze s vaším souhlasem. Souhlas můžete kdykoli odmítnout nebo upravit.",
+    "more": "Více informací",
+    "rejectAll": "Odmítnout vše",
+    "settings": "Nastavení",
+    "acceptAll": "Přijmout vše",
+    "essentialOnly": "Pouze nezbytné",
+    "save": "Uložit nastavení",
+    "manage": "Nastavení cookies",
+    "settingsTitle": "Nastavení cookies",
+    "settingsIntro": "Zvolte, které volitelné cookies chcete povolit. Nezbytné cookies nelze vypnout, protože bez nich web nefunguje správně.",
+    "close": "Zavřít",
+    "categories": {
+      "necessary": {
+        "title": "Nezbytné cookies",
+        "description": "Nutné pro základní funkce webu, např. jazyk stránek a uložení vašeho rozhodnutí o cookies.",
+        "alwaysActive": "Vždy aktivní"
+      },
+      "analytics": {
+        "title": "Analytické cookies",
+        "description": "Pomáhají nám pochopit, jak je web používán (např. počet návštěv). Aktivují se pouze s vaším souhlasem."
+      },
+      "marketing": {
+        "title": "Marketingové cookies",
+        "description": "Slouží k měření účinnosti reklamy a personalizaci obsahu. Aktivují se pouze s vaším souhlasem."
+      }
+    }
+  },
+  "servicePage": {
+    "meta": {
+      "title": "Servis a náhradní díly | Noblelift | VZV GROUP s.r.o.",
+      "description": "Autorizovaný servis Noblelift v ČR a SR, originální náhradní díly skladem a rychlá expedice. VZV GROUP s.r.o. – výhradní dovozce Noblelift."
+    },
+    "title": "Servis a náhradní díly",
+    "intro": "Zajišťujeme kompletní péči o váš vozový park po celé České republice a na Slovensku. Záruční i pozáruční servis, originální díly a přímá podpora výrobce Noblelift.",
+    "pillars": {
+      "service": {
+        "title": "Autorizovaný servis v ČR a SK",
+        "desc": "Naši certifikovaní technici provádějí záruční i pozáruční servis manipulační techniky Noblelift přímo u vás v provozu nebo v našem servisním zázemí.",
+        "imageAlt": "Servis a údržba manipulační techniky Noblelift",
+        "imageHint": "Foto servisu nebo technika při opravě",
+        "points": {
+          "1": "Diagnostika, opravy a pravidelné prohlídky strojů",
+          "2": "Přímá technická podpora a školení od výrobce Noblelift",
+          "3": "Servis po celé České republice a na Slovensku"
+        }
+      },
+      "parts": {
+        "title": "Originální náhradní díly skladem",
+        "desc": "Držíme skladem běžné originální náhradní díly Noblelift, abychom minimalizovali prostoje vaší techniky a zajistili rychlou expedici.",
+        "imageAlt": "Sklad náhradních dílů Noblelift",
+        "imageHint": "Foto skladu dílů nebo regálů",
+        "points": {
+          "1": "Pouze originální díly Noblelift s plnou zárukou",
+          "2": "Rychlá expedice dílů po celé ČR a SR",
+          "3": "Poradenství při výběru správného dílu pro váš stroj"
+        }
+      }
+    },
+    "benefits": {
+      "warranty": {
+        "title": "Záruční servis",
+        "desc": "Kompletní záruční opravy v souladu s podmínkami výrobce Noblelift."
+      },
+      "genuine": {
+        "title": "Originální díly",
+        "desc": "Dodáváme výhradně originální náhradní díly přímo od výrobce."
+      },
+      "dispatch": {
+        "title": "Rychlá expedice",
+        "desc": "Běžné díly expedujeme bez zbytečných prodlev z našeho skladu."
+      },
+      "factory": {
+        "title": "Podpora výrobce",
+        "desc": "Jako výhradní dovozce máme přímý kontakt na továrnu Noblelift."
+      }
+    },
+    "urgent": {
+      "title": "Potřebujete rychlý servis?",
+      "desc": "Naše servisní linka je vám k dispozici pro hlášení poruch, poptávku náhradních dílů a domluvení servisního zásahu."
+    },
+    "process": {
+      "title": "Jak servis probíhá",
+      "steps": {
+        "1": {
+          "title": "Kontaktujte nás",
+          "desc": "Zavolejte nebo vyplňte formulář — popište typ stroje, závadu nebo požadované díly."
+        },
+        "2": {
+          "title": "Diagnostika a nabídka",
+          "desc": "Navrhneme řešení, cenovou nabídku servisu nebo potvrdíme dostupnost dílů."
+        },
+        "3": {
+          "title": "Servis nebo expedice",
+          "desc": "Technik přijede na místo, nebo díly odešleme z našeho skladu."
+        },
+        "4": {
+          "title": "Stroj zpět v provozu",
+          "desc": "Po opravě nebo výměně dílů je vaše technika opět připravena k práci."
+        }
+      }
+    },
+    "formHeading": "Servisní poptávka",
+    "formLead": "Vyplňte formulář a ozveme se vám s nabídkou servisu nebo náhradních dílů.",
+    "messagePlaceholder": "Uveďte typ stroje, sériové číslo, popis závady nebo požadované díly…",
+    "formOrCall": "Nebo zavolejte přímo:",
+    "aboutLinkLead": "Chcete vědět více o společnosti?",
+    "aboutLink": "O nás"
+  },
+  "contactPage": {
+    "meta": {
+      "title": "Kontakt | Noblelift | VZV GROUP s.r.o.",
+      "description": "Kontaktujte VZV GROUP s.r.o. – výhradního dovozce Noblelift pro ČR a SR. Obchodní zástupce, formulář a sídlo společnosti."
+    },
+    "title": "Kontaktujte nás",
+    "intro": "Potřebujete poradit s výběrem manipulační techniky Noblelift? Náš tým vám pomůže najít optimální řešení pro váš sklad, výrobu nebo provoz. Jsme výhradním dovozcem pro Českou republiku a Slovensko.",
+    "contactHeading": "Kontakt",
+    "repsLabel": "Obchodní zástupci",
+    "repPhotoHint": "Foto: {name}",
+    "headquarters": "Centrála společnosti",
+    "formHeading": "Kontaktní formulář",
+    "messagePlaceholder": "Mám zájem o cenovou nabídku na…",
+    "showOnMap": "Ukázat na mapě",
+    "detailsTitle": "Kontaktní údaje",
+    "depotsHeading": "Sklady",
+    "billingHeading": "Fakturační údaje",
+    "billingBank": "Bankovní spojení",
+    "billingAccount": "Číslo účtu",
+    "billingDirector": "Jednatel",
+    "ico": "IČ",
+    "dic": "DIČ",
+    "depots": {
+      "cervenaVoda": {
+        "name": "Červená Voda",
+        "addressLine1": "Červená Voda 535",
+        "addressLine2": "561 61 Červená Voda, Česká republika",
+        "hours": "Po–Pá 7:30–16:00"
+      },
+      "prague": {
+        "name": "Praha",
+        "addressLine1": "Do Čertous 2717/5",
+        "addressLine2": "193 00 Praha 20, Česká republika",
+        "hours": "Po–Pá 8:00–16:30"
+      }
+    },
+    "warehouses": {
+      "cervenaVoda": {
+        "title": "Hlavní sklad Červená Voda",
+        "line1": "561 61 Červená Voda 535",
+        "line2": "Česká republika",
+        "imageAlt": "Hlavní sklad VZV GROUP v Červené Vodě",
+        "imageHint": "Foto skladu Červená Voda"
+      },
+      "prague": {
+        "title": "Centrální sklad Praha",
+        "line1": "Do Čertous 2717/5",
+        "line2": "193 00 Praha 20, Česká republika",
+        "imageAlt": "Centrální sklad VZV GROUP v Praze",
+        "imageHint": "Foto skladu Praha"
+      }
+    }
+  },
+  "aboutPage": {
+    "meta": {
+      "title": "O nás | Noblelift | VZV GROUP s.r.o.",
+      "description": "Noblelift.cz – výhradní zastoupení značky Noblelift pro ČR a SR. VZV GROUP s.r.o. nabízí manipulační techniku, servis, náhradní díly a odborné poradenství."
+    },
+    "title": "O nás",
+    "intro": {
+      "lead": "Noblelift.cz je součástí společnosti VZV GROUP s.r.o., která je výhradním zastoupením značky NOBLELIFT pro trhy v České republice a na Slovensku.",
+      "p1": "Jsme oficiálním autorizovaným zástupcem globální značky NOBLELIFT. Díky tomu přinášíme do regionu nejen špičkovou manipulační techniku, ale také servis, odbornou podporu a přístup k originálním náhradním dílům.",
+      "p2": "Zároveň bereme na sebe plnou regionální odpovědnost za prodej a servis strojů značky Noblelift v ČR a na Slovensku.",
+      "cta": "Vybrat si techniku"
+    },
+    "commitment": {
+      "heading": "Náš závazek",
+      "pillarsLabel": "Stavíme na třech pilířích",
+      "pillars": {
+        "quality": "kvalita",
+        "reliability": "spolehlivost",
+        "innovation": "inovativní přístup"
+      },
+      "body": "Jsme tu proto, abychom firmám pomohli optimalizovat interní tok materiálu. Nabízíme výkonná řešení v oblasti intralogistiky — od ručních paletových vozíků až po elektrické retraky."
+    },
+    "mission": {
+      "heading": "Naše mise",
+      "p1": "Máme za to, že obchodní vztah může i měl by být komplexní partnerství — spojující dostupnost náhradních dílů, školení a servis. Právě díky tomu pomáháme minimalizovat prostoje a maximalizovat efektivitu vašeho provozu.",
+      "tagline": "Noblelift.cz – profesionální technika, na kterou se můžete spolehnout.",
+      "caption": "Sklady v Červené Vodě a Praze — technika i díly na dosah"
+    },
+    "gallery": {
+      "title": "V provozu i ve skladu",
+      "lead": "Podívejte se, kde pracujeme — od skladů přes expedici až po techniku Noblelift v reálném provozu.",
+      "items": {
+        "warehouse": {
+          "alt": "Hlavní sklad manipulační techniky v Červené Vodě",
+          "hint": "Foto skladu Červená Voda",
+          "caption": "Hlavní sklad Červená Voda"
+        },
+        "forklift": {
+          "alt": "Paletové vozíky Noblelift na regálech ve skladu",
+          "hint": "Foto skladové techniky Noblelift",
+          "caption": "Technika Noblelift v provozu"
+        },
+        "logistics": {
+          "alt": "Doprava a vykládka manipulační techniky",
+          "hint": "Foto dopravy nebo vykládky",
+          "caption": "Vlastní doprava a logistika"
+        },
+        "prague": {
+          "alt": "Centrální sklad VZV GROUP v Praze – pohled z dronu",
+          "hint": "Foto skladu Praha",
+          "caption": "Centrální sklad Praha"
+        }
+      }
+    },
+    "stats": {
+      "warehouses": {
+        "value": "2",
+        "label": "sklady v ČR"
+      },
+      "territory": {
+        "value": "CZ + SK",
+        "label": "výhradní zastoupení"
+      },
+      "delivery": {
+        "value": "24–48 h",
+        "label": "standardní dodání"
+      },
+      "parts": {
+        "value": "100 %",
+        "label": "originální díly Noblelift"
+      }
+    },
+    "strengths": {
+      "title": "V čem vynikáme",
+      "items": {
+        "warehouse": {
+          "title": "Výhradní zástupce Noblelift s největším skladem manipulační techniky",
+          "desc": "Jsme jediným autorizovaným dovozcem značky Noblelift pro Českou republiku a Slovensko. V našem regionálním skladu, který je největší svého druhu, pro vás máme okamžitě dostupné stroje i veškeré náhradní díly."
+        },
+        "trust": {
+          "title": "Garance nejnižší ceny a plná záruka výrobce",
+          "desc": "Pořiďte si techniku Noblelift s naprostou jistotou. Pokud máte lepší nabídku na srovnatelný vozík, ozvěte se nám a my vám nabídneme ještě lepší cenu. Na veškeré dodané stroje navíc získáváte plnou záruku přímo od výrobce."
+        },
+        "serviceParts": {
+          "title": "Autorizovaný servis & Náhradní díly okamžitě skladem",
+          "desc": "Nabízíme záruční i pozáruční servis v ČR a SK s přímou podporou výrobce Noblelift. Běžné originální díly máme skladem pro rychlou expedici a minimální prostoje vaší techniky. Zavolejte nám nebo napište přes formulář – poradíme vám se servisem i výběrem správného dílu."
+        },
+        "rental": {
+          "title": "Zapůjčení zdarma",
+          "desc": "Nevíte, zda je to ten pravý? Zdarma vám vozík zapůjčíme na 24 hodin na vyzkoušení. Účtovat budeme pouze dopravu."
+        },
+        "delivery": {
+          "title": "Vlastní doprava",
+          "desc": "Blesková expedice po celé ČR a SR. Standardní dodací lhůta 24–48 hodin."
+        },
+        "consulting": {
+          "title": "Individuální poradenství",
+          "desc": "Náš zkušený tým vám navrhne řešení přesně na míru vaší logistice."
+        }
+      }
+    },
+    "team": {
+      "title": "Váš kontakt na jednom místě",
+      "lead": "Obchodní zástupci Noblelift pro ČR a SR vám poradí s výběrem techniky, servisem i náhradními díly.",
+      "role": "Obchodní zástupce Noblelift",
+      "photoAlt": "Foto: {name}",
+      "contactCta": "Kompletní kontaktní údaje"
+    },
+    "catalogCta": "Kompletní přehled manipulační techniky",
+    "media": {
+      "introMainAlt": "Řady vozíků Noblelift ve skladové hale VZV GROUP",
+      "introMainHint": "Foto skladu s technikou Noblelift",
+      "introInsetAlt": "Sklad manipulační techniky Červená Voda",
+      "introInsetHint": "Foto skladu",
+      "introAccentAlt": "Obchodní zástupce Noblelift",
+      "introAccentHint": "Foto zástupce",
+      "commitmentAlt": "Skladová technika Noblelift na regálech ve skladu VZV GROUP",
+      "commitmentHint": "Foto skladu s paletovými vozíky"
+    }
+  },
+  "legalPrivacy": {
+    "meta": {
+      "title": "Zásady zpracování osobních údajů | Noblelift | VZV GROUP s.r.o.",
+      "description": "Informace o zpracování osobních údajů na webu noblelift.cz provozovaném společností VZV GROUP s.r.o."
+    },
+    "title": "Zásady zpracování osobních údajů",
+    "updated": "Účinnost od 10. 7. 2026",
+    "intro": "Tyto zásady popisují, jak společnost VZV GROUP s.r.o. zpracovává osobní údaje návštěvníků webu noblelift.cz a osob, které nás kontaktují v souvislosti s nabídkou, prodejem, servisem a distribucí manipulační techniky Noblelift.",
+    "sections": [
+      {
+        "title": "Správce osobních údajů",
+        "paragraphs": [
+          "Správcem osobních údajů je VZV GROUP s.r.o., se sídlem Okružní 1144, 500 03 Hradec Králové, Česká republika, IČO 27469662, DIČ CZ27469662, zapsaná v obchodním rejstříku vedeném Krajským soudem v Hradci Králové, sp. zn. C 20857 (dále jen „správce“).",
+          "Kontaktní e-mail pro záležitosti ochrany osobních údajů: info@noblelift.cz."
+        ]
+      },
+      {
+        "title": "Rozsah zpracovávaných údajů",
+        "paragraphs": [
+          "Zpracováváme zejména tyto kategorie osobních údajů:"
+        ],
+        "list": [
+          "identifikační a kontaktní údaje (jméno, příjmení, e-mail, telefon, firma, stát)",
+          "obsah zprávy z kontaktního formuláře nebo e-mailové komunikace",
+          "údaje o poptávce, objednávce, servisu nebo reklamaci",
+          "technické údaje o používání webu (IP adresa, typ prohlížeče, cookies – viz Zásady používání cookies)"
+        ]
+      },
+      {
+        "title": "Účely a právní základy zpracování",
+        "paragraphs": [
+          "Osobní údaje zpracováváme pouze pro stanovené účely a na základě příslušného právního titulu podle čl. 6 GDPR:"
+        ],
+        "list": [
+          "vyřízení poptávky a komunikace s vámi – oprávněný zájem správce / jednání před uzavřením smlouvy",
+          "plnění smlouvy, dodání zboží, servis a záruční péče – plnění smlouvy",
+          "plnění zákonných povinností (účetnictví, daně, archivace) – právní povinnost",
+          "zabezpečení a provoz webu – oprávněný zájem správce",
+          "marketingová komunikace – pouze na základě vašeho souhlasu, který můžete kdykoli odvolat"
+        ]
+      },
+      {
+        "title": "Doba uchovávání údajů",
+        "paragraphs": [
+          "Údaje uchováváme po dobu nezbytnou k naplnění účelu zpracování. Poptávky a obchodní komunikaci obvykle uchováváme po dobu 3 let od posledního kontaktu, pokud nevznikne smluvní vztah. Údaje ze smluvního vztahu uchováváme po dobu trvání smlouvy a dále po dobu stanovenou právními předpisy (typicky 10 let v oblasti účetnictví a daní). Technické logy a cookies jsou uchovávány po dobu uvedenou v informacích o cookies."
+        ]
+      },
+      {
+        "title": "Příjemci a zpracovatelé",
+        "paragraphs": [
+          "Osobní údaje mohou být zpřístupněny poskytovatelům IT služeb, hostingu, e-mailové komunikace, účetnictví a dalším zpracovatelům, kteří pro nás tyto činnosti zajišťují na základě smlouvy o zpracování osobních údajů. Údaje nepředáváme třetím stranám za účelem jejich vlastního marketingu bez vašeho souhlasu.",
+          "Některé zpracovatele můžeme využívat mimo Evropskou unii; v takovém případě zajistíme odpovídající záruky přenosu podle GDPR."
+        ]
+      },
+      {
+        "title": "Vaše práva",
+        "paragraphs": [
+          "V rozsahu stanoveném GDPR máte právo:"
+        ],
+        "list": [
+          "požadovat přístup ke svým osobním údajům",
+          "požadovat opravu nebo výmaz údajů",
+          "požadovat omezení zpracování",
+          "vznést námitku proti zpracování",
+          "požadovat přenositelnost údajů",
+          "odvolat souhlas se zpracováním, pokud je zpracování založeno na souhlasu",
+          "podat stížnost u Úřadu pro ochranu osobních údajů (www.uoou.cz)"
+        ]
+      },
+      {
+        "title": "Zabezpečení údajů",
+        "paragraphs": [
+          "Přijímáme přiměřená technická a organizační opatření k ochraně osobních údajů před ztrátou, zneužitím, neoprávněným přístupem nebo zveřejněním."
+        ]
+      },
+      {
+        "title": "Cookies",
+        "paragraphs": [
+          "Podrobné informace o používání cookies naleznete na stránce Cookies. Volitelné cookies pro analytické účely aktivujeme pouze na základě vašeho souhlasu prostřednictvím cookie lišty."
+        ]
+      },
+      {
+        "title": "Změny těchto zásad",
+        "paragraphs": [
+          "Tyto zásady můžeme příležitostně aktualizovat. Aktuální verze je vždy zveřejněna na tomto webu s uvedením data účinnosti."
+        ]
+      }
+    ]
+  },
+  "legalCookies": {
+    "meta": {
+      "title": "Cookies | Noblelift | VZV GROUP s.r.o.",
+      "description": "Informace o používání cookies na webu noblelift.cz."
+    },
+    "title": "Informace o cookies",
+    "updated": "Účinnost od 10. 7. 2026",
+    "intro": "Tato stránka vysvětluje, jak web noblelift.cz provozovaný společností VZV GROUP s.r.o. používá cookies a podobné technologie.",
+    "sections": [
+      {
+        "title": "Co jsou cookies",
+        "paragraphs": [
+          "Cookies jsou malé textové soubory ukládané do vašeho prohlížeče. Pomáhají webu správně fungovat, zapamatovat si vaše volby nebo měřit návštěvnost."
+        ]
+      },
+      {
+        "title": "Nezbytné cookies",
+        "paragraphs": [
+          "Tyto cookies jsou nutné pro základní funkce webu. Bez nich web nemusí fungovat správně. Pro jejich použití nepotřebujeme váš souhlas."
+        ],
+        "list": [
+          "NEXT_LOCALE – uložení zvoleného jazyka webu (cs/en)",
+          "noblelift-cookie-consent – uložení vašeho rozhodnutí o cookies v prohlížeči"
+        ]
+      },
+      {
+        "title": "Analytické a marketingové cookies",
+        "paragraphs": [
+          "Volitelné cookies pro měření návštěvnosti nebo marketingové účely používáme pouze pokud s tím vyslovíte souhlas prostřednictvím cookie lišty. Pokud souhlas neudělíte, tyto cookies nespouštíme.",
+          "V současné době web primárně využívá nezbytné cookies. Přidání analytických nástrojů (např. Google Analytics) bude vždy podmíněno vaším souhlasem a tato stránka bude aktualizována."
+        ]
+      },
+      {
+        "title": "Správa cookies",
+        "paragraphs": [
+          "Své preference můžete kdykoli změnit prostřednictvím odkazu Nastavení cookies v patičce webu nebo smazáním cookies v nastavení prohlížeče.",
+          "V cookie liště můžete zvolit Odmítnout vše, Přijmout vše, nebo otevřít Nastavení a povolit jednotlivé kategorie zvlášť. Volitelné kategorie jsou vždy vypnuté, dokud je sami neaktivujete.",
+          "Blokuje-li prohlížeč cookies zcela, některé funkce webu nemusí být dostupné."
+        ]
+      },
+      {
+        "title": "Kontakt",
+        "paragraphs": [
+          "Dotazy k cookies směřujte na info@noblelift.cz. Další informace o zpracování osobních údajů naleznete v Zásadách zpracování osobních údajů."
+        ]
+      }
+    ]
+  },
+  "legalTerms": {
+    "meta": {
+      "title": "Obchodní podmínky | Noblelift | VZV GROUP s.r.o.",
+      "description": "Všeobecné obchodní podmínky společnosti VZV GROUP s.r.o. pro nabídku, prodej, servis a distribuci techniky Noblelift."
+    },
+    "title": "Obchodní podmínky",
+    "updated": "Účinnost od 10. 7. 2026",
+    "intro": "Tyto obchodní podmínky upravují práva a povinnosti mezi společností VZV GROUP s.r.o. a jejími obchodními partnery při nabídce, prodeji, dodání, servisu a prodeji náhradních dílů manipulační techniky Noblelift prostřednictvím webu noblelift.cz a dalšími obchodními kanály.",
+    "sections": [
+      {
+        "title": "Identifikace prodávajícího",
+        "paragraphs": [
+          "Prodávajícím je VZV GROUP s.r.o., Okružní 1144, 500 03 Hradec Králové, IČO 27469662, DIČ CZ27469662, e-mail info@noblelift.cz, telefon +420 773 997 314."
+        ]
+      },
+      {
+        "title": "Rozsah a uzavření smlouvy",
+        "paragraphs": [
+          "Obsah webu má informativní charakter a nejedná se o závaznou nabídku ve smyslu občanského zákoníku, pokud není výslovně uvedeno jinak. Kupní smlouva vzniká potvrzením objednávky prodávajícím nebo podpisem smlouvy / objednávky oběma stranami.",
+          "Web je primárně určen pro podnikatele (B2B). U spotřebitelských smluv platí příslušná ustanovení občanského zákoníku a zákona o ochraně spotřebitele, pokud se na konkrétní případ vztahují."
+        ]
+      },
+      {
+        "title": "Ceny a platební podmínky",
+        "paragraphs": [
+          "Ceny jsou uváděny v českých korunách nebo eurech dle dohody, pokud není uvedeno jinak. K ceně může být připočtena DPH dle platných právních předpisů. Konkrétní platební podmínky (záloha, splatnost, způsob úhrady) jsou stanoveny ve smlouvě nebo v potvrzení objednávky."
+        ]
+      },
+      {
+        "title": "Dodání a přechod nebezpečí škody",
+        "paragraphs": [
+          "Způsob, termín a náklady na dopravu jsou sjednány ve smlouvě nebo potvrzení objednávky. Nebezpečí škody na věci přechází na kupujícího okamžikem předání dopravci nebo osobním převzetím, dle sjednaných dodacích podmínek."
+        ]
+      },
+      {
+        "title": "Záruka a servis",
+        "paragraphs": [
+          "Na dodanou techniku se vztahuje záruka dle platných právních předpisů a záručních podmínek výrobce Noblelift. Autorizovaný servis a záruční opravy zajišťuje VZV GROUP s.r.o. v souladu se servisními postupy výrobce."
+        ]
+      },
+      {
+        "title": "Reklamace",
+        "paragraphs": [
+          "Kupující je povinen zkontrolovat dodávku při převzetí a případné zjevné vady bez zbytečného odkladu oznámit. Reklamace se uplatňují písemně na info@noblelift.cz nebo poštou na sídlo prodávajícího s popisem vady a číslem dokladu. Prodávající vyřídí reklamaci v zákonných lhůtách."
+        ]
+      },
+      {
+        "title": "Odpovědnost",
+        "paragraphs": [
+          "Prodávající neodpovídá za škody vzniklé v důsledku nesprávného používání techniky, neodborného zásahu nebo nedodržení návodu k obsluze. Odpovědnost za ušlý zisk je vyloučena v rozsahu povoleném právními předpisy."
+        ]
+      },
+      {
+        "title": "Ochrana osobních údajů",
+        "paragraphs": [
+          "Zpracování osobních údajů se řídí Zásadami zpracování osobních údajů zveřejněnými na tomto webu."
+        ]
+      },
+      {
+        "title": "Závěrečná ustanovení",
+        "paragraphs": [
+          "Tyto obchodní podmínky se řídí právním řádem České republiky. Případné spory budou řešeny přednostně smírnou cestou; nedojde-li k dohodě, jsou příslušné soudy České republiky dle sídla prodávajícího.",
+          "Prodávající si vyhrazuje právo tyto podmínky měnit. Pro již uzavřené smlouvy platí verze účinná v době jejich uzavření."
+        ]
+      }
+    ]
+  },
+  "productsCatalog": {
+    "meta": {
+      "hub": {
+        "title": "Katalog produktů | Noblelift | VZV GROUP s.r.o.",
+        "description": "Kompletní katalog manipulační techniky Noblelift – čelní vozíky, zakladače, paletové vozíky, retraky, terénní stroje a pracovní plošiny."
+      },
+      "category": {
+        "title": "{category} | Noblelift katalog"
+      },
+      "subcategory": {
+        "title": "{subcategory} | {category} | Noblelift"
+      },
+      "series": {
+        "title": "{series} | {subcategory} | Noblelift"
+      },
+      "model": {
+        "title": "{model} | {series} | Noblelift"
+      }
+    },
+    "breadcrumb": {
+      "home": "Domů",
+      "products": "Produkty"
+    },
+    "hub": {
+      "titlePrefix": "Kategorie",
+      "titleBrand": "Noblelift",
+      "titleSuffix": "techniky",
+      "lead": "Vyberte kategorii a prohlédněte si modely manipulační techniky Noblelift. Jako výhradní dovozce pro ČR a SR vám pomůžeme s výběrem i servisem.",
+      "contactCta": "Nezávazná poptávka"
+    },
+    "categoryNav": {
+      "label": "Kategorie produktů"
+    },
+    "category": {
+      "chooseSubcategory": "Vyberte podkategorii"
+    },
+    "subcategory": {
+      "modelsTitle": "Modely v nabídce",
+      "modelsCount": "{count, plural, one {# model} few {# modely} other {# modelů}}",
+      "seriesCount": "{count, plural, one {# řada} few {# řady} other {# řad}}",
+      "seriesPageTitle": "Série elektrických čelních vozíků Noblelift",
+      "seriesPageLead": "Klikněte na „Zjistit více“ pro detailní popis série nebo „Zobrazit modely“ pro přehled modelů v dané řadě.",
+      "cta": "Zobrazit techniku",
+      "contactCta": "Nezávazná poptávka"
+    },
+    "stackers": {
+      "walkieHub": {
+        "badge": "Bez přízdvihu / S přízdvihem",
+        "title": "Ruční vysokozdvižné vozíky bez plošiny pro obsluhu",
+        "intro": "Efektivní řešení pro sklady s důrazem na maximální kompaktnost a snadnou ovladatelnost. Elektrické vysokozdvižné vozíky bez plošiny jsou navrženy pro přesnou manipulaci v úzkých uličkách a v prostorově omezených provozech. Jsou ideální pro nakládku, vykládku a stohování palet na krátké vzdálenosti, kde je klíčová obratnost, přesnost a efektivní práce v omezeném manipulačním prostoru."
+      },
+      "riderHub": {
+        "badge": "Bez přízdvihu / S přízdvihem",
+        "title": "Zakladače s plošinou pro operátora",
+        "intro": "Efektivní řešení pro větší sklady a provozy s delšími přesuny mezi regály. Elektrické vysokozdvižné vozíky s plošinou pro operátora umožňují pohodlnější obsluhu, vyšší zdvih a rychlejší manipulaci palet ve skladových uličkách. Operátor stojí na plošině a spolu s vozíkem se pohybuje mezi pracovními místy, což zvyšuje produktivitu při stohování, vykládce a doplňování zboží."
+      },
+      "straddleHub": {
+        "badge": "Obkročné zakladače",
+        "title": "Obkročné vysokozdvižné zakladače",
+        "intro": "Obkročné elektrické zakladače pro manipulaci s atypickými paletami a maximální flexibilitu ve skladu. Vyberte konkrétní model a zobrazte technické detaily, nebo přejděte přímo na e-shop VZV GROUP."
+      }
+    },
+    "stackerVariants": {
+      "bezPrizdvihem": {
+        "badge": "Bez přízdvihu",
+        "title": "Bez přízdvihu",
+        "subtitle": "Kompaktní varianta",
+        "capacity": "1,3 - 2 t",
+        "modelRange": "SWB 130, PSE 15 L-C, PS 16 L, PS 20 L",
+        "productLine": "Pěší vysokozdvižný zakladač bez přízdvihu",
+        "desc": "Zakladače bez počátečního přízdvihu pro maximální kompaktnost a manipulaci v nejužších prostorách skladu.",
+        "uses": {
+          "1": "Úzké skladové uličky",
+          "2": "Krátké přesuny palet",
+          "3": "Kompaktní provozy"
+        },
+        "detail": {
+          "title": "Noblelift zakladače bez přízdvihu — detailní popis",
+          "intro": "Pěší vysokozdvižný zakladač bez počátečního přízdvihu pro maximálně kompaktní manipulaci palet. Ideální do úzkých uliček a provozů, kde je klíčová obratnost, přesnost a efektivní práce v omezeném prostoru.",
+          "features": {
+            "1": {
+              "title": "Kompaktní konstrukce",
+              "desc": "Minimální rozměry pro snadnou manipulaci v úzkých skladových uličkách"
+            },
+            "2": {
+              "title": "Elektrický pohon",
+              "desc": "Tichý a ekologický provoz vhodný pro vnitřní skladové prostory"
+            },
+            "3": {
+              "title": "Bezpečná obsluha",
+              "desc": "Ergonomická pěší řídící tyč a stabilní jízdní charakteristiky"
+            },
+            "4": {
+              "title": "Nízké provozní náklady",
+              "desc": "Jednoduchá konstrukce a snadná údržba pro každodenní provoz"
+            }
+          },
+          "specs": {
+            "capacity": { "label": "Nosnost", "value": "1,3 - 2 t" },
+            "drive": { "label": "Pohon", "value": "Elektrický" },
+            "lift": { "label": "Max. zdvih", "value": "až 3 500 mm" },
+            "battery": { "label": "Baterie", "value": "24 V" },
+            "operation": { "label": "Provoz", "value": "Vnitřní" },
+            "type": { "label": "Typ", "value": "Bez přízdvihu" }
+          }
+        }
+      },
+      "sPrizdvihem": {
+        "badge": "S přízdvihem",
+        "title": "S přízdvihem",
+        "subtitle": "Vyšší zdvih od podlahy",
+        "capacity": "1,2 - 1,6 t",
+        "modelRange": "PSE 12 ND, SWB 130 D, PS 16 DL",
+        "productLine": "Pěší vysokozdvižný zakladač s přízdvihem",
+        "desc": "Zakladače s počátečním přízdvihem pro pohodlnější manipulaci palet a vyšší efektivitu ve skladových provozech.",
+        "uses": {
+          "1": "Vyšší zdvih od podlahy",
+          "2": "Rychlejší nakládka palet",
+          "3": "Středně velké sklady"
+        },
+        "detail": {
+          "title": "Noblelift zakladače s přízdvihem — detailní popis",
+          "intro": "Pěší vysokozdvižný zakladač s počátečním přízdvihem pro pohodlnější manipulaci palet ve středně velkých skladech. Vyšší zdvih od podlahy zrychluje nakládku a zvyšuje efektivitu provozu.",
+          "features": {
+            "1": {
+              "title": "Počáteční přízdvihem",
+              "desc": "Snadnější zvedání palet z podlahy bez zbytečného manévrování"
+            },
+            "2": {
+              "title": "Elektrický pohon",
+              "desc": "Tichý provoz a nízké emise pro vnitřní skladové prostory"
+            },
+            "3": {
+              "title": "Vyšší produktivita",
+              "desc": "Rychlejší cykly při nakládce a stohování palet"
+            },
+            "4": {
+              "title": "Spolehlivá konstrukce",
+              "desc": "Robustní provedení pro každodenní intenzivní využití"
+            }
+          },
+          "specs": {
+            "capacity": { "label": "Nosnost", "value": "1,2 - 1,6 t" },
+            "drive": { "label": "Pohon", "value": "Elektrický" },
+            "lift": { "label": "Max. zdvih", "value": "až 4 500 mm" },
+            "battery": { "label": "Baterie", "value": "24 V" },
+            "operation": { "label": "Provoz", "value": "Vnitřní" },
+            "type": { "label": "Typ", "value": "S přízdvihem" }
+          }
+        }
+      }
+    },
+    "stackerRiderVariants": {
+      "bezPrizdvihem": {
+        "badge": "Bez přízdvihu",
+        "title": "Bez přízdvihu",
+        "subtitle": "S plošinou pro operátora",
+        "capacity": "1,6 - 2 t",
+        "modelRange": "PS 16 N - PS 20 N",
+        "productLine": "Řidičský vysokozdvižný zakladač bez přízdvihu s plošinou",
+        "desc": "Zakladače s plošinou pro operátora bez počátečního přízdvihu pro efektivní manipulaci palet ve skladových uličkách.",
+        "uses": {
+          "1": "Plošina operátora",
+          "2": "Rychlejší přesuny ve skladu",
+          "3": "Vnitřní skladové provozy"
+        },
+        "detail": {
+          "title": "Noblelift řidičské zakladače bez přízdvihu — detailní popis",
+          "intro": "Řidičský vysokozdvižný zakladač s plošinou pro operátora bez počátečního přízdvihu. Ideální pro větší sklady, kde operátor potřebuje pohodlnější obsluhu a rychlejší přesuny mezi pracovními místy.",
+          "features": {
+            "1": {
+              "title": "Plošina operátora",
+              "desc": "Operátor stojí na plošině a spolu s vozíkem se pohybuje mezi pracovními místy"
+            },
+            "2": {
+              "title": "Elektrický pohon",
+              "desc": "Tichý a ekologický provoz vhodný pro vnitřní skladové prostory"
+            },
+            "3": {
+              "title": "Vyšší produktivita",
+              "desc": "Rychlejší přesuny a efektivnější práce ve skladových uličkách"
+            },
+            "4": {
+              "title": "Spolehlivá konstrukce",
+              "desc": "Robustní provedení pro každodenní intenzivní využití"
+            }
+          },
+          "specs": {
+            "capacity": { "label": "Nosnost", "value": "1,6 - 2 t" },
+            "drive": { "label": "Pohon", "value": "Elektrický" },
+            "lift": { "label": "Max. zdvih", "value": "až 4 500 mm" },
+            "battery": { "label": "Baterie", "value": "24 V" },
+            "operation": { "label": "Provoz", "value": "Vnitřní" },
+            "type": { "label": "Typ", "value": "S plošinou, bez přízdvihu" }
+          }
+        }
+      },
+      "sPrizdvihem": {
+        "badge": "S přízdvihem",
+        "title": "S přízdvihem",
+        "subtitle": "Vyšší zdvih od podlahy",
+        "capacity": "1,6 t",
+        "modelRange": "PS 16 DN",
+        "productLine": "Řidičský vysokozdvižný zakladač s přízdvihem a plošinou",
+        "desc": "Zakladače s plošinou pro operátora a počátečním přízdvihem pro pohodlnější manipulaci palet a vyšší efektivitu ve skladu.",
+        "uses": {
+          "1": "Vyšší zdvih od podlahy",
+          "2": "Plošina operátora",
+          "3": "Středně velké sklady"
+        },
+        "detail": {
+          "title": "Noblelift PS 16 DN — detailní popis",
+          "intro": "Řidičský vysokozdvižný zakladač s plošinou pro operátora a počátečním přízdvihem. Vyšší zdvih od podlahy zrychluje nakládku a zvyšuje efektivitu provozu ve středně velkých skladech.",
+          "features": {
+            "1": {
+              "title": "Počáteční přízdvihem",
+              "desc": "Snadnější zvedání palet z podlahy bez zbytečného manévrování"
+            },
+            "2": {
+              "title": "Plošina operátora",
+              "desc": "Pohodlnější obsluha a rychlejší přesuny mezi pracovními místy"
+            },
+            "3": {
+              "title": "Vyšší produktivita",
+              "desc": "Rychlejší cykly při nakládce a stohování palet"
+            },
+            "4": {
+              "title": "Spolehlivá konstrukce",
+              "desc": "Robustní provedení pro každodenní intenzivní využití"
+            }
+          },
+          "specs": {
+            "capacity": { "label": "Nosnost", "value": "1,6 t" },
+            "drive": { "label": "Pohon", "value": "Elektrický" },
+            "lift": { "label": "Max. zdvih", "value": "až 5 000 mm" },
+            "battery": { "label": "Baterie", "value": "24 V" },
+            "operation": { "label": "Provoz", "value": "Vnitřní" },
+            "type": { "label": "Typ", "value": "S plošinou a přízdvihem" }
+          }
+        }
+      }
+    },
+    "series": {
+      "capacityLabel": "Nosnost",
+      "learnMore": "Zjistit více",
+      "viewModels": "Zobrazit modely",
+      "downloadSpecsCta": "Stáhnout technické parametry",
+      "serieA": {
+        "badge": "Série A",
+        "title": "Základní model",
+        "subtitle": "Standardní řada",
+        "capacity": "1,5 – 3,8 t",
+        "modelRange": "CPD15~38",
+        "productLine": "Série A — lithiumové čelní vozíky",
+        "desc": "Spolehlivé elektrické čelní vozíky pro standardní skladové provozy. Vyvážený poměr ceny a výkonu.",
+        "uses": {
+          "1": "Distribuce a logistické centrum",
+          "2": "Výrobní hala a montáž",
+          "3": "Maloobchodní sklad"
+        },
+        "detail": {
+          "title": "Noblelift Série A — detailní popis",
+          "intro": "Série A je vstupní elektrický čelní vozík Noblelift navržený pro každodenní skladové operace. Nabízí vynikající poměr ceny a výkonu s dlouhou životností baterie a jednoduchým ovládáním. Vhodný pro operátory bez rozsáhlých zkušeností s manipulační technikou.",
+          "features": {
+            "1": {
+              "title": "Efektivní pohon AC",
+              "desc": "Asynchronní AC motor s regenerativním brzděním pro maximální výdrž baterie"
+            },
+            "2": {
+              "title": "Dlouhá výdrž baterie",
+              "desc": "Standardní olověná nebo volitelná lithiová baterie pro celosměnný provoz"
+            },
+            "3": {
+              "title": "Bezpečnostní systémy",
+              "desc": "OPS systém přítomnosti řidiče, automatické blokování zdvihu"
+            },
+            "4": {
+              "title": "Snadná údržba",
+              "desc": "Přístup ke komponentám bez nástrojů, nízké provozní náklady"
+            }
+          },
+          "specs": {
+            "capacity": {
+              "label": "Nosnost",
+              "value": "1,5 – 3,8 t"
+            },
+            "drive": {
+              "label": "Pohon",
+              "value": "Elektrický AC"
+            },
+            "tires": {
+              "label": "Pneumatiky",
+              "value": "Plné / Super el."
+            },
+            "battery": {
+              "label": "Baterie",
+              "value": "48 V / Lithium"
+            },
+            "lift": {
+              "label": "Max. zdvih",
+              "value": "do 7 000 mm"
+            },
+            "operation": {
+              "label": "Provoz",
+              "value": "Vnitřní"
+            }
+          }
+        }
+      },
+      "serieP": {
+        "badge": "Série P",
+        "title": "Premium",
+        "subtitle": "Lithiová technologie",
+        "capacity": "3,0 - 3,8 t",
+        "modelRange": "FEP 30 - 38 P",
+        "productLine": "Prémiová řada s lithiovými bateriemi pro náročný více-směnný provoz bez emisí.",
+        "desc": "Prémiová řada s lithiovými bateriemi pro náročný více-směnný provoz bez emisí.",
+        "uses": {
+          "1": "Více-směnný provoz",
+          "2": "Chlazené sklady",
+          "3": "Potravinářský průmysl"
+        },
+        "detail": {
+          "title": "Noblelift Série P — Premium",
+          "intro": "Série P přináší nejvyšší výbavovou úroveň elektrických čelních vozíků Noblelift. LCD displej, odpružené sedadlo, 4cestná hydraulika a nativní podpora lithiových baterií pro rychlé mezisměnné nabíjení bez výměny baterie.",
+          "features": {
+            "1": {
+              "title": "LCD displej",
+              "desc": "Velký rámový LCD displej v zorném poli operátora pro lepší bezpečnost"
+            },
+            "2": {
+              "title": "Lithium nativně",
+              "desc": "Konstruováno pro lithiové baterie — rychlé nabíjení za provozu"
+            },
+            "3": {
+              "title": "Ergonomická kabina",
+              "desc": "Prostorná kabina s deluxe odpruženým sedadlem, nastavitelná pro všechny velikosti operátorů"
+            },
+            "4": {
+              "title": "4cestná hydraulika",
+              "desc": "Integrovaný postranní posuv pro přesnou manipulaci bez přejezdů"
+            }
+          },
+          "specs": {
+            "capacity": { "label": "Nosnost", "value": "3,0 - 3,8 t" },
+            "drive": { "label": "Pohon", "value": "Elektrický AC" },
+            "battery": { "label": "Baterie", "value": "48–80 V Li" },
+            "lift": { "label": "Max. zdvih", "value": "do 7 500 mm" },
+            "display": { "label": "Displej", "value": "LCD rámový" },
+            "operation": { "label": "Provoz", "value": "Vnitřní / smíšený" }
+          }
+        }
+      },
+      "serieN": {
+        "badge": "Série N",
+        "title": "Tříkolové",
+        "subtitle": "Narrow aisle",
+        "capacity": "1,2 – 2,0 t",
+        "modelRange": "FE3R 12 E, FE3D 16 N1, FE3D 20 N1",
+        "productLine": "Tříkolové vozíky s výbornou manévrovatelností pro úzké uličky a stísněné prostory.",
+        "desc": "Tříkolové vozíky s výbornou manévrovatelností pro úzké uličky a stísněné prostory.",
+        "uses": {
+          "1": "Úzké uličky",
+          "2": "Kompaktní sklady",
+          "3": "Rychlé manévrování"
+        },
+        "detail": {
+          "title": "Noblelift Série N — třínápravové vozíky",
+          "intro": "Třínápravové vozíky série N jsou konstruovány pro provoz v úzkých uličkách. Zadní pohon umožňuje otočení na místě a průjezd uličkami šířky od 2,8 m. Volitelné plné nebo super-elastické pneumatiky pro různé typy podlahy.",
+          "features": {
+            "1": {
+              "title": "Kompaktní rozměry",
+              "desc": "Minimální poloměr otáčení pro manévrování v úzkých prostorech"
+            },
+            "2": {
+              "title": "Zadní řízení",
+              "desc": "Pohon zadní nápravou zajišťuje stabilitu i při přepravě zátěže"
+            },
+            "3": {
+              "title": "Lithiová varianta",
+              "desc": "Dostupná s lithiovou baterií pro provoz v potravinářství a chlazení"
+            },
+            "4": {
+              "title": "Volba pneumatik",
+              "desc": "Plné, super-elastické nebo polyuretanové pro různé typy podlahy"
+            }
+          },
+          "specs": {
+            "capacity": { "label": "Nosnost", "value": "1,2–2,0 t" },
+            "axles": { "label": "Nápravy", "value": "3 (zadní pohon)" },
+            "battery": { "label": "Baterie", "value": "24–48 V Li" },
+            "aisle": { "label": "Min. ulička", "value": "od 2 800 mm" },
+            "lift": { "label": "Max. zdvih", "value": "do 6 000 mm" },
+            "operation": { "label": "Provoz", "value": "Vnitřní" }
+          }
+        }
+      },
+      "serieQ": {
+        "badge": "Série Q",
+        "title": "Těžká třída",
+        "subtitle": "Heavy duty",
+        "capacity": "2 – 10 t",
+        "modelRange": "FE4P 20 Q, FE4P 50 Q, FE4P 50 QL",
+        "productLine": "Výkonné elektrické vozíky pro průmyslové a těžké aplikace s vysokou nosností.",
+        "desc": "Výkonné elektrické vozíky pro průmyslové a těžké aplikace s vysokou nosností.",
+        "uses": {
+          "1": "Průmyslové haly",
+          "2": "Těžké břemena",
+          "3": "Náročný provoz"
+        },
+        "detail": {
+          "title": "Noblelift Série Q — těžká průmyslová třída",
+          "intro": "Série Q pokrývá potřeby těžkého průmyslu s nosností od 2 do 10 tun. Masivní ocelová konstrukce, rozšířená přední náprava pro stabilitu a výkonné AC motory zajišťují spolehlivý provoz i v nejnáročnějších podmínkách.",
+          "features": {
+            "1": {
+              "title": "Těžká ocelová konstrukce",
+              "desc": "Zesílené šasi, nápravy a stožár pro extrémní zatížení a výšky zdvihu"
+            },
+            "2": {
+              "title": "Vysoký výkon motorů",
+              "desc": "Výkonné třífázové AC motory pro rychlost zdvihu i při maximálním zatížení"
+            },
+            "3": {
+              "title": "Rozšířená stabilizace",
+              "desc": "Široká rozchod náprav a nízké těžiště pro práci s těžkými náklady ve výšce"
+            },
+            "4": {
+              "title": "Servisní přístupnost",
+              "desc": "Vzduchově odpružené kapoty pro rychlý přístup ke komponentám"
+            }
+          },
+          "specs": {
+            "capacity": { "label": "Nosnost", "value": "2–10 t" },
+            "drive": { "label": "Pohon", "value": "Elektrický AC" },
+            "voltage": { "label": "Napětí", "value": "80 V / 96 V" },
+            "lift": { "label": "Max. zdvih", "value": "do 9 000 mm" },
+            "tires": { "label": "Pneu", "value": "Pneumatické" },
+            "operation": { "label": "Provoz", "value": "Vnitřní / smíšený" }
+          }
+        }
+      }
+    },
+    "dieselLpg": {
+      "modelRange": "CPC(D)20~38",
+      "capacity": "2,0 – 3,8 t",
+      "productLine": "Dieselové a LPG čelní vozíky — A Series IC",
+      "detail": {
+        "title": "Noblelift Diesel/LPG — detailní popis",
+        "intro": "Řada A IC představuje spolehlivý dieselový a LPG čelní vozík Noblelift pro náročný provoz ve skladech, logistických areálech i venkovních aplikacích. Kombinuje vysoký výkon, dlouhou výdrž paliva a robustní konstrukci pro každodenní manipulaci s paletami.",
+        "features": {
+          "1": {
+            "title": "Výkonný spalovací motor",
+            "desc": "Dieselový nebo LPG motor s vysokým točivým momentem pro náročné provozy"
+          },
+          "2": {
+            "title": "Robustní konstrukce",
+            "desc": "Ocelové šasi a stožár navržené pro venkovní i smíšený provoz"
+          },
+          "3": {
+            "title": "Dlouhá výdrž paliva",
+            "desc": "Rychlé tankování a dlouhá provozní doba bez nutnosti dobíjení"
+          },
+          "4": {
+            "title": "Snadná údržba",
+            "desc": "Přístup ke komponentům a spolehlivý hydraulický systém zdvihu"
+          }
+        },
+        "specs": {
+          "capacity": { "label": "Nosnost", "value": "2,0 – 3,8 t" },
+          "drive": { "label": "Pohon", "value": "Spalovací motor" },
+          "fuel": { "label": "Palivo", "value": "Diesel / LPG" },
+          "lift": { "label": "Max. zdvih", "value": "do 3 000 mm" },
+          "tires": { "label": "Pneumatiky", "value": "Plné / pneumatické" },
+          "operation": { "label": "Provoz", "value": "Venkovní / smíšený" }
+        }
+      }
+    },
+    "stackerStraddle": {
+      "modelRange": "PSE 12 NSL, PT 16 TSL, PS 18 TSL",
+      "capacity": "1,2 - 2,0 t",
+      "productLine": "Obkročný elektrický vysokozdvižný zakladač",
+      "detail": {
+        "title": "Noblelift obkročné zakladače — detailní popis",
+        "intro": "Obkročné elektrické zakladače pro manipulaci s atypickými paletami a nestandardními náklady. Obkročná konstrukce umožňuje práci s paletami různých rozměrů a zajišťuje maximální flexibilitu ve skladových provozech.",
+        "features": {
+          "1": {
+            "title": "Obkročná konstrukce",
+            "desc": "Vidlice obklopují paletu z boku — ideální pro atypické a nestandardní palety"
+          },
+          "2": {
+            "title": "Elektrický pohon",
+            "desc": "Tichý a ekologický provoz vhodný pro vnitřní skladové prostory"
+          },
+          "3": {
+            "title": "Flexibilní manipulace",
+            "desc": "Efektivní práce s paletami různých rozměrů bez nutnosti přesného zarovnání"
+          },
+          "4": {
+            "title": "Spolehlivá konstrukce",
+            "desc": "Robustní provedení pro každodenní intenzivní využití ve skladu"
+          }
+        },
+        "specs": {
+          "capacity": { "label": "Nosnost", "value": "1,2 - 2,0 t" },
+          "drive": { "label": "Pohon", "value": "Elektrický" },
+          "lift": { "label": "Max. zdvih", "value": "až 4 500 mm" },
+          "battery": { "label": "Baterie", "value": "24 V" },
+          "operation": { "label": "Provoz", "value": "Vnitřní" },
+          "type": { "label": "Typ", "value": "Obkročné" }
+        }
+      }
+    },
+    "stackerStraddleModels": {
+      "pse12nsl": {
+        "badge": "PSE 12 NSL",
+        "title": "PSE 12 NSL",
+        "subtitle": "Kompaktní obkročný",
+        "capacity": "1,2 t",
+        "modelRange": "PSE 12 NSL",
+        "productLine": "Obkročný elektrický vysokozdvižný zakladač",
+        "desc": "Kompaktní obkročný zakladač pro atypické palety a flexibilní manipulaci v úzkých skladových provozech.",
+        "uses": {
+          "1": "Atypické palety",
+          "2": "Úzké skladové uličky",
+          "3": "Kompaktní provozy"
+        }
+      },
+      "pt16tsl": {
+        "badge": "PT 16 TSL",
+        "title": "PT 16 TSL",
+        "subtitle": "Vyšší nosnost",
+        "capacity": "1,6 t",
+        "modelRange": "PT 16 TSL",
+        "productLine": "Obkročný elektrický vysokozdvižný zakladač",
+        "desc": "Obkročný zakladač s vyšší nosností pro náročnější manipulační cykly a nestandardní palety.",
+        "uses": {
+          "1": "Atypické palety",
+          "2": "Vyšší nosnost",
+          "3": "Intenzivní provoz"
+        }
+      },
+      "ps18tsl": {
+        "badge": "PS 18 TSL",
+        "title": "PS 18 TSL",
+        "subtitle": "Maximální kapacita",
+        "capacity": "1,8 t",
+        "modelRange": "PS 18 TSL",
+        "productLine": "Obkročný elektrický vysokozdvižný zakladač",
+        "desc": "Obkročný zakladač s nejvyšší nosností v řadě pro náročné skladové a manipulační aplikace.",
+        "uses": {
+          "1": "Atypické palety",
+          "2": "Těžší náklady",
+          "3": "Flexibilní manipulace"
+        }
+      }
+    },
+    "palletPowered": {
+      "modelRange": "PWB 150, PTE 15 Q2, PWB 200, PTE 15N SC, PTE 15 Q2SC",
+      "capacity": "1,5 - 2,0 t",
+      "productLine": "Elektrický paletový vozík",
+      "detail": {
+        "title": "Noblelift elektrické paletové vozíky — detailní popis",
+        "intro": "Elektrické pěší i řidičské paletové vozíky Noblelift pro efektivní horizontální manipulaci. Nabízíme varianty s lithiovým pohonem, vážením i kompaktními rozměry pro úzké skladové uličky a intenzivní každodenní provoz.",
+        "features": {
+          "1": {
+            "title": "Li-Ion pohon",
+            "desc": "Rychlé dobíjení a dlouhá výdrž baterie pro nepřetržitý provoz ve skladu"
+          },
+          "2": {
+            "title": "Elektrický pohon",
+            "desc": "Tichý a ekologický provoz vhodný pro vnitřní skladové i výrobní prostory"
+          },
+          "3": {
+            "title": "Kompaktní design",
+            "desc": "Pěší i řidičské varianty včetně modelů s vážením pro přesnou evidenci nákladu"
+          },
+          "4": {
+            "title": "Spolehlivá konstrukce",
+            "desc": "Robustní provedení pro každodenní intenzivní manipulaci s paletami"
+          }
+        },
+        "specs": {
+          "capacity": { "label": "Nosnost", "value": "1,5 - 2,0 t" },
+          "drive": { "label": "Pohon", "value": "Elektrický" },
+          "lift": { "label": "Zdvih", "value": "Nízkozdvižný" },
+          "battery": { "label": "Baterie", "value": "Li-Ion" },
+          "operation": { "label": "Provoz", "value": "Vnitřní" },
+          "type": { "label": "Typ", "value": "Elektrický paletový vozík" }
+        }
+      }
+    },
+    "palletManual": {
+      "modelRange": "HPT DF 25, HPT ACY 25",
+      "capacity": "2,5 t",
+      "productLine": "Ruční paletový vozík",
+      "detail": {
+        "title": "Noblelift ruční paletové vozíky — detailní popis",
+        "intro": "Spolehlivé ruční paletové vozíky Noblelift pro každodenní horizontální manipulaci s paletami. Jednoduchá obsluha, nízké provozní náklady a robustní konstrukce je činí ideální volbou do skladů, výroby i obchodů.",
+        "features": {
+          "1": {
+            "title": "Jednoduchá obsluha",
+            "desc": "Intuitivní ovládání bez nutnosti školení — vhodné pro každodenní provoz"
+          },
+          "2": {
+            "title": "Nízké náklady",
+            "desc": "Bez baterie a dobíjení — minimální provozní náklady a snadná údržba"
+          },
+          "3": {
+            "title": "Hydraulický zdvih",
+            "desc": "Spolehlivá hydraulika pro rychlé a bezpečné zvedání palet"
+          },
+          "4": {
+            "title": "Robustní konstrukce",
+            "desc": "Odolné provedení pro intenzivní každodenní manipulaci ve skladu"
+          }
+        },
+        "specs": {
+          "capacity": { "label": "Nosnost", "value": "2,5 t" },
+          "drive": { "label": "Pohon", "value": "Ruční" },
+          "lift": { "label": "Zdvih", "value": "Nízkozdvižný" },
+          "forks": { "label": "Vidle", "value": "1150 mm" },
+          "operation": { "label": "Provoz", "value": "Vnitřní / smíšený" },
+          "type": { "label": "Typ", "value": "Ruční paletový vozík" }
+        }
+      }
+    },
+    "terrainForkliftsPage": {
+      "modelRange": "FD4 RT25, FD4 RT35, FD2 RT25, FD2 RT35KU, FD2 RT35, FE2 RT25",
+      "capacity": "2,5 – 3,5 t",
+      "productLine": "Terénní vozík",
+      "detail": {
+        "title": "Noblelift terénní vozíky — detailní popis",
+        "intro": "Dieselové terénní vozíky Noblelift pro stavebnictví, zemědělství a práci na nerovném povrchu. Robustní konstrukce, pohon všech kol a vysoká průchodnost terénem zajišťují spolehlivý výkon i v náročných podmínkách.",
+        "features": {
+          "1": {
+            "title": "Terénní pneumatiky",
+            "desc": "Velké pneumatiky a vysoká světlá výška pro práci na nerovném a měkkém povrchu"
+          },
+          "2": {
+            "title": "Pohon 4x4",
+            "desc": "Pohon všech kol pro maximální trakci na staveništi i v terénu"
+          },
+          "3": {
+            "title": "Ochranná kabina",
+            "desc": "Bezpečný provozní prostor s dobrým výhledem pro celodenní práci venku"
+          },
+          "4": {
+            "title": "Stabilita v terénu",
+            "desc": "Stabilní podvozek navržený pro bezpečnou manipulaci na nerovném povrchu"
+          }
+        },
+        "specs": {
+          "capacity": { "label": "Nosnost", "value": "2,5 – 3,5 t" },
+          "drive": { "label": "Pohon", "value": "Diesel" },
+          "driveType": { "label": "Pohon kol", "value": "4x4" },
+          "tires": { "label": "Pneumatiky", "value": "Terénní" },
+          "operation": { "label": "Provoz", "value": "Venkovní / terén" },
+          "type": { "label": "Typ", "value": "Terénní vozík" }
+        }
+      }
+    },
+    "telehandlersPage": {
+      "modelRange": "TH6036",
+      "capacity": "6,0 t",
+      "productLine": "Teleskopický manipulátor",
+      "detail": {
+        "title": "Noblelift teleskopické manipulátory — detailní popis",
+        "intro": "Teleskopické manipulátory Noblelift s velkým dosahem pro stavební a zemědělské aplikace. Univerzální stroj pro zvedání, překládku a práci ve výšce i na delší vzdálenost.",
+        "features": {
+          "1": {
+            "title": "Velký dosah",
+            "desc": "Teleskopický výložník pro práci ve výšce a na větší vzdálenost"
+          },
+          "2": {
+            "title": "Silná hydraulika",
+            "desc": "Výkonná hydraulika pro přesnou a bezpečnou manipulaci s břemenem"
+          },
+          "3": {
+            "title": "Terénní podvozek",
+            "desc": "Robustní podvozek vhodný pro staveniště, zemědělství a nerovný povrch"
+          },
+          "4": {
+            "title": "Komfortní kabina",
+            "desc": "Přehledná kabina s intuitivním ovládáním pro celodenní provoz"
+          }
+        },
+        "specs": {
+          "capacity": { "label": "Nosnost", "value": "6,0 t" },
+          "drive": { "label": "Pohon", "value": "Diesel" },
+          "reach": { "label": "Dosah", "value": "Teleskopický" },
+          "lift": { "label": "Zdvih", "value": "Vysoký dosah" },
+          "operation": { "label": "Provoz", "value": "Stavba / zemědělství" },
+          "type": { "label": "Typ", "value": "Teleskopický manipulátor" }
+        }
+      }
+    },
+    "reachTrucksPage": {
+      "modelRange": "RT 16 C – RT 20 Pro",
+      "capacity": "1,6 – 2,0 t",
+      "productLine": "Retrak",
+      "detail": {
+        "title": "Noblelift retraky — detailní popis",
+        "intro": "Vysokozdvižné retraky Noblelift pro úzké uličky a regály až do 13 m výšky. Kompaktní konstrukce, vysoká zbytková nosnost a lithiová baterie zajišťují efektivní skladování i v náročných provozech.",
+        "features": {
+          "1": {
+            "title": "Úzké uličky",
+            "desc": "Kompaktní rozměry a výsuvný stožár pro práci v úzkých skladových uličkách"
+          },
+          "2": {
+            "title": "Vysoký zdvih",
+            "desc": "Zdvih až do 13 m pro efektivní využití výšky regálů"
+          },
+          "3": {
+            "title": "Lithiová baterie",
+            "desc": "Rychlé dobíjení a dlouhá výdrž pro vícesměnný provoz"
+          },
+          "4": {
+            "title": "Stabilita ve výšce",
+            "desc": "Stabilní konstrukce pro bezpečnou manipulaci ve vysokých regálech"
+          }
+        },
+        "specs": {
+          "capacity": { "label": "Nosnost", "value": "1,6 – 2,0 t" },
+          "drive": { "label": "Pohon", "value": "Elektrický" },
+          "lift": { "label": "Zdvih", "value": "Až 13 m" },
+          "battery": { "label": "Baterie", "value": "Li-Ion" },
+          "operation": { "label": "Provoz", "value": "Sklad / úzké uličky" },
+          "type": { "label": "Typ", "value": "Retrak" }
+        }
+      }
+    },
+    "orderPickersPage": {
+      "modelRange": "OPH 01E",
+      "capacity": "1,0–2,5 t",
+      "productLine": "Vychystávací vozík",
+      "detail": {
+        "title": "Noblelift vychystávací vozíky — detailní popis",
+        "intro": "Vychystávací vozíky Noblelift pro efektivní kompletaci objednávek ve skladu. Ideální pro e-commerce, distribuční centra a provozy s vysokou frekvencí vychystávání.",
+        "features": {
+          "1": {
+            "title": "Efektivní kompletace",
+            "desc": "Navrženo pro rychlé a přesné vychystávání objednávek ve skladu"
+          },
+          "2": {
+            "title": "Elektrický pohon",
+            "desc": "Tichý a emisně čistý provoz vhodný pro uzavřené skladové haly"
+          },
+          "3": {
+            "title": "Bezpečná obsluha",
+            "desc": "Stabilní platforma a intuitivní ovládání pro bezpečnou práci"
+          },
+          "4": {
+            "title": "Snadná údržba",
+            "desc": "Jednoduchá konstrukce a dostupný servis pro nepřetržitý provoz"
+          }
+        },
+        "specs": {
+          "capacity": { "label": "Nosnost", "value": "1,0–2,5 t" },
+          "drive": { "label": "Pohon", "value": "Elektrický" },
+          "lift": { "label": "Zdvih", "value": "Nízko / střední" },
+          "operation": { "label": "Provoz", "value": "Sklad / e-commerce" },
+          "use": { "label": "Použití", "value": "Kompletace" },
+          "type": { "label": "Typ", "value": "Vychystávací vozík" }
+        }
+      }
+    },
+    "scissorLiftsPage": {
+      "modelRange": "SC12E-16E, SC06E-16E, SC08EC, SC08EN-10EN",
+      "capacity": "6 – 16 m",
+      "productLine": "Nůžková pracovní plošina",
+      "detail": {
+        "title": "Noblelift nůžkové plošiny — detailní popis",
+        "intro": "Elektrické nůžkové pracovní plošiny Noblelift pro bezpečnou práci ve výšce. Stabilní platforma a tichý elektrický pohon je činí ideální volbou pro údržbu, montáže a skladové operace.",
+        "features": {
+          "1": {
+            "title": "Bezpečná práce ve výšce",
+            "desc": "Stabilní nůžková konstrukce a ochranné prvky pro bezpečný provoz"
+          },
+          "2": {
+            "title": "Kompaktní rozměry",
+            "desc": "Snadný průjezd dveřmi a manévrování v omezených prostorech"
+          },
+          "3": {
+            "title": "Elektrický pohon",
+            "desc": "Nulové emise a tichý provoz pro práci v uzavřených budovách"
+          },
+          "4": {
+            "title": "Jednoduchá údržba",
+            "desc": "Přehledný servis a spolehlivá konstrukce pro dlouhodobý provoz"
+          }
+        },
+        "specs": {
+          "height": { "label": "Výška", "value": "6 – 16 m" },
+          "drive": { "label": "Pohon", "value": "Elektrický" },
+          "platform": { "label": "Plošina", "value": "Nůžková" },
+          "operation": { "label": "Provoz", "value": "Vnitřní" },
+          "use": { "label": "Použití", "value": "Údržba / montáž" },
+          "type": { "label": "Typ", "value": "Nůžková plošina" }
+        }
+      }
+    },
+    "mastBoomLiftsPage": {
+      "modelRange": "AMT10",
+      "capacity": "10 m",
+      "productLine": "Stožárová pracovní plošina",
+      "detail": {
+        "title": "Noblelift stožárové a výložníkové plošiny — detailní popis",
+        "intro": "Stožárové a výložníkové pracovní plošiny Noblelift pro montáže, údržbu a servis ve výšce. Přesný dosah a kompaktní konstrukce umožňují práci i v obtížně přístupných místech.",
+        "features": {
+          "1": {
+            "title": "Přesný dosah",
+            "desc": "Stožár a výložník pro práci ve výšce i na větší vzdálenost od podvozku"
+          },
+          "2": {
+            "title": "Silná hydraulika",
+            "desc": "Plynulé a přesné ovládání plošiny při montážích a servisu"
+          },
+          "3": {
+            "title": "Bezpečný provoz",
+            "desc": "Ochranné prvky a stabilní podvozek pro bezpečnou práci ve výšce"
+          },
+          "4": {
+            "title": "Komfortní plošina",
+            "desc": "Přehledné ovládání a dostatečný pracovní prostor pro montážní práce"
+          }
+        },
+        "specs": {
+          "height": { "label": "Výška", "value": "10 m" },
+          "drive": { "label": "Pohon", "value": "Elektrický" },
+          "reach": { "label": "Dosah", "value": "Stožár / výložník" },
+          "operation": { "label": "Provoz", "value": "Vnitřní / smíšený" },
+          "use": { "label": "Použití", "value": "Montáž / údržba" },
+          "type": { "label": "Typ", "value": "Stožárová plošina" }
+        }
+      }
+    },
+    "subcategories": {
+      "electric": {
+        "badge": "Elektrické",
+        "tags": {
+          "1": "Nulové emise",
+          "2": "Tichý provoz",
+          "3": "Rychlé dobíjení",
+          "4": "Li-Ion",
+          "5": "2,5–10 t",
+          "6": "3–4 kola",
+          "7": "Sklad / hala"
+        }
+      },
+      "dieselLpg": {
+        "badge": "Diesel / LPG",
+        "tags": {
+          "1": "Vysoký výkon",
+          "2": "Dlouhá výdrž",
+          "3": "Venkovní provoz",
+          "4": "Diesel",
+          "5": "LPG",
+          "6": "3–10 t",
+          "7": "Logistické areály"
+        }
+      },
+      "walkie": {
+        "badge": "Bez plošiny",
+        "tags": {
+          "1": "Kompaktní",
+          "2": "Elektrické",
+          "3": "Úzké uličky"
+        }
+      },
+      "rider": {
+        "badge": "S plošinou",
+        "tags": {
+          "1": "Plošina operátora",
+          "2": "Vysoký zdvih",
+          "3": "Skladové provozy",
+          "4": "Elektrické"
+        }
+      },
+      "straddle": {
+        "badge": "Obkročné",
+        "tags": {
+          "1": "Atypické palety",
+          "2": "Flexibilní manipulace",
+          "3": "Elektrické"
+        }
+      },
+      "manual": {
+        "badge": "Ruční",
+        "tags": {
+          "1": "Jednoduchá obsluha",
+          "2": "Nízké náklady"
+        }
+      },
+      "powered": {
+        "badge": "Elektrické",
+        "tags": {
+          "1": "Pěší i řidičské",
+          "2": "Li-Ion",
+          "3": "S vážením"
+        }
+      },
+      "terrainForklifts": {
+        "badge": "Terénní vozíky",
+        "tags": {
+          "1": "4×4",
+          "2": "Stavebnictví"
+        }
+      },
+      "telehandlers": {
+        "badge": "Manipulátory",
+        "tags": {
+          "1": "Teleskop",
+          "2": "Zemědělství"
+        }
+      },
+      "reachTrucks": {
+        "badge": "Retraky",
+        "tags": {
+          "1": "Úzké uličky",
+          "2": "Zdvih až 13 m",
+          "3": "Double-deep"
+        }
+      },
+      "orderPickers": {
+        "badge": "Vychystávací",
+        "tags": {
+          "1": "Kompletace",
+          "2": "E-commerce"
+        }
+      },
+      "scissor": {
+        "badge": "Nůžkové",
+        "tags": {
+          "1": "Elektrické",
+          "2": "Práce ve výšce"
+        }
+      },
+      "mastBoom": {
+        "badge": "Stožárové / výložníkové",
+        "tags": {
+          "1": "Montáže",
+          "2": "Údržba"
+        }
+      }
+    },
+    "categories": {
+      "1": {
+        "subcategories": {
+          "electric": {
+            "title": "Elektrické čelní vozíky",
+            "desc": "Tří- a čtyřkolové elektrické čelní vozíky s nosností 2,5–10 t. Lithiové baterie pro nulové emise, tichý provoz a intenzivní skladování."
+          },
+          "dieselLpg": {
+            "title": "Dieselové a LPG čelní vozíky",
+            "desc": "Výkonné dieselové a LPG vozíky s vysokým výkonem, dlouhou výdrží a spolehlivým venkovním provozem pro logistické areály a náročné podmínky s nosností 3–10 t."
+          }
+        }
+      },
+      "2": {
+        "intro": "Hledáte jednoduché a cenově dostupné řešení pro manipulaci s paletami? Ručně vedené vysokozdvižné vozíky jsou ideální pro menší sklady, dílny i velké logistické provozy. Vynikají kompaktními rozměry, snadnou obsluhou a nízkými nároky na údržbu. Pro manipulaci v úzkých uličkách a na krátké vzdálenosti jsou vhodné modely bez plošiny, zatímco pro vyšší komfort a efektivnější přesuny ve větších skladech jsou ideální vozíky s plošinou pro obsluhu. Pro manipulaci s atypickými paletami pak slouží obkročné provedení, které zajišťuje maximální flexibilitu při práci.",
+        "subcategories": {
+          "walkie": {
+            "title": "Bez plošiny pro obsluhu",
+            "desc": "Kompaktní elektrické zakladače s pěší obsluhou pro úzké prostory, krátké vzdálenosti a efektivní skladování palet."
+          },
+          "rider": {
+            "title": "S plošinou pro obsluhu",
+            "desc": "Zakladače s plošinou pro operátora, vyšší zdvih a rychlejší přesuny ve skladových uličkách."
+          },
+          "straddle": {
+            "title": "Obkročné",
+            "desc": "Obkročné zakladače pro manipulaci s atypickými paletami a maximální flexibilitu při práci ve skladu."
+          }
+        }
+      },
+      "3": {
+        "subcategories": {
+          "manual": {
+            "title": "Ruční paletové vozíky",
+            "desc": "Spolehlivé ruční paletové vozíky pro každodenní manipulaci s paletami v provozu."
+          },
+          "powered": {
+            "title": "Elektrické paletové vozíky",
+            "desc": "Elektrické pěší i řidičské paletové vozíky včetně variant s vážením a lithiovým pohonem."
+          }
+        }
+      },
+      "4": {
+        "subcategories": {
+          "terrainForklifts": {
+            "title": "Terénní vozíky",
+            "desc": "Dieselové terénní vozíky pro stavebnictví, zemědělství a práci na nerovném povrchu."
+          },
+          "telehandlers": {
+            "title": "Teleskopické manipulátory",
+            "desc": "Teleskopické manipulátory s velkým dosahem pro stavební a zemědělské aplikace."
+          }
+        }
+      },
+      "5": {
+        "subcategories": {
+          "reachTrucks": {
+            "title": "Retraky",
+            "desc": "Vysokozdvižné retraky pro úzké uličky a regály až do 13 m výšky."
+          },
+          "orderPickers": {
+            "title": "Vychystávací vozíky",
+            "desc": "Vychystávací vozíky pro efektivní kompletaci objednávek ve skladu."
+          }
+        }
+      },
+      "6": {
+        "subcategories": {
+          "scissor": {
+            "title": "Nůžkové plošiny",
+            "desc": "Elektrické nůžkové pracovní plošiny pro bezpečnou práci ve výšce."
+          },
+          "mastBoom": {
+            "title": "Stožárové a výložníkové plošiny",
+            "desc": "Stožárové a výložníkové plošiny pro montáže, údržbu a servis ve výšce."
+          }
+        }
+      }
+    },
+    "models": {
+      "fe3d": "Kompaktní tříkolový elektrický čelní vozík pro úzké prostory.",
+      "fe3d16": "Tříkolový elektrický čelní vozík Série N s nosností 1,6 t.",
+      "fe3d18": "Tříkolový elektrický čelní vozík Série N s nosností 1,8 t.",
+      "fe3d20": "Tříkolový elektrický čelní vozík Série N s nosností 2,0 t.",
+      "fe4p": "Čtyřkolový elektrický čelní vozík s vysokou stabilitou a nosností.",
+      "fe4p16": "Prémiový čtyřkolový vozík Série P s lithiovou baterií, nosnost 1,6 t.",
+      "fe4p18": "Prémiový čtyřkolový vozík Série P s lithiovou baterií, nosnost 1,8 t.",
+      "fe4p20": "Prémiový čtyřkolový vozík Série P s lithiovou baterií, nosnost 2,0 t.",
+      "fe4p30": "Prémiový čtyřkolový vozík Série P s lithiovou baterií, nosnost 3,0 t.",
+      "fe4a": "Standardní čtyřkolový elektrický vozík pro každodenní skladový provoz.",
+      "fe4d16": "Čtyřkolový elektrický čelní vozík Série A s nosností 1,6 t.",
+      "fe4d18": "Čtyřkolový elektrický čelní vozík Série A s nosností 1,8 t.",
+      "fe4d20": "Čtyřkolový elektrický čelní vozík Série A s nosností 2,0 t.",
+      "fe4d25": "Čtyřkolový elektrický čelní vozík Série A s nosností 2,5 t.",
+      "fe4q": "Těžký elektrický čelní vozík pro průmyslové aplikace.",
+      "fe4q60": "Těžký elektrický čelní vozík Série Q s nosností 6,0 t.",
+      "fe4q80": "Těžký elektrický čelní vozík Série Q s nosností 8,0 t.",
+      "rt16": "Elektrický retrak s lithiovou baterií pro úzké uličky.",
+      "fd30": "Dieselový čelní vozík pro venkovní provoz, nosnost 3 t.",
+      "fd50": "Výkonný dieselový čelní vozík s nosností 5 t.",
+      "pse12": "Pěší elektrický zakladač pro palety do 1,2 t.",
+      "swb130": "Pěší elektrický zakladač bez přízdvihu, nosnost 1,3 t.",
+      "pse15lc": "Pěší elektrický zakladač bez přízdvihu, nosnost 1,5 t.",
+      "ps16l": "Pěší elektrický zakladač bez přízdvihu, nosnost 1,6 t.",
+      "ps20l": "Pěší elektrický zakladač bez přízdvihu, nosnost 2,0 t.",
+      "ps15": "Pěší zakladač s vyšší nosností a zdvihem.",
+      "pse12nd": "Pěší elektrický zakladač s přízdvihem, nosnost 1,2 t.",
+      "swb130d": "Pěší elektrický zakladač s přízdvihem, nosnost 1,3 t.",
+      "ps16dl": "Pěší elektrický zakladač s přízdvihem, nosnost 1,6 t.",
+      "stk15": "Řidičský zakladač s plošinou pro operátora.",
+      "ps16n": "Řidičský zakladač s plošinou bez přízdvihu, nosnost 1,6 t.",
+      "ps20n": "Řidičský zakladač s plošinou bez přízdvihu, nosnost 2,0 t.",
+      "ps16dn": "Řidičský zakladač s plošinou a počátečním přízdvihem.",
+      "pse12nsl": "Obkročný elektrický zakladač pro atypické palety do 1,2 t.",
+      "pt16tsl": "Obkročný elektrický zakladač s vyšší nosností do 1,6 t.",
+      "ps18tsl": "Obkročný elektrický zakladač s nosností do 1,8 t.",
+      "ac25": "Ruční paletový vozík s nosností 2,5 t.",
+      "hptdf25": "Ruční paletový vozík HPT DF 25 s nosností 2,5 t.",
+      "hptacy25": "Ruční paletový vozík HPT ACY 25 s nosností 2,5 t.",
+      "pte15": "Elektrický pěší paletový vozík s lithiovým pohonem.",
+      "pt20": "Elektrický paletový vozík pro intenzivní provoz.",
+      "pwb150": "Kompaktní elektrický paletový vozík PWB 150 s nosností 1,5 t.",
+      "pte15q2": "Elektrický paletový vozík PTE 15 Q2 s lithiovým pohonem.",
+      "pwb200": "Elektrický paletový vozík PWB 200 s nosností 2,0 t.",
+      "pte15nsc": "Elektrický paletový vozík PTE 15N SC s vážením.",
+      "pte15q2sc": "Elektrický paletový vozík PTE 15 Q2SC s vážením.",
+      "rt25": "Terénní vozík pro náročné venkovní podmínky.",
+      "rt35": "Terénní vozík pro náročné venkovní podmínky.",
+      "th6036": "Teleskopický manipulátor s velkým dosahem.",
+      "rt16reach": "Retrak pro vysoké regály a úzké uličky.",
+      "oph01": "Nízkozdvižný vychystávací vozík pro kompletaci.",
+      "opl25": "Vychystávací vozík pro práci ve výšce regálů.",
+      "sc12": "Elektrická nůžková pracovní plošina.",
+      "amt10": "Stožárová pracovní plošina pro montáže ve výšce."
+    },
+    "modelDetails": {
+      "descriptionTitle": "Popis",
+      "parametersTitle": "Technické parametry",
+      "viewDetails": "Technické parametry",
+      "buyCta": "Koupit tento model",
+      "buyShopCta": "Koupit na e-shop",
+      "buyNote": "Kliknutím přejdete na oficiální e-shop VZV GROUP (vzv.cz), kde si můžete tento model zakoupit nebo rezervovat ze skladové nabídky.",
+      "common": {
+        "specs": {
+          "capacity": { "label": "Nosnost" },
+          "weight": { "label": "Vlastní hmotnost vč. baterie" },
+          "liftHeight": { "label": "Zdvih" },
+          "length": { "label": "Celková délka" },
+          "width": { "label": "Celková šířka (rám / pneumatiky)" },
+          "forkSize": { "label": "Rozměry vidlic (d / š / v)" },
+          "forkSpread": { "label": "Šířka vidl. úchytu" },
+          "turningRadius": { "label": "Poloměr otáčení" },
+          "travelSpeed": { "label": "Jízdní rychlost nalož. / bez nákl." },
+          "liftSpeed": { "label": "Zdvihová rychlost nalož. / bez nákl." },
+          "motor": { "label": "Výkon pohonného motoru S2 60 min" },
+          "battery": { "label": "Napětí a kapacita baterie" }
+        }
+      },
+      "fe4d16": {
+        "subtitle": "Elektrický čelní vozík Série A, nosnost 1 600 kg",
+        "longDesc": "Model FE4D16N patří do řady A — spolehlivého elektrického čelního vozíku Noblelift s lithiovou baterií pro standardní skladové provozy. Nabízí kompaktní rozměry, efektivní AC pohon s regenerativním brzděním a jednoduché ovládání vhodné pro každodenní manipulaci s paletami ve výrobě, distribuci i maloobchodním skladu.",
+        "specs": {
+          "capacity": { "value": "1 600 kg" },
+          "weight": { "value": "3 000 kg" },
+          "liftHeight": { "value": "3 000 mm" },
+          "length": { "value": "2 290 mm" },
+          "width": { "value": "1 126 / 1 118 mm" },
+          "forkSize": { "value": "920 × 100 × 35 mm" },
+          "forkSpread": { "value": "1 040 mm" },
+          "turningRadius": { "value": "2 030 mm" },
+          "travelSpeed": { "value": "15 / 15 km/h" },
+          "liftSpeed": { "value": "350 / 430 mm/s" },
+          "motor": { "value": "10 kW" },
+          "battery": { "value": "76,8 V / 150 Ah Li" }
+        }
+      },
+      "fe4d18": {
+        "subtitle": "Elektrický čelní vozík Série A, nosnost 1 800 kg",
+        "longDesc": "Model FE4D18N je čtyřkolový elektrický čelní vozík Série A s nosností 1 800 kg. Díky lithiové baterii a AC pohonu zvládne intenzivní provoz ve skladech a výrobních halách. Kompaktní konstrukce umožňuje efektivní manipulaci v omezeném prostoru při zachování vysoké stability a bezpečnosti operátora.",
+        "specs": {
+          "capacity": { "value": "1 800 kg" },
+          "weight": { "value": "3 200 kg" },
+          "liftHeight": { "value": "3 000 mm" },
+          "length": { "value": "2 605 mm" },
+          "width": { "value": "1 150 / 1 163 mm" },
+          "forkSize": { "value": "920 × 100 × 35 mm" },
+          "forkSpread": { "value": "1 040 mm" },
+          "turningRadius": { "value": "2 250 mm" },
+          "travelSpeed": { "value": "14,5 / 15 km/h" },
+          "liftSpeed": { "value": "330 / 430 mm/s" },
+          "motor": { "value": "10 kW" },
+          "battery": { "value": "76,8 V / 175 Ah Li" }
+        }
+      },
+      "fe4d20": {
+        "subtitle": "Elektrický čelní vozík Série A, nosnost 2 000 kg",
+        "longDesc": "Model FE4D20N představuje univerzální elektrický čelní vozík Série A s nosností 2 000 kg. Vhodný pro středně náročné skladové operace, kde je kladen důraz na výkon, spolehlivost a nízké provozní náklady. Lithiová baterie umožňuje rychlé nabíjení a dlouhou životnost bez údržby.",
+        "specs": {
+          "capacity": { "value": "2 000 kg" },
+          "weight": { "value": "3 450 kg" },
+          "liftHeight": { "value": "3 000 mm" },
+          "length": { "value": "2 605 mm" },
+          "width": { "value": "1 150 / 1 163 mm" },
+          "forkSize": { "value": "1 070 × 120 × 40 mm" },
+          "forkSpread": { "value": "1 040 mm" },
+          "turningRadius": { "value": "2 250 mm" },
+          "travelSpeed": { "value": "18 / 19 km/h" },
+          "liftSpeed": { "value": "500 / 580 mm/s" },
+          "motor": { "value": "15 kW" },
+          "battery": { "value": "76,8 V / 300 Ah Li" }
+        }
+      },
+      "fe4d25": {
+        "subtitle": "Elektrický čelní vozík Série A, nosnost 2 500 kg",
+        "longDesc": "Model FE4D25N je nejvýkonnější model Série A v nabídce s nosností 2 500 kg. Určen pro náročnější provozy, kde je potřeba vyšší zdvihová kapacita a stabilita při manipulaci s těžšími paletami. AC pohon, lithiová baterie a robustní konstrukce zajišťují spolehlivý provoz i při celosměnním využití.",
+        "specs": {
+          "capacity": { "value": "2 500 kg" },
+          "weight": { "value": "3 750 kg" },
+          "liftHeight": { "value": "3 000 mm" },
+          "length": { "value": "2 770 mm" },
+          "width": { "value": "1 195 / 1 228 mm" },
+          "forkSize": { "value": "1 070 × 122 × 45 mm" },
+          "forkSpread": { "value": "1 100 mm" },
+          "turningRadius": { "value": "2 450 mm" },
+          "travelSpeed": { "value": "19 / 19 km/h" },
+          "liftSpeed": { "value": "530 / 500 mm/s" },
+          "motor": { "value": "15 kW" },
+          "battery": { "value": "76,8 V / 300 Ah Li" }
+        }
+      }
+    }
+  },
+  "legalCompany": {
+    "meta": {
+      "title": "Identifikační údaje | Noblelift | VZV GROUP s.r.o.",
+      "description": "Identifikační a kontaktní údaje provozovatele webu noblelift.cz – VZV GROUP s.r.o."
+    },
+    "title": "Identifikační údaje",
+    "intro": "Provozovatelem webu noblelift.cz a výhradním dovozcem značky Noblelift pro Českou republiku a Slovensko je:",
+    "sections": [
+      {
+        "title": "Společnost",
+        "list": [
+          "Obchodní firma: VZV GROUP s.r.o.",
+          "Sídlo: Okružní 1144, 500 03 Hradec Králové, Česká republika",
+          "IČO: 27469662",
+          "DIČ: CZ27469662",
+          "Zápis v obchodním rejstříku: sp. zn. C 20857, Krajský soud v Hradci Králové",
+          "Jednatel: Milan Černohous"
+        ]
+      },
+      {
+        "title": "Kontakt",
+        "list": [
+          "E-mail: info@noblelift.cz",
+          "Telefon: +420 773 997 314",
+          "Web: www.noblelift.cz"
+        ]
+      },
+      {
+        "title": "Bankovní spojení",
+        "list": [
+          "Banka: Komerční banka a.s.",
+          "Číslo účtu: 35-8106190267/0100 (CZK)"
+        ]
+      },
+      {
+        "title": "Předmět podnikání",
+        "paragraphs": [
+          "Výhradní dovoz, distribuce, prodej, servis a dodávka náhradních dílů manipulační techniky značky Noblelift pro Českou republiku a Slovensko."
+        ]
+      }
+    ]
+  }
+}

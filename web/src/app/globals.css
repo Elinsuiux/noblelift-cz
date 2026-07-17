@@ -1,0 +1,90 @@
+@import "tailwindcss";
+
+:root {
+  --orange: #ee4411;
+  --orange-dark: #d63d0f;
+  --dark: #1a1a1a;
+  --dark-2: #2d2d2d;
+  --text: #1a1a1a;
+  --muted: #6b7280;
+  --surface: #ffffff;
+  --surface-muted: #f5f5f5;
+  --header-height: 4.5rem;
+}
+
+@theme inline {
+  --color-noble-orange: var(--orange);
+  --color-noble-orange-dark: var(--orange-dark);
+  --color-noble-dark: var(--dark);
+  --font-sans: var(--font-inter);
+}
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  background: var(--surface);
+  color: var(--text);
+  font-family: var(--font-inter), system-ui, sans-serif;
+  overflow-x: hidden;
+}
+
+@keyframes noble-play-pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.8);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.video-play-button {
+  position: relative;
+  display: block;
+  width: 70px;
+  height: 70px;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  padding: 0;
+}
+
+.video-play-button__ring {
+  position: absolute;
+  border-radius: 50%;
+  background: var(--orange);
+  opacity: 0.35;
+  animation: noble-play-pulse 3s ease infinite;
+  pointer-events: none;
+}
+
+.video-play-button__ring--inner {
+  inset: -25px;
+  animation-delay: 0.3s;
+}
+
+.video-play-button__ring--outer {
+  inset: -45px;
+}
+
+.video-play-button__core {
+  position: relative;
+  z-index: 4;
+  display: flex;
+  width: 70px;
+  height: 70px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--orange);
+  box-shadow: 0 8px 24px rgb(0 0 0 / 25%);
+  transition: transform 0.2s ease;
+}
+
+.video-play-button:hover .video-play-button__core {
+  transform: scale(1.05);
+}
