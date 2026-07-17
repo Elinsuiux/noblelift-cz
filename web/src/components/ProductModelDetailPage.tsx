@@ -1,4 +1,5 @@
-import { useLocale, useTranslations } from "next-intl";import { Header } from "@/components/Header";
+import { useLocale, useTranslations } from "next-intl";
+import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { ProductsBreadcrumb } from "@/components/products/ProductsBreadcrumb";
 import { ProductsCategoryNav } from "@/components/products/ProductsCategoryNav";
@@ -17,6 +18,20 @@ import {
   type Subcategory,
 } from "@/lib/products-catalog";
 
+type BreadcrumbItem = {
+  label: string;
+  href?:
+    | { pathname: "/products/[category]"; params: { category: string } }
+    | {
+        pathname: "/products/[category]/[subcategory]";
+        params: { category: string; subcategory: string };
+      }
+    | {
+        pathname: "/products/[category]/[subcategory]/[series]";
+        params: { category: string; subcategory: string; series: string };
+      };
+};
+
 export function ProductModelDetailPage({
   category,
   subcategory,
@@ -34,7 +49,7 @@ export function ProductModelDetailPage({
   const subcategorySlug = getSubcategorySlug(subcategory, locale);
   const seriesSlug = series ? getSeriesSlug(series, locale) : undefined;
 
-  const breadcrumbItems = [
+  const breadcrumbItems: BreadcrumbItem[] = [
     {
       label: t(`categories.items.${category.id}.title`),
       href: { pathname: "/products/[category]", params: { category: categorySlug } },

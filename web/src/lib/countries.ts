@@ -2,7 +2,7 @@ export type Country = {
   code: string;
   dialCode: string;
   names: {
-    cs: string;
+    cz: string;
     en: string;
   };
 };

@@ -143,7 +143,7 @@ function drawPdfText(
 
 function drawParametersPage(
   page: PdfPage,
-  content: (typeof SERIE_A_PDF_CONTENT)["cz"],
+  content: (typeof SERIE_A_PDF_CONTENT)["cz" | "en"],
   locale: "cz" | "en",
   font: PdfFont,
   fontBold: PdfFont,

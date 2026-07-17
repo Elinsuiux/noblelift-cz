@@ -6,7 +6,14 @@ type Crumb = {
   href?:
     | { pathname: "/products" }
     | { pathname: "/products/[category]"; params: { category: string } }
-    | { pathname: "/products/[category]/[subcategory]"; params: { category: string; subcategory: string } };
+    | {
+        pathname: "/products/[category]/[subcategory]";
+        params: { category: string; subcategory: string };
+      }
+    | {
+        pathname: "/products/[category]/[subcategory]/[series]";
+        params: { category: string; subcategory: string; series: string };
+      };
 };
 
 export function ProductsBreadcrumb({ items }: { items: Crumb[] }) {

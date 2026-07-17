@@ -147,7 +147,7 @@ function drawPdfText(
 
 function drawParametersPage(
   page: PdfPage,
-  content: (typeof DIESEL_LPG_PDF_CONTENT)["cz"],
+  content: (typeof DIESEL_LPG_PDF_CONTENT)["cz" | "en"],
   locale: "cz" | "en",
   font: PdfFont,
   fontBold: PdfFont,
