@@ -10,11 +10,11 @@ import { HomeImageSlot } from "@/components/HomeImageSlot";
 import { VideoPlayButton } from "@/components/VideoPlayButton";
 import { ContactForm } from "@/components/ContactForm";
 import { ClockIcon } from "@/components/ClockIcon";
-
-const STEP_KEYS = ["1", "2", "3", "4", "5", "6"] as const;
 import { HOME_CATEGORY_KEYS } from "@/lib/products-menu";
 import { getCategoryById, getCategorySlug } from "@/lib/products-catalog";
 
+const STEP_KEYS = ["1", "2", "3", "4", "5", "6"] as const;
+const WHY_BRAND_FACT_KEYS = ["experience", "people", "plants", "listed"] as const;
 const CATEGORY_KEYS = HOME_CATEGORY_KEYS;
 const LOGISTICS_KEYS = ["1", "2", "3"] as const;
 const DEALER_KEYS = ["1", "2", "3", "4", "5"] as const;
@@ -176,6 +176,22 @@ export function HomePage() {
             <p className="mx-auto mt-8 max-w-3xl text-center text-base leading-relaxed text-zinc-600 md:text-lg">
               {t("why.lead")}
             </p>
+
+            <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+              {WHY_BRAND_FACT_KEYS.map((key) => (
+                <div
+                  key={key}
+                  className="rounded-2xl border border-zinc-100 bg-zinc-50 px-4 py-5 text-center"
+                >
+                  <div className="text-2xl font-extrabold text-noble-orange md:text-3xl">
+                    {t(`why.brandFacts.${key}.value`)}
+                  </div>
+                  <div className="mt-1 text-xs font-medium uppercase tracking-wide text-zinc-500">
+                    {t(`why.brandFacts.${key}.label`)}
+                  </div>
+                </div>
+              ))}
+            </div>
 
             <div className="mt-10 text-center">
               <Link

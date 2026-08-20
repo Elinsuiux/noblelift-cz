@@ -44,16 +44,34 @@
   },
   "why": {
     "title": "Proč zvolit Noblelift od VZV GROUP?",
-    "lead": "Jako výhradní dovozce pro ČR a SR nabízíme kompletní podporu – od výběru techniky přes dodání až po servis a náhradní díly.",
+    "lead": "Noblelift je globální výrobce manipulační techniky s téměř 30 lety zkušeností, vlastní výrobou a kompletním portfoliem. Jako výhradní dovozce pro ČR a SR k tomu přidáváme lokální podporu – od výběru techniky přes dodání až po servis a náhradní díly.",
+    "brandFacts": {
+      "experience": {
+        "value": "30+",
+        "label": "let zkušeností"
+      },
+      "people": {
+        "value": "5 000+",
+        "label": "zaměstnanců"
+      },
+      "plants": {
+        "value": "4",
+        "label": "výrobní země"
+      },
+      "listed": {
+        "value": "2015",
+        "label": "vstup na burzu"
+      }
+    },
     "learnMore": "Zjistit více +",
     "steps": {
       "1": {
-        "title": "Globální značka s ověřenou kvalitou",
-        "desc": "Noblelift patří mezi přední světové výrobce manipulační techniky s moderním vývojem a výrobou."
+        "title": "Globální výrobce s vlastní výrobou",
+        "desc": "Noblelift vyrábí manipulační techniku od roku 1996. Má vlastní vývoj, moderní výrobu a závody v Číně, Vietnamu, Malajsii a Francii."
       },
       "2": {
-        "title": "Široké portfolio techniky",
-        "desc": "Čelní vozíky, zakladače, paletové vozíky, retraky, terénní stroje i pracovní plošiny pro různé provozy."
+        "title": "Kompletní portfolio techniky",
+        "desc": "Od ručních a elektrických skladových vozíků přes čelní elektrické vozíky až po retraky, plošiny a řešení pro intralogistiku."
       },
       "3": {
         "title": "Odborné poradenství",
@@ -383,6 +401,102 @@
       "p2": "Zároveň bereme na sebe plnou regionální odpovědnost za prodej a servis strojů značky Noblelift v ČR a na Slovensku.",
       "cta": "Vybrat si techniku"
     },
+    "brand": {
+      "title": "Kdo je Noblelift",
+      "lead": "Noblelift je významný světový výrobce manipulační techniky specializovaný na material handling a intralogistiku.",
+      "p1": "Společnost byla založena v roce 2000 v Changxingu v Číně. Dnes má výrobní závody v Číně, Vietnamu, Malajsii a Francii a zaměstnává více než 5 000 lidí po celém světě.",
+      "p2": "Začínala výrobou ručních paletových vozíků a postupně vybudovala kompletní portfolio — od ruční a elektrické skladové techniky přes elektrické čelní vozíky a retraky až po pracovní plošiny a automatizovaná logistická řešení.",
+      "facts": {
+        "experience": {
+          "value": "30+",
+          "label": "let zkušeností"
+        },
+        "people": {
+          "value": "5 000+",
+          "label": "zaměstnanců"
+        },
+        "plants": {
+          "value": "4",
+          "label": "výrobní země"
+        },
+        "listed": {
+          "value": "2015",
+          "label": "vstup na burzu"
+        }
+      },
+      "milestones": {
+        "title": "Historie a vývoj",
+        "items": {
+          "1996": {
+            "year": "1996",
+            "title": "Začátek výroby",
+            "desc": "Noblelift začíná s výrobou ručních paletových vozíků."
+          },
+          "2000": {
+            "year": "2000",
+            "title": "Vznik společnosti",
+            "desc": "Založení NOBLELIFT v Changxingu a rozšíření výrobních kapacit."
+          },
+          "2004": {
+            "year": "2004",
+            "title": "Elektrická skladová technika",
+            "desc": "Portfolio se rozšiřuje o elektrické paletové vozíky a zakladače."
+          },
+          "2012": {
+            "year": "2012",
+            "title": "Čelní vozíky a retraky",
+            "desc": "Vstup do segmentu elektrických čelních vozíků a retraků."
+          },
+          "2015": {
+            "year": "2015",
+            "title": "Vstup na burzu",
+            "desc": "Noblelift se stává veřejně obchodovanou společností na Shanghai Stock Exchange."
+          },
+          "today": {
+            "year": "Dnes",
+            "title": "Kompletní portfolio",
+            "desc": "Globální výrobce od ručních vozíků až po čelní vozíky, retraky, plošiny a automatizaci."
+          }
+        }
+      },
+      "trust": {
+        "title": "Proč věřit značce Noblelift",
+        "lead": "Za produktem stojí vlastní vývoj, moderní výroba, kontrola kvality a dlouholeté zkušenosti — ne jen nízká cena.",
+        "items": {
+          "experience": {
+            "title": "Téměř 30 let zkušeností",
+            "desc": "Výrobě manipulační techniky se věnuje od roku 1996."
+          },
+          "scale": {
+            "title": "Velký mezinárodní výrobce",
+            "desc": "Více než 5 000 zaměstnanců a výrobní závody v několika zemích."
+          },
+          "portfolio": {
+            "title": "Kompletní portfolio",
+            "desc": "Od ručních paletových vozíků až po čelní vozíky, retraky, plošiny a automatizaci."
+          },
+          "ownRd": {
+            "title": "Vlastní vývoj a výroba",
+            "desc": "Vlastní konstrukce, vývoj a výroba vybraných klíčových komponentů."
+          },
+          "quality": {
+            "title": "Kvalita výroby",
+            "desc": "Moderní technologie, systematická kontrola kvality a testování komponentů i hotových vozíků."
+          },
+          "global": {
+            "title": "Globální působnost",
+            "desc": "Produkty dodává zákazníkům po celém světě."
+          },
+          "listed": {
+            "title": "Veřejně obchodovaná společnost",
+            "desc": "Od roku 2015 kótována na Shanghai Stock Exchange."
+          }
+        },
+        "ctaTitle": "Vyberte si techniku",
+        "ctaDesc": "Prohlédněte si kompletní katalog Noblelift a najděte řešení pro váš provoz.",
+        "ctaLabel": "Přejít do katalogu"
+      }
+    },
     "commitment": {
       "heading": "Náš závazek",
       "pillarsLabel": "Stavíme na třech pilířích",
@@ -488,7 +602,10 @@
       "introAccentAlt": "Obchodní zástupce Noblelift",
       "introAccentHint": "Foto zástupce",
       "commitmentAlt": "Skladová technika Noblelift na regálech ve skladu VZV GROUP",
-      "commitmentHint": "Foto skladu s paletovými vozíky"
+      "commitmentHint": "Foto skladu s paletovými vozíky",
+      "brandHqAlt": "Hlavní výrobní závod Noblelift v Changxingu v Číně",
+      "brandHqHint": "Letecká fotografie závodu Noblelift",
+      "brandHqCaption": "Hlavní výrobní závod Noblelift — Changxing, Čína"
     }
   },
   "legalPrivacy": {
@@ -718,6 +835,19 @@
       "home": "Domů",
       "products": "Produkty"
     },
+    "seriesDetail": {
+      "equipmentStandardLabel": "Standardní výbava:",
+      "equipmentOptionalLabel": "Nadstandardní výbava:"
+    },
+    "lightbox": {
+      "open": "Zvětšit fotografii",
+      "close": "Zavřít",
+      "zoomIn": "Přiblížit",
+      "zoomOut": "Oddálit",
+      "resetZoom": "Původní velikost",
+      "prev": "Předchozí fotografie",
+      "next": "Další fotografie"
+    },
     "hub": {
       "titlePrefix": "Kategorie",
       "titleBrand": "Noblelift",
@@ -793,12 +923,30 @@
             }
           },
           "specs": {
-            "capacity": { "label": "Nosnost", "value": "1,3 - 2 t" },
-            "drive": { "label": "Pohon", "value": "Elektrický" },
-            "lift": { "label": "Max. zdvih", "value": "až 3 500 mm" },
-            "battery": { "label": "Baterie", "value": "24 V" },
-            "operation": { "label": "Provoz", "value": "Vnitřní" },
-            "type": { "label": "Typ", "value": "Bez přízdvihu" }
+            "capacity": {
+              "label": "Nosnost",
+              "value": "1,3 - 2 t"
+            },
+            "drive": {
+              "label": "Pohon",
+              "value": "Elektrický"
+            },
+            "lift": {
+              "label": "Max. zdvih",
+              "value": "až 3 500 mm"
+            },
+            "battery": {
+              "label": "Baterie",
+              "value": "24 V"
+            },
+            "operation": {
+              "label": "Provoz",
+              "value": "Vnitřní"
+            },
+            "type": {
+              "label": "Typ",
+              "value": "Bez přízdvihu"
+            }
           }
         }
       },
@@ -837,12 +985,30 @@
             }
           },
           "specs": {
-            "capacity": { "label": "Nosnost", "value": "1,2 - 1,6 t" },
-            "drive": { "label": "Pohon", "value": "Elektrický" },
-            "lift": { "label": "Max. zdvih", "value": "až 4 500 mm" },
-            "battery": { "label": "Baterie", "value": "24 V" },
-            "operation": { "label": "Provoz", "value": "Vnitřní" },
-            "type": { "label": "Typ", "value": "S přízdvihem" }
+            "capacity": {
+              "label": "Nosnost",
+              "value": "1,2 - 1,6 t"
+            },
+            "drive": {
+              "label": "Pohon",
+              "value": "Elektrický"
+            },
+            "lift": {
+              "label": "Max. zdvih",
+              "value": "až 4 500 mm"
+            },
+            "battery": {
+              "label": "Baterie",
+              "value": "24 V"
+            },
+            "operation": {
+              "label": "Provoz",
+              "value": "Vnitřní"
+            },
+            "type": {
+              "label": "Typ",
+              "value": "S přízdvihem"
+            }
           }
         }
       }
@@ -883,12 +1049,30 @@
             }
           },
           "specs": {
-            "capacity": { "label": "Nosnost", "value": "1,6 - 2 t" },
-            "drive": { "label": "Pohon", "value": "Elektrický" },
-            "lift": { "label": "Max. zdvih", "value": "až 4 500 mm" },
-            "battery": { "label": "Baterie", "value": "24 V" },
-            "operation": { "label": "Provoz", "value": "Vnitřní" },
-            "type": { "label": "Typ", "value": "S plošinou, bez přízdvihu" }
+            "capacity": {
+              "label": "Nosnost",
+              "value": "1,6 - 2 t"
+            },
+            "drive": {
+              "label": "Pohon",
+              "value": "Elektrický"
+            },
+            "lift": {
+              "label": "Max. zdvih",
+              "value": "až 4 500 mm"
+            },
+            "battery": {
+              "label": "Baterie",
+              "value": "24 V"
+            },
+            "operation": {
+              "label": "Provoz",
+              "value": "Vnitřní"
+            },
+            "type": {
+              "label": "Typ",
+              "value": "S plošinou, bez přízdvihu"
+            }
           }
         }
       },
@@ -927,12 +1111,30 @@
             }
           },
           "specs": {
-            "capacity": { "label": "Nosnost", "value": "1,6 t" },
-            "drive": { "label": "Pohon", "value": "Elektrický" },
-            "lift": { "label": "Max. zdvih", "value": "až 5 000 mm" },
-            "battery": { "label": "Baterie", "value": "24 V" },
-            "operation": { "label": "Provoz", "value": "Vnitřní" },
-            "type": { "label": "Typ", "value": "S plošinou a přízdvihem" }
+            "capacity": {
+              "label": "Nosnost",
+              "value": "1,6 t"
+            },
+            "drive": {
+              "label": "Pohon",
+              "value": "Elektrický"
+            },
+            "lift": {
+              "label": "Max. zdvih",
+              "value": "až 5 000 mm"
+            },
+            "battery": {
+              "label": "Baterie",
+              "value": "24 V"
+            },
+            "operation": {
+              "label": "Provoz",
+              "value": "Vnitřní"
+            },
+            "type": {
+              "label": "Typ",
+              "value": "S plošinou a přízdvihem"
+            }
           }
         }
       }
@@ -946,194 +1148,407 @@
         "badge": "Série A",
         "title": "Základní model",
         "subtitle": "Standardní řada",
-        "capacity": "1,5 – 3,8 t",
-        "modelRange": "CPD15~38",
-        "productLine": "Série A — lithiumové čelní vozíky",
-        "desc": "Spolehlivé elektrické čelní vozíky pro standardní skladové provozy. Vyvážený poměr ceny a výkonu.",
+        "capacity": "1,8 – 3,8 t",
+        "modelRange": "CPD 18~38 A2",
+        "productLine": "Série A — čtyřkolové elektrické vozíky řady A2",
+        "desc": "Moderní čtyřkolové elektrické vysokozdvižné vozíky s výborným poměrem cena / výkon — nejuniverzálnější a nejprodávanější řada elektrických vozíků Noblelift.",
         "uses": {
-          "1": "Distribuce a logistické centrum",
-          "2": "Výrobní hala a montáž",
-          "3": "Maloobchodní sklad"
+          "1": "Nakládka a vykládka kamionů",
+          "2": "Manipulace ve skladech",
+          "3": "Zásobování výroby"
         },
         "detail": {
           "title": "Noblelift Série A — detailní popis",
-          "intro": "Série A je vstupní elektrický čelní vozík Noblelift navržený pro každodenní skladové operace. Nabízí vynikající poměr ceny a výkonu s dlouhou životností baterie a jednoduchým ovládáním. Vhodný pro operátory bez rozsáhlých zkušeností s manipulační technikou.",
+          "intro": "Řada A2 představuje moderní čtyřkolové elektrické vysokozdvižné vozíky určené pro široké spektrum aplikací. Díky kombinaci výkonu, spolehlivosti, komfortu a příznivé pořizovací ceny se jedná o nejuniverzálnější a nejprodávanější řadu elektrických vozíků Noblelift.",
           "features": {
             "1": {
-              "title": "Efektivní pohon AC",
-              "desc": "Asynchronní AC motor s regenerativním brzděním pro maximální výdrž baterie"
+              "title": "Univerzální použití",
+              "desc": "Nakládka a vykládka kamionů, manipulace ve skladech, zásobování výroby — uvnitř i na venkovních plochách"
             },
             "2": {
-              "title": "Dlouhá výdrž baterie",
-              "desc": "Standardní olověná nebo volitelná lithiová baterie pro celosměnný provoz"
+              "title": "Lithium-iontový pohon",
+              "desc": "Rychlé nabíjení, průběžné dobíjení během směny, bezúdržbový provoz a nízké provozní náklady"
             },
             "3": {
-              "title": "Bezpečnostní systémy",
-              "desc": "OPS systém přítomnosti řidiče, automatické blokování zdvihu"
+              "title": "Robustní konstrukce",
+              "desc": "Šasi a podvozek srovnatelné s vozíky se spalovacím motorem, zvýšené těžiště na 600 mm"
             },
             "4": {
-              "title": "Snadná údržba",
-              "desc": "Přístup ke komponentám bez nástrojů, nízké provozní náklady"
+              "title": "Komfort obsluhy",
+              "desc": "Ergonomicky navržené pracoviště řidiče, tichý a ekologický provoz"
             }
           },
           "specs": {
             "capacity": {
               "label": "Nosnost",
-              "value": "1,5 – 3,8 t"
+              "value": "1,8 – 2,0 – 2,5 – 3,0 – 3,5 – 3,8 t"
             },
-            "drive": {
-              "label": "Pohon",
-              "value": "Elektrický AC"
-            },
-            "tires": {
-              "label": "Pneumatiky",
-              "value": "Plné / Super el."
+            "models": {
+              "label": "Modely",
+              "value": "CPD 18 / 25 / 30 / 35 / 38 A2"
             },
             "battery": {
               "label": "Baterie",
-              "value": "48 V / Lithium"
+              "value": "Li-Ion"
             },
             "lift": {
-              "label": "Max. zdvih",
-              "value": "do 7 000 mm"
+              "label": "Výška zdvihu",
+              "value": "2 000–7 000 mm"
+            },
+            "drive": {
+              "label": "Motor",
+              "value": "Permanentní magnety"
             },
             "operation": {
               "label": "Provoz",
-              "value": "Vnitřní"
+              "value": "Vnitřní / venkovní"
             }
-          }
+          },
+          "audience": {
+            "title": "Pro koho je řada A2 určena",
+            "items": {
+              "1": "Výrobní podniky",
+              "2": "Logistická centra",
+              "3": "Velkoobchody",
+              "4": "Distribuční sklady",
+              "5": "Firmy s jednosměnným provozem",
+              "6": "Zákazníci hledající univerzální elektrický vozík za příznivou cenu"
+            }
+          },
+          "recommend": {
+            "whenTitle": "Kdy řadu A2 doporučujeme",
+            "when": {
+              "1": "Hledáte univerzální elektrický vozík",
+              "2": "Provoz probíhá uvnitř i venku",
+              "3": "Nosnosti přibližně od 1,8 do 3,8 t",
+              "4": "Důležitý je poměr cena / výkon",
+              "5": "Běžný až středně intenzivní provoz"
+            },
+            "otherTitle": "Kdy doporučujeme jinou řadu",
+            "other": {
+              "1": "N1 — pokud je prioritou maximální obratnost v úzkých prostorách",
+              "2": "P — pokud pracujete ve vícesměnném nebo velmi intenzivním provozu a požadujete vyšší výkon či prémiovou výbavu"
+            }
+          },
+          "equipment": {
+            "title": "Výbava",
+            "standard": "Integrovaná nabíječka, předehřev baterie, BP, Blue Spot, komfortní sedačka, USB port, LED osvětlení, barevný display, zadní madlo s klaksonem, hydraulické páky, 4sekční rozvaděč, nešpinící SE pneumatiky, OPS (systém přítomnosti řidiče), držák nápojů, panoramatické zrcátko.",
+            "optional": "Kabina s topením, klimatizace, HSV, externí výkonnější nabíječka."
+          },
+          "argument": "Pokud hledáte spolehlivý elektrický vozík pro každodenní provoz, který nabízí moderní technologie, vysoký komfort a výborný poměr ceny a výkonu, je řada A2 tou správnou volbou."
         }
       },
       "serieP": {
         "badge": "Série P",
         "title": "Premium",
         "subtitle": "Lithiová technologie",
-        "capacity": "3,0 - 3,8 t",
-        "modelRange": "FEP 30 - 38 P",
-        "productLine": "Prémiová řada s lithiovými bateriemi pro náročný více-směnný provoz bez emisí.",
-        "desc": "Prémiová řada s lithiovými bateriemi pro náročný více-směnný provoz bez emisí.",
+        "capacity": "2,5 – 3,8 t",
+        "modelRange": "FEP 25~38 P",
+        "productLine": "Série P — prémiové čtyřkolové elektrické vozíky",
+        "desc": "Prémiová řada elektrických čtyřkolových vozíků pro maximální produktivitu, vysoký komfort obsluhy a moderní technologie.",
         "uses": {
-          "1": "Více-směnný provoz",
-          "2": "Chlazené sklady",
-          "3": "Potravinářský průmysl"
+          "1": "Vícesměnný provoz",
+          "2": "Intenzivní manipulace s nákladem",
+          "3": "Logistická centra a výroba"
         },
         "detail": {
-          "title": "Noblelift Série P — Premium",
-          "intro": "Série P přináší nejvyšší výbavovou úroveň elektrických čelních vozíků Noblelift. LCD displej, odpružené sedadlo, 4cestná hydraulika a nativní podpora lithiových baterií pro rychlé mezisměnné nabíjení bez výměny baterie.",
+          "title": "Noblelift Série P — detailní popis",
+          "intro": "Řada P představuje prémiovou modelovou řadu elektrických čtyřkolových vysokozdvižných vozíků Noblelift. Je určena pro zákazníky, kteří požadují maximální produktivitu, vysoký komfort obsluhy a moderní technologie.",
           "features": {
             "1": {
-              "title": "LCD displej",
-              "desc": "Velký rámový LCD displej v zorném poli operátora pro lepší bezpečnost"
+              "title": "Joystickové ovládání",
+              "desc": "Elektrohydraulické ovládání fingertip — jemnější hydraulika, vyšší přesnost a rychlejší zdvihání i spouštění vidlí"
             },
             "2": {
-              "title": "Lithium nativně",
-              "desc": "Konstruováno pro lithiové baterie — rychlé nabíjení za provozu"
+              "title": "Li-Ion a vysoký výkon",
+              "desc": "Moderní Li-Ion technologie a motor s permanentními magnety — výkon srovnatelný s vozíky se spalovacím motorem"
             },
             "3": {
-              "title": "Ergonomická kabina",
-              "desc": "Prostorná kabina s deluxe odpruženým sedadlem, nastavitelná pro všechny velikosti operátorů"
+              "title": "Komfort obsluhy",
+              "desc": "Prostornější pracoviště, intuitivní ovládání, pohodlnější nastupování a lepší výhled z vozíku"
             },
             "4": {
-              "title": "4cestná hydraulika",
-              "desc": "Integrovaný postranní posuv pro přesnou manipulaci bez přejezdů"
+              "title": "Rekuperace energie",
+              "desc": "Nižší provozní a servisní náklady díky rekuperaci a bezúdržbové Li-Ion technologii"
             }
           },
           "specs": {
-            "capacity": { "label": "Nosnost", "value": "3,0 - 3,8 t" },
-            "drive": { "label": "Pohon", "value": "Elektrický AC" },
-            "battery": { "label": "Baterie", "value": "48–80 V Li" },
-            "lift": { "label": "Max. zdvih", "value": "do 7 500 mm" },
-            "display": { "label": "Displej", "value": "LCD rámový" },
-            "operation": { "label": "Provoz", "value": "Vnitřní / smíšený" }
-          }
+            "capacity": {
+              "label": "Nosnost",
+              "value": "2,5 – 3,0 – 3,5 – 3,8 t"
+            },
+            "models": {
+              "label": "Modely",
+              "value": "FEP 25 / 30 / 35 / 38 P"
+            },
+            "battery": {
+              "label": "Baterie",
+              "value": "Li-Ion"
+            },
+            "lift": {
+              "label": "Výška zdvihu",
+              "value": "2 000–7 000 mm (3,8 t do 6 000 mm)"
+            },
+            "control": {
+              "label": "Ovládání",
+              "value": "Fingertip (joystick)"
+            },
+            "operation": {
+              "label": "Provoz",
+              "value": "Intenzivní / vícesměnný"
+            }
+          },
+          "audience": {
+            "title": "Pro koho je řada P určena",
+            "items": {
+              "1": "Logistická centra",
+              "2": "Výrobní závody",
+              "3": "Vícesměnný provoz",
+              "4": "Intenzivní manipulace s nákladem",
+              "5": "Zákazníci požadující maximální komfort obsluhy",
+              "6": "Firmy hledající prémiový elektrický vozík"
+            }
+          },
+          "recommend": {
+            "whenTitle": "Kdy řadu P doporučujeme",
+            "when": {
+              "1": "Intenzivní každodenní provoz",
+              "2": "Dvou- až třísměnný provoz a častá manipulace s nákladem",
+              "3": "Požadujete maximální komfort obsluhy",
+              "4": "Potřebujete rychlost a přesnost ovládání zdvihu",
+              "5": "Důležitá je produktivita práce"
+            },
+            "otherTitle": "Kdy doporučujeme jinou řadu",
+            "other": {
+              "1": "N1 — pokud je prioritou kompaktnost a obratnost",
+              "2": "A2 — pokud hledáte univerzální vozík s výborným poměrem ceny a výkonu"
+            }
+          },
+          "equipment": {
+            "title": "Výbava",
+            "standard": "Integrovaná nabíječka, předehřev baterie, BP, Blue Spot, komfortní sedačka, USB port, LED osvětlení, barevný display, zadní madlo s klaksonem, Fingertip (joystick), 4sekční rozvaděč, nešpinící SE pneumatiky, OPS (systém přítomnosti řidiče), držák nápojů, panoramatické zrcátko, automatické zpomalování v zatáčkách.",
+            "optional": "Kabina s topením, klimatizace, HSV, externí výkonnější nabíječka."
+          },
+          "argument": "Řada P je určena zákazníkům, kteří chtějí z vozíku získat maximum. Díky joystickovému ovládání hydrauliky, vyššímu komfortu obsluhy a moderním technologiím umožňuje rychlejší, přesnější a pohodlnější manipulaci s nákladem. Při intenzivním provozu se vyšší produktivita a komfort velmi rychle projeví v každodenním provozu."
         }
       },
       "serieN": {
         "badge": "Série N",
         "title": "Tříkolové",
         "subtitle": "Úzké uličky",
-        "capacity": "1,2 – 2,0 t",
-        "modelRange": "FE3R 12 E, FE3D 16 N1, FE3D 20 N1",
-        "productLine": "Tříkolové vozíky s výbornou manévrovatelností pro úzké uličky a stísněné prostory.",
-        "desc": "Tříkolové vozíky s výbornou manévrovatelností pro úzké uličky a stísněné prostory.",
+        "capacity": "1,6 – 2,0 t",
+        "modelRange": "FE3D16N1, FE3D18N1, FE3D20N1",
+        "productLine": "Kompaktní tříkolové elektrické vozíky N1 pro práci v interiéru a úzkých prostorech.",
+        "desc": "Kompaktní tříkolové elektrické vozíky N1 pro práci v interiéru a úzkých prostorech.",
         "uses": {
           "1": "Úzké uličky",
-          "2": "Kompaktní sklady",
-          "3": "Rychlé manévrování"
+          "2": "Sklady a logistika",
+          "3": "Nakládka a vykládka"
         },
         "detail": {
-          "title": "Noblelift Série N — třínápravové vozíky",
-          "intro": "Třínápravové vozíky série N jsou konstruovány pro provoz v úzkých uličkách. Zadní pohon umožňuje otočení na místě a průjezd uličkami šířky od 2,8 m. Volitelné plné nebo super-elastické pneumatiky pro různé typy podlahy.",
+          "title": "Noblelift Série N — tříkolové vozíky N1",
+          "intro": "Řada N1 představuje kompaktní tříkolové elektrické vysokozdvižné vozíky určené především pro práci v interiéru. Díky tříkolové konstrukci vyniká mimořádnou obratností a snadnou manipulací i ve velmi omezených prostorech. Malý poloměr otáčení umožňuje práci v úzkých uličkách a efektivní otáčení mezi regály.",
           "features": {
             "1": {
-              "title": "Kompaktní rozměry",
-              "desc": "Minimální poloměr otáčení pro manévrování v úzkých prostorech"
+              "title": "Maximální obratnost",
+              "desc": "Kompaktní rozměry a malý poloměr otáčení pro manévrování v úzkých uličkách"
             },
             "2": {
-              "title": "Zadní řízení",
-              "desc": "Pohon zadní nápravou zajišťuje stabilitu i při přepravě zátěže"
+              "title": "Dvojice poháněných předních kol",
+              "desc": "Vysoký výkon, tichý provoz a vynikající manévrovatelnost"
             },
             "3": {
-              "title": "Lithiová varianta",
-              "desc": "Dostupná s lithiovou baterií pro provoz v potravinářství a chlazení"
+              "title": "80V Li-Ion baterie",
+              "desc": "Bezúdržbová baterie s dlouhou životností, nulové lokální emise a nízké provozní náklady"
             },
             "4": {
-              "title": "Volba pneumatik",
-              "desc": "Plné, super-elastické nebo polyuretanové pro různé typy podlahy"
+              "title": "Komfort obsluhy",
+              "desc": "Ergonomické pracoviště vhodné do hal a každodenního vnitřního provozu"
             }
           },
           "specs": {
-            "capacity": { "label": "Nosnost", "value": "1,2–2,0 t" },
-            "axles": { "label": "Nápravy", "value": "3 (zadní pohon)" },
-            "battery": { "label": "Baterie", "value": "24–48 V Li" },
-            "aisle": { "label": "Min. ulička", "value": "od 2 800 mm" },
-            "lift": { "label": "Max. zdvih", "value": "do 6 000 mm" },
-            "operation": { "label": "Provoz", "value": "Vnitřní" }
-          }
+            "capacity": {
+              "label": "Nosnost",
+              "value": "1,6–1,8–2,0 t"
+            },
+            "wheels": {
+              "label": "Konstrukce",
+              "value": "Tříkolová"
+            },
+            "battery": {
+              "label": "Baterie",
+              "value": "80 V Li-Ion"
+            },
+            "models": {
+              "label": "Modely",
+              "value": "FE3D16N1 / FE3D18N1 / FE3D20N1"
+            },
+            "lift": {
+              "label": "Výška zdvihu",
+              "value": "2 500–6 500 mm"
+            },
+            "operation": {
+              "label": "Provoz",
+              "value": "Vnitřní"
+            }
+          },
+          "audience": {
+            "title": "Pro koho je řada N1",
+            "items": {
+              "1": "Výrobní podniky",
+              "2": "Logistická centra",
+              "3": "Sklady s úzkými uličkami",
+              "4": "Nakládka a vykládka kamionů",
+              "5": "Provozy s častým otáčením vozíku"
+            }
+          },
+          "recommend": {
+            "whenTitle": "Kdy řadu N1 doporučujeme",
+            "when": {
+              "1": "Pracujete převážně uvnitř",
+              "2": "Potřebujete maximální obratnost",
+              "3": "Manipulujete v úzkých uličkách",
+              "4": "Nosnost do 2 tun",
+              "5": "Hledáte kompaktní elektrický vozík"
+            },
+            "otherTitle": "Kdy doporučujeme jinou řadu",
+            "other": {
+              "1": "Častý venkovní provoz",
+              "2": "Vyšší nosnosti",
+              "3": "Nerovný povrch"
+            }
+          },
+          "equipment": {
+            "title": "Výbava",
+            "standard": "Integrovaná nabíječka, předehřev baterie, BP, Blue Spot, komfortní sedačka, USB port, LED osvětlení, barevný display, zadní madlo s klaksonem, hydraulické páky, 4sekční rozvaděč, nešpinící SE pneumatiky, panoramatické zrcátko.",
+            "optional": "Fingertip (joystick), kabina, ZF převodovka s elektronickou parkovací brzdou, HSV, externí nabíječka."
+          },
+          "argument": "Pokud hledáte co nejkompaktnější elektrický vozík s výbornou obratností do vnitřních prostor, je řada N1 ideální volbou."
         }
       },
       "serieQ": {
         "badge": "Série Q",
         "title": "Těžká třída",
         "subtitle": "Těžký provoz",
-        "capacity": "2 – 10 t",
-        "modelRange": "FE4P 20 Q, FE4P 50 Q, FE4P 50 QL",
-        "productLine": "Výkonné elektrické vozíky pro průmyslové a těžké aplikace s vysokou nosností.",
-        "desc": "Výkonné elektrické vozíky pro průmyslové a těžké aplikace s vysokou nosností.",
+        "capacity": "1,6 – 2,0 t / 4,0 – 5,0 t",
+        "modelRange": "FE4P20Q, FE4P50Q",
+        "productLine": "Série Q — kompaktní čtyřkolové elektrické vozíky",
+        "desc": "Čtyřkolové elektrické vozíky s kompaktními rozměry a výbornou ovladatelností — vyšší stabilita než u tříkolového vozíku bez zbytečně velkého stroje.",
         "uses": {
-          "1": "Průmyslové haly",
-          "2": "Těžké břemena",
-          "3": "Náročný provoz"
+          "1": "Provozy s omezeným manipulačním prostorem",
+          "2": "Sklady a logistika",
+          "3": "Výroba se požadavkem na stabilitu"
         },
         "detail": {
-          "title": "Noblelift Série Q — těžká průmyslová třída",
-          "intro": "Série Q pokrývá potřeby těžkého průmyslu s nosností od 2 do 10 tun. Masivní ocelová konstrukce, rozšířená přední náprava pro stabilitu a výkonné AC motory zajišťují spolehlivý provoz i v nejnáročnějších podmínkách.",
+          "title": "Noblelift Série Q — detailní popis",
+          "intro": "Řada Q představuje kompaktní čtyřkolové elektrické vysokozdvižné vozíky, které spojují výhody čtyřkolové konstrukce s velmi kompaktními rozměry a výbornou ovladatelností. Je určena pro zákazníky, kteří požadují vyšší stabilitu než u tříkolového vozíku, ale zároveň nechtějí zbytečně velký stroj. Nosnosti 2,5–3,8 t existují u výrobce, ale v naší nabídce je nenabízíme.",
           "features": {
             "1": {
-              "title": "Těžká ocelová konstrukce",
-              "desc": "Zesílené šasi, nápravy a stožár pro extrémní zatížení a výšky zdvihu"
+              "title": "Stabilita čtyřkolového vozíku",
+              "desc": "Vyšší stabilita při manipulaci a jistější jízda i v případě nerovností — při zachování kompaktních rozměrů"
             },
             "2": {
-              "title": "Vysoký výkon motorů",
-              "desc": "Výkonné třífázové AC motory pro rychlost zdvihu i při maximálním zatížení"
+              "title": "Výborná ovladatelnost",
+              "desc": "Menší poloměr otáčení, nižší stavební výška a snadnější práce ve stísněných prostorách"
             },
             "3": {
-              "title": "Rozšířená stabilizace",
-              "desc": "Široká rozchod náprav a nízké těžiště pro práci s těžkými náklady ve výšce"
+              "title": "AC motor a volba baterie",
+              "desc": "Bezúdržbový AC trakční motor; do 2,0 t volba olověné nebo Li-Ion baterie"
             },
             "4": {
-              "title": "Servisní přístupnost",
-              "desc": "Vzduchově odpružené kapoty pro rychlý přístup ke komponentám"
+              "title": "Fingertip ovládání",
+              "desc": "Pohodlné a přesné ovládání zdvihu joystickem, tichý provoz, nízké vibrace a odpružená zadní náprava"
             }
           },
           "specs": {
-            "capacity": { "label": "Nosnost", "value": "2–10 t" },
-            "drive": { "label": "Pohon", "value": "Elektrický AC" },
-            "voltage": { "label": "Napětí", "value": "80 V / 96 V" },
-            "lift": { "label": "Max. zdvih", "value": "do 9 000 mm" },
-            "tires": { "label": "Pneu", "value": "Pneumatické" },
-            "operation": { "label": "Provoz", "value": "Vnitřní / smíšený" }
-          }
+            "capacity": {
+              "label": "Nosnost",
+              "value": "1,6–2,0 t / 4,0–5,0 t"
+            },
+            "models": {
+              "label": "Modely",
+              "value": "FE4P20Q / FE4P50Q"
+            },
+            "battery": {
+              "label": "Baterie",
+              "value": "Olověná nebo Li-Ion (do 2,0 t)"
+            },
+            "lift": {
+              "label": "Výška zdvihu",
+              "value": "2 500–5 500 mm (do 2,0 t) / do 7 000 mm (4,0–5,0 t)"
+            },
+            "control": {
+              "label": "Ovládání",
+              "value": "Fingertip (joystick)"
+            },
+            "operation": {
+              "label": "Provoz",
+              "value": "Sklady / výroba"
+            }
+          },
+          "capacityCompare": {
+            "title": "Hlavní rozdíly řady Q podle nosnosti",
+            "leftTitle": "FE4P16–20Q",
+            "rightTitle": "FE4P40–50Q/L",
+            "rows": {
+              "1": {
+                "label": "Charakter",
+                "left": "Kompaktní",
+                "right": "Robustní"
+              },
+              "2": {
+                "label": "Třída",
+                "left": "Medium Duty",
+                "right": "Professional"
+              },
+              "3": {
+                "label": "Baterie",
+                "left": "Olověná nebo Li-Ion",
+                "right": "Standardně Li-Ion"
+              },
+              "4": {
+                "label": "Nasazení",
+                "left": "Úzké prostory",
+                "right": "Těžký průmysl"
+              },
+              "5": {
+                "label": "Hlavní výhoda",
+                "left": "Kompaktnost",
+                "right": "Výkon a robustnost"
+              }
+            }
+          },
+          "audience": {
+            "title": "Pro koho je řada Q určena",
+            "items": {
+              "1": "Výrobní podniky",
+              "2": "Logistická centra",
+              "3": "Sklady",
+              "4": "Provozy s omezeným manipulačním prostorem",
+              "5": "Zákazníci preferující čtyřkolový vozík — lepší stabilita"
+            }
+          },
+          "recommend": {
+            "whenTitle": "Kdy řadu Q doporučujeme",
+            "when": {
+              "1": "Chcete čtyřkolový vozík",
+              "2": "Důležitá je stabilita",
+              "3": "Současně potřebujete kompaktní rozměry",
+              "4": "Potřebujete přesné a rychlé ovládání zdvihu",
+              "5": "Hledáte dobře ovladatelný elektrický vozík"
+            },
+            "otherTitle": "Kdy doporučujeme jinou řadu",
+            "other": {
+              "1": "N1 — pokud je nejvyšší prioritou maximální obratnost a preferujete tříkolový vozík",
+              "2": "A2 — pokud hledáte univerzální elektrický vozík s ohledem na cenu"
+            }
+          },
+          "equipment": {
+            "title": "Výbava",
+            "standard": "Externí 100A nabíječka, předehřev baterie, BP, Blue Spot, komfortní sedačka, USB port, LED osvětlení, barevný display, zadní madlo s klaksonem, Fingertip (joystick), 4sekční rozvaděč, nešpinící SE pneumatiky, automatické zpomalování v zatáčkách, panoramatické zrcátko.",
+            "optional": "Kabina s topením, HSV."
+          },
+          "argument": "Řada Q je ideální pro zákazníky, kteří preferují stabilitu čtyřkolového vozíku, ale zároveň potřebují kompaktní stroj s velmi dobrou ovladatelností pro každodenní práci ve skladu nebo výrobě."
         }
       }
     },
@@ -1163,12 +1578,30 @@
           }
         },
         "specs": {
-          "capacity": { "label": "Nosnost", "value": "2,0 – 3,8 t" },
-          "drive": { "label": "Pohon", "value": "Spalovací motor" },
-          "fuel": { "label": "Palivo", "value": "Diesel / LPG" },
-          "lift": { "label": "Max. zdvih", "value": "do 3 000 mm" },
-          "tires": { "label": "Pneumatiky", "value": "Plné / pneumatické" },
-          "operation": { "label": "Provoz", "value": "Venkovní / smíšený" }
+          "capacity": {
+            "label": "Nosnost",
+            "value": "2,0 – 3,8 t"
+          },
+          "drive": {
+            "label": "Pohon",
+            "value": "Spalovací motor"
+          },
+          "fuel": {
+            "label": "Palivo",
+            "value": "Diesel / LPG"
+          },
+          "lift": {
+            "label": "Max. zdvih",
+            "value": "do 3 000 mm"
+          },
+          "tires": {
+            "label": "Pneumatiky",
+            "value": "Plné / pneumatické"
+          },
+          "operation": {
+            "label": "Provoz",
+            "value": "Venkovní / smíšený"
+          }
         }
       }
     },
@@ -1198,12 +1631,30 @@
           }
         },
         "specs": {
-          "capacity": { "label": "Nosnost", "value": "1,2 - 2,0 t" },
-          "drive": { "label": "Pohon", "value": "Elektrický" },
-          "lift": { "label": "Max. zdvih", "value": "až 4 500 mm" },
-          "battery": { "label": "Baterie", "value": "24 V" },
-          "operation": { "label": "Provoz", "value": "Vnitřní" },
-          "type": { "label": "Typ", "value": "Obkročné" }
+          "capacity": {
+            "label": "Nosnost",
+            "value": "1,2 - 2,0 t"
+          },
+          "drive": {
+            "label": "Pohon",
+            "value": "Elektrický"
+          },
+          "lift": {
+            "label": "Max. zdvih",
+            "value": "až 4 500 mm"
+          },
+          "battery": {
+            "label": "Baterie",
+            "value": "24 V"
+          },
+          "operation": {
+            "label": "Provoz",
+            "value": "Vnitřní"
+          },
+          "type": {
+            "label": "Typ",
+            "value": "Obkročné"
+          }
         }
       }
     },
@@ -1257,33 +1708,185 @@
       "productLine": "Elektrický paletový vozík",
       "detail": {
         "title": "Noblelift elektrické paletové vozíky — detailní popis",
-        "intro": "Elektrické pěší i řidičské paletové vozíky Noblelift pro efektivní horizontální manipulaci. Nabízíme varianty s lithiovým pohonem, vážením i kompaktními rozměry pro úzké skladové uličky a intenzivní každodenní provoz.",
+        "intro": "Nabídka elektrických paletových vozíků Noblelift zahrnuje dvě řady. PWB Avant je základní ekonomická řada — nejkompaktnější vozíky pro lehčí provoz, dodávky a stísněné prostory. PTE ATOM je profesionální řada pro každodenní skladový provoz s vyšším výkonem, robustnější konstrukcí, pokročilou elektronikou a nízkými provozními náklady.",
         "features": {
           "1": {
-            "title": "Li-Ion pohon",
-            "desc": "Rychlé dobíjení a dlouhá výdrž baterie pro nepřetržitý provoz ve skladu"
+            "title": "PWB — ekonomická řada",
+            "desc": "Cenově nejdostupnější řešení, extrémně kompaktní rozměry, nízká hmotnost a jednoduchý spolehlivý provoz — nejprodávanější vozík"
           },
           "2": {
-            "title": "Elektrický pohon",
-            "desc": "Tichý a ekologický provoz vhodný pro vnitřní skladové i výrobní prostory"
+            "title": "PTE — profesionální řada",
+            "desc": "Vyšší výkon, robustnější konstrukce, pokročilé technologie a vyšší odolnost pro náročnější každodenní provoz"
           },
           "3": {
-            "title": "Kompaktní design",
-            "desc": "Pěší i řidičské varianty včetně modelů s vážením pro přesnou evidenci nákladu"
+            "title": "Li-Ion baterie",
+            "desc": "Rychlé nabíjení, bezúdržbový provoz; u PTE navíc rychlá výměna baterie"
           },
           "4": {
-            "title": "Spolehlivá konstrukce",
-            "desc": "Robustní provedení pro každodenní intenzivní manipulaci s paletami"
+            "title": "Stabilita a ovládání",
+            "desc": "Balanční kolečka, malý poloměr otáčení; u PTE chytrá oj s PIN/RFID, LCD a automatickým zpomalením v zatáčkách"
           }
         },
         "specs": {
-          "capacity": { "label": "Nosnost", "value": "1,5 - 2,0 t" },
-          "drive": { "label": "Pohon", "value": "Elektrický" },
-          "lift": { "label": "Zdvih", "value": "Nízkozdvižný" },
-          "battery": { "label": "Baterie", "value": "Li-Ion" },
-          "operation": { "label": "Provoz", "value": "Vnitřní" },
-          "type": { "label": "Typ", "value": "Elektrický paletový vozík" }
-        }
+          "capacity": {
+            "label": "Nosnost",
+            "value": "1 500–2 000 kg (PWB 300 do 3 000 kg na objednávku)"
+          },
+          "models": {
+            "label": "Modely PWB",
+            "value": "PWB 150 / 200 (300 na objednávku)"
+          },
+          "pte": {
+            "label": "Modely PTE",
+            "value": "PTE 15 Q2 / PTE 15 Q2SC (s váhou)"
+          },
+          "battery": {
+            "label": "Baterie PWB",
+            "value": "Li-Ion 24V/20–40Ah (150) · 48V/20Ah (200)"
+          },
+          "pteBattery": {
+            "label": "Baterie PTE",
+            "value": "Li-Ion 24V/20Ah"
+          },
+          "type": {
+            "label": "Typ",
+            "value": "Elektrický paletový vozík"
+          }
+        },
+        "capacityCompare": {
+          "title": "Srovnání řad PWB a PTE",
+          "leftTitle": "Řada PWB (Avant)",
+          "rightTitle": "Řada PTE (ATOM)",
+          "rows": {
+            "1": {
+              "label": "Typ řady",
+              "left": "Základní / ekonomická",
+              "right": "Profesionální"
+            },
+            "2": {
+              "label": "Modely",
+              "left": "PWB 150, PWB 200 (PWB 300 na objednávku)",
+              "right": "PTE 15 Q2, PTE 15 Q2SC (s váhou)"
+            },
+            "3": {
+              "label": "Nosnost",
+              "left": "1 500–2 000 kg (až 3 000 kg na objednávku)",
+              "right": "1 500 kg"
+            },
+            "4": {
+              "label": "Baterie",
+              "left": "Li-Ion 24V/20–40Ah (150) · 48V/20Ah (200)",
+              "right": "Li-Ion 24V/20Ah, rychlá výměna"
+            },
+            "5": {
+              "label": "Provoz",
+              "left": "Lehčí provoz, nižší vytížení",
+              "right": "Každodenní / intenzivní skladový provoz"
+            },
+            "6": {
+              "label": "Konstrukce",
+              "left": "Jednoduchá, spolehlivá, kompaktní",
+              "right": "Robustnější, zesílený rám, vyšší odolnost"
+            },
+            "7": {
+              "label": "Rozměry",
+              "left": "Extrémně kompaktní, nízká hmotnost",
+              "right": "Kompaktní s důrazem na výkon"
+            },
+            "8": {
+              "label": "Ovládání / elektronika",
+              "left": "Jednoduché ovládání, balanční kolečka",
+              "right": "Chytrá oj: PIN, RFID, LCD, Mth, želví režim"
+            },
+            "9": {
+              "label": "Inteligentní funkce",
+              "left": "—",
+              "right": "Zpomalení v zatáčkách, jízda s ojí ve svislé poloze"
+            },
+            "10": {
+              "label": "Typické nasazení",
+              "left": "Maloobchod, dodávky, výtahy, menší sklady",
+              "right": "Výroba, logistika, distribuční sklady"
+            },
+            "11": {
+              "label": "Extra výbava",
+              "left": "—",
+              "right": "Vážní systém (+ tiskárna u Q2SC)"
+            },
+            "12": {
+              "label": "Hlavní výhoda",
+              "left": "Nejnižší cena, nejkompaktnější vozík",
+              "right": "Vyšší výkon, produktivita a komfort"
+            }
+          }
+        },
+        "audience": {
+          "title": "Pro koho jsou řady určeny",
+          "items": {
+            "1": "PWB: maloobchod, supermarkety, menší sklady, práce v dodávkách a ve výtazích",
+            "2": "PTE: výrobní podniky, logistická centra, distribuční sklady",
+            "3": "PTE: supermarkety a každodenní manipulace s paletami",
+            "4": "Zákazníci hledající co nejkompaktnější elektrický paletový vozík (PWB)",
+            "5": "Zákazníci potřebující univerzální profesionální vozík do intenzivního skladu (PTE)"
+          }
+        },
+        "recommend": {
+          "whenTitle": "Kdy doporučujeme PWB Avant",
+          "when": {
+            "1": "Potřebujete co nejmenší a nejlehčí elektrický paletový vozík",
+            "2": "Práce v dodávkách, výtazích nebo stísněných prostorech",
+            "3": "Lehčí provoz a nižší vytížení",
+            "4": "Důležitá je pořizovací cena",
+            "5": "Stačí nosnost 1,5–2,0 t (případně 3,0 t na objednávku)"
+          },
+          "otherTitle": "Kdy doporučujeme PTE ATOM",
+          "other": {
+            "1": "Každodenní intenzivní skladový provoz",
+            "2": "Požadujete vyšší výkon a robustnější konstrukci",
+            "3": "Chcete chytrá oj (PIN, RFID, LCD) a inteligentní funkce",
+            "4": "Potřebujete vážní systém (PTE 15 Q2SC, volitelně s tiskárnou)",
+            "5": "Důležité jsou nízké provozní náklady"
+          }
+        },
+        "equipment": {
+          "title": "Modely a výbava",
+          "standard": "PWB 150: 1 500 kg, Li-Ion 24V/20Ah nebo 24V/40Ah. PWB 200: 2 000 kg, Li-Ion 48V/20Ah. PTE 15 Q2: 1 500 kg, Li-Ion 24V/20Ah. Společně: balanční kolečka, Li-Ion, kompaktní rozměry.",
+          "optional": "PTE 15 Q2SC: vážní systém (lze doplnit o tiskárnu). PWB 300: 3 000 kg na objednávku.",
+          "standardItems": {
+            "1": "PWB 150: 1 500 kg, Li-Ion 24V/20Ah nebo 24V/40Ah",
+            "2": "PWB 200: 2 000 kg, Li-Ion 48V/20Ah",
+            "3": "PTE 15 Q2: 1 500 kg, Li-Ion 24V/20Ah",
+            "4": "Společně: balanční kolečka, Li-Ion, kompaktní rozměry"
+          },
+          "optionalItems": {
+            "1": "PTE 15 Q2SC: vážní systém (lze doplnit o tiskárnu)",
+            "2": "PWB 300: 3 000 kg na objednávku"
+          }
+        },
+        "advantages": {
+          "pwbTitle": "Hlavní přednosti — řada PWB",
+          "pteTitle": "Hlavní přednosti — řada PTE ATOM",
+          "pwb": {
+            "1": "Extrémně kompaktní rozměry",
+            "2": "Balanční kolečka pro lepší stabilitu",
+            "3": "Nízká vlastní hmotnost – jednoduchá přeprava",
+            "4": "Li-Ion baterie – rychlé nabíjení, bezúdržbový provoz",
+            "5": "Robustní konstrukce – delší životnost, lepší odolnost proti prachu a vodě",
+            "6": "Malý poloměr otáčení",
+            "7": "Silný trakční motor 24V DC"
+          },
+          "pte": {
+            "1": "Vyšší výkon proti modelu PWB",
+            "2": "Balanční kolečka pro lepší stabilitu",
+            "3": "Chytrá ergonomická oj – PIN, RFID, LCD displej, počítadlo Mth, želví režim",
+            "4": "Li-Ion baterie s rychlou výměnou",
+            "5": "Inteligentní funkce – automatické zpomalení v zatáčkách, jízda s ojí ve svislé poloze",
+            "6": "Robustní konstrukce – vyšší odolnost, zesílený rám, ochrana komponentů",
+            "7": "Možnost vážního systému",
+            "8": "Jednodušší servis"
+          }
+        },
+        "argument": "Řada PWB je díky kompaktním rozměrům, nízké hmotnosti a Li-Ion baterii perfektní pro rozvoz zboží, práci v dodávkách, supermarketech nebo skladech s omezeným prostorem. Řada PTE ATOM nabízí vyšší výkon, moderní elektroniku, rychlou výměnu baterie, inteligentní diagnostiku a robustní konstrukci vhodnou pro intenzivní používání."
       }
     },
     "palletManual": {
@@ -1312,12 +1915,30 @@
           }
         },
         "specs": {
-          "capacity": { "label": "Nosnost", "value": "2,5 t" },
-          "drive": { "label": "Pohon", "value": "Ruční" },
-          "lift": { "label": "Zdvih", "value": "Nízkozdvižný" },
-          "forks": { "label": "Vidle", "value": "1150 mm" },
-          "operation": { "label": "Provoz", "value": "Vnitřní / smíšený" },
-          "type": { "label": "Typ", "value": "Ruční paletový vozík" }
+          "capacity": {
+            "label": "Nosnost",
+            "value": "2,5 t"
+          },
+          "drive": {
+            "label": "Pohon",
+            "value": "Ruční"
+          },
+          "lift": {
+            "label": "Zdvih",
+            "value": "Nízkozdvižný"
+          },
+          "forks": {
+            "label": "Vidle",
+            "value": "1150 mm"
+          },
+          "operation": {
+            "label": "Provoz",
+            "value": "Vnitřní / smíšený"
+          },
+          "type": {
+            "label": "Typ",
+            "value": "Ruční paletový vozík"
+          }
         }
       }
     },
@@ -1347,12 +1968,30 @@
           }
         },
         "specs": {
-          "capacity": { "label": "Nosnost", "value": "2,5 – 3,5 t" },
-          "drive": { "label": "Pohon", "value": "Diesel" },
-          "driveType": { "label": "Pohon kol", "value": "4x4" },
-          "tires": { "label": "Pneumatiky", "value": "Terénní" },
-          "operation": { "label": "Provoz", "value": "Venkovní / terén" },
-          "type": { "label": "Typ", "value": "Terénní vozík" }
+          "capacity": {
+            "label": "Nosnost",
+            "value": "2,5 – 3,5 t"
+          },
+          "drive": {
+            "label": "Pohon",
+            "value": "Diesel"
+          },
+          "driveType": {
+            "label": "Pohon kol",
+            "value": "4x4"
+          },
+          "tires": {
+            "label": "Pneumatiky",
+            "value": "Terénní"
+          },
+          "operation": {
+            "label": "Provoz",
+            "value": "Venkovní / terén"
+          },
+          "type": {
+            "label": "Typ",
+            "value": "Terénní vozík"
+          }
         }
       }
     },
@@ -1382,12 +2021,30 @@
           }
         },
         "specs": {
-          "capacity": { "label": "Nosnost", "value": "6,0 t" },
-          "drive": { "label": "Pohon", "value": "Diesel" },
-          "reach": { "label": "Dosah", "value": "Teleskopický" },
-          "lift": { "label": "Zdvih", "value": "Vysoký dosah" },
-          "operation": { "label": "Provoz", "value": "Stavba / zemědělství" },
-          "type": { "label": "Typ", "value": "Teleskopický manipulátor" }
+          "capacity": {
+            "label": "Nosnost",
+            "value": "6,0 t"
+          },
+          "drive": {
+            "label": "Pohon",
+            "value": "Diesel"
+          },
+          "reach": {
+            "label": "Dosah",
+            "value": "Teleskopický"
+          },
+          "lift": {
+            "label": "Zdvih",
+            "value": "Vysoký dosah"
+          },
+          "operation": {
+            "label": "Provoz",
+            "value": "Stavba / zemědělství"
+          },
+          "type": {
+            "label": "Typ",
+            "value": "Teleskopický manipulátor"
+          }
         }
       }
     },
@@ -1417,12 +2074,30 @@
           }
         },
         "specs": {
-          "capacity": { "label": "Nosnost", "value": "1,6 – 2,0 t" },
-          "drive": { "label": "Pohon", "value": "Elektrický" },
-          "lift": { "label": "Zdvih", "value": "Až 13 m" },
-          "battery": { "label": "Baterie", "value": "Li-Ion" },
-          "operation": { "label": "Provoz", "value": "Sklad / úzké uličky" },
-          "type": { "label": "Typ", "value": "Retrak" }
+          "capacity": {
+            "label": "Nosnost",
+            "value": "1,6 – 2,0 t"
+          },
+          "drive": {
+            "label": "Pohon",
+            "value": "Elektrický"
+          },
+          "lift": {
+            "label": "Zdvih",
+            "value": "Až 13 m"
+          },
+          "battery": {
+            "label": "Baterie",
+            "value": "Li-Ion"
+          },
+          "operation": {
+            "label": "Provoz",
+            "value": "Sklad / úzké uličky"
+          },
+          "type": {
+            "label": "Typ",
+            "value": "Retrak"
+          }
         }
       }
     },
@@ -1452,12 +2127,30 @@
           }
         },
         "specs": {
-          "capacity": { "label": "Nosnost", "value": "1,0–2,5 t" },
-          "drive": { "label": "Pohon", "value": "Elektrický" },
-          "lift": { "label": "Zdvih", "value": "Nízko / střední" },
-          "operation": { "label": "Provoz", "value": "Sklad / e-commerce" },
-          "use": { "label": "Použití", "value": "Kompletace" },
-          "type": { "label": "Typ", "value": "Vychystávací vozík" }
+          "capacity": {
+            "label": "Nosnost",
+            "value": "1,0–2,5 t"
+          },
+          "drive": {
+            "label": "Pohon",
+            "value": "Elektrický"
+          },
+          "lift": {
+            "label": "Zdvih",
+            "value": "Nízko / střední"
+          },
+          "operation": {
+            "label": "Provoz",
+            "value": "Sklad / e-commerce"
+          },
+          "use": {
+            "label": "Použití",
+            "value": "Kompletace"
+          },
+          "type": {
+            "label": "Typ",
+            "value": "Vychystávací vozík"
+          }
         }
       }
     },
@@ -1487,12 +2180,30 @@
           }
         },
         "specs": {
-          "height": { "label": "Výška", "value": "6 – 16 m" },
-          "drive": { "label": "Pohon", "value": "Elektrický" },
-          "platform": { "label": "Plošina", "value": "Nůžková" },
-          "operation": { "label": "Provoz", "value": "Vnitřní" },
-          "use": { "label": "Použití", "value": "Údržba / montáž" },
-          "type": { "label": "Typ", "value": "Nůžková plošina" }
+          "height": {
+            "label": "Výška",
+            "value": "6 – 16 m"
+          },
+          "drive": {
+            "label": "Pohon",
+            "value": "Elektrický"
+          },
+          "platform": {
+            "label": "Plošina",
+            "value": "Nůžková"
+          },
+          "operation": {
+            "label": "Provoz",
+            "value": "Vnitřní"
+          },
+          "use": {
+            "label": "Použití",
+            "value": "Údržba / montáž"
+          },
+          "type": {
+            "label": "Typ",
+            "value": "Nůžková plošina"
+          }
         }
       }
     },
@@ -1522,12 +2233,30 @@
           }
         },
         "specs": {
-          "height": { "label": "Výška", "value": "10 m" },
-          "drive": { "label": "Pohon", "value": "Elektrický" },
-          "reach": { "label": "Dosah", "value": "Stožár / výložník" },
-          "operation": { "label": "Provoz", "value": "Vnitřní / smíšený" },
-          "use": { "label": "Použití", "value": "Montáž / údržba" },
-          "type": { "label": "Typ", "value": "Stožárová plošina" }
+          "height": {
+            "label": "Výška",
+            "value": "10 m"
+          },
+          "drive": {
+            "label": "Pohon",
+            "value": "Elektrický"
+          },
+          "reach": {
+            "label": "Dosah",
+            "value": "Stožár / výložník"
+          },
+          "operation": {
+            "label": "Provoz",
+            "value": "Vnitřní / smíšený"
+          },
+          "use": {
+            "label": "Použití",
+            "value": "Montáž / údržba"
+          },
+          "type": {
+            "label": "Typ",
+            "value": "Stožárová plošina"
+          }
         }
       }
     },
@@ -1722,8 +2451,10 @@
     "models": {
       "fe3d": "Kompaktní tříkolový elektrický čelní vozík pro úzké prostory.",
       "fe3d16": "Tříkolový elektrický čelní vozík Série N s nosností 1,6 t.",
+      "fe3d16Highlight": "Li-Ion, volný zdvih, duplex / triplex, LED displej",
       "fe3d18": "Tříkolový elektrický čelní vozík Série N s nosností 1,8 t.",
       "fe3d20": "Tříkolový elektrický čelní vozík Série N s nosností 2,0 t.",
+      "fe3d20Highlight": "Li-Ion, volný zdvih, triplex, fingertip",
       "fe4p": "Čtyřkolový elektrický čelní vozík s vysokou stabilitou a nosností.",
       "fe4p16": "Prémiový čtyřkolový vozík Série P s lithiovou baterií, nosnost 1,6 t.",
       "fe4p18": "Prémiový čtyřkolový vozík Série P s lithiovou baterií, nosnost 1,8 t.",
@@ -1784,90 +2515,470 @@
       "buyNote": "Kliknutím přejdete na oficiální e-shop VZV GROUP (vzv.cz), kde si můžete tento model zakoupit nebo rezervovat ze skladové nabídky.",
       "common": {
         "specs": {
-          "capacity": { "label": "Nosnost" },
-          "weight": { "label": "Vlastní hmotnost vč. baterie" },
-          "liftHeight": { "label": "Zdvih" },
-          "length": { "label": "Celková délka" },
-          "width": { "label": "Celková šířka (rám / pneumatiky)" },
-          "forkSize": { "label": "Rozměry vidlic (d / š / v)" },
-          "forkSpread": { "label": "Šířka vidl. úchytu" },
-          "turningRadius": { "label": "Poloměr otáčení" },
-          "travelSpeed": { "label": "Jízdní rychlost nalož. / bez nákl." },
-          "liftSpeed": { "label": "Zdvihová rychlost nalož. / bez nákl." },
-          "motor": { "label": "Výkon pohonného motoru S2 60 min" },
-          "battery": { "label": "Napětí a kapacita baterie" }
+          "capacity": {
+            "label": "Nosnost"
+          },
+          "weight": {
+            "label": "Vlastní hmotnost vč. baterie"
+          },
+          "liftHeight": {
+            "label": "Zdvih"
+          },
+          "length": {
+            "label": "Celková délka"
+          },
+          "width": {
+            "label": "Celková šířka (rám / pneumatiky)"
+          },
+          "forkSize": {
+            "label": "Rozměry vidlic (d / š / v)"
+          },
+          "forkSpread": {
+            "label": "Šířka vidl. úchytu"
+          },
+          "turningRadius": {
+            "label": "Poloměr otáčení"
+          },
+          "travelSpeed": {
+            "label": "Jízdní rychlost nalož. / bez nákl."
+          },
+          "liftSpeed": {
+            "label": "Zdvihová rychlost nalož. / bez nákl."
+          },
+          "motor": {
+            "label": "Výkon pohonného motoru S2 60 min"
+          },
+          "battery": {
+            "label": "Napětí a kapacita baterie"
+          }
         }
       },
       "fe4d16": {
         "subtitle": "Elektrický čelní vozík Série A, nosnost 1 600 kg",
         "longDesc": "Model FE4D16N patří do řady A — spolehlivého elektrického čelního vozíku Noblelift s lithiovou baterií pro standardní skladové provozy. Nabízí kompaktní rozměry, efektivní AC pohon s regenerativním brzděním a jednoduché ovládání vhodné pro každodenní manipulaci s paletami ve výrobě, distribuci i maloobchodním skladu.",
         "specs": {
-          "capacity": { "value": "1 600 kg" },
-          "weight": { "value": "3 000 kg" },
-          "liftHeight": { "value": "3 000 mm" },
-          "length": { "value": "2 290 mm" },
-          "width": { "value": "1 126 / 1 118 mm" },
-          "forkSize": { "value": "920 × 100 × 35 mm" },
-          "forkSpread": { "value": "1 040 mm" },
-          "turningRadius": { "value": "2 030 mm" },
-          "travelSpeed": { "value": "15 / 15 km/h" },
-          "liftSpeed": { "value": "350 / 430 mm/s" },
-          "motor": { "value": "10 kW" },
-          "battery": { "value": "76,8 V / 150 Ah Li" }
+          "capacity": {
+            "value": "1 600 kg"
+          },
+          "weight": {
+            "value": "3 000 kg"
+          },
+          "liftHeight": {
+            "value": "3 000 mm"
+          },
+          "length": {
+            "value": "2 290 mm"
+          },
+          "width": {
+            "value": "1 126 / 1 118 mm"
+          },
+          "forkSize": {
+            "value": "920 × 100 × 35 mm"
+          },
+          "forkSpread": {
+            "value": "1 040 mm"
+          },
+          "turningRadius": {
+            "value": "2 030 mm"
+          },
+          "travelSpeed": {
+            "value": "15 / 15 km/h"
+          },
+          "liftSpeed": {
+            "value": "350 / 430 mm/s"
+          },
+          "motor": {
+            "value": "10 kW"
+          },
+          "battery": {
+            "value": "76,8 V / 150 Ah Li"
+          }
         }
       },
       "fe4d18": {
         "subtitle": "Elektrický čelní vozík Série A, nosnost 1 800 kg",
         "longDesc": "Model FE4D18N je čtyřkolový elektrický čelní vozík Série A s nosností 1 800 kg. Díky lithiové baterii a AC pohonu zvládne intenzivní provoz ve skladech a výrobních halách. Kompaktní konstrukce umožňuje efektivní manipulaci v omezeném prostoru při zachování vysoké stability a bezpečnosti operátora.",
         "specs": {
-          "capacity": { "value": "1 800 kg" },
-          "weight": { "value": "3 200 kg" },
-          "liftHeight": { "value": "3 000 mm" },
-          "length": { "value": "2 605 mm" },
-          "width": { "value": "1 150 / 1 163 mm" },
-          "forkSize": { "value": "920 × 100 × 35 mm" },
-          "forkSpread": { "value": "1 040 mm" },
-          "turningRadius": { "value": "2 250 mm" },
-          "travelSpeed": { "value": "14,5 / 15 km/h" },
-          "liftSpeed": { "value": "330 / 430 mm/s" },
-          "motor": { "value": "10 kW" },
-          "battery": { "value": "76,8 V / 175 Ah Li" }
+          "capacity": {
+            "value": "1 800 kg"
+          },
+          "weight": {
+            "value": "3 200 kg"
+          },
+          "liftHeight": {
+            "value": "3 000 mm"
+          },
+          "length": {
+            "value": "2 605 mm"
+          },
+          "width": {
+            "value": "1 150 / 1 163 mm"
+          },
+          "forkSize": {
+            "value": "920 × 100 × 35 mm"
+          },
+          "forkSpread": {
+            "value": "1 040 mm"
+          },
+          "turningRadius": {
+            "value": "2 250 mm"
+          },
+          "travelSpeed": {
+            "value": "14,5 / 15 km/h"
+          },
+          "liftSpeed": {
+            "value": "330 / 430 mm/s"
+          },
+          "motor": {
+            "value": "10 kW"
+          },
+          "battery": {
+            "value": "76,8 V / 175 Ah Li"
+          }
         }
       },
       "fe4d20": {
         "subtitle": "Elektrický čelní vozík Série A, nosnost 2 000 kg",
         "longDesc": "Model FE4D20N představuje univerzální elektrický čelní vozík Série A s nosností 2 000 kg. Vhodný pro středně náročné skladové operace, kde je kladen důraz na výkon, spolehlivost a nízké provozní náklady. Lithiová baterie umožňuje rychlé nabíjení a dlouhou životnost bez údržby.",
         "specs": {
-          "capacity": { "value": "2 000 kg" },
-          "weight": { "value": "3 450 kg" },
-          "liftHeight": { "value": "3 000 mm" },
-          "length": { "value": "2 605 mm" },
-          "width": { "value": "1 150 / 1 163 mm" },
-          "forkSize": { "value": "1 070 × 120 × 40 mm" },
-          "forkSpread": { "value": "1 040 mm" },
-          "turningRadius": { "value": "2 250 mm" },
-          "travelSpeed": { "value": "18 / 19 km/h" },
-          "liftSpeed": { "value": "500 / 580 mm/s" },
-          "motor": { "value": "15 kW" },
-          "battery": { "value": "76,8 V / 300 Ah Li" }
+          "capacity": {
+            "value": "2 000 kg"
+          },
+          "weight": {
+            "value": "3 450 kg"
+          },
+          "liftHeight": {
+            "value": "3 000 mm"
+          },
+          "length": {
+            "value": "2 605 mm"
+          },
+          "width": {
+            "value": "1 150 / 1 163 mm"
+          },
+          "forkSize": {
+            "value": "1 070 × 120 × 40 mm"
+          },
+          "forkSpread": {
+            "value": "1 040 mm"
+          },
+          "turningRadius": {
+            "value": "2 250 mm"
+          },
+          "travelSpeed": {
+            "value": "18 / 19 km/h"
+          },
+          "liftSpeed": {
+            "value": "500 / 580 mm/s"
+          },
+          "motor": {
+            "value": "15 kW"
+          },
+          "battery": {
+            "value": "76,8 V / 300 Ah Li"
+          }
         }
       },
       "fe4d25": {
         "subtitle": "Elektrický čelní vozík Série A, nosnost 2 500 kg",
         "longDesc": "Model FE4D25N je nejvýkonnější model Série A v nabídce s nosností 2 500 kg. Určen pro náročnější provozy, kde je potřeba vyšší zdvihová kapacita a stabilita při manipulaci s těžšími paletami. AC pohon, lithiová baterie a robustní konstrukce zajišťují spolehlivý provoz i při celosměnním využití.",
         "specs": {
-          "capacity": { "value": "2 500 kg" },
-          "weight": { "value": "3 750 kg" },
-          "liftHeight": { "value": "3 000 mm" },
-          "length": { "value": "2 770 mm" },
-          "width": { "value": "1 195 / 1 228 mm" },
-          "forkSize": { "value": "1 070 × 122 × 45 mm" },
-          "forkSpread": { "value": "1 100 mm" },
-          "turningRadius": { "value": "2 450 mm" },
-          "travelSpeed": { "value": "19 / 19 km/h" },
-          "liftSpeed": { "value": "530 / 500 mm/s" },
-          "motor": { "value": "15 kW" },
-          "battery": { "value": "76,8 V / 300 Ah Li" }
+          "capacity": {
+            "value": "2 500 kg"
+          },
+          "weight": {
+            "value": "3 750 kg"
+          },
+          "liftHeight": {
+            "value": "3 000 mm"
+          },
+          "length": {
+            "value": "2 770 mm"
+          },
+          "width": {
+            "value": "1 195 / 1 228 mm"
+          },
+          "forkSize": {
+            "value": "1 070 × 122 × 45 mm"
+          },
+          "forkSpread": {
+            "value": "1 100 mm"
+          },
+          "turningRadius": {
+            "value": "2 450 mm"
+          },
+          "travelSpeed": {
+            "value": "19 / 19 km/h"
+          },
+          "liftSpeed": {
+            "value": "530 / 500 mm/s"
+          },
+          "motor": {
+            "value": "15 kW"
+          },
+          "battery": {
+            "value": "76,8 V / 300 Ah Li"
+          }
+        }
+      }
+    },
+    "stackersHandbook": {
+      "overview": {
+        "title": "Ručně vedené vysokozdvižné vozíky",
+        "lead": "Dělíme je na tyto 3 základní série: PSE, SWB a PS.",
+        "pse": {
+          "1": "Cenově dostupné řešení",
+          "2": "Jednoduchý, spolehlivý vozík",
+          "3": "Lehčí provoz, nižší vytížení",
+          "4": "Pro menší a střední sklady",
+          "5": "Nejprodávanější vozík",
+          "title": "PSE = základní, ekonomická řada"
+        },
+        "swb": {
+          "1": "Vyšší výkon a komfort obsluhy",
+          "2": "Robustnější konstrukce",
+          "3": "Intenzivnější provoz",
+          "4": "Li-Ion technologie",
+          "5": "Pro větší sklady a výrobní podniky",
+          "title": "SWB = vyšší modelová řada"
+        },
+        "ps": {
+          "1": "Prémiová řada",
+          "2": "Maximální výkon",
+          "3": "Náročný a vícesměnný provoz",
+          "4": "Pokročilé technologie",
+          "5": "Náročné aplikace a intenzivní stohování",
+          "title": "PS = profesionální modelová řada"
+        }
+      },
+      "pse": {
+        "title": "Řada PSE",
+        "intro": "Řada PSE je určena pro běžné skladové aplikace a představuje cenově dostupné řešení pro zákazníky, kteří hledají jednoduchý, spolehlivý a snadno ovladatelný zakladač. Je vhodná zejména pro každodenní manipulaci s paletami v menších skladech a provozech s nižší až střední intenzitou práce.",
+        "specs": {
+          "models": {
+            "label": "Skladové modely",
+            "value": "PSE 12 ND, PSE 15 L-C"
+          },
+          "capacity": {
+            "label": "Nosnost",
+            "value": "1 200 kg / 1 500 kg"
+          },
+          "lift": {
+            "label": "Výšky zdvihu",
+            "value": "2 900 mm, 3 200 mm (pouze PSE 12 ND), 3 600 mm – pouze STD zvedací zařízení"
+          }
+        },
+        "audience": {
+          "1": "Menší sklady",
+          "2": "Maloobchod",
+          "3": "Servisní firmy",
+          "4": "Výrobní provozy",
+          "5": "Zákazníci pořizující první elektrický zakladač",
+          "title": "Pro koho je určena?"
+        },
+        "advantages": {
+          "1": "Výborný poměr cena / výkon",
+          "2": "Jednoduchá konstrukce",
+          "3": "Snadná obsluha",
+          "4": "Kompaktní rozměry",
+          "5": "Curtis řídicí jednotka",
+          "6": "Dlouhá ergonomická oj",
+          "7": "Nízké servisní náklady",
+          "8": "Nejprodávanější model",
+          "title": "Hlavní přednosti"
+        },
+        "compare": {
+          "title": "Hlavní rozdíly mezi modely PSE 12 ND a PSE 15 L-C",
+          "leftTitle": "PSE 12 ND",
+          "rightTitle": "PSE 15 L-C",
+          "rows": {
+            "1": {
+              "label": "Nosnost",
+              "left": "1 200 kg",
+              "right": "1 500 kg"
+            },
+            "2": {
+              "label": "Baterie",
+              "left": "Li-Ion",
+              "right": "Li-Ion / AGM"
+            },
+            "3": {
+              "label": "Přízdvih",
+              "left": "Ano",
+              "right": "Ne"
+            },
+            "4": {
+              "label": "Cena",
+              "left": "Nízká",
+              "right": "Velmi nízká"
+            }
+          }
+        },
+        "argument": "Pokud zákazník hledá moderní bezúdržbový zakladač s Li-Ion baterií a potřebuje snadno překonávat rampy nebo nerovnosti, doporučte PSE 12 ND. Pokud je prioritou vyšší nosnost a co nejnižší pořizovací cena, vhodnější volbou je PSE 15 L-C."
+      },
+      "swb": {
+        "title": "Řada SWB",
+        "intro": "Řada SWB představuje novou generaci elektrických ručně vedených vysokozdvižných vozíků Noblelift. Byla vyvinuta pro zákazníky, kteří požadují moderní Li-Ion technologii, kompaktní rozměry, vysokou ergonomii a efektivní práci v omezených prostorech. Na rozdíl od základní řady PSE nabízí vyšší komfort obsluhy, modernější konstrukci, pokročilé bezpečnostní funkce a triplexové zvedací zařízení.",
+        "specs": {
+          "models": {
+            "label": "Skladové modely",
+            "value": "SWB 130, SWB 130 D (přízdvih)"
+          },
+          "capacity": {
+            "label": "Nosnost",
+            "value": "1 300 kg"
+          },
+          "lift": {
+            "label": "Výšky zdvihu",
+            "value": "4 200 mm Triplex s volným zdvihem (na objednávku od 2 600–4 300 mm)"
+          }
+        },
+        "audience": {
+          "1": "Logistická centra",
+          "2": "Výrobní podniky",
+          "3": "Maloobchod a supermarkety",
+          "4": "Sklady s omezeným prostorem",
+          "title": "Pro koho je určena?"
+        },
+        "advantages": {
+          "1": "Li-Ion technologie s integrovaným BMS",
+          "2": "Triplexové zvedací zařízení s volným zdvihem – ideální pro nízké sklady",
+          "3": "Kompaktní konstrukce – menší poloměr otáčení",
+          "4": "Nová ergonomická oj řízení, možnost ovládání zdvihu a pojezdu jednou rukou",
+          "5": "PIN pro přihlášení, želví režim, LCD displej",
+          "6": "Bezpečnostní funkce: automatické zpomalení v zatáčkách, nouzové zastavení, elektromagnetická brzda, ochrana proti nechtěnému pohybu",
+          "7": "Robustní konstrukce, snadná údržba",
+          "title": "Hlavní přednosti"
+        },
+        "compare": {
+          "title": "Hlavní rozdíly mezi modely SWB 130 a SWB 130 D",
+          "leftTitle": "SWB 130",
+          "rightTitle": "SWB 130 D",
+          "rows": {
+            "1": {
+              "label": "Přízdvih",
+              "left": "Bez přízdvihu",
+              "right": "S přízdvihem"
+            }
+          }
+        },
+        "initialLift": {
+          "1": "Překonávání nerovností",
+          "2": "Vyšší světlá výška",
+          "3": "Lepší manipulace na rampách",
+          "4": "Manipulace se dvěma paletami – jednu paletu vézt na podpěrných ramenech, druhou na vidlicích",
+          "title": "Jaké jsou výhody přízdvihu?"
+        },
+        "argument": "Řada SWB je moderní Li-Ion zakladač pro zákazníky, kteří chtějí vyšší komfort obsluhy, kompaktní rozměry a efektivní práci v omezených prostorech. Díky Full Free Lift stožáru, ergonomické oji a inteligentním bezpečnostním funkcím je ideální pro každodenní, intenzivní skladovou logistiku. Verze SWB 130 D s přízdvihem navíc zvládne bezpečně překonávat rampy, prahy i nerovné podlahy, čímž výrazně rozšiřuje možnosti využití vozíku."
+      },
+      "ps": {
+        "title": "Řada PS",
+        "intro": "Řada PS představuje profesionální modelovou řadu elektrických zakladačů Noblelift určenou pro intenzivní každodenní provoz. Díky robustní konstrukci, proporcionální hydraulice a použití špičkových komponentů renomovaných výrobců nabízí vysokou produktivitu, přesnou manipulaci a dlouhou životnost.",
+        "specs": {
+          "models": {
+            "label": "Skladové modely",
+            "value": "PS 16 L, PS 16 DL (přízdvih), PS 16 N (plošina), PS 16 DN (přízdvih + plošina), PS 20 L, PS 20 N (plošina)"
+          },
+          "capacity": {
+            "label": "Nosnost",
+            "value": "1 200 – 1 600 – 2 000 kg"
+          },
+          "lift": {
+            "label": "Výšky zdvihu",
+            "value": "4 600 mm, 4 800 mm, 5 500 mm Triplex s VZ (na objednávku od 2 800–5 500 mm)"
+          }
+        },
+        "audience": {
+          "1": "Logistická centra",
+          "2": "Výrobní podniky",
+          "3": "Distribuční sklady",
+          "4": "Vícesměnný provoz",
+          "5": "Zákazníci požadující maximální produktivitu",
+          "title": "Pro koho je určena?"
+        },
+        "advantages": {
+          "1": "Proporcionální hydraulika – plynulé řízení rychlosti zdvihu i spouštění",
+          "2": "Triplexové zvedací zařízení s volným zdvihem – ideální pro nízké sklady",
+          "3": "Robustní konstrukce – určena pro náročný provoz, dlouhá životnost",
+          "4": "Špičkové evropské komponenty: Schabmüller AC trakční motor, ZAPI řídicí jednotka, REMA multifunkční oj, Kordel převodovka, HPI hydraulická jednotka, Wicke hnací kolo, Intorq elektromagnetická brzda",
+          "5": "Variabilní výbava – plošinka řidiče, přízdvih, volný zdvih",
+          "6": "Snadný servis – snadný přístup ke komponentům",
+          "title": "Hlavní přednosti"
+        },
+        "recommend": {
+          "title": "Doporučení modelů",
+          "rows": {
+            "1": {
+              "model": "PS 16 L / PS 20 L",
+              "value": "Profesionální zakladač pro intenzivní skladový provoz"
+            },
+            "2": {
+              "model": "PS 16 DL",
+              "value": "Pokud zákazník často překonává rampy nebo nerovnosti (přízdvih)"
+            },
+            "3": {
+              "model": "PS 16 N / PS 20 N",
+              "value": "Pokud jsou časté delší přejezdy po skladu (plošina)"
+            },
+            "4": {
+              "model": "PS 16 DN",
+              "value": "Pokud zákazník potřebuje přejezdy, rampy i maximální produktivitu (přízdvih + plošina)"
+            }
+          }
+        },
+        "legend": {
+          "1": "L = profesionální ručně vedený zakladač",
+          "2": "DL = profesionální zakladač s přízdvihem",
+          "3": "N = profesionální zakladač se sklopnou plošinkou",
+          "4": "DN = profesionální zakladač se sklopnou plošinkou a přízdvihem",
+          "title": "Označení modelů"
+        },
+        "argument": "Řada PS je určena pro zákazníky, kteří využívají zakladač každý den. Díky proporcionální hydraulice, kvalitním značkovým komponentům a robustní konstrukci nabízí maximální přesnost, vysokou produktivitu a dlouhou životnost. Varianty s přízdvihem usnadňují práci na rampách a nerovných podlahách, zatímco modely se sklopnou plošinkou výrazně zvyšují efektivitu při delších přejezdech ve velkých skladech."
+      },
+      "straddle": {
+        "title": "Obkročné vozíky řada PSE a PS",
+        "intro": "Obkročné vysokozdvižné vozíky jsou určeny pro manipulaci s paletami, u kterých nelze použít klasický zakladač se standardními podpěrnými rameny. Díky nastavitelným obkročným ramenům mohou zvedat širokou škálu typů palet a dalších břemen. Výrobce je označuje jako Straddle Leg Electric Pedestrian Stackers.",
+        "compare": {
+          "title": "Srovnání modelů",
+          "leftTitle": "PSE 12 NSL",
+          "rightTitle": "PS 16–18 TSL",
+          "rows": {
+            "1": {
+              "label": "Nosnost",
+              "left": "1 200 kg",
+              "right": "1 600–1 800 kg"
+            },
+            "2": {
+              "label": "Zdvih",
+              "left": "1 500–3 500 mm",
+              "right": "3 300–5 200 mm"
+            },
+            "3": {
+              "label": "Stožár",
+              "left": "Single / Duplex",
+              "right": "Duplex / Triplex s VZ"
+            },
+            "4": {
+              "label": "Dostupnost",
+              "left": "Skladem – 2 900 mm",
+              "right": "Na objednávku"
+            }
+          }
+        },
+        "audience": {
+          "1": "Nestandardní palety",
+          "2": "Uzavřené palety",
+          "3": "Speciální přepravní boxy",
+          "4": "Kovové kontejnery",
+          "5": "Zákazníci používající různé rozměry palet",
+          "title": "Pro koho jsou určeny?"
+        },
+        "advantages": {
+          "1": "Obkročná konstrukce pro různé rozměry palet",
+          "2": "Možnost nastavení rozteče podpěrných ramen podle typu nákladu",
+          "3": "Li-Ion baterie",
+          "4": "Všechny přednosti stejné jako u specifikací řady PSE a PS",
+          "title": "Hlavní přednosti"
         }
       }
     }

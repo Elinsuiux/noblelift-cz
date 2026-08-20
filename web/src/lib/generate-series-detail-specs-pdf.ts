@@ -111,22 +111,26 @@ function drawSpecsTable(
   startY: number,
   font: PDFFont,
   fontBold: PDFFont,
+  locale: "cz" | "en" = "cz",
 ) {
   const margin = 48;
   const labelColWidth = 180;
   const rowHeight = 28;
   const tableWidth = page.getWidth() - margin * 2;
   const valueColWidth = tableWidth - labelColWidth;
-  const tableTop = startY;
-  const tableBottom = tableTop - rowHeight * (content.specs.length + 1);
 
   drawPdfText(page, content.specsTitle, {
     x: margin,
-    y: tableTop + 24,
-    size: 14,
+    y: startY,
+    size: 13,
     font: fontBold,
     color: TEXT,
   });
+
+  const tableTop = startY - 26;
+  const tableBottom = tableTop - rowHeight * (content.specs.length + 1);
+  const headerLabel = locale === "en" ? "Parameter" : "Parametr";
+  const headerValue = locale === "en" ? "Value" : "Hodnota";
 
   page.drawRectangle({
     x: margin,
@@ -154,8 +158,16 @@ function drawSpecsTable(
     color: BORDER,
   });
 
-  drawPdfText(page, content.specsTitle, {
+  drawPdfText(page, headerLabel, {
     x: margin + 8,
+    y: headerY + 9,
+    size: 8,
+    font: fontBold,
+    color: TEXT,
+  });
+
+  drawPdfText(page, headerValue, {
+    x: margin + labelColWidth + 8,
     y: headerY + 9,
     size: 8,
     font: fontBold,
@@ -199,6 +211,7 @@ function drawDetailPage(
   content: SeriesDetailPdfContent,
   font: PDFFont,
   fontBold: PDFFont,
+  locale: "cz" | "en" = "cz",
 ) {
   const margin = 48;
   let y = page.getHeight() - margin;
@@ -264,11 +277,11 @@ function drawDetailPage(
       maxWidth: page.getWidth() - margin * 2 - 10,
       lineHeight: 12,
     });
-    y -= descLines * 12 + 8;
+    y -= descLines * 12 + 10;
   }
 
-  y -= 6;
-  const tableBottom = drawSpecsTable(page, content, y, font, fontBold);
+  y -= 18;
+  const tableBottom = drawSpecsTable(page, content, y, font, fontBold, locale);
   y = tableBottom - 28;
 
   drawPdfText(page, content.modelsTitle, {
@@ -280,15 +293,18 @@ function drawDetailPage(
   });
   y -= 18;
 
-  drawPdfText(page, content.models.join(", "), {
-    x: margin,
-    y,
-    size: 10,
-    font,
-    color: TEXT,
-    maxWidth: page.getWidth() - margin * 2,
-    lineHeight: 14,
-  });
+  for (const model of content.models) {
+    const modelLines = drawPdfText(page, `- ${model}`, {
+      x: margin,
+      y,
+      size: 10,
+      font,
+      color: TEXT,
+      maxWidth: page.getWidth() - margin * 2,
+      lineHeight: 13,
+    });
+    y -= modelLines * 13 + 4;
+  }
 
   drawPdfText(page, content.distributor, {
     x: margin,
@@ -299,13 +315,16 @@ function drawDetailPage(
   });
 }
 
-export async function generatePdfFromDetailContent(content: SeriesDetailPdfContent) {
+export async function generatePdfFromDetailContent(
+  content: SeriesDetailPdfContent,
+  locale: "cz" | "en" = "cz",
+) {
   const pdf = await PDFDocument.create();
   const font = await pdf.embedFont(StandardFonts.Helvetica);
   const fontBold = await pdf.embedFont(StandardFonts.HelveticaBold);
 
   const page = pdf.addPage(A4_PORTRAIT);
-  drawDetailPage(page, content, font, fontBold);
+  drawDetailPage(page, content, font, fontBold, locale);
 
   return pdf.save();
 }
@@ -314,5 +333,5 @@ export async function generateSeriesDetailSpecsPdf(
   seriesId: SeriesDetailPdfId,
   locale: "cz" | "en" = "cz",
 ) {
-  return generatePdfFromDetailContent(SERIES_DETAIL_PDF_CONTENT[seriesId][locale]);
+  return generatePdfFromDetailContent(SERIES_DETAIL_PDF_CONTENT[seriesId][locale], locale);
 }

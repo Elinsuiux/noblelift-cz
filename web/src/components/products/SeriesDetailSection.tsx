@@ -1,3 +1,6 @@
+"use client";
+
+import Image from "next/image";
 import { useTranslations } from "next-intl";
 import type { ProductSeriesDetail, SeriesFeatureIcon } from "@/lib/products-catalog";
 
@@ -124,6 +127,95 @@ export function SeriesDetailSection({
         ))}
       </div>
 
+      {detail.capacityCompareRows && detail.capacityCompareRows.length > 0 ? (
+        <div className={`overflow-hidden rounded-xl border border-zinc-200 ${embedded ? "mt-6" : "mt-10"}`}>
+          {detail.capacityCompareTitleKey ? (
+            <div className="border-b border-zinc-200 bg-zinc-50 px-5 py-4">
+              <h3 className="text-sm font-extrabold uppercase tracking-wide text-zinc-900">
+                {t(detail.capacityCompareTitleKey)}
+              </h3>
+            </div>
+          ) : null}
+          <div className="overflow-x-auto">
+            <table className="w-full min-w-[640px] border-collapse text-left">
+              <thead>
+                <tr className="border-b border-zinc-200 bg-white">
+                  <th className="w-[28%] px-4 py-3 text-[11px] font-bold uppercase tracking-wider text-zinc-400" />
+                  <th className="w-[36%] border-l border-zinc-200 px-4 py-3">
+                    <div className="flex flex-col items-start gap-3">
+                      {detail.capacityCompareLeftImage ? (
+                        <div className="relative h-28 w-full max-w-[220px]">
+                          <Image
+                            src={detail.capacityCompareLeftImage}
+                            alt={
+                              detail.capacityCompareLeftTitleKey
+                                ? t(detail.capacityCompareLeftTitleKey)
+                                : ""
+                            }
+                            fill
+                            sizes="220px"
+                            className="object-contain object-left"
+                            unoptimized
+                          />
+                        </div>
+                      ) : null}
+                      <span className="inline-flex rounded-full bg-noble-orange/10 px-3 py-1 text-sm font-bold text-noble-orange">
+                        {detail.capacityCompareLeftTitleKey ? t(detail.capacityCompareLeftTitleKey) : null}
+                      </span>
+                    </div>
+                  </th>
+                  <th className="w-[36%] border-l border-zinc-200 px-4 py-3">
+                    <div className="flex flex-col items-start gap-3">
+                      {detail.capacityCompareRightImage ? (
+                        <div className="relative h-28 w-full max-w-[220px]">
+                          <Image
+                            src={detail.capacityCompareRightImage}
+                            alt={
+                              detail.capacityCompareRightTitleKey
+                                ? t(detail.capacityCompareRightTitleKey)
+                                : ""
+                            }
+                            fill
+                            sizes="220px"
+                            className="object-contain object-left"
+                            unoptimized
+                          />
+                        </div>
+                      ) : null}
+                      <span className="inline-flex rounded-full bg-noble-orange/10 px-3 py-1 text-sm font-bold text-noble-orange">
+                        {detail.capacityCompareRightTitleKey
+                          ? t(detail.capacityCompareRightTitleKey)
+                          : null}
+                      </span>
+                    </div>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                {detail.capacityCompareRows.map((row, index) => (
+                  <tr
+                    key={row.labelKey}
+                    className={`border-b border-zinc-200 last:border-b-0 ${
+                      index % 2 === 0 ? "bg-white" : "bg-zinc-50/80"
+                    }`}
+                  >
+                    <th className="px-4 py-3 align-top text-xs font-semibold uppercase tracking-wide text-zinc-500">
+                      {t(row.labelKey)}
+                    </th>
+                    <td className="border-l border-zinc-200 px-4 py-3 align-top text-sm leading-relaxed text-zinc-700">
+                      {t(row.leftKey)}
+                    </td>
+                    <td className="border-l border-zinc-200 px-4 py-3 align-top text-sm leading-relaxed text-zinc-700">
+                      {t(row.rightKey)}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      ) : null}
+
       <div className={`overflow-hidden rounded-xl border border-zinc-200 ${embedded ? "mt-6" : "mt-10"}`}>
         <div className="grid grid-cols-1 divide-y divide-zinc-200 sm:grid-cols-3 sm:divide-x sm:divide-y-0">
           {detail.specKeys.slice(0, 3).map((spec) => (
@@ -142,6 +234,173 @@ export function SeriesDetailSection({
           ))}
         </div>
       </div>
+
+      {(detail.audienceKeys?.length ||
+        detail.recommendWhenKeys?.length ||
+        detail.advantagesLeftKeys?.length ||
+        detail.advantagesRightKeys?.length ||
+        detail.equipmentStandardKey ||
+        detail.equipmentOptionalKey ||
+        detail.equipmentStandardKeys?.length ||
+        detail.equipmentOptionalKeys?.length ||
+        detail.argumentKey) && (
+        <div className={`grid gap-6 ${embedded ? "mt-6" : "mt-10"} lg:grid-cols-2`}>
+          {(detail.advantagesLeftKeys?.length || detail.advantagesRightKeys?.length) && (
+            <>
+              {detail.advantagesLeftKeys && detail.advantagesLeftKeys.length > 0 && (
+                <div className="rounded-xl border border-zinc-200 bg-zinc-50 p-5">
+                  {detail.advantagesLeftTitleKey && (
+                    <h3 className="text-sm font-extrabold uppercase tracking-wide text-zinc-900">
+                      {t(detail.advantagesLeftTitleKey)}
+                    </h3>
+                  )}
+                  <ul className="mt-3 space-y-1.5 text-sm leading-relaxed text-zinc-600">
+                    {detail.advantagesLeftKeys.map((key) => (
+                      <li key={key} className="flex gap-2">
+                        <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-noble-orange" />
+                        <span>{t(key)}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+              {detail.advantagesRightKeys && detail.advantagesRightKeys.length > 0 && (
+                <div className="rounded-xl border border-zinc-200 bg-zinc-50 p-5">
+                  {detail.advantagesRightTitleKey && (
+                    <h3 className="text-sm font-extrabold uppercase tracking-wide text-zinc-900">
+                      {t(detail.advantagesRightTitleKey)}
+                    </h3>
+                  )}
+                  <ul className="mt-3 space-y-1.5 text-sm leading-relaxed text-zinc-600">
+                    {detail.advantagesRightKeys.map((key) => (
+                      <li key={key} className="flex gap-2">
+                        <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-noble-orange" />
+                        <span>{t(key)}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+            </>
+          )}
+
+          {detail.audienceKeys && detail.audienceKeys.length > 0 && (
+            <div className="rounded-xl border border-zinc-200 bg-zinc-50 p-5">
+              {detail.audienceTitleKey && (
+                <h3 className="text-sm font-extrabold uppercase tracking-wide text-zinc-900">
+                  {t(detail.audienceTitleKey)}
+                </h3>
+              )}
+              <ul className="mt-3 space-y-1.5 text-sm leading-relaxed text-zinc-600">
+                {detail.audienceKeys.map((key) => (
+                  <li key={key} className="flex gap-2">
+                    <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-noble-orange" />
+                    <span>{t(key)}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+
+          {(detail.recommendWhenKeys?.length || detail.recommendOtherKeys?.length) && (
+            <div className="rounded-xl border border-zinc-200 bg-zinc-50 p-5">
+              {detail.recommendTitleKey && (
+                <h3 className="text-sm font-extrabold uppercase tracking-wide text-zinc-900">
+                  {t(detail.recommendTitleKey)}
+                </h3>
+              )}
+              {detail.recommendWhenKeys && (
+                <ul className="mt-3 space-y-1.5 text-sm leading-relaxed text-zinc-600">
+                  {detail.recommendWhenKeys.map((key) => (
+                    <li key={key} className="flex gap-2">
+                      <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-noble-orange" />
+                      <span>{t(key)}</span>
+                    </li>
+                  ))}
+                </ul>
+              )}
+              {detail.recommendOtherKeys && detail.recommendOtherKeys.length > 0 && (
+                <>
+                  {detail.recommendOtherTitleKey && (
+                    <h3 className="mt-5 text-sm font-extrabold uppercase tracking-wide text-zinc-900">
+                      {t(detail.recommendOtherTitleKey)}
+                    </h3>
+                  )}
+                  <ul className="mt-3 space-y-1.5 text-sm leading-relaxed text-zinc-600">
+                    {detail.recommendOtherKeys.map((key) => (
+                      <li key={key} className="flex gap-2">
+                        <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-noble-orange" />
+                        <span>{t(key)}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </>
+              )}
+            </div>
+          )}
+
+          {(detail.equipmentStandardKey ||
+            detail.equipmentOptionalKey ||
+            detail.equipmentStandardKeys?.length ||
+            detail.equipmentOptionalKeys?.length) && (
+            <div className="rounded-xl border border-zinc-200 bg-zinc-50 p-5 lg:col-span-2">
+              {detail.equipmentTitleKey && (
+                <h3 className="text-sm font-extrabold uppercase tracking-wide text-zinc-900">
+                  {t(detail.equipmentTitleKey)}
+                </h3>
+              )}
+              {(detail.equipmentStandardKeys?.length || detail.equipmentStandardKey) && (
+                <div className="mt-3">
+                  <p className="text-sm font-semibold text-zinc-800">
+                    {t("productsCatalog.seriesDetail.equipmentStandardLabel")}
+                  </p>
+                  {detail.equipmentStandardKeys?.length ? (
+                    <ul className="mt-2 space-y-1.5 text-sm leading-relaxed text-zinc-600">
+                      {detail.equipmentStandardKeys.map((key) => (
+                        <li key={key} className="flex gap-2">
+                          <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-noble-orange" />
+                          <span>{t(key)}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  ) : (
+                    <p className="mt-1 text-sm leading-relaxed text-zinc-600">
+                      {t(detail.equipmentStandardKey!)}
+                    </p>
+                  )}
+                </div>
+              )}
+              {(detail.equipmentOptionalKeys?.length || detail.equipmentOptionalKey) && (
+                <div className="mt-4">
+                  <p className="text-sm font-semibold text-zinc-800">
+                    {t("productsCatalog.seriesDetail.equipmentOptionalLabel")}
+                  </p>
+                  {detail.equipmentOptionalKeys?.length ? (
+                    <ul className="mt-2 space-y-1.5 text-sm leading-relaxed text-zinc-600">
+                      {detail.equipmentOptionalKeys.map((key) => (
+                        <li key={key} className="flex gap-2">
+                          <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-zinc-400" />
+                          <span>{t(key)}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  ) : (
+                    <p className="mt-1 text-sm leading-relaxed text-zinc-600">
+                      {t(detail.equipmentOptionalKey!)}
+                    </p>
+                  )}
+                </div>
+              )}
+            </div>
+          )}
+
+          {detail.argumentKey && (
+            <blockquote className="rounded-xl border border-noble-orange/25 bg-noble-orange/5 p-5 text-sm leading-relaxed text-zinc-700 lg:col-span-2 md:text-base">
+              {t(detail.argumentKey)}
+            </blockquote>
+          )}
+        </div>
+      )}
     </section>
   );
 }

@@ -32,6 +32,9 @@ export function ProductSeriesPage({
   const categorySlug = getCategorySlug(category, locale);
   const subcategorySlug = getSubcategorySlug(subcategory, locale);
   const galleryImages = getSeriesGallery(series);
+  const showOverviewLayout =
+    Boolean(series.detail) &&
+    (series.products.length <= 1 || Boolean(series.preferOverviewLayout));
 
   return (
     <>
@@ -73,19 +76,7 @@ export function ProductSeriesPage({
           <div className="mx-auto w-full max-w-[1140px] space-y-10">
             {series.detail ? (
               <>
-                {series.products.length > 1 ? (
-                  <div className="grid gap-6 lg:grid-cols-2">
-                    {series.products.map((product) => (
-                      <SeriesModelCard
-                        key={product.id}
-                        product={product}
-                        productLineKey={series.productLineKey}
-                        specsPdfUrl={series.detail!.specsPdfUrl}
-                        specsPdfFilename={series.detail!.specsPdfFilename}
-                      />
-                    ))}
-                  </div>
-                ) : (
+                {showOverviewLayout ? (
                   <div className="grid gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] lg:items-stretch">
                     <ProductModelGallery images={galleryImages} alt={t(series.titleKey)} />
                     <ProductOverviewPanel
@@ -99,6 +90,18 @@ export function ProductSeriesPage({
                       specsPdfUrl={series.detail.specsPdfUrl}
                       specsPdfFilename={series.detail.specsPdfFilename}
                     />
+                  </div>
+                ) : (
+                  <div className="grid gap-6 lg:grid-cols-2">
+                    {series.products.map((product) => (
+                      <SeriesModelCard
+                        key={product.id}
+                        product={product}
+                        productLineKey={series.productLineKey}
+                        specsPdfUrl={series.detail!.specsPdfUrl}
+                        specsPdfFilename={series.detail!.specsPdfFilename}
+                      />
+                    ))}
                   </div>
                 )}
 

@@ -7,9 +7,13 @@ import { Footer } from "@/components/Footer";
 import { HomeImageSlot } from "@/components/HomeImageSlot";
 import {
   ABOUT_GALLERY,
+  BRAND_FACT_KEYS,
+  BRAND_MILESTONE_KEYS,
+  BRAND_TRUST_KEYS,
   PILLAR_KEYS,
   STAT_KEYS,
   STRENGTH_KEYS,
+  type BrandTrustKey,
   type StrengthKey,
 } from "@/lib/about";
 import { SALES_REPS } from "@/lib/contact";
@@ -104,6 +108,64 @@ function ThumbsUpIcon() {
   );
 }
 
+function ClockIcon() {
+  return (
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" aria-hidden>
+      <circle cx="12" cy="12" r="10" />
+      <path d="M12 6v6l4 2" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  );
+}
+
+function BuildingIcon() {
+  return (
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" aria-hidden>
+      <path d="M3 21h18" strokeLinecap="round" />
+      <path d="M5 21V7l7-4 7 4v14" strokeLinejoin="round" />
+      <path d="M9 21v-6h6v6M9 10h.01M15 10h.01M9 14h.01M15 14h.01" strokeLinecap="round" />
+    </svg>
+  );
+}
+
+function LayersIcon() {
+  return (
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" aria-hidden>
+      <path d="m12 2 9 5-9 5-9-5 9-5z" strokeLinejoin="round" />
+      <path d="m3 12 9 5 9-5M3 17l9 5 9-5" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  );
+}
+
+function CogIcon() {
+  return (
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" aria-hidden>
+      <circle cx="12" cy="12" r="3" />
+      <path
+        d="M12 1v2M12 21v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M1 12h2M21 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4"
+        strokeLinecap="round"
+      />
+    </svg>
+  );
+}
+
+function GlobeIcon() {
+  return (
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" aria-hidden>
+      <circle cx="12" cy="12" r="10" />
+      <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  );
+}
+
+function ChartIcon() {
+  return (
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" aria-hidden>
+      <path d="M3 3v18h18" strokeLinecap="round" strokeLinejoin="round" />
+      <path d="M7 14l4-4 4 3 5-6" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  );
+}
+
 const STRENGTH_ICONS: Record<StrengthKey, () => React.JSX.Element> = {
   warehouse: WarehouseIcon,
   trust: WarrantyIcon,
@@ -111,6 +173,16 @@ const STRENGTH_ICONS: Record<StrengthKey, () => React.JSX.Element> = {
   rental: ThumbsUpIcon,
   delivery: TruckIcon,
   consulting: HeadsetIcon,
+};
+
+const BRAND_TRUST_ICONS: Record<BrandTrustKey, () => React.JSX.Element> = {
+  experience: ClockIcon,
+  scale: BuildingIcon,
+  portfolio: LayersIcon,
+  ownRd: CogIcon,
+  quality: WarrantyIcon,
+  global: GlobeIcon,
+  listed: ChartIcon,
 };
 
 function StrengthCard({ cardKey }: { cardKey: StrengthKey }) {
@@ -177,6 +249,121 @@ export function AboutPage() {
                   {t("intro.cta")}
                 </BtnPrimary>
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Brand story from handbook */}
+        <section className="bg-[#f5f5f5] px-6 py-20">
+          <div className="mx-auto w-full max-w-[1140px]">
+            <SectionTitle>{t("brand.title")}</SectionTitle>
+            <p className="mx-auto mt-5 max-w-3xl text-center text-base leading-relaxed text-zinc-600 md:text-lg">
+              {t("brand.lead")}
+            </p>
+            <p className="mx-auto mt-4 max-w-3xl text-center text-base leading-relaxed text-zinc-600">
+              {t("brand.p1")}
+            </p>
+            <p className="mx-auto mt-4 max-w-3xl text-center text-base leading-relaxed text-zinc-600">
+              {t("brand.p2")}
+            </p>
+
+            <div className="mt-10 overflow-hidden rounded-2xl shadow-lg">
+              <HomeImageSlot
+                src="/images/about/changxing-hq.jpg"
+                alt={t("media.brandHqAlt")}
+                hint={t("media.brandHqHint")}
+                className="aspect-[2/1] w-full"
+                imageClassName="object-cover object-center"
+                sizes="(max-width: 1140px) 100vw, 1140px"
+                unoptimized
+              />
+              <p className="bg-white px-4 py-3 text-center text-sm font-medium text-zinc-600">
+                {t("media.brandHqCaption")}
+              </p>
+            </div>
+
+            <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+              {BRAND_FACT_KEYS.map((key) => (
+                <div
+                  key={key}
+                  className="rounded-2xl border border-zinc-100 bg-white px-5 py-6 text-center shadow-sm"
+                >
+                  <div className="text-3xl font-extrabold text-noble-orange">
+                    {t(`brand.facts.${key}.value`)}
+                  </div>
+                  <div className="mt-2 text-sm font-medium uppercase tracking-wide text-zinc-500">
+                    {t(`brand.facts.${key}.label`)}
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <h3 className="mt-16 text-center text-xl font-extrabold uppercase tracking-wide text-zinc-900">
+              {t("brand.milestones.title")}
+            </h3>
+            <div className="mx-auto mt-3 h-1 w-12 rounded-full bg-noble-orange" />
+            <ol className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              {BRAND_MILESTONE_KEYS.map((key) => (
+                <li
+                  key={key}
+                  className="rounded-2xl border border-zinc-100 bg-white p-5 shadow-sm"
+                >
+                  <div className="text-sm font-extrabold text-noble-orange">
+                    {t(`brand.milestones.items.${key}.year`)}
+                  </div>
+                  <h4 className="mt-2 text-sm font-bold uppercase tracking-wide text-zinc-900">
+                    {t(`brand.milestones.items.${key}.title`)}
+                  </h4>
+                  <p className="mt-2 text-sm leading-relaxed text-zinc-600">
+                    {t(`brand.milestones.items.${key}.desc`)}
+                  </p>
+                </li>
+              ))}
+            </ol>
+
+            <h3 className="mt-16 text-center text-xl font-extrabold uppercase tracking-wide text-zinc-900">
+              {t("brand.trust.title")}
+            </h3>
+            <div className="mx-auto mt-3 h-1 w-12 rounded-full bg-noble-orange" />
+            <p className="mx-auto mt-5 max-w-2xl text-center text-base leading-relaxed text-zinc-600">
+              {t("brand.trust.lead")}
+            </p>
+            <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+              {BRAND_TRUST_KEYS.map((key) => {
+                const Icon = BRAND_TRUST_ICONS[key];
+                return (
+                  <article
+                    key={key}
+                    className="rounded-2xl border border-zinc-100 bg-white p-5 shadow-sm"
+                  >
+                    <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-noble-orange/10 text-noble-orange">
+                      <Icon />
+                    </div>
+                    <h4 className="mt-4 text-sm font-extrabold uppercase tracking-wide text-zinc-900">
+                      {t(`brand.trust.items.${key}.title`)}
+                    </h4>
+                    <p className="mt-2 text-sm leading-relaxed text-zinc-600">
+                      {t(`brand.trust.items.${key}.desc`)}
+                    </p>
+                  </article>
+                );
+              })}
+              <Link
+                href="/products"
+                className="flex h-full flex-col justify-between rounded-2xl border-2 border-noble-orange/30 bg-noble-orange p-5 text-white shadow-sm transition hover:bg-noble-orange-dark"
+              >
+                <div>
+                  <h4 className="text-sm font-extrabold uppercase tracking-wide">
+                    {t("brand.trust.ctaTitle")}
+                  </h4>
+                  <p className="mt-2 text-sm leading-relaxed text-white/90">
+                    {t("brand.trust.ctaDesc")}
+                  </p>
+                </div>
+                <span className="mt-4 text-sm font-bold">
+                  {t("brand.trust.ctaLabel")} →
+                </span>
+              </Link>
             </div>
           </div>
         </section>

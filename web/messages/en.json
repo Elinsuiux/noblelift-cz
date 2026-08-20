@@ -44,16 +44,34 @@
   },
   "why": {
     "title": "Why choose Noblelift from VZV GROUP?",
-    "lead": "As the exclusive importer for CZ and SK, we offer complete support – from equipment selection and delivery to service and spare parts.",
+    "lead": "Noblelift is a global material handling manufacturer with nearly 30 years of experience, in-house production and a complete portfolio. As the exclusive importer for CZ and SK, we add local support – from equipment selection and delivery to service and spare parts.",
+    "brandFacts": {
+      "experience": {
+        "value": "30+",
+        "label": "years of experience"
+      },
+      "people": {
+        "value": "5,000+",
+        "label": "employees"
+      },
+      "plants": {
+        "value": "4",
+        "label": "manufacturing countries"
+      },
+      "listed": {
+        "value": "2015",
+        "label": "stock exchange listing"
+      }
+    },
     "learnMore": "Learn more +",
     "steps": {
       "1": {
-        "title": "Global brand with proven quality",
-        "desc": "Noblelift is among the world's leading manufacturers of material handling equipment with modern R&D and production."
+        "title": "Global manufacturer with own production",
+        "desc": "Noblelift has manufactured material handling equipment since 1996, with own R&D, modern production and plants in China, Vietnam, Malaysia and France."
       },
       "2": {
-        "title": "Wide equipment portfolio",
-        "desc": "Counterbalanced forklifts, stackers, pallet trucks, reach trucks, rough terrain machines and work platforms."
+        "title": "Complete equipment portfolio",
+        "desc": "From manual and electric warehouse trucks to electric counterbalance forklifts, reach trucks, platforms and intralogistics solutions."
       },
       "3": {
         "title": "Expert consulting",
@@ -383,6 +401,102 @@
       "p2": "We also take full regional responsibility for sales and service of Noblelift machines in the Czech Republic and Slovakia.",
       "cta": "Choose your equipment"
     },
+    "brand": {
+      "title": "Who is Noblelift",
+      "lead": "Noblelift is a major global manufacturer of material handling equipment focused on material handling and intralogistics.",
+      "p1": "The company was founded in 2000 in Changxing, China. Today it operates plants in China, Vietnam, Malaysia and France and employs more than 5,000 people worldwide.",
+      "p2": "It started with manual pallet trucks and gradually built a complete portfolio — from manual and electric warehouse equipment to electric counterbalance forklifts and reach trucks, work platforms and automated logistics solutions.",
+      "facts": {
+        "experience": {
+          "value": "30+",
+          "label": "years of experience"
+        },
+        "people": {
+          "value": "5,000+",
+          "label": "employees"
+        },
+        "plants": {
+          "value": "4",
+          "label": "manufacturing countries"
+        },
+        "listed": {
+          "value": "2015",
+          "label": "stock exchange listing"
+        }
+      },
+      "milestones": {
+        "title": "History and growth",
+        "items": {
+          "1996": {
+            "year": "1996",
+            "title": "Production begins",
+            "desc": "Noblelift starts manufacturing manual pallet trucks."
+          },
+          "2000": {
+            "year": "2000",
+            "title": "Company founded",
+            "desc": "NOBLELIFT is established in Changxing and expands production capacity."
+          },
+          "2004": {
+            "year": "2004",
+            "title": "Electric warehouse equipment",
+            "desc": "The portfolio expands with electric pallet trucks and stackers."
+          },
+          "2012": {
+            "year": "2012",
+            "title": "Counterbalance forklifts and reach trucks",
+            "desc": "Entry into electric counterbalance forklifts and reach trucks."
+          },
+          "2015": {
+            "year": "2015",
+            "title": "Stock exchange listing",
+            "desc": "Noblelift becomes a publicly traded company on the Shanghai Stock Exchange."
+          },
+          "today": {
+            "year": "Today",
+            "title": "Complete portfolio",
+            "desc": "A global manufacturer from manual trucks to counterbalance forklifts, reach trucks, platforms and automation."
+          }
+        }
+      },
+      "trust": {
+        "title": "Why trust the Noblelift brand",
+        "lead": "Behind every product stands own R&D, modern manufacturing, quality control and long experience — not just a low price.",
+        "items": {
+          "experience": {
+            "title": "Nearly 30 years of experience",
+            "desc": "Manufacturing material handling equipment since 1996."
+          },
+          "scale": {
+            "title": "Large international manufacturer",
+            "desc": "More than 5,000 employees and plants in several countries."
+          },
+          "portfolio": {
+            "title": "Complete portfolio",
+            "desc": "From manual pallet trucks to counterbalance forklifts, reach trucks, platforms and automation."
+          },
+          "ownRd": {
+            "title": "Own R&D and production",
+            "desc": "In-house engineering, development and manufacturing of selected key components."
+          },
+          "quality": {
+            "title": "Manufacturing quality",
+            "desc": "Modern technology, systematic quality control and testing of components and finished trucks."
+          },
+          "global": {
+            "title": "Global reach",
+            "desc": "Products are delivered to customers worldwide."
+          },
+          "listed": {
+            "title": "Publicly traded company",
+            "desc": "Listed on the Shanghai Stock Exchange since 2015."
+          }
+        },
+        "ctaTitle": "Choose your equipment",
+        "ctaDesc": "Browse the full Noblelift catalogue and find the right solution for your operation.",
+        "ctaLabel": "Go to catalogue"
+      }
+    },
     "commitment": {
       "heading": "Our commitment",
       "pillarsLabel": "We build on three pillars",
@@ -488,7 +602,10 @@
       "introAccentAlt": "Noblelift sales representative",
       "introAccentHint": "Representative photo",
       "commitmentAlt": "Noblelift warehouse equipment on racks at VZV GROUP",
-      "commitmentHint": "Warehouse photo with pallet trucks"
+      "commitmentHint": "Warehouse photo with pallet trucks",
+      "brandHqAlt": "Noblelift main manufacturing plant in Changxing, China",
+      "brandHqHint": "Aerial photo of the Noblelift plant",
+      "brandHqCaption": "Noblelift main manufacturing plant — Changxing, China"
     }
   },
   "legalPrivacy": {
@@ -718,6 +835,19 @@
       "home": "Home",
       "products": "Products"
     },
+    "seriesDetail": {
+      "equipmentStandardLabel": "Standard equipment:",
+      "equipmentOptionalLabel": "Optional equipment:"
+    },
+    "lightbox": {
+      "open": "Enlarge photo",
+      "close": "Close",
+      "zoomIn": "Zoom in",
+      "zoomOut": "Zoom out",
+      "resetZoom": "Reset zoom",
+      "prev": "Previous photo",
+      "next": "Next photo"
+    },
     "hub": {
       "titlePrefix": "Noblelift",
       "titleBrand": "equipment",
@@ -793,12 +923,30 @@
             }
           },
           "specs": {
-            "capacity": { "label": "Capacity", "value": "1.3 - 2 t" },
-            "drive": { "label": "Drive", "value": "Electric" },
-            "lift": { "label": "Max. lift", "value": "up to 3,500 mm" },
-            "battery": { "label": "Battery", "value": "24 V" },
-            "operation": { "label": "Application", "value": "Indoor" },
-            "type": { "label": "Type", "value": "Without initial lift" }
+            "capacity": {
+              "label": "Capacity",
+              "value": "1.3 - 2 t"
+            },
+            "drive": {
+              "label": "Drive",
+              "value": "Electric"
+            },
+            "lift": {
+              "label": "Max. lift",
+              "value": "up to 3,500 mm"
+            },
+            "battery": {
+              "label": "Battery",
+              "value": "24 V"
+            },
+            "operation": {
+              "label": "Application",
+              "value": "Indoor"
+            },
+            "type": {
+              "label": "Type",
+              "value": "Without initial lift"
+            }
           }
         }
       },
@@ -837,12 +985,30 @@
             }
           },
           "specs": {
-            "capacity": { "label": "Capacity", "value": "1.2 - 1.6 t" },
-            "drive": { "label": "Drive", "value": "Electric" },
-            "lift": { "label": "Max. lift", "value": "up to 4,500 mm" },
-            "battery": { "label": "Battery", "value": "24 V" },
-            "operation": { "label": "Application", "value": "Indoor" },
-            "type": { "label": "Type", "value": "With initial lift" }
+            "capacity": {
+              "label": "Capacity",
+              "value": "1.2 - 1.6 t"
+            },
+            "drive": {
+              "label": "Drive",
+              "value": "Electric"
+            },
+            "lift": {
+              "label": "Max. lift",
+              "value": "up to 4,500 mm"
+            },
+            "battery": {
+              "label": "Battery",
+              "value": "24 V"
+            },
+            "operation": {
+              "label": "Application",
+              "value": "Indoor"
+            },
+            "type": {
+              "label": "Type",
+              "value": "With initial lift"
+            }
           }
         }
       }
@@ -883,12 +1049,30 @@
             }
           },
           "specs": {
-            "capacity": { "label": "Capacity", "value": "1.6 - 2 t" },
-            "drive": { "label": "Drive", "value": "Electric" },
-            "lift": { "label": "Max. lift", "value": "up to 4,500 mm" },
-            "battery": { "label": "Battery", "value": "24 V" },
-            "operation": { "label": "Application", "value": "Indoor" },
-            "type": { "label": "Type", "value": "With platform, without initial lift" }
+            "capacity": {
+              "label": "Capacity",
+              "value": "1.6 - 2 t"
+            },
+            "drive": {
+              "label": "Drive",
+              "value": "Electric"
+            },
+            "lift": {
+              "label": "Max. lift",
+              "value": "up to 4,500 mm"
+            },
+            "battery": {
+              "label": "Battery",
+              "value": "24 V"
+            },
+            "operation": {
+              "label": "Application",
+              "value": "Indoor"
+            },
+            "type": {
+              "label": "Type",
+              "value": "With platform, without initial lift"
+            }
           }
         }
       },
@@ -927,12 +1111,30 @@
             }
           },
           "specs": {
-            "capacity": { "label": "Capacity", "value": "1.6 t" },
-            "drive": { "label": "Drive", "value": "Electric" },
-            "lift": { "label": "Max. lift", "value": "up to 5,000 mm" },
-            "battery": { "label": "Battery", "value": "24 V" },
-            "operation": { "label": "Application", "value": "Indoor" },
-            "type": { "label": "Type", "value": "With platform and initial lift" }
+            "capacity": {
+              "label": "Capacity",
+              "value": "1.6 t"
+            },
+            "drive": {
+              "label": "Drive",
+              "value": "Electric"
+            },
+            "lift": {
+              "label": "Max. lift",
+              "value": "up to 5,000 mm"
+            },
+            "battery": {
+              "label": "Battery",
+              "value": "24 V"
+            },
+            "operation": {
+              "label": "Application",
+              "value": "Indoor"
+            },
+            "type": {
+              "label": "Type",
+              "value": "With platform and initial lift"
+            }
           }
         }
       }
@@ -946,194 +1148,407 @@
         "badge": "Series A",
         "title": "Basic model",
         "subtitle": "Standard range",
-        "capacity": "1.5 – 3.8 t",
-        "modelRange": "CPD15~38",
-        "productLine": "Series A lithium forklifts",
-        "desc": "Reliable electric counterbalance trucks for standard warehouse operations. Balanced price and performance.",
+        "capacity": "1.8 – 3.8 t",
+        "modelRange": "CPD 18~38 A2",
+        "productLine": "Series A — four-wheel electric A2 trucks",
+        "desc": "Modern four-wheel electric counterbalance trucks with an excellent price-to-performance ratio — Noblelift’s most universal and best-selling electric forklift range.",
         "uses": {
-          "1": "Distribution and logistics centre",
-          "2": "Production hall and assembly",
-          "3": "Retail warehouse"
+          "1": "Truck loading and unloading",
+          "2": "Warehouse handling",
+          "3": "Production supply"
         },
         "detail": {
           "title": "Noblelift Series A — detailed overview",
-          "intro": "Series A is Noblelift's entry-level electric counterbalance forklift designed for everyday warehouse operations. It offers an excellent price-to-performance ratio with long battery life and simple controls. Ideal for operators without extensive material handling experience.",
+          "intro": "The A2 range offers modern four-wheel electric counterbalance trucks for a wide range of applications. Combining performance, reliability, comfort and an attractive purchase price, it is Noblelift’s most universal and best-selling electric forklift series.",
           "features": {
             "1": {
-              "title": "Efficient AC drive",
-              "desc": "Asynchronous AC motor with regenerative braking for maximum battery endurance"
+              "title": "Universal use",
+              "desc": "Truck loading and unloading, warehouse handling and production supply — indoors and on outdoor surfaces"
             },
             "2": {
-              "title": "Long battery runtime",
-              "desc": "Standard lead-acid or optional lithium battery for full-shift operation"
+              "title": "Lithium-ion drive",
+              "desc": "Fast charging, opportunity charging during the shift, maintenance-free operation and low running costs"
             },
             "3": {
-              "title": "Safety systems",
-              "desc": "Operator presence system (OPS), automatic lift lockout"
+              "title": "Robust design",
+              "desc": "Chassis and undercarriage comparable with IC trucks, load centre raised to 600 mm"
             },
             "4": {
-              "title": "Easy maintenance",
-              "desc": "Tool-free access to components, low operating costs"
+              "title": "Operator comfort",
+              "desc": "Ergonomic driver’s workplace with quiet, eco-friendly operation"
             }
           },
           "specs": {
             "capacity": {
               "label": "Capacity",
-              "value": "1.5 – 3.8 t"
+              "value": "1.8 – 2.0 – 2.5 – 3.0 – 3.5 – 3.8 t"
             },
-            "drive": {
-              "label": "Drive",
-              "value": "Electric AC"
-            },
-            "tires": {
-              "label": "Tyres",
-              "value": "Cushion / Super elastic"
+            "models": {
+              "label": "Models",
+              "value": "CPD 18 / 25 / 30 / 35 / 38 A2"
             },
             "battery": {
               "label": "Battery",
-              "value": "48 V / Lithium"
+              "value": "Li-Ion"
             },
             "lift": {
-              "label": "Max. lift",
-              "value": "up to 7,000 mm"
+              "label": "Lift height",
+              "value": "2,000–7,000 mm"
+            },
+            "drive": {
+              "label": "Motor",
+              "value": "Permanent magnet"
             },
             "operation": {
               "label": "Application",
-              "value": "Indoor"
+              "value": "Indoor / outdoor"
             }
-          }
+          },
+          "audience": {
+            "title": "Who the A2 range is for",
+            "items": {
+              "1": "Manufacturing plants",
+              "2": "Logistics centres",
+              "3": "Wholesale operations",
+              "4": "Distribution warehouses",
+              "5": "Single-shift operations",
+              "6": "Customers looking for a universal electric truck at a fair price"
+            }
+          },
+          "recommend": {
+            "whenTitle": "When we recommend the A2 range",
+            "when": {
+              "1": "You need a universal electric forklift",
+              "2": "Work takes place indoors and outdoors",
+              "3": "Capacities roughly from 1.8 to 3.8 t",
+              "4": "Price / performance matters",
+              "5": "Normal to medium-intensity duty"
+            },
+            "otherTitle": "When to recommend another series",
+            "other": {
+              "1": "N1 — when maximum manoeuvrability in narrow spaces is the priority",
+              "2": "P — for multi-shift or very intensive duty needing higher performance or premium equipment"
+            }
+          },
+          "equipment": {
+            "title": "Equipment",
+            "standard": "Integrated charger, battery pre-heating, BP, Blue Spot, comfort seat, USB port, LED lighting, colour display, rear handle with horn, hydraulic levers, 4-section valve, non-marking SE tyres, OPS (operator presence system), cup holder, panoramic mirror.",
+            "optional": "Cabin with heater, air conditioning, HSV, more powerful external charger."
+          },
+          "argument": "If you need a reliable everyday electric forklift with modern technology, high comfort and an excellent price-to-performance ratio, the A2 range is the right choice."
         }
       },
       "serieP": {
         "badge": "Series P",
         "title": "Premium",
         "subtitle": "Lithium technology",
-        "capacity": "3.0 - 3.8 t",
-        "modelRange": "FEP 30 - 38 P",
-        "productLine": "Premium Li-Ion range for demanding multi-shift operation with zero emissions.",
-        "desc": "Premium Li-Ion range for demanding multi-shift operation with zero emissions.",
+        "capacity": "2.5 – 3.8 t",
+        "modelRange": "FEP 25~38 P",
+        "productLine": "Series P — premium four-wheel electric trucks",
+        "desc": "Premium four-wheel electric forklifts for maximum productivity, high operator comfort and modern technology.",
         "uses": {
           "1": "Multi-shift operation",
-          "2": "Cold stores",
-          "3": "Food industry"
+          "2": "Intensive load handling",
+          "3": "Logistics centres and production"
         },
         "detail": {
-          "title": "Noblelift Series P — Premium",
-          "intro": "Series P delivers the highest equipment level among Noblelift electric counterbalance forklifts. LCD display, suspension seat, 4-way hydraulics and native lithium battery support for fast opportunity charging without battery swapping.",
+          "title": "Noblelift Series P — detailed overview",
+          "intro": "Series P is Noblelift’s premium four-wheel electric counterbalance range. It is built for customers who need maximum productivity, high operator comfort and modern technology.",
           "features": {
             "1": {
-              "title": "LCD display",
-              "desc": "Large frame LCD display in the operator's field of vision for improved safety"
+              "title": "Joystick controls",
+              "desc": "Electro-hydraulic fingertip control — smoother hydraulics, higher precision and faster fork lift/lower"
             },
             "2": {
-              "title": "Native lithium",
-              "desc": "Designed for lithium batteries — fast charging during operation"
+              "title": "Li-Ion and high performance",
+              "desc": "Modern Li-Ion technology and permanent-magnet motor — performance comparable with IC trucks"
             },
             "3": {
-              "title": "Ergonomic cabin",
-              "desc": "Spacious cabin with deluxe suspension seat, adjustable for all operator sizes"
+              "title": "Operator comfort",
+              "desc": "More spacious workplace, intuitive controls, easier entry and better visibility from the truck"
             },
             "4": {
-              "title": "4-way hydraulics",
-              "desc": "Integrated sideshift for precise handling without repositioning"
+              "title": "Energy recovery",
+              "desc": "Lower running and service costs thanks to energy recovery and maintenance-free Li-Ion technology"
             }
           },
           "specs": {
-            "capacity": { "label": "Capacity", "value": "3.0 - 3.8 t" },
-            "drive": { "label": "Drive", "value": "Electric AC" },
-            "battery": { "label": "Battery", "value": "48–80 V Li" },
-            "lift": { "label": "Max. lift", "value": "up to 7,500 mm" },
-            "display": { "label": "Display", "value": "Frame LCD" },
-            "operation": { "label": "Application", "value": "Indoor / mixed" }
-          }
+            "capacity": {
+              "label": "Capacity",
+              "value": "2.5 – 3.0 – 3.5 – 3.8 t"
+            },
+            "models": {
+              "label": "Models",
+              "value": "FEP 25 / 30 / 35 / 38 P"
+            },
+            "battery": {
+              "label": "Battery",
+              "value": "Li-Ion"
+            },
+            "lift": {
+              "label": "Lift height",
+              "value": "2,000–7,000 mm (3.8 t up to 6,000 mm)"
+            },
+            "control": {
+              "label": "Controls",
+              "value": "Fingertip (joystick)"
+            },
+            "operation": {
+              "label": "Application",
+              "value": "Intensive / multi-shift"
+            }
+          },
+          "audience": {
+            "title": "Who the P range is for",
+            "items": {
+              "1": "Logistics centres",
+              "2": "Manufacturing plants",
+              "3": "Multi-shift operations",
+              "4": "Intensive load handling",
+              "5": "Customers needing maximum operator comfort",
+              "6": "Companies looking for a premium electric truck"
+            }
+          },
+          "recommend": {
+            "whenTitle": "When we recommend the P range",
+            "when": {
+              "1": "Intensive everyday duty",
+              "2": "Two- or three-shift work with frequent load handling",
+              "3": "You need maximum operator comfort",
+              "4": "You need speed and precision in lift control",
+              "5": "Productivity is a priority"
+            },
+            "otherTitle": "When to recommend another series",
+            "other": {
+              "1": "N1 — when compactness and manoeuvrability are the priority",
+              "2": "A2 — when you need a universal truck with an excellent price-to-performance ratio"
+            }
+          },
+          "equipment": {
+            "title": "Equipment",
+            "standard": "Integrated charger, battery pre-heating, BP, Blue Spot, comfort seat, USB port, LED lighting, colour display, rear handle with horn, fingertip (joystick), 4-section valve, non-marking SE tyres, OPS (operator presence system), cup holder, panoramic mirror, automatic curve speed reduction.",
+            "optional": "Cabin with heater, air conditioning, HSV, more powerful external charger."
+          },
+          "argument": "Series P is for customers who want the most from their truck. Joystick hydraulics, higher operator comfort and modern technology enable faster, more precise and more comfortable load handling. In intensive duty, the higher productivity and comfort quickly show in everyday operation."
         }
       },
       "serieN": {
         "badge": "Series N",
         "title": "Three-wheel",
         "subtitle": "Narrow aisle",
-        "capacity": "1.2 – 2.0 t",
-        "modelRange": "FE3R 12 E, FE3D 16 N1, FE3D 20 N1",
-        "productLine": "Three-wheel trucks with excellent manoeuvrability for narrow aisles and tight spaces.",
-        "desc": "Three-wheel trucks with excellent manoeuvrability for narrow aisles and tight spaces.",
+        "capacity": "1.6 – 2.0 t",
+        "modelRange": "FE3D16N1, FE3D18N1, FE3D20N1",
+        "productLine": "Compact three-wheel electric N1 trucks for indoor work and tight spaces.",
+        "desc": "Compact three-wheel electric N1 trucks for indoor work and tight spaces.",
         "uses": {
           "1": "Narrow aisles",
-          "2": "Compact warehouses",
-          "3": "Fast manoeuvring"
+          "2": "Warehouses and logistics",
+          "3": "Loading and unloading"
         },
         "detail": {
-          "title": "Noblelift Series N — three-wheel trucks",
-          "intro": "Series N three-wheel trucks are built for narrow-aisle operation. Rear-wheel drive enables turning on the spot and passage through aisles from 2.8 m wide. Optional cushion or super-elastic tyres for different floor types.",
+          "title": "Noblelift Series N — three-wheel N1 trucks",
+          "intro": "The N1 range offers compact three-wheel electric counterbalance forklifts designed primarily for indoor use. The three-wheel design delivers exceptional manoeuvrability even in very confined spaces. A small turning radius enables work in narrow aisles and efficient turning between racks.",
           "features": {
             "1": {
-              "title": "Compact dimensions",
-              "desc": "Minimum turning radius for manoeuvring in tight spaces"
+              "title": "Maximum manoeuvrability",
+              "desc": "Compact dimensions and a small turning radius for narrow-aisle manoeuvring"
             },
             "2": {
-              "title": "Rear-wheel drive",
-              "desc": "Rear axle drive ensures stability even when carrying loads"
+              "title": "Dual powered front wheels",
+              "desc": "High performance, quiet operation and excellent handling"
             },
             "3": {
-              "title": "Lithium option",
-              "desc": "Available with lithium battery for food industry and cold storage"
+              "title": "80V Li-Ion battery",
+              "desc": "Maintenance-free battery with long life, zero local emissions and low operating costs"
             },
             "4": {
-              "title": "Tyre choice",
-              "desc": "Cushion, super-elastic or polyurethane for different floor types"
+              "title": "Operator comfort",
+              "desc": "Ergonomic workplace suited to halls and everyday indoor operation"
             }
           },
           "specs": {
-            "capacity": { "label": "Capacity", "value": "1.2–2.0 t" },
-            "axles": { "label": "Axles", "value": "3 (rear drive)" },
-            "battery": { "label": "Battery", "value": "24–48 V Li" },
-            "aisle": { "label": "Min. aisle", "value": "from 2,800 mm" },
-            "lift": { "label": "Max. lift", "value": "up to 6,000 mm" },
-            "operation": { "label": "Application", "value": "Indoor" }
-          }
+            "capacity": {
+              "label": "Capacity",
+              "value": "1.6–1.8–2.0 t"
+            },
+            "wheels": {
+              "label": "Design",
+              "value": "Three-wheel"
+            },
+            "battery": {
+              "label": "Battery",
+              "value": "80 V Li-Ion"
+            },
+            "models": {
+              "label": "Models",
+              "value": "FE3D16N1 / FE3D18N1 / FE3D20N1"
+            },
+            "lift": {
+              "label": "Lift height",
+              "value": "2,500–6,500 mm"
+            },
+            "operation": {
+              "label": "Application",
+              "value": "Indoor"
+            }
+          },
+          "audience": {
+            "title": "Who the N1 range is for",
+            "items": {
+              "1": "Manufacturing plants",
+              "2": "Logistics centres",
+              "3": "Warehouses with narrow aisles",
+              "4": "Truck loading and unloading",
+              "5": "Operations with frequent turning"
+            }
+          },
+          "recommend": {
+            "whenTitle": "When we recommend the N1 range",
+            "when": {
+              "1": "You mostly work indoors",
+              "2": "You need maximum manoeuvrability",
+              "3": "You work in narrow aisles",
+              "4": "Capacity up to 2 tonnes",
+              "5": "You are looking for a compact electric truck"
+            },
+            "otherTitle": "When we recommend another range",
+            "other": {
+              "1": "Frequent outdoor use",
+              "2": "Higher capacities",
+              "3": "Uneven surfaces"
+            }
+          },
+          "equipment": {
+            "title": "Equipment",
+            "standard": "Integrated charger, battery preheating, BP, Blue Spot, comfort seat, USB port, LED lighting, colour display, rear handle with horn, hydraulic levers, 4-section valve, non-marking SE tyres, panoramic mirror.",
+            "optional": "Fingertip (joystick), cabin, ZF transmission with electronic parking brake, HSV, external charger."
+          },
+          "argument": "If you need the most compact electric truck with excellent indoor manoeuvrability, the N1 range is the ideal choice."
         }
       },
       "serieQ": {
         "badge": "Series Q",
         "title": "Heavy duty",
         "subtitle": "Heavy class",
-        "capacity": "2 – 10 t",
-        "modelRange": "FE4P 20 Q, FE4P 50 Q, FE4P 50 QL",
-        "productLine": "Powerful electric trucks for industrial and heavy-duty applications with high capacity.",
-        "desc": "Powerful electric trucks for industrial and heavy-duty applications with high capacity.",
+        "capacity": "1.6 – 2.0 t / 4.0 – 5.0 t",
+        "modelRange": "FE4P20Q, FE4P50Q",
+        "productLine": "Series Q — compact four-wheel electric trucks",
+        "desc": "Four-wheel electric trucks with compact dimensions and excellent handling — more stability than a three-wheel truck without an unnecessarily large machine.",
         "uses": {
-          "1": "Industrial halls",
-          "2": "Heavy loads",
-          "3": "Demanding operation"
+          "1": "Operations with limited handling space",
+          "2": "Warehouses and logistics",
+          "3": "Production needing higher stability"
         },
         "detail": {
-          "title": "Noblelift Series Q — heavy industrial class",
-          "intro": "Series Q covers heavy industry needs with capacities from 2 to 10 tonnes. Massive steel construction, extended front axle for stability and powerful AC motors ensure reliable operation even in the most demanding conditions.",
+          "title": "Noblelift Series Q — detailed overview",
+          "intro": "Series Q offers compact four-wheel electric counterbalance trucks that combine four-wheel stability with very compact dimensions and excellent handling. It is for customers who want more stability than a three-wheel truck, but do not need an unnecessarily large machine. Capacities 2.5–3.8 t exist from the manufacturer, but we do not offer them in our range.",
           "features": {
             "1": {
-              "title": "Heavy steel construction",
-              "desc": "Reinforced chassis, axles and mast for extreme loads and lift heights"
+              "title": "Four-wheel stability",
+              "desc": "Higher stability when handling loads and more confident travel on uneven surfaces — while staying compact"
             },
             "2": {
-              "title": "High motor output",
-              "desc": "Powerful three-phase AC motors for lift speed even at maximum load"
+              "title": "Excellent handling",
+              "desc": "Smaller turning radius, lower overall height and easier work in confined spaces"
             },
             "3": {
-              "title": "Extended stability",
-              "desc": "Wide wheelbase and low centre of gravity for heavy loads at height"
+              "title": "AC motor and battery choice",
+              "desc": "Maintenance-free AC traction motor; lead-acid or Li-Ion battery choice up to 2.0 t"
             },
             "4": {
-              "title": "Service accessibility",
-              "desc": "Air-suspended hoods for quick access to components"
+              "title": "Fingertip controls",
+              "desc": "Comfortable, precise joystick lift control, quiet operation, low vibration and suspended rear axle"
             }
           },
           "specs": {
-            "capacity": { "label": "Capacity", "value": "2–10 t" },
-            "drive": { "label": "Drive", "value": "Electric AC" },
-            "voltage": { "label": "Voltage", "value": "80 V / 96 V" },
-            "lift": { "label": "Max. lift", "value": "up to 9,000 mm" },
-            "tires": { "label": "Tyres", "value": "Pneumatic" },
-            "operation": { "label": "Application", "value": "Indoor / mixed" }
-          }
+            "capacity": {
+              "label": "Capacity",
+              "value": "1.6–2.0 t / 4.0–5.0 t"
+            },
+            "models": {
+              "label": "Models",
+              "value": "FE4P20Q / FE4P50Q"
+            },
+            "battery": {
+              "label": "Battery",
+              "value": "Lead-acid or Li-Ion (up to 2.0 t)"
+            },
+            "lift": {
+              "label": "Lift height",
+              "value": "2,500–5,500 mm (up to 2.0 t) / up to 7,000 mm (4.0–5.0 t)"
+            },
+            "control": {
+              "label": "Controls",
+              "value": "Fingertip (joystick)"
+            },
+            "operation": {
+              "label": "Application",
+              "value": "Warehouse / production"
+            }
+          },
+          "capacityCompare": {
+            "title": "Main Q series differences by capacity",
+            "leftTitle": "FE4P16–20Q",
+            "rightTitle": "FE4P40–50Q/L",
+            "rows": {
+              "1": {
+                "label": "Character",
+                "left": "Compact",
+                "right": "Robust"
+              },
+              "2": {
+                "label": "Class",
+                "left": "Medium Duty",
+                "right": "Professional"
+              },
+              "3": {
+                "label": "Battery",
+                "left": "Lead-acid or Li-Ion",
+                "right": "Li-Ion as standard"
+              },
+              "4": {
+                "label": "Use",
+                "left": "Narrow spaces",
+                "right": "Heavy industry"
+              },
+              "5": {
+                "label": "Key advantage",
+                "left": "Compactness",
+                "right": "Power and robustness"
+              }
+            }
+          },
+          "audience": {
+            "title": "Who the Q range is for",
+            "items": {
+              "1": "Manufacturing plants",
+              "2": "Logistics centres",
+              "3": "Warehouses",
+              "4": "Operations with limited handling space",
+              "5": "Customers who prefer a four-wheel truck — better stability"
+            }
+          },
+          "recommend": {
+            "whenTitle": "When we recommend the Q range",
+            "when": {
+              "1": "You want a four-wheel truck",
+              "2": "Stability matters",
+              "3": "You also need compact dimensions",
+              "4": "You need precise, fast lift control",
+              "5": "You want a well-handling electric truck"
+            },
+            "otherTitle": "When to recommend another series",
+            "other": {
+              "1": "N1 — when maximum manoeuvrability is the top priority and you prefer a three-wheel truck",
+              "2": "A2 — when you need a universal electric truck with price in mind"
+            }
+          },
+          "equipment": {
+            "title": "Equipment",
+            "standard": "External 100A charger, battery pre-heating, BP, Blue Spot, comfort seat, USB port, LED lighting, colour display, rear handle with horn, fingertip (joystick), 4-section valve, non-marking SE tyres, automatic curve speed reduction, panoramic mirror.",
+            "optional": "Cabin with heater, HSV."
+          },
+          "argument": "Series Q is ideal for customers who prefer four-wheel stability but still need a compact truck with very good handling for everyday warehouse or production work."
         }
       }
     },
@@ -1163,12 +1578,30 @@
           }
         },
         "specs": {
-          "capacity": { "label": "Capacity", "value": "2.0 – 3.8 t" },
-          "drive": { "label": "Drive", "value": "Combustion engine" },
-          "fuel": { "label": "Fuel", "value": "Diesel / LPG" },
-          "lift": { "label": "Max. lift", "value": "up to 3,000 mm" },
-          "tires": { "label": "Tyres", "value": "Solid / pneumatic" },
-          "operation": { "label": "Application", "value": "Outdoor / mixed" }
+          "capacity": {
+            "label": "Capacity",
+            "value": "2.0 – 3.8 t"
+          },
+          "drive": {
+            "label": "Drive",
+            "value": "Combustion engine"
+          },
+          "fuel": {
+            "label": "Fuel",
+            "value": "Diesel / LPG"
+          },
+          "lift": {
+            "label": "Max. lift",
+            "value": "up to 3,000 mm"
+          },
+          "tires": {
+            "label": "Tyres",
+            "value": "Solid / pneumatic"
+          },
+          "operation": {
+            "label": "Application",
+            "value": "Outdoor / mixed"
+          }
         }
       }
     },
@@ -1198,12 +1631,30 @@
           }
         },
         "specs": {
-          "capacity": { "label": "Capacity", "value": "1.2 - 2.0 t" },
-          "drive": { "label": "Drive", "value": "Electric" },
-          "lift": { "label": "Max. lift", "value": "up to 4,500 mm" },
-          "battery": { "label": "Battery", "value": "24 V" },
-          "operation": { "label": "Application", "value": "Indoor" },
-          "type": { "label": "Type", "value": "Straddle" }
+          "capacity": {
+            "label": "Capacity",
+            "value": "1.2 - 2.0 t"
+          },
+          "drive": {
+            "label": "Drive",
+            "value": "Electric"
+          },
+          "lift": {
+            "label": "Max. lift",
+            "value": "up to 4,500 mm"
+          },
+          "battery": {
+            "label": "Battery",
+            "value": "24 V"
+          },
+          "operation": {
+            "label": "Application",
+            "value": "Indoor"
+          },
+          "type": {
+            "label": "Type",
+            "value": "Straddle"
+          }
         }
       }
     },
@@ -1256,34 +1707,186 @@
       "capacity": "1.5 - 2.0 t",
       "productLine": "Electric pallet truck",
       "detail": {
-        "title": "Noblelift electric pallet trucks — detailed description",
-        "intro": "Electric walkie and rider pallet trucks from Noblelift for efficient horizontal handling. Available with lithium drive, weighing options and compact dimensions for narrow warehouse aisles and intensive daily use.",
+        "title": "Noblelift electric pallet trucks — detailed overview",
+        "intro": "Noblelift electric pallet trucks come in two ranges. PWB Avant is the entry-level economy range — the most compact trucks for lighter duty, vans and tight spaces. PTE ATOM is the professional range for everyday warehouse work with higher performance, a more robust build, advanced electronics and low operating costs.",
         "features": {
           "1": {
-            "title": "Li-Ion drive",
-            "desc": "Fast charging and long battery life for continuous warehouse operation"
+            "title": "PWB — economy range",
+            "desc": "Most affordable option, extremely compact size, low weight and simple reliable operation — the best-selling truck"
           },
           "2": {
-            "title": "Electric drive",
-            "desc": "Quiet, clean operation suited to indoor warehouse and production areas"
+            "title": "PTE — professional range",
+            "desc": "Higher performance, more robust construction, advanced technology and higher durability for demanding everyday duty"
           },
           "3": {
-            "title": "Compact design",
-            "desc": "Walkie and rider variants including weighing models for accurate load tracking"
+            "title": "Li-Ion battery",
+            "desc": "Fast charging and maintenance-free operation; PTE also offers quick battery swap"
           },
           "4": {
-            "title": "Reliable build",
-            "desc": "Robust design for intensive daily pallet handling"
+            "title": "Stability and controls",
+            "desc": "Balance castors and a small turning radius; PTE adds a smart tiller with PIN/RFID, LCD and automatic curve speed reduction"
           }
         },
         "specs": {
-          "capacity": { "label": "Capacity", "value": "1.5 - 2.0 t" },
-          "drive": { "label": "Drive", "value": "Electric" },
-          "lift": { "label": "Lift", "value": "Low-lift" },
-          "battery": { "label": "Battery", "value": "Li-Ion" },
-          "operation": { "label": "Application", "value": "Indoor" },
-          "type": { "label": "Type", "value": "Electric pallet truck" }
-        }
+          "capacity": {
+            "label": "Capacity",
+            "value": "1,500–2,000 kg (PWB 300 up to 3,000 kg to order)"
+          },
+          "models": {
+            "label": "PWB models",
+            "value": "PWB 150 / 200 (300 to order)"
+          },
+          "pte": {
+            "label": "PTE models",
+            "value": "PTE 15 Q2 / PTE 15 Q2SC (with scale)"
+          },
+          "battery": {
+            "label": "PWB battery",
+            "value": "Li-Ion 24V/20–40Ah (150) · 48V/20Ah (200)"
+          },
+          "pteBattery": {
+            "label": "PTE battery",
+            "value": "Li-Ion 24V/20Ah"
+          },
+          "type": {
+            "label": "Type",
+            "value": "Electric pallet truck"
+          }
+        },
+        "capacityCompare": {
+          "title": "PWB vs PTE comparison",
+          "leftTitle": "PWB range (Avant)",
+          "rightTitle": "PTE range (ATOM)",
+          "rows": {
+            "1": {
+              "label": "Range type",
+              "left": "Entry / economy",
+              "right": "Professional"
+            },
+            "2": {
+              "label": "Models",
+              "left": "PWB 150, PWB 200 (PWB 300 to order)",
+              "right": "PTE 15 Q2, PTE 15 Q2SC (with scale)"
+            },
+            "3": {
+              "label": "Capacity",
+              "left": "1,500–2,000 kg (up to 3,000 kg to order)",
+              "right": "1,500 kg"
+            },
+            "4": {
+              "label": "Battery",
+              "left": "Li-Ion 24V/20–40Ah (150) · 48V/20Ah (200)",
+              "right": "Li-Ion 24V/20Ah, quick swap"
+            },
+            "5": {
+              "label": "Duty",
+              "left": "Lighter duty, lower utilisation",
+              "right": "Everyday / intensive warehouse duty"
+            },
+            "6": {
+              "label": "Construction",
+              "left": "Simple, reliable, compact",
+              "right": "More robust, reinforced frame, higher durability"
+            },
+            "7": {
+              "label": "Dimensions",
+              "left": "Extremely compact, low weight",
+              "right": "Compact with focus on performance"
+            },
+            "8": {
+              "label": "Controls / electronics",
+              "left": "Simple controls, balance castors",
+              "right": "Smart tiller: PIN, RFID, LCD, Mth, turtle mode"
+            },
+            "9": {
+              "label": "Smart functions",
+              "left": "—",
+              "right": "Curve speed reduction, travel with tiller upright"
+            },
+            "10": {
+              "label": "Typical use",
+              "left": "Retail, vans, elevators, smaller warehouses",
+              "right": "Production, logistics, distribution warehouses"
+            },
+            "11": {
+              "label": "Extra equipment",
+              "left": "—",
+              "right": "Weighing system (+ printer on Q2SC)"
+            },
+            "12": {
+              "label": "Key advantage",
+              "left": "Lowest price, most compact truck",
+              "right": "Higher performance, productivity and comfort"
+            }
+          }
+        },
+        "audience": {
+          "title": "Who these ranges are for",
+          "items": {
+            "1": "PWB: retail, supermarket, smaller warehouses, van work and elevators",
+            "2": "PTE: manufacturing plants, logistics centres, distribution warehouses",
+            "3": "PTE: supermarket and everyday pallet handling",
+            "4": "Customers needing the most compact electric pallet truck (PWB)",
+            "5": "Customers needing a universal professional truck for intensive warehouse use (PTE)"
+          }
+        },
+        "recommend": {
+          "whenTitle": "When we recommend PWB Avant",
+          "when": {
+            "1": "You need the smallest and lightest electric pallet truck",
+            "2": "Work in vans, elevators or tight spaces",
+            "3": "Lighter duty and lower utilisation",
+            "4": "Purchase price matters",
+            "5": "1.5–2.0 t capacity is enough (or 3.0 t to order)"
+          },
+          "otherTitle": "When we recommend PTE ATOM",
+          "other": {
+            "1": "Intensive everyday warehouse duty",
+            "2": "You need higher performance and a more robust build",
+            "3": "You want a smart tiller (PIN, RFID, LCD) and intelligent functions",
+            "4": "You need a weighing system (PTE 15 Q2SC, optional printer)",
+            "5": "Low operating costs matter"
+          }
+        },
+        "equipment": {
+          "title": "Models and equipment",
+          "standard": "PWB 150: 1,500 kg, Li-Ion 24V/20Ah or 24V/40Ah. PWB 200: 2,000 kg, Li-Ion 48V/20Ah. PTE 15 Q2: 1,500 kg, Li-Ion 24V/20Ah. Shared: balance castors, Li-Ion, compact dimensions.",
+          "optional": "PTE 15 Q2SC: weighing system (printer optional). PWB 300: 3,000 kg to order.",
+          "standardItems": {
+            "1": "PWB 150: 1,500 kg, Li-Ion 24V/20Ah or 24V/40Ah",
+            "2": "PWB 200: 2,000 kg, Li-Ion 48V/20Ah",
+            "3": "PTE 15 Q2: 1,500 kg, Li-Ion 24V/20Ah",
+            "4": "Shared: balance castors, Li-Ion, compact dimensions"
+          },
+          "optionalItems": {
+            "1": "PTE 15 Q2SC: weighing system (printer optional)",
+            "2": "PWB 300: 3,000 kg to order"
+          }
+        },
+        "advantages": {
+          "pwbTitle": "Key advantages — PWB range",
+          "pteTitle": "Key advantages — PTE ATOM range",
+          "pwb": {
+            "1": "Extremely compact dimensions",
+            "2": "Balance castors for better stability",
+            "3": "Low own weight – easy to transport",
+            "4": "Li-Ion battery – fast charging, maintenance-free operation",
+            "5": "Robust construction – longer life, better dust and water resistance",
+            "6": "Small turning radius",
+            "7": "Strong 24V DC traction motor"
+          },
+          "pte": {
+            "1": "Higher performance vs PWB models",
+            "2": "Balance castors for better stability",
+            "3": "Smart ergonomic tiller – PIN, RFID, LCD display, hour meter, turtle mode",
+            "4": "Li-Ion battery with quick swap",
+            "5": "Intelligent functions – automatic curve speed reduction, vertical-tiller travel",
+            "6": "Robust construction – higher durability, reinforced frame, component protection",
+            "7": "Optional weighing system",
+            "8": "Simpler service"
+          }
+        },
+        "argument": "Thanks to compact size, low weight and Li-Ion, the PWB range is ideal for goods delivery, van work, supermarket or space-limited warehouses. The PTE ATOM range offers higher performance, modern electronics, quick battery swap, intelligent diagnostics and a robust build for intensive use."
       }
     },
     "palletManual": {
@@ -1312,12 +1915,30 @@
           }
         },
         "specs": {
-          "capacity": { "label": "Capacity", "value": "2.5 t" },
-          "drive": { "label": "Drive", "value": "Manual" },
-          "lift": { "label": "Lift", "value": "Low-lift" },
-          "forks": { "label": "Forks", "value": "1150 mm" },
-          "operation": { "label": "Application", "value": "Indoor / mixed" },
-          "type": { "label": "Type", "value": "Manual pallet truck" }
+          "capacity": {
+            "label": "Capacity",
+            "value": "2.5 t"
+          },
+          "drive": {
+            "label": "Drive",
+            "value": "Manual"
+          },
+          "lift": {
+            "label": "Lift",
+            "value": "Low-lift"
+          },
+          "forks": {
+            "label": "Forks",
+            "value": "1150 mm"
+          },
+          "operation": {
+            "label": "Application",
+            "value": "Indoor / mixed"
+          },
+          "type": {
+            "label": "Type",
+            "value": "Manual pallet truck"
+          }
         }
       }
     },
@@ -1347,12 +1968,30 @@
           }
         },
         "specs": {
-          "capacity": { "label": "Capacity", "value": "2.5 – 3.5 t" },
-          "drive": { "label": "Drive", "value": "Diesel" },
-          "driveType": { "label": "Wheel drive", "value": "4x4" },
-          "tires": { "label": "Tires", "value": "Terrain" },
-          "operation": { "label": "Application", "value": "Outdoor / terrain" },
-          "type": { "label": "Type", "value": "Rough terrain forklift" }
+          "capacity": {
+            "label": "Capacity",
+            "value": "2.5 – 3.5 t"
+          },
+          "drive": {
+            "label": "Drive",
+            "value": "Diesel"
+          },
+          "driveType": {
+            "label": "Wheel drive",
+            "value": "4x4"
+          },
+          "tires": {
+            "label": "Tires",
+            "value": "Terrain"
+          },
+          "operation": {
+            "label": "Application",
+            "value": "Outdoor / terrain"
+          },
+          "type": {
+            "label": "Type",
+            "value": "Rough terrain forklift"
+          }
         }
       }
     },
@@ -1382,12 +2021,30 @@
           }
         },
         "specs": {
-          "capacity": { "label": "Capacity", "value": "6.0 t" },
-          "drive": { "label": "Drive", "value": "Diesel" },
-          "reach": { "label": "Reach", "value": "Telescopic" },
-          "lift": { "label": "Lift", "value": "High reach" },
-          "operation": { "label": "Application", "value": "Construction / agriculture" },
-          "type": { "label": "Type", "value": "Telehandler" }
+          "capacity": {
+            "label": "Capacity",
+            "value": "6.0 t"
+          },
+          "drive": {
+            "label": "Drive",
+            "value": "Diesel"
+          },
+          "reach": {
+            "label": "Reach",
+            "value": "Telescopic"
+          },
+          "lift": {
+            "label": "Lift",
+            "value": "High reach"
+          },
+          "operation": {
+            "label": "Application",
+            "value": "Construction / agriculture"
+          },
+          "type": {
+            "label": "Type",
+            "value": "Telehandler"
+          }
         }
       }
     },
@@ -1417,12 +2074,30 @@
           }
         },
         "specs": {
-          "capacity": { "label": "Capacity", "value": "1.6 – 2.0 t" },
-          "drive": { "label": "Drive", "value": "Electric" },
-          "lift": { "label": "Lift", "value": "Up to 13 m" },
-          "battery": { "label": "Battery", "value": "Li-Ion" },
-          "operation": { "label": "Application", "value": "Warehouse / narrow aisles" },
-          "type": { "label": "Type", "value": "Reach truck" }
+          "capacity": {
+            "label": "Capacity",
+            "value": "1.6 – 2.0 t"
+          },
+          "drive": {
+            "label": "Drive",
+            "value": "Electric"
+          },
+          "lift": {
+            "label": "Lift",
+            "value": "Up to 13 m"
+          },
+          "battery": {
+            "label": "Battery",
+            "value": "Li-Ion"
+          },
+          "operation": {
+            "label": "Application",
+            "value": "Warehouse / narrow aisles"
+          },
+          "type": {
+            "label": "Type",
+            "value": "Reach truck"
+          }
         }
       }
     },
@@ -1452,12 +2127,30 @@
           }
         },
         "specs": {
-          "capacity": { "label": "Capacity", "value": "1.0–2.5 t" },
-          "drive": { "label": "Drive", "value": "Electric" },
-          "lift": { "label": "Lift", "value": "Low / medium" },
-          "operation": { "label": "Application", "value": "Warehouse / e-commerce" },
-          "use": { "label": "Use", "value": "Order picking" },
-          "type": { "label": "Type", "value": "Order picker" }
+          "capacity": {
+            "label": "Capacity",
+            "value": "1.0–2.5 t"
+          },
+          "drive": {
+            "label": "Drive",
+            "value": "Electric"
+          },
+          "lift": {
+            "label": "Lift",
+            "value": "Low / medium"
+          },
+          "operation": {
+            "label": "Application",
+            "value": "Warehouse / e-commerce"
+          },
+          "use": {
+            "label": "Use",
+            "value": "Order picking"
+          },
+          "type": {
+            "label": "Type",
+            "value": "Order picker"
+          }
         }
       }
     },
@@ -1487,12 +2180,30 @@
           }
         },
         "specs": {
-          "height": { "label": "Height", "value": "6 – 16 m" },
-          "drive": { "label": "Drive", "value": "Electric" },
-          "platform": { "label": "Platform", "value": "Scissor" },
-          "operation": { "label": "Application", "value": "Indoor" },
-          "use": { "label": "Use", "value": "Maintenance / install" },
-          "type": { "label": "Type", "value": "Scissor lift" }
+          "height": {
+            "label": "Height",
+            "value": "6 – 16 m"
+          },
+          "drive": {
+            "label": "Drive",
+            "value": "Electric"
+          },
+          "platform": {
+            "label": "Platform",
+            "value": "Scissor"
+          },
+          "operation": {
+            "label": "Application",
+            "value": "Indoor"
+          },
+          "use": {
+            "label": "Use",
+            "value": "Maintenance / install"
+          },
+          "type": {
+            "label": "Type",
+            "value": "Scissor lift"
+          }
         }
       }
     },
@@ -1522,12 +2233,30 @@
           }
         },
         "specs": {
-          "height": { "label": "Height", "value": "10 m" },
-          "drive": { "label": "Drive", "value": "Electric" },
-          "reach": { "label": "Reach", "value": "Mast / boom" },
-          "operation": { "label": "Application", "value": "Indoor / mixed" },
-          "use": { "label": "Use", "value": "Install / maintenance" },
-          "type": { "label": "Type", "value": "Mast lift" }
+          "height": {
+            "label": "Height",
+            "value": "10 m"
+          },
+          "drive": {
+            "label": "Drive",
+            "value": "Electric"
+          },
+          "reach": {
+            "label": "Reach",
+            "value": "Mast / boom"
+          },
+          "operation": {
+            "label": "Application",
+            "value": "Indoor / mixed"
+          },
+          "use": {
+            "label": "Use",
+            "value": "Install / maintenance"
+          },
+          "type": {
+            "label": "Type",
+            "value": "Mast lift"
+          }
         }
       }
     },
@@ -1722,8 +2451,10 @@
     "models": {
       "fe3d": "Compact three-wheel electric counterbalance truck for tight spaces.",
       "fe3d16": "Series N three-wheel electric counterbalance forklift, 1.6 t capacity.",
+      "fe3d16Highlight": "Li-Ion, free lift, duplex / triplex, LED display",
       "fe3d18": "Series N three-wheel electric counterbalance forklift, 1.8 t capacity.",
       "fe3d20": "Series N three-wheel electric counterbalance forklift, 2.0 t capacity.",
+      "fe3d20Highlight": "Li-Ion, free lift, triplex, fingertip",
       "fe4p": "Four-wheel electric counterbalance truck with high stability.",
       "fe4p16": "Series P premium four-wheel forklift with lithium battery, 1.6 t capacity.",
       "fe4p18": "Series P premium four-wheel forklift with lithium battery, 1.8 t capacity.",
@@ -1784,90 +2515,470 @@
       "buyNote": "You will be redirected to the official VZV GROUP e-shop (vzv.cz), where you can purchase or reserve this model from stock.",
       "common": {
         "specs": {
-          "capacity": { "label": "Load capacity" },
-          "weight": { "label": "Service weight incl. battery" },
-          "liftHeight": { "label": "Lift height" },
-          "length": { "label": "Overall length" },
-          "width": { "label": "Overall width (frame / tyres)" },
-          "forkSize": { "label": "Fork dimensions (L / W / H)" },
-          "forkSpread": { "label": "Width of fork rack" },
-          "turningRadius": { "label": "Turning radius" },
-          "travelSpeed": { "label": "Travel speed laden / unladen" },
-          "liftSpeed": { "label": "Lift speed laden / unladen" },
-          "motor": { "label": "Drive motor rating S2 60 min" },
-          "battery": { "label": "Battery voltage & capacity" }
+          "capacity": {
+            "label": "Load capacity"
+          },
+          "weight": {
+            "label": "Service weight incl. battery"
+          },
+          "liftHeight": {
+            "label": "Lift height"
+          },
+          "length": {
+            "label": "Overall length"
+          },
+          "width": {
+            "label": "Overall width (frame / tyres)"
+          },
+          "forkSize": {
+            "label": "Fork dimensions (L / W / H)"
+          },
+          "forkSpread": {
+            "label": "Width of fork rack"
+          },
+          "turningRadius": {
+            "label": "Turning radius"
+          },
+          "travelSpeed": {
+            "label": "Travel speed laden / unladen"
+          },
+          "liftSpeed": {
+            "label": "Lift speed laden / unladen"
+          },
+          "motor": {
+            "label": "Drive motor rating S2 60 min"
+          },
+          "battery": {
+            "label": "Battery voltage & capacity"
+          }
         }
       },
       "fe4d16": {
         "subtitle": "Series A electric counterbalance forklift, 1,600 kg capacity",
         "longDesc": "The FE4D16N belongs to Series A — a reliable Noblelift electric counterbalance forklift with lithium battery for standard warehouse operations. It offers compact dimensions, efficient AC drive with regenerative braking and simple controls suited to everyday pallet handling in distribution, manufacturing and retail warehouses.",
         "specs": {
-          "capacity": { "value": "1,600 kg" },
-          "weight": { "value": "3,000 kg" },
-          "liftHeight": { "value": "3,000 mm" },
-          "length": { "value": "2,290 mm" },
-          "width": { "value": "1,126 / 1,118 mm" },
-          "forkSize": { "value": "920 × 100 × 35 mm" },
-          "forkSpread": { "value": "1,040 mm" },
-          "turningRadius": { "value": "2,030 mm" },
-          "travelSpeed": { "value": "15 / 15 km/h" },
-          "liftSpeed": { "value": "350 / 430 mm/s" },
-          "motor": { "value": "10 kW" },
-          "battery": { "value": "76.8 V / 150 Ah Li" }
+          "capacity": {
+            "value": "1,600 kg"
+          },
+          "weight": {
+            "value": "3,000 kg"
+          },
+          "liftHeight": {
+            "value": "3,000 mm"
+          },
+          "length": {
+            "value": "2,290 mm"
+          },
+          "width": {
+            "value": "1,126 / 1,118 mm"
+          },
+          "forkSize": {
+            "value": "920 × 100 × 35 mm"
+          },
+          "forkSpread": {
+            "value": "1,040 mm"
+          },
+          "turningRadius": {
+            "value": "2,030 mm"
+          },
+          "travelSpeed": {
+            "value": "15 / 15 km/h"
+          },
+          "liftSpeed": {
+            "value": "350 / 430 mm/s"
+          },
+          "motor": {
+            "value": "10 kW"
+          },
+          "battery": {
+            "value": "76.8 V / 150 Ah Li"
+          }
         }
       },
       "fe4d18": {
         "subtitle": "Series A electric counterbalance forklift, 1,800 kg capacity",
         "longDesc": "The FE4D18N is a four-wheel Series A electric counterbalance forklift with 1,800 kg capacity. With lithium battery and AC drive it handles intensive warehouse and production floor operations. Its compact design enables efficient handling in confined spaces while maintaining high stability and operator safety.",
         "specs": {
-          "capacity": { "value": "1,800 kg" },
-          "weight": { "value": "3,200 kg" },
-          "liftHeight": { "value": "3,000 mm" },
-          "length": { "value": "2,605 mm" },
-          "width": { "value": "1,150 / 1,163 mm" },
-          "forkSize": { "value": "920 × 100 × 35 mm" },
-          "forkSpread": { "value": "1,040 mm" },
-          "turningRadius": { "value": "2,250 mm" },
-          "travelSpeed": { "value": "14.5 / 15 km/h" },
-          "liftSpeed": { "value": "330 / 430 mm/s" },
-          "motor": { "value": "10 kW" },
-          "battery": { "value": "76.8 V / 175 Ah Li" }
+          "capacity": {
+            "value": "1,800 kg"
+          },
+          "weight": {
+            "value": "3,200 kg"
+          },
+          "liftHeight": {
+            "value": "3,000 mm"
+          },
+          "length": {
+            "value": "2,605 mm"
+          },
+          "width": {
+            "value": "1,150 / 1,163 mm"
+          },
+          "forkSize": {
+            "value": "920 × 100 × 35 mm"
+          },
+          "forkSpread": {
+            "value": "1,040 mm"
+          },
+          "turningRadius": {
+            "value": "2,250 mm"
+          },
+          "travelSpeed": {
+            "value": "14.5 / 15 km/h"
+          },
+          "liftSpeed": {
+            "value": "330 / 430 mm/s"
+          },
+          "motor": {
+            "value": "10 kW"
+          },
+          "battery": {
+            "value": "76.8 V / 175 Ah Li"
+          }
         }
       },
       "fe4d20": {
         "subtitle": "Series A electric counterbalance forklift, 2,000 kg capacity",
         "longDesc": "The FE4D20N is a versatile Series A electric counterbalance forklift with 2,000 kg capacity. Suited to medium-duty warehouse operations where performance, reliability and low running costs matter. The lithium battery enables fast charging and long service life with minimal maintenance.",
         "specs": {
-          "capacity": { "value": "2,000 kg" },
-          "weight": { "value": "3,450 kg" },
-          "liftHeight": { "value": "3,000 mm" },
-          "length": { "value": "2,605 mm" },
-          "width": { "value": "1,150 / 1,163 mm" },
-          "forkSize": { "value": "1,070 × 120 × 40 mm" },
-          "forkSpread": { "value": "1,040 mm" },
-          "turningRadius": { "value": "2,250 mm" },
-          "travelSpeed": { "value": "18 / 19 km/h" },
-          "liftSpeed": { "value": "500 / 580 mm/s" },
-          "motor": { "value": "15 kW" },
-          "battery": { "value": "76.8 V / 300 Ah Li" }
+          "capacity": {
+            "value": "2,000 kg"
+          },
+          "weight": {
+            "value": "3,450 kg"
+          },
+          "liftHeight": {
+            "value": "3,000 mm"
+          },
+          "length": {
+            "value": "2,605 mm"
+          },
+          "width": {
+            "value": "1,150 / 1,163 mm"
+          },
+          "forkSize": {
+            "value": "1,070 × 120 × 40 mm"
+          },
+          "forkSpread": {
+            "value": "1,040 mm"
+          },
+          "turningRadius": {
+            "value": "2,250 mm"
+          },
+          "travelSpeed": {
+            "value": "18 / 19 km/h"
+          },
+          "liftSpeed": {
+            "value": "500 / 580 mm/s"
+          },
+          "motor": {
+            "value": "15 kW"
+          },
+          "battery": {
+            "value": "76.8 V / 300 Ah Li"
+          }
         }
       },
       "fe4d25": {
         "subtitle": "Series A electric counterbalance forklift, 2,500 kg capacity",
         "longDesc": "The FE4D25N is the most capable Series A model in the range with 2,500 kg capacity. Designed for more demanding operations requiring higher lift capacity and stability when handling heavier pallets. AC drive, lithium battery and robust construction ensure reliable operation even in multi-shift use.",
         "specs": {
-          "capacity": { "value": "2,500 kg" },
-          "weight": { "value": "3,750 kg" },
-          "liftHeight": { "value": "3,000 mm" },
-          "length": { "value": "2,770 mm" },
-          "width": { "value": "1,195 / 1,228 mm" },
-          "forkSize": { "value": "1,070 × 122 × 45 mm" },
-          "forkSpread": { "value": "1,100 mm" },
-          "turningRadius": { "value": "2,450 mm" },
-          "travelSpeed": { "value": "19 / 19 km/h" },
-          "liftSpeed": { "value": "530 / 500 mm/s" },
-          "motor": { "value": "15 kW" },
-          "battery": { "value": "76.8 V / 300 Ah Li" }
+          "capacity": {
+            "value": "2,500 kg"
+          },
+          "weight": {
+            "value": "3,750 kg"
+          },
+          "liftHeight": {
+            "value": "3,000 mm"
+          },
+          "length": {
+            "value": "2,770 mm"
+          },
+          "width": {
+            "value": "1,195 / 1,228 mm"
+          },
+          "forkSize": {
+            "value": "1,070 × 122 × 45 mm"
+          },
+          "forkSpread": {
+            "value": "1,100 mm"
+          },
+          "turningRadius": {
+            "value": "2,450 mm"
+          },
+          "travelSpeed": {
+            "value": "19 / 19 km/h"
+          },
+          "liftSpeed": {
+            "value": "530 / 500 mm/s"
+          },
+          "motor": {
+            "value": "15 kW"
+          },
+          "battery": {
+            "value": "76.8 V / 300 Ah Li"
+          }
+        }
+      }
+    },
+    "stackersHandbook": {
+      "overview": {
+        "title": "Pedestrian high-lift stackers",
+        "lead": "We divide them into these 3 basic ranges: PSE, SWB and PS.",
+        "pse": {
+          "1": "Affordable solution",
+          "2": "Simple, reliable truck",
+          "3": "Lighter duty, lower utilisation",
+          "4": "For small and medium warehouses",
+          "5": "Best-selling truck",
+          "title": "PSE = entry-level economy range"
+        },
+        "swb": {
+          "1": "Higher performance and operator comfort",
+          "2": "More robust construction",
+          "3": "More intensive duty",
+          "4": "Li-Ion technology",
+          "5": "For larger warehouses and manufacturing plants",
+          "title": "SWB = higher model range"
+        },
+        "ps": {
+          "1": "Premium range",
+          "2": "Maximum performance",
+          "3": "Demanding and multi-shift duty",
+          "4": "Advanced technologies",
+          "5": "Demanding applications and intensive stacking",
+          "title": "PS = professional model range"
+        }
+      },
+      "pse": {
+        "title": "PSE range",
+        "intro": "The PSE range is designed for everyday warehouse applications and is an affordable choice for customers seeking a simple, reliable and easy-to-operate stacker. It is especially suited to daily pallet handling in smaller warehouses and operations with low to medium work intensity.",
+        "specs": {
+          "models": {
+            "label": "Stock models",
+            "value": "PSE 12 ND, PSE 15 L-C"
+          },
+          "capacity": {
+            "label": "Capacity",
+            "value": "1,200 kg / 1,500 kg"
+          },
+          "lift": {
+            "label": "Lift heights",
+            "value": "2,900 mm, 3,200 mm (PSE 12 ND only), 3,600 mm – STD mast only"
+          }
+        },
+        "audience": {
+          "1": "Smaller warehouses",
+          "2": "Retail",
+          "3": "Service companies",
+          "4": "Production facilities",
+          "5": "Customers buying their first electric stacker",
+          "title": "Who is it for?"
+        },
+        "advantages": {
+          "1": "Excellent price / performance ratio",
+          "2": "Simple construction",
+          "3": "Easy operation",
+          "4": "Compact dimensions",
+          "5": "Curtis controller",
+          "6": "Long ergonomic tiller",
+          "7": "Low service costs",
+          "8": "Best-selling model",
+          "title": "Key advantages"
+        },
+        "compare": {
+          "title": "Main differences between PSE 12 ND and PSE 15 L-C",
+          "leftTitle": "PSE 12 ND",
+          "rightTitle": "PSE 15 L-C",
+          "rows": {
+            "1": {
+              "label": "Capacity",
+              "left": "1,200 kg",
+              "right": "1,500 kg"
+            },
+            "2": {
+              "label": "Battery",
+              "left": "Li-Ion",
+              "right": "Li-Ion / AGM"
+            },
+            "3": {
+              "label": "Initial lift",
+              "left": "Yes",
+              "right": "No"
+            },
+            "4": {
+              "label": "Price",
+              "left": "Low",
+              "right": "Very low"
+            }
+          }
+        },
+        "argument": "If the customer wants a modern maintenance-free stacker with a Li-Ion battery and needs to handle ramps or uneven floors easily, recommend PSE 12 ND. If higher capacity and the lowest purchase price are the priority, PSE 15 L-C is the better choice."
+      },
+      "swb": {
+        "title": "SWB range",
+        "intro": "The SWB range is a new generation of Noblelift electric pedestrian stackers. It was developed for customers who need modern Li-Ion technology, compact dimensions, high ergonomics and efficient work in tight spaces. Unlike the basic PSE range, it offers higher operator comfort, a more modern build, advanced safety features and a triplex mast.",
+        "specs": {
+          "models": {
+            "label": "Stock models",
+            "value": "SWB 130, SWB 130 D (initial lift)"
+          },
+          "capacity": {
+            "label": "Capacity",
+            "value": "1,300 kg"
+          },
+          "lift": {
+            "label": "Lift heights",
+            "value": "4,200 mm Triplex with free lift (on order from 2,600–4,300 mm)"
+          }
+        },
+        "audience": {
+          "1": "Logistics centres",
+          "2": "Manufacturing plants",
+          "3": "Retail and supermarkets",
+          "4": "Space-constrained warehouses",
+          "title": "Who is it for?"
+        },
+        "advantages": {
+          "1": "Li-Ion technology with integrated BMS",
+          "2": "Triplex mast with free lift – ideal for low warehouses",
+          "3": "Compact design – smaller turning radius",
+          "4": "New ergonomic tiller – lift and travel can be controlled with one hand",
+          "5": "PIN login, turtle mode, LCD display",
+          "6": "Safety features: automatic curve speed reduction, emergency stop, electromagnetic brake, unintended-movement protection",
+          "7": "Robust construction, easy maintenance",
+          "title": "Key advantages"
+        },
+        "compare": {
+          "title": "Main differences between SWB 130 and SWB 130 D",
+          "leftTitle": "SWB 130",
+          "rightTitle": "SWB 130 D",
+          "rows": {
+            "1": {
+              "label": "Initial lift",
+              "left": "Without initial lift",
+              "right": "With initial lift"
+            }
+          }
+        },
+        "initialLift": {
+          "1": "Overcoming uneven surfaces",
+          "2": "Higher ground clearance",
+          "3": "Better ramp handling",
+          "4": "Two-pallet handling – one pallet on the support arms, one on the forks",
+          "title": "What are the benefits of initial lift?"
+        },
+        "argument": "The SWB range is a modern Li-Ion stacker for customers who want higher operator comfort, compact dimensions and efficient work in tight spaces. With a Full Free Lift mast, ergonomic tiller and intelligent safety features, it is ideal for everyday intensive warehouse logistics. The SWB 130 D with initial lift can also safely handle ramps, thresholds and uneven floors, significantly expanding the truck’s usability."
+      },
+      "ps": {
+        "title": "PS range",
+        "intro": "The PS range is Noblelift’s professional electric stacker line for intensive everyday duty. Robust construction, proportional hydraulics and premium branded components deliver high productivity, precise handling and a long service life.",
+        "specs": {
+          "models": {
+            "label": "Stock models",
+            "value": "PS 16 L, PS 16 DL (initial lift), PS 16 N (platform), PS 16 DN (initial lift + platform), PS 20 L, PS 20 N (platform)"
+          },
+          "capacity": {
+            "label": "Capacity",
+            "value": "1,200 – 1,600 – 2,000 kg"
+          },
+          "lift": {
+            "label": "Lift heights",
+            "value": "4,600 mm, 4,800 mm, 5,500 mm Triplex with free lift (on order from 2,800–5,500 mm)"
+          }
+        },
+        "audience": {
+          "1": "Logistics centres",
+          "2": "Manufacturing plants",
+          "3": "Distribution warehouses",
+          "4": "Multi-shift duty",
+          "5": "Customers requiring maximum productivity",
+          "title": "Who is it for?"
+        },
+        "advantages": {
+          "1": "Proportional hydraulics – smooth lift and lower speed control",
+          "2": "Triplex mast with free lift – ideal for low warehouses",
+          "3": "Robust construction – built for demanding duty and long life",
+          "4": "Premium European components: Schabmüller AC traction motor, ZAPI controller, REMA multifunction tiller, Kordel gearbox, HPI hydraulic unit, Wicke drive wheel, Intorq electromagnetic brake",
+          "5": "Flexible equipment – rider platform, initial lift, free lift",
+          "6": "Easy service – good access to components",
+          "title": "Key advantages"
+        },
+        "recommend": {
+          "title": "Model recommendations",
+          "rows": {
+            "1": {
+              "model": "PS 16 L / PS 20 L",
+              "value": "Professional stacker for intensive warehouse duty"
+            },
+            "2": {
+              "model": "PS 16 DL",
+              "value": "If the customer often handles ramps or uneven floors (initial lift)"
+            },
+            "3": {
+              "model": "PS 16 N / PS 20 N",
+              "value": "If there are frequent longer warehouse runs (platform)"
+            },
+            "4": {
+              "model": "PS 16 DN",
+              "value": "If the customer needs travel, ramps and maximum productivity (initial lift + platform)"
+            }
+          }
+        },
+        "legend": {
+          "1": "L = professional pedestrian stacker",
+          "2": "DL = professional stacker with initial lift",
+          "3": "N = professional stacker with folding platform",
+          "4": "DN = professional stacker with folding platform and initial lift",
+          "title": "Model suffixes"
+        },
+        "argument": "The PS range is for customers who use a stacker every day. Proportional hydraulics, quality branded components and a robust build deliver maximum precision, high productivity and long service life. Initial-lift variants make ramp and uneven-floor work easier, while folding-platform models significantly improve efficiency on longer runs in large warehouses."
+      },
+      "straddle": {
+        "title": "Straddle stackers — PSE and PS ranges",
+        "intro": "Straddle high-lift stackers are designed for pallets that cannot be handled with a classic stacker and standard support arms. Adjustable straddle legs allow a wide range of pallet types and other loads. The manufacturer calls them Straddle Leg Electric Pedestrian Stackers.",
+        "compare": {
+          "title": "Model comparison",
+          "leftTitle": "PSE 12 NSL",
+          "rightTitle": "PS 16–18 TSL",
+          "rows": {
+            "1": {
+              "label": "Capacity",
+              "left": "1,200 kg",
+              "right": "1,600–1,800 kg"
+            },
+            "2": {
+              "label": "Lift",
+              "left": "1,500–3,500 mm",
+              "right": "3,300–5,200 mm"
+            },
+            "3": {
+              "label": "Mast",
+              "left": "Single / Duplex",
+              "right": "Duplex / Triplex with free lift"
+            },
+            "4": {
+              "label": "Availability",
+              "left": "In stock – 2,900 mm",
+              "right": "On order"
+            }
+          }
+        },
+        "audience": {
+          "1": "Non-standard pallets",
+          "2": "Closed pallets",
+          "3": "Special transport boxes",
+          "4": "Metal containers",
+          "5": "Customers using various pallet sizes",
+          "title": "Who are they for?"
+        },
+        "advantages": {
+          "1": "Straddle design for different pallet sizes",
+          "2": "Adjustable support-leg spacing by load type",
+          "3": "Li-Ion battery",
+          "4": "All the same advantages as the PSE and PS range specifications",
+          "title": "Key advantages"
         }
       }
     }

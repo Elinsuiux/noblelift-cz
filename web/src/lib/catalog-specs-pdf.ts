@@ -119,5 +119,5 @@ export async function generateCatalogSpecsPdf(id: string, locale: "cz" | "en" = 
     return null;
   }
 
-  return generatePdfFromDetailContent(buildCatalogDetailPdfContent(source, locale));
+  return generatePdfFromDetailContent(buildCatalogDetailPdfContent(source, locale), locale);
 }

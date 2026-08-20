@@ -4,6 +4,7 @@ import { Footer } from "@/components/Footer";
 import { ProductsBreadcrumb } from "@/components/products/ProductsBreadcrumb";
 import { ProductsCategoryNav } from "@/components/products/ProductsCategoryNav";
 import { SubcategoryCard } from "@/components/products/SubcategoryCard";
+import { StackersHandbookSection } from "@/components/products/StackersHandbookSection";
 import type { CatalogCategory } from "@/lib/products-catalog";
 
 export function ProductCategoryPage({ category }: { category: CatalogCategory }) {
@@ -46,6 +47,8 @@ export function ProductCategoryPage({ category }: { category: CatalogCategory })
                 />
               ))}
             </div>
+
+            {category.showStackersHandbook ? <StackersHandbookSection /> : null}
           </div>
         </section>
       </main>

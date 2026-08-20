@@ -67,52 +67,84 @@ export const SERIE_P_PDF_CONTENT: Record<"cz" | "en", SeriesDetailPdfContent> = 
 export const SERIE_N_PDF_CONTENT: Record<"cz" | "en", SeriesDetailPdfContent> = {
   cz: {
     title: "Noblelift Série N — technické parametry",
-    subtitle: "Tříkolové | Elektrické čelní vozíky pro úzké uličky",
+    subtitle: "Tříkolové N1 | Elektrické čelní vozíky pro úzké uličky",
     intro:
-      "Třínápravové vozíky série N jsou konstruovány pro provoz v úzkých uličkách. Zadní pohon umožňuje otočení na místě a průjezd uličkami šířky od 2,8 m. Volitelné plné nebo super-elastické pneumatiky pro různé typy podlahy.",
+      "Řada N1 představuje kompaktní tříkolové elektrické vysokozdvižné vozíky určené především pro práci v interiéru. Díky tříkolové konstrukci vyniká mimořádnou obratností a snadnou manipulací i ve velmi omezených prostorech. Malý poloměr otáčení umožňuje práci v úzkých uličkách a efektivní otáčení mezi regály.",
     featuresTitle: "Klíčové vlastnosti",
     features: [
-      { title: "Kompaktní rozměry", desc: "Minimální poloměr otáčení pro manévrování v úzkých prostorech" },
-      { title: "Zadní řízení", desc: "Pohon zadní nápravou zajišťuje stabilitu i při přepravě zátěže" },
-      { title: "Lithiová varianta", desc: "Dostupná s lithiovou baterií pro provoz v potravinářství a chlazení" },
-      { title: "Volba pneumatik", desc: "Plné, super-elastické nebo polyuretanové pro různé typy podlahy" },
+      {
+        title: "Maximální obratnost",
+        desc: "Kompaktní rozměry a malý poloměr otáčení pro manévrování v úzkých uličkách",
+      },
+      {
+        title: "Dvojice poháněných předních kol",
+        desc: "Vysoký výkon, tichý provoz a vynikající manévrovatelnost",
+      },
+      {
+        title: "80V Li-Ion baterie",
+        desc: "Bezúdržbová baterie s dlouhou životností, nulové lokální emise a nízké provozní náklady",
+      },
+      {
+        title: "Komfort obsluhy",
+        desc: "Ergonomické pracoviště vhodné do hal a každodenního vnitřního provozu",
+      },
     ],
     specsTitle: "Technické parametry",
     specs: [
-      { label: "Nosnost", value: "1,2–2,0 t" },
-      { label: "Nápravy", value: "3 (zadní pohon)" },
-      { label: "Baterie", value: "24–48 V Li" },
-      { label: "Min. ulička", value: "od 2 800 mm" },
-      { label: "Max. zdvih", value: "do 6 000 mm" },
+      { label: "Nosnost", value: "1,6–1,8–2,0 t" },
+      { label: "Konstrukce", value: "Tříkolová" },
+      { label: "Baterie", value: "80 V Li-Ion" },
+      { label: "Modely", value: "FE3D16N1 / FE3D18N1 / FE3D20N1" },
+      { label: "Výška zdvihu", value: "2 500–6 500 mm" },
       { label: "Provoz", value: "Vnitřní" },
     ],
     modelsTitle: "Modely v nabídce",
-    models: ["FE3R 12 E", "FE3D 16 N1", "FE3D 20 N1"],
+    models: [
+      "FE3D16N1 — Li-Ion, volný zdvih, duplex / triplex, LED displej",
+      "FE3D18N1",
+      "FE3D20N1 — Li-Ion, volný zdvih, triplex, fingertip",
+    ],
     distributor: "VZV GROUP s.r.o. | noblelift.cz",
   },
   en: {
     title: "Noblelift Series N — technical parameters",
-    subtitle: "Three-wheel | Electric forklifts for narrow aisles",
+    subtitle: "Three-wheel N1 | Electric forklifts for narrow aisles",
     intro:
-      "Series N three-wheel forklifts are designed for narrow aisle operation. Rear-wheel drive enables turning on the spot and passage through aisles from 2.8 m wide. Optional solid or super-elastic tyres for different floor types.",
+      "The N1 range offers compact three-wheel electric counterbalance forklifts designed primarily for indoor use. The three-wheel design delivers exceptional manoeuvrability even in very confined spaces. A small turning radius enables work in narrow aisles and efficient turning between racks.",
     featuresTitle: "Key features",
     features: [
-      { title: "Compact dimensions", desc: "Minimum turning radius for manoeuvring in tight spaces" },
-      { title: "Rear steering", desc: "Rear axle drive ensures stability even when carrying loads" },
-      { title: "Lithium option", desc: "Available with lithium battery for food and cold storage applications" },
-      { title: "Tyre options", desc: "Solid, super-elastic or polyurethane for different floor types" },
+      {
+        title: "Maximum manoeuvrability",
+        desc: "Compact dimensions and a small turning radius for narrow-aisle manoeuvring",
+      },
+      {
+        title: "Dual powered front wheels",
+        desc: "High performance, quiet operation and excellent handling",
+      },
+      {
+        title: "80V Li-Ion battery",
+        desc: "Maintenance-free battery with long life, zero local emissions and low operating costs",
+      },
+      {
+        title: "Operator comfort",
+        desc: "Ergonomic workplace suited to halls and everyday indoor operation",
+      },
     ],
     specsTitle: "Technical parameters",
     specs: [
-      { label: "Capacity", value: "1.2–2.0 t" },
-      { label: "Axles", value: "3 (rear drive)" },
-      { label: "Battery", value: "24–48 V Li" },
-      { label: "Min. aisle", value: "from 2,800 mm" },
-      { label: "Max. lift", value: "up to 6,000 mm" },
+      { label: "Capacity", value: "1.6–1.8–2.0 t" },
+      { label: "Design", value: "Three-wheel" },
+      { label: "Battery", value: "80 V Li-Ion" },
+      { label: "Models", value: "FE3D16N1 / FE3D18N1 / FE3D20N1" },
+      { label: "Lift height", value: "2,500–6,500 mm" },
       { label: "Application", value: "Indoor" },
     ],
     modelsTitle: "Available models",
-    models: ["FE3R 12 E", "FE3D 16 N1", "FE3D 20 N1"],
+    models: [
+      "FE3D16N1 — Li-Ion, free lift, duplex / triplex, LED display",
+      "FE3D18N1",
+      "FE3D20N1 — Li-Ion, free lift, triplex, fingertip",
+    ],
     distributor: "VZV GROUP s.r.o. | noblelift.cz",
   },
 };

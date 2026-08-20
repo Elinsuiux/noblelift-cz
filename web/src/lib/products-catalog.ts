@@ -33,6 +33,8 @@ export type ProductModel = {
   model: string;
   capacity: string;
   descriptionKey: string;
+  /** Optional short highlights shown under the model name. */
+  highlightKey?: string;
   image: string;
   gallery?: readonly string[];
   buyUrl?: string;
@@ -79,6 +81,36 @@ export type ProductSeriesDetail = {
   }[];
   specsPdfUrl?: string;
   specsPdfFilename?: string;
+  /** Optional compact handbook extras (audience, recommend, equipment). */
+  audienceTitleKey?: string;
+  audienceKeys?: readonly string[];
+  recommendTitleKey?: string;
+  recommendWhenKeys?: readonly string[];
+  recommendOtherTitleKey?: string;
+  recommendOtherKeys?: readonly string[];
+  equipmentTitleKey?: string;
+  equipmentStandardKey?: string;
+  equipmentOptionalKey?: string;
+  /** When set, equipment is shown as bullet lists instead of paragraphs. */
+  equipmentStandardKeys?: readonly string[];
+  equipmentOptionalKeys?: readonly string[];
+  argumentKey?: string;
+  /** Optional side-by-side “main advantages” lists (e.g. PWB vs PTE). */
+  advantagesLeftTitleKey?: string;
+  advantagesLeftKeys?: readonly string[];
+  advantagesRightTitleKey?: string;
+  advantagesRightKeys?: readonly string[];
+  /** Optional two-column capacity/model comparison (e.g. Series Q). */
+  capacityCompareTitleKey?: string;
+  capacityCompareLeftTitleKey?: string;
+  capacityCompareRightTitleKey?: string;
+  capacityCompareLeftImage?: string;
+  capacityCompareRightImage?: string;
+  capacityCompareRows?: readonly {
+    labelKey: string;
+    leftKey: string;
+    rightKey: string;
+  }[];
 };
 
 export type ProductSeries = {
@@ -98,6 +130,8 @@ export type ProductSeries = {
   ctaVariant: "orange" | "dark";
   products: readonly ProductModel[];
   detail?: ProductSeriesDetail;
+  /** When set with detail, show gallery + overview panel instead of a multi-model card grid. */
+  preferOverviewLayout?: boolean;
   buyUrl?: string;
 };
 
@@ -127,6 +161,8 @@ export type CatalogCategory = {
   slug: { cz: string; en: string };
   image: string;
   subcategories: readonly Subcategory[];
+  /** When set, category page shows an extra handbook section (e.g. stackers PSE/SWB/PS). */
+  showStackersHandbook?: boolean;
 };
 
 export const VZV_SHOP_URL =
@@ -220,7 +256,7 @@ const SERIE_A_MODEL_GALLERY = [
 ] as const;
 
 const DIESEL_LPG_GALLERY = [
-  "/images/products/subcategories/diesel-lpg-forklift.png",
+  "/images/products/series/cpc-d-20-38-white.png",
   "/documents/diesel-lpg/brochure-description-1.png",
   "/documents/diesel-lpg/brochure-description-2.png",
 ] as const;
@@ -283,7 +319,9 @@ const ELECTRIC_FORKLIFT_PRODUCTS: ProductModel[] = [
     model: "FE3D16N1",
     capacity: "1600 kg",
     descriptionKey: "productsCatalog.models.fe3d16",
-    image: "/images/products/menu/elektro-3rad.jpg",
+    highlightKey: "productsCatalog.models.fe3d16Highlight",
+    image: "/images/products/series/fe3d16n1.png",
+    buyUrl: VZV_SHOP_SERIE_N_FE3D16N1_URL,
   },
   {
     id: "fe3d18",
@@ -291,13 +329,16 @@ const ELECTRIC_FORKLIFT_PRODUCTS: ProductModel[] = [
     capacity: "1800 kg",
     descriptionKey: "productsCatalog.models.fe3d18",
     image: "/images/products/menu/elektro-3rad.jpg",
+    buyUrl: VZV_SHOP_SERIE_N_FE3D16N1_URL,
   },
   {
     id: "fe3d20",
     model: "FE3D20N1",
     capacity: "2000 kg",
     descriptionKey: "productsCatalog.models.fe3d20",
-    image: "/images/products/menu/elektro-3rad.jpg",
+    highlightKey: "productsCatalog.models.fe3d20Highlight",
+    image: "/images/products/series/fe3d20n1.png",
+    buyUrl: VZV_SHOP_SERIE_N_FE3D16N1_URL,
   },
   {
     id: "fe4p",
@@ -489,6 +530,7 @@ const ELECTRIC_FORKLIFT_SERIES: ProductSeries[] = [
     gallery: SERIE_A_MODEL_GALLERY,
     ctaVariant: "orange",
     buyUrl: VZV_SHOP_SERIE_A_URL,
+    preferOverviewLayout: true,
     products: [
       ELECTRIC_FORKLIFT_PRODUCTS[10]!,
       ELECTRIC_FORKLIFT_PRODUCTS[11]!,
@@ -500,7 +542,7 @@ const ELECTRIC_FORKLIFT_SERIES: ProductSeries[] = [
       introKey: "productsCatalog.series.serieA.detail.intro",
       featureKeys: [
         {
-          icon: "ac-drive",
+          icon: "stability",
           titleKey: "productsCatalog.series.serieA.detail.features.1.title",
           descKey: "productsCatalog.series.serieA.detail.features.1.desc",
         },
@@ -510,12 +552,12 @@ const ELECTRIC_FORKLIFT_SERIES: ProductSeries[] = [
           descKey: "productsCatalog.series.serieA.detail.features.2.desc",
         },
         {
-          icon: "safety",
+          icon: "ac-drive",
           titleKey: "productsCatalog.series.serieA.detail.features.3.title",
           descKey: "productsCatalog.series.serieA.detail.features.3.desc",
         },
         {
-          icon: "maintenance",
+          icon: "cabin",
           titleKey: "productsCatalog.series.serieA.detail.features.4.title",
           descKey: "productsCatalog.series.serieA.detail.features.4.desc",
         },
@@ -526,12 +568,8 @@ const ELECTRIC_FORKLIFT_SERIES: ProductSeries[] = [
           valueKey: "productsCatalog.series.serieA.detail.specs.capacity.value",
         },
         {
-          labelKey: "productsCatalog.series.serieA.detail.specs.drive.label",
-          valueKey: "productsCatalog.series.serieA.detail.specs.drive.value",
-        },
-        {
-          labelKey: "productsCatalog.series.serieA.detail.specs.tires.label",
-          valueKey: "productsCatalog.series.serieA.detail.specs.tires.value",
+          labelKey: "productsCatalog.series.serieA.detail.specs.models.label",
+          valueKey: "productsCatalog.series.serieA.detail.specs.models.value",
         },
         {
           labelKey: "productsCatalog.series.serieA.detail.specs.battery.label",
@@ -542,12 +580,42 @@ const ELECTRIC_FORKLIFT_SERIES: ProductSeries[] = [
           valueKey: "productsCatalog.series.serieA.detail.specs.lift.value",
         },
         {
+          labelKey: "productsCatalog.series.serieA.detail.specs.drive.label",
+          valueKey: "productsCatalog.series.serieA.detail.specs.drive.value",
+        },
+        {
           labelKey: "productsCatalog.series.serieA.detail.specs.operation.label",
           valueKey: "productsCatalog.series.serieA.detail.specs.operation.value",
         },
       ],
       specsPdfUrl: "/api/documents/serie-a-technicke-parametry",
       specsPdfFilename: "serie-a-technicke-parametry.pdf",
+      audienceTitleKey: "productsCatalog.series.serieA.detail.audience.title",
+      audienceKeys: [
+        "productsCatalog.series.serieA.detail.audience.items.1",
+        "productsCatalog.series.serieA.detail.audience.items.2",
+        "productsCatalog.series.serieA.detail.audience.items.3",
+        "productsCatalog.series.serieA.detail.audience.items.4",
+        "productsCatalog.series.serieA.detail.audience.items.5",
+        "productsCatalog.series.serieA.detail.audience.items.6",
+      ],
+      recommendTitleKey: "productsCatalog.series.serieA.detail.recommend.whenTitle",
+      recommendWhenKeys: [
+        "productsCatalog.series.serieA.detail.recommend.when.1",
+        "productsCatalog.series.serieA.detail.recommend.when.2",
+        "productsCatalog.series.serieA.detail.recommend.when.3",
+        "productsCatalog.series.serieA.detail.recommend.when.4",
+        "productsCatalog.series.serieA.detail.recommend.when.5",
+      ],
+      recommendOtherTitleKey: "productsCatalog.series.serieA.detail.recommend.otherTitle",
+      recommendOtherKeys: [
+        "productsCatalog.series.serieA.detail.recommend.other.1",
+        "productsCatalog.series.serieA.detail.recommend.other.2",
+      ],
+      equipmentTitleKey: "productsCatalog.series.serieA.detail.equipment.title",
+      equipmentStandardKey: "productsCatalog.series.serieA.detail.equipment.standard",
+      equipmentOptionalKey: "productsCatalog.series.serieA.detail.equipment.optional",
+      argumentKey: "productsCatalog.series.serieA.detail.argument",
     },
   },
   {
@@ -569,6 +637,7 @@ const ELECTRIC_FORKLIFT_SERIES: ProductSeries[] = [
     image: "/images/products/series/serie-p.png",
     ctaVariant: "dark",
     buyUrl: VZV_SHOP_SERIE_P_FEP38P_URL,
+    preferOverviewLayout: true,
     products: [
       ELECTRIC_FORKLIFT_PRODUCTS[5]!,
       ELECTRIC_FORKLIFT_PRODUCTS[6]!,
@@ -580,7 +649,7 @@ const ELECTRIC_FORKLIFT_SERIES: ProductSeries[] = [
       introKey: "productsCatalog.series.serieP.detail.intro",
       featureKeys: [
         {
-          icon: "display",
+          icon: "hydraulics",
           titleKey: "productsCatalog.series.serieP.detail.features.1.title",
           descKey: "productsCatalog.series.serieP.detail.features.1.desc",
         },
@@ -595,7 +664,7 @@ const ELECTRIC_FORKLIFT_SERIES: ProductSeries[] = [
           descKey: "productsCatalog.series.serieP.detail.features.3.desc",
         },
         {
-          icon: "hydraulics",
+          icon: "ac-drive",
           titleKey: "productsCatalog.series.serieP.detail.features.4.title",
           descKey: "productsCatalog.series.serieP.detail.features.4.desc",
         },
@@ -606,8 +675,8 @@ const ELECTRIC_FORKLIFT_SERIES: ProductSeries[] = [
           valueKey: "productsCatalog.series.serieP.detail.specs.capacity.value",
         },
         {
-          labelKey: "productsCatalog.series.serieP.detail.specs.drive.label",
-          valueKey: "productsCatalog.series.serieP.detail.specs.drive.value",
+          labelKey: "productsCatalog.series.serieP.detail.specs.models.label",
+          valueKey: "productsCatalog.series.serieP.detail.specs.models.value",
         },
         {
           labelKey: "productsCatalog.series.serieP.detail.specs.battery.label",
@@ -618,8 +687,8 @@ const ELECTRIC_FORKLIFT_SERIES: ProductSeries[] = [
           valueKey: "productsCatalog.series.serieP.detail.specs.lift.value",
         },
         {
-          labelKey: "productsCatalog.series.serieP.detail.specs.display.label",
-          valueKey: "productsCatalog.series.serieP.detail.specs.display.value",
+          labelKey: "productsCatalog.series.serieP.detail.specs.control.label",
+          valueKey: "productsCatalog.series.serieP.detail.specs.control.value",
         },
         {
           labelKey: "productsCatalog.series.serieP.detail.specs.operation.label",
@@ -628,6 +697,32 @@ const ELECTRIC_FORKLIFT_SERIES: ProductSeries[] = [
       ],
       specsPdfUrl: "/api/documents/serie-p-technicke-parametry",
       specsPdfFilename: "serie-p-technicke-parametry.pdf",
+      audienceTitleKey: "productsCatalog.series.serieP.detail.audience.title",
+      audienceKeys: [
+        "productsCatalog.series.serieP.detail.audience.items.1",
+        "productsCatalog.series.serieP.detail.audience.items.2",
+        "productsCatalog.series.serieP.detail.audience.items.3",
+        "productsCatalog.series.serieP.detail.audience.items.4",
+        "productsCatalog.series.serieP.detail.audience.items.5",
+        "productsCatalog.series.serieP.detail.audience.items.6",
+      ],
+      recommendTitleKey: "productsCatalog.series.serieP.detail.recommend.whenTitle",
+      recommendWhenKeys: [
+        "productsCatalog.series.serieP.detail.recommend.when.1",
+        "productsCatalog.series.serieP.detail.recommend.when.2",
+        "productsCatalog.series.serieP.detail.recommend.when.3",
+        "productsCatalog.series.serieP.detail.recommend.when.4",
+        "productsCatalog.series.serieP.detail.recommend.when.5",
+      ],
+      recommendOtherTitleKey: "productsCatalog.series.serieP.detail.recommend.otherTitle",
+      recommendOtherKeys: [
+        "productsCatalog.series.serieP.detail.recommend.other.1",
+        "productsCatalog.series.serieP.detail.recommend.other.2",
+      ],
+      equipmentTitleKey: "productsCatalog.series.serieP.detail.equipment.title",
+      equipmentStandardKey: "productsCatalog.series.serieP.detail.equipment.standard",
+      equipmentOptionalKey: "productsCatalog.series.serieP.detail.equipment.optional",
+      argumentKey: "productsCatalog.series.serieP.detail.argument",
     },
   },
   {
@@ -664,17 +759,17 @@ const ELECTRIC_FORKLIFT_SERIES: ProductSeries[] = [
           descKey: "productsCatalog.series.serieN.detail.features.1.desc",
         },
         {
-          icon: "rear-steer",
+          icon: "ac-drive",
           titleKey: "productsCatalog.series.serieN.detail.features.2.title",
           descKey: "productsCatalog.series.serieN.detail.features.2.desc",
         },
         {
-          icon: "ac-drive",
+          icon: "battery",
           titleKey: "productsCatalog.series.serieN.detail.features.3.title",
           descKey: "productsCatalog.series.serieN.detail.features.3.desc",
         },
         {
-          icon: "tires",
+          icon: "cabin",
           titleKey: "productsCatalog.series.serieN.detail.features.4.title",
           descKey: "productsCatalog.series.serieN.detail.features.4.desc",
         },
@@ -685,16 +780,16 @@ const ELECTRIC_FORKLIFT_SERIES: ProductSeries[] = [
           valueKey: "productsCatalog.series.serieN.detail.specs.capacity.value",
         },
         {
-          labelKey: "productsCatalog.series.serieN.detail.specs.axles.label",
-          valueKey: "productsCatalog.series.serieN.detail.specs.axles.value",
+          labelKey: "productsCatalog.series.serieN.detail.specs.wheels.label",
+          valueKey: "productsCatalog.series.serieN.detail.specs.wheels.value",
         },
         {
           labelKey: "productsCatalog.series.serieN.detail.specs.battery.label",
           valueKey: "productsCatalog.series.serieN.detail.specs.battery.value",
         },
         {
-          labelKey: "productsCatalog.series.serieN.detail.specs.aisle.label",
-          valueKey: "productsCatalog.series.serieN.detail.specs.aisle.value",
+          labelKey: "productsCatalog.series.serieN.detail.specs.models.label",
+          valueKey: "productsCatalog.series.serieN.detail.specs.models.value",
         },
         {
           labelKey: "productsCatalog.series.serieN.detail.specs.lift.label",
@@ -707,6 +802,32 @@ const ELECTRIC_FORKLIFT_SERIES: ProductSeries[] = [
       ],
       specsPdfUrl: "/api/documents/serie-n-technicke-parametry",
       specsPdfFilename: "serie-n-technicke-parametry.pdf",
+      audienceTitleKey: "productsCatalog.series.serieN.detail.audience.title",
+      audienceKeys: [
+        "productsCatalog.series.serieN.detail.audience.items.1",
+        "productsCatalog.series.serieN.detail.audience.items.2",
+        "productsCatalog.series.serieN.detail.audience.items.3",
+        "productsCatalog.series.serieN.detail.audience.items.4",
+        "productsCatalog.series.serieN.detail.audience.items.5",
+      ],
+      recommendTitleKey: "productsCatalog.series.serieN.detail.recommend.whenTitle",
+      recommendWhenKeys: [
+        "productsCatalog.series.serieN.detail.recommend.when.1",
+        "productsCatalog.series.serieN.detail.recommend.when.2",
+        "productsCatalog.series.serieN.detail.recommend.when.3",
+        "productsCatalog.series.serieN.detail.recommend.when.4",
+        "productsCatalog.series.serieN.detail.recommend.when.5",
+      ],
+      recommendOtherTitleKey: "productsCatalog.series.serieN.detail.recommend.otherTitle",
+      recommendOtherKeys: [
+        "productsCatalog.series.serieN.detail.recommend.other.1",
+        "productsCatalog.series.serieN.detail.recommend.other.2",
+        "productsCatalog.series.serieN.detail.recommend.other.3",
+      ],
+      equipmentTitleKey: "productsCatalog.series.serieN.detail.equipment.title",
+      equipmentStandardKey: "productsCatalog.series.serieN.detail.equipment.standard",
+      equipmentOptionalKey: "productsCatalog.series.serieN.detail.equipment.optional",
+      argumentKey: "productsCatalog.series.serieN.detail.argument",
     },
   },
   {
@@ -729,6 +850,7 @@ const ELECTRIC_FORKLIFT_SERIES: ProductSeries[] = [
     gallery: ["/images/products/series/serie-q-fe4p-50.png"],
     ctaVariant: "dark",
     buyUrl: VZV_SHOP_SERIE_Q_FE4P50Q_URL,
+    preferOverviewLayout: true,
     products: [
       ELECTRIC_FORKLIFT_PRODUCTS[14]!,
       ELECTRIC_FORKLIFT_PRODUCTS[15]!,
@@ -739,22 +861,22 @@ const ELECTRIC_FORKLIFT_SERIES: ProductSeries[] = [
       introKey: "productsCatalog.series.serieQ.detail.intro",
       featureKeys: [
         {
-          icon: "safety",
+          icon: "stability",
           titleKey: "productsCatalog.series.serieQ.detail.features.1.title",
           descKey: "productsCatalog.series.serieQ.detail.features.1.desc",
         },
         {
-          icon: "ac-drive",
+          icon: "compact",
           titleKey: "productsCatalog.series.serieQ.detail.features.2.title",
           descKey: "productsCatalog.series.serieQ.detail.features.2.desc",
         },
         {
-          icon: "stability",
+          icon: "battery",
           titleKey: "productsCatalog.series.serieQ.detail.features.3.title",
           descKey: "productsCatalog.series.serieQ.detail.features.3.desc",
         },
         {
-          icon: "maintenance",
+          icon: "hydraulics",
           titleKey: "productsCatalog.series.serieQ.detail.features.4.title",
           descKey: "productsCatalog.series.serieQ.detail.features.4.desc",
         },
@@ -765,20 +887,20 @@ const ELECTRIC_FORKLIFT_SERIES: ProductSeries[] = [
           valueKey: "productsCatalog.series.serieQ.detail.specs.capacity.value",
         },
         {
-          labelKey: "productsCatalog.series.serieQ.detail.specs.drive.label",
-          valueKey: "productsCatalog.series.serieQ.detail.specs.drive.value",
+          labelKey: "productsCatalog.series.serieQ.detail.specs.models.label",
+          valueKey: "productsCatalog.series.serieQ.detail.specs.models.value",
         },
         {
-          labelKey: "productsCatalog.series.serieQ.detail.specs.voltage.label",
-          valueKey: "productsCatalog.series.serieQ.detail.specs.voltage.value",
+          labelKey: "productsCatalog.series.serieQ.detail.specs.battery.label",
+          valueKey: "productsCatalog.series.serieQ.detail.specs.battery.value",
         },
         {
           labelKey: "productsCatalog.series.serieQ.detail.specs.lift.label",
           valueKey: "productsCatalog.series.serieQ.detail.specs.lift.value",
         },
         {
-          labelKey: "productsCatalog.series.serieQ.detail.specs.tires.label",
-          valueKey: "productsCatalog.series.serieQ.detail.specs.tires.value",
+          labelKey: "productsCatalog.series.serieQ.detail.specs.control.label",
+          valueKey: "productsCatalog.series.serieQ.detail.specs.control.value",
         },
         {
           labelKey: "productsCatalog.series.serieQ.detail.specs.operation.label",
@@ -787,6 +909,61 @@ const ELECTRIC_FORKLIFT_SERIES: ProductSeries[] = [
       ],
       specsPdfUrl: "/api/documents/serie-q-technicke-parametry",
       specsPdfFilename: "serie-q-technicke-parametry.pdf",
+      capacityCompareTitleKey: "productsCatalog.series.serieQ.detail.capacityCompare.title",
+      capacityCompareLeftTitleKey: "productsCatalog.series.serieQ.detail.capacityCompare.leftTitle",
+      capacityCompareRightTitleKey: "productsCatalog.series.serieQ.detail.capacityCompare.rightTitle",
+      capacityCompareRows: [
+        {
+          labelKey: "productsCatalog.series.serieQ.detail.capacityCompare.rows.1.label",
+          leftKey: "productsCatalog.series.serieQ.detail.capacityCompare.rows.1.left",
+          rightKey: "productsCatalog.series.serieQ.detail.capacityCompare.rows.1.right",
+        },
+        {
+          labelKey: "productsCatalog.series.serieQ.detail.capacityCompare.rows.2.label",
+          leftKey: "productsCatalog.series.serieQ.detail.capacityCompare.rows.2.left",
+          rightKey: "productsCatalog.series.serieQ.detail.capacityCompare.rows.2.right",
+        },
+        {
+          labelKey: "productsCatalog.series.serieQ.detail.capacityCompare.rows.3.label",
+          leftKey: "productsCatalog.series.serieQ.detail.capacityCompare.rows.3.left",
+          rightKey: "productsCatalog.series.serieQ.detail.capacityCompare.rows.3.right",
+        },
+        {
+          labelKey: "productsCatalog.series.serieQ.detail.capacityCompare.rows.4.label",
+          leftKey: "productsCatalog.series.serieQ.detail.capacityCompare.rows.4.left",
+          rightKey: "productsCatalog.series.serieQ.detail.capacityCompare.rows.4.right",
+        },
+        {
+          labelKey: "productsCatalog.series.serieQ.detail.capacityCompare.rows.5.label",
+          leftKey: "productsCatalog.series.serieQ.detail.capacityCompare.rows.5.left",
+          rightKey: "productsCatalog.series.serieQ.detail.capacityCompare.rows.5.right",
+        },
+      ],
+      audienceTitleKey: "productsCatalog.series.serieQ.detail.audience.title",
+      audienceKeys: [
+        "productsCatalog.series.serieQ.detail.audience.items.1",
+        "productsCatalog.series.serieQ.detail.audience.items.2",
+        "productsCatalog.series.serieQ.detail.audience.items.3",
+        "productsCatalog.series.serieQ.detail.audience.items.4",
+        "productsCatalog.series.serieQ.detail.audience.items.5",
+      ],
+      recommendTitleKey: "productsCatalog.series.serieQ.detail.recommend.whenTitle",
+      recommendWhenKeys: [
+        "productsCatalog.series.serieQ.detail.recommend.when.1",
+        "productsCatalog.series.serieQ.detail.recommend.when.2",
+        "productsCatalog.series.serieQ.detail.recommend.when.3",
+        "productsCatalog.series.serieQ.detail.recommend.when.4",
+        "productsCatalog.series.serieQ.detail.recommend.when.5",
+      ],
+      recommendOtherTitleKey: "productsCatalog.series.serieQ.detail.recommend.otherTitle",
+      recommendOtherKeys: [
+        "productsCatalog.series.serieQ.detail.recommend.other.1",
+        "productsCatalog.series.serieQ.detail.recommend.other.2",
+      ],
+      equipmentTitleKey: "productsCatalog.series.serieQ.detail.equipment.title",
+      equipmentStandardKey: "productsCatalog.series.serieQ.detail.equipment.standard",
+      equipmentOptionalKey: "productsCatalog.series.serieQ.detail.equipment.optional",
+      argumentKey: "productsCatalog.series.serieQ.detail.argument",
     },
   },
 ];
@@ -1415,7 +1592,7 @@ const PALLET_POWERED_PRODUCTS: ProductModel[] = [
     model: "PWB 150",
     capacity: "1500 kg",
     descriptionKey: "productsCatalog.models.pwb150",
-    image: "/images/products/pallet/edge-electric.png",
+    image: "/images/products/pallet/pwb-avant.png",
     buyUrl: VZV_SHOP_PALLET_POWERED_URL,
   },
   {
@@ -1423,7 +1600,7 @@ const PALLET_POWERED_PRODUCTS: ProductModel[] = [
     model: "PTE 15 Q2",
     capacity: "1500 kg",
     descriptionKey: "productsCatalog.models.pte15q2",
-    image: "/images/products/pallet/edge-electric.png",
+    image: "/images/products/pallet/pte-atom-2.png",
     buyUrl: VZV_SHOP_PALLET_POWERED_URL,
   },
   {
@@ -1431,7 +1608,7 @@ const PALLET_POWERED_PRODUCTS: ProductModel[] = [
     model: "PWB 200",
     capacity: "2000 kg",
     descriptionKey: "productsCatalog.models.pwb200",
-    image: "/images/products/pallet/edge-electric.png",
+    image: "/images/products/pallet/pwb-avant.png",
     buyUrl: VZV_SHOP_PALLET_POWERED_URL,
   },
   {
@@ -1439,7 +1616,7 @@ const PALLET_POWERED_PRODUCTS: ProductModel[] = [
     model: "PTE 15N SC",
     capacity: "1500 kg",
     descriptionKey: "productsCatalog.models.pte15nsc",
-    image: "/images/products/pallet/edge-electric.png",
+    image: "/images/products/pallet/pte-atom-2.png",
     buyUrl: VZV_SHOP_PALLET_POWERED_URL,
   },
   {
@@ -1447,7 +1624,7 @@ const PALLET_POWERED_PRODUCTS: ProductModel[] = [
     model: "PTE 15 Q2SC",
     capacity: "1500 kg",
     descriptionKey: "productsCatalog.models.pte15q2sc",
-    image: "/images/products/pallet/edge-electric.png",
+    image: "/images/products/pallet/pte-atom-2.png",
     buyUrl: VZV_SHOP_PALLET_POWERED_URL,
   },
 ];
@@ -1590,7 +1767,7 @@ export const PRODUCT_CATALOG: readonly CatalogCategory[] = [
         badgeKey: "productsCatalog.subcategories.dieselLpg.badge",
         icon: "fuel",
         ctaVariant: "orange",
-        image: "/images/products/subcategories/diesel-lpg-forklift.png",
+        image: "/images/products/series/cpc-d-20-38-white.png",
         modelRangeKey: "productsCatalog.dieselLpg.modelRange",
         capacityKey: "productsCatalog.dieselLpg.capacity",
         productLineKey: "productsCatalog.dieselLpg.productLine",
@@ -1667,6 +1844,7 @@ export const PRODUCT_CATALOG: readonly CatalogCategory[] = [
     id: "2",
     slug: { cz: "rucni-vysokozdvizne", en: "stackers" },
     image: "/images/home/categories/2.jpg",
+    showStackersHandbook: true,
     subcategories: [
       {
         id: "walkie",
@@ -1812,11 +1990,14 @@ export const PRODUCT_CATALOG: readonly CatalogCategory[] = [
         badgeKey: "productsCatalog.subcategories.powered.badge",
         icon: "powered",
         ctaVariant: "orange",
-        image: "/images/products/pallet/edge-electric.png",
+        image: "/images/products/pallet/pwb-avant.png",
         modelRangeKey: "productsCatalog.palletPowered.modelRange",
         capacityKey: "productsCatalog.palletPowered.capacity",
         productLineKey: "productsCatalog.palletPowered.productLine",
-        gallery: ["/images/products/pallet/edge-electric.png"],
+        gallery: [
+          "/images/products/pallet/pwb-avant.png",
+          "/images/products/pallet/pte-atom-2.png",
+        ],
         buyUrl: VZV_SHOP_PALLET_POWERED_URL,
         tagKeys: [
           "productsCatalog.subcategories.powered.tags.1",
@@ -1829,7 +2010,7 @@ export const PRODUCT_CATALOG: readonly CatalogCategory[] = [
           introKey: "productsCatalog.palletPowered.detail.intro",
           featureKeys: [
             {
-              icon: "battery",
+              icon: "compact",
               titleKey: "productsCatalog.palletPowered.detail.features.1.title",
               descKey: "productsCatalog.palletPowered.detail.features.1.desc",
             },
@@ -1839,12 +2020,12 @@ export const PRODUCT_CATALOG: readonly CatalogCategory[] = [
               descKey: "productsCatalog.palletPowered.detail.features.2.desc",
             },
             {
-              icon: "compact",
+              icon: "battery",
               titleKey: "productsCatalog.palletPowered.detail.features.3.title",
               descKey: "productsCatalog.palletPowered.detail.features.3.desc",
             },
             {
-              icon: "maintenance",
+              icon: "display",
               titleKey: "productsCatalog.palletPowered.detail.features.4.title",
               descKey: "productsCatalog.palletPowered.detail.features.4.desc",
             },
@@ -1855,20 +2036,20 @@ export const PRODUCT_CATALOG: readonly CatalogCategory[] = [
               valueKey: "productsCatalog.palletPowered.detail.specs.capacity.value",
             },
             {
-              labelKey: "productsCatalog.palletPowered.detail.specs.drive.label",
-              valueKey: "productsCatalog.palletPowered.detail.specs.drive.value",
+              labelKey: "productsCatalog.palletPowered.detail.specs.models.label",
+              valueKey: "productsCatalog.palletPowered.detail.specs.models.value",
             },
             {
-              labelKey: "productsCatalog.palletPowered.detail.specs.lift.label",
-              valueKey: "productsCatalog.palletPowered.detail.specs.lift.value",
+              labelKey: "productsCatalog.palletPowered.detail.specs.pte.label",
+              valueKey: "productsCatalog.palletPowered.detail.specs.pte.value",
             },
             {
               labelKey: "productsCatalog.palletPowered.detail.specs.battery.label",
               valueKey: "productsCatalog.palletPowered.detail.specs.battery.value",
             },
             {
-              labelKey: "productsCatalog.palletPowered.detail.specs.operation.label",
-              valueKey: "productsCatalog.palletPowered.detail.specs.operation.value",
+              labelKey: "productsCatalog.palletPowered.detail.specs.pteBattery.label",
+              valueKey: "productsCatalog.palletPowered.detail.specs.pteBattery.value",
             },
             {
               labelKey: "productsCatalog.palletPowered.detail.specs.type.label",
@@ -1877,6 +2058,130 @@ export const PRODUCT_CATALOG: readonly CatalogCategory[] = [
           ],
           specsPdfUrl: "/api/documents/catalog-specs/powered",
           specsPdfFilename: "powered-technicke-parametry.pdf",
+          capacityCompareTitleKey: "productsCatalog.palletPowered.detail.capacityCompare.title",
+          capacityCompareLeftTitleKey: "productsCatalog.palletPowered.detail.capacityCompare.leftTitle",
+          capacityCompareRightTitleKey: "productsCatalog.palletPowered.detail.capacityCompare.rightTitle",
+          capacityCompareLeftImage: "/images/products/pallet/pwb-avant.png",
+          capacityCompareRightImage: "/images/products/pallet/pte-atom-2.png",
+          capacityCompareRows: [
+            {
+              labelKey: "productsCatalog.palletPowered.detail.capacityCompare.rows.1.label",
+              leftKey: "productsCatalog.palletPowered.detail.capacityCompare.rows.1.left",
+              rightKey: "productsCatalog.palletPowered.detail.capacityCompare.rows.1.right",
+            },
+            {
+              labelKey: "productsCatalog.palletPowered.detail.capacityCompare.rows.2.label",
+              leftKey: "productsCatalog.palletPowered.detail.capacityCompare.rows.2.left",
+              rightKey: "productsCatalog.palletPowered.detail.capacityCompare.rows.2.right",
+            },
+            {
+              labelKey: "productsCatalog.palletPowered.detail.capacityCompare.rows.3.label",
+              leftKey: "productsCatalog.palletPowered.detail.capacityCompare.rows.3.left",
+              rightKey: "productsCatalog.palletPowered.detail.capacityCompare.rows.3.right",
+            },
+            {
+              labelKey: "productsCatalog.palletPowered.detail.capacityCompare.rows.4.label",
+              leftKey: "productsCatalog.palletPowered.detail.capacityCompare.rows.4.left",
+              rightKey: "productsCatalog.palletPowered.detail.capacityCompare.rows.4.right",
+            },
+            {
+              labelKey: "productsCatalog.palletPowered.detail.capacityCompare.rows.5.label",
+              leftKey: "productsCatalog.palletPowered.detail.capacityCompare.rows.5.left",
+              rightKey: "productsCatalog.palletPowered.detail.capacityCompare.rows.5.right",
+            },
+            {
+              labelKey: "productsCatalog.palletPowered.detail.capacityCompare.rows.6.label",
+              leftKey: "productsCatalog.palletPowered.detail.capacityCompare.rows.6.left",
+              rightKey: "productsCatalog.palletPowered.detail.capacityCompare.rows.6.right",
+            },
+            {
+              labelKey: "productsCatalog.palletPowered.detail.capacityCompare.rows.7.label",
+              leftKey: "productsCatalog.palletPowered.detail.capacityCompare.rows.7.left",
+              rightKey: "productsCatalog.palletPowered.detail.capacityCompare.rows.7.right",
+            },
+            {
+              labelKey: "productsCatalog.palletPowered.detail.capacityCompare.rows.8.label",
+              leftKey: "productsCatalog.palletPowered.detail.capacityCompare.rows.8.left",
+              rightKey: "productsCatalog.palletPowered.detail.capacityCompare.rows.8.right",
+            },
+            {
+              labelKey: "productsCatalog.palletPowered.detail.capacityCompare.rows.9.label",
+              leftKey: "productsCatalog.palletPowered.detail.capacityCompare.rows.9.left",
+              rightKey: "productsCatalog.palletPowered.detail.capacityCompare.rows.9.right",
+            },
+            {
+              labelKey: "productsCatalog.palletPowered.detail.capacityCompare.rows.10.label",
+              leftKey: "productsCatalog.palletPowered.detail.capacityCompare.rows.10.left",
+              rightKey: "productsCatalog.palletPowered.detail.capacityCompare.rows.10.right",
+            },
+            {
+              labelKey: "productsCatalog.palletPowered.detail.capacityCompare.rows.11.label",
+              leftKey: "productsCatalog.palletPowered.detail.capacityCompare.rows.11.left",
+              rightKey: "productsCatalog.palletPowered.detail.capacityCompare.rows.11.right",
+            },
+            {
+              labelKey: "productsCatalog.palletPowered.detail.capacityCompare.rows.12.label",
+              leftKey: "productsCatalog.palletPowered.detail.capacityCompare.rows.12.left",
+              rightKey: "productsCatalog.palletPowered.detail.capacityCompare.rows.12.right",
+            },
+          ],
+          audienceTitleKey: "productsCatalog.palletPowered.detail.audience.title",
+          audienceKeys: [
+            "productsCatalog.palletPowered.detail.audience.items.1",
+            "productsCatalog.palletPowered.detail.audience.items.2",
+            "productsCatalog.palletPowered.detail.audience.items.3",
+            "productsCatalog.palletPowered.detail.audience.items.4",
+            "productsCatalog.palletPowered.detail.audience.items.5",
+          ],
+          recommendTitleKey: "productsCatalog.palletPowered.detail.recommend.whenTitle",
+          recommendWhenKeys: [
+            "productsCatalog.palletPowered.detail.recommend.when.1",
+            "productsCatalog.palletPowered.detail.recommend.when.2",
+            "productsCatalog.palletPowered.detail.recommend.when.3",
+            "productsCatalog.palletPowered.detail.recommend.when.4",
+            "productsCatalog.palletPowered.detail.recommend.when.5",
+          ],
+          recommendOtherTitleKey: "productsCatalog.palletPowered.detail.recommend.otherTitle",
+          recommendOtherKeys: [
+            "productsCatalog.palletPowered.detail.recommend.other.1",
+            "productsCatalog.palletPowered.detail.recommend.other.2",
+            "productsCatalog.palletPowered.detail.recommend.other.3",
+            "productsCatalog.palletPowered.detail.recommend.other.4",
+            "productsCatalog.palletPowered.detail.recommend.other.5",
+          ],
+          equipmentTitleKey: "productsCatalog.palletPowered.detail.equipment.title",
+          equipmentStandardKeys: [
+            "productsCatalog.palletPowered.detail.equipment.standardItems.1",
+            "productsCatalog.palletPowered.detail.equipment.standardItems.2",
+            "productsCatalog.palletPowered.detail.equipment.standardItems.3",
+            "productsCatalog.palletPowered.detail.equipment.standardItems.4",
+          ],
+          equipmentOptionalKeys: [
+            "productsCatalog.palletPowered.detail.equipment.optionalItems.1",
+            "productsCatalog.palletPowered.detail.equipment.optionalItems.2",
+          ],
+          advantagesLeftTitleKey: "productsCatalog.palletPowered.detail.advantages.pwbTitle",
+          advantagesLeftKeys: [
+            "productsCatalog.palletPowered.detail.advantages.pwb.1",
+            "productsCatalog.palletPowered.detail.advantages.pwb.2",
+            "productsCatalog.palletPowered.detail.advantages.pwb.3",
+            "productsCatalog.palletPowered.detail.advantages.pwb.4",
+            "productsCatalog.palletPowered.detail.advantages.pwb.5",
+            "productsCatalog.palletPowered.detail.advantages.pwb.6",
+            "productsCatalog.palletPowered.detail.advantages.pwb.7",
+          ],
+          advantagesRightTitleKey: "productsCatalog.palletPowered.detail.advantages.pteTitle",
+          advantagesRightKeys: [
+            "productsCatalog.palletPowered.detail.advantages.pte.1",
+            "productsCatalog.palletPowered.detail.advantages.pte.2",
+            "productsCatalog.palletPowered.detail.advantages.pte.3",
+            "productsCatalog.palletPowered.detail.advantages.pte.4",
+            "productsCatalog.palletPowered.detail.advantages.pte.5",
+            "productsCatalog.palletPowered.detail.advantages.pte.6",
+            "productsCatalog.palletPowered.detail.advantages.pte.7",
+            "productsCatalog.palletPowered.detail.advantages.pte.8",
+          ],
+          argumentKey: "productsCatalog.palletPowered.detail.argument",
         },
       },
     ],
