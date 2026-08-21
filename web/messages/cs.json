@@ -611,88 +611,72 @@
   "legalPrivacy": {
     "meta": {
       "title": "Zásady zpracování osobních údajů | Noblelift | VZV GROUP s.r.o.",
-      "description": "Informace o zpracování osobních údajů na webu noblelift.cz provozovaném společností VZV GROUP s.r.o."
+      "description": "Podmínky ochrany a zpracování osobních údajů na webu noblelift.cz provozovaném společností VZV GROUP s.r.o."
     },
     "title": "Zásady zpracování osobních údajů",
-    "updated": "Účinnost od 10. 7. 2026",
-    "intro": "Tyto zásady popisují, jak společnost VZV GROUP s.r.o. zpracovává osobní údaje návštěvníků webu noblelift.cz a osob, které nás kontaktují v souvislosti s nabídkou, prodejem, servisem a distribucí manipulační techniky Noblelift.",
+    "intro": "Podmínky ochrany osobních údajů na webu noblelift.cz. Pokud potřebujete více informací nebo máte jakoukoli otázku o našich podmínkách ochrany osobních údajů, kontaktujte nás na e-mailu info@noblelift.cz.",
     "sections": [
+      {
+        "title": "Úvod",
+        "paragraphs": [
+          "Na www.noblelift.cz považujeme soukromí návštěvníků za extrémně důležité. Tyto podmínky ochrany osobních údajů detailně popisují, jaké typy osobních informací jsou shromažďovány a ukládány na www.noblelift.cz a jak je používáme."
+        ]
+      },
+      {
+        "title": "Logovací soubory",
+        "paragraphs": [
+          "Podobně jako spousta ostatních webů i www.noblelift.cz používá takzvané log files. Tyto soubory pouze přihlašují návštěvníky ke stránce – obvykle je to standardní postup hostingových společností, jedná se o část analýzy hostingových služeb. Informace uložené v log files zahrnují IP adresy, typ prohlížeče, informace o poskytovateli internetových služeb (ISP), datumové/časové razítko, odkazující/exit stránky a případně počet kliknutí. Tyto informace používáme k analýze trendů, administraci stránky, sledování pohybu uživatele na stránce a získání demografických informací. IP adresy a další podobné informace nejsou propojeny s jakoukoli informací, pomocí které by se daly přiřadit konkrétní osobě."
+        ]
+      },
+      {
+        "title": "Cookies a Web Beacons",
+        "paragraphs": [
+          "www.noblelift.cz používá cookies k ukládání informací o preferencích návštěvníků, k ukládání informací specifických pro daného uživatele (například které stránky uživatel zobrazí nebo navštíví) a k personalizaci nebo úpravě naší webové stránky na základě typu prohlížeče nebo jiné informace, kterou návštěvník odesílá pomocí prohlížeče. Ostatní technologie (jako cookies, JavaScript nebo Web Beacons) mohou být též použity našimi partnery poskytujícími reklamy k měření efektivity reklamních kampaní a/nebo k personalizaci reklam, které vidíte na stránkách.",
+          "www.noblelift.cz nemá přístup ani kontrolu ke cookies, které používají třetí strany. Podrobnější informace o cookies na tomto webu naleznete také na stránce Cookies."
+        ]
+      },
+      {
+        "title": "Podmínky ochrany osobních údajů třetích stran",
+        "paragraphs": [
+          "Pro více detailních informací o praktikách třetích stran a o informace, jak některé z nich zakázat, si pročtěte podmínky ochrany osobních údajů dané třetí strany. Podmínky webu www.noblelift.cz se na ně nevztahují a nemůžeme ovlivňovat jejich aktivity. Přehled těchto třetích stran a odkazy naleznete zde:"
+        ],
+        "list": [
+          "Facebook – https://www.facebook.com/about/privacy/",
+          "Sklik – https://www.sklik.cz/",
+          "Google – https://policies.google.com/technologies/ads",
+          "SmartLook – https://www.smartlook.com/help/privacy-statement/"
+        ]
+      },
+      {
+        "title": "Vypnutí cookies",
+        "paragraphs": [
+          "Pokud si přejete vypnout cookies, můžete to provést v nastavení vašeho prohlížeče. Detailní informace o nastavení cookies v jednotlivých prohlížečích naleznete na webových stránkách daného prohlížeče:"
+        ],
+        "list": [
+          "Google Chrome – https://support.google.com/chrome/answer/95647?co=GENIE.Platform%3DDesktop&hl=cs",
+          "Internet Explorer – https://support.microsoft.com/cs-cz/help/17442/windows-internet-explorer-delete-manage-cookies",
+          "Microsoft Edge – https://privacy.microsoft.com/cs-cz/windows-10-microsoft-edge-and-privacy",
+          "Mozilla Firefox – https://support.mozilla.org/cs/kb/povoleni-zakazani-cookies",
+          "Safari – https://support.apple.com/kb/ph21411?locale=cs_CZ"
+        ]
+      },
+      {
+        "title": "Podmínky ochrany osobních údajů pouze pro online služby",
+        "paragraphs": [
+          "Tyto podmínky ochrany osobních údajů se vztahují pouze k našim aktivitám online a platí pro návštěvníky našeho webu a informace sdílené a/nebo shromažďované zde. Tyto podmínky se nevztahují k žádným informacím získaným offline nebo jinými kanály než je tato webová stránka."
+        ]
+      },
+      {
+        "title": "Souhlas",
+        "paragraphs": [
+          "Používáním naší webové stránky vyjadřujete souhlas s našimi podmínkami ochrany osobních údajů a souhlasíte s jejich zněním."
+        ]
+      },
       {
         "title": "Správce osobních údajů",
         "paragraphs": [
-          "Správcem osobních údajů je VZV GROUP s.r.o., se sídlem Okružní 1144, 500 03 Hradec Králové, Česká republika, IČO 27469662, DIČ CZ27469662, zapsaná v obchodním rejstříku vedeném Krajským soudem v Hradci Králové, sp. zn. C 20857 (dále jen „správce“).",
-          "Kontaktní e-mail pro záležitosti ochrany osobních údajů: info@noblelift.cz."
-        ]
-      },
-      {
-        "title": "Rozsah zpracovávaných údajů",
-        "paragraphs": [
-          "Zpracováváme zejména tyto kategorie osobních údajů:"
-        ],
-        "list": [
-          "identifikační a kontaktní údaje (jméno, příjmení, e-mail, telefon, firma, stát)",
-          "obsah zprávy z kontaktního formuláře nebo e-mailové komunikace",
-          "údaje o poptávce, objednávce, servisu nebo reklamaci",
-          "technické údaje o používání webu (IP adresa, typ prohlížeče, cookies – viz Zásady používání cookies)"
-        ]
-      },
-      {
-        "title": "Účely a právní základy zpracování",
-        "paragraphs": [
-          "Osobní údaje zpracováváme pouze pro stanovené účely a na základě příslušného právního titulu podle čl. 6 GDPR:"
-        ],
-        "list": [
-          "vyřízení poptávky a komunikace s vámi – oprávněný zájem správce / jednání před uzavřením smlouvy",
-          "plnění smlouvy, dodání zboží, servis a záruční péče – plnění smlouvy",
-          "plnění zákonných povinností (účetnictví, daně, archivace) – právní povinnost",
-          "zabezpečení a provoz webu – oprávněný zájem správce",
-          "marketingová komunikace – pouze na základě vašeho souhlasu, který můžete kdykoli odvolat"
-        ]
-      },
-      {
-        "title": "Doba uchovávání údajů",
-        "paragraphs": [
-          "Údaje uchováváme po dobu nezbytnou k naplnění účelu zpracování. Poptávky a obchodní komunikaci obvykle uchováváme po dobu 3 let od posledního kontaktu, pokud nevznikne smluvní vztah. Údaje ze smluvního vztahu uchováváme po dobu trvání smlouvy a dále po dobu stanovenou právními předpisy (typicky 10 let v oblasti účetnictví a daní). Technické logy a cookies jsou uchovávány po dobu uvedenou v informacích o cookies."
-        ]
-      },
-      {
-        "title": "Příjemci a zpracovatelé",
-        "paragraphs": [
-          "Osobní údaje mohou být zpřístupněny poskytovatelům IT služeb, hostingu, e-mailové komunikace, účetnictví a dalším zpracovatelům, kteří pro nás tyto činnosti zajišťují na základě smlouvy o zpracování osobních údajů. Údaje nepředáváme třetím stranám za účelem jejich vlastního marketingu bez vašeho souhlasu.",
-          "Některé zpracovatele můžeme využívat mimo Evropskou unii; v takovém případě zajistíme odpovídající záruky přenosu podle GDPR."
-        ]
-      },
-      {
-        "title": "Vaše práva",
-        "paragraphs": [
-          "V rozsahu stanoveném GDPR máte právo:"
-        ],
-        "list": [
-          "požadovat přístup ke svým osobním údajům",
-          "požadovat opravu nebo výmaz údajů",
-          "požadovat omezení zpracování",
-          "vznést námitku proti zpracování",
-          "požadovat přenositelnost údajů",
-          "odvolat souhlas se zpracováním, pokud je zpracování založeno na souhlasu",
-          "podat stížnost u Úřadu pro ochranu osobních údajů (www.uoou.cz)"
-        ]
-      },
-      {
-        "title": "Zabezpečení údajů",
-        "paragraphs": [
-          "Přijímáme přiměřená technická a organizační opatření k ochraně osobních údajů před ztrátou, zneužitím, neoprávněným přístupem nebo zveřejněním."
-        ]
-      },
-      {
-        "title": "Cookies",
-        "paragraphs": [
-          "Podrobné informace o používání cookies naleznete na stránce Cookies. Volitelné cookies pro analytické účely aktivujeme pouze na základě vašeho souhlasu prostřednictvím cookie lišty."
-        ]
-      },
-      {
-        "title": "Změny těchto zásad",
-        "paragraphs": [
-          "Tyto zásady můžeme příležitostně aktualizovat. Aktuální verze je vždy zveřejněna na tomto webu s uvedením data účinnosti."
+          "Správcem osobních údajů je VZV GROUP s.r.o., se sídlem Okružní 1144, 500 03 Hradec Králové, Česká republika, IČO 27469662, DIČ CZ27469662, zapsaná v obchodním rejstříku vedeném Krajským soudem v Hradci Králové, sp. zn. C 20857.",
+          "Kontaktní e-mail: info@noblelift.cz."
         ]
       }
     ]
@@ -893,7 +877,7 @@
         "title": "Bez přízdvihu",
         "subtitle": "Kompaktní varianta",
         "capacity": "1,3 - 2 t",
-        "modelRange": "SWB 130, PSE 15 L-C, PS 16 L, PS 20 L",
+        "modelRange": "SWB 130, PSE 15 L-C, PS 16 L – PS 20 L",
         "productLine": "Pěší vysokozdvižný zakladač bez přízdvihu",
         "desc": "Zakladače bez počátečního přízdvihu pro maximální kompaktnost a manipulaci v nejužších prostorách skladu.",
         "uses": {
@@ -1019,7 +1003,7 @@
         "title": "Bez přízdvihu",
         "subtitle": "S plošinou pro operátora",
         "capacity": "1,6 - 2 t",
-        "modelRange": "PS 16 N - PS 20 N",
+        "modelRange": "PS 16 N – PS 20 N",
         "productLine": "Řidičský vysokozdvižný zakladač bez přízdvihu s plošinou",
         "desc": "Zakladače s plošinou pro operátora bez počátečního přízdvihu pro efektivní manipulaci palet ve skladových uličkách.",
         "uses": {
@@ -1144,6 +1128,432 @@
       "learnMore": "Zjistit více",
       "viewModels": "Zobrazit modely",
       "downloadSpecsCta": "Stáhnout technické parametry",
+      "swb": {
+        "detail": {
+          "title": "Noblelift Řada SWB — detailní popis",
+          "intro": "Řada SWB představuje novou generaci elektrických ručně vedených vysokozdvižných vozíků Noblelift. Byla vyvinuta pro zákazníky, kteří požadují moderní Li-Ion technologii, kompaktní rozměry, vysokou ergonomii a efektivní práci v omezených prostorech. Na rozdíl od základní řady PSE nabízí vyšší komfort obsluhy, modernější konstrukci, pokročilé bezpečnostní funkce a triplexové zvedací zařízení.",
+          "features": {
+            "1": {
+              "title": "Li-Ion technologie",
+              "desc": "Moderní lithium-iontový pohon s integrovaným BMS — rychlé nabíjení a nízké provozní náklady"
+            },
+            "2": {
+              "title": "Triplex s volným zdvihem",
+              "desc": "Full Free Lift stožár ideální pro nízké sklady a práci v omezených prostorech"
+            },
+            "3": {
+              "title": "Kompaktní konstrukce",
+              "desc": "Menší poloměr otáčení a vyšší výkon pro intenzivnější provoz ve větších skladech a výrobě"
+            },
+            "4": {
+              "title": "Komfort a bezpečnost",
+              "desc": "Ergonomická oj, PIN přihlášení, želví režim, LCD displej a inteligentní bezpečnostní funkce"
+            }
+          },
+          "specs": {
+            "capacity": {
+              "label": "Nosnost",
+              "value": "1 300 kg"
+            },
+            "models": {
+              "label": "Skladové modely",
+              "value": "SWB 130, SWB 130 D (přízdvih)"
+            },
+            "battery": {
+              "label": "Baterie",
+              "value": "Li-Ion"
+            },
+            "lift": {
+              "label": "Výšky zdvihu",
+              "value": "4 200 mm Triplex s volným zdvihem (na objednávku 2 600–4 300 mm)"
+            },
+            "drive": {
+              "label": "Provoz",
+              "value": "Intenzivní skladová logistika"
+            },
+            "operation": {
+              "label": "Typ",
+              "value": "Pěší vysokozdvižný zakladač"
+            }
+          },
+          "audience": {
+            "title": "Pro koho je určena?",
+            "items": {
+              "1": "Logistická centra",
+              "2": "Výrobní podniky",
+              "3": "Maloobchod a supermarkety",
+              "4": "Sklady s omezeným prostorem"
+            }
+          },
+          "advantages": {
+            "title": "Hlavní přednosti",
+            "items": {
+              "1": "Li-Ion technologie s integrovaným BMS",
+              "2": "Triplexové zvedací zařízení s volným zdvihem – ideální pro nízké sklady",
+              "3": "Kompaktní konstrukce – menší poloměr otáčení",
+              "4": "Nová ergonomická oj řízení, ovládání zdvihu a pojezdu jednou rukou",
+              "5": "PIN pro přihlášení, želví režim, LCD displej",
+              "6": "Automatické zpomalení v zatáčkách, nouzové zastavení, elektromagnetická brzda",
+              "7": "Robustní konstrukce, snadná údržba"
+            }
+          },
+          "initialLift": {
+            "title": "Jaké jsou výhody přízdvihu?",
+            "items": {
+              "1": "Překonávání nerovností",
+              "2": "Vyšší světlá výška",
+              "3": "Lepší manipulace na rampách",
+              "4": "Manipulace se dvěma paletami – jedna na podpěrných ramenech, druhá na vidlicích"
+            }
+          },
+          "compare": {
+            "title": "Hlavní rozdíly mezi modely SWB 130 a SWB 130 D",
+            "leftTitle": "SWB 130",
+            "rightTitle": "SWB 130 D",
+            "rows": {
+              "1": {
+                "label": "Přízdvih",
+                "left": "Bez přízdvihu",
+                "right": "S přízdvihem"
+              }
+            }
+          },
+          "argument": "Řada SWB je moderní Li-Ion zakladač pro zákazníky, kteří chtějí vyšší komfort obsluhy, kompaktní rozměry a efektivní práci v omezených prostorech. Díky Full Free Lift stožáru, ergonomické oji a inteligentním bezpečnostním funkcím je ideální pro každodenní, intenzivní skladovou logistiku. Verze SWB 130 D s přízdvihem navíc zvládne bezpečně překonávat rampy, prahy i nerovné podlahy, čímž výrazně rozšiřuje možnosti využití vozíku."
+        }
+      },
+      "pse": {
+        "detail": {
+          "title": "Noblelift Řada PSE — detailní popis",
+          "intro": "Řada PSE je určena pro běžné skladové aplikace a představuje cenově dostupné řešení pro zákazníky, kteří hledají jednoduchý, spolehlivý a snadno ovladatelný zakladač. Je vhodná zejména pro každodenní manipulaci s paletami v menších skladech a provozech s nižší až střední intenzitou práce.",
+          "features": {
+            "1": {
+              "title": "Cenově dostupné řešení",
+              "desc": "Základní ekonomická řada s výborným poměrem cena / výkon — ideální jako první elektrický zakladač"
+            },
+            "2": {
+              "title": "Jednoduchý a spolehlivý",
+              "desc": "Jednoduchá konstrukce, snadná obsluha a kompaktní rozměry pro menší a střední sklady"
+            },
+            "3": {
+              "title": "Lehčí provoz",
+              "desc": "Určeno pro nižší až střední vytížení a každodenní manipulaci s paletami"
+            },
+            "4": {
+              "title": "Nejprodávanější vozík",
+              "desc": "Curtis řídicí jednotka, dlouhá ergonomická oj a nízké servisní náklady"
+            }
+          },
+          "specs": {
+            "capacity": {
+              "label": "Nosnost",
+              "value": "1 200 kg / 1 500 kg"
+            },
+            "models": {
+              "label": "Skladové modely",
+              "value": "PSE 12 ND, PSE 15 L-C"
+            },
+            "battery": {
+              "label": "Baterie",
+              "value": "Li-Ion / AGM"
+            },
+            "lift": {
+              "label": "Výšky zdvihu",
+              "value": "2 900 mm, 3 200 mm (PSE 12 ND), 3 600 mm – STD zvedací zařízení"
+            },
+            "drive": {
+              "label": "Řízení",
+              "value": "Curtis řídicí jednotka"
+            },
+            "operation": {
+              "label": "Provoz",
+              "value": "Lehčí až střední vytížení"
+            }
+          },
+          "audience": {
+            "title": "Pro koho je určena?",
+            "items": {
+              "1": "Menší sklady",
+              "2": "Maloobchod",
+              "3": "Servisní firmy",
+              "4": "Výrobní provozy",
+              "5": "Zákazníci pořizující první elektrický zakladač"
+            }
+          },
+          "overview": {
+            "title": "PSE = základní, ekonomická řada",
+            "items": {
+              "1": "Cenově dostupné řešení",
+              "2": "Jednoduchý, spolehlivý vozík",
+              "3": "Lehčí provoz, nižší vytížení",
+              "4": "Pro menší a střední sklady",
+              "5": "Nejprodávanější vozík"
+            }
+          },
+          "advantages": {
+            "title": "Hlavní přednosti",
+            "items": {
+              "1": "Výborný poměr cena / výkon",
+              "2": "Jednoduchá konstrukce",
+              "3": "Snadná obsluha",
+              "4": "Kompaktní rozměry",
+              "5": "Curtis řídicí jednotka",
+              "6": "Dlouhá ergonomická oj",
+              "7": "Nízké servisní náklady",
+              "8": "Nejprodávanější model"
+            }
+          },
+          "compare": {
+            "title": "Hlavní rozdíly mezi modely PSE 12 ND a PSE 15 L-C",
+            "leftTitle": "PSE 12 ND",
+            "rightTitle": "PSE 15 L-C",
+            "rows": {
+              "1": {
+                "label": "Nosnost",
+                "left": "1 200 kg",
+                "right": "1 500 kg"
+              },
+              "2": {
+                "label": "Baterie",
+                "left": "Li-Ion",
+                "right": "Li-Ion / AGM"
+              },
+              "3": {
+                "label": "Přízdvih",
+                "left": "Ano",
+                "right": "Ne"
+              },
+              "4": {
+                "label": "Cena",
+                "left": "Nízká",
+                "right": "Velmi nízká"
+              }
+            }
+          },
+          "argument": "Pokud zákazník hledá moderní bezúdržbový zakladač s Li-Ion baterií a potřebuje snadno překonávat rampy nebo nerovnosti, doporučte PSE 12 ND. Pokud je prioritou vyšší nosnost a co nejnižší pořizovací cena, vhodnější volbou je PSE 15 L-C."
+        }
+      },
+      "ps": {
+        "detail": {
+          "title": "Noblelift Řada PS — detailní popis",
+          "intro": "Řada PS představuje profesionální modelovou řadu elektrických zakladačů Noblelift určenou pro intenzivní každodenní provoz. Díky robustní konstrukci, proporcionální hydraulice a použití špičkových komponentů renomovaných výrobců nabízí vysokou produktivitu, přesnou manipulaci a dlouhou životnost.",
+          "features": {
+            "1": {
+              "title": "Proporcionální hydraulika",
+              "desc": "Plynulé řízení rychlosti zdvihu i spouštění pro maximální přesnost manipulace"
+            },
+            "2": {
+              "title": "Triplex s volným zdvihem",
+              "desc": "Ideální pro nízké sklady — výšky zdvihu 4 600 / 4 800 / 5 500 mm (na objednávku 2 800–5 500 mm)"
+            },
+            "3": {
+              "title": "Špičkové komponenty",
+              "desc": "Schabmüller AC motor, ZAPI, REMA oj, Kordel, HPI, Wicke, Intorq — evropské značkové díly"
+            },
+            "4": {
+              "title": "Variabilní výbava",
+              "desc": "Plošinka řidiče, přízdvih a volný zdvih podle potřeby provozu"
+            }
+          },
+          "specs": {
+            "capacity": {
+              "label": "Nosnost",
+              "value": "1 200 – 1 600 – 2 000 kg"
+            },
+            "models": {
+              "label": "Skladové modely",
+              "value": "PS 16 L, PS 16 DL, PS 16 N, PS 16 DN, PS 20 L, PS 20 N"
+            },
+            "battery": {
+              "label": "Provoz",
+              "value": "Intenzivní každodenní"
+            },
+            "lift": {
+              "label": "Výšky zdvihu",
+              "value": "4 600 / 4 800 / 5 500 mm Triplex s VZ"
+            },
+            "drive": {
+              "label": "Hydraulika",
+              "value": "Proporcionální"
+            },
+            "operation": {
+              "label": "Typ",
+              "value": "Profesionální řada"
+            }
+          },
+          "audience": {
+            "title": "Pro koho je určena?",
+            "items": {
+              "1": "Logistická centra",
+              "2": "Výrobní podniky",
+              "3": "Distribuční sklady",
+              "4": "Vícesměnný provoz",
+              "5": "Zákazníci požadující maximální produktivitu"
+            }
+          },
+          "advantages": {
+            "title": "Hlavní přednosti",
+            "items": {
+              "1": "Proporcionální hydraulika – plynulé řízení rychlosti zdvihu i spouštění",
+              "2": "Triplexové zvedací zařízení s volným zdvihem – ideální pro nízké sklady",
+              "3": "Robustní konstrukce – určena pro náročný provoz, dlouhá životnost",
+              "4": "Špičkové evropské komponenty: Schabmüller, ZAPI, REMA, Kordel, HPI, Wicke, Intorq",
+              "5": "Variabilní výbava – plošinka řidiče, přízdvih, volný zdvih",
+              "6": "Snadný servis – snadný přístup ke komponentům"
+            }
+          },
+          "legend": {
+            "title": "Označení modelů",
+            "items": {
+              "1": "L = profesionální ručně vedený zakladač",
+              "2": "DL = profesionální zakladač s přízdvihem",
+              "3": "N = profesionální zakladač se sklopnou plošinkou",
+              "4": "DN = profesionální zakladač se sklopnou plošinkou a přízdvihem"
+            }
+          },
+          "recommend": {
+            "title": "Doporučení modelů",
+            "items": {
+              "1": "PS 16 L / PS 20 L — profesionální zakladač pro intenzivní skladový provoz",
+              "2": "PS 16 DL — pokud zákazník často překonává rampy nebo nerovnosti (přízdvih)",
+              "3": "PS 16 N / PS 20 N — pokud jsou časté delší přejezdy po skladu (plošina)",
+              "4": "PS 16 DN — pokud zákazník potřebuje přejezdy, rampy i maximální produktivitu (přízdvih + plošina)"
+            }
+          },
+          "compare": {
+            "title": "Hlavní rozdíly mezi modely",
+            "leftTitle": "Bez plošiny",
+            "rightTitle": "S plošinou",
+            "rows": {
+              "1": {
+                "label": "Základ",
+                "left": "PS 16 L / PS 20 L",
+                "right": "PS 16 N / PS 20 N"
+              },
+              "2": {
+                "label": "S přízdvihem",
+                "left": "PS 16 DL",
+                "right": "PS 16 DN"
+              },
+              "3": {
+                "label": "Použití",
+                "left": "Intenzivní skladový provoz, rampy (DL)",
+                "right": "Delší přejezdy, maximální produktivita (DN)"
+              },
+              "4": {
+                "label": "Nosnost",
+                "left": "1 600 – 2 000 kg",
+                "right": "1 600 – 2 000 kg"
+              }
+            }
+          },
+          "argument": "Řada PS je určena pro zákazníky, kteří využívají zakladač každý den. Díky proporcionální hydraulice, kvalitním značkovým komponentům a robustní konstrukci nabízí maximální přesnost, vysokou produktivitu a dlouhou životnost. Varianty s přízdvihem usnadňují práci na rampách a nerovných podlahách, zatímco modely se sklopnou plošinkou výrazně zvyšují efektivitu při delších přejezdech ve velkých skladech."
+        }
+      },
+      "fe3r12e": {
+        "detail": {
+          "title": "Noblelift FE3R 12 E — detailní popis",
+          "intro": "FE3R 12 E je extrémně kompaktní tříkolový elektrický vysokozdvižný vozík s nosností 1 200 kg, navržený především pro manipulaci v omezených prostorech.",
+          "features": {
+            "1": {
+              "title": "Extrémně kompaktní",
+              "desc": "Šířka pouhých 922 mm a poloměr otáčení 1 490 mm — práce v úzkých uličkách a kontejnerech"
+            },
+            "2": {
+              "title": "48V Li-Ion baterie",
+              "desc": "Bezúdržbová baterie s boční výměnou a nízkými provozními náklady"
+            },
+            "3": {
+              "title": "Stabilita a manévrovatelnost",
+              "desc": "2 zadní řídicí kola a unikátní konstrukce s jedním předním hnacím kolem"
+            },
+            "4": {
+              "title": "AC trakční motor",
+              "desc": "Dlouhá životnost, komfortní hydraulika s tlumením rázů a ergonomické pracoviště"
+            }
+          },
+          "specs": {
+            "capacity": {
+              "label": "Nosnost",
+              "value": "1 200 kg"
+            },
+            "lift": {
+              "label": "Výšky zdvihu",
+              "value": "2 500–5 000 mm"
+            },
+            "battery": {
+              "label": "Baterie",
+              "value": "48 V Li-Ion"
+            },
+            "width": {
+              "label": "Šířka",
+              "value": "922 mm"
+            },
+            "turning": {
+              "label": "Poloměr otáčení",
+              "value": "1 490 mm"
+            },
+            "operation": {
+              "label": "Typ",
+              "value": "Tříkolový elektrický"
+            }
+          },
+          "audience": {
+            "title": "Pro koho je FE3R 12 E určen?",
+            "items": {
+              "1": "Velmi malé sklady",
+              "2": "Úzké uličky",
+              "3": "Výrobní provozy s omezeným prostorem",
+              "4": "Kontejnery",
+              "5": "Nakládka a vykládka nákladních vozidel",
+              "6": "Provozy, kde je klasický čelní vozík příliš velký",
+              "7": "Zákazníci požadující čelní vozík a zároveň maximální manévrovatelnost"
+            }
+          },
+          "advantages": {
+            "title": "Hlavní přednosti a další výhody",
+            "items": {
+              "1": "Extrémně kompaktní konstrukce — šířka 922 mm, poloměr otáčení 1 490 mm",
+              "2": "2 zadní řídicí kola zajišťují dobrou stabilitu při práci s nákladem",
+              "3": "AC trakční motor s dlouhou životností",
+              "4": "Bezúdržbová 48V Li-Ion baterie",
+              "5": "Boční výměna baterie",
+              "6": "Ergonomické pracoviště řidiče",
+              "7": "Nízké provozní náklady",
+              "8": "Komfortní hydraulický systém s tlumením rázů"
+            }
+          },
+          "benefits": {
+            "title": "Přínos pro zákazníka",
+            "items": {
+              "1": "Kompaktní rozměry",
+              "2": "Výborná manévrovatelnost",
+              "3": "Práce v úzkých uličkách, otáčení mezi regály a manipulace v kontejnerech"
+            }
+          },
+          "recommend": {
+            "whenTitle": "Kdy vozík E doporučit?",
+            "when": {
+              "1": "Zákazník má velmi málo místa",
+              "2": "Potřebuje vozík do kontejneru",
+              "3": "Běžný čelní vozík není vhodný",
+              "4": "Nosnost do 1,2 t",
+              "5": "Když zákazník potřebuje co nejmenší poloměr otáčení"
+            },
+            "otherTitle": "Kdy doporučit jinou řadu?",
+            "other": {
+              "1": "Potřebuje vyšší nosnost",
+              "2": "Má dostatek místa",
+              "3": "Nerovný povrch"
+            }
+          },
+          "equipment": {
+            "title": "Výbava",
+            "standard": "Boční posuv, předehřev baterie, Blue Spot, komfortní sedačka, USB port, LED osvětlení, zadní madlo s klaksonem, hydraulické páky, 3sekční rozvaděč, nešpinící SE pneumatiky, ochranná mříž nákladu, panoramatické zrcátko.",
+            "optional": "Kabina, externí nabíječka."
+          },
+          "argument": "FE3R 12 E je extrémně kompaktní tříkolový elektrický vozík určený pro provozy, kde klasický čelní vozík nemá dostatek prostoru. Díky šířce pouhých 922 mm, poloměru otáčení 1 490 mm a unikátní konstrukci s jedním předním hnacím a dvěma zadními řídicími koly nabízí mimořádnou manévrovatelnost. Přitom si zachovává komfort klasického čelního vozíku, nosnost 1,2 tuny a možnost zdvihu až 5 metrů."
+        }
+      },
       "serieA": {
         "badge": "Série A",
         "title": "Základní model",
@@ -1333,21 +1743,21 @@
         }
       },
       "serieN": {
-        "badge": "Série N",
+        "badge": "Série E-N",
         "title": "Tříkolové",
         "subtitle": "Úzké uličky",
-        "capacity": "1,6 – 2,0 t",
-        "modelRange": "FE3D16N1, FE3D18N1, FE3D20N1",
-        "productLine": "Kompaktní tříkolové elektrické vozíky N1 pro práci v interiéru a úzkých prostorech.",
-        "desc": "Kompaktní tříkolové elektrické vozíky N1 pro práci v interiéru a úzkých prostorech.",
+        "capacity": "1,2 – 2,0 t",
+        "modelRange": "FE3R 12 E, FE3D16N1 – FE3D20N1",
+        "productLine": "Kompaktní tříkolové elektrické vozíky řad E a N1 pro práci v interiéru a úzkých prostorech.",
+        "desc": "Kompaktní tříkolové elektrické vozíky řad E a N1 pro práci v interiéru a úzkých prostorech. Řada E (např. FE3R 12 E) je ekonomická varianta od 1,2 t, řada N1 nabízí nosnosti 1,6–2,0 t.",
         "uses": {
           "1": "Úzké uličky",
           "2": "Sklady a logistika",
           "3": "Nakládka a vykládka"
         },
         "detail": {
-          "title": "Noblelift Série N — tříkolové vozíky N1",
-          "intro": "Řada N1 představuje kompaktní tříkolové elektrické vysokozdvižné vozíky určené především pro práci v interiéru. Díky tříkolové konstrukci vyniká mimořádnou obratností a snadnou manipulací i ve velmi omezených prostorech. Malý poloměr otáčení umožňuje práci v úzkých uličkách a efektivní otáčení mezi regály.",
+          "title": "Noblelift Série E-N — tříkolové vozíky E a N1",
+          "intro": "Nabídka tříkolových elektrických vysokozdvižných vozíků Noblelift zahrnuje řadu E a řadu N1. Řada E je ekonomická vstupní řada (např. FE3R 12 E) pro lehčí interiérový provoz od nosnosti 1,2 t. Řada N1 představuje kompaktní tříkolové vozíky určené především pro práci v interiéru — díky tříkolové konstrukci vyniká mimořádnou obratností a snadnou manipulací i ve velmi omezených prostorech. Malý poloměr otáčení umožňuje práci v úzkých uličkách a efektivní otáčení mezi regály.",
           "features": {
             "1": {
               "title": "Maximální obratnost",
@@ -1369,7 +1779,7 @@
           "specs": {
             "capacity": {
               "label": "Nosnost",
-              "value": "1,6–1,8–2,0 t"
+              "value": "1,2–1,6–1,8–2,0 t"
             },
             "wheels": {
               "label": "Konstrukce",
@@ -1377,11 +1787,11 @@
             },
             "battery": {
               "label": "Baterie",
-              "value": "80 V Li-Ion"
+              "value": "Li-Ion"
             },
             "models": {
               "label": "Modely",
-              "value": "FE3D16N1 / FE3D18N1 / FE3D20N1"
+              "value": "FE3R 12 E / FE3D16N1 – FE3D20N1"
             },
             "lift": {
               "label": "Výška zdvihu",
@@ -1408,8 +1818,8 @@
               "1": "Pracujete převážně uvnitř",
               "2": "Potřebujete maximální obratnost",
               "3": "Manipulujete v úzkých uličkách",
-              "4": "Nosnost do 2 tun",
-              "5": "Hledáte kompaktní elektrický vozík"
+              "4": "Nosnost 1,2–2,0 t",
+              "5": "Hledáte ekonomickou řadu E nebo kompaktní řadu N1"
             },
             "otherTitle": "Kdy doporučujeme jinou řadu",
             "other": {
@@ -1606,28 +2016,28 @@
       }
     },
     "stackerStraddle": {
-      "modelRange": "PSE 12 NSL, PT 16 TSL, PS 18 TSL",
+      "modelRange": "PSE 12 NSL, PS 16 TSL – PS 18 TSL",
       "capacity": "1,2 - 2,0 t",
       "productLine": "Obkročný elektrický vysokozdvižný zakladač",
       "detail": {
-        "title": "Noblelift obkročné zakladače — detailní popis",
-        "intro": "Obkročné elektrické zakladače pro manipulaci s atypickými paletami a nestandardními náklady. Obkročná konstrukce umožňuje práci s paletami různých rozměrů a zajišťuje maximální flexibilitu ve skladových provozech.",
+        "title": "Noblelift obkročné vozíky řada PSE a PS — detailní popis",
+        "intro": "Obkročné vysokozdvižné vozíky jsou určeny pro manipulaci s paletami, u kterých nelze použít klasický zakladač se standardními podpěrnými rameny. Díky nastavitelným obkročným ramenům mohou zvedat širokou škálu typů palet a dalších břemen. Výrobce je označuje jako Straddle Leg Electric Pedestrian Stackers.",
         "features": {
           "1": {
             "title": "Obkročná konstrukce",
-            "desc": "Vidlice obklopují paletu z boku — ideální pro atypické a nestandardní palety"
+            "desc": "Pro různé rozměry palet — vidlice obklopují náklad z boku"
           },
           "2": {
-            "title": "Elektrický pohon",
-            "desc": "Tichý a ekologický provoz vhodný pro vnitřní skladové prostory"
+            "title": "Nastavitelná ramena",
+            "desc": "Možnost nastavení rozteče podpěrných ramen podle typu nákladu"
           },
           "3": {
-            "title": "Flexibilní manipulace",
-            "desc": "Efektivní práce s paletami různých rozměrů bez nutnosti přesného zarovnání"
+            "title": "Li-Ion baterie",
+            "desc": "Moderní lithium-iontový pohon s nízkými provozními náklady"
           },
           "4": {
-            "title": "Spolehlivá konstrukce",
-            "desc": "Robustní provedení pro každodenní intenzivní využití ve skladu"
+            "title": "Stejné přednosti jako PSE a PS",
+            "desc": "Všechny přednosti stejné jako u specifikací řady PSE a PS"
           }
         },
         "specs": {
@@ -1641,11 +2051,11 @@
           },
           "lift": {
             "label": "Max. zdvih",
-            "value": "až 4 500 mm"
+            "value": "až 5 200 mm"
           },
           "battery": {
             "label": "Baterie",
-            "value": "24 V"
+            "value": "Li-Ion"
           },
           "operation": {
             "label": "Provoz",
@@ -1654,6 +2064,52 @@
           "type": {
             "label": "Typ",
             "value": "Obkročné"
+          }
+        },
+        "audience": {
+          "title": "Pro koho jsou určeny?",
+          "items": {
+            "1": "Nestandardní palety",
+            "2": "Uzavřené palety",
+            "3": "Speciální přepravní boxy",
+            "4": "Kovové kontejnery",
+            "5": "Zákazníci používající různé rozměry palet"
+          }
+        },
+        "advantages": {
+          "title": "Hlavní přednosti",
+          "items": {
+            "1": "Obkročná konstrukce pro různé rozměry palet",
+            "2": "Možnost nastavení rozteče podpěrných ramen podle typu nákladu",
+            "3": "Li-Ion baterie",
+            "4": "Všechny přednosti stejné jako u specifikací řady PSE a PS"
+          }
+        },
+        "compare": {
+          "title": "Srovnání modelů",
+          "leftTitle": "PSE 12 NSL",
+          "rightTitle": "PS 16–18 TSL",
+          "rows": {
+            "1": {
+              "label": "Nosnost",
+              "left": "1 200 kg",
+              "right": "1 600–1 800 kg"
+            },
+            "2": {
+              "label": "Zdvih",
+              "left": "1 500–3 500 mm",
+              "right": "3 300–5 200 mm"
+            },
+            "3": {
+              "label": "Stožár",
+              "left": "Single / Duplex",
+              "right": "Duplex / Triplex s VZ"
+            },
+            "4": {
+              "label": "Dostupnost",
+              "left": "Skladem – 2 900 mm",
+              "right": "Na objednávku"
+            }
           }
         }
       }
@@ -1673,32 +2129,18 @@
           "3": "Kompaktní provozy"
         }
       },
-      "pt16tsl": {
-        "badge": "PT 16 TSL",
-        "title": "PT 16 TSL",
+      "ps16tsl": {
+        "badge": "PS 16–18 TSL",
+        "title": "PS 16 TSL – PS 18 TSL",
         "subtitle": "Vyšší nosnost",
-        "capacity": "1,6 t",
-        "modelRange": "PT 16 TSL",
+        "capacity": "1,6 – 1,8 t",
+        "modelRange": "PS 16 TSL – PS 18 TSL",
         "productLine": "Obkročný elektrický vysokozdvižný zakladač",
-        "desc": "Obkročný zakladač s vyšší nosností pro náročnější manipulační cykly a nestandardní palety.",
+        "desc": "Obkročné zakladače s vyšší nosností pro náročnější manipulační cykly a nestandardní palety.",
         "uses": {
           "1": "Atypické palety",
           "2": "Vyšší nosnost",
           "3": "Intenzivní provoz"
-        }
-      },
-      "ps18tsl": {
-        "badge": "PS 18 TSL",
-        "title": "PS 18 TSL",
-        "subtitle": "Maximální kapacita",
-        "capacity": "1,8 t",
-        "modelRange": "PS 18 TSL",
-        "productLine": "Obkročný elektrický vysokozdvižný zakladač",
-        "desc": "Obkročný zakladač s nejvyšší nosností v řadě pro náročné skladové a manipulační aplikace.",
-        "uses": {
-          "1": "Atypické palety",
-          "2": "Těžší náklady",
-          "3": "Flexibilní manipulace"
         }
       }
     },
@@ -2449,7 +2891,9 @@
       }
     },
     "models": {
-      "fe3d": "Kompaktní tříkolový elektrický čelní vozík pro úzké prostory.",
+      "fe3d": "Kompaktní tříkolové elektrické vozíky řady N1 pro práci v interiéru a úzkých prostorech.",
+      "fe3r12e": "Tříkolový elektrický čelní vozík Série E s nosností 1,2 t — Li-Ion, volný zdvih, duplex.",
+      "fe3r12eHighlight": "Li-Ion, volný zdvih, Duplex",
       "fe3d16": "Tříkolový elektrický čelní vozík Série N s nosností 1,6 t.",
       "fe3d16Highlight": "Li-Ion, volný zdvih, duplex / triplex, LED displej",
       "fe3d18": "Tříkolový elektrický čelní vozík Série N s nosností 1,8 t.",
@@ -2474,19 +2918,20 @@
       "pse12": "Pěší elektrický zakladač pro palety do 1,2 t.",
       "swb130": "Pěší elektrický zakladač bez přízdvihu, nosnost 1,3 t.",
       "pse15lc": "Pěší elektrický zakladač bez přízdvihu, nosnost 1,5 t.",
-      "ps16l": "Pěší elektrický zakladač bez přízdvihu, nosnost 1,6 t.",
+      "ps16l": "Pěší elektrický zakladač bez přízdvihu, nosnost 1,6–2,0 t.",
       "ps20l": "Pěší elektrický zakladač bez přízdvihu, nosnost 2,0 t.",
       "ps15": "Pěší zakladač s vyšší nosností a zdvihem.",
       "pse12nd": "Pěší elektrický zakladač s přízdvihem, nosnost 1,2 t.",
       "swb130d": "Pěší elektrický zakladač s přízdvihem, nosnost 1,3 t.",
       "ps16dl": "Pěší elektrický zakladač s přízdvihem, nosnost 1,6 t.",
       "stk15": "Řidičský zakladač s plošinou pro operátora.",
-      "ps16n": "Řidičský zakladač s plošinou bez přízdvihu, nosnost 1,6 t.",
+      "ps16n": "Řidičský zakladač s plošinou bez přízdvihu, nosnost 1,6–2,0 t.",
       "ps20n": "Řidičský zakladač s plošinou bez přízdvihu, nosnost 2,0 t.",
       "ps16dn": "Řidičský zakladač s plošinou a počátečním přízdvihem.",
       "pse12nsl": "Obkročný elektrický zakladač pro atypické palety do 1,2 t.",
-      "pt16tsl": "Obkročný elektrický zakladač s vyšší nosností do 1,6 t.",
+      "ps16tsl": "Obkročný elektrický zakladač, nosnost 1,6–1,8 t.",
       "ps18tsl": "Obkročný elektrický zakladač s nosností do 1,8 t.",
+      "pt16tsl": "Obkročný elektrický zakladač s vyšší nosností do 1,6 t.",
       "ac25": "Ruční paletový vozík s nosností 2,5 t.",
       "hptdf25": "Ruční paletový vozík HPT DF 25 s nosností 2,5 t.",
       "hptacy25": "Ruční paletový vozík HPT ACY 25 s nosností 2,5 t.",
@@ -2510,6 +2955,7 @@
       "descriptionTitle": "Popis",
       "parametersTitle": "Technické parametry",
       "viewDetails": "Technické parametry",
+      "viewDetailsCta": "Zobrazit detaily",
       "buyCta": "Koupit tento model",
       "buyShopCta": "Koupit na e-shop",
       "buyNote": "Kliknutím přejdete na oficiální e-shop VZV GROUP (vzv.cz), kde si můžete tento model zakoupit nebo rezervovat ze skladové nabídky.",

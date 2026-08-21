@@ -189,7 +189,7 @@ function emailFooter(locale: LocaleKey): string {
         <p style="margin:0 0 12px;font-size:12px;line-height:1.6;color:${MUTED};">${copy.footer}</p>
         <p style="margin:0;font-size:12px;line-height:1.6;color:${MUTED};">
           <strong style="color:${DARK};">${escapeHtml(BILLING.company)}</strong><br />
-          ${escapeHtml(BILLING.addressLine1)}, ${escapeHtml(BILLING.addressLine2)}<br />
+          ${escapeHtml(BILLING.addressLine1)}, ${escapeHtml(BILLING.addressLine2)}, ${escapeHtml(BILLING.addressLine3)}<br />
           ${escapeHtml(CONTACT.email)} · ${escapeHtml(CONTACT.phoneDisplay)}<br />
           <a href="${CONTACT.websiteUrl}" style="color:${ORANGE};text-decoration:none;">${escapeHtml(CONTACT.website)}</a>
         </p>

@@ -52,7 +52,8 @@ export const DEPOT_KEYS = ["cervenaVoda", "prague"] as const;
 export const BILLING = {
   company: "VZV GROUP s.r.o.",
   addressLine1: "Okružní 1144",
-  addressLine2: "500 03 Hradec Králové, Česká republika",
+  addressLine2: "500 03 Hradec Králové",
+  addressLine3: "Česká republika",
   ico: "27469662",
   dic: "CZ27469662",
   registry:

@@ -610,89 +610,73 @@
   },
   "legalPrivacy": {
     "meta": {
-      "title": "Privacy policy | Noblelift | VZV GROUP s.r.o.",
-      "description": "Information on personal data processing on noblelift.cz operated by VZV GROUP s.r.o."
+      "title": "Personal data processing policy | Noblelift | VZV GROUP s.r.o.",
+      "description": "Privacy and personal data processing terms on noblelift.cz operated by VZV GROUP s.r.o."
     },
-    "title": "Privacy policy",
-    "updated": "Effective from 10 July 2026",
-    "intro": "This policy describes how VZV GROUP s.r.o. processes personal data of visitors to noblelift.cz and persons who contact us regarding the offer, sale, service and distribution of Noblelift material handling equipment.",
+    "title": "Personal data processing policy",
+    "intro": "Privacy terms on noblelift.cz. If you need more information or have any questions about our privacy terms, contact us at info@noblelift.cz.",
     "sections": [
       {
-        "title": "Data controller",
+        "title": "Introduction",
         "paragraphs": [
-          "The data controller is VZV GROUP s.r.o., registered office Okružní 1144, 500 03 Hradec Králové, Czech Republic, Company ID 27469662, VAT ID CZ27469662, registered in the Commercial Register maintained by the Regional Court in Hradec Králové, file no. C 20857 (the “controller”).",
-          "Contact e-mail for privacy matters: info@noblelift.cz."
+          "At www.noblelift.cz we consider visitor privacy extremely important. These privacy terms describe in detail what types of personal information are collected and stored on www.noblelift.cz and how we use them."
         ]
       },
       {
-        "title": "Categories of data processed",
+        "title": "Log files",
         "paragraphs": [
-          "We mainly process the following categories of personal data:"
+          "Like many other websites, www.noblelift.cz uses so-called log files. These files only log visitors to the site – this is usually a standard practice of hosting companies and is part of hosting service analytics. Information stored in log files includes IP addresses, browser type, Internet service provider (ISP) information, date/time stamp, referring/exit pages and possibly the number of clicks. We use this information to analyse trends, administer the site, track user movement on the site and gather demographic information. IP addresses and other similar information are not linked to any information that could identify a specific person."
+        ]
+      },
+      {
+        "title": "Cookies and Web Beacons",
+        "paragraphs": [
+          "www.noblelift.cz uses cookies to store information about visitor preferences, to store information specific to a given user (for example which pages the user views or visits) and to personalise or customise our website based on the browser type or other information the visitor sends via the browser. Other technologies (such as cookies, JavaScript or Web Beacons) may also be used by our advertising partners to measure the effectiveness of advertising campaigns and/or to personalise the ads you see on the pages.",
+          "www.noblelift.cz does not have access to or control over cookies used by third parties. More detailed information about cookies on this website can also be found on the Cookies page."
+        ]
+      },
+      {
+        "title": "Third-party privacy terms",
+        "paragraphs": [
+          "For more detailed information about third-party practices and how to opt out of some of them, please read the privacy terms of the relevant third party. The terms of www.noblelift.cz do not apply to them and we cannot influence their activities. An overview of these third parties and links can be found here:"
         ],
         "list": [
-          "identification and contact details (name, e-mail, phone, company, country)",
-          "content of contact form messages or e-mail communication",
-          "inquiry, order, service or complaint data",
-          "technical website usage data (IP address, browser type, cookies – see our Cookie policy)"
+          "Facebook – https://www.facebook.com/about/privacy/",
+          "Sklik – https://www.sklik.cz/",
+          "Google – https://policies.google.com/technologies/ads",
+          "SmartLook – https://www.smartlook.com/help/privacy-statement/"
         ]
       },
       {
-        "title": "Purposes and legal bases",
+        "title": "Disabling cookies",
         "paragraphs": [
-          "We process personal data only for defined purposes and on the relevant legal basis under GDPR Article 6:"
+          "If you wish to disable cookies, you can do so in your browser settings. Detailed information about cookie settings in individual browsers can be found on the websites of the respective browsers:"
         ],
         "list": [
-          "handling inquiries and communication – legitimate interest / steps prior to contract",
-          "contract performance, delivery, service and warranty care – contract",
-          "compliance with legal obligations (accounting, tax, archiving) – legal obligation",
-          "website security and operation – legitimate interest",
-          "marketing communication – only with your consent, which you may withdraw at any time"
+          "Google Chrome – https://support.google.com/chrome/answer/95647?co=GENIE.Platform%3DDesktop&hl=en",
+          "Internet Explorer – https://support.microsoft.com/en-us/help/17442/windows-internet-explorer-delete-manage-cookies",
+          "Microsoft Edge – https://privacy.microsoft.com/en-us/windows-10-microsoft-edge-and-privacy",
+          "Mozilla Firefox – https://support.mozilla.org/en-US/kb/enable-and-disable-cookies-website-preferences",
+          "Safari – https://support.apple.com/kb/ph21411?locale=en_US"
         ]
       },
       {
-        "title": "Retention period",
+        "title": "Privacy terms for online services only",
         "paragraphs": [
-          "We retain data for as long as necessary for the processing purpose. Inquiries and business communication are usually kept for 3 years from the last contact unless a contractual relationship is established. Contract data is kept for the duration of the contract and thereafter as required by law (typically 10 years for accounting and tax). Technical logs and cookies are retained for the periods stated in the cookie information."
+          "These privacy terms apply only to our online activities and apply to visitors to our website and information shared and/or collected here. These terms do not apply to any information obtained offline or through channels other than this website."
         ]
       },
       {
-        "title": "Recipients and processors",
+        "title": "Consent",
         "paragraphs": [
-          "Personal data may be disclosed to IT, hosting, e-mail, accounting and other processors who perform these activities for us under a data processing agreement. We do not share data with third parties for their own marketing without your consent.",
-          "Some processors may be located outside the European Union; in such cases we ensure appropriate transfer safeguards under the GDPR."
+          "By using our website, you express your consent to our privacy terms and agree to their wording."
         ]
       },
       {
-        "title": "Your rights",
+        "title": "Personal data controller",
         "paragraphs": [
-          "Under the GDPR you have the right to:"
-        ],
-        "list": [
-          "request access to your personal data",
-          "request rectification or erasure",
-          "request restriction of processing",
-          "object to processing",
-          "request data portability",
-          "withdraw consent where processing is based on consent",
-          "lodge a complaint with the Czech Office for Personal Data Protection (www.uoou.cz)"
-        ]
-      },
-      {
-        "title": "Data security",
-        "paragraphs": [
-          "We implement appropriate technical and organisational measures to protect personal data against loss, misuse, unauthorised access or disclosure."
-        ]
-      },
-      {
-        "title": "Cookies",
-        "paragraphs": [
-          "Detailed information on cookies is available on the Cookies page. Optional analytics cookies are enabled only with your consent via the cookie banner."
-        ]
-      },
-      {
-        "title": "Changes to this policy",
-        "paragraphs": [
-          "We may update this policy from time to time. The current version is always published on this website with the effective date."
+          "The personal data controller is VZV GROUP s.r.o., with its registered office at Okružní 1144, 500 03 Hradec Králové, Czech Republic, Company ID 27469662, VAT ID CZ27469662, registered in the Commercial Register kept by the Regional Court in Hradec Králové, File No. C 20857.",
+          "Contact e-mail: info@noblelift.cz."
         ]
       }
     ]
@@ -893,7 +877,7 @@
         "title": "Without initial lift",
         "subtitle": "Compact variant",
         "capacity": "1.3 - 2 t",
-        "modelRange": "SWB 130, PSE 15 L-C, PS 16 L, PS 20 L",
+        "modelRange": "SWB 130, PSE 15 L-C, PS 16 L – PS 20 L",
         "productLine": "Walkie stacker without initial lift",
         "desc": "Stackers without initial lift for maximum compactness and handling in the narrowest warehouse spaces.",
         "uses": {
@@ -1019,7 +1003,7 @@
         "title": "Without initial lift",
         "subtitle": "With operator platform",
         "capacity": "1.6 - 2 t",
-        "modelRange": "PS 16 N - PS 20 N",
+        "modelRange": "PS 16 N – PS 20 N",
         "productLine": "Rider stacker without initial lift and with operator platform",
         "desc": "Stackers with operator platform and without initial lift for efficient pallet handling in warehouse aisles.",
         "uses": {
@@ -1144,6 +1128,432 @@
       "learnMore": "Learn more",
       "viewModels": "View models",
       "downloadSpecsCta": "Download technical specifications",
+      "swb": {
+        "detail": {
+          "title": "Noblelift SWB range — detailed description",
+          "intro": "The SWB range is a new generation of Noblelift walk-behind electric stackers. It was developed for customers who need modern Li-Ion technology, compact dimensions, high ergonomics and efficient work in confined spaces. Compared with the entry-level PSE range, it offers greater operator comfort, a more modern design, advanced safety features and a triplex mast.",
+          "features": {
+            "1": {
+              "title": "Li-Ion technology",
+              "desc": "Modern lithium-ion drive with integrated BMS — fast charging and low operating costs"
+            },
+            "2": {
+              "title": "Triplex with free lift",
+              "desc": "Full Free Lift mast ideal for low warehouses and work in confined spaces"
+            },
+            "3": {
+              "title": "Compact design",
+              "desc": "Smaller turning radius and higher performance for more intensive duty in larger warehouses and production"
+            },
+            "4": {
+              "title": "Comfort and safety",
+              "desc": "Ergonomic tiller, PIN login, turtle mode, LCD display and intelligent safety features"
+            }
+          },
+          "specs": {
+            "capacity": {
+              "label": "Capacity",
+              "value": "1,300 kg"
+            },
+            "models": {
+              "label": "Stock models",
+              "value": "SWB 130, SWB 130 D (initial lift)"
+            },
+            "battery": {
+              "label": "Battery",
+              "value": "Li-Ion"
+            },
+            "lift": {
+              "label": "Lift heights",
+              "value": "4,200 mm triplex with free lift (on order 2,600–4,300 mm)"
+            },
+            "drive": {
+              "label": "Duty",
+              "value": "Intensive warehouse logistics"
+            },
+            "operation": {
+              "label": "Type",
+              "value": "Walk-behind high-lift stacker"
+            }
+          },
+          "audience": {
+            "title": "Who is it for?",
+            "items": {
+              "1": "Logistics centres",
+              "2": "Manufacturing plants",
+              "3": "Retail and supermarkets",
+              "4": "Warehouses with limited space"
+            }
+          },
+          "advantages": {
+            "title": "Key advantages",
+            "items": {
+              "1": "Li-Ion technology with integrated BMS",
+              "2": "Triplex mast with free lift – ideal for low warehouses",
+              "3": "Compact design – smaller turning radius",
+              "4": "New ergonomic tiller, lift and travel controlled with one hand",
+              "5": "PIN login, turtle mode, LCD display",
+              "6": "Automatic cornering slowdown, emergency stop, electromagnetic brake",
+              "7": "Robust construction, easy maintenance"
+            }
+          },
+          "initialLift": {
+            "title": "Benefits of initial lift?",
+            "items": {
+              "1": "Overcome uneven floors",
+              "2": "Higher ground clearance",
+              "3": "Better ramp handling",
+              "4": "Two-pallet handling – one on support arms, one on the forks"
+            }
+          },
+          "compare": {
+            "title": "Main differences between SWB 130 and SWB 130 D",
+            "leftTitle": "SWB 130",
+            "rightTitle": "SWB 130 D",
+            "rows": {
+              "1": {
+                "label": "Initial lift",
+                "left": "Without initial lift",
+                "right": "With initial lift"
+              }
+            }
+          },
+          "argument": "The SWB range is a modern Li-Ion stacker for customers who want greater operator comfort, compact dimensions and efficient work in confined spaces. With a Full Free Lift mast, ergonomic tiller and intelligent safety features, it is ideal for everyday intensive warehouse logistics. The SWB 130 D with initial lift can also safely handle ramps, thresholds and uneven floors, significantly expanding where the truck can be used."
+        }
+      },
+      "pse": {
+        "detail": {
+          "title": "Noblelift PSE range — detailed description",
+          "intro": "The PSE range is intended for everyday warehouse applications and offers an affordable solution for customers looking for a simple, reliable and easy-to-operate stacker. It is especially suitable for daily pallet handling in smaller warehouses and operations with light to medium duty cycles.",
+          "features": {
+            "1": {
+              "title": "Affordable solution",
+              "desc": "Entry-level economic range with an excellent price/performance ratio — ideal as a first electric stacker"
+            },
+            "2": {
+              "title": "Simple and reliable",
+              "desc": "Simple construction, easy operation and compact dimensions for small and medium warehouses"
+            },
+            "3": {
+              "title": "Lighter duty",
+              "desc": "Designed for light to medium workload and everyday pallet handling"
+            },
+            "4": {
+              "title": "Best-selling truck",
+              "desc": "Curtis controller, long ergonomic tiller and low service costs"
+            }
+          },
+          "specs": {
+            "capacity": {
+              "label": "Capacity",
+              "value": "1,200 kg / 1,500 kg"
+            },
+            "models": {
+              "label": "Stock models",
+              "value": "PSE 12 ND, PSE 15 L-C"
+            },
+            "battery": {
+              "label": "Battery",
+              "value": "Li-Ion / AGM"
+            },
+            "lift": {
+              "label": "Lift heights",
+              "value": "2,900 mm, 3,200 mm (PSE 12 ND), 3,600 mm – STD mast"
+            },
+            "drive": {
+              "label": "Control",
+              "value": "Curtis controller"
+            },
+            "operation": {
+              "label": "Duty",
+              "value": "Light to medium workload"
+            }
+          },
+          "audience": {
+            "title": "Who is it for?",
+            "items": {
+              "1": "Smaller warehouses",
+              "2": "Retail",
+              "3": "Service companies",
+              "4": "Production facilities",
+              "5": "Customers buying their first electric stacker"
+            }
+          },
+          "overview": {
+            "title": "PSE = basic, economic range",
+            "items": {
+              "1": "Affordable solution",
+              "2": "Simple, reliable truck",
+              "3": "Lighter duty, lower workload",
+              "4": "For small and medium warehouses",
+              "5": "Best-selling truck"
+            }
+          },
+          "advantages": {
+            "title": "Key advantages",
+            "items": {
+              "1": "Excellent price/performance ratio",
+              "2": "Simple construction",
+              "3": "Easy operation",
+              "4": "Compact dimensions",
+              "5": "Curtis controller",
+              "6": "Long ergonomic tiller",
+              "7": "Low service costs",
+              "8": "Best-selling model"
+            }
+          },
+          "compare": {
+            "title": "Main differences between PSE 12 ND and PSE 15 L-C",
+            "leftTitle": "PSE 12 ND",
+            "rightTitle": "PSE 15 L-C",
+            "rows": {
+              "1": {
+                "label": "Capacity",
+                "left": "1,200 kg",
+                "right": "1,500 kg"
+              },
+              "2": {
+                "label": "Battery",
+                "left": "Li-Ion",
+                "right": "Li-Ion / AGM"
+              },
+              "3": {
+                "label": "Initial lift",
+                "left": "Yes",
+                "right": "No"
+              },
+              "4": {
+                "label": "Price",
+                "left": "Low",
+                "right": "Very low"
+              }
+            }
+          },
+          "argument": "If the customer wants a modern maintenance-free stacker with a Li-Ion battery and needs to handle ramps or uneven floors easily, recommend PSE 12 ND. If higher capacity and the lowest purchase price are the priority, PSE 15 L-C is the better choice."
+        }
+      },
+      "ps": {
+        "detail": {
+          "title": "Noblelift PS range — detailed description",
+          "intro": "The PS range is Noblelift’s professional electric stacker line for intensive daily duty. Robust construction, proportional hydraulics and top-tier components from renowned manufacturers deliver high productivity, precise handling and a long service life.",
+          "features": {
+            "1": {
+              "title": "Proportional hydraulics",
+              "desc": "Smooth control of lift and lower speed for maximum handling precision"
+            },
+            "2": {
+              "title": "Triplex with free lift",
+              "desc": "Ideal for low warehouses — lift heights 4,600 / 4,800 / 5,500 mm (on order 2,800–5,500 mm)"
+            },
+            "3": {
+              "title": "Premium components",
+              "desc": "Schabmüller AC motor, ZAPI, REMA tiller, Kordel, HPI, Wicke, Intorq — European brand parts"
+            },
+            "4": {
+              "title": "Flexible equipment",
+              "desc": "Operator platform, initial lift and free lift according to application needs"
+            }
+          },
+          "specs": {
+            "capacity": {
+              "label": "Capacity",
+              "value": "1,200 – 1,600 – 2,000 kg"
+            },
+            "models": {
+              "label": "Stock models",
+              "value": "PS 16 L, PS 16 DL, PS 16 N, PS 16 DN, PS 20 L, PS 20 N"
+            },
+            "battery": {
+              "label": "Duty",
+              "value": "Intensive everyday use"
+            },
+            "lift": {
+              "label": "Lift heights",
+              "value": "4,600 / 4,800 / 5,500 mm triplex with free lift"
+            },
+            "drive": {
+              "label": "Hydraulics",
+              "value": "Proportional"
+            },
+            "operation": {
+              "label": "Type",
+              "value": "Professional range"
+            }
+          },
+          "audience": {
+            "title": "Who is it for?",
+            "items": {
+              "1": "Logistics centres",
+              "2": "Manufacturing plants",
+              "3": "Distribution warehouses",
+              "4": "Multi-shift operations",
+              "5": "Customers requiring maximum productivity"
+            }
+          },
+          "advantages": {
+            "title": "Key advantages",
+            "items": {
+              "1": "Proportional hydraulics – smooth lift and lower speed control",
+              "2": "Triplex mast with free lift – ideal for low warehouses",
+              "3": "Robust construction – built for demanding duty and long life",
+              "4": "Premium European components: Schabmüller, ZAPI, REMA, Kordel, HPI, Wicke, Intorq",
+              "5": "Flexible equipment – operator platform, initial lift, free lift",
+              "6": "Easy service – convenient access to components"
+            }
+          },
+          "legend": {
+            "title": "Model codes",
+            "items": {
+              "1": "L = professional walk-behind stacker",
+              "2": "DL = professional stacker with initial lift",
+              "3": "N = professional stacker with foldable platform",
+              "4": "DN = professional stacker with foldable platform and initial lift"
+            }
+          },
+          "recommend": {
+            "title": "Model recommendations",
+            "items": {
+              "1": "PS 16 L / PS 20 L — professional stacker for intensive warehouse duty",
+              "2": "PS 16 DL — when the customer often handles ramps or uneven floors (initial lift)",
+              "3": "PS 16 N / PS 20 N — when longer warehouse travel is frequent (platform)",
+              "4": "PS 16 DN — when travel, ramps and maximum productivity are needed (initial lift + platform)"
+            }
+          },
+          "compare": {
+            "title": "Main differences between models",
+            "leftTitle": "Without platform",
+            "rightTitle": "With platform",
+            "rows": {
+              "1": {
+                "label": "Base",
+                "left": "PS 16 L / PS 20 L",
+                "right": "PS 16 N / PS 20 N"
+              },
+              "2": {
+                "label": "With initial lift",
+                "left": "PS 16 DL",
+                "right": "PS 16 DN"
+              },
+              "3": {
+                "label": "Use",
+                "left": "Intensive warehouse duty, ramps (DL)",
+                "right": "Longer travel, maximum productivity (DN)"
+              },
+              "4": {
+                "label": "Capacity",
+                "left": "1,600 – 2,000 kg",
+                "right": "1,600 – 2,000 kg"
+              }
+            }
+          },
+          "argument": "The PS range is for customers who use a stacker every day. Proportional hydraulics, quality brand components and a robust design deliver maximum precision, high productivity and a long service life. Initial-lift variants make work on ramps and uneven floors easier, while foldable-platform models significantly raise efficiency on longer runs in large warehouses."
+        }
+      },
+      "fe3r12e": {
+        "detail": {
+          "title": "Noblelift FE3R 12 E — detailed description",
+          "intro": "The FE3R 12 E is an extremely compact three-wheel electric forklift with a 1,200 kg capacity, designed primarily for handling in confined spaces.",
+          "features": {
+            "1": {
+              "title": "Extremely compact",
+              "desc": "Only 922 mm wide with a 1,490 mm turning radius — work in narrow aisles and containers"
+            },
+            "2": {
+              "title": "48V Li-Ion battery",
+              "desc": "Maintenance-free battery with side swap and low operating costs"
+            },
+            "3": {
+              "title": "Stability and maneuverability",
+              "desc": "2 rear steering wheels and a unique design with one front drive wheel"
+            },
+            "4": {
+              "title": "AC traction motor",
+              "desc": "Long service life, comfortable hydraulics with shock absorption and an ergonomic workspace"
+            }
+          },
+          "specs": {
+            "capacity": {
+              "label": "Capacity",
+              "value": "1,200 kg"
+            },
+            "lift": {
+              "label": "Lift heights",
+              "value": "2,500–5,000 mm"
+            },
+            "battery": {
+              "label": "Battery",
+              "value": "48 V Li-Ion"
+            },
+            "width": {
+              "label": "Width",
+              "value": "922 mm"
+            },
+            "turning": {
+              "label": "Turning radius",
+              "value": "1,490 mm"
+            },
+            "operation": {
+              "label": "Type",
+              "value": "Three-wheel electric"
+            }
+          },
+          "audience": {
+            "title": "Who is the FE3R 12 E for?",
+            "items": {
+              "1": "Very small warehouses",
+              "2": "Narrow aisles",
+              "3": "Production sites with limited space",
+              "4": "Containers",
+              "5": "Loading and unloading trucks",
+              "6": "Sites where a classic counterbalance truck is too large",
+              "7": "Customers who need a counterbalance truck and maximum maneuverability"
+            }
+          },
+          "advantages": {
+            "title": "Key advantages and further benefits",
+            "items": {
+              "1": "Extremely compact design — 922 mm width, 1,490 mm turning radius",
+              "2": "2 rear steering wheels for good stability under load",
+              "3": "AC traction motor with long service life",
+              "4": "Maintenance-free 48V Li-Ion battery",
+              "5": "Side battery swap",
+              "6": "Ergonomic operator workplace",
+              "7": "Low operating costs",
+              "8": "Comfortable hydraulic system with shock absorption"
+            }
+          },
+          "benefits": {
+            "title": "Customer benefits",
+            "items": {
+              "1": "Compact dimensions",
+              "2": "Excellent maneuverability",
+              "3": "Work in narrow aisles, turn between racks, and handle in containers"
+            }
+          },
+          "recommend": {
+            "whenTitle": "When to recommend the E truck?",
+            "when": {
+              "1": "The customer has very little space",
+              "2": "Needs a truck for container work",
+              "3": "A standard counterbalance truck is not suitable",
+              "4": "Capacity up to 1.2 t",
+              "5": "When the customer needs the smallest turning radius"
+            },
+            "otherTitle": "When to recommend another range?",
+            "other": {
+              "1": "Needs higher capacity",
+              "2": "Has enough space",
+              "3": "Uneven surface"
+            }
+          },
+          "equipment": {
+            "title": "Equipment",
+            "standard": "Sideshift, battery preheat, Blue Spot, comfort seat, USB port, LED lighting, rear handle with horn, hydraulic levers, 3-section valve, non-marking SE tires, load backrest, panoramic mirror.",
+            "optional": "Cabin, external charger."
+          },
+          "argument": "The FE3R 12 E is an extremely compact three-wheel electric truck for sites where a classic counterbalance forklift does not have enough space. With a width of just 922 mm, a turning radius of 1,490 mm, and a unique layout with one front drive wheel and two rear steering wheels, it offers outstanding maneuverability — while keeping the comfort of a classic counterbalance truck, 1.2 t capacity and lift up to 5 metres."
+        }
+      },
       "serieA": {
         "badge": "Series A",
         "title": "Basic model",
@@ -1333,21 +1743,21 @@
         }
       },
       "serieN": {
-        "badge": "Series N",
+        "badge": "Series E-N",
         "title": "Three-wheel",
         "subtitle": "Narrow aisle",
-        "capacity": "1.6 – 2.0 t",
-        "modelRange": "FE3D16N1, FE3D18N1, FE3D20N1",
-        "productLine": "Compact three-wheel electric N1 trucks for indoor work and tight spaces.",
-        "desc": "Compact three-wheel electric N1 trucks for indoor work and tight spaces.",
+        "capacity": "1.2 – 2.0 t",
+        "modelRange": "FE3R 12 E, FE3D16N1 – FE3D20N1",
+        "productLine": "Compact three-wheel electric E and N1 trucks for indoor work and tight spaces.",
+        "desc": "Compact three-wheel electric E and N1 trucks for indoor work and tight spaces. Series E (e.g. FE3R 12 E) is the economy option from 1.2 t; Series N1 covers 1.6–2.0 t capacities.",
         "uses": {
           "1": "Narrow aisles",
           "2": "Warehouses and logistics",
           "3": "Loading and unloading"
         },
         "detail": {
-          "title": "Noblelift Series N — three-wheel N1 trucks",
-          "intro": "The N1 range offers compact three-wheel electric counterbalance forklifts designed primarily for indoor use. The three-wheel design delivers exceptional manoeuvrability even in very confined spaces. A small turning radius enables work in narrow aisles and efficient turning between racks.",
+          "title": "Noblelift Series E-N — three-wheel E and N1 trucks",
+          "intro": "Noblelift three-wheel electric counterbalance trucks include Series E and Series N1. Series E is the economy entry range (e.g. FE3R 12 E) for lighter indoor duty from 1.2 t. Series N1 offers compact three-wheel trucks designed primarily for indoor use — exceptional manoeuvrability even in very confined spaces, with a small turning radius for narrow aisles and efficient turning between racks.",
           "features": {
             "1": {
               "title": "Maximum manoeuvrability",
@@ -1369,7 +1779,7 @@
           "specs": {
             "capacity": {
               "label": "Capacity",
-              "value": "1.6–1.8–2.0 t"
+              "value": "1.2–1.6–1.8–2.0 t"
             },
             "wheels": {
               "label": "Design",
@@ -1377,11 +1787,11 @@
             },
             "battery": {
               "label": "Battery",
-              "value": "80 V Li-Ion"
+              "value": "Li-Ion"
             },
             "models": {
               "label": "Models",
-              "value": "FE3D16N1 / FE3D18N1 / FE3D20N1"
+              "value": "FE3R 12 E / FE3D16N1 – FE3D20N1"
             },
             "lift": {
               "label": "Lift height",
@@ -1408,8 +1818,8 @@
               "1": "You mostly work indoors",
               "2": "You need maximum manoeuvrability",
               "3": "You work in narrow aisles",
-              "4": "Capacity up to 2 tonnes",
-              "5": "You are looking for a compact electric truck"
+              "4": "Capacity 1.2–2.0 t",
+              "5": "You want the economy E range or the compact N1 range"
             },
             "otherTitle": "When we recommend another range",
             "other": {
@@ -1606,28 +2016,28 @@
       }
     },
     "stackerStraddle": {
-      "modelRange": "PSE 12 NSL, PT 16 TSL, PS 18 TSL",
+      "modelRange": "PSE 12 NSL, PS 16 TSL – PS 18 TSL",
       "capacity": "1.2 - 2.0 t",
       "productLine": "Straddle electric stacker",
       "detail": {
-        "title": "Noblelift straddle stackers — detailed description",
-        "intro": "Straddle electric stackers for handling non-standard pallets and irregular loads. The straddle design allows work with pallets of various sizes and delivers maximum flexibility in warehouse operations.",
+        "title": "Noblelift straddle trucks PSE and PS range — detailed description",
+        "intro": "Straddle stackers are designed for handling pallets where a classic stacker with standard support arms cannot be used. Adjustable straddle legs allow lifting a wide range of pallet types and other loads. The manufacturer designates them as Straddle Leg Electric Pedestrian Stackers.",
         "features": {
           "1": {
             "title": "Straddle design",
-            "desc": "Forks straddle the pallet from the side — ideal for non-standard and irregular pallets"
+            "desc": "For various pallet sizes — forks straddle the load from the side"
           },
           "2": {
-            "title": "Electric drive",
-            "desc": "Quiet, clean operation suited to indoor warehouse environments"
+            "title": "Adjustable legs",
+            "desc": "Support arm spacing can be set according to the load type"
           },
           "3": {
-            "title": "Flexible handling",
-            "desc": "Efficient work with pallets of various sizes without precise alignment"
+            "title": "Li-Ion battery",
+            "desc": "Modern lithium-ion drive with low operating costs"
           },
           "4": {
-            "title": "Reliable build",
-            "desc": "Robust design for intensive daily warehouse use"
+            "title": "Same strengths as PSE and PS",
+            "desc": "All the same advantages as in the PSE and PS range specifications"
           }
         },
         "specs": {
@@ -1641,11 +2051,11 @@
           },
           "lift": {
             "label": "Max. lift",
-            "value": "up to 4,500 mm"
+            "value": "up to 5,200 mm"
           },
           "battery": {
             "label": "Battery",
-            "value": "24 V"
+            "value": "Li-Ion"
           },
           "operation": {
             "label": "Application",
@@ -1654,6 +2064,52 @@
           "type": {
             "label": "Type",
             "value": "Straddle"
+          }
+        },
+        "audience": {
+          "title": "Who are they for?",
+          "items": {
+            "1": "Non-standard pallets",
+            "2": "Closed pallets",
+            "3": "Special transport boxes",
+            "4": "Metal containers",
+            "5": "Customers using various pallet sizes"
+          }
+        },
+        "advantages": {
+          "title": "Key advantages",
+          "items": {
+            "1": "Straddle design for different pallet sizes",
+            "2": "Adjustable support arm spacing by load type",
+            "3": "Li-Ion battery",
+            "4": "All the same advantages as the PSE and PS range specifications"
+          }
+        },
+        "compare": {
+          "title": "Model comparison",
+          "leftTitle": "PSE 12 NSL",
+          "rightTitle": "PS 16–18 TSL",
+          "rows": {
+            "1": {
+              "label": "Capacity",
+              "left": "1,200 kg",
+              "right": "1,600–1,800 kg"
+            },
+            "2": {
+              "label": "Lift",
+              "left": "1,500–3,500 mm",
+              "right": "3,300–5,200 mm"
+            },
+            "3": {
+              "label": "Mast",
+              "left": "Single / Duplex",
+              "right": "Duplex / Triplex with free lift"
+            },
+            "4": {
+              "label": "Availability",
+              "left": "In stock – 2,900 mm",
+              "right": "On order"
+            }
           }
         }
       }
@@ -1673,32 +2129,18 @@
           "3": "Compact operations"
         }
       },
-      "pt16tsl": {
-        "badge": "PT 16 TSL",
-        "title": "PT 16 TSL",
+      "ps16tsl": {
+        "badge": "PS 16–18 TSL",
+        "title": "PS 16 TSL – PS 18 TSL",
         "subtitle": "Higher capacity",
-        "capacity": "1.6 t",
-        "modelRange": "PT 16 TSL",
+        "capacity": "1.6 – 1.8 t",
+        "modelRange": "PS 16 TSL – PS 18 TSL",
         "productLine": "Straddle electric stacker",
-        "desc": "Straddle stacker with higher capacity for more demanding handling cycles and irregular pallets.",
+        "desc": "Straddle stackers with higher capacity for more demanding handling cycles and non-standard pallets.",
         "uses": {
           "1": "Non-standard pallets",
           "2": "Higher capacity",
           "3": "Intensive operation"
-        }
-      },
-      "ps18tsl": {
-        "badge": "PS 18 TSL",
-        "title": "PS 18 TSL",
-        "subtitle": "Maximum capacity",
-        "capacity": "1.8 t",
-        "modelRange": "PS 18 TSL",
-        "productLine": "Straddle electric stacker",
-        "desc": "Straddle stacker with the highest capacity in the range for demanding warehouse and handling applications.",
-        "uses": {
-          "1": "Non-standard pallets",
-          "2": "Heavier loads",
-          "3": "Flexible handling"
         }
       }
     },
@@ -2449,7 +2891,9 @@
       }
     },
     "models": {
-      "fe3d": "Compact three-wheel electric counterbalance truck for tight spaces.",
+      "fe3d": "Compact three-wheel electric N1 trucks for indoor work and narrow spaces.",
+      "fe3r12e": "Series E three-wheel electric counterbalance forklift, 1.2 t — Li-Ion, free lift, duplex.",
+      "fe3r12eHighlight": "Li-Ion, free lift, Duplex",
       "fe3d16": "Series N three-wheel electric counterbalance forklift, 1.6 t capacity.",
       "fe3d16Highlight": "Li-Ion, free lift, duplex / triplex, LED display",
       "fe3d18": "Series N three-wheel electric counterbalance forklift, 1.8 t capacity.",
@@ -2474,19 +2918,20 @@
       "pse12": "Walk-behind electric stacker up to 1.2 t.",
       "swb130": "Walk-behind electric stacker without initial lift, 1.3 t capacity.",
       "pse15lc": "Walk-behind electric stacker without initial lift, 1.5 t capacity.",
-      "ps16l": "Walk-behind electric stacker without initial lift, 1.6 t capacity.",
+      "ps16l": "Walk-behind electric stacker without initial lift, 1.6–2.0 t capacity.",
       "ps20l": "Walk-behind electric stacker without initial lift, 2.0 t capacity.",
       "ps15": "Walkie stacker with higher capacity and lift.",
       "pse12nd": "Walk-behind electric stacker with initial lift, 1.2 t capacity.",
       "swb130d": "Walk-behind electric stacker with initial lift, 1.3 t capacity.",
       "ps16dl": "Walk-behind electric stacker with initial lift, 1.6 t capacity.",
       "stk15": "Rider stacker with operator platform.",
-      "ps16n": "Rider stacker with operator platform without initial lift, 1.6 t capacity.",
+      "ps16n": "Rider stacker with operator platform without initial lift, 1.6–2.0 t capacity.",
       "ps20n": "Rider stacker with operator platform without initial lift, 2.0 t capacity.",
       "ps16dn": "Rider stacker with operator platform and initial lift.",
       "pse12nsl": "Straddle electric stacker for non-standard pallets up to 1.2 t.",
-      "pt16tsl": "Straddle electric stacker with higher capacity up to 1.6 t.",
+      "ps16tsl": "Straddle electric stacker, 1.6–1.8 t capacity.",
       "ps18tsl": "Straddle electric stacker with capacity up to 1.8 t.",
+      "pt16tsl": "Straddle electric stacker with higher capacity up to 1.6 t.",
       "ac25": "Manual pallet truck, 2.5 t capacity.",
       "hptdf25": "Manual pallet truck HPT DF 25 with 2.5 t capacity.",
       "hptacy25": "Manual pallet truck HPT ACY 25 with 2.5 t capacity.",
@@ -2510,6 +2955,7 @@
       "descriptionTitle": "Description",
       "parametersTitle": "Technical parameters",
       "viewDetails": "Technical parameters",
+      "viewDetailsCta": "View details",
       "buyCta": "Buy this model",
       "buyShopCta": "Buy on e-shop",
       "buyNote": "You will be redirected to the official VZV GROUP e-shop (vzv.cz), where you can purchase or reserve this model from stock.",

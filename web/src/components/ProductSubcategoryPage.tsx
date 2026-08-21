@@ -31,10 +31,7 @@ export function ProductSubcategoryPage({
   const isHubPage = Boolean(subcategory.hubPageKey);
   const hasDetail = Boolean(subcategory.detail);
   const galleryImages = getSubcategoryGallery(subcategory);
-  const seriesGridClass =
-    subcategory.id === "straddle"
-      ? "grid gap-6 lg:grid-cols-3"
-      : "grid gap-6 lg:grid-cols-2";
+  const seriesGridClass = "grid gap-6 lg:grid-cols-2";
 
   return (
     <>
@@ -91,7 +88,6 @@ export function ProductSubcategoryPage({
                     category={category}
                     subcategory={subcategory}
                     series={series}
-                    stackedActions={subcategory.id === "straddle"}
                   />
                 ))}
               </div>
@@ -122,7 +118,6 @@ export function ProductSubcategoryPage({
                     category={category}
                     subcategory={subcategory}
                     series={series}
-                    stackedActions={subcategory.id === "straddle"}
                   />
                 ))}
               </div>

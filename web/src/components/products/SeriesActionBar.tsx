@@ -20,9 +20,12 @@ export function SeriesActionBar({
   const t = useTranslations();
   const locale = useLocale();
   const shopUrl = fixedShopHref ?? buyUrl ?? VZV_SHOP_URL;
-  const specsDownloadUrl = specsPdfUrl
-    ? `${specsPdfUrl}?locale=${locale}`
-    : undefined;
+  // Static public PDFs keep their path; generated API routes get locale.
+  const specsDownloadUrl = !specsPdfUrl
+    ? undefined
+    : specsPdfUrl.startsWith("/api/")
+      ? `${specsPdfUrl}?locale=${locale}`
+      : specsPdfUrl;
 
   const content = (
     <>

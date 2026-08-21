@@ -1,10 +1,10 @@
 import { readFile } from "fs/promises";
 import path from "path";
-import { generateSerieASpecsPdf } from "@/lib/generate-serie-a-specs-pdf";
+import { generateCatalogSpecsPdf } from "@/lib/catalog-specs-pdf";
 
 const CZECH_SPECS_PDF = path.join(
   process.cwd(),
-  "public/documents/cpd-18-38-a2-technicke-parametry-cz.pdf",
+  "public/documents/swb-130-130d-technicke-parametry-cz.pdf",
 );
 
 export async function GET(request: Request) {
@@ -18,18 +18,22 @@ export async function GET(request: Request) {
       headers: {
         "Content-Type": "application/pdf",
         "Content-Disposition":
-          'attachment; filename="CPD-18-38-A2-technicke-parametry.pdf"',
+          'attachment; filename="SWB-130-130D-technicke-parametry.pdf"',
         "Cache-Control": "public, max-age=86400",
       },
     });
   }
 
-  const pdfBytes = await generateSerieASpecsPdf(locale);
+  const pdfBytes = await generateCatalogSpecsPdf("walkie-bez-prizdvihem", locale);
+  if (!pdfBytes) {
+    return new Response("Not found", { status: 404 });
+  }
 
   return new Response(Buffer.from(pdfBytes), {
     headers: {
       "Content-Type": "application/pdf",
-      "Content-Disposition": 'attachment; filename="serie-a-technicke-parametry.pdf"',
+      "Content-Disposition":
+        'attachment; filename="SWB-130-technicke-parametry.pdf"',
       "Cache-Control": "public, max-age=86400",
     },
   });

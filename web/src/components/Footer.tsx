@@ -13,7 +13,6 @@ export function Footer() {
   const legalLinks = [
     { href: "/privacy" as const, label: t("footer.privacy") },
     { href: "/cookies" as const, label: t("footer.cookies") },
-    { href: "/terms" as const, label: t("footer.terms") },
     { href: "/company" as const, label: t("footer.company") },
   ];
 
@@ -25,7 +24,7 @@ export function Footer() {
           <p className="mt-3 text-sm leading-relaxed text-zinc-400">{t("footer.sub")}</p>
           <p className="mt-4 text-sm text-zinc-500">{CONTACT.company}</p>
           <p className="mt-1 text-sm text-zinc-500">
-            {BILLING.addressLine1}, {BILLING.addressLine2}
+            {BILLING.addressLine1}, {BILLING.addressLine2}, {BILLING.addressLine3}
           </p>
           <p className="mt-1 text-sm text-zinc-500">
             IČO {CONTACT.ico} · DIČ {CONTACT.dic}

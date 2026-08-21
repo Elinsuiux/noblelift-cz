@@ -121,6 +121,7 @@ export function ContactDetailsBlock() {
               <div>
                 <div>{BILLING.addressLine1}</div>
                 <div>{BILLING.addressLine2}</div>
+                <div>{BILLING.addressLine3}</div>
               </div>
               <p>
                 <span className="font-bold text-zinc-900">{t("contactPage.ico")}:</span>{" "}
@@ -133,18 +134,14 @@ export function ContactDetailsBlock() {
               <p>{BILLING.registry}</p>
             </div>
             <div className="space-y-3 text-sm leading-relaxed text-zinc-700">
-              <p>
-                <span className="font-bold text-zinc-900">
-                  {t("contactPage.billingBank")}:
-                </span>{" "}
-                {BILLING.bank}
-              </p>
-              <p>
-                <span className="font-bold text-zinc-900">
-                  {t("contactPage.billingAccount")}:
-                </span>{" "}
-                {BILLING.account}
-              </p>
+              <div>
+                <div className="font-bold text-zinc-900">{t("contactPage.billingBank")}:</div>
+                <div>{BILLING.bank}</div>
+              </div>
+              <div>
+                <div className="font-bold text-zinc-900">{t("contactPage.billingAccount")}:</div>
+                <div>{BILLING.account}</div>
+              </div>
               <p>
                 <span className="font-bold text-zinc-900">
                   {t("contactPage.billingDirector")}:

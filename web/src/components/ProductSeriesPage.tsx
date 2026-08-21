@@ -5,18 +5,62 @@ import { ProductsBreadcrumb } from "@/components/products/ProductsBreadcrumb";
 import { ProductsCategoryNav } from "@/components/products/ProductsCategoryNav";
 import { ProductModelGallery } from "@/components/products/ProductModelGallery";
 import { ProductModelCard } from "@/components/products/ProductModelCard";
+import { SeriesActionBar } from "@/components/products/SeriesActionBar";
 import { SeriesDetailSection } from "@/components/products/SeriesDetailSection";
 import { SeriesModelCard } from "@/components/products/SeriesModelCard";
 import { ProductOverviewPanel } from "@/components/products/SeriesOverviewPanel";
 import {
   getCategorySlug,
+  getModelSlug,
+  getProductBuyUrl,
+  getProductGallery,
   getSeriesBuyUrl,
   getSeriesGallery,
+  getSeriesSlug,
   getSubcategorySlug,
   type CatalogCategory,
+  type ProductModel,
   type ProductSeries,
   type Subcategory,
 } from "@/lib/products-catalog";
+
+function ProductSeriesOverview({
+  product,
+  productLineKey,
+  specsPdfUrl,
+  specsPdfFilename,
+}: {
+  product: ProductModel;
+  productLineKey?: string;
+  specsPdfUrl?: string;
+  specsPdfFilename?: string;
+}) {
+  const t = useTranslations();
+
+  return (
+    <div className="grid gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] lg:items-stretch">
+      <ProductModelGallery images={getProductGallery(product)} alt={product.model} />
+      <div className="flex h-full flex-col justify-center rounded-2xl border border-zinc-200 bg-white p-8 shadow-sm md:p-10">
+        <p className="text-3xl font-bold tracking-tight text-noble-orange md:text-4xl">
+          {product.model}
+        </p>
+        <p className="mt-2 text-xl font-medium text-zinc-600 md:text-2xl">{product.capacity}</p>
+        <div className="mt-6 h-1 w-14 rounded-full bg-noble-orange" />
+        <p className="mt-6 text-base leading-relaxed text-zinc-600 md:text-lg">
+          {productLineKey ? t(productLineKey) : t(product.descriptionKey)}
+        </p>
+        <div className="mt-8 border-t border-zinc-100 pt-8">
+          <SeriesActionBar
+            buyUrl={getProductBuyUrl(product)}
+            specsPdfUrl={specsPdfUrl}
+            specsPdfFilename={specsPdfFilename}
+            embedded
+          />
+        </div>
+      </div>
+    </div>
+  );
+}
 
 export function ProductSeriesPage({
   category,
@@ -31,10 +75,16 @@ export function ProductSeriesPage({
   const locale = useLocale();
   const categorySlug = getCategorySlug(category, locale);
   const subcategorySlug = getSubcategorySlug(subcategory, locale);
+  const seriesSlug = getSeriesSlug(series, locale);
   const galleryImages = getSeriesGallery(series);
+  const soleProduct = series.products.length === 1 ? series.products[0] : undefined;
+  const showSoleProductDetailLayout = Boolean(soleProduct?.seriesDetail);
   const showOverviewLayout =
     Boolean(series.detail) &&
+    !showSoleProductDetailLayout &&
     (series.products.length <= 1 || Boolean(series.preferOverviewLayout));
+  const useHubModelCards =
+    series.id === "walkie-bez-prizdvihem" || series.id === "walkie-s-prizdvihem";
 
   return (
     <>
@@ -74,7 +124,22 @@ export function ProductSeriesPage({
 
         <section className="px-6 py-16">
           <div className="mx-auto w-full max-w-[1140px] space-y-10">
-            {series.detail ? (
+            {showSoleProductDetailLayout && soleProduct?.seriesDetail ? (
+              <>
+                <ProductSeriesOverview
+                  product={soleProduct}
+                  productLineKey={series.productLineKey}
+                  specsPdfUrl={
+                    soleProduct.seriesDetail.specsPdfUrl ?? series.detail?.specsPdfUrl
+                  }
+                  specsPdfFilename={
+                    soleProduct.seriesDetail.specsPdfFilename ??
+                    series.detail?.specsPdfFilename
+                  }
+                />
+                <SeriesDetailSection detail={soleProduct.seriesDetail} />
+              </>
+            ) : series.detail ? (
               <>
                 {showOverviewLayout ? (
                   <div className="grid gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] lg:items-stretch">
@@ -92,14 +157,48 @@ export function ProductSeriesPage({
                     />
                   </div>
                 ) : (
-                  <div className="grid gap-6 lg:grid-cols-2">
+                  <div
+                    className={
+                      useHubModelCards
+                        ? "grid gap-6 sm:grid-cols-2 lg:grid-cols-3"
+                        : "grid gap-6 lg:grid-cols-2"
+                    }
+                  >
                     {series.products.map((product) => (
                       <SeriesModelCard
                         key={product.id}
                         product={product}
+                        variant={useHubModelCards ? "hub" : "classic"}
                         productLineKey={series.productLineKey}
-                        specsPdfUrl={series.detail!.specsPdfUrl}
-                        specsPdfFilename={series.detail!.specsPdfFilename}
+                        subtitleKey={series.subtitleKey}
+                        useKeys={series.useKeys}
+                        specsPdfUrl={
+                          useHubModelCards
+                            ? (locale !== "en" && product.specsPdfUrl) || undefined
+                            : (locale !== "en" && product.specsPdfUrl) ||
+                              series.detail!.specsPdfUrl
+                        }
+                        specsPdfFilename={
+                          useHubModelCards
+                            ? (locale !== "en" && product.specsPdfFilename) ||
+                              undefined
+                            : (locale !== "en" && product.specsPdfFilename) ||
+                              series.detail!.specsPdfFilename
+                        }
+                        detailsHref={
+                          product.seriesDetail
+                            ? {
+                                pathname:
+                                  "/products/[category]/[subcategory]/[series]/[model]",
+                                params: {
+                                  category: categorySlug,
+                                  subcategory: subcategorySlug,
+                                  series: seriesSlug,
+                                  model: getModelSlug(product, locale),
+                                },
+                              }
+                            : undefined
+                        }
                       />
                     ))}
                   </div>

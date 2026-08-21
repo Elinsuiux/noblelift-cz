@@ -27,20 +27,6 @@ export type ProductModelDetail = {
   specRows: readonly ProductModelSpecRow[];
 };
 
-export type ProductModel = {
-  id: string;
-  slug?: { cz: string; en: string };
-  model: string;
-  capacity: string;
-  descriptionKey: string;
-  /** Optional short highlights shown under the model name. */
-  highlightKey?: string;
-  image: string;
-  gallery?: readonly string[];
-  buyUrl?: string;
-  detail?: ProductModelDetail;
-};
-
 export type ProductSeriesId =
   | "serie-a"
   | "serie-p"
@@ -51,8 +37,7 @@ export type ProductSeriesId =
   | "rider-bez-prizdvihem"
   | "rider-s-prizdvihem"
   | "straddle-pse12nsl"
-  | "straddle-pt16tsl"
-  | "straddle-ps18tsl";
+  | "straddle-ps16-18tsl";
 
 export type SeriesFeatureIcon =
   | "ac-drive"
@@ -111,6 +96,28 @@ export type ProductSeriesDetail = {
     leftKey: string;
     rightKey: string;
   }[];
+};
+
+export type ProductModel = {
+  id: string;
+  slug?: { cz: string; en: string };
+  model: string;
+  capacity: string;
+  descriptionKey: string;
+  /** Optional short highlights shown under the model name. */
+  highlightKey?: string;
+  image: string;
+  gallery?: readonly string[];
+  buyUrl?: string;
+  /** Optional per-model specs PDF (overrides series detail PDF on cards). */
+  specsPdfUrl?: string;
+  specsPdfFilename?: string;
+  detail?: ProductModelDetail;
+  /**
+   * When set, model detail page uses Serie A–style layout
+   * (gallery + overview + SeriesDetailSection) and cards show “Zobrazit detaily”.
+   */
+  seriesDetail?: ProductSeriesDetail;
 };
 
 export type ProductSeries = {
@@ -176,6 +183,9 @@ export const VZV_SHOP_SERIE_P_FEP38P_URL =
 
 export const VZV_SHOP_SERIE_N_FE3D16N1_URL =
   "https://www.vzv.cz/cz/aktualne-skladem/voziky-skladem/nove-voziky/?search-text=FE3D&type[]=3&sort-by=1&id-category=31";
+
+export const VZV_SHOP_SERIE_N_FE3R12E_URL =
+  "https://www.vzv.cz/cz/aktualne-skladem/voziky-skladem/nove-voziky/noblelift-fe3r-12-e-801286";
 
 export const VZV_SHOP_SERIE_Q_FE4P50Q_URL =
   "https://www.vzv.cz/cz/aktualne-skladem/voziky-skladem/nove-voziky/?search-text=FE4P&sort-by=1&id-category=1&id-category=1";
@@ -306,13 +316,127 @@ export function getSubcategoryGallery(subcategory: Subcategory) {
   return [];
 }
 
+const FE3R12E_SERIES_DETAIL: ProductSeriesDetail = {
+  titleKey: "productsCatalog.series.fe3r12e.detail.title",
+  introKey: "productsCatalog.series.fe3r12e.detail.intro",
+  featureKeys: [
+    {
+      icon: "compact",
+      titleKey: "productsCatalog.series.fe3r12e.detail.features.1.title",
+      descKey: "productsCatalog.series.fe3r12e.detail.features.1.desc",
+    },
+    {
+      icon: "battery",
+      titleKey: "productsCatalog.series.fe3r12e.detail.features.2.title",
+      descKey: "productsCatalog.series.fe3r12e.detail.features.2.desc",
+    },
+    {
+      icon: "rear-steer",
+      titleKey: "productsCatalog.series.fe3r12e.detail.features.3.title",
+      descKey: "productsCatalog.series.fe3r12e.detail.features.3.desc",
+    },
+    {
+      icon: "ac-drive",
+      titleKey: "productsCatalog.series.fe3r12e.detail.features.4.title",
+      descKey: "productsCatalog.series.fe3r12e.detail.features.4.desc",
+    },
+  ],
+  specKeys: [
+    {
+      labelKey: "productsCatalog.series.fe3r12e.detail.specs.capacity.label",
+      valueKey: "productsCatalog.series.fe3r12e.detail.specs.capacity.value",
+    },
+    {
+      labelKey: "productsCatalog.series.fe3r12e.detail.specs.lift.label",
+      valueKey: "productsCatalog.series.fe3r12e.detail.specs.lift.value",
+    },
+    {
+      labelKey: "productsCatalog.series.fe3r12e.detail.specs.battery.label",
+      valueKey: "productsCatalog.series.fe3r12e.detail.specs.battery.value",
+    },
+    {
+      labelKey: "productsCatalog.series.fe3r12e.detail.specs.width.label",
+      valueKey: "productsCatalog.series.fe3r12e.detail.specs.width.value",
+    },
+    {
+      labelKey: "productsCatalog.series.fe3r12e.detail.specs.turning.label",
+      valueKey: "productsCatalog.series.fe3r12e.detail.specs.turning.value",
+    },
+    {
+      labelKey: "productsCatalog.series.fe3r12e.detail.specs.operation.label",
+      valueKey: "productsCatalog.series.fe3r12e.detail.specs.operation.value",
+    },
+  ],
+  specsPdfUrl: "/api/documents/serie-n-technicke-parametry",
+  specsPdfFilename: "serie-n-technicke-parametry.pdf",
+  audienceTitleKey: "productsCatalog.series.fe3r12e.detail.audience.title",
+  audienceKeys: [
+    "productsCatalog.series.fe3r12e.detail.audience.items.1",
+    "productsCatalog.series.fe3r12e.detail.audience.items.2",
+    "productsCatalog.series.fe3r12e.detail.audience.items.3",
+    "productsCatalog.series.fe3r12e.detail.audience.items.4",
+    "productsCatalog.series.fe3r12e.detail.audience.items.5",
+    "productsCatalog.series.fe3r12e.detail.audience.items.6",
+    "productsCatalog.series.fe3r12e.detail.audience.items.7",
+  ],
+  advantagesLeftTitleKey: "productsCatalog.series.fe3r12e.detail.advantages.title",
+  advantagesLeftKeys: [
+    "productsCatalog.series.fe3r12e.detail.advantages.items.1",
+    "productsCatalog.series.fe3r12e.detail.advantages.items.2",
+    "productsCatalog.series.fe3r12e.detail.advantages.items.3",
+    "productsCatalog.series.fe3r12e.detail.advantages.items.4",
+    "productsCatalog.series.fe3r12e.detail.advantages.items.5",
+    "productsCatalog.series.fe3r12e.detail.advantages.items.6",
+    "productsCatalog.series.fe3r12e.detail.advantages.items.7",
+    "productsCatalog.series.fe3r12e.detail.advantages.items.8",
+  ],
+  advantagesRightTitleKey: "productsCatalog.series.fe3r12e.detail.benefits.title",
+  advantagesRightKeys: [
+    "productsCatalog.series.fe3r12e.detail.benefits.items.1",
+    "productsCatalog.series.fe3r12e.detail.benefits.items.2",
+    "productsCatalog.series.fe3r12e.detail.benefits.items.3",
+  ],
+  recommendTitleKey: "productsCatalog.series.fe3r12e.detail.recommend.whenTitle",
+  recommendWhenKeys: [
+    "productsCatalog.series.fe3r12e.detail.recommend.when.1",
+    "productsCatalog.series.fe3r12e.detail.recommend.when.2",
+    "productsCatalog.series.fe3r12e.detail.recommend.when.3",
+    "productsCatalog.series.fe3r12e.detail.recommend.when.4",
+    "productsCatalog.series.fe3r12e.detail.recommend.when.5",
+  ],
+  recommendOtherTitleKey: "productsCatalog.series.fe3r12e.detail.recommend.otherTitle",
+  recommendOtherKeys: [
+    "productsCatalog.series.fe3r12e.detail.recommend.other.1",
+    "productsCatalog.series.fe3r12e.detail.recommend.other.2",
+    "productsCatalog.series.fe3r12e.detail.recommend.other.3",
+  ],
+  equipmentTitleKey: "productsCatalog.series.fe3r12e.detail.equipment.title",
+  equipmentStandardKey: "productsCatalog.series.fe3r12e.detail.equipment.standard",
+  equipmentOptionalKey: "productsCatalog.series.fe3r12e.detail.equipment.optional",
+  argumentKey: "productsCatalog.series.fe3r12e.detail.argument",
+};
+
 const ELECTRIC_FORKLIFT_PRODUCTS: ProductModel[] = [
   {
     id: "fe3d",
-    model: "FE3D16/18/20N1",
-    capacity: "1600/1800/2000 kg",
+    model: "FE3D16N1 – FE3D20N1",
+    capacity: "1600–2000 kg",
     descriptionKey: "productsCatalog.models.fe3d",
-    image: "/images/products/menu/elektro-3rad.jpg",
+    highlightKey: "productsCatalog.models.fe3d16Highlight",
+    image: "/images/products/series/fe3d16n1.png",
+    buyUrl: VZV_SHOP_SERIE_N_FE3D16N1_URL,
+    specsPdfUrl: "/documents/fe3d16-20n1-technicke-parametry-cz.pdf",
+    specsPdfFilename: "FE3D16-20N1-technicke-parametry.pdf",
+  },
+  {
+    id: "fe3r12e",
+    model: "FE3R 12 E",
+    capacity: "1200 kg",
+    descriptionKey: "productsCatalog.models.fe3r12e",
+    highlightKey: "productsCatalog.models.fe3r12eHighlight",
+    image: "/images/products/series/fe3r12e.png",
+    buyUrl: VZV_SHOP_SERIE_N_FE3R12E_URL,
+    seriesDetail: FE3R12E_SERIES_DETAIL,
   },
   {
     id: "fe3d16",
@@ -589,7 +713,7 @@ const ELECTRIC_FORKLIFT_SERIES: ProductSeries[] = [
         },
       ],
       specsPdfUrl: "/api/documents/serie-a-technicke-parametry",
-      specsPdfFilename: "serie-a-technicke-parametry.pdf",
+      specsPdfFilename: "CPD-18-38-A2-technicke-parametry.pdf",
       audienceTitleKey: "productsCatalog.series.serieA.detail.audience.title",
       audienceKeys: [
         "productsCatalog.series.serieA.detail.audience.items.1",
@@ -696,7 +820,7 @@ const ELECTRIC_FORKLIFT_SERIES: ProductSeries[] = [
         },
       ],
       specsPdfUrl: "/api/documents/serie-p-technicke-parametry",
-      specsPdfFilename: "serie-p-technicke-parametry.pdf",
+      specsPdfFilename: "FEP-30-38P-technicke-parametry.pdf",
       audienceTitleKey: "productsCatalog.series.serieP.detail.audience.title",
       audienceKeys: [
         "productsCatalog.series.serieP.detail.audience.items.1",
@@ -741,13 +865,13 @@ const ELECTRIC_FORKLIFT_SERIES: ProductSeries[] = [
       "productsCatalog.series.serieN.uses.3",
     ],
     letter: "N",
-    image: "/images/products/series/serie-n.jpg",
+    image: "/images/products/series/serie-n.png",
+    gallery: ["/images/products/series/serie-n.png"],
     ctaVariant: "orange",
     buyUrl: VZV_SHOP_SERIE_N_FE3D16N1_URL,
     products: [
-      ELECTRIC_FORKLIFT_PRODUCTS[1]!,
-      ELECTRIC_FORKLIFT_PRODUCTS[2]!,
-      ELECTRIC_FORKLIFT_PRODUCTS[3]!,
+      ELECTRIC_FORKLIFT_PRODUCTS.find((p) => p.id === "fe3d")!,
+      ELECTRIC_FORKLIFT_PRODUCTS.find((p) => p.id === "fe3r12e")!,
     ],
     detail: {
       titleKey: "productsCatalog.series.serieN.detail.title",
@@ -985,6 +1109,316 @@ const DIESEL_FORKLIFT_PRODUCTS: ProductModel[] = [
   },
 ];
 
+const SWB_SERIES_DETAIL: ProductSeriesDetail = {
+  titleKey: "productsCatalog.series.swb.detail.title",
+  introKey: "productsCatalog.series.swb.detail.intro",
+  featureKeys: [
+    {
+      icon: "battery",
+      titleKey: "productsCatalog.series.swb.detail.features.1.title",
+      descKey: "productsCatalog.series.swb.detail.features.1.desc",
+    },
+    {
+      icon: "stability",
+      titleKey: "productsCatalog.series.swb.detail.features.2.title",
+      descKey: "productsCatalog.series.swb.detail.features.2.desc",
+    },
+    {
+      icon: "compact",
+      titleKey: "productsCatalog.series.swb.detail.features.3.title",
+      descKey: "productsCatalog.series.swb.detail.features.3.desc",
+    },
+    {
+      icon: "safety",
+      titleKey: "productsCatalog.series.swb.detail.features.4.title",
+      descKey: "productsCatalog.series.swb.detail.features.4.desc",
+    },
+  ],
+  specKeys: [
+    {
+      labelKey: "productsCatalog.series.swb.detail.specs.capacity.label",
+      valueKey: "productsCatalog.series.swb.detail.specs.capacity.value",
+    },
+    {
+      labelKey: "productsCatalog.series.swb.detail.specs.models.label",
+      valueKey: "productsCatalog.series.swb.detail.specs.models.value",
+    },
+    {
+      labelKey: "productsCatalog.series.swb.detail.specs.battery.label",
+      valueKey: "productsCatalog.series.swb.detail.specs.battery.value",
+    },
+    {
+      labelKey: "productsCatalog.series.swb.detail.specs.lift.label",
+      valueKey: "productsCatalog.series.swb.detail.specs.lift.value",
+    },
+    {
+      labelKey: "productsCatalog.series.swb.detail.specs.drive.label",
+      valueKey: "productsCatalog.series.swb.detail.specs.drive.value",
+    },
+    {
+      labelKey: "productsCatalog.series.swb.detail.specs.operation.label",
+      valueKey: "productsCatalog.series.swb.detail.specs.operation.value",
+    },
+  ],
+  audienceTitleKey: "productsCatalog.series.swb.detail.audience.title",
+  audienceKeys: [
+    "productsCatalog.series.swb.detail.audience.items.1",
+    "productsCatalog.series.swb.detail.audience.items.2",
+    "productsCatalog.series.swb.detail.audience.items.3",
+    "productsCatalog.series.swb.detail.audience.items.4",
+  ],
+  advantagesLeftTitleKey: "productsCatalog.series.swb.detail.advantages.title",
+  advantagesLeftKeys: [
+    "productsCatalog.series.swb.detail.advantages.items.1",
+    "productsCatalog.series.swb.detail.advantages.items.2",
+    "productsCatalog.series.swb.detail.advantages.items.3",
+    "productsCatalog.series.swb.detail.advantages.items.4",
+    "productsCatalog.series.swb.detail.advantages.items.5",
+    "productsCatalog.series.swb.detail.advantages.items.6",
+    "productsCatalog.series.swb.detail.advantages.items.7",
+  ],
+  advantagesRightTitleKey: "productsCatalog.series.swb.detail.initialLift.title",
+  advantagesRightKeys: [
+    "productsCatalog.series.swb.detail.initialLift.items.1",
+    "productsCatalog.series.swb.detail.initialLift.items.2",
+    "productsCatalog.series.swb.detail.initialLift.items.3",
+    "productsCatalog.series.swb.detail.initialLift.items.4",
+  ],
+  capacityCompareTitleKey: "productsCatalog.series.swb.detail.compare.title",
+  capacityCompareLeftTitleKey: "productsCatalog.series.swb.detail.compare.leftTitle",
+  capacityCompareRightTitleKey: "productsCatalog.series.swb.detail.compare.rightTitle",
+  capacityCompareLeftImage: "/images/products/stackers/bez-prizdvihem.png",
+  capacityCompareRightImage: "/images/products/stackers/s-prizdvihem.png",
+  capacityCompareRows: [
+    {
+      labelKey: "productsCatalog.series.swb.detail.compare.rows.1.label",
+      leftKey: "productsCatalog.series.swb.detail.compare.rows.1.left",
+      rightKey: "productsCatalog.series.swb.detail.compare.rows.1.right",
+    },
+  ],
+  argumentKey: "productsCatalog.series.swb.detail.argument",
+  specsPdfUrl: "/api/documents/swb-130-technicke-parametry",
+  specsPdfFilename: "SWB-130-130D-technicke-parametry.pdf",
+};
+
+const PSE_SERIES_DETAIL: ProductSeriesDetail = {
+  titleKey: "productsCatalog.series.pse.detail.title",
+  introKey: "productsCatalog.series.pse.detail.intro",
+  featureKeys: [
+    {
+      icon: "maintenance",
+      titleKey: "productsCatalog.series.pse.detail.features.1.title",
+      descKey: "productsCatalog.series.pse.detail.features.1.desc",
+    },
+    {
+      icon: "compact",
+      titleKey: "productsCatalog.series.pse.detail.features.2.title",
+      descKey: "productsCatalog.series.pse.detail.features.2.desc",
+    },
+    {
+      icon: "ac-drive",
+      titleKey: "productsCatalog.series.pse.detail.features.3.title",
+      descKey: "productsCatalog.series.pse.detail.features.3.desc",
+    },
+    {
+      icon: "cabin",
+      titleKey: "productsCatalog.series.pse.detail.features.4.title",
+      descKey: "productsCatalog.series.pse.detail.features.4.desc",
+    },
+  ],
+  specKeys: [
+    {
+      labelKey: "productsCatalog.series.pse.detail.specs.capacity.label",
+      valueKey: "productsCatalog.series.pse.detail.specs.capacity.value",
+    },
+    {
+      labelKey: "productsCatalog.series.pse.detail.specs.models.label",
+      valueKey: "productsCatalog.series.pse.detail.specs.models.value",
+    },
+    {
+      labelKey: "productsCatalog.series.pse.detail.specs.battery.label",
+      valueKey: "productsCatalog.series.pse.detail.specs.battery.value",
+    },
+    {
+      labelKey: "productsCatalog.series.pse.detail.specs.lift.label",
+      valueKey: "productsCatalog.series.pse.detail.specs.lift.value",
+    },
+    {
+      labelKey: "productsCatalog.series.pse.detail.specs.drive.label",
+      valueKey: "productsCatalog.series.pse.detail.specs.drive.value",
+    },
+    {
+      labelKey: "productsCatalog.series.pse.detail.specs.operation.label",
+      valueKey: "productsCatalog.series.pse.detail.specs.operation.value",
+    },
+  ],
+  audienceTitleKey: "productsCatalog.series.pse.detail.audience.title",
+  audienceKeys: [
+    "productsCatalog.series.pse.detail.audience.items.1",
+    "productsCatalog.series.pse.detail.audience.items.2",
+    "productsCatalog.series.pse.detail.audience.items.3",
+    "productsCatalog.series.pse.detail.audience.items.4",
+    "productsCatalog.series.pse.detail.audience.items.5",
+  ],
+  advantagesLeftTitleKey: "productsCatalog.series.pse.detail.advantages.title",
+  advantagesLeftKeys: [
+    "productsCatalog.series.pse.detail.advantages.items.1",
+    "productsCatalog.series.pse.detail.advantages.items.2",
+    "productsCatalog.series.pse.detail.advantages.items.3",
+    "productsCatalog.series.pse.detail.advantages.items.4",
+    "productsCatalog.series.pse.detail.advantages.items.5",
+    "productsCatalog.series.pse.detail.advantages.items.6",
+    "productsCatalog.series.pse.detail.advantages.items.7",
+    "productsCatalog.series.pse.detail.advantages.items.8",
+  ],
+  advantagesRightTitleKey: "productsCatalog.series.pse.detail.overview.title",
+  advantagesRightKeys: [
+    "productsCatalog.series.pse.detail.overview.items.1",
+    "productsCatalog.series.pse.detail.overview.items.2",
+    "productsCatalog.series.pse.detail.overview.items.3",
+    "productsCatalog.series.pse.detail.overview.items.4",
+    "productsCatalog.series.pse.detail.overview.items.5",
+  ],
+  capacityCompareTitleKey: "productsCatalog.series.pse.detail.compare.title",
+  capacityCompareLeftTitleKey: "productsCatalog.series.pse.detail.compare.leftTitle",
+  capacityCompareRightTitleKey: "productsCatalog.series.pse.detail.compare.rightTitle",
+  capacityCompareLeftImage: "/images/products/stackers/s-prizdvihem.png",
+  capacityCompareRightImage: "/images/products/stackers/bez-prizdvihem.png",
+  capacityCompareRows: [
+    {
+      labelKey: "productsCatalog.series.pse.detail.compare.rows.1.label",
+      leftKey: "productsCatalog.series.pse.detail.compare.rows.1.left",
+      rightKey: "productsCatalog.series.pse.detail.compare.rows.1.right",
+    },
+    {
+      labelKey: "productsCatalog.series.pse.detail.compare.rows.2.label",
+      leftKey: "productsCatalog.series.pse.detail.compare.rows.2.left",
+      rightKey: "productsCatalog.series.pse.detail.compare.rows.2.right",
+    },
+    {
+      labelKey: "productsCatalog.series.pse.detail.compare.rows.3.label",
+      leftKey: "productsCatalog.series.pse.detail.compare.rows.3.left",
+      rightKey: "productsCatalog.series.pse.detail.compare.rows.3.right",
+    },
+    {
+      labelKey: "productsCatalog.series.pse.detail.compare.rows.4.label",
+      leftKey: "productsCatalog.series.pse.detail.compare.rows.4.left",
+      rightKey: "productsCatalog.series.pse.detail.compare.rows.4.right",
+    },
+  ],
+  argumentKey: "productsCatalog.series.pse.detail.argument",
+};
+
+const PS_SERIES_DETAIL: ProductSeriesDetail = {
+  titleKey: "productsCatalog.series.ps.detail.title",
+  introKey: "productsCatalog.series.ps.detail.intro",
+  featureKeys: [
+    {
+      icon: "hydraulics",
+      titleKey: "productsCatalog.series.ps.detail.features.1.title",
+      descKey: "productsCatalog.series.ps.detail.features.1.desc",
+    },
+    {
+      icon: "stability",
+      titleKey: "productsCatalog.series.ps.detail.features.2.title",
+      descKey: "productsCatalog.series.ps.detail.features.2.desc",
+    },
+    {
+      icon: "ac-drive",
+      titleKey: "productsCatalog.series.ps.detail.features.3.title",
+      descKey: "productsCatalog.series.ps.detail.features.3.desc",
+    },
+    {
+      icon: "maintenance",
+      titleKey: "productsCatalog.series.ps.detail.features.4.title",
+      descKey: "productsCatalog.series.ps.detail.features.4.desc",
+    },
+  ],
+  specKeys: [
+    {
+      labelKey: "productsCatalog.series.ps.detail.specs.capacity.label",
+      valueKey: "productsCatalog.series.ps.detail.specs.capacity.value",
+    },
+    {
+      labelKey: "productsCatalog.series.ps.detail.specs.models.label",
+      valueKey: "productsCatalog.series.ps.detail.specs.models.value",
+    },
+    {
+      labelKey: "productsCatalog.series.ps.detail.specs.battery.label",
+      valueKey: "productsCatalog.series.ps.detail.specs.battery.value",
+    },
+    {
+      labelKey: "productsCatalog.series.ps.detail.specs.lift.label",
+      valueKey: "productsCatalog.series.ps.detail.specs.lift.value",
+    },
+    {
+      labelKey: "productsCatalog.series.ps.detail.specs.drive.label",
+      valueKey: "productsCatalog.series.ps.detail.specs.drive.value",
+    },
+    {
+      labelKey: "productsCatalog.series.ps.detail.specs.operation.label",
+      valueKey: "productsCatalog.series.ps.detail.specs.operation.value",
+    },
+  ],
+  audienceTitleKey: "productsCatalog.series.ps.detail.audience.title",
+  audienceKeys: [
+    "productsCatalog.series.ps.detail.audience.items.1",
+    "productsCatalog.series.ps.detail.audience.items.2",
+    "productsCatalog.series.ps.detail.audience.items.3",
+    "productsCatalog.series.ps.detail.audience.items.4",
+    "productsCatalog.series.ps.detail.audience.items.5",
+  ],
+  advantagesLeftTitleKey: "productsCatalog.series.ps.detail.advantages.title",
+  advantagesLeftKeys: [
+    "productsCatalog.series.ps.detail.advantages.items.1",
+    "productsCatalog.series.ps.detail.advantages.items.2",
+    "productsCatalog.series.ps.detail.advantages.items.3",
+    "productsCatalog.series.ps.detail.advantages.items.4",
+    "productsCatalog.series.ps.detail.advantages.items.5",
+    "productsCatalog.series.ps.detail.advantages.items.6",
+  ],
+  advantagesRightTitleKey: "productsCatalog.series.ps.detail.legend.title",
+  advantagesRightKeys: [
+    "productsCatalog.series.ps.detail.legend.items.1",
+    "productsCatalog.series.ps.detail.legend.items.2",
+    "productsCatalog.series.ps.detail.legend.items.3",
+    "productsCatalog.series.ps.detail.legend.items.4",
+  ],
+  recommendTitleKey: "productsCatalog.series.ps.detail.recommend.title",
+  recommendWhenKeys: [
+    "productsCatalog.series.ps.detail.recommend.items.1",
+    "productsCatalog.series.ps.detail.recommend.items.2",
+    "productsCatalog.series.ps.detail.recommend.items.3",
+    "productsCatalog.series.ps.detail.recommend.items.4",
+  ],
+  capacityCompareTitleKey: "productsCatalog.series.ps.detail.compare.title",
+  capacityCompareLeftTitleKey: "productsCatalog.series.ps.detail.compare.leftTitle",
+  capacityCompareRightTitleKey: "productsCatalog.series.ps.detail.compare.rightTitle",
+  capacityCompareRows: [
+    {
+      labelKey: "productsCatalog.series.ps.detail.compare.rows.1.label",
+      leftKey: "productsCatalog.series.ps.detail.compare.rows.1.left",
+      rightKey: "productsCatalog.series.ps.detail.compare.rows.1.right",
+    },
+    {
+      labelKey: "productsCatalog.series.ps.detail.compare.rows.2.label",
+      leftKey: "productsCatalog.series.ps.detail.compare.rows.2.left",
+      rightKey: "productsCatalog.series.ps.detail.compare.rows.2.right",
+    },
+    {
+      labelKey: "productsCatalog.series.ps.detail.compare.rows.3.label",
+      leftKey: "productsCatalog.series.ps.detail.compare.rows.3.left",
+      rightKey: "productsCatalog.series.ps.detail.compare.rows.3.right",
+    },
+    {
+      labelKey: "productsCatalog.series.ps.detail.compare.rows.4.label",
+      leftKey: "productsCatalog.series.ps.detail.compare.rows.4.left",
+      rightKey: "productsCatalog.series.ps.detail.compare.rows.4.right",
+    },
+  ],
+  argumentKey: "productsCatalog.series.ps.detail.argument",
+};
+
 const STACKER_WALKIE_BEZ_PRIZDVIHU_PRODUCTS: ProductModel[] = [
   {
     id: "swb130",
@@ -993,6 +1427,9 @@ const STACKER_WALKIE_BEZ_PRIZDVIHU_PRODUCTS: ProductModel[] = [
     descriptionKey: "productsCatalog.models.swb130",
     image: "/images/products/stackers/bez-prizdvihem.png",
     buyUrl: VZV_SHOP_BEZ_PRIZDVIHU_SWB130_URL,
+    seriesDetail: SWB_SERIES_DETAIL,
+    specsPdfUrl: "/api/documents/swb-130-technicke-parametry",
+    specsPdfFilename: "SWB-130-130D-technicke-parametry.pdf",
   },
   {
     id: "pse15lc",
@@ -1001,22 +1438,16 @@ const STACKER_WALKIE_BEZ_PRIZDVIHU_PRODUCTS: ProductModel[] = [
     descriptionKey: "productsCatalog.models.pse15lc",
     image: "/images/products/stackers/bez-prizdvihem.png",
     buyUrl: VZV_SHOP_BEZ_PRIZDVIHU_PSE15LC_URL,
+    seriesDetail: PSE_SERIES_DETAIL,
   },
   {
     id: "ps16l",
-    model: "PS 16 L",
-    capacity: "1600 kg",
+    model: "PS 16 L – PS 20 L",
+    capacity: "1600 – 2000 kg",
     descriptionKey: "productsCatalog.models.ps16l",
     image: "/images/products/stackers/bez-prizdvihem.png",
     buyUrl: VZV_SHOP_BEZ_PRIZDVIHU_PS16L_URL,
-  },
-  {
-    id: "ps20l",
-    model: "PS 20 L",
-    capacity: "2000 kg",
-    descriptionKey: "productsCatalog.models.ps20l",
-    image: "/images/products/stackers/bez-prizdvihem.png",
-    buyUrl: VZV_SHOP_BEZ_PRIZDVIHU_PS20L_URL,
+    seriesDetail: PS_SERIES_DETAIL,
   },
 ];
 
@@ -1028,6 +1459,7 @@ const STACKER_WALKIE_S_PRIZDVIHEM_PRODUCTS: ProductModel[] = [
     descriptionKey: "productsCatalog.models.pse12nd",
     image: "/images/products/stackers/s-prizdvihem.png",
     buyUrl: VZV_SHOP_S_PRIZDVIHEM_URL,
+    seriesDetail: PSE_SERIES_DETAIL,
   },
   {
     id: "swb130d",
@@ -1036,6 +1468,9 @@ const STACKER_WALKIE_S_PRIZDVIHEM_PRODUCTS: ProductModel[] = [
     descriptionKey: "productsCatalog.models.swb130d",
     image: "/images/products/stackers/s-prizdvihem.png",
     buyUrl: VZV_SHOP_S_PRIZDVIHEM_URL,
+    seriesDetail: SWB_SERIES_DETAIL,
+    specsPdfUrl: "/api/documents/swb-130-technicke-parametry",
+    specsPdfFilename: "SWB-130-130D-technicke-parametry.pdf",
   },
   {
     id: "ps16dl",
@@ -1044,6 +1479,7 @@ const STACKER_WALKIE_S_PRIZDVIHEM_PRODUCTS: ProductModel[] = [
     descriptionKey: "productsCatalog.models.ps16dl",
     image: "/images/products/stackers/s-prizdvihem.png",
     buyUrl: VZV_SHOP_S_PRIZDVIHEM_URL,
+    seriesDetail: PS_SERIES_DETAIL,
   },
 ];
 
@@ -1210,19 +1646,12 @@ const STACKER_WALKIE_VARIANTS: ProductSeries[] = [
 const STACKER_RIDER_BEZ_PRIZDVIHU_PRODUCTS: ProductModel[] = [
   {
     id: "ps16n",
-    model: "PS 16 N",
-    capacity: "1,6 t",
+    model: "PS 16 N – PS 20 N",
+    capacity: "1,6 – 2,0 t",
     descriptionKey: "productsCatalog.models.ps16n",
     image: "/images/products/stackers/s-plosinou-product.png",
     buyUrl: VZV_SHOP_RIDER_BEZ_PRIZDVIHU_PS16N_URL,
-  },
-  {
-    id: "ps20n",
-    model: "PS 20 N",
-    capacity: "2,0 t",
-    descriptionKey: "productsCatalog.models.ps20n",
-    image: "/images/products/stackers/s-plosinou-product.png",
-    buyUrl: VZV_SHOP_RIDER_BEZ_PRIZDVIHU_PS20N_URL,
+    seriesDetail: PS_SERIES_DETAIL,
   },
 ];
 
@@ -1234,6 +1663,7 @@ const STACKER_RIDER_S_PRIZDVIHEM_PRODUCTS: ProductModel[] = [
     descriptionKey: "productsCatalog.models.ps16dn",
     image: "/images/products/stackers/s-plosinou-s-prizdvihem.png",
     buyUrl: VZV_SHOP_RIDER_S_PRIZDVIHEM_PS16DN_URL,
+    seriesDetail: PS_SERIES_DETAIL,
   },
 ];
 
@@ -1406,28 +1836,18 @@ const STACKER_STRADDLE_PSE12NSL: ProductModel = {
   buyUrl: VZV_SHOP_OBKROCNE_PSE12NSL_URL,
 };
 
-const STACKER_STRADDLE_PT16TSL: ProductModel = {
-  id: "pt16tsl",
-  model: "PT 16 TSL",
-  capacity: "1600 kg",
-  descriptionKey: "productsCatalog.models.pt16tsl",
-  image: "/images/products/stackers/obkrocne-pt-ps.png",
-  buyUrl: VZV_SHOP_OBKROCNE_PT16TSL_URL,
-};
-
-const STACKER_STRADDLE_PS18TSL: ProductModel = {
-  id: "ps18tsl",
-  model: "PS 18 TSL",
-  capacity: "1800 kg",
-  descriptionKey: "productsCatalog.models.ps18tsl",
+const STACKER_STRADDLE_PS16_18TSL: ProductModel = {
+  id: "ps16-18tsl",
+  model: "PS 16 TSL – PS 18 TSL",
+  capacity: "1600 – 1800 kg",
+  descriptionKey: "productsCatalog.models.ps16tsl",
   image: "/images/products/stackers/obkrocne-pt-ps.png",
   buyUrl: VZV_SHOP_OBKROCNE_PS18TSL_URL,
 };
 
 const STACKER_STRADDLE_PRODUCTS: ProductModel[] = [
   STACKER_STRADDLE_PSE12NSL,
-  STACKER_STRADDLE_PT16TSL,
-  STACKER_STRADDLE_PS18TSL,
+  STACKER_STRADDLE_PS16_18TSL,
 ];
 
 const STACKER_STRADDLE_DETAIL_FEATURES = [
@@ -1486,6 +1906,48 @@ function createStraddleSeriesDetail(capacityValueKey: string): ProductSeriesDeta
     ],
     specsPdfUrl: "/api/documents/catalog-specs/straddle",
     specsPdfFilename: "straddle-technicke-parametry.pdf",
+    audienceTitleKey: "productsCatalog.stackerStraddle.detail.audience.title",
+    audienceKeys: [
+      "productsCatalog.stackerStraddle.detail.audience.items.1",
+      "productsCatalog.stackerStraddle.detail.audience.items.2",
+      "productsCatalog.stackerStraddle.detail.audience.items.3",
+      "productsCatalog.stackerStraddle.detail.audience.items.4",
+      "productsCatalog.stackerStraddle.detail.audience.items.5",
+    ],
+    advantagesLeftTitleKey: "productsCatalog.stackerStraddle.detail.advantages.title",
+    advantagesLeftKeys: [
+      "productsCatalog.stackerStraddle.detail.advantages.items.1",
+      "productsCatalog.stackerStraddle.detail.advantages.items.2",
+      "productsCatalog.stackerStraddle.detail.advantages.items.3",
+      "productsCatalog.stackerStraddle.detail.advantages.items.4",
+    ],
+    capacityCompareTitleKey: "productsCatalog.stackerStraddle.detail.compare.title",
+    capacityCompareLeftTitleKey: "productsCatalog.stackerStraddle.detail.compare.leftTitle",
+    capacityCompareRightTitleKey: "productsCatalog.stackerStraddle.detail.compare.rightTitle",
+    capacityCompareLeftImage: "/images/products/stackers/obkrocne.png",
+    capacityCompareRightImage: "/images/products/stackers/obkrocne-pt-ps.png",
+    capacityCompareRows: [
+      {
+        labelKey: "productsCatalog.stackerStraddle.detail.compare.rows.1.label",
+        leftKey: "productsCatalog.stackerStraddle.detail.compare.rows.1.left",
+        rightKey: "productsCatalog.stackerStraddle.detail.compare.rows.1.right",
+      },
+      {
+        labelKey: "productsCatalog.stackerStraddle.detail.compare.rows.2.label",
+        leftKey: "productsCatalog.stackerStraddle.detail.compare.rows.2.left",
+        rightKey: "productsCatalog.stackerStraddle.detail.compare.rows.2.right",
+      },
+      {
+        labelKey: "productsCatalog.stackerStraddle.detail.compare.rows.3.label",
+        leftKey: "productsCatalog.stackerStraddle.detail.compare.rows.3.left",
+        rightKey: "productsCatalog.stackerStraddle.detail.compare.rows.3.right",
+      },
+      {
+        labelKey: "productsCatalog.stackerStraddle.detail.compare.rows.4.label",
+        leftKey: "productsCatalog.stackerStraddle.detail.compare.rows.4.left",
+        rightKey: "productsCatalog.stackerStraddle.detail.compare.rows.4.right",
+      },
+    ],
   };
 }
 
@@ -1516,53 +1978,28 @@ const STACKER_STRADDLE_VARIANTS: ProductSeries[] = [
     ),
   },
   {
-    id: "straddle-pt16tsl",
-    slug: { cz: "pt-16-tsl", en: "pt-16-tsl" },
-    badgeKey: "productsCatalog.stackerStraddleModels.pt16tsl.badge",
-    titleKey: "productsCatalog.stackerStraddleModels.pt16tsl.title",
-    subtitleKey: "productsCatalog.stackerStraddleModels.pt16tsl.subtitle",
-    capacityKey: "productsCatalog.stackerStraddleModels.pt16tsl.capacity",
-    modelRangeKey: "productsCatalog.stackerStraddleModels.pt16tsl.modelRange",
-    productLineKey: "productsCatalog.stackerStraddleModels.pt16tsl.productLine",
-    descKey: "productsCatalog.stackerStraddleModels.pt16tsl.desc",
+    id: "straddle-ps16-18tsl",
+    slug: { cz: "ps-16-18-tsl", en: "ps-16-18-tsl" },
+    badgeKey: "productsCatalog.stackerStraddleModels.ps16tsl.badge",
+    titleKey: "productsCatalog.stackerStraddleModels.ps16tsl.title",
+    subtitleKey: "productsCatalog.stackerStraddleModels.ps16tsl.subtitle",
+    capacityKey: "productsCatalog.stackerStraddleModels.ps16tsl.capacity",
+    modelRangeKey: "productsCatalog.stackerStraddleModels.ps16tsl.modelRange",
+    productLineKey: "productsCatalog.stackerStraddleModels.ps16tsl.productLine",
+    descKey: "productsCatalog.stackerStraddleModels.ps16tsl.desc",
     useKeys: [
-      "productsCatalog.stackerStraddleModels.pt16tsl.uses.1",
-      "productsCatalog.stackerStraddleModels.pt16tsl.uses.2",
-      "productsCatalog.stackerStraddleModels.pt16tsl.uses.3",
-    ],
-    letter: "O",
-    image: "/images/products/stackers/obkrocne-pt-ps.png",
-    gallery: ["/images/products/stackers/obkrocne-pt-ps.png"],
-    ctaVariant: "orange",
-    buyUrl: VZV_SHOP_OBKROCNE_PT16TSL_URL,
-    products: [STACKER_STRADDLE_PT16TSL],
-    detail: createStraddleSeriesDetail(
-      "productsCatalog.stackerStraddleModels.pt16tsl.capacity",
-    ),
-  },
-  {
-    id: "straddle-ps18tsl",
-    slug: { cz: "ps-18-tsl", en: "ps-18-tsl" },
-    badgeKey: "productsCatalog.stackerStraddleModels.ps18tsl.badge",
-    titleKey: "productsCatalog.stackerStraddleModels.ps18tsl.title",
-    subtitleKey: "productsCatalog.stackerStraddleModels.ps18tsl.subtitle",
-    capacityKey: "productsCatalog.stackerStraddleModels.ps18tsl.capacity",
-    modelRangeKey: "productsCatalog.stackerStraddleModels.ps18tsl.modelRange",
-    productLineKey: "productsCatalog.stackerStraddleModels.ps18tsl.productLine",
-    descKey: "productsCatalog.stackerStraddleModels.ps18tsl.desc",
-    useKeys: [
-      "productsCatalog.stackerStraddleModels.ps18tsl.uses.1",
-      "productsCatalog.stackerStraddleModels.ps18tsl.uses.2",
-      "productsCatalog.stackerStraddleModels.ps18tsl.uses.3",
+      "productsCatalog.stackerStraddleModels.ps16tsl.uses.1",
+      "productsCatalog.stackerStraddleModels.ps16tsl.uses.2",
+      "productsCatalog.stackerStraddleModels.ps16tsl.uses.3",
     ],
     letter: "O",
     image: "/images/products/stackers/obkrocne-pt-ps.png",
     gallery: ["/images/products/stackers/obkrocne-pt-ps.png"],
     ctaVariant: "orange",
     buyUrl: VZV_SHOP_OBKROCNE_PS18TSL_URL,
-    products: [STACKER_STRADDLE_PS18TSL],
+    products: [STACKER_STRADDLE_PS16_18TSL],
     detail: createStraddleSeriesDetail(
-      "productsCatalog.stackerStraddleModels.ps18tsl.capacity",
+      "productsCatalog.stackerStraddleModels.ps16tsl.capacity",
     ),
   },
 ];
@@ -1835,7 +2272,7 @@ export const PRODUCT_CATALOG: readonly CatalogCategory[] = [
             },
           ],
           specsPdfUrl: "/api/documents/diesel-lpg-technicke-parametry",
-          specsPdfFilename: "diesel-lpg-technicke-parametry.pdf",
+          specsPdfFilename: "CPC-D-20-38-technicke-parametry.pdf",
         },
       },
     ],

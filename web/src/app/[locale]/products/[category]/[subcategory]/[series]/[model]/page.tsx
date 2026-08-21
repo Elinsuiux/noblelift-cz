@@ -77,9 +77,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   return {
     title: meta("title", { model: product.model, series: t(series.titleKey) }),
-    description: product.detail
-      ? t(product.detail.longDescKey)
-      : t(product.descriptionKey),
+    description: product.seriesDetail
+      ? t(product.seriesDetail.introKey)
+      : product.detail
+        ? t(product.detail.longDescKey)
+        : t(product.descriptionKey),
   };
 }
 
