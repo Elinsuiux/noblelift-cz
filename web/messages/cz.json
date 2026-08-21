@@ -59,8 +59,8 @@
         "label": "výrobní země"
       },
       "listed": {
-        "value": "2015",
-        "label": "vstup na burzu"
+        "value": "200 000+",
+        "label": "prodaných vozíků ročně"
       }
     },
     "learnMore": "Zjistit více +",
@@ -82,8 +82,8 @@
         "desc": "Zajišťujeme záruční i pozáruční servis a dodávku originálních náhradních dílů Noblelift."
       },
       "5": {
-        "title": "Rychlé dodání napříč Evropou",
-        "desc": "Spolupracujeme s evropskou logistikou a zajistíme dopravu techniky až k vám."
+        "title": "Rychlé dodání",
+        "desc": "Největší skladová zásoba nových vozíků v ČR a vlastní kamionová doprava umožňují expedovat většinu vozíků ihned."
       },
       "6": {
         "title": "Výhradní oficiální dovozce",
@@ -420,8 +420,8 @@
           "label": "výrobní země"
         },
         "listed": {
-          "value": "2015",
-          "label": "vstup na burzu"
+          "value": "200 000+",
+          "label": "prodaných vozíků ročně"
         }
       },
       "milestones": {
@@ -1895,7 +1895,7 @@
       "productLine": "Ruční paletový vozík",
       "detail": {
         "title": "Noblelift ruční paletové vozíky — detailní popis",
-        "intro": "Spolehlivé ruční paletové vozíky Noblelift pro každodenní horizontální manipulaci s paletami. Jednoduchá obsluha, nízké provozní náklady a robustní konstrukce je činí ideální volbou do skladů, výroby i obchodů.",
+        "intro": "Vozík je vybaven tandemovými vidlicovými koly s odolným polyuretanovým povrchem a praktickými nájezdovými kladkami, které usnadňují přejezd přes hrany palet a nerovnosti. Řídicí kola mají robustní ocelový střed s polyuretanovým povrchem namísto běžného plastového provedení, což zajišťuje vyšší pevnost a delší životnost. Robustní kovová rukojeť je opatřena ergonomickým plastovým návlekem pro pohodlný a jistý úchop při každodenní manipulaci.",
         "features": {
           "1": {
             "title": "Jednoduchá obsluha",

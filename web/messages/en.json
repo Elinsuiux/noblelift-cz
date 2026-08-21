@@ -59,8 +59,8 @@
         "label": "manufacturing countries"
       },
       "listed": {
-        "value": "2015",
-        "label": "stock exchange listing"
+        "value": "200 000+",
+        "label": "trucks sold per year"
       }
     },
     "learnMore": "Learn more +",
@@ -82,8 +82,8 @@
         "desc": "Warranty and post-warranty service plus original Noblelift spare parts supply."
       },
       "5": {
-        "title": "Fast delivery across Europe",
-        "desc": "We work with European logistics partners to deliver equipment directly to you."
+        "title": "Fast delivery",
+        "desc": "The largest stock of new trucks in the Czech Republic and our own truck fleet mean most units can be dispatched immediately."
       },
       "6": {
         "title": "Exclusive official importer",
@@ -420,8 +420,8 @@
           "label": "manufacturing countries"
         },
         "listed": {
-          "value": "2015",
-          "label": "stock exchange listing"
+          "value": "200 000+",
+          "label": "trucks sold per year"
         }
       },
       "milestones": {
@@ -1895,7 +1895,7 @@
       "productLine": "Manual pallet truck",
       "detail": {
         "title": "Noblelift manual pallet trucks — detailed description",
-        "intro": "Reliable Noblelift manual pallet trucks for everyday horizontal pallet handling. Simple operation, low running costs and a robust build make them an ideal choice for warehouses, production and retail.",
+        "intro": "The truck is fitted with tandem fork wheels with a durable polyurethane surface and practical entry rollers that make it easier to cross pallet edges and uneven surfaces. The steer wheels have a robust steel hub with a polyurethane surface instead of a standard plastic design, for higher strength and longer life. The robust metal handle has an ergonomic plastic grip for a comfortable, secure hold during everyday handling.",
         "features": {
           "1": {
             "title": "Simple operation",
