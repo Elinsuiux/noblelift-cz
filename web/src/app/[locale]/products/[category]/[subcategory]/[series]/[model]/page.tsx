@@ -14,6 +14,7 @@ import {
   getSubcategoryBySlug,
   getSubcategorySlug,
 } from "@/lib/products-catalog";
+import { seoDescription } from "@/lib/seo";
 
 type Props = {
   params: Promise<{
@@ -75,13 +76,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const t = await getTranslations({ locale });
   const meta = await getTranslations({ locale, namespace: "productsCatalog.meta.model" });
 
+  const rawDescription = product.seriesDetail
+    ? t(product.seriesDetail.introKey)
+    : product.detail
+      ? t(product.detail.longDescKey)
+      : t(product.descriptionKey);
+
   return {
     title: meta("title", { model: product.model, series: t(series.titleKey) }),
-    description: product.seriesDetail
-      ? t(product.seriesDetail.introKey)
-      : product.detail
-        ? t(product.detail.longDescKey)
-        : t(product.descriptionKey),
+    description: seoDescription(rawDescription),
   };
 }
 

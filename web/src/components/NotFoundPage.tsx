@@ -4,6 +4,7 @@ import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { Wordmark } from "@/components/Wordmark";
 
 export function NotFoundPage() {
   const t = useTranslations("notFound");
@@ -12,12 +13,20 @@ export function NotFoundPage() {
     <>
       <Header />
       <main className="bg-[#f5f5f5]">
-        <section className="bg-[#1a1a1a] px-6 pb-14 pt-24 text-white">
-          <div className="mx-auto w-full max-w-[1140px]">
-            <p className="mt-6 text-xs font-bold uppercase tracking-wider text-noble-orange">
+        <section className="relative overflow-hidden bg-[#1a1a1a] px-6 pb-16 pt-24 text-white">
+          <div
+            aria-hidden
+            className="pointer-events-none absolute -right-16 top-8 select-none text-[9rem] font-black leading-none text-white/[0.06] sm:text-[12rem] md:right-8 md:text-[14rem]"
+          >
+            404
+          </div>
+          <div className="relative mx-auto w-full max-w-[1140px]">
+            <Wordmark variant="header" className="h-5 w-auto sm:h-6" />
+            <p className="mt-8 text-6xl font-black tracking-tight text-noble-orange sm:text-7xl md:text-8xl">
               {t("badge")}
             </p>
-            <h1 className="mt-2 text-3xl font-extrabold uppercase tracking-wide md:text-5xl">
+            <div className="mt-3 h-1 w-16 rounded-full bg-noble-orange" />
+            <h1 className="mt-6 max-w-3xl text-3xl font-extrabold uppercase tracking-wide md:text-5xl">
               {t("title")}
             </h1>
             <p className="mt-4 max-w-2xl text-base leading-relaxed text-zinc-300 md:text-lg">
@@ -26,7 +35,7 @@ export function NotFoundPage() {
           </div>
         </section>
 
-        <section className="px-6 py-16">
+        <section className="px-6 py-14">
           <div className="mx-auto w-full max-w-[1140px]">
             <div className="rounded-2xl border border-zinc-200 bg-white p-8 shadow-sm md:p-10">
               <p className="max-w-2xl text-sm leading-relaxed text-zinc-600 md:text-base">
@@ -46,8 +55,14 @@ export function NotFoundPage() {
                   {t("productsCta")}
                 </Link>
                 <Link
-                  href="/contact"
+                  href="/service"
                   className="inline-flex items-center justify-center rounded-full border-2 border-zinc-300 px-6 py-3 text-sm font-bold text-zinc-800 transition hover:border-zinc-900 hover:bg-zinc-900 hover:text-white"
+                >
+                  {t("serviceCta")}
+                </Link>
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center justify-center rounded-full border-2 border-noble-orange px-6 py-3 text-sm font-bold text-noble-orange transition hover:bg-noble-orange hover:text-white"
                 >
                   {t("contactCta")}
                 </Link>

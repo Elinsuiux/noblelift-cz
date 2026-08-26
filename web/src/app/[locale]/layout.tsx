@@ -5,6 +5,7 @@ import { getMessages, getTranslations, setRequestLocale } from "next-intl/server
 import { notFound } from "next/navigation";
 import { CookieConsent } from "@/components/CookieConsent";
 import { routing } from "@/i18n/routing";
+import { seoDescription } from "@/lib/seo";
 import "../globals.css";
 
 const inter = Inter({
@@ -27,7 +28,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   return {
     title: t("title"),
-    description: t("description"),
+    description: seoDescription(t("description")),
   };
 }
 

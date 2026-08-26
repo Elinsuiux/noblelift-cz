@@ -1,16 +1,17 @@
 {
   "meta": {
-    "title": "Noblelift | VZV GROUP s.r.o.",
-    "description": "VZV GROUP s.r.o. – výhradní dovozce a distributor techniky Noblelift pro ČR a SR. Manipulační technika, servis a náhradní díly."
+    "title": "Noblelift | Manipulační technika | VZV GROUP s.r.o.",
+    "description": "VZV GROUP – výhradní dovozce Noblelift pro ČR a SR. Prodej manipulační techniky, záruční i pozáruční servis a originální náhradní díly skladem. Poptávka online."
   },
   "notFound": {
     "badge": "404",
-    "title": "Stránka nenalezena",
-    "description": "Omlouváme se, ale požadovaná stránka neexistuje nebo byla přesunuta.",
-    "hint": "Zkontrolujte prosím adresu URL, nebo pokračujte na úvodní stránku či katalog produktů Noblelift.",
+    "title": "Tady nic není",
+    "description": "Stránka, kterou hledáte, neexistuje, byla přesunuta, nebo je v adrese překlep.",
+    "hint": "Vraťte se na úvod, prohlédněte katalog Noblelift, servis, nebo nám napište — rádi pomůžeme najít správný stroj.",
     "homeCta": "Zpět na úvod",
-    "productsCta": "Zobrazit produkty",
-    "contactCta": "Kontaktujte nás"
+    "productsCta": "Katalog produktů",
+    "serviceCta": "Servis a díly",
+    "contactCta": "Napsat nám"
   },
   "brand": {
     "sub": "VZV GROUP s.r.o."
@@ -39,7 +40,9 @@
       "prev": "Předchozí snímek",
       "next": "Další snímek",
       "slides": "Hero snímky",
-      "goTo": "Přejít na snímek {index}"
+      "goTo": "Přejít na snímek {index}",
+      "altWarehouse": "Sklad s manipulační technikou Noblelift – vysokozdvižné vozíky a regály",
+      "altForklift": "Čelní vysokozdvižný vozík Noblelift při práci ve skladu"
     }
   },
   "why": {
@@ -124,32 +127,32 @@
       "1": {
         "tags": "Elektrické / Dieselové",
         "title": "Čelní vozíky",
-        "desc": "Tří- a čtyřkolové elektrické a dieselové čelní vysokozdvižné vozíky. K dispozici v litiové verzi (Li-Ion). Nosnost 2,5 až 10 t."
+        "desc": "Elektrické i dieselové/LPG čelní vozíky Noblelift. Lithiové verze (Li-Ion), nosnost typicky 1,2–10 t – sklady, výroba i venkovní areály. Poptávka online."
       },
       "2": {
         "tags": "Bez plošiny / S plošinou / Obkročné",
         "title": "Ruční vysokozdvižné vozíky",
-        "desc": "Elektrické zakladače s pěší obsluhou i zakladače s plošinou pro operátora. Kompaktní konstrukce, vysoká zbytková nosnost a zdvih až 13 m."
+        "desc": "Elektrické zakladače Noblelift s pěší obsluhou i s plošinou. Kompaktní konstrukce, vysoká zbytková nosnost a zdvih až 13 m. Prodej a servis VZV GROUP."
       },
       "3": {
         "tags": "Ruční / Elektrické / S vážením",
         "title": "Paletové vozíky",
-        "desc": "Ruční, elektrické pěší i řidičské paletové vozíky. Varianty s váhami, nízkým vstupem a lithiovým pohonem."
+        "desc": "Ruční a elektrické paletové vozíky Noblelift – pěší i řidičské. Vážení, nízký vstup a lithiový pohon pro každodenní skladovou manipulaci. Poptávka online."
       },
       "4": {
         "tags": "Venkovní / Diesel / Stavebnictví",
         "title": "Terénní vozíky a manipulátory",
-        "desc": "Dieselové terénní vozíky a teleskopické manipulátory pro stavebnictví a zemědělství. Samostatná jízda na nerovném terénu."
+        "desc": "Dieselové terénní vozíky a teleskopické manipulátory Noblelift pro stavebnictví a zemědělství. Jízda na nerovném terénu. Nabídka a servis VZV GROUP."
       },
       "5": {
         "tags": "Vysokozdvižné / do 13 m / Úzké uličky",
         "title": "Retraky a vychystávací vozíky",
-        "desc": "Retrakty pro vysoké regály až 13 m. Modely pro úzké uličky, double-deep verze a vychystávací vozíky pro efektivní skladování."
+        "desc": "Retraky a vychystávací vozíky Noblelift pro vysoké regály až 13 m. Úzké uličky, double-deep a efektivní stohování. Prodej a servis VZV GROUP pro ČR a SR."
       },
       "6": {
         "tags": "Elektrické",
         "title": "Nůžkové plošiny",
-        "desc": "Elektrické nůžkové pracovní plošiny pro bezpečnou práci ve výšce při údržbě, montážích a skladových operacích."
+        "desc": "Elektrické nůžkové pracovní plošiny Noblelift pro bezpečnou práci ve výšce – údržba, montáže a sklad. Stabilní platforma a tichý provoz. Poptávka u VZV GROUP."
       }
     }
   },
@@ -258,7 +261,7 @@
   "servicePage": {
     "meta": {
       "title": "Servis a náhradní díly | Noblelift | VZV GROUP s.r.o.",
-      "description": "Autorizovaný servis Noblelift v ČR a SR, originální náhradní díly skladem a rychlá expedice. VZV GROUP s.r.o. – výhradní dovozce Noblelift."
+      "description": "Autorizovaný servis Noblelift a originální díly skladem. Záruční i pozáruční opravy v ČR a SR, rychlá expedice přes VZV GROUP. Objednejte servisní zásah."
     },
     "title": "Servis a náhradní díly",
     "intro": "Zajišťujeme kompletní péči o váš vozový park po celé České republice a na Slovensku. Záruční i pozáruční servis, originální díly a přímá podpora výrobce Noblelift.",
@@ -339,7 +342,7 @@
   "contactPage": {
     "meta": {
       "title": "Kontakt | Noblelift | VZV GROUP s.r.o.",
-      "description": "Kontaktujte VZV GROUP s.r.o. – výhradního dovozce Noblelift pro ČR a SR. Obchodní zástupce, formulář a sídlo společnosti."
+      "description": "Kontaktujte VZV GROUP – obchod, servis a náhradní díly Noblelift. Formulář, obchodní zástupci a sklady v Červené Vodě a Praze pro zákazníky z ČR a SR."
     },
     "title": "Kontaktujte nás",
     "intro": "Potřebujete poradit s výběrem manipulační techniky Noblelift? Náš tým vám pomůže najít optimální řešení pro váš sklad, výrobu nebo provoz. Jsme výhradním dovozcem pro Českou republiku a Slovensko.",
@@ -392,7 +395,7 @@
   "aboutPage": {
     "meta": {
       "title": "O nás | Noblelift | VZV GROUP s.r.o.",
-      "description": "Noblelift.cz – výhradní zastoupení značky Noblelift pro ČR a SR. VZV GROUP s.r.o. nabízí manipulační techniku, servis, náhradní díly a odborné poradenství."
+      "description": "O VZV GROUP a Noblelift: výhradní zastoupení pro ČR a SR, historie od roku 1996, sortiment manipulační techniky, servis a poradenství. Zjistěte více."
     },
     "title": "O nás",
     "intro": {
@@ -611,7 +614,7 @@
   "legalPrivacy": {
     "meta": {
       "title": "Zásady zpracování osobních údajů | Noblelift | VZV GROUP s.r.o.",
-      "description": "Podmínky ochrany a zpracování osobních údajů na webu noblelift.cz provozovaném společností VZV GROUP s.r.o."
+      "description": "Zásady zpracování osobních údajů na noblelift.cz. Jak VZV GROUP s.r.o. zpracovává data z formulářů, cookies a komunikace a jaká máte práva jako subjekt údajů."
     },
     "title": "Zásady zpracování osobních údajů",
     "intro": "Podmínky ochrany osobních údajů na webu noblelift.cz. Pokud potřebujete více informací nebo máte jakoukoli otázku o našich podmínkách ochrany osobních údajů, kontaktujte nás na e-mailu info@noblelift.cz.",
@@ -684,7 +687,7 @@
   "legalCookies": {
     "meta": {
       "title": "Cookies | Noblelift | VZV GROUP s.r.o.",
-      "description": "Informace o používání cookies na webu noblelift.cz."
+      "description": "Informace o cookies na noblelift.cz: nezbytné a volitelné cookies, účel použití, správa souhlasu a jak VZV GROUP s.r.o. chrání vaše soukromí při návštěvě webu."
     },
     "title": "Informace o cookies",
     "updated": "Účinnost od 10. 7. 2026",
@@ -732,7 +735,7 @@
   "legalTerms": {
     "meta": {
       "title": "Obchodní podmínky | Noblelift | VZV GROUP s.r.o.",
-      "description": "Všeobecné obchodní podmínky společnosti VZV GROUP s.r.o. pro nabídku, prodej, servis a distribuci techniky Noblelift."
+      "description": "Obchodní podmínky VZV GROUP s.r.o. pro nabídku, prodej, dodání, servis a náhradní díly techniky Noblelift na webu noblelift.cz. Přečtěte si podmínky."
     },
     "title": "Obchodní podmínky",
     "updated": "Účinnost od 10. 7. 2026",
@@ -800,7 +803,7 @@
     "meta": {
       "hub": {
         "title": "Katalog produktů | Noblelift | VZV GROUP s.r.o.",
-        "description": "Kompletní katalog manipulační techniky Noblelift – čelní vozíky, zakladače, paletové vozíky, retraky, terénní stroje a pracovní plošiny."
+        "description": "Katalog Noblelift: čelní vozíky, zakladače, paletové vozíky, retraky, terénní stroje a plošiny. VZV GROUP – nabídka, dodání a servis pro ČR a SR."
       },
       "category": {
         "title": "{category} | Noblelift katalog"
@@ -2816,11 +2819,11 @@
         "subcategories": {
           "electric": {
             "title": "Elektrické čelní vozíky",
-            "desc": "Tří- a čtyřkolové elektrické čelní vozíky s nosností 2,5–10 t. Lithiové baterie pro nulové emise, tichý provoz a intenzivní skladování."
+            "desc": "Elektrické čelní vozíky Noblelift – tříkolové i čtyřkolové, včetně Li-Ion. Pro sklady a výrobu. Prodej, dodání a servis VZV GROUP v ČR a SR. Poptávka online."
           },
           "dieselLpg": {
             "title": "Dieselové a LPG čelní vozíky",
-            "desc": "Výkonné dieselové a LPG vozíky s vysokým výkonem, dlouhou výdrží a spolehlivým venkovním provozem pro logistické areály a náročné podmínky s nosností 3–10 t."
+            "desc": "Dieselové a LPG čelní vozíky Noblelift pro venkovní i smíšený provoz. Robustní konstrukce, vysoká nosnost. Nabídka a servis od VZV GROUP – poptávka online."
           }
         }
       },
@@ -2829,15 +2832,15 @@
         "subcategories": {
           "walkie": {
             "title": "Bez plošiny pro obsluhu",
-            "desc": "Kompaktní elektrické zakladače s pěší obsluhou pro úzké prostory, krátké vzdálenosti a efektivní skladování palet."
+            "desc": "Elektrické zakladače Noblelift s pěší obsluhou pro úzké uličky a krátké přesuny. Ideální do menších skladů. Prodej a servis VZV GROUP – poptávka online."
           },
           "rider": {
             "title": "S plošinou pro obsluhu",
-            "desc": "Zakladače s plošinou pro operátora, vyšší zdvih a rychlejší přesuny ve skladových uličkách."
+            "desc": "Zakladače Noblelift s plošinou operátora pro delší trasy ve skladu. Vyšší produktivita a komfort. VZV GROUP – prodej, dodání a servis v ČR a SR."
           },
           "straddle": {
             "title": "Obkročné",
-            "desc": "Obkročné zakladače pro manipulaci s atypickými paletami a maximální flexibilitu při práci ve skladu."
+            "desc": "Obkročné zakladače Noblelift pro nestandardní palety a širší náklady. Flexibilní nastavení ramen. Prodej a servis VZV GROUP – poptávka online."
           }
         }
       },
@@ -2845,11 +2848,11 @@
         "subcategories": {
           "manual": {
             "title": "Ruční paletové vozíky",
-            "desc": "Spolehlivé ruční paletové vozíky pro každodenní manipulaci s paletami v provozu."
+            "desc": "Ruční paletové vozíky Noblelift pro každodenní přepravu palet. Spolehlivá konstrukce a rychlá dostupnost u VZV GROUP v ČR a SR. Poptávka online."
           },
           "powered": {
             "title": "Elektrické paletové vozíky",
-            "desc": "Elektrické pěší i řidičské paletové vozíky včetně variant s vážením a lithiovým pohonem."
+            "desc": "Elektrické paletové vozíky Noblelift – pěší i řidičské. Li-Ion, vážení a nízký vstup. Pro intenzivní skladový provoz. Prodej a servis VZV GROUP."
           }
         }
       },
@@ -2857,11 +2860,11 @@
         "subcategories": {
           "terrainForklifts": {
             "title": "Terénní vozíky",
-            "desc": "Dieselové terénní vozíky pro stavebnictví, zemědělství a práci na nerovném povrchu."
+            "desc": "Terénní dieselové vozíky Noblelift pro stavebnictví a venkovní areály. Jízda na nerovném povrchu. Nabídka a servis VZV GROUP – poptávka online."
           },
           "telehandlers": {
             "title": "Teleskopické manipulátory",
-            "desc": "Teleskopické manipulátory s velkým dosahem pro stavební a zemědělské aplikace."
+            "desc": "Teleskopické manipulátory Noblelift pro stavebnictví a zemědělství. Dosah a nosnost pro náročný terén. Prodej a servis VZV GROUP v ČR a SR."
           }
         }
       },
@@ -2869,11 +2872,11 @@
         "subcategories": {
           "reachTrucks": {
             "title": "Retraky",
-            "desc": "Vysokozdvižné retraky pro úzké uličky a regály až do 13 m výšky."
+            "desc": "Retraky Noblelift pro úzké uličky a regály až 13 m. Vysoká zbytková nosnost a efektivní stohování. Prodej a servis VZV GROUP – poptávka online."
           },
           "orderPickers": {
             "title": "Vychystávací vozíky",
-            "desc": "Vychystávací vozíky pro efektivní kompletaci objednávek ve skladu."
+            "desc": "Vychystávací vozíky Noblelift pro efektivní picking v regálových skladech. Bezpečná práce ve výšce. Prodej a servis VZV GROUP v ČR a SR."
           }
         }
       },
@@ -2881,11 +2884,11 @@
         "subcategories": {
           "scissor": {
             "title": "Nůžkové plošiny",
-            "desc": "Elektrické nůžkové pracovní plošiny pro bezpečnou práci ve výšce."
+            "desc": "Elektrické nůžkové plošiny Noblelift pro údržbu, montáže a sklad. Stabilní platforma a tichý provoz. Nabídka a servis VZV GROUP – poptávka online."
           },
           "mastBoom": {
             "title": "Stožárové a výložníkové plošiny",
-            "desc": "Stožárové a výložníkové plošiny pro montáže, údržbu a servis ve výšce."
+            "desc": "Stožárové a výložníkové plošiny Noblelift pro montáže a údržbu ve výšce. Prodej a servis VZV GROUP v ČR a SR. Poptávka online."
           }
         }
       }
@@ -3432,7 +3435,7 @@
   "legalCompany": {
     "meta": {
       "title": "Identifikační údaje | Noblelift | VZV GROUP s.r.o.",
-      "description": "Identifikační a kontaktní údaje provozovatele webu noblelift.cz – VZV GROUP s.r.o."
+      "description": "Identifikační údaje VZV GROUP s.r.o. – provozovatel noblelift.cz a výhradní dovozce Noblelift pro ČR a SR. IČO, sídlo, kontakty a obchodní informace."
     },
     "title": "Identifikační údaje",
     "intro": "Provozovatelem webu noblelift.cz a výhradním dovozcem značky Noblelift pro Českou republiku a Slovensko je:",

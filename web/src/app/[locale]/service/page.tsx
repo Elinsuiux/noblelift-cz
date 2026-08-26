@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { ServicePage } from "@/components/ServicePage";
+import { seoDescription } from "@/lib/seo";
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -12,7 +13,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   return {
     title: t("title"),
-    description: t("description"),
+    description: seoDescription(t("description")),
   };
 }
 

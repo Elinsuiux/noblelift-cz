@@ -23,13 +23,16 @@ const SURFACE_MUTED = "#f5f5f5";
 
 const COPY = {
   cz: {
-    clientSubject: "Potvrzení přijetí poptávky – Noblelift",
+    clientSubject: "Děkujeme za vaši poptávku – Noblelift",
     internalSubject: (source: string) => `Nová poptávka: ${source}`,
-    title: "Poptávka byla odeslána",
+    title: "Děkujeme — poptávku máme",
     greeting: (name: string) => `Dobrý den, ${name},`,
-    body: "Vaši zprávu jsme obdrželi a právě ji zpracováváme.",
-    bodyFollowUp: "Brzy se vám ozveme.",
+    body: "děkujeme, že jste nás kontaktovali. Vaši zprávu jsme v pořádku přijali a předali obchodnímu týmu.",
+    bodyFollowUp:
+      "Ozveme se vám co nejdříve — obvykle do 1 pracovního dne. Pokud je věc urgentní, volejte nás na čísle níže.",
     summaryTitle: "Shrnutí vaší poptávky",
+    ctaLabel: "Prohlédnout produkty Noblelift",
+    ctaSecondary: "noblelift.cz",
     fields: {
       name: "Jméno a příjmení",
       company: "Společnost",
@@ -40,7 +43,7 @@ const COPY = {
       source: "Zdroj",
     },
     footer:
-      "Tento e-mail je automatické potvrzení odeslání formuláře na webu noblelift.cz. Pokud jste formulář neodesílali, můžete tuto zprávu ignorovat.",
+      "Tento e-mail je automatické potvrzení z webu noblelift.cz. Pokud jste formulář neodesílali, zprávu prosím ignorujte.",
     internalIntro: "Byla přijata nová poptávka z webového formuláře.",
     sources: {
       contact: "Kontaktní formulář",
@@ -49,13 +52,16 @@ const COPY = {
     },
   },
   en: {
-    clientSubject: "Inquiry confirmation – Noblelift",
+    clientSubject: "Thank you for your inquiry – Noblelift",
     internalSubject: (source: string) => `New inquiry: ${source}`,
-    title: "Quote request submitted",
+    title: "Thank you — we have your request",
     greeting: (name: string) => `Hello ${name},`,
-    body: "We have received your inquiry and it is currently being processed.",
-    bodyFollowUp: "We'll be in touch soon.",
+    body: "thank you for contacting us. We have received your message and passed it to our sales team.",
+    bodyFollowUp:
+      "We will get back to you as soon as possible — usually within 1 business day. For urgent matters, please call the number below.",
     summaryTitle: "Your inquiry summary",
+    ctaLabel: "Browse Noblelift products",
+    ctaSecondary: "noblelift.cz",
     fields: {
       name: "Name",
       company: "Company",
@@ -66,7 +72,7 @@ const COPY = {
       source: "Source",
     },
     footer:
-      "This email is an automatic confirmation of a form submission on noblelift.cz. If you did not submit the form, you can ignore this message.",
+      "This is an automatic confirmation from noblelift.cz. If you did not submit the form, you can ignore this message.",
     internalIntro: "A new inquiry was submitted via the website form.",
     sources: {
       contact: "Contact form",
@@ -75,6 +81,26 @@ const COPY = {
     },
   },
 } as const;
+
+function siteOrigin(): string {
+  const explicit = process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "");
+  if (explicit) return explicit;
+  if (process.env.VERCEL_PROJECT_PRODUCTION_URL) {
+    return `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`;
+  }
+  if (process.env.VERCEL_URL) {
+    return `https://${process.env.VERCEL_URL}`;
+  }
+  return CONTACT.websiteUrl.replace(/\/$/, "");
+}
+
+function logoUrl(): string {
+  return `${siteOrigin()}/logo/noblelift-wordmark-white-trim.png`;
+}
+
+function productsUrl(locale: LocaleKey): string {
+  return locale === "en" ? `${siteOrigin()}/en/products` : `${siteOrigin()}/cz/produkty`;
+}
 
 function escapeHtml(value: string): string {
   return value
@@ -174,10 +200,21 @@ function emailShell(content: string): string {
 function emailHeader(): string {
   return `
     <tr>
-      <td style="background:${DARK};padding:24px 32px;text-align:center;">
-        <div style="font-size:22px;font-weight:800;letter-spacing:0.08em;color:#ffffff;">NOBLELIFT</div>
-        <div style="margin-top:6px;font-size:12px;color:#d1d5db;">VZV GROUP s.r.o.</div>
+      <td style="background:${DARK};padding:28px 32px 22px;text-align:center;">
+        <img
+          src="${logoUrl()}"
+          alt="Noblelift"
+          width="180"
+          height="18"
+          style="display:block;margin:0 auto;width:180px;height:auto;border:0;"
+        />
+        <div style="margin-top:10px;font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:#a1a1aa;">
+          VZV GROUP s.r.o.
+        </div>
       </td>
+    </tr>
+    <tr>
+      <td style="height:4px;line-height:4px;font-size:0;background:${ORANGE};">&nbsp;</td>
     </tr>`;
 }
 
@@ -190,7 +227,9 @@ function emailFooter(locale: LocaleKey): string {
         <p style="margin:0;font-size:12px;line-height:1.6;color:${MUTED};">
           <strong style="color:${DARK};">${escapeHtml(BILLING.company)}</strong><br />
           ${escapeHtml(BILLING.addressLine1)}, ${escapeHtml(BILLING.addressLine2)}, ${escapeHtml(BILLING.addressLine3)}<br />
-          ${escapeHtml(CONTACT.email)} · ${escapeHtml(CONTACT.phoneDisplay)}<br />
+          <a href="mailto:${CONTACT.email}" style="color:${ORANGE};text-decoration:none;">${escapeHtml(CONTACT.email)}</a>
+          ·
+          <a href="tel:${CONTACT.phone}" style="color:${ORANGE};text-decoration:none;">${escapeHtml(CONTACT.phoneDisplay)}</a><br />
           <a href="${CONTACT.websiteUrl}" style="color:${ORANGE};text-decoration:none;">${escapeHtml(CONTACT.website)}</a>
         </p>
       </td>
@@ -205,30 +244,45 @@ export function buildClientConfirmationEmail(payload: ContactFormPayload): {
   const copy = COPY[payload.locale];
   const firstName = payload.name.trim().split(/\s+/)[0] || payload.name;
 
+  const catalogUrl = productsUrl(payload.locale);
+
   const html = emailShell(`
     ${emailHeader()}
     <tr>
-      <td style="padding:40px 32px 16px;text-align:center;">
-        <div style="display:inline-block;width:64px;height:64px;border-radius:9999px;background:${ORANGE};line-height:64px;text-align:center;">
-          <span style="color:#ffffff;font-size:30px;font-weight:700;">&#10003;</span>
+      <td style="padding:36px 32px 12px;text-align:center;">
+        <div style="display:inline-block;width:56px;height:56px;border-radius:9999px;background:${ORANGE};line-height:56px;text-align:center;">
+          <span style="color:#ffffff;font-size:26px;font-weight:700;">&#10003;</span>
         </div>
-        <h1 style="margin:24px 0 0;font-size:20px;font-weight:800;letter-spacing:0.04em;text-transform:uppercase;color:${DARK};">
+        <h1 style="margin:20px 0 0;font-size:22px;font-weight:800;letter-spacing:0.02em;color:${DARK};">
           ${copy.title}
         </h1>
-        <p style="margin:16px 0 0;font-size:14px;line-height:1.7;color:${MUTED};">${copy.greeting(firstName)}</p>
-        <p style="margin:8px 0 0;font-size:14px;line-height:1.7;color:${MUTED};">${copy.body}</p>
-        <p style="margin:4px 0 0;font-size:14px;line-height:1.7;color:${MUTED};">${copy.bodyFollowUp}</p>
+        <p style="margin:18px 0 0;font-size:15px;line-height:1.7;color:${DARK};">${copy.greeting(firstName)}</p>
+        <p style="margin:10px 0 0;font-size:14px;line-height:1.7;color:${MUTED};">${copy.body}</p>
+        <p style="margin:8px 0 0;font-size:14px;line-height:1.7;color:${MUTED};">${copy.bodyFollowUp}</p>
       </td>
     </tr>
     <tr>
-      <td style="padding:8px 32px 32px;">
-        <div style="border-radius:12px;background:${SURFACE_MUTED};padding:20px 24px;">
-          <h2 style="margin:0 0 12px;font-size:13px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:${DARK};">
+      <td style="padding:20px 32px 8px;">
+        <div style="border-radius:12px;border:1px solid #e5e7eb;background:${SURFACE_MUTED};padding:20px 24px;">
+          <h2 style="margin:0 0 12px;font-size:12px;font-weight:800;letter-spacing:0.08em;text-transform:uppercase;color:${ORANGE};">
             ${copy.summaryTitle}
           </h2>
           <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
             ${buildSummaryRows(payload)}
           </table>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td style="padding:24px 32px 8px;text-align:center;">
+        <a href="${catalogUrl}"
+           style="display:inline-block;background:${ORANGE};color:#ffffff;text-decoration:none;font-size:14px;font-weight:800;padding:14px 28px;border-radius:9999px;">
+          ${copy.ctaLabel}
+        </a>
+        <div style="margin-top:14px;">
+          <a href="${CONTACT.websiteUrl}" style="font-size:13px;font-weight:700;color:${ORANGE};text-decoration:none;">
+            ${copy.ctaSecondary} →
+          </a>
         </div>
       </td>
     </tr>
@@ -249,6 +303,9 @@ export function buildClientConfirmationEmail(payload: ContactFormPayload): {
     formatPhone(payload) ? `${copy.fields.phone}: ${formatPhone(payload)}` : null,
     formatCountry(payload) ? `${copy.fields.country}: ${formatCountry(payload)}` : null,
     payload.message?.trim() ? `${copy.fields.message}: ${payload.message.trim()}` : null,
+    "",
+    `${copy.ctaLabel}: ${catalogUrl}`,
+    CONTACT.websiteUrl,
     "",
     copy.footer,
   ]

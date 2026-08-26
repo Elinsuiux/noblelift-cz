@@ -1,7 +1,7 @@
 export const ABOUT_GALLERY = [
   {
     id: "warehouse",
-    src: "/images/contact/warehouse-cervena-voda.jpg",
+    src: "/images/contact/warehouse-cervena-voda-v2.jpg",
   },
   {
     id: "forklift",

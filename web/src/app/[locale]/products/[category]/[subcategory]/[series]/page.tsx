@@ -12,6 +12,7 @@ import {
   getSubcategoryBySlug,
   getSubcategorySlug,
 } from "@/lib/products-catalog";
+import { seoDescription } from "@/lib/seo";
 
 type Props = {
   params: Promise<{ locale: string; category: string; subcategory: string; series: string }>;
@@ -59,7 +60,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       series: t(series.titleKey),
       subcategory: t(subcategory.titleKey),
     }),
-    description: t(series.descKey),
+    description: seoDescription(t(series.descKey)),
   };
 }
 

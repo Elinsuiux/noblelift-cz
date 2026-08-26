@@ -4,6 +4,7 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import { ProductCategoryPage } from "@/components/ProductCategoryPage";
 import { routing } from "@/i18n/routing";
 import { PRODUCT_CATALOG, getCategoryBySlug, getCategorySlug } from "@/lib/products-catalog";
+import { seoDescription } from "@/lib/seo";
 
 type Props = {
   params: Promise<{ locale: string; category: string }>;
@@ -31,7 +32,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   return {
     title: meta("title", { category: t(`${category.id}.title`) }),
-    description: t(`${category.id}.desc`),
+    description: seoDescription(t(`${category.id}.desc`)),
   };
 }
 

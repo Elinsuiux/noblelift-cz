@@ -84,7 +84,7 @@ export function ProductModelGallery({
                   >
                     <Image
                       src={image}
-                      alt=""
+                      alt={`${alt} (${index + 1})`}
                       fill
                       sizes="64px"
                       className="object-contain p-1"

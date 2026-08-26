@@ -14,10 +14,9 @@ type HeroSlide = {
   imageClassName?: string;
 };
 
-const HERO_SLIDES: HeroSlide[] = [
+const HERO_SLIDES: Omit<HeroSlide, "alt">[] = [
   {
     src: "/images/hero-warehouse.png",
-    alt: "",
     objectPosition: "center",
     overlayClassName: "from-black/92 via-black/65 to-transparent",
     bottomOverlayClassName: "from-black/25 via-transparent to-transparent",
@@ -26,12 +25,13 @@ const HERO_SLIDES: HeroSlide[] = [
   },
   {
     src: "/images/hero-forklift-hero.png",
-    alt: "",
     objectPosition: "72% center",
     overlayClassName: "from-black/80 via-black/45 to-transparent",
     bottomOverlayClassName: "from-black/50 via-transparent to-black/20",
   },
 ];
+
+const HERO_ALT_KEYS = ["altWarehouse", "altForklift"] as const;
 
 const AUTO_PLAY_MS = 6000;
 
@@ -53,20 +53,25 @@ function ChevronRight() {
 
 export function HeroCarousel({ children }: { children: ReactNode }) {
   const t = useTranslations("hero.carousel");
+  const slides: HeroSlide[] = HERO_SLIDES.map((slide, index) => ({
+    ...slide,
+    alt: t(HERO_ALT_KEYS[index]),
+  }));
+  const slideCount = HERO_SLIDES.length;
   const [activeIndex, setActiveIndex] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
 
   const goTo = useCallback((index: number) => {
-    setActiveIndex((index + HERO_SLIDES.length) % HERO_SLIDES.length);
-  }, []);
+    setActiveIndex((index + slideCount) % slideCount);
+  }, [slideCount]);
 
   const goNext = useCallback(() => {
-    setActiveIndex((current) => (current + 1) % HERO_SLIDES.length);
-  }, []);
+    setActiveIndex((current) => (current + 1) % slideCount);
+  }, [slideCount]);
 
   const goPrev = useCallback(() => {
-    setActiveIndex((current) => (current - 1 + HERO_SLIDES.length) % HERO_SLIDES.length);
-  }, []);
+    setActiveIndex((current) => (current - 1 + slideCount) % slideCount);
+  }, [slideCount]);
 
   useEffect(() => {
     if (isPaused) {
@@ -89,7 +94,7 @@ export function HeroCarousel({ children }: { children: ReactNode }) {
         }
       }}
     >
-      {HERO_SLIDES.map((slide, index) => (
+      {slides.map((slide, index) => (
         <div
           key={slide.src}
           className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
@@ -137,7 +142,7 @@ export function HeroCarousel({ children }: { children: ReactNode }) {
         </button>
 
         <div className="flex items-center gap-2" role="tablist" aria-label={t("slides")}>
-          {HERO_SLIDES.map((slide, index) => (
+          {slides.map((slide, index) => (
             <button
               key={slide.src}
               type="button"
