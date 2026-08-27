@@ -16,9 +16,9 @@ export const SALES_REPS = [
     phone: "+420773997314",
     phoneDisplay: "+420 773 997 314",
     email: "info@noblelift.cz",
-    photo: "/images/contact/hubert-rajtr-v4.jpg",
-    photoWidth: 512,
-    photoHeight: 491,
+    photo: "/images/contact/hubert-rajtr-v8.jpg",
+    photoWidth: 1024,
+    photoHeight: 1024,
     photoPosition: "object-center",
   },
   {

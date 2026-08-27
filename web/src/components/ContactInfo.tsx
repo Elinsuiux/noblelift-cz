@@ -41,13 +41,13 @@ function SalesRepCard({
 }) {
   return (
     <article className="flex flex-col items-center text-center">
-      <div className="w-full max-w-[520px] overflow-hidden rounded-2xl">
+      <div className="aspect-square w-full max-w-[520px] overflow-hidden rounded-2xl">
         <Image
           src={photo}
           alt={name}
           width={photoWidth}
           height={photoHeight}
-          className="h-auto w-full"
+          className="h-full w-full object-cover object-center"
           sizes="(min-width: 640px) 520px, 100vw"
         />
       </div>
