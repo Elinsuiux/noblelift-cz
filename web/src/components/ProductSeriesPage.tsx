@@ -29,11 +29,15 @@ function ProductSeriesOverview({
   productLineKey,
   specsPdfUrl,
   specsPdfFilename,
+  specsPdfUrlEn,
+  specsPdfFilenameEn,
 }: {
   product: ProductModel;
   productLineKey?: string;
   specsPdfUrl?: string;
   specsPdfFilename?: string;
+  specsPdfUrlEn?: string;
+  specsPdfFilenameEn?: string;
 }) {
   const t = useTranslations();
 
@@ -54,6 +58,8 @@ function ProductSeriesOverview({
             buyUrl={getProductBuyUrl(product)}
             specsPdfUrl={specsPdfUrl}
             specsPdfFilename={specsPdfFilename}
+            specsPdfUrlEn={specsPdfUrlEn}
+            specsPdfFilenameEn={specsPdfFilenameEn}
             embedded
           />
         </div>
@@ -130,11 +136,24 @@ export function ProductSeriesPage({
                   product={soleProduct}
                   productLineKey={series.productLineKey}
                   specsPdfUrl={
-                    soleProduct.seriesDetail.specsPdfUrl ?? series.detail?.specsPdfUrl
+                    soleProduct.seriesDetail.specsPdfUrl ??
+                    soleProduct.specsPdfUrl ??
+                    series.detail?.specsPdfUrl
                   }
                   specsPdfFilename={
                     soleProduct.seriesDetail.specsPdfFilename ??
+                    soleProduct.specsPdfFilename ??
                     series.detail?.specsPdfFilename
+                  }
+                  specsPdfUrlEn={
+                    soleProduct.seriesDetail.specsPdfUrlEn ??
+                    soleProduct.specsPdfUrlEn ??
+                    series.detail?.specsPdfUrlEn
+                  }
+                  specsPdfFilenameEn={
+                    soleProduct.seriesDetail.specsPdfFilenameEn ??
+                    soleProduct.specsPdfFilenameEn ??
+                    series.detail?.specsPdfFilenameEn
                   }
                 />
                 <SeriesDetailSection detail={soleProduct.seriesDetail} />
@@ -154,6 +173,8 @@ export function ProductSeriesPage({
                       buyUrl={getSeriesBuyUrl(series)}
                       specsPdfUrl={series.detail.specsPdfUrl}
                       specsPdfFilename={series.detail.specsPdfFilename}
+                      specsPdfUrlEn={series.detail.specsPdfUrlEn}
+                      specsPdfFilenameEn={series.detail.specsPdfFilenameEn}
                     />
                   </div>
                 ) : (
@@ -173,17 +194,24 @@ export function ProductSeriesPage({
                         subtitleKey={series.subtitleKey}
                         useKeys={series.useKeys}
                         specsPdfUrl={
-                          useHubModelCards
-                            ? (locale !== "en" && product.specsPdfUrl) || undefined
-                            : (locale !== "en" && product.specsPdfUrl) ||
-                              series.detail!.specsPdfUrl
+                          product.seriesDetail?.specsPdfUrl ||
+                          product.specsPdfUrl ||
+                          series.detail!.specsPdfUrl
                         }
                         specsPdfFilename={
-                          useHubModelCards
-                            ? (locale !== "en" && product.specsPdfFilename) ||
-                              undefined
-                            : (locale !== "en" && product.specsPdfFilename) ||
-                              series.detail!.specsPdfFilename
+                          product.seriesDetail?.specsPdfFilename ||
+                          product.specsPdfFilename ||
+                          series.detail!.specsPdfFilename
+                        }
+                        specsPdfUrlEn={
+                          product.seriesDetail?.specsPdfUrlEn ||
+                          product.specsPdfUrlEn ||
+                          series.detail!.specsPdfUrlEn
+                        }
+                        specsPdfFilenameEn={
+                          product.seriesDetail?.specsPdfFilenameEn ||
+                          product.specsPdfFilenameEn ||
+                          series.detail!.specsPdfFilenameEn
                         }
                         detailsHref={
                           product.seriesDetail

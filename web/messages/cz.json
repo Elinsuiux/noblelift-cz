@@ -1963,6 +1963,109 @@
           },
           "argument": "Řada Q je ideální pro zákazníky, kteří preferují stabilitu čtyřkolového vozíku, ale zároveň potřebují kompaktní stroj s velmi dobrou ovladatelností pro každodenní práci ve skladu nebo výrobě."
         }
+      },
+      "fe3d": {
+        "detail": {
+          "title": "Noblelift Řada N1 — detailní popis",
+          "intro": "Řada N1 (FE3D16N1, FE3D18N1, FE3D20N1) jsou kompaktní tříkolové elektrické vysokozdvižné vozíky určené především pro vnitřní provozy. Díky malému poloměru otáčení nabízejí maximální manévrovatelnost i ve velmi stísněných prostorách a úzkých skladových uličkách.",
+          "features": {
+            "1": {
+              "title": "Maximální manévrovatelnost",
+              "desc": "Velmi malý poloměr otáčení a kompaktní rozměry pro práci v úzkých uličkách"
+            },
+            "2": {
+              "title": "Dvojitý pohon předních kol",
+              "desc": "Vysoký výkon, tichý provoz a výborná ovladatelnost"
+            },
+            "3": {
+              "title": "80V Li-Ion baterie",
+              "desc": "Bezúdržbová baterie s dlouhou životností, nulové lokální emise a nízké provozní náklady"
+            },
+            "4": {
+              "title": "Komfort obsluhy",
+              "desc": "Ergonomické pracoviště vhodné pro každodenní provoz v hale"
+            }
+          },
+          "specs": {
+            "capacity": {
+              "label": "Nosnosti",
+              "value": "1,6 / 1,8 / 2,0 t"
+            },
+            "models": {
+              "label": "Modely",
+              "value": "FE3D16N1 / FE3D18N1 / FE3D20N1"
+            },
+            "lift": {
+              "label": "Výšky zdvihu",
+              "value": "2 500–6 500 mm"
+            },
+            "battery": {
+              "label": "Baterie",
+              "value": "80 V Li-Ion"
+            },
+            "drive": {
+              "label": "Pohon",
+              "value": "Dvojitý pohon předních kol"
+            },
+            "operation": {
+              "label": "Provoz",
+              "value": "Vnitřní / tříkolový elektrický"
+            }
+          },
+          "audience": {
+            "title": "Pro koho je řada N1 určena?",
+            "items": {
+              "1": "Sklady s úzkými uličkami",
+              "2": "Výrobní provozy s omezeným prostorem",
+              "3": "Logistická centra",
+              "4": "Nakládka a vykládka kamionů",
+              "5": "Provozy, kde je prioritou maximální obratnost",
+              "6": "Zákazníci s potřebou nosnosti do 2 t"
+            }
+          },
+          "advantages": {
+            "title": "Hlavní přednosti a další výhody",
+            "items": {
+              "1": "Maximální manévrovatelnost díky velmi malému poloměru otáčení",
+              "2": "Kompaktní konstrukce pro úzké uličky a malé prostory",
+              "3": "Vysoký výkon díky dvojitému pohonu předních kol",
+              "4": "Tichý provoz a nulové lokální emise",
+              "5": "Bezúdržbová 80V Li-Ion baterie s dlouhou životností",
+              "6": "Nízké provozní náklady",
+              "7": "Vysoký komfort pro obsluhu"
+            }
+          },
+          "benefits": {
+            "title": "Přínos pro zákazníka",
+            "items": {
+              "1": "Efektivní práce ve stísněných prostorách",
+              "2": "Snadné otáčení mezi regály",
+              "3": "Komfort a výkon klasického čelního vozíku v kompaktním provedení"
+            }
+          },
+          "recommend": {
+            "whenTitle": "Kdy řadu N1 doporučit?",
+            "when": {
+              "1": "Práce probíhá uvnitř",
+              "2": "Je potřeba vysoká manévrovatelnost",
+              "3": "Manipulace v úzkých uličkách",
+              "4": "Nosnosti do 2 t",
+              "5": "Výrobní provozy, logistická centra, nakládka a vykládka kamionů"
+            },
+            "otherTitle": "Kdy doporučit jinou řadu?",
+            "other": {
+              "1": "Častý venkovní provoz",
+              "2": "Potřeba vyšší nosnosti než 2 t",
+              "3": "Nerovný povrch"
+            }
+          },
+          "equipment": {
+            "title": "Výbava",
+            "standard": "Integrovaná nabíječka, předehřev baterie, Blue Spot, komfortní sedačka, USB port, LED osvětlení, barevný display, zadní madlo s klaksonem, hydraulické páky, 4sekční rozvaděč, nešpinící SE pneumatiky, panoramatické zrcátko.",
+            "optional": "Fingertip joystick, plná kabina, ZF převodovka s elektronickou parkovací brzdou, HSV (Hydraulic Selector Valve), externí nabíječka."
+          },
+          "argument": "Řada N1 je kompaktní tříkolový elektrický vozík pro vnitřní provozy, kde je klíčová maximální manévrovatelnost. S nosnostmi 1,6–2,0 t, zdvihem 2 500–6 500 mm a bezúdržbovou 80V Li-Ion baterií nabízí výkon, tichý provoz a nízké provozní náklady i ve velmi stísněných skladových uličkách."
+        }
       }
     },
     "dieselLpg": {

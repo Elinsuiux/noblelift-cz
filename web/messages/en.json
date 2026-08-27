@@ -1963,6 +1963,109 @@
           },
           "argument": "Series Q is ideal for customers who prefer four-wheel stability but still need a compact truck with very good handling for everyday warehouse or production work."
         }
+      },
+      "fe3d": {
+        "detail": {
+          "title": "Noblelift Series N1 — detailed description",
+          "intro": "Series N1 (FE3D16N1, FE3D18N1, FE3D20N1) are compact three-wheel electric counterbalance forklifts designed primarily for indoor use. With a small turning radius they deliver maximum manoeuvrability even in very confined spaces and narrow warehouse aisles.",
+          "features": {
+            "1": {
+              "title": "Maximum manoeuvrability",
+              "desc": "Very small turning radius and compact dimensions for work in narrow aisles"
+            },
+            "2": {
+              "title": "Dual powered front wheels",
+              "desc": "High performance, quiet operation and excellent handling"
+            },
+            "3": {
+              "title": "80V Li-Ion battery",
+              "desc": "Maintenance-free battery with long life, zero local emissions and low operating costs"
+            },
+            "4": {
+              "title": "Operator comfort",
+              "desc": "Ergonomic workplace suited to everyday indoor operation"
+            }
+          },
+          "specs": {
+            "capacity": {
+              "label": "Capacities",
+              "value": "1.6 / 1.8 / 2.0 t"
+            },
+            "models": {
+              "label": "Models",
+              "value": "FE3D16N1 / FE3D18N1 / FE3D20N1"
+            },
+            "lift": {
+              "label": "Lift heights",
+              "value": "2,500–6,500 mm"
+            },
+            "battery": {
+              "label": "Battery",
+              "value": "80 V Li-Ion"
+            },
+            "drive": {
+              "label": "Drive",
+              "value": "Dual powered front wheels"
+            },
+            "operation": {
+              "label": "Application",
+              "value": "Indoor / three-wheel electric"
+            }
+          },
+          "audience": {
+            "title": "Who is Series N1 for?",
+            "items": {
+              "1": "Warehouses with narrow aisles",
+              "2": "Production sites with limited space",
+              "3": "Logistics centres",
+              "4": "Truck loading and unloading",
+              "5": "Sites where maximum manoeuvrability is the priority",
+              "6": "Customers needing capacities up to 2 t"
+            }
+          },
+          "advantages": {
+            "title": "Key advantages and further benefits",
+            "items": {
+              "1": "Maximum manoeuvrability thanks to a very small turning radius",
+              "2": "Compact design for narrow aisles and small spaces",
+              "3": "High performance from dual powered front wheels",
+              "4": "Quiet operation and zero local emissions",
+              "5": "Maintenance-free 80V Li-Ion battery with long service life",
+              "6": "Low operating costs",
+              "7": "High operator comfort"
+            }
+          },
+          "benefits": {
+            "title": "Customer benefits",
+            "items": {
+              "1": "Efficient work in confined spaces",
+              "2": "Easy turning between racks",
+              "3": "The comfort and performance of a counterbalance truck in a compact format"
+            }
+          },
+          "recommend": {
+            "whenTitle": "When to recommend Series N1?",
+            "when": {
+              "1": "Indoor work",
+              "2": "High manoeuvrability is required",
+              "3": "Handling in narrow aisles",
+              "4": "Capacities up to 2 t",
+              "5": "Manufacturing plants, logistics centres, truck loading and unloading"
+            },
+            "otherTitle": "When to recommend another range?",
+            "other": {
+              "1": "Frequent outdoor use",
+              "2": "Need for capacities above 2 t",
+              "3": "Uneven surfaces"
+            }
+          },
+          "equipment": {
+            "title": "Equipment",
+            "standard": "Integrated charger, battery preheating, Blue Spot, comfort seat, USB port, LED lighting, colour display, rear handle with horn, hydraulic levers, 4-section valve, non-marking SE tires, panoramic mirror.",
+            "optional": "Fingertip joystick, full cabin, ZF transmission with electronic parking brake, HSV (Hydraulic Selector Valve), external charger."
+          },
+          "argument": "Series N1 is a compact three-wheel electric truck for indoor sites where maximum manoeuvrability is essential. With capacities of 1.6–2.0 t, lift heights from 2,500–6,500 mm and a maintenance-free 80V Li-Ion battery, it delivers performance, quiet operation and low running costs even in very tight warehouse aisles."
+        }
       }
     },
     "dieselLpg": {

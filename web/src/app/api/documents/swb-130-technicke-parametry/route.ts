@@ -1,10 +1,14 @@
 import { readFile } from "fs/promises";
 import path from "path";
-import { generateCatalogSpecsPdf } from "@/lib/catalog-specs-pdf";
 
 const CZECH_SPECS_PDF = path.join(
   process.cwd(),
   "public/documents/swb-130-130d-technicke-parametry-cz.pdf",
+);
+
+const ENGLISH_SPECS_PDF = path.join(
+  process.cwd(),
+  "public/documents/swb-130-130d-en.pdf",
 );
 
 export async function GET(request: Request) {
@@ -12,28 +16,23 @@ export async function GET(request: Request) {
   const localeParam = searchParams.get("locale");
   const locale = localeParam === "en" ? "en" : "cz";
 
-  if (locale !== "en") {
-    const pdfBytes = await readFile(CZECH_SPECS_PDF);
+  if (locale === "en") {
+    const pdfBytes = await readFile(ENGLISH_SPECS_PDF);
     return new Response(pdfBytes, {
       headers: {
         "Content-Type": "application/pdf",
-        "Content-Disposition":
-          'attachment; filename="SWB-130-130D-technicke-parametry.pdf"',
+        "Content-Disposition": 'attachment; filename="SWB-130-130S-130D.pdf"',
         "Cache-Control": "public, max-age=86400",
       },
     });
   }
 
-  const pdfBytes = await generateCatalogSpecsPdf("walkie-bez-prizdvihem", locale);
-  if (!pdfBytes) {
-    return new Response("Not found", { status: 404 });
-  }
-
-  return new Response(Buffer.from(pdfBytes), {
+  const pdfBytes = await readFile(CZECH_SPECS_PDF);
+  return new Response(pdfBytes, {
     headers: {
       "Content-Type": "application/pdf",
       "Content-Disposition":
-        'attachment; filename="SWB-130-technicke-parametry.pdf"',
+        'attachment; filename="SWB-130-130D-technicke-parametry.pdf"',
       "Cache-Control": "public, max-age=86400",
     },
   });

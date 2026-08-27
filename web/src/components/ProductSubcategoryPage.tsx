@@ -105,6 +105,8 @@ export function ProductSubcategoryPage({
                     buyUrl={getSubcategoryBuyUrl(subcategory)}
                     specsPdfUrl={subcategory.detail!.specsPdfUrl}
                     specsPdfFilename={subcategory.detail!.specsPdfFilename}
+                    specsPdfUrlEn={subcategory.detail!.specsPdfUrlEn}
+                    specsPdfFilenameEn={subcategory.detail!.specsPdfFilenameEn}
                   />
                 </div>
 

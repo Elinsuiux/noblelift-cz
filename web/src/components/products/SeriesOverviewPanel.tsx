@@ -14,12 +14,16 @@ export function ProductOverviewPanel({
   fixedShopHref,
   specsPdfUrl,
   specsPdfFilename,
+  specsPdfUrlEn,
+  specsPdfFilenameEn,
 }: {
   overview: ProductOverviewContent;
   buyUrl?: string;
   fixedShopHref?: string;
   specsPdfUrl?: string;
   specsPdfFilename?: string;
+  specsPdfUrlEn?: string;
+  specsPdfFilenameEn?: string;
 }) {
   const t = useTranslations();
 
@@ -46,6 +50,8 @@ export function ProductOverviewPanel({
           fixedShopHref={fixedShopHref}
           specsPdfUrl={specsPdfUrl}
           specsPdfFilename={specsPdfFilename}
+          specsPdfUrlEn={specsPdfUrlEn}
+          specsPdfFilenameEn={specsPdfFilenameEn}
           embedded
         />
       </div>

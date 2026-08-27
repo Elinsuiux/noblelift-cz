@@ -126,9 +126,25 @@ export function ProductModelDetailPage({
                     <div className="mt-8 border-t border-zinc-100 pt-8">
                       <SeriesActionBar
                         buyUrl={buyUrl}
-                        specsPdfUrl={seriesDetail.specsPdfUrl ?? series?.detail?.specsPdfUrl}
+                        specsPdfUrl={
+                          seriesDetail.specsPdfUrl ??
+                          product.specsPdfUrl ??
+                          series?.detail?.specsPdfUrl
+                        }
                         specsPdfFilename={
-                          seriesDetail.specsPdfFilename ?? series?.detail?.specsPdfFilename
+                          seriesDetail.specsPdfFilename ??
+                          product.specsPdfFilename ??
+                          series?.detail?.specsPdfFilename
+                        }
+                        specsPdfUrlEn={
+                          seriesDetail.specsPdfUrlEn ??
+                          product.specsPdfUrlEn ??
+                          series?.detail?.specsPdfUrlEn
+                        }
+                        specsPdfFilenameEn={
+                          seriesDetail.specsPdfFilenameEn ??
+                          product.specsPdfFilenameEn ??
+                          series?.detail?.specsPdfFilenameEn
                         }
                         embedded
                       />

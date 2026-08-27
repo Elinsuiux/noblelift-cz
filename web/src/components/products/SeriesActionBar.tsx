@@ -9,23 +9,39 @@ export function SeriesActionBar({
   fixedShopHref,
   specsPdfUrl,
   specsPdfFilename = "technicke-parametry.pdf",
+  specsPdfUrlEn,
+  specsPdfFilenameEn,
   embedded = false,
 }: {
   buyUrl?: string;
   fixedShopHref?: string;
   specsPdfUrl?: string;
   specsPdfFilename?: string;
+  specsPdfUrlEn?: string;
+  specsPdfFilenameEn?: string;
   embedded?: boolean;
 }) {
   const t = useTranslations();
   const locale = useLocale();
   const shopUrl = fixedShopHref ?? buyUrl ?? VZV_SHOP_URL;
+
+  const effectiveSpecsUrl =
+    locale === "en" && specsPdfUrlEn ? specsPdfUrlEn : specsPdfUrl;
+  const effectiveSpecsFilename =
+    locale === "en" && specsPdfFilenameEn
+      ? specsPdfFilenameEn
+      : specsPdfFilename;
+
   // Static public PDFs keep their path; generated API routes get locale.
-  const specsDownloadUrl = !specsPdfUrl
+  const specsDownloadUrl = !effectiveSpecsUrl
     ? undefined
-    : specsPdfUrl.startsWith("/api/")
-      ? `${specsPdfUrl}?locale=${locale}`
-      : specsPdfUrl;
+    : effectiveSpecsUrl.startsWith("/api/")
+      ? `${effectiveSpecsUrl}?locale=${locale}`
+      : effectiveSpecsUrl;
+
+  const useDownloadAttr = Boolean(
+    specsDownloadUrl && !effectiveSpecsUrl?.startsWith("/api/"),
+  );
 
   const content = (
     <>
@@ -49,7 +65,9 @@ export function SeriesActionBar({
         {specsDownloadUrl ? (
           <a
             href={specsDownloadUrl}
-            download={specsPdfFilename}
+            {...(useDownloadAttr ? { download: effectiveSpecsFilename } : {})}
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex w-full items-center justify-center rounded-full border border-zinc-300 bg-white px-6 py-3 text-sm font-bold text-zinc-900 transition hover:border-zinc-900 hover:bg-zinc-50"
           >
             {t("productsCatalog.series.downloadSpecsCta")}

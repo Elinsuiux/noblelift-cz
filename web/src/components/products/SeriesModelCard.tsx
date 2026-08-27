@@ -30,6 +30,8 @@ function HubSeriesModelCard({
   detailsHref,
   specsPdfUrl,
   specsPdfFilename = "technicke-parametry.pdf",
+  specsPdfUrlEn,
+  specsPdfFilenameEn,
 }: {
   product: ProductModel;
   subtitleKey?: string;
@@ -37,17 +39,31 @@ function HubSeriesModelCard({
   detailsHref?: LinkHref;
   specsPdfUrl?: string;
   specsPdfFilename?: string;
+  specsPdfUrlEn?: string;
+  specsPdfFilenameEn?: string;
 }) {
   const t = useTranslations();
   const locale = useLocale();
   const opensDetail = Boolean(detailsHref && product.seriesDetail);
   const buyUrl = getProductBuyUrl(product);
   const subtitle = product.highlightKey ?? subtitleKey ?? undefined;
-  const specsDownloadUrl = !specsPdfUrl
+
+  const effectiveSpecsUrl =
+    locale === "en" && specsPdfUrlEn ? specsPdfUrlEn : specsPdfUrl;
+  const effectiveSpecsFilename =
+    locale === "en" && specsPdfFilenameEn
+      ? specsPdfFilenameEn
+      : specsPdfFilename;
+
+  const specsDownloadUrl = !effectiveSpecsUrl
     ? undefined
-    : specsPdfUrl.startsWith("/api/")
-      ? `${specsPdfUrl}?locale=${locale}`
-      : specsPdfUrl;
+    : effectiveSpecsUrl.startsWith("/api/")
+      ? `${effectiveSpecsUrl}?locale=${locale}`
+      : effectiveSpecsUrl;
+
+  const useDownloadAttr = Boolean(
+    specsDownloadUrl && !effectiveSpecsUrl?.startsWith("/api/"),
+  );
 
   return (
     <article className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-noble-orange/20 bg-white shadow-sm transition hover:-translate-y-0.5 hover:shadow-md">
@@ -128,7 +144,9 @@ function HubSeriesModelCard({
           {specsDownloadUrl ? (
             <a
               href={specsDownloadUrl}
-              download={specsPdfFilename}
+              {...(useDownloadAttr ? { download: effectiveSpecsFilename } : {})}
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex w-full items-center justify-center rounded-xl border border-zinc-300 bg-white px-4 py-3 text-sm font-bold text-zinc-900 transition hover:border-zinc-900 hover:bg-zinc-50"
             >
               {t("productsCatalog.series.downloadSpecsCta")}
@@ -145,12 +163,16 @@ function ClassicSeriesModelCard({
   productLineKey,
   specsPdfUrl,
   specsPdfFilename,
+  specsPdfUrlEn,
+  specsPdfFilenameEn,
   detailsHref,
 }: {
   product: ProductModel;
   productLineKey?: string;
   specsPdfUrl?: string;
   specsPdfFilename?: string;
+  specsPdfUrlEn?: string;
+  specsPdfFilenameEn?: string;
   detailsHref?: LinkHref;
 }) {
   const t = useTranslations();
@@ -232,6 +254,8 @@ function ClassicSeriesModelCard({
             buyUrl={getProductBuyUrl(product)}
             specsPdfUrl={specsPdfUrl}
             specsPdfFilename={specsPdfFilename}
+            specsPdfUrlEn={specsPdfUrlEn}
+            specsPdfFilenameEn={specsPdfFilenameEn}
             embedded
           />
         </div>
@@ -256,6 +280,8 @@ export function SeriesModelCard({
   useKeys,
   specsPdfUrl,
   specsPdfFilename,
+  specsPdfUrlEn,
+  specsPdfFilenameEn,
   detailsHref,
   variant = "classic",
 }: {
@@ -265,6 +291,8 @@ export function SeriesModelCard({
   useKeys?: readonly string[];
   specsPdfUrl?: string;
   specsPdfFilename?: string;
+  specsPdfUrlEn?: string;
+  specsPdfFilenameEn?: string;
   detailsHref?: LinkHref;
   variant?: "classic" | "hub";
 }) {
@@ -277,6 +305,8 @@ export function SeriesModelCard({
         detailsHref={detailsHref}
         specsPdfUrl={specsPdfUrl}
         specsPdfFilename={specsPdfFilename}
+        specsPdfUrlEn={specsPdfUrlEn}
+        specsPdfFilenameEn={specsPdfFilenameEn}
       />
     );
   }
@@ -287,6 +317,8 @@ export function SeriesModelCard({
       productLineKey={productLineKey}
       specsPdfUrl={specsPdfUrl}
       specsPdfFilename={specsPdfFilename}
+      specsPdfUrlEn={specsPdfUrlEn}
+      specsPdfFilenameEn={specsPdfFilenameEn}
       detailsHref={detailsHref}
     />
   );
