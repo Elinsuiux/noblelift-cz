@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Noblelift | Material handling | VZV GROUP s.r.o.",
-    "description": "VZV GROUP – exclusive Noblelift importer for CZ and SK. Forklifts and warehouse equipment, warranty service and genuine parts in stock. Request a quote online."
+    "description": "VZV GROUP – exclusive Noblelift importer for CZ and SK. Forklifts and warehouse equipment, warranty service and genuine parts in stock."
   },
   "notFound": {
     "badge": "404",
@@ -127,32 +127,32 @@
       "1": {
         "tags": "Electric / Diesel",
         "title": "Counterbalanced forklifts",
-        "desc": "Electric and diesel/LPG Noblelift counterbalance forklifts. Li-Ion options, typical capacities 1.2–10 t for warehouses, production and yards. Request a quote."
+        "desc": "Electric and diesel/LPG Noblelift counterbalance forklifts. Li-Ion options, typical capacities 1.2–10 t for warehouses, production and yards."
       },
       "2": {
         "tags": "Without platform / With platform / Straddle",
         "title": "Stackers",
-        "desc": "Electric Noblelift stackers – pedestrian and platform models. Compact design, high residual capacity and lift up to 13 m. Sales and service by VZV GROUP."
+        "desc": "Electric Noblelift stackers – pedestrian and platform models. Compact design, high residual capacity and lift up to 13 m."
       },
       "3": {
         "tags": "Manual / Electric / With scales",
         "title": "Pallet trucks",
-        "desc": "Manual and electric Noblelift pallet trucks – walkie and rider. Scale, low-entry and Li-Ion options for everyday warehouse handling. Request a quote."
+        "desc": "Manual and electric Noblelift pallet trucks – walkie and rider. Scale, low-entry and Li-Ion options for everyday warehouse handling."
       },
       "4": {
         "tags": "Outdoor / Diesel / Construction",
         "title": "Rough terrain forklifts & telehandlers",
-        "desc": "Diesel rough-terrain forklifts and Noblelift telehandlers for construction and agriculture. Uneven ground capability. Sales and service from VZV GROUP."
+        "desc": "Diesel rough-terrain forklifts and Noblelift telehandlers for construction and agriculture. Uneven ground capability."
       },
       "5": {
         "tags": "High lift / up to 13 m / Narrow aisles",
         "title": "Reach trucks & order pickers",
-        "desc": "Noblelift reach trucks and order pickers for racks up to 13 m. Narrow-aisle and double-deep stacking. Sales and service by VZV GROUP for CZ and SK."
+        "desc": "Noblelift reach trucks and order pickers for racks up to 13 m. Narrow-aisle and double-deep stacking."
       },
       "6": {
         "tags": "Electric",
         "title": "Scissor lifts",
-        "desc": "Electric Noblelift scissor lifts for safe work at height – maintenance, assembly and warehouse jobs. Quiet indoor operation. Request a quote online."
+        "desc": "Electric Noblelift scissor lifts for safe work at height – maintenance, assembly and warehouse jobs. Stable platform and quiet operation."
       }
     }
   },
@@ -840,7 +840,7 @@
       "titleBrand": "equipment",
       "titleSuffix": "categories",
       "lead": "Choose a category and browse Noblelift models. As the exclusive importer for the Czech Republic and Slovakia we help with selection and service.",
-      "contactCta": "Request a quote"
+      "contactCta": "Non-binding inquiry"
     },
     "categoryNav": {
       "label": "Product categories"
@@ -855,7 +855,7 @@
       "seriesPageTitle": "Noblelift electric counterbalance series",
       "seriesPageLead": "Click \"View models\" to browse models in that series or \"View details >\" for a detailed series description.",
       "cta": "View equipment",
-      "contactCta": "Request a quote"
+      "contactCta": "Non-binding inquiry"
     },
     "stackers": {
       "walkieHub": {
@@ -2922,11 +2922,11 @@
         "subcategories": {
           "electric": {
             "title": "Electric counterbalance forklifts",
-            "desc": "Electric Noblelift counterbalance forklifts – three- and four-wheel, including Li-Ion. For warehouses and production. Sales and service by VZV GROUP."
+            "desc": "Electric Noblelift counterbalance forklifts – three- and four-wheel, including Li-Ion. For warehouses and production."
           },
           "dieselLpg": {
             "title": "Diesel & LPG counterbalance forklifts",
-            "desc": "Diesel and LPG Noblelift counterbalance forklifts for outdoor and mixed use. Robust build and high capacity. Sales and service by VZV GROUP – request a quote."
+            "desc": "Diesel and LPG Noblelift counterbalance forklifts for outdoor and mixed use. Robust build and high capacity."
           }
         }
       },
@@ -2935,15 +2935,15 @@
         "subcategories": {
           "walkie": {
             "title": "Without operator platform",
-            "desc": "Electric pedestrian Noblelift stackers for narrow aisles and short moves. Ideal for smaller warehouses. Sales and service by VZV GROUP – request a quote."
+            "desc": "Electric pedestrian Noblelift stackers for narrow aisles and short moves. Ideal for smaller warehouses."
           },
           "rider": {
             "title": "With operator platform",
-            "desc": "Noblelift platform stackers for longer warehouse routes. Higher productivity and operator comfort. VZV GROUP sales, delivery and service in CZ and SK."
+            "desc": "Noblelift platform stackers for longer warehouse routes. Higher productivity and operator comfort."
           },
           "straddle": {
             "title": "Straddle",
-            "desc": "Noblelift straddle stackers for non-standard pallets and wider loads. Adjustable support arms. Sales and service by VZV GROUP – request a quote."
+            "desc": "Noblelift straddle stackers for non-standard pallets and wider loads. Adjustable support arms."
           }
         }
       },
@@ -2951,11 +2951,11 @@
         "subcategories": {
           "manual": {
             "title": "Manual pallet trucks",
-            "desc": "Manual Noblelift pallet trucks for everyday pallet moves. Reliable build and fast availability from VZV GROUP in CZ and SK. Request a quote online."
+            "desc": "Manual Noblelift pallet trucks for everyday pallet moves. Reliable build and fast availability."
           },
           "powered": {
             "title": "Electric pallet trucks",
-            "desc": "Electric Noblelift pallet trucks – walkie and rider. Li-Ion, scales and low entry for intensive warehouse work. Sales and service by VZV GROUP."
+            "desc": "Electric Noblelift pallet trucks – walkie and rider. Li-Ion, scales and low entry for intensive warehouse work."
           }
         }
       },
@@ -2963,11 +2963,11 @@
         "subcategories": {
           "terrainForklifts": {
             "title": "Rough-terrain forklifts",
-            "desc": "Rough-terrain diesel Noblelift forklifts for construction and outdoor yards. Uneven-surface travel. Sales and service by VZV GROUP – request a quote."
+            "desc": "Rough-terrain diesel Noblelift forklifts for construction and outdoor yards. Uneven-surface travel."
           },
           "telehandlers": {
             "title": "Telehandlers",
-            "desc": "Noblelift telehandlers for construction and agriculture. Reach and capacity for demanding terrain. Sales and service by VZV GROUP in CZ and SK."
+            "desc": "Noblelift telehandlers for construction and agriculture. Reach and capacity for demanding terrain."
           }
         }
       },
@@ -2975,11 +2975,11 @@
         "subcategories": {
           "reachTrucks": {
             "title": "Reach trucks",
-            "desc": "Noblelift reach trucks for narrow aisles and racks up to 13 m. High residual capacity and efficient stacking. Sales and service by VZV GROUP."
+            "desc": "Noblelift reach trucks for narrow aisles and racks up to 13 m. High residual capacity and efficient stacking."
           },
           "orderPickers": {
             "title": "Order pickers",
-            "desc": "Noblelift order pickers for efficient picking in racked warehouses. Safe work at height. Sales and service by VZV GROUP in CZ and SK."
+            "desc": "Noblelift order pickers for efficient picking in racked warehouses. Safe work at height."
           }
         }
       },
@@ -2987,11 +2987,11 @@
         "subcategories": {
           "scissor": {
             "title": "Scissor lifts",
-            "desc": "Electric Noblelift scissor lifts for maintenance, assembly and warehousing. Stable platform and quiet operation. Sales and service by VZV GROUP."
+            "desc": "Electric Noblelift scissor lifts for maintenance, assembly and warehousing. Stable platform and quiet operation."
           },
           "mastBoom": {
             "title": "Mast & boom lifts",
-            "desc": "Noblelift mast and boom lifts for assembly and maintenance at height. Sales and service by VZV GROUP in CZ and SK. Request a quote online."
+            "desc": "Noblelift mast and boom lifts for assembly and maintenance at height."
           }
         }
       }
