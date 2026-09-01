@@ -112,6 +112,8 @@ export type ProductModel = {
   image: string;
   gallery?: readonly string[];
   buyUrl?: string;
+  /** Optional English e-shop URL; used when locale is `en`. */
+  buyUrlEn?: string;
   /** Optional per-model specs PDF (overrides series detail PDF on cards). */
   specsPdfUrl?: string;
   specsPdfFilename?: string;
@@ -146,6 +148,8 @@ export type ProductSeries = {
   /** When set with detail, show gallery + overview panel instead of a multi-model card grid. */
   preferOverviewLayout?: boolean;
   buyUrl?: string;
+  /** Optional English e-shop URL; used when locale is `en`. */
+  buyUrlEn?: string;
 };
 
 export type Subcategory = {
@@ -167,6 +171,8 @@ export type Subcategory = {
   gallery?: readonly string[];
   detail?: ProductSeriesDetail;
   buyUrl?: string;
+  /** Optional English e-shop URL; used when locale is `en`. */
+  buyUrlEn?: string;
 };
 
 export type CatalogCategory = {
@@ -182,34 +188,70 @@ export const VZV_SHOP_URL =
   "https://www.vzv.cz/cz/aktualne-skladem/voziky-skladem/nove-voziky/?sort-by=1&id-category=1&id-category=1";
 
 export const VZV_SHOP_SERIE_A_URL =
-  "https://www.vzv.cz/cz/aktualne-skladem/voziky-skladem/nove-voziky/?search-text=CPD&sort-by=1&id-category=1&id-category=1";
+  "https://www.vzv.cz/cz/aktualne-skladem/voziky-skladem/nove-voziky/noblelift/?search-text=CPD&brand[]=86&sort-by=1&id-category=1&id-category=1";
+
+export const VZV_SHOP_SERIE_A_URL_EN =
+  "https://www.vzv.cz/en/currently-in-stock/forklifts-in-stock/new-forklifts/?search-text=CPD%2018%20A,CPD%2025%20A,CPD%2030%20A,CPD%2038%20A&sort-by=1&id-category=1&id-category=1&page=2";
 
 export const VZV_SHOP_SERIE_P_FEP38P_URL =
-  "https://www.vzv.cz/cz/aktualne-skladem/voziky-skladem/nove-voziky/aku/?search-text=fep&type[]=1&power[]=5&sort-by=1&id-category=100&id-category=100";
+  "https://www.vzv.cz/cz/aktualne-skladem/voziky-skladem/nove-voziky/aku/?search-text=FEP%2030%20P,FEP%2038%20P,FEP%2025%20P&type[]=1&power[]=5&sort-by=1&id-category=100&id-category=100";
+
+export const VZV_SHOP_SERIE_P_FEP38P_URL_EN =
+  "https://www.vzv.cz/en/currently-in-stock/forklifts-in-stock/new-forklifts/?search-text=FEP%2030%20P,FEP%2038%20P,FEP%2025%20P&sort-by=1&id-category=1&id-category=1";
 
 export const VZV_SHOP_SERIE_N_FE3D16N1_URL =
   "https://www.vzv.cz/cz/aktualne-skladem/voziky-skladem/nove-voziky/?search-text=FE3D&type[]=3&sort-by=1&id-category=31";
 
+export const VZV_SHOP_SERIE_N_URL =
+  "https://www.vzv.cz/cz/aktualne-skladem/voziky-skladem/nove-voziky/?search-text=FE3D%2020%20N1,FE3D%2016%20N1,FE3R%2012%20E&sort-by=1&id-category=1&id-category=1";
+
+export const VZV_SHOP_SERIE_N_FE3D16N1_URL_EN =
+  "https://www.vzv.cz/en/currently-in-stock/forklifts-in-stock/new-forklifts/?search-text=FE3D%2020%20N1,FE3D%2016%20N1&sort-by=1&id-category=1&id-category=1";
+
+export const VZV_SHOP_SERIE_N_URL_EN =
+  "https://www.vzv.cz/en/currently-in-stock/forklifts-in-stock/new-forklifts/?search-text=FE3D%2020%20N1,FE3D%2016%20N1,FE3R%2012%20E&sort-by=1&id-category=1&id-category=1";
+
 export const VZV_SHOP_SERIE_N_FE3R12E_URL =
-  "https://www.vzv.cz/cz/aktualne-skladem/voziky-skladem/nove-voziky/noblelift-fe3r-12-e-801286";
+  "https://www.vzv.cz/cz/aktualne-skladem/voziky-skladem/nove-voziky/?search-text=FE3R%2012%20E&type[]=3&sort-by=1&id-category=31";
+
+export const VZV_SHOP_SERIE_N_FE3R12E_URL_EN =
+  "https://www.vzv.cz/en/currently-in-stock/forklifts-in-stock/new-forklifts/?search-text=FE3R%2012%20E&sort-by=1&id-category=1&id-category=1";
 
 export const VZV_SHOP_SERIE_Q_FE4P50Q_URL =
-  "https://www.vzv.cz/cz/aktualne-skladem/voziky-skladem/nove-voziky/?search-text=FE4P&sort-by=1&id-category=1&id-category=1";
+  "https://www.vzv.cz/cz/aktualne-skladem/voziky-skladem/nove-voziky/?search-text=FEP%2020%20Q,FE4P%2020%20Q,FEP%2050%20Q,FEP%2050%20QL,&sort-by=1&id-category=1&id-category=1";
+
+export const VZV_SHOP_SERIE_Q_FE4P50Q_URL_EN =
+  "https://www.vzv.cz/en/currently-in-stock/forklifts-in-stock/new-forklifts/?search-text=FEP%2020%20Q,FEP%2050%20QL,FEP%2050%20Q&sort-by=1&id-category=1&id-category=1";
 
 export const VZV_SHOP_DIESEL_LPG_URL =
   "https://www.vzv.cz/cz/aktualne-skladem/voziky-skladem/nove-voziky/diesel/?search-text=CPCD&type[]=1&power[]=1&sort-by=1&id-category=101&id-category=101";
 
+export const VZV_SHOP_DIESEL_LPG_URL_EN =
+  "https://www.vzv.cz/en/currently-in-stock/forklifts-in-stock/new-forklifts/?search-text=CPCD%2025,CPCD%2030,CPCD%2038,CPCD%2050&sort-by=1&id-category=1&id-category=1";
+
 export const VZV_SHOP_BEZ_PRIZDVIHU_URL =
-  "https://www.vzv.cz/cz/aktualne-skladem/voziky-skladem/nove-voziky/bez-prizdvihu/?sort-by=1&type[]=2&other[]=10&mast[]=997&id-category=10001&id-category=10001";
+  "https://www.vzv.cz/cz/aktualne-skladem/voziky-skladem/nove-voziky/?search-text=SWB%20130,PSE%2015%20L,PS%2020%20L,PS%2016%20L&sort-by=1&id-category=1&id-category=1";
+
+export const VZV_SHOP_BEZ_PRIZDVIHU_URL_EN =
+  "https://www.vzv.cz/en/currently-in-stock/forklifts-in-stock/new-forklifts/?search-text=SWB%20130,PSE%2015%20L,PS%2020%20L,PS%2016%20L&sort-by=1&id-category=1&id-category=1";
 
 export const VZV_SHOP_BEZ_PRIZDVIHU_SWB130_URL =
   "https://www.vzv.cz/cz/aktualne-skladem/voziky-skladem/nove-voziky/?search-text=SWB%20130&sort-by=1&id-category=1&id-category=1";
 
+export const VZV_SHOP_BEZ_PRIZDVIHU_SWB130_URL_EN =
+  "https://www.vzv.cz/en/currently-in-stock/forklifts-in-stock/new-forklifts/?search-text=SWB%20130&sort-by=1&id-category=1&id-category=1";
+
 export const VZV_SHOP_BEZ_PRIZDVIHU_PSE15LC_URL =
-  "https://www.vzv.cz/cz/aktualne-skladem/voziky-skladem/nove-voziky/?search-text=PSE%2015%20L-C&sort-by=1&id-category=1&id-category=1";
+  "https://www.vzv.cz/cz/aktualne-skladem/voziky-skladem/nove-voziky/?search-text=PSE%2015%20L&sort-by=1&id-category=1&id-category=1";
+
+export const VZV_SHOP_BEZ_PRIZDVIHU_PSE15LC_URL_EN =
+  "https://www.vzv.cz/en/currently-in-stock/forklifts-in-stock/new-forklifts/?search-text=PSE%2015%20L&sort-by=1&id-category=1&id-category=1";
 
 export const VZV_SHOP_BEZ_PRIZDVIHU_PS16L_URL =
-  "https://www.vzv.cz/cz/aktualne-skladem/voziky-skladem/nove-voziky/?search-text=PS%2016%20L&sort-by=1&id-category=1&id-category=1";
+  "https://www.vzv.cz/cz/aktualne-skladem/voziky-skladem/nove-voziky/?search-text=PS%2016%20L,PS%2020%20L&sort-by=1&id-category=1&id-category=1";
+
+export const VZV_SHOP_BEZ_PRIZDVIHU_PS16L_URL_EN =
+  "https://www.vzv.cz/en/currently-in-stock/forklifts-in-stock/new-forklifts/?search-text=PS%2016%20L,PS%2020%20L&sort-by=1&id-category=1&id-category=1";
 
 export const VZV_SHOP_BEZ_PRIZDVIHU_PS20L_URL =
   "https://www.vzv.cz/cz/aktualne-skladem/voziky-skladem/nove-voziky/?search-text=PS%2020%20L&sort-by=1&id-category=1&id-category=1";
@@ -217,17 +259,47 @@ export const VZV_SHOP_BEZ_PRIZDVIHU_PS20L_URL =
 export const VZV_SHOP_RIDER_BEZ_PRIZDVIHU_URL =
   "https://www.vzv.cz/cz/aktualne-skladem/voziky-skladem/nove-voziky/bez-prizdvihu/?search-text=PS%2016%20N&type[]=2&mast[]=997&sort-by=1&id-category=10003";
 
+export const VZV_SHOP_RIDER_BEZ_PRIZDVIHU_URL_EN =
+  "https://www.vzv.cz/en/currently-in-stock/forklifts-in-stock/new-forklifts/?search-text=PS%2016%20N,PS%2020%20N&sort-by=1&id-category=1&id-category=1";
+
 export const VZV_SHOP_S_PRIZDVIHEM_URL =
   "https://www.vzv.cz/cz/aktualne-skladem/voziky-skladem/nove-voziky/prizdvih/?sort-by=1&type[]=2&other[]=10&mast[]=999&id-category=10002&id-category=10002";
+
+export const VZV_SHOP_S_PRIZDVIHEM_URL_EN =
+  "https://www.vzv.cz/en/currently-in-stock/forklifts-in-stock/new-forklifts/?search-text=PSE%2012%20ND,SWB%20130%20D,PS%2016%20DL&sort-by=1&id-category=1&id-category=1";
+
+export const VZV_SHOP_S_PRIZDVIHEM_PSE12ND_URL =
+  "https://www.vzv.cz/cz/aktualne-skladem/voziky-skladem/nove-voziky/?search-text=PSE%2012%20ND&sort-by=1&id-category=1&id-category=1";
+
+export const VZV_SHOP_S_PRIZDVIHEM_PSE12ND_URL_EN =
+  "https://www.vzv.cz/en/currently-in-stock/forklifts-in-stock/new-forklifts/?search-text=PSE%2012%20ND&sort-by=1&id-category=1&id-category=1";
+
+export const VZV_SHOP_S_PRIZDVIHEM_SWB130D_URL =
+  "https://www.vzv.cz/cz/aktualne-skladem/voziky-skladem/nove-voziky/?search-text=SWB%20130%20D&sort-by=1&id-category=1&id-category=1";
+
+export const VZV_SHOP_S_PRIZDVIHEM_SWB130D_URL_EN =
+  "https://www.vzv.cz/en/currently-in-stock/forklifts-in-stock/new-forklifts/?search-text=SWB%20130%20D&sort-by=1&id-category=1&id-category=1";
+
+export const VZV_SHOP_S_PRIZDVIHEM_PS16DL_URL =
+  "https://www.vzv.cz/cz/aktualne-skladem/voziky-skladem/nove-voziky/?search-text=PS%2016%20DL&sort-by=1&id-category=1&id-category=1";
+
+export const VZV_SHOP_S_PRIZDVIHEM_PS16DL_URL_EN =
+  "https://www.vzv.cz/en/currently-in-stock/forklifts-in-stock/new-forklifts/?search-text=PS%2016%20DL&sort-by=1&id-category=1&id-category=1";
 
 export const VZV_SHOP_RIDER_S_PRIZDVIHEM_URL =
   "https://www.vzv.cz/cz/aktualne-skladem/voziky-skladem/nove-voziky/prizdvih/?sort-by=1&type[]=2&other[]=11&mast[]=999&id-category=10004&id-category=10004";
 
 export const VZV_SHOP_RIDER_S_PRIZDVIHEM_PS16DN_URL =
-  "https://www.vzv.cz/cz/aktualne-skladem/voziky-skladem/nove-voziky/noblelift-ps-16-dn-301156";
+  "https://www.vzv.cz/cz/aktualne-skladem/voziky-skladem/nove-voziky/?search-text=PS%2016%20DN&sort-by=1&id-category=1&id-category=1";
+
+export const VZV_SHOP_RIDER_S_PRIZDVIHEM_PS16DN_URL_EN =
+  "https://www.vzv.cz/en/currently-in-stock/forklifts-in-stock/new-forklifts/?search-text=PS%2016%20DN&sort-by=1&id-category=1&id-category=1";
 
 export const VZV_SHOP_RIDER_BEZ_PRIZDVIHU_PS16N_URL =
-  "https://www.vzv.cz/cz/aktualne-skladem/voziky-skladem/nove-voziky/bez-prizdvihu/?search-text=PS%2016%20N&type[]=2&mast[]=997&sort-by=1&id-category=10003";
+  "https://www.vzv.cz/cz/aktualne-skladem/voziky-skladem/nove-voziky/?search-text=PS%2016%20N,PS%2020%20N&sort-by=1&id-category=1&id-category=1";
+
+export const VZV_SHOP_RIDER_BEZ_PRIZDVIHU_PS16N_URL_EN =
+  "https://www.vzv.cz/en/currently-in-stock/forklifts-in-stock/new-forklifts/?search-text=PS%2016%20N,PS%2020%20N&sort-by=1&id-category=1&id-category=1";
 
 export const VZV_SHOP_RIDER_BEZ_PRIZDVIHU_PS20N_URL =
   "https://www.vzv.cz/cz/aktualne-skladem/voziky-skladem/nove-voziky/noblelift-ps-20-n-301221";
@@ -236,38 +308,64 @@ export const VZV_SHOP_OBKROCNE_URL =
   "https://www.vzv.cz/cz/aktualne-skladem/voziky-skladem/nove-voziky/?sort-by=1&type[]=2&other[]=12&id-category=52&id-category=52";
 
 export const VZV_SHOP_OBKROCNE_PSE12NSL_URL =
-  "https://www.vzv.cz/cz/aktualne-skladem/voziky-skladem/nove-voziky/noblelift-pse-12-nsl-301232";
+  "https://www.vzv.cz/cz/aktualne-skladem/voziky-skladem/nove-voziky/?search-text=PSE%2012%20NSL&sort-by=1&id-category=1&id-category=1";
+
+export const VZV_SHOP_OBKROCNE_PSE12NSL_URL_EN =
+  "https://www.vzv.cz/en/currently-in-stock/forklifts-in-stock/new-forklifts/?search-text=PSE%2012%20NSL&sort-by=1&id-category=1&id-category=1";
 
 export const VZV_SHOP_OBKROCNE_PT16TSL_URL =
   "https://www.vzv.cz/cz/aktualne-skladem/voziky-skladem/nove-voziky/noblelift-pt-16-tsl-299";
 
 export const VZV_SHOP_OBKROCNE_PS18TSL_URL =
-  "https://www.vzv.cz/cz/aktualne-skladem/voziky-skladem/nove-voziky/noblelift-ps-18-tsl-355";
+  "https://www.vzv.cz/cz/aktualne-skladem/voziky-skladem/nove-voziky/?search-text=PS%2016%20TSL,PS%2018%20TSL&sort-by=1&id-category=1&id-category=1";
+
+export const VZV_SHOP_OBKROCNE_PS18TSL_URL_EN =
+  "https://www.vzv.cz/en/currently-in-stock/forklifts-in-stock/new-forklifts/?search-text=PS%2016%20TSL,PS%2018%20TSL&sort-by=1&id-category=1&id-category=1";
 
 export const VZV_SHOP_PALLET_POWERED_URL =
-  "https://www.vzv.cz/cz/aktualne-skladem/voziky-skladem/nove-voziky/?sort-by=1&type[]=4&id-category=4&id-category=4";
+  "https://www.vzv.cz/cz/aktualne-skladem/voziky-skladem/nove-voziky/?search-text=PWB%20150%20Avant,PTE%2015%20Q2,PWB%20200%20Avant,PTE%2015%20Q2SC,PTE%2015%20Q2-B%20SC&type[]=4&sort-by=1&id-category=4";
+
+export const VZV_SHOP_PALLET_POWERED_URL_EN =
+  "https://www.vzv.cz/en/currently-in-stock/forklifts-in-stock/new-forklifts/?search-text=PWB%20150%20Avant,PTE%2015%20Q2SC,PWB%20200%20Avant,PTE%2015%20Q2,PTE%2015%20Q2-B%20SC&sort-by=1&id-category=1&id-category=1";
 
 export const VZV_SHOP_PALLET_MANUAL_URL =
   "https://www.vzv.cz/cz/aktualne-skladem/voziky-skladem/nove-voziky/?search-text=HPT&type[]=4&sort-by=1&id-category=4";
 
+export const VZV_SHOP_PALLET_MANUAL_URL_EN =
+  "https://www.vzv.cz/en/currently-in-stock/forklifts-in-stock/new-forklifts/?search-text=HPT%20DF%2025,HPT%20ACY%2025&sort-by=1&id-category=1&id-category=1";
+
 export const VZV_SHOP_TERRAIN_FORKLIFTS_URL =
-  "https://www.vzv.cz/cz/aktualne-skladem/voziky-skladem/nove-voziky/?sort-by=1&type[]=6&id-category=70&id-category=70";
+  "https://www.vzv.cz/cz/aktualne-skladem/voziky-skladem/nove-voziky/?search-text=FD4&sort-by=1&type[]=10&type[]=6&id-category=5&id-category=5";
+
+export const VZV_SHOP_TERRAIN_FORKLIFTS_URL_EN =
+  "https://www.vzv.cz/en/currently-in-stock/forklifts-in-stock/new-forklifts/?search-text=FD4%20RT25,FD4%20RT35&sort-by=1&id-category=1&id-category=1";
 
 export const VZV_SHOP_TELEHANDLERS_URL =
   "https://www.vzv.cz/cz/aktualne-skladem/voziky-skladem/nove-voziky/?sort-by=1&type[]=10&id-category=5&id-category=5";
 
+export const VZV_SHOP_TELEHANDLERS_URL_EN =
+  "https://www.vzv.cz/en/currently-in-stock/forklifts-in-stock/new-forklifts/?search-text=TH6036&sort-by=1&id-category=1&id-category=1";
+
 export const VZV_SHOP_REACH_TRUCKS_URL =
   "https://www.vzv.cz/cz/aktualne-skladem/voziky-skladem/nove-voziky/?sort-by=1&type[]=7&id-category=90&id-category=90";
+
+export const VZV_SHOP_REACH_TRUCKS_URL_EN =
+  "https://www.vzv.cz/en/currently-in-stock/forklifts-in-stock/new-forklifts/?search-text=RT%2016%20C,RT%2020%20ProH,RT%2020%20Pro&sort-by=1&id-category=1&id-category=1";
 
 export const VZV_SHOP_SCISSOR_LIFTS_URL =
   "https://www.vzv.cz/cz/aktualne-skladem/voziky-skladem/nove-voziky/?sort-by=1&type[]=11&id-category=7&id-category=7";
 
+export const VZV_SHOP_SCISSOR_LIFTS_URL_EN =
+  "https://www.vzv.cz/en/currently-in-stock/forklifts-in-stock/new-forklifts/?sort-by=1&type[]=11&id-category=7&id-category=7";
+
 export const VZV_SHOP_ORDER_PICKERS_URL =
-  "https://www.vzv.cz/cz/aktualne-skladem/voziky-skladem/nove-voziky/noblelift-oph-01e-720009";
+  "https://www.vzv.cz/cz/aktualne-skladem/voziky-skladem/nove-voziky/?sort-by=1&type[]=8&id-category=91&id-category=91";
+
+export const VZV_SHOP_ORDER_PICKERS_URL_EN =
+  "https://www.vzv.cz/en/currently-in-stock/forklifts-in-stock/new-forklifts/?search-text=OPH%2001E&sort-by=1&id-category=1&id-category=1";
 
 const SERIE_A_MODEL_GALLERY = [
   "/images/products/menu/elektro-4rad.jpg",
-  "/images/products/series/serie-a.jpg",
   "/images/products/subcategories/electric-forklift.png",
 ] as const;
 
@@ -290,15 +388,24 @@ export function encodeVzvShopUrl(url: string) {
   return url;
 }
 
-export function getProductBuyUrl(product: ProductModel) {
+export function getProductBuyUrl(product: ProductModel, locale?: string) {
+  if (locale === "en" && product.buyUrlEn) {
+    return product.buyUrlEn;
+  }
   return product.buyUrl ?? VZV_SHOP_URL;
 }
 
-export function getSeriesBuyUrl(series: ProductSeries) {
+export function getSeriesBuyUrl(series: ProductSeries, locale?: string) {
+  if (locale === "en" && series.buyUrlEn) {
+    return series.buyUrlEn;
+  }
   return series.buyUrl ?? VZV_SHOP_URL;
 }
 
-export function getSubcategoryBuyUrl(subcategory: Subcategory) {
+export function getSubcategoryBuyUrl(subcategory: Subcategory, locale?: string) {
+  if (locale === "en" && subcategory.buyUrlEn) {
+    return subcategory.buyUrlEn;
+  }
   return subcategory.buyUrl ?? VZV_SHOP_URL;
 }
 
@@ -534,6 +641,7 @@ const ELECTRIC_FORKLIFT_PRODUCTS: ProductModel[] = [
     highlightKey: "productsCatalog.models.fe3d16Highlight",
     image: "/images/products/series/fe3d16n1.png",
     buyUrl: VZV_SHOP_SERIE_N_FE3D16N1_URL,
+    buyUrlEn: VZV_SHOP_SERIE_N_FE3D16N1_URL_EN,
     specsPdfUrl: "/documents/fe3d16-20n1-technicke-parametry-cz.pdf",
     specsPdfFilename: "FE3D16-20N1-technicke-parametry.pdf",
     specsPdfUrlEn: "/documents/fe3d16-20n1-en.pdf",
@@ -549,6 +657,7 @@ const ELECTRIC_FORKLIFT_PRODUCTS: ProductModel[] = [
     highlightKey: "productsCatalog.models.fe3r12eHighlight",
     image: "/images/products/series/fe3r12e.png",
     buyUrl: VZV_SHOP_SERIE_N_FE3R12E_URL,
+    buyUrlEn: VZV_SHOP_SERIE_N_FE3R12E_URL_EN,
     specsPdfUrl: "/documents/fe3r12e-en.pdf",
     specsPdfFilename: "FE3R12E.pdf",
     specsPdfUrlEn: "/documents/fe3r12e-en.pdf",
@@ -771,6 +880,7 @@ const ELECTRIC_FORKLIFT_SERIES: ProductSeries[] = [
     gallery: SERIE_A_MODEL_GALLERY,
     ctaVariant: "orange",
     buyUrl: VZV_SHOP_SERIE_A_URL,
+    buyUrlEn: VZV_SHOP_SERIE_A_URL_EN,
     preferOverviewLayout: true,
     products: [
       ELECTRIC_FORKLIFT_PRODUCTS[10]!,
@@ -829,7 +939,8 @@ const ELECTRIC_FORKLIFT_SERIES: ProductSeries[] = [
           valueKey: "productsCatalog.series.serieA.detail.specs.operation.value",
         },
       ],
-      specsPdfUrl: "/api/documents/serie-a-technicke-parametry",
+      specsPdfUrl: "/documents/cpd-18-38-a2-technicke-parametry-cz.pdf",
+      specsPdfUrlEn: "/documents/a2-series-1-5-3-8t-lithium-ion-forklift-trucks-en.pdf",
       specsPdfFilename: "CPD-18-38-A2-technicke-parametry.pdf",
       audienceTitleKey: "productsCatalog.series.serieA.detail.audience.title",
       audienceKeys: [
@@ -878,6 +989,7 @@ const ELECTRIC_FORKLIFT_SERIES: ProductSeries[] = [
     image: "/images/products/series/serie-p.png",
     ctaVariant: "dark",
     buyUrl: VZV_SHOP_SERIE_P_FEP38P_URL,
+    buyUrlEn: VZV_SHOP_SERIE_P_FEP38P_URL_EN,
     preferOverviewLayout: true,
     products: [
       ELECTRIC_FORKLIFT_PRODUCTS[5]!,
@@ -936,7 +1048,8 @@ const ELECTRIC_FORKLIFT_SERIES: ProductSeries[] = [
           valueKey: "productsCatalog.series.serieP.detail.specs.operation.value",
         },
       ],
-      specsPdfUrl: "/api/documents/serie-p-technicke-parametry",
+      specsPdfUrl: "/documents/fep-30-38p-technicke-parametry-cz.pdf",
+      specsPdfUrlEn: "/documents/fep25-38p-en.pdf",
       specsPdfFilename: "FEP-30-38P-technicke-parametry.pdf",
       audienceTitleKey: "productsCatalog.series.serieP.detail.audience.title",
       audienceKeys: [
@@ -985,7 +1098,8 @@ const ELECTRIC_FORKLIFT_SERIES: ProductSeries[] = [
     image: "/images/products/series/serie-n.png",
     gallery: ["/images/products/series/serie-n.png"],
     ctaVariant: "orange",
-    buyUrl: VZV_SHOP_SERIE_N_FE3D16N1_URL,
+    buyUrl: VZV_SHOP_SERIE_N_URL,
+    buyUrlEn: VZV_SHOP_SERIE_N_URL_EN,
     products: [
       ELECTRIC_FORKLIFT_PRODUCTS.find((p) => p.id === "fe3d")!,
       ELECTRIC_FORKLIFT_PRODUCTS.find((p) => p.id === "fe3r12e")!,
@@ -1041,7 +1155,7 @@ const ELECTRIC_FORKLIFT_SERIES: ProductSeries[] = [
           valueKey: "productsCatalog.series.serieN.detail.specs.operation.value",
         },
       ],
-      specsPdfUrl: "/api/documents/serie-n-technicke-parametry",
+      specsPdfUrl: "/documents/fe3d16-20n1-technicke-parametry-cz.pdf",
       specsPdfFilename: "serie-n-technicke-parametry.pdf",
       specsPdfUrlEn: "/documents/fe3d16-20n1-en.pdf",
       specsPdfFilenameEn: "FE3D16-20N1.pdf",
@@ -1093,6 +1207,7 @@ const ELECTRIC_FORKLIFT_SERIES: ProductSeries[] = [
     gallery: ["/images/products/series/serie-q-fe4p-50.png"],
     ctaVariant: "dark",
     buyUrl: VZV_SHOP_SERIE_Q_FE4P50Q_URL,
+    buyUrlEn: VZV_SHOP_SERIE_Q_FE4P50Q_URL_EN,
     preferOverviewLayout: true,
     products: [
       ELECTRIC_FORKLIFT_PRODUCTS[14]!,
@@ -1318,7 +1433,7 @@ const SWB_SERIES_DETAIL: ProductSeriesDetail = {
     },
   ],
   argumentKey: "productsCatalog.series.swb.detail.argument",
-  specsPdfUrl: "/api/documents/swb-130-technicke-parametry",
+  specsPdfUrl: "/documents/swb-130-130d-technicke-parametry-cz.pdf",
   specsPdfFilename: "SWB-130-130D-technicke-parametry.pdf",
   specsPdfUrlEn: "/documents/swb-130-130d-en.pdf",
   specsPdfFilenameEn: "SWB-130-130S-130D.pdf",
@@ -1550,8 +1665,9 @@ const STACKER_WALKIE_BEZ_PRIZDVIHU_PRODUCTS: ProductModel[] = [
     descriptionKey: "productsCatalog.models.swb130",
     image: "/images/products/stackers/bez-prizdvihem.png",
     buyUrl: VZV_SHOP_BEZ_PRIZDVIHU_SWB130_URL,
+    buyUrlEn: VZV_SHOP_BEZ_PRIZDVIHU_SWB130_URL_EN,
     seriesDetail: SWB_SERIES_DETAIL,
-    specsPdfUrl: "/api/documents/swb-130-technicke-parametry",
+    specsPdfUrl: "/documents/swb-130-130d-technicke-parametry-cz.pdf",
     specsPdfFilename: "SWB-130-130D-technicke-parametry.pdf",
     specsPdfUrlEn: "/documents/swb-130-130d-en.pdf",
     specsPdfFilenameEn: "SWB-130-130S-130D.pdf",
@@ -1563,6 +1679,7 @@ const STACKER_WALKIE_BEZ_PRIZDVIHU_PRODUCTS: ProductModel[] = [
     descriptionKey: "productsCatalog.models.pse15lc",
     image: "/images/products/stackers/bez-prizdvihem.png",
     buyUrl: VZV_SHOP_BEZ_PRIZDVIHU_PSE15LC_URL,
+    buyUrlEn: VZV_SHOP_BEZ_PRIZDVIHU_PSE15LC_URL_EN,
     seriesDetail: PSE_SERIES_DETAIL,
     specsPdfUrl: "/documents/pse10-15l-c-en.pdf",
     specsPdfFilename: "PSE10-15L-C.pdf",
@@ -1576,6 +1693,7 @@ const STACKER_WALKIE_BEZ_PRIZDVIHU_PRODUCTS: ProductModel[] = [
     descriptionKey: "productsCatalog.models.ps16l",
     image: "/images/products/stackers/bez-prizdvihem.png",
     buyUrl: VZV_SHOP_BEZ_PRIZDVIHU_PS16L_URL,
+    buyUrlEn: VZV_SHOP_BEZ_PRIZDVIHU_PS16L_URL_EN,
     seriesDetail: PS_SERIES_DETAIL,
     specsPdfUrl: "/documents/ps12-20l-ps12-16dl-en.pdf",
     specsPdfFilename: "PS12-20L-PS12-16DL.pdf",
@@ -1591,7 +1709,8 @@ const STACKER_WALKIE_S_PRIZDVIHEM_PRODUCTS: ProductModel[] = [
     capacity: "1200 kg",
     descriptionKey: "productsCatalog.models.pse12nd",
     image: "/images/products/stackers/s-prizdvihem.png",
-    buyUrl: VZV_SHOP_S_PRIZDVIHEM_URL,
+    buyUrl: VZV_SHOP_S_PRIZDVIHEM_PSE12ND_URL,
+    buyUrlEn: VZV_SHOP_S_PRIZDVIHEM_PSE12ND_URL_EN,
     seriesDetail: PSE_SERIES_DETAIL,
     specsPdfUrl: "/documents/pse12nd-en.pdf",
     specsPdfFilename: "PSE12ND.pdf",
@@ -1604,9 +1723,10 @@ const STACKER_WALKIE_S_PRIZDVIHEM_PRODUCTS: ProductModel[] = [
     capacity: "1300 kg",
     descriptionKey: "productsCatalog.models.swb130d",
     image: "/images/products/stackers/s-prizdvihem.png",
-    buyUrl: VZV_SHOP_S_PRIZDVIHEM_URL,
+    buyUrl: VZV_SHOP_S_PRIZDVIHEM_SWB130D_URL,
+    buyUrlEn: VZV_SHOP_S_PRIZDVIHEM_SWB130D_URL_EN,
     seriesDetail: SWB_SERIES_DETAIL,
-    specsPdfUrl: "/api/documents/swb-130-technicke-parametry",
+    specsPdfUrl: "/documents/swb-130-130d-technicke-parametry-cz.pdf",
     specsPdfFilename: "SWB-130-130D-technicke-parametry.pdf",
     specsPdfUrlEn: "/documents/swb-130-130d-en.pdf",
     specsPdfFilenameEn: "SWB-130-130S-130D.pdf",
@@ -1617,7 +1737,8 @@ const STACKER_WALKIE_S_PRIZDVIHEM_PRODUCTS: ProductModel[] = [
     capacity: "1600 kg",
     descriptionKey: "productsCatalog.models.ps16dl",
     image: "/images/products/stackers/s-prizdvihem.png",
-    buyUrl: VZV_SHOP_S_PRIZDVIHEM_URL,
+    buyUrl: VZV_SHOP_S_PRIZDVIHEM_PS16DL_URL,
+    buyUrlEn: VZV_SHOP_S_PRIZDVIHEM_PS16DL_URL_EN,
     seriesDetail: PS_SERIES_DETAIL,
     specsPdfUrl: "/documents/ps12-20l-ps12-16dl-en.pdf",
     specsPdfFilename: "PS12-20L-PS12-16DL.pdf",
@@ -1652,6 +1773,7 @@ const STACKER_WALKIE_VARIANTS: ProductSeries[] = [
     gallery: ["/images/products/stackers/bez-prizdvihem.png"],
     ctaVariant: "orange",
     buyUrl: VZV_SHOP_BEZ_PRIZDVIHU_URL,
+    buyUrlEn: VZV_SHOP_BEZ_PRIZDVIHU_URL_EN,
     products: STACKER_WALKIE_BEZ_PRIZDVIHU_PRODUCTS,
     detail: {
       titleKey: "productsCatalog.stackerVariants.bezPrizdvihem.detail.title",
@@ -1704,7 +1826,8 @@ const STACKER_WALKIE_VARIANTS: ProductSeries[] = [
           valueKey: "productsCatalog.stackerVariants.bezPrizdvihem.detail.specs.type.value",
         },
       ],
-      specsPdfUrl: "/api/documents/catalog-specs/walkie-bez-prizdvihem",
+      specsPdfUrl: "/documents/walkie-bez-prizdvihem-technicke-parametry-cz.pdf",
+      specsPdfUrlEn: "/documents/walkie-bez-prizdvihem-en.pdf",
       specsPdfFilename: "walkie-bez-prizdvihem-technicke-parametry.pdf",
     },
   },
@@ -1728,6 +1851,7 @@ const STACKER_WALKIE_VARIANTS: ProductSeries[] = [
     gallery: ["/images/products/stackers/s-prizdvihem.png"],
     ctaVariant: "dark",
     buyUrl: VZV_SHOP_S_PRIZDVIHEM_URL,
+    buyUrlEn: VZV_SHOP_S_PRIZDVIHEM_URL_EN,
     products: STACKER_WALKIE_S_PRIZDVIHEM_PRODUCTS,
     detail: {
       titleKey: "productsCatalog.stackerVariants.sPrizdvihem.detail.title",
@@ -1780,7 +1904,8 @@ const STACKER_WALKIE_VARIANTS: ProductSeries[] = [
           valueKey: "productsCatalog.stackerVariants.sPrizdvihem.detail.specs.type.value",
         },
       ],
-      specsPdfUrl: "/api/documents/catalog-specs/walkie-s-prizdvihem",
+      specsPdfUrl: "/documents/walkie-s-prizdvihem-technicke-parametry-cz.pdf",
+      specsPdfUrlEn: "/documents/walkie-s-prizdvihem-en.pdf",
       specsPdfFilename: "walkie-s-prizdvihem-technicke-parametry.pdf",
     },
   },
@@ -1794,6 +1919,7 @@ const STACKER_RIDER_BEZ_PRIZDVIHU_PRODUCTS: ProductModel[] = [
     descriptionKey: "productsCatalog.models.ps16n",
     image: "/images/products/stackers/s-plosinou-product.png",
     buyUrl: VZV_SHOP_RIDER_BEZ_PRIZDVIHU_PS16N_URL,
+    buyUrlEn: VZV_SHOP_RIDER_BEZ_PRIZDVIHU_PS16N_URL_EN,
     seriesDetail: PS_SERIES_DETAIL,
     specsPdfUrl: "/documents/ps12-20n-ps16dn-en.pdf",
     specsPdfFilename: "PS12-20N-PS16DN.pdf",
@@ -1810,6 +1936,7 @@ const STACKER_RIDER_S_PRIZDVIHEM_PRODUCTS: ProductModel[] = [
     descriptionKey: "productsCatalog.models.ps16dn",
     image: "/images/products/stackers/s-plosinou-s-prizdvihem.png",
     buyUrl: VZV_SHOP_RIDER_S_PRIZDVIHEM_PS16DN_URL,
+    buyUrlEn: VZV_SHOP_RIDER_S_PRIZDVIHEM_PS16DN_URL_EN,
     seriesDetail: PS_SERIES_DETAIL,
     specsPdfUrl: "/documents/ps12-20n-ps16dn-en.pdf",
     specsPdfFilename: "PS12-20N-PS16DN.pdf",
@@ -1844,6 +1971,7 @@ const STACKER_RIDER_VARIANTS: ProductSeries[] = [
     gallery: ["/images/products/stackers/s-plosinou-product.png"],
     ctaVariant: "orange",
     buyUrl: VZV_SHOP_RIDER_BEZ_PRIZDVIHU_URL,
+    buyUrlEn: VZV_SHOP_RIDER_BEZ_PRIZDVIHU_URL_EN,
     products: STACKER_RIDER_BEZ_PRIZDVIHU_PRODUCTS,
     detail: {
       titleKey: "productsCatalog.stackerRiderVariants.bezPrizdvihem.detail.title",
@@ -1896,7 +2024,8 @@ const STACKER_RIDER_VARIANTS: ProductSeries[] = [
           valueKey: "productsCatalog.stackerRiderVariants.bezPrizdvihem.detail.specs.type.value",
         },
       ],
-      specsPdfUrl: "/api/documents/catalog-specs/rider-bez-prizdvihem",
+      specsPdfUrl: "/documents/rider-bez-prizdvihem-technicke-parametry-cz.pdf",
+      specsPdfUrlEn: "/documents/rider-bez-prizdvihem-en.pdf",
       specsPdfFilename: "rider-bez-prizdvihem-technicke-parametry.pdf",
     },
   },
@@ -1920,6 +2049,7 @@ const STACKER_RIDER_VARIANTS: ProductSeries[] = [
     gallery: ["/images/products/stackers/s-plosinou-s-prizdvihem.png"],
     ctaVariant: "dark",
     buyUrl: VZV_SHOP_RIDER_S_PRIZDVIHEM_PS16DN_URL,
+    buyUrlEn: VZV_SHOP_RIDER_S_PRIZDVIHEM_PS16DN_URL_EN,
     products: STACKER_RIDER_S_PRIZDVIHEM_PRODUCTS,
     detail: {
       titleKey: "productsCatalog.stackerRiderVariants.sPrizdvihem.detail.title",
@@ -1972,7 +2102,8 @@ const STACKER_RIDER_VARIANTS: ProductSeries[] = [
           valueKey: "productsCatalog.stackerRiderVariants.sPrizdvihem.detail.specs.type.value",
         },
       ],
-      specsPdfUrl: "/api/documents/catalog-specs/rider-s-prizdvihem",
+      specsPdfUrl: "/documents/rider-s-prizdvihem-technicke-parametry-cz.pdf",
+      specsPdfUrlEn: "/documents/rider-s-prizdvihem-en.pdf",
       specsPdfFilename: "rider-s-prizdvihem-technicke-parametry.pdf",
     },
   },
@@ -1985,6 +2116,7 @@ const STACKER_STRADDLE_PSE12NSL: ProductModel = {
   descriptionKey: "productsCatalog.models.pse12nsl",
   image: "/images/products/stackers/obkrocne.png",
   buyUrl: VZV_SHOP_OBKROCNE_PSE12NSL_URL,
+  buyUrlEn: VZV_SHOP_OBKROCNE_PSE12NSL_URL_EN,
   specsPdfUrl: "/documents/pse12nd-en.pdf",
   specsPdfFilename: "PSE12ND.pdf",
   specsPdfUrlEn: "/documents/pse12nd-en.pdf",
@@ -1998,6 +2130,7 @@ const STACKER_STRADDLE_PS16_18TSL: ProductModel = {
   descriptionKey: "productsCatalog.models.ps16tsl",
   image: "/images/products/stackers/obkrocne-pt-ps.png",
   buyUrl: VZV_SHOP_OBKROCNE_PS18TSL_URL,
+  buyUrlEn: VZV_SHOP_OBKROCNE_PS18TSL_URL_EN,
   specsPdfUrl: "/documents/ps16-18-tsl-en.pdf",
   specsPdfFilename: "Noblelift-PS16-18-TSL.pdf",
   specsPdfUrlEn: "/documents/ps16-18-tsl-en.pdf",
@@ -2063,7 +2196,8 @@ function createStraddleSeriesDetail(capacityValueKey: string): ProductSeriesDeta
         valueKey: "productsCatalog.stackerStraddle.detail.specs.type.value",
       },
     ],
-    specsPdfUrl: "/api/documents/catalog-specs/straddle",
+    specsPdfUrl: "/documents/straddle-technicke-parametry-cz.pdf",
+      specsPdfUrlEn: "/documents/straddle-en.pdf",
     specsPdfFilename: "straddle-technicke-parametry.pdf",
     audienceTitleKey: "productsCatalog.stackerStraddle.detail.audience.title",
     audienceKeys: [
@@ -2131,6 +2265,7 @@ const STACKER_STRADDLE_VARIANTS: ProductSeries[] = [
     gallery: ["/images/products/stackers/obkrocne.png"],
     ctaVariant: "orange",
     buyUrl: VZV_SHOP_OBKROCNE_PSE12NSL_URL,
+    buyUrlEn: VZV_SHOP_OBKROCNE_PSE12NSL_URL_EN,
     products: [STACKER_STRADDLE_PSE12NSL],
     detail: {
       ...createStraddleSeriesDetail(
@@ -2162,6 +2297,7 @@ const STACKER_STRADDLE_VARIANTS: ProductSeries[] = [
     gallery: ["/images/products/stackers/obkrocne-pt-ps.png"],
     ctaVariant: "orange",
     buyUrl: VZV_SHOP_OBKROCNE_PS18TSL_URL,
+    buyUrlEn: VZV_SHOP_OBKROCNE_PS18TSL_URL_EN,
     products: [STACKER_STRADDLE_PS16_18TSL],
     detail: {
       ...createStraddleSeriesDetail(
@@ -2381,6 +2517,7 @@ export const PRODUCT_CATALOG: readonly CatalogCategory[] = [
         productLineKey: "productsCatalog.dieselLpg.productLine",
         gallery: DIESEL_LPG_GALLERY,
         buyUrl: VZV_SHOP_DIESEL_LPG_URL,
+        buyUrlEn: VZV_SHOP_DIESEL_LPG_URL_EN,
         tagKeys: [
           "productsCatalog.subcategories.dieselLpg.tags.1",
           "productsCatalog.subcategories.dieselLpg.tags.2",
@@ -2442,7 +2579,7 @@ export const PRODUCT_CATALOG: readonly CatalogCategory[] = [
               valueKey: "productsCatalog.dieselLpg.detail.specs.operation.value",
             },
           ],
-          specsPdfUrl: "/api/documents/diesel-lpg-technicke-parametry",
+          specsPdfUrl: "/documents/cpc-d-20-38-technicke-parametry-cz.pdf",
           specsPdfFilename: "CPC-D-20-38-technicke-parametry.pdf",
           specsPdfUrlEn: "/documents/a2-series-diesel-en.pdf",
           specsPdfFilenameEn: "A2-series-diesel.pdf",
@@ -2532,6 +2669,7 @@ export const PRODUCT_CATALOG: readonly CatalogCategory[] = [
         productLineKey: "productsCatalog.palletManual.productLine",
         gallery: ["/images/products/pallet/manual-hand-clean.png"],
         buyUrl: VZV_SHOP_PALLET_MANUAL_URL,
+        buyUrlEn: VZV_SHOP_PALLET_MANUAL_URL_EN,
         tagKeys: [
           "productsCatalog.subcategories.manual.tags.1",
           "productsCatalog.subcategories.manual.tags.2",
@@ -2588,7 +2726,8 @@ export const PRODUCT_CATALOG: readonly CatalogCategory[] = [
               valueKey: "productsCatalog.palletManual.detail.specs.type.value",
             },
           ],
-          specsPdfUrl: "/api/documents/catalog-specs/manual",
+          specsPdfUrl: "/documents/manual-technicke-parametry-cz.pdf",
+      specsPdfUrlEn: "/documents/manual-en.pdf",
           specsPdfFilename: "manual-technicke-parametry.pdf",
         },
       },
@@ -2609,6 +2748,7 @@ export const PRODUCT_CATALOG: readonly CatalogCategory[] = [
           "/images/products/pallet/pte-atom-2.png",
         ],
         buyUrl: VZV_SHOP_PALLET_POWERED_URL,
+        buyUrlEn: VZV_SHOP_PALLET_POWERED_URL_EN,
         tagKeys: [
           "productsCatalog.subcategories.powered.tags.1",
           "productsCatalog.subcategories.powered.tags.2",
@@ -2817,6 +2957,7 @@ export const PRODUCT_CATALOG: readonly CatalogCategory[] = [
         productLineKey: "productsCatalog.terrainForkliftsPage.productLine",
         gallery: ["/images/products/terrain/rt25-forklift.png"],
         buyUrl: VZV_SHOP_TERRAIN_FORKLIFTS_URL,
+        buyUrlEn: VZV_SHOP_TERRAIN_FORKLIFTS_URL_EN,
         tagKeys: [
           "productsCatalog.subcategories.terrainForklifts.tags.1",
           "productsCatalog.subcategories.terrainForklifts.tags.2",
@@ -2873,7 +3014,8 @@ export const PRODUCT_CATALOG: readonly CatalogCategory[] = [
               valueKey: "productsCatalog.terrainForkliftsPage.detail.specs.type.value",
             },
           ],
-          specsPdfUrl: "/api/documents/catalog-specs/terrain-forklifts",
+          specsPdfUrl: "/documents/terrain-forklifts-technicke-parametry-cz.pdf",
+      specsPdfUrlEn: "/documents/terrain-forklifts-en.pdf",
           specsPdfFilename: "terrain-forklifts-technicke-parametry.pdf",
         },
       },
@@ -2891,6 +3033,7 @@ export const PRODUCT_CATALOG: readonly CatalogCategory[] = [
         productLineKey: "productsCatalog.telehandlersPage.productLine",
         gallery: ["/images/products/terrain/telehandler.png"],
         buyUrl: VZV_SHOP_TELEHANDLERS_URL,
+        buyUrlEn: VZV_SHOP_TELEHANDLERS_URL_EN,
         tagKeys: [
           "productsCatalog.subcategories.telehandlers.tags.1",
           "productsCatalog.subcategories.telehandlers.tags.2",
@@ -2947,7 +3090,8 @@ export const PRODUCT_CATALOG: readonly CatalogCategory[] = [
               valueKey: "productsCatalog.telehandlersPage.detail.specs.type.value",
             },
           ],
-          specsPdfUrl: "/api/documents/catalog-specs/telehandlers",
+          specsPdfUrl: "/documents/telehandlers-technicke-parametry-cz.pdf",
+      specsPdfUrlEn: "/documents/telehandlers-en.pdf",
           specsPdfFilename: "telehandlers-technicke-parametry.pdf",
         },
       },
@@ -2972,6 +3116,7 @@ export const PRODUCT_CATALOG: readonly CatalogCategory[] = [
         productLineKey: "productsCatalog.reachTrucksPage.productLine",
         gallery: ["/images/products/menu/schubmaststapler.jpg"],
         buyUrl: VZV_SHOP_REACH_TRUCKS_URL,
+        buyUrlEn: VZV_SHOP_REACH_TRUCKS_URL_EN,
         tagKeys: [
           "productsCatalog.subcategories.reachTrucks.tags.1",
           "productsCatalog.subcategories.reachTrucks.tags.2",
@@ -3029,7 +3174,8 @@ export const PRODUCT_CATALOG: readonly CatalogCategory[] = [
               valueKey: "productsCatalog.reachTrucksPage.detail.specs.type.value",
             },
           ],
-          specsPdfUrl: "/api/documents/catalog-specs/reach-trucks",
+          specsPdfUrl: "/documents/reach-trucks-technicke-parametry-cz.pdf",
+      specsPdfUrlEn: "/documents/reach-trucks-en.pdf",
           specsPdfFilename: "reach-trucks-technicke-parametry.pdf",
         },
       },
@@ -3047,6 +3193,7 @@ export const PRODUCT_CATALOG: readonly CatalogCategory[] = [
         productLineKey: "productsCatalog.orderPickersPage.productLine",
         gallery: ["/images/products/menu/mittelhubkommissionierer.jpg"],
         buyUrl: VZV_SHOP_ORDER_PICKERS_URL,
+        buyUrlEn: VZV_SHOP_ORDER_PICKERS_URL_EN,
         tagKeys: [
           "productsCatalog.subcategories.orderPickers.tags.1",
           "productsCatalog.subcategories.orderPickers.tags.2",
@@ -3103,7 +3250,8 @@ export const PRODUCT_CATALOG: readonly CatalogCategory[] = [
               valueKey: "productsCatalog.orderPickersPage.detail.specs.type.value",
             },
           ],
-          specsPdfUrl: "/api/documents/catalog-specs/order-pickers",
+          specsPdfUrl: "/documents/order-pickers-technicke-parametry-cz.pdf",
+      specsPdfUrlEn: "/documents/order-pickers-en.pdf",
           specsPdfFilename: "order-pickers-technicke-parametry.pdf",
         },
       },
@@ -3128,6 +3276,7 @@ export const PRODUCT_CATALOG: readonly CatalogCategory[] = [
         productLineKey: "productsCatalog.scissorLiftsPage.productLine",
         gallery: ["/images/home/categories/6.jpg"],
         buyUrl: VZV_SHOP_SCISSOR_LIFTS_URL,
+        buyUrlEn: VZV_SHOP_SCISSOR_LIFTS_URL_EN,
         tagKeys: [
           "productsCatalog.subcategories.scissor.tags.1",
           "productsCatalog.subcategories.scissor.tags.2",
@@ -3184,7 +3333,8 @@ export const PRODUCT_CATALOG: readonly CatalogCategory[] = [
               valueKey: "productsCatalog.scissorLiftsPage.detail.specs.type.value",
             },
           ],
-          specsPdfUrl: "/api/documents/catalog-specs/scissor",
+          specsPdfUrl: "/documents/scissor-technicke-parametry-cz.pdf",
+      specsPdfUrlEn: "/documents/scissor-en.pdf",
           specsPdfFilename: "scissor-technicke-parametry.pdf",
         },
       },

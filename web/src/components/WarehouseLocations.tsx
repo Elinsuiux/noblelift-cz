@@ -1,3 +1,5 @@
+"use client";
+
 import { useTranslations } from "next-intl";
 import { HomeImageSlot } from "@/components/HomeImageSlot";
 import { Wordmark } from "@/components/Wordmark";

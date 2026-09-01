@@ -29,8 +29,10 @@ function resolveMessage(messages: MessagesTree, key: string): string {
   return typeof value === "string" ? value : key;
 }
 
-export function catalogSpecsPdfUrl(id: string) {
-  return `/api/documents/catalog-specs/${id}`;
+export function catalogSpecsPdfUrl(id: string, locale: "cz" | "en" = "cz") {
+  return locale === "en"
+    ? `/documents/${id}-en.pdf`
+    : `/documents/${id}-technicke-parametry-cz.pdf`;
 }
 
 export function catalogSpecsPdfFilename(id: string) {

@@ -396,7 +396,7 @@
     },
     "title": "O nás",
     "intro": {
-      "lead": "Noblelift.cz je součástí společnosti VZV GROUP s.r.o., která je výhradním zastoupením značky NOBLELIFT pro trhy v České republice a na Slovensku.",
+      "lead": "Noblelift.cz je součástí společnosti VZV GROUP s.r.o., která je výhradním zástupcem značky NOBLELIFT pro trhy v České republice a na Slovensku.",
       "p1": "Jsme oficiálním autorizovaným zástupcem globální značky NOBLELIFT. Díky tomu přinášíme do regionu nejen špičkovou manipulační techniku, ale také servis, odbornou podporu a přístup k originálním náhradním dílům.",
       "p2": "Zároveň bereme na sebe plnou regionální odpovědnost za prodej a servis strojů značky Noblelift v ČR a na Slovensku.",
       "cta": "Vybrat si techniku"
@@ -850,7 +850,7 @@
       "modelsCount": "{count, plural, one {# model} few {# modely} other {# modelů}}",
       "seriesCount": "{count, plural, one {# řada} few {# řady} other {# řad}}",
       "seriesPageTitle": "Série elektrických čelních vozíků Noblelift",
-      "seriesPageLead": "Klikněte na „Zjistit více“ pro detailní popis série nebo „Zobrazit modely“ pro přehled modelů v dané řadě.",
+      "seriesPageLead": "Klikněte na „Zobrazit modely“ pro přehled modelů v dané řadě nebo „Zobrazit detaily >“ pro detailní popis série.",
       "cta": "Zobrazit techniku",
       "contactCta": "Nezávazná poptávka"
     },
@@ -1963,7 +1963,7 @@
       }
     },
     "dieselLpg": {
-      "modelRange": "CPC(D)20~38",
+      "modelRange": "CPCD 20~50",
       "capacity": "2,0 – 3,8 t",
       "productLine": "Dieselové a LPG čelní vozíky — A Series IC",
       "detail": {

@@ -1,9 +1,11 @@
+import { use } from "react";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { getTranslations, setRequestLocale } from "next-intl/server";
+import { setRequestLocale } from "next-intl/server";
 import { ProductCategoryPage } from "@/components/ProductCategoryPage";
 import { routing } from "@/i18n/routing";
 import { PRODUCT_CATALOG, getCategoryBySlug, getCategorySlug } from "@/lib/products-catalog";
+import { formatStaticMessage, getStaticMessage } from "@/lib/static-messages";
 import { seoDescription } from "@/lib/seo";
 
 type Props = {
@@ -27,20 +29,21 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     return {};
   }
 
-  const t = await getTranslations({ locale, namespace: "categories.items" });
-  const meta = await getTranslations({ locale, namespace: "productsCatalog.meta.category" });
+  const categoryTitle = getStaticMessage(locale, `categories.items.${category.id}.title`);
 
   return {
-    title: meta("title", { category: t(`${category.id}.title`) }),
-    description: seoDescription(t(`${category.id}.desc`)),
+    title: formatStaticMessage(locale, "productsCatalog.meta.category.title", {
+      category: categoryTitle,
+    }),
+    description: seoDescription(getStaticMessage(locale, `categories.items.${category.id}.desc`)),
   };
 }
 
-export default async function Page({ params }: Props) {
-  const { locale, category: categorySlug } = await params;
+export default function Page({ params }: Props) {
+  const { locale, category: categorySlug } = use(params);
   setRequestLocale(locale);
-
   const category = getCategoryBySlug(categorySlug, locale);
+
   if (!category) {
     notFound();
   }

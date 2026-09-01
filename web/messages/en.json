@@ -853,7 +853,7 @@
       "modelsCount": "{count, plural, one {# model} other {# models}}",
       "seriesCount": "{count, plural, one {# series} other {# series}}",
       "seriesPageTitle": "Noblelift electric counterbalance series",
-      "seriesPageLead": "Click \"Learn more\" for a detailed series description or \"View models\" to browse models in that series.",
+      "seriesPageLead": "Click \"View models\" to browse models in that series or \"View details >\" for a detailed series description.",
       "cta": "View equipment",
       "contactCta": "Request a quote"
     },
@@ -2069,7 +2069,7 @@
       }
     },
     "dieselLpg": {
-      "modelRange": "CPC(D)20~38",
+      "modelRange": "CPCD 20~50",
       "capacity": "2.0 – 3.8 t",
       "productLine": "Diesel & LPG counterbalance forklifts — A Series IC",
       "detail": {

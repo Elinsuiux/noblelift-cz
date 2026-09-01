@@ -1,3 +1,5 @@
+"use client";
+
 import { useTranslations } from "next-intl";
 import { PhoneIcon } from "@/components/PhoneIcon";
 import { ClockIcon } from "@/components/ClockIcon";

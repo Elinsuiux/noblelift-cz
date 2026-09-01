@@ -1,3 +1,5 @@
+"use client";
+
 import { useLocale, useTranslations } from "next-intl";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
@@ -31,6 +33,7 @@ function ProductSeriesOverview({
   specsPdfFilename,
   specsPdfUrlEn,
   specsPdfFilenameEn,
+  locale,
 }: {
   product: ProductModel;
   productLineKey?: string;
@@ -38,6 +41,7 @@ function ProductSeriesOverview({
   specsPdfFilename?: string;
   specsPdfUrlEn?: string;
   specsPdfFilenameEn?: string;
+  locale: string;
 }) {
   const t = useTranslations();
 
@@ -55,7 +59,7 @@ function ProductSeriesOverview({
         </p>
         <div className="mt-8 border-t border-zinc-100 pt-8">
           <SeriesActionBar
-            buyUrl={getProductBuyUrl(product)}
+            buyUrl={getProductBuyUrl(product, locale)}
             specsPdfUrl={specsPdfUrl}
             specsPdfFilename={specsPdfFilename}
             specsPdfUrlEn={specsPdfUrlEn}
@@ -155,6 +159,7 @@ export function ProductSeriesPage({
                     soleProduct.specsPdfFilenameEn ??
                     series.detail?.specsPdfFilenameEn
                   }
+                  locale={locale}
                 />
                 <SeriesDetailSection detail={soleProduct.seriesDetail} />
               </>
@@ -170,7 +175,7 @@ export function ProductSeriesPage({
                         productLineKey: series.productLineKey,
                         descKey: series.descKey,
                       }}
-                      buyUrl={getSeriesBuyUrl(series)}
+                      buyUrl={getSeriesBuyUrl(series, locale)}
                       specsPdfUrl={series.detail.specsPdfUrl}
                       specsPdfFilename={series.detail.specsPdfFilename}
                       specsPdfUrlEn={series.detail.specsPdfUrlEn}

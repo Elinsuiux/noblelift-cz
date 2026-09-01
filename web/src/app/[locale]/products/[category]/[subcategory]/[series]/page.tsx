@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { getTranslations, setRequestLocale } from "next-intl/server";
+import { setRequestLocale } from "next-intl/server";
 import { ProductSeriesPage } from "@/components/ProductSeriesPage";
 import { routing } from "@/i18n/routing";
 import {
@@ -12,6 +12,7 @@ import {
   getSubcategoryBySlug,
   getSubcategorySlug,
 } from "@/lib/products-catalog";
+import { formatStaticMessage, getStaticMessage } from "@/lib/static-messages";
 import { seoDescription } from "@/lib/seo";
 
 type Props = {
@@ -52,15 +53,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     return {};
   }
 
-  const t = await getTranslations({ locale });
-  const meta = await getTranslations({ locale, namespace: "productsCatalog.meta.series" });
-
   return {
-    title: meta("title", {
-      series: t(series.titleKey),
-      subcategory: t(subcategory.titleKey),
+    title: formatStaticMessage(locale, "productsCatalog.meta.series.title", {
+      series: getStaticMessage(locale, series.titleKey),
+      subcategory: getStaticMessage(locale, subcategory.titleKey),
     }),
-    description: seoDescription(t(series.descKey)),
+    description: seoDescription(getStaticMessage(locale, series.descKey)),
   };
 }
 
@@ -68,8 +66,8 @@ export default async function Page({ params }: Props) {
   const { locale, category: categorySlug, subcategory: subcategorySlug, series: seriesSlug } =
     await params;
   setRequestLocale(locale);
-
   const category = getCategoryBySlug(categorySlug, locale);
+
   if (!category) {
     notFound();
   }

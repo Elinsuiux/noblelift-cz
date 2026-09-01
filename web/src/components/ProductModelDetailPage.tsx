@@ -1,3 +1,5 @@
+"use client";
+
 import { useLocale, useTranslations } from "next-intl";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
@@ -82,7 +84,7 @@ export function ProductModelDetailPage({
     ? t(product.detail.longDescKey)
     : t(product.descriptionKey);
   const galleryImages = getProductGallery(product);
-  const buyUrl = getProductBuyUrl(product);
+  const buyUrl = getProductBuyUrl(product, locale);
   const seriesDetail = product.seriesDetail;
 
   return (

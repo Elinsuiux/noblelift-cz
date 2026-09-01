@@ -1,4 +1,7 @@
+"use client";
+
 import Image from "next/image";
+
 import { useLocale, useTranslations } from "next-intl";
 import { getPathname } from "@/i18n/navigation";
 import {

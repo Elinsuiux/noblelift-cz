@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
-import { getTranslations, setRequestLocale } from "next-intl/server";
+import { setRequestLocale } from "next-intl/server";
 import { ProductsHubPage } from "@/components/ProductsHubPage";
+import { getStaticMessage } from "@/lib/static-messages";
 import { seoDescription } from "@/lib/seo";
 
 type Props = {
@@ -9,17 +10,15 @@ type Props = {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: "productsCatalog.meta.hub" });
 
   return {
-    title: t("title"),
-    description: seoDescription(t("description")),
+    title: getStaticMessage(locale, "productsCatalog.meta.hub.title"),
+    description: seoDescription(getStaticMessage(locale, "productsCatalog.meta.hub.description")),
   };
 }
 
 export default async function Page({ params }: Props) {
   const { locale } = await params;
   setRequestLocale(locale);
-
   return <ProductsHubPage />;
 }

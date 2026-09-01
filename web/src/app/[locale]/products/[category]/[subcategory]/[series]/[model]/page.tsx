@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { getTranslations, setRequestLocale } from "next-intl/server";
+import { setRequestLocale } from "next-intl/server";
 import { ProductModelDetailPage } from "@/components/ProductModelDetailPage";
 import { routing } from "@/i18n/routing";
 import {
@@ -14,6 +14,7 @@ import {
   getSubcategoryBySlug,
   getSubcategorySlug,
 } from "@/lib/products-catalog";
+import { formatStaticMessage, getStaticMessage } from "@/lib/static-messages";
 import { seoDescription } from "@/lib/seo";
 
 type Props = {
@@ -52,6 +53,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     series: seriesSlug,
     model: modelSlug,
   } = await params;
+  setRequestLocale(locale);
   const category = getCategoryBySlug(categorySlug, locale);
 
   if (!category) {
@@ -73,17 +75,17 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     return {};
   }
 
-  const t = await getTranslations({ locale });
-  const meta = await getTranslations({ locale, namespace: "productsCatalog.meta.model" });
-
   const rawDescription = product.seriesDetail
-    ? t(product.seriesDetail.introKey)
+    ? getStaticMessage(locale, product.seriesDetail.introKey)
     : product.detail
-      ? t(product.detail.longDescKey)
-      : t(product.descriptionKey);
+      ? getStaticMessage(locale, product.detail.longDescKey)
+      : getStaticMessage(locale, product.descriptionKey);
 
   return {
-    title: meta("title", { model: product.model, series: t(series.titleKey) }),
+    title: formatStaticMessage(locale, "productsCatalog.meta.model.title", {
+      model: product.model,
+      series: getStaticMessage(locale, series.titleKey),
+    }),
     description: seoDescription(rawDescription),
   };
 }
@@ -97,8 +99,8 @@ export default async function Page({ params }: Props) {
     model: modelSlug,
   } = await params;
   setRequestLocale(locale);
-
   const category = getCategoryBySlug(categorySlug, locale);
+
   if (!category) {
     notFound();
   }

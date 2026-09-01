@@ -45,7 +45,7 @@ function HubSeriesModelCard({
   const t = useTranslations();
   const locale = useLocale();
   const opensDetail = Boolean(detailsHref && product.seriesDetail);
-  const buyUrl = getProductBuyUrl(product);
+  const buyUrl = getProductBuyUrl(product, locale);
   const subtitle = product.highlightKey ?? subtitleKey ?? undefined;
 
   const effectiveSpecsUrl =
@@ -176,6 +176,7 @@ function ClassicSeriesModelCard({
   detailsHref?: LinkHref;
 }) {
   const t = useTranslations();
+  const locale = useLocale();
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const opensDetail = Boolean(detailsHref && product.seriesDetail);
 
@@ -251,7 +252,7 @@ function ClassicSeriesModelCard({
 
         <div className="relative z-20 mt-auto border-t border-zinc-100 pt-8">
           <SeriesActionBar
-            buyUrl={getProductBuyUrl(product)}
+            buyUrl={getProductBuyUrl(product, locale)}
             specsPdfUrl={specsPdfUrl}
             specsPdfFilename={specsPdfFilename}
             specsPdfUrlEn={specsPdfUrlEn}

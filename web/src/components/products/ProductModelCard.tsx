@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import type { ComponentProps } from "react";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { getProductBuyUrl, type ProductModel } from "@/lib/products-catalog";
 
@@ -16,7 +16,8 @@ export function ProductModelCard({
   href?: LinkHref;
 }) {
   const t = useTranslations();
-  const buyUrl = getProductBuyUrl(product);
+  const locale = useLocale();
+  const buyUrl = getProductBuyUrl(product, locale);
 
   return (
     <article className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-zinc-100 bg-white shadow-sm transition hover:-translate-y-0.5 hover:shadow-md">

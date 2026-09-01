@@ -50,8 +50,8 @@ export function SeriesCard({
     ? "text-sm font-bold text-white"
     : "text-sm font-bold uppercase tracking-wide text-white";
   const actionsClass = stackedActions
-    ? "relative z-20 mt-8 flex flex-col gap-3"
-    : "relative z-20 mt-8 flex flex-col gap-3 sm:flex-row";
+    ? "relative z-20 mt-auto flex flex-col gap-3 pt-8"
+    : "relative z-20 mt-auto flex flex-col gap-3 pt-8 sm:flex-row";
   const buttonLayoutClass = stackedActions
     ? "inline-flex w-full items-center justify-center"
     : "inline-flex flex-1 items-center justify-center";
@@ -102,7 +102,7 @@ export function SeriesCard({
 
         <div className={actionsClass}>
           <a
-            href={getSeriesBuyUrl(series)}
+            href={getSeriesBuyUrl(series, locale)}
             target="_blank"
             rel="noopener noreferrer"
             className={`${buttonLayoutClass} rounded-xl bg-noble-orange px-4 py-3 ${buttonTextClass} transition hover:bg-noble-orange/90`}

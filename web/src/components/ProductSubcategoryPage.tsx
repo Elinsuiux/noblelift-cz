@@ -1,3 +1,5 @@
+"use client";
+
 import { useLocale, useTranslations } from "next-intl";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
@@ -102,7 +104,7 @@ export function ProductSubcategoryPage({
                       productLineKey: subcategory.productLineKey,
                       descKey: subcategory.descKey,
                     }}
-                    buyUrl={getSubcategoryBuyUrl(subcategory)}
+                    buyUrl={getSubcategoryBuyUrl(subcategory, locale)}
                     specsPdfUrl={subcategory.detail!.specsPdfUrl}
                     specsPdfFilename={subcategory.detail!.specsPdfFilename}
                     specsPdfUrlEn={subcategory.detail!.specsPdfUrlEn}
