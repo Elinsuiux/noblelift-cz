@@ -7,6 +7,7 @@ import { VZV_SHOP_URL } from "@/lib/products-catalog";
 export function SeriesActionBar({
   buyUrl,
   fixedShopHref,
+  inquiryProduct,
   specsPdfUrl,
   specsPdfFilename = "technicke-parametry.pdf",
   specsPdfUrlEn,
@@ -15,6 +16,7 @@ export function SeriesActionBar({
 }: {
   buyUrl?: string;
   fixedShopHref?: string;
+  inquiryProduct?: string;
   specsPdfUrl?: string;
   specsPdfFilename?: string;
   specsPdfUrlEn?: string;
@@ -55,12 +57,21 @@ export function SeriesActionBar({
           >
             {t("productsCatalog.modelDetails.buyShopCta")}
           </a>
-          <Link
-            href="/contact"
-            className="inline-flex flex-1 items-center justify-center rounded-full bg-zinc-900 px-6 py-3 text-sm font-bold text-white transition hover:bg-zinc-800"
-          >
-            {t("productsCatalog.subcategory.contactCta")}
-          </Link>
+          {inquiryProduct ? (
+            <a
+              href={`/${locale}/contact?model=${encodeURIComponent(inquiryProduct)}#kontaktni-formular`}
+              className="inline-flex flex-1 items-center justify-center rounded-full bg-zinc-900 px-6 py-3 text-sm font-bold text-white transition hover:bg-zinc-800"
+            >
+              {t("productsCatalog.subcategory.contactCta")}
+            </a>
+          ) : (
+            <Link
+              href="/contact"
+              className="inline-flex flex-1 items-center justify-center rounded-full bg-zinc-900 px-6 py-3 text-sm font-bold text-white transition hover:bg-zinc-800"
+            >
+              {t("productsCatalog.subcategory.contactCta")}
+            </Link>
+          )}
         </div>
         {specsDownloadUrl ? (
           <a

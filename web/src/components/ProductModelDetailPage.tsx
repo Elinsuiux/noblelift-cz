@@ -9,7 +9,6 @@ import { ProductModelGallery } from "@/components/products/ProductModelGallery";
 import { ProductModelSpecTable } from "@/components/products/ProductModelSpecTable";
 import { SeriesActionBar } from "@/components/products/SeriesActionBar";
 import { SeriesDetailSection } from "@/components/products/SeriesDetailSection";
-import { Link } from "@/i18n/navigation";
 import {
   getCategorySlug,
   getProductBuyUrl,
@@ -128,6 +127,7 @@ export function ProductModelDetailPage({
                     <div className="mt-8 border-t border-zinc-100 pt-8">
                       <SeriesActionBar
                         buyUrl={buyUrl}
+                        inquiryProduct={product.model}
                         specsPdfUrl={
                           seriesDetail.specsPdfUrl ??
                           product.specsPdfUrl ??
@@ -176,12 +176,12 @@ export function ProductModelDetailPage({
                       >
                         {t("productsCatalog.modelDetails.buyCta")}
                       </a>
-                      <Link
-                        href="/contact"
+                      <a
+                        href={`/${locale}/contact?model=${encodeURIComponent(product.model)}#kontaktni-formular`}
                         className="inline-flex items-center justify-center rounded-full bg-zinc-900 px-6 py-3 text-sm font-bold text-white transition hover:bg-zinc-800"
                       >
                         {t("productsCatalog.subcategory.contactCta")}
-                      </Link>
+                      </a>
                     </div>
                     <p className="mt-4 text-xs leading-relaxed text-zinc-500">
                       {t("productsCatalog.modelDetails.buyNote")}

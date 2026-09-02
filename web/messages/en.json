@@ -352,6 +352,7 @@
     "headquarters": "Company headquarters",
     "formHeading": "Contact form",
     "messagePlaceholder": "I am interested in a quote for…",
+    "productInquiryMessage": "I am interested in more information about forklift model {model}",
     "showOnMap": "Show on map",
     "detailsTitle": "Contact details",
     "depotsHeading": "Warehouses",

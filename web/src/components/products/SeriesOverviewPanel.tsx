@@ -14,6 +14,7 @@ export function ProductOverviewPanel({
   overview,
   buyUrl,
   fixedShopHref,
+  inquiryProduct,
   specsPdfUrl,
   specsPdfFilename,
   specsPdfUrlEn,
@@ -22,12 +23,16 @@ export function ProductOverviewPanel({
   overview: ProductOverviewContent;
   buyUrl?: string;
   fixedShopHref?: string;
+  inquiryProduct?: string;
   specsPdfUrl?: string;
   specsPdfFilename?: string;
   specsPdfUrlEn?: string;
   specsPdfFilenameEn?: string;
 }) {
   const t = useTranslations();
+  const resolvedInquiryProduct =
+    inquiryProduct ??
+    (overview.modelRangeKey ? t(overview.modelRangeKey) : undefined);
 
   return (
     <div className="flex h-full flex-col justify-center rounded-2xl border border-zinc-200 bg-white p-8 shadow-sm md:p-10">
@@ -50,6 +55,7 @@ export function ProductOverviewPanel({
         <SeriesActionBar
           buyUrl={buyUrl}
           fixedShopHref={fixedShopHref}
+          inquiryProduct={resolvedInquiryProduct}
           specsPdfUrl={specsPdfUrl}
           specsPdfFilename={specsPdfFilename}
           specsPdfUrlEn={specsPdfUrlEn}

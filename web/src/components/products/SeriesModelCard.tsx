@@ -253,6 +253,7 @@ function ClassicSeriesModelCard({
         <div className="relative z-20 mt-auto border-t border-zinc-100 pt-8">
           <SeriesActionBar
             buyUrl={getProductBuyUrl(product, locale)}
+            inquiryProduct={product.model}
             specsPdfUrl={specsPdfUrl}
             specsPdfFilename={specsPdfFilename}
             specsPdfUrlEn={specsPdfUrlEn}

@@ -32,6 +32,7 @@ type ContactFormProps = {
   source?: ContactFormSource;
   messageRows?: number;
   messagePlaceholder?: string;
+  defaultMessage?: string;
   showCountry?: boolean;
   showPhone?: boolean;
   showOrCall?: boolean;
@@ -43,6 +44,7 @@ export function ContactForm({
   source = "contact",
   messageRows = 4,
   messagePlaceholder,
+  defaultMessage,
   showCountry = true,
   showPhone = true,
   showOrCall = false,
@@ -152,6 +154,7 @@ export function ContactForm({
         <textarea
           name="message"
           rows={messageRows}
+          defaultValue={defaultMessage}
           placeholder={messagePlaceholder ?? t("form.messagePlaceholder")}
           className={`${fieldClassName} resize-y`}
         />

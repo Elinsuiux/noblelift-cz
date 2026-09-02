@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Suspense } from "react";
 import { setRequestLocale } from "next-intl/server";
 import { ContactPage } from "@/components/ContactPage";
 import { getStaticMessage } from "@/lib/static-messages";
@@ -20,5 +21,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function Page({ params }: Props) {
   const { locale } = await params;
   setRequestLocale(locale);
-  return <ContactPage />;
+  return (
+    <Suspense fallback={null}>
+      <ContactPage />
+    </Suspense>
+  );
 }

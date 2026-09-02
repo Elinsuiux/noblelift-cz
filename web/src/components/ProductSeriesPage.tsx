@@ -60,6 +60,7 @@ function ProductSeriesOverview({
         <div className="mt-8 border-t border-zinc-100 pt-8">
           <SeriesActionBar
             buyUrl={getProductBuyUrl(product, locale)}
+            inquiryProduct={product.model}
             specsPdfUrl={specsPdfUrl}
             specsPdfFilename={specsPdfFilename}
             specsPdfUrlEn={specsPdfUrlEn}
