@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
+import { submitContactInquiry } from "@/lib/contact-inquiry-api";
 import {
-  sendContactFormEmails,
   type ContactFormPayload,
   type ContactFormSource,
 } from "@/lib/contact-form-email";
@@ -56,10 +56,19 @@ export async function POST(request: Request) {
   };
 
   try {
-    await sendContactFormEmails(payload);
-    return NextResponse.json({ ok: true });
+    const result = await submitContactInquiry(payload);
+
+    if (!result.success) {
+      console.error("Contact form inquiry rejected:", result.output);
+      return NextResponse.json(
+        { ok: false, output: result.output },
+        { status: 422 },
+      );
+    }
+
+    return NextResponse.json({ ok: true, output: result.output });
   } catch (error) {
-    console.error("Contact form email failed:", error);
-    return NextResponse.json({ error: "email_failed" }, { status: 500 });
+    console.error("Contact form inquiry failed:", error);
+    return NextResponse.json({ error: "submission_failed" }, { status: 500 });
   }
 }
