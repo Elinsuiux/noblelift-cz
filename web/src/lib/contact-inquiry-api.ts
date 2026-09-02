@@ -35,18 +35,27 @@ function parseVzvOutput(data: VzvInquiryResponse): string {
     return "";
   }
 
-  try {
-    const parsed = JSON.parse(data.result) as VzvInquiryResult;
-    return typeof parsed.vystup === "string" ? parsed.vystup.trim() : "";
-  } catch {
-    return data.result.trim();
+  const trimmed = data.result.trim();
+  if (!trimmed.startsWith("{")) {
+    return trimmed;
   }
+
+  try {
+    const parsed = JSON.parse(trimmed) as VzvInquiryResult;
+    return typeof parsed.vystup === "string" ? parsed.vystup.trim() : trimmed;
+  } catch {
+    return trimmed;
+  }
+}
+
+function isSuccessfulOutput(output: string): boolean {
+  return output.trim().toUpperCase() === "OK";
 }
 
 export async function submitContactInquiry(
   payload: ContactFormPayload,
 ): Promise<ContactInquiryResult> {
-  const body = {
+  const body = new URLSearchParams({
     name: payload.name,
     company: payload.company,
     email: payload.email,
@@ -55,12 +64,12 @@ export async function submitContactInquiry(
     message: payload.message ?? "",
     locale: payload.locale,
     source: payload.source,
-  };
+  });
 
   const response = await fetch(getInquiryUrl(), {
     method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(body),
+    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    body: body.toString(),
   });
 
   if (!response.ok) {
@@ -73,6 +82,6 @@ export async function submitContactInquiry(
 
   return {
     output,
-    success: output === "OK",
+    success: isSuccessfulOutput(output),
   };
 }
