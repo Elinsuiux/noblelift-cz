@@ -5,6 +5,10 @@ import { NextIntlClientProvider } from "next-intl";
 import { setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { CookieConsent } from "@/components/CookieConsent";
+import {
+  GoogleTagManagerHead,
+  GoogleTagManagerNoscript,
+} from "@/components/GoogleTagManager";
 import { routing } from "@/i18n/routing";
 import { getStaticMessage, getStaticMessages } from "@/lib/static-messages";
 import { seoDescription } from "@/lib/seo";
@@ -45,7 +49,11 @@ export default function LocaleLayout({ children, params }: Props) {
 
   return (
     <html lang={locale === "cz" ? "cs" : locale} className={`${inter.variable} h-full antialiased`}>
+      <head>
+        <GoogleTagManagerHead />
+      </head>
       <body className="min-h-full">
+        <GoogleTagManagerNoscript />
         <NextIntlClientProvider locale={locale} messages={messages}>
           {children}
           <CookieConsent />

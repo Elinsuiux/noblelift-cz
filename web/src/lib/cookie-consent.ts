@@ -1,3 +1,5 @@
+import { updateGoogleConsent } from "@/lib/google-tags";
+
 export const CONSENT_STORAGE_KEY = "noblelift-cookie-consent";
 export const CONSENT_VERSION = 1;
 
@@ -65,6 +67,7 @@ export function readCookiePreferences(): CookiePreferences | null {
 
 export function storeCookiePreferences(preferences: CookiePreferences) {
   window.localStorage.setItem(CONSENT_STORAGE_KEY, JSON.stringify(preferences));
+  updateGoogleConsent(preferences);
   window.dispatchEvent(
     new CustomEvent(COOKIE_CONSENT_EVENT, {
       detail: preferences,
