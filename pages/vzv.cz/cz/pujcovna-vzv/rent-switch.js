@@ -57,8 +57,16 @@
   });
 
   const here = location.pathname.replace(/\/index\.html$/, "/");
+  const hash = location.hash.replace("#", "");
   document.querySelectorAll(".h-dropdown-menu--pronajem a[href], #mobile-menu-3 a[href]").forEach((link) => {
     const path = link.pathname.replace(/\/index\.html$/, "/");
-    if (path === here) link.classList.add("is-current");
+    if (path !== here) return;
+    const linkHash = link.hash.replace("#", "");
+    if (linkHash) {
+      if (hash === linkHash) link.classList.add("is-current");
+      return;
+    }
+    if (hash === "sluzby") return;
+    link.classList.add("is-current");
   });
 })();

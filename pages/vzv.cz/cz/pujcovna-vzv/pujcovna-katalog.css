@@ -199,7 +199,7 @@
 /* Pronájem header dropdown */
 .h-dropdown-menu--pronajem {
   min-width: 360px;
-  max-height: min(70vh, 640px);
+  max-height: min(80vh, 760px);
   overflow-y: auto;
 }
 
@@ -213,6 +213,20 @@
   border-bottom: 1px solid #ececec;
   margin-bottom: 6px;
   padding-bottom: 6px;
+}
+
+.h-dropdown-menu--pronajem > li.pujcovna-nav-split,
+#mobile-menu-3 > li.pujcovna-nav-split {
+  border-top: 1px solid #ececec;
+  margin-top: 6px;
+  padding-top: 6px;
+}
+
+.h-dropdown-menu--pronajem .pujcovna-nav-icon,
+#mobile-menu-3 .pujcovna-nav-icon {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
 }
 
 .h-dropdown-menu--pronajem .pujcovna-nav-thumb,

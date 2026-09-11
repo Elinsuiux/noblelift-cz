@@ -756,6 +756,20 @@ function photoPickCard(category) {
 
 const RENT_SWITCH_SRC = `${SITE_PUJCOVNA}/rent-switch.js`;
 const ALL_MACHINES_ICON = `<svg width="26" height="20" viewBox="0 0 26 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect x="1" y="1" width="7" height="7" rx="1" fill="#14aa00"/><rect x="10" y="1" width="7" height="7" rx="1" fill="#14aa00"/><rect x="19" y="1" width="6" height="7" rx="1" fill="#14aa00"/><rect x="1" y="12" width="7" height="7" rx="1" fill="#14aa00"/><rect x="10" y="12" width="7" height="7" rx="1" fill="#14aa00"/><rect x="19" y="12" width="6" height="7" rx="1" fill="#14aa00"/></svg>`;
+const SERVICE_NAV_ICON = `<svg class="pujcovna-nav-icon" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12.4 2.3a3.1 3.1 0 0 0-4.2 4.2L3.1 11.6V14h2.4l5.1-5.1a3.1 3.1 0 0 0 4.2-4.2L12.6 6.9 11.1 5.4 13.3 3.2Z" stroke="#14aa00" stroke-width="1.35" stroke-linejoin="round"/></svg>`;
+const RENTAL_SERVICES = [
+  { title: "Pronájem VZV s obsluhou", href: "https://www.vzvrent.cz/sluzby-pronajmu/pronajem-vzv-s-obsluhou" },
+  { title: "Doprava", href: "https://www.vzvrent.cz/sluzby-pronajmu/doprava" },
+  { title: "Servis", href: "https://www.vzvrent.cz/sluzby-pronajmu/servis" },
+  { title: "Dlouhodobý pronájem", href: "https://www.vzvrent.cz/sluzby-pronajmu/dlouhodoby-pronajem" },
+  { title: "Eventy", href: "https://www.vzvrent.cz/sluzby-pronajmu" },
+  { title: "Speciální manipulační technika", href: "https://www.vzvrent.cz/sluzby-pronajmu" },
+  { title: "Manipulační technika pro eshopy", href: "https://www.vzvrent.cz/sluzby-pronajmu" },
+  { title: "Terénní manipulační technika", href: "https://www.vzvrent.cz/sluzby-pronajmu" },
+  { title: "Stěhovací technika", href: "https://www.vzvrent.cz/sluzby-pronajmu" },
+];
+const DESKTOP_PRONAJEM_RE =
+  /<li class="nav-item dropdown h-dropdown">\s*<a href="[^"]*\/pujcovna-vzv\/index\.html"[\s\S]*?h-dropdown-menu--pronajem[\s\S]*?<\/ul>\s*<\/li>/g;
 
 const DESKTOP_PRONAJEM_OLD = `                                        <li class="nav-item dropdown h-dropdown">
                                             <a href="/pages/vzv.cz/cz/pujcovna-vzv/index.html" class="fs-6 nav-link text-uppercase
@@ -766,6 +780,24 @@ const DESKTOP_PRONAJEM_OLD = `                                        <li class=
 
 const MOBILE_MENU_RE =
   /(<ul class="collapse list-unstyled ps-3"\s+id="mobile-menu-3">)[\s\S]*?(<\/ul>)/;
+
+function desktopServiceItems() {
+  const all = `                                                    <li class="pujcovna-nav-split">
+                                                        <a class="dropdown-item ps-3" href="${SITE_PUJCOVNA}/index.html#sluzby">
+                                                                                                                            ${SERVICE_NAV_ICON}
+                                                                                                                        <span>Všechny služby</span>
+                                                        </a>
+                                                    </li>`;
+  const items = RENTAL_SERVICES.map(
+    (service) => `                                                                                                            <li>
+                                                            <a class="dropdown-item" href="${service.href}" target="_blank" rel="noopener noreferrer">
+                                                                                                                                    ${SERVICE_NAV_ICON}
+                                                                                                                                <span>${escapeHtml(service.title)}</span>
+                                                            </a>
+                                                        </li>`,
+  );
+  return [all, ...items].join("\n");
+}
 
 function desktopPronajemNav() {
   const items = [
@@ -783,6 +815,7 @@ function desktopPronajemNav() {
                                                             </a>
                                                         </li>`,
     ),
+    desktopServiceItems(),
   ];
   return `                                        <li class="nav-item dropdown h-dropdown">
                                             <a href="${SITE_PUJCOVNA}/index.html" class="fs-6 nav-link text-uppercase
@@ -813,17 +846,33 @@ function mobilePronajemNavInner() {
                                         </a>
                                     </li>`,
   ).join("\n");
-  return `\n${all}\n${cats}\n                                `;
-}
-
-function mobileMenuHasCatalogs(html) {
-  const match = html.match(/id="mobile-menu-3">([\s\S]*?)<\/ul>/);
-  return Boolean(match && match[1].includes("Všechny stroje"));
+  const allServices = `                                    <li class="pujcovna-nav-split">
+                                        <a href="${SITE_PUJCOVNA}/index.html#sluzby"
+                                           class="d-flex gap-2 text-white-50 py-2 text-decoration-none text-uppercase">
+                                                                                            ${SERVICE_NAV_ICON}
+                                                                                        Všechny služby
+                                        </a>
+                                    </li>`;
+  const services = RENTAL_SERVICES.map(
+    (service) => `                                    <li>
+                                        <a href="${service.href}"
+                                           class="d-flex gap-2 text-white-50 py-2 text-decoration-none text-uppercase"
+                                           target="_blank" rel="noopener noreferrer">
+                                                                                            ${SERVICE_NAV_ICON}
+                                                                                        ${escapeHtml(service.title)}
+                                        </a>
+                                    </li>`,
+  ).join("\n");
+  return `\n${all}\n${cats}\n${allServices}\n${services}\n                                `;
 }
 
 function patchPronajemNav(html) {
   let out = html;
-  if (!out.includes("h-dropdown-menu--pronajem")) {
+  if (out.includes("h-dropdown-menu--pronajem")) {
+    const next = out.replace(DESKTOP_PRONAJEM_RE, desktopPronajemNav());
+    if (next === out) throw new Error("Could not replace existing Pronájem dropdown");
+    out = next;
+  } else {
     if (!out.includes(DESKTOP_PRONAJEM_OLD)) {
       throw new Error("Could not find desktop Pronájem nav item to patch");
     }
@@ -832,12 +881,9 @@ function patchPronajemNav(html) {
   if (!out.includes('id="mobile-menu-3"')) {
     throw new Error("Could not find mobile Pronájem menu");
   }
-  if (!mobileMenuHasCatalogs(out)) {
-    const next = out.replace(MOBILE_MENU_RE, `$1${mobilePronajemNavInner()}$2`);
-    if (next === out) throw new Error("Could not patch mobile Pronájem menu");
-    out = next;
-  }
-  return out;
+  const next = out.replace(MOBILE_MENU_RE, `$1${mobilePronajemNavInner()}$2`);
+  if (next === out) throw new Error("Could not patch mobile Pronájem menu");
+  return next;
 }
 
 function patchRentSwitchSrc(html) {
@@ -891,19 +937,18 @@ function patchHubSwitchUx(html) {
     );
     panel = panel.replace(
       /<span class="pick-name">([^<]*)<\/span>\s*<span class="pick-chevron" aria-hidden="true"><\/span>/g,
-      `<span class="pick-copy">
-            <span class="pick-name">$1</span>
-            <span class="pick-meta">Otevře se na vzvrent.cz</span>
-          </span>`,
-    );
-    panel = panel.replaceAll(
-      'target="_blank" rel="noopener noreferrer"',
-      'target="_blank" rel="noopener noreferrer" title="Otevře se na vzvrent.cz"',
+      `<span class="pick-name">$1</span>`,
     );
     if (!panel.includes("pick-card--icon") || panel.includes("pick-chevron")) {
       throw new Error("Could not restyle Služby hub tiles");
     }
   }
+  panel = panel.replace(/\s*<span class="pick-meta">Otevře se na vzvrent\.cz<\/span>/g, "");
+  panel = panel.replace(/ title="Otevře se na vzvrent\.cz"/g, "");
+  panel = panel.replace(
+    /<span class="pick-copy">\s*<span class="pick-name">([^<]*)<\/span>\s*<\/span>/g,
+    `<span class="pick-name">$1</span>`,
+  );
   return html.slice(0, start) + panel + html.slice(end);
 }
 
