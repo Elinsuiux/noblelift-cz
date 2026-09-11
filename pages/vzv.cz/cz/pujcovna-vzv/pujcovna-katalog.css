@@ -195,3 +195,32 @@
   text-transform: uppercase;
   padding: 12px 16px;
 }
+
+/* Pronájem header dropdown */
+.h-dropdown-menu--pronajem {
+  min-width: 360px;
+  max-height: min(70vh, 640px);
+  overflow-y: auto;
+}
+
+.h-dropdown-menu--pronajem .pujcovna-nav-thumb,
+#mobile-menu-3 .pujcovna-nav-thumb {
+  width: 40px;
+  height: 26px;
+  object-fit: cover;
+  flex-shrink: 0;
+  border-radius: 2px;
+  background: #f3f3f3;
+}
+
+#mobile-menu-3 .pujcovna-nav-thumb {
+  background: #1a1a1a;
+}
+
+.h-dropdown-menu--pronajem .dropdown-item.is-current {
+  color: #1cc705;
+}
+
+#mobile-menu-3 a.is-current {
+  color: #73fb61 !important;
+}

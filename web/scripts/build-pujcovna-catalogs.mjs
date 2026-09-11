@@ -8,6 +8,7 @@ import {
   cpSync,
   existsSync,
   mkdirSync,
+  readdirSync,
   readFileSync,
   writeFileSync,
 } from "node:fs";
@@ -753,6 +754,190 @@ function photoPickCard(category) {
         </a>`;
 }
 
+const RENT_SWITCH_SRC = `${SITE_PUJCOVNA}/rent-switch.js`;
+const ALL_MACHINES_ICON = `<svg width="26" height="20" viewBox="0 0 26 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect x="1" y="1" width="7" height="7" rx="1" fill="#14aa00"/><rect x="10" y="1" width="7" height="7" rx="1" fill="#14aa00"/><rect x="19" y="1" width="6" height="7" rx="1" fill="#14aa00"/><rect x="1" y="12" width="7" height="7" rx="1" fill="#14aa00"/><rect x="10" y="12" width="7" height="7" rx="1" fill="#14aa00"/><rect x="19" y="12" width="6" height="7" rx="1" fill="#14aa00"/></svg>`;
+
+const DESKTOP_PRONAJEM_OLD = `                                        <li class="nav-item dropdown h-dropdown">
+                                            <a href="/pages/vzv.cz/cz/pujcovna-vzv/index.html" class="fs-6 nav-link text-uppercase
+                                                                                            active-menu-dropdown">
+                                                Pronájem
+                                            </a>
+                                                                                    </li>`;
+
+const MOBILE_MENU_RE =
+  /(<ul class="collapse list-unstyled ps-3"\s+id="mobile-menu-3">)[\s\S]*?(<\/ul>)/;
+
+function desktopPronajemNav() {
+  const items = [
+    `                                                    <li>
+                                                        <a class="dropdown-item ps-3" href="${SITE_PUJCOVNA}/index.html">
+                                                                                                                            ${ALL_MACHINES_ICON}
+                                                                                                                        <span>Všechny stroje</span>
+                                                        </a>
+                                                    </li>`,
+    ...CATEGORIES.map(
+      (category) => `                                                                                                            <li>
+                                                            <a class="dropdown-item" href="${SITE_PUJCOVNA}/${category.slug}/index.html">
+                                                                                                                                    <img class="pujcovna-nav-thumb" src="${SITE_PUJCOVNA}/kategorie-foto/${category.slug}.jpg" alt="" width="40" height="26">
+                                                                                                                                <span>${escapeHtml(category.title)}</span>
+                                                            </a>
+                                                        </li>`,
+    ),
+  ];
+  return `                                        <li class="nav-item dropdown h-dropdown">
+                                            <a href="${SITE_PUJCOVNA}/index.html" class="fs-6 nav-link text-uppercase
+                                            h-has-submenu                                                active-menu-dropdown">
+                                                Pronájem
+                                            </a>
+                                                                                            <ul class="dropdown-menu h-dropdown-menu h-dropdown-menu--pronajem">
+
+${items.join("\n")}
+                                                                                                    </ul>
+                                                                                    </li>`;
+}
+
+function mobilePronajemNavInner() {
+  const all = `                                    <li>
+                                        <a href="${SITE_PUJCOVNA}/index.html"
+                                           class="d-flex gap-2 text-white-50 py-2 text-decoration-none text-uppercase">
+                                                                                            ${ALL_MACHINES_ICON}
+                                                                                        Všechny stroje
+                                        </a>
+                                    </li>`;
+  const cats = CATEGORIES.map(
+    (category) => `                                    <li>
+                                        <a href="${SITE_PUJCOVNA}/${category.slug}/index.html"
+                                           class="d-flex gap-2 text-white-50 py-2 text-decoration-none text-uppercase">
+                                                                                            <img class="pujcovna-nav-thumb" src="${SITE_PUJCOVNA}/kategorie-foto/${category.slug}.jpg" alt="" width="40" height="26">
+                                                                                        ${escapeHtml(category.title)}
+                                        </a>
+                                    </li>`,
+  ).join("\n");
+  return `\n${all}\n${cats}\n                                `;
+}
+
+function mobileMenuHasCatalogs(html) {
+  const match = html.match(/id="mobile-menu-3">([\s\S]*?)<\/ul>/);
+  return Boolean(match && match[1].includes("Všechny stroje"));
+}
+
+function patchPronajemNav(html) {
+  let out = html;
+  if (!out.includes("h-dropdown-menu--pronajem")) {
+    if (!out.includes(DESKTOP_PRONAJEM_OLD)) {
+      throw new Error("Could not find desktop Pronájem nav item to patch");
+    }
+    out = out.replaceAll(DESKTOP_PRONAJEM_OLD, desktopPronajemNav());
+  }
+  if (!out.includes('id="mobile-menu-3"')) {
+    throw new Error("Could not find mobile Pronájem menu");
+  }
+  if (!mobileMenuHasCatalogs(out)) {
+    const next = out.replace(MOBILE_MENU_RE, `$1${mobilePronajemNavInner()}$2`);
+    if (next === out) throw new Error("Could not patch mobile Pronájem menu");
+    out = next;
+  }
+  return out;
+}
+
+function patchRentSwitchSrc(html) {
+  return html.replaceAll(
+    `${ASSET_ORIGIN}/assets/vzv.cz/assets/js/rent-switch.js`,
+    RENT_SWITCH_SRC,
+  );
+}
+
+function patchHubSwitchUx(html) {
+  if (!html.includes('data-panel="sluzby"')) return html;
+
+  if (!html.includes('data-nudge-for="pronajem"')) {
+    const sluzbyNudge = `      <p class="rent-switch-nudge" data-nudge-for="sluzby">
+        <button type="button" class="rent-switch-nudge-btn" data-tab-jump="sluzby">
+          Potřebujete servis, dopravu nebo obsluhu?
+          <span class="rent-switch-nudge-cta">Přepněte na <strong>Služby</strong><span class="rent-switch-nudge-arrow" aria-hidden="true"> →</span></span>
+        </button>
+      </p>`;
+    const bothNudges = `${sluzbyNudge}
+      <p class="rent-switch-nudge" data-nudge-for="pronajem" hidden>
+        <button type="button" class="rent-switch-nudge-btn" data-tab-jump="pronajem">
+          Hledáte stroj k zapůjčení?
+          <span class="rent-switch-nudge-cta">Zpět na <strong>Pronájem</strong><span class="rent-switch-nudge-arrow" aria-hidden="true"> ←</span></span>
+        </button>
+      </p>`;
+    if (!html.includes(sluzbyNudge)) {
+      throw new Error("Could not find Služby tab nudge to patch");
+    }
+    html = html.replace(sluzbyNudge, bothNudges);
+  }
+
+  const marker = '<div class="rent-tab-panel" data-panel="sluzby"';
+  const start = html.indexOf(marker);
+  if (start < 0) return html;
+  const end = html.indexOf("\n    </section>", start);
+  if (end < 0) throw new Error("Could not find Služby panel end");
+  let panel = html.slice(start, end);
+  if (!panel.includes("pick-card--icon")) {
+    panel = panel.replaceAll(
+      'class="pick-card"',
+      'class="pick-card pick-card--photo pick-card--icon"',
+    );
+    panel = panel.replaceAll(
+      'class="pick-thumb pick-thumb--fill"',
+      'class="pick-thumb pick-thumb--photo pick-thumb--icon pick-thumb--fill"',
+    );
+    panel = panel.replaceAll(
+      'class="pick-thumb"',
+      'class="pick-thumb pick-thumb--photo pick-thumb--icon"',
+    );
+    panel = panel.replace(
+      /<span class="pick-name">([^<]*)<\/span>\s*<span class="pick-chevron" aria-hidden="true"><\/span>/g,
+      `<span class="pick-copy">
+            <span class="pick-name">$1</span>
+            <span class="pick-meta">Otevře se na vzvrent.cz</span>
+          </span>`,
+    );
+    panel = panel.replaceAll(
+      'target="_blank" rel="noopener noreferrer"',
+      'target="_blank" rel="noopener noreferrer" title="Otevře se na vzvrent.cz"',
+    );
+    if (!panel.includes("pick-card--icon") || panel.includes("pick-chevron")) {
+      throw new Error("Could not restyle Služby hub tiles");
+    }
+  }
+  return html.slice(0, start) + panel + html.slice(end);
+}
+
+function walkIndexHtml(dir, acc = []) {
+  for (const entry of readdirSync(dir, { withFileTypes: true })) {
+    const path = join(dir, entry.name);
+    if (entry.isDirectory()) walkIndexHtml(path, acc);
+    else if (entry.name === "index.html") acc.push(path);
+  }
+  return acc;
+}
+
+function patchPujcovnaHtmlFile(path) {
+  let html = readFileSync(path, "utf8");
+  html = patchPronajemNav(html);
+  html = patchRentSwitchSrc(html);
+  if (path.endsWith(`${join("pujcovna-vzv", "index.html")}`)) {
+    html = patchHubSwitchUx(html);
+  }
+  writeFileSync(path, html, "utf8");
+}
+
+function patchExistingPujcovnaUx() {
+  const roots = [outDir, dumpDir].filter((dir) => existsSync(dir));
+  let count = 0;
+  for (const root of roots) {
+    for (const path of walkIndexHtml(root)) {
+      patchPujcovnaHtmlFile(path);
+      count += 1;
+    }
+  }
+  return count;
+}
+
 function patchPujcovnaHub(html) {
   let out = html;
   for (const category of CATEGORIES) {
@@ -770,8 +955,8 @@ function patchPujcovnaHub(html) {
     re.lastIndex = 0;
     out = out.replace(re, photoPickCard(category));
   }
-  if (out.includes("Poptávka pronájmu:")) return out;
-  const prefill = `
+  if (!out.includes("Poptávka pronájmu:")) {
+    const prefill = `
 <script>
 (function () {
   try {
@@ -788,7 +973,12 @@ function patchPujcovnaHub(html) {
 })();
 </script>
 `;
-  return out.replace("</body>", `${prefill}\n</body>`);
+    out = out.replace("</body>", `${prefill}\n</body>`);
+  }
+  out = patchPronajemNav(out);
+  out = patchRentSwitchSrc(out);
+  out = patchHubSwitchUx(out);
+  return out;
 }
 
 function updatePageMeta(html, { title, description, ogTitle }) {
@@ -839,6 +1029,12 @@ function splitChrome(hubHtml) {
     head: hubHtml.slice(0, contentStart),
     foot: hubHtml.slice(containerIdx),
   };
+}
+
+if (process.argv.includes("--hub-ux-only")) {
+  const count = patchExistingPujcovnaUx();
+  console.log(`Patched Pronájem UX on ${count} pages`);
+  process.exit(0);
 }
 
 const hubPath = join(outDir, "index.html");
