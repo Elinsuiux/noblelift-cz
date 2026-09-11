@@ -1,0 +1,142 @@
+/* Teleskopické manipulátory — Nové vozíky catalog layout on the rental site */
+
+.rent-catalog {
+  background: #fafafa;
+  padding-bottom: 48px;
+}
+
+.rent-catalog .katalog-filtr .bg-light-dark {
+  background: #eee;
+}
+
+.rent-catalog .new-breadcrumb {
+  color: #666;
+  text-decoration: none;
+}
+
+.rent-catalog .new-breadcrumb:hover {
+  color: #0e6303;
+}
+
+.rent-catalog .new-breadcrumb.is-current {
+  color: #1a1a1a;
+  font-weight: 700;
+}
+
+.rent-catalog #popis.collapsed {
+  max-height: 4.6em;
+  overflow: hidden;
+}
+
+.rent-catalog #popis-vice-btn {
+  color: #0e6303;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.rent-catalog .category-box.is-active {
+  border-color: #73fb61;
+  box-shadow: 0 0 0 2px rgba(115, 251, 97, 0.45);
+}
+
+.rent-catalog .card-vzv {
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+}
+
+.rent-catalog .card-vzv .card-img {
+  position: relative;
+  width: 100%;
+  padding-top: 66.625%;
+  background-color: #f3f3f3;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  background-size: contain !important;
+}
+
+.rent-catalog .card-vzv:hover .card-img {
+  background-size: contain !important;
+}
+
+.rent-catalog .card-vzv .card-img a {
+  position: absolute;
+  inset: 0;
+}
+
+.rent-catalog .rent-sticker {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  z-index: 2;
+  background: #73fb61;
+  color: #000;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 4px 8px;
+}
+
+.rent-catalog .card-vzv-body {
+  padding: 16px 16px 8px;
+  flex: 1 1 auto;
+}
+
+.rent-catalog .card-vzv-title {
+  display: block;
+  color: #1a1a1a;
+  font-weight: 800;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 1.02rem;
+  line-height: 1.25;
+  margin-bottom: 12px;
+}
+
+.rent-catalog .card-vzv-title:hover {
+  color: #0e6303;
+}
+
+.rent-catalog .card-body-parametry {
+  font-size: 0.8rem;
+  color: #4d4d4d;
+}
+
+.rent-catalog .card-body-parametry .row + .row {
+  margin-top: 2px;
+}
+
+.rent-catalog .card-vzv-actions {
+  padding: 8px 16px 16px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.rent-catalog .card-vzv-actions .btn {
+  border-radius: 0;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.78rem;
+  padding: 10px 8px;
+}
+
+.rent-catalog #forklifts-empty {
+  display: none;
+}
+
+.rent-catalog .rent-result-count {
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.rent-catalog .form-check-input:checked {
+  background-color: #73fb61;
+  border-color: #0e6303;
+}
