@@ -1,0 +1,9 @@
+{
+  "redirects": [
+    {
+      "source": "/",
+      "destination": "/pages/vzv.cz/cz/index/index.html",
+      "permanent": false
+    }
+  ]
+}

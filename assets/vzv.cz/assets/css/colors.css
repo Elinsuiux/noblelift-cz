@@ -1,0 +1,329 @@
+:root {
+
+    --color-primary: #e50505;
+    --color-primary-light: #e23b30;
+    --color-primary-dark: #b80303;
+
+    --color-white: #ffffff;
+    --color-light: #ECECEC;
+    --color-light-dark: #f2f3f3;
+    --color-light-dark-dark: #898989;
+
+    --color-dark: #212529;
+    --color-dark-light: #464646;
+
+    --color-warning: #ff890a;
+    --color-sleva: #fef200;
+    --color-prodejni-akce: #ffc90d;
+
+    --color-call: #04af04;
+    --color-call-dark: #019301;
+
+    --color-vzv: #fe0000;
+    --color-vzvrent: #d3fa00;
+    --color-vzvrent-dark: #439807;
+    --color-vzvgroup: #ff5400;
+
+    --color-sticker-stav-1: #23b14d;
+    --color-sticker-stav-2: #df5e11;
+    --color-sticker-stav-3: #d1252a;
+    --color-sticker-nosnost: #23b14d;
+    --color-sticker-baterie-li-ion: #76cbff;
+
+    --color-skladem: #23b14d;
+    --color-na-objednavku: #eb9603;
+
+    --color-noblelift: #e05010;
+}
+
+.text-primary {
+    color: var(--color-primary) !important;
+}
+.text-noblelift {
+    color: var(--color-noblelift) !important;
+}
+
+a.text-primary:hover {
+    color: var(--color-primary-dark) !important;
+}
+
+.bg-primary {
+    background: var(--color-primary) !important;
+}
+
+.bg-primary-linear {
+    background: linear-gradient(0deg, rgba(118,40,168,1) 0%, rgba(168,109,206,1) 100%);
+}
+
+.bg-primary-light {
+    background: var(--color-primary-light);
+}
+
+.border-primary-light {
+    border-color: var(--color-primary-light) !important;
+}
+
+.bg-white {
+    background: var(--color-white) !important;
+}
+.text-white svg {
+    color: var(--color-white) !important;
+    fill: var(--color-white) !important;
+}
+
+.bg-light {
+    background: var(--color-light) !important;
+}
+
+.text-light svg {
+    color: var(--color-light) !important;
+    fill: var(--color-light) !important;
+}
+
+
+.bg-light-dark {
+    background: var(--color-light-dark) !important;
+}
+.text-light-dark svg {
+    color: var(--color-light-dark) !important;
+    fill: var(--color-light-dark) !important;
+}
+
+
+.bg-light-dark-dark {
+    background: var(--color-light-dark-dark) !important;
+}
+.text-light-dark-dark {
+    color: var(--color-light-dark-dark) !important;
+}
+
+.text-light-dark-dark svg {
+    color: var(--color-light-dark-dark) !important;
+    fill: var(--color-light-dark-dark) !important;
+}
+
+
+
+.text-primary svg{
+    color: var(--color-primary) !important;
+    fill: var(--color-primary) !important;
+}
+
+.border-primary {
+    border-color: var(--color-primary) !important;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+}
+
+.btn-primary:hover {
+    background-color: var(--color-primary-dark);
+    border-color: var(--color-primary-dark);
+}
+
+.btn-cart:hover {
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+}
+
+.btn-primary svg {
+    fill: #fff;
+}
+
+.text-sleva {
+    color: var(--color-sleva) !important;
+}
+.bg-sleva {
+    background: var(--color-sleva) !important;
+}
+
+.text-prodejni-akce {
+    color: var(--color-prodejni-akce) !important;
+}
+.bg-prodejni-akce {
+    background: var(--color-prodejni-akce) !important;
+}
+
+.text-stav-1 {
+    color: var(--color-sticker-stav-1) !important;
+}
+.text-stav-2 {
+    color: var(--color-sticker-stav-2) !important;
+}
+.text-stav-3 {
+    color: var(--color-sticker-stav-3) !important;
+}
+
+.sticker-stav-1 {
+    background: var(--color-sticker-stav-1);
+}
+.sticker-stav-1:before {
+    border-color: transparent var(--color-sticker-stav-1) transparent transparent;
+}
+
+.sticker-stav-2 {
+    background: var(--color-sticker-stav-2);
+}
+.sticker-stav-2:before {
+    border-color: transparent var(--color-sticker-stav-2) transparent transparent;
+}
+
+.sticker-stav-3 {
+    background: var(--color-sticker-stav-3);
+}
+.sticker-stav-3:before {
+    border-color: transparent var(--color-sticker-stav-3) transparent transparent;
+}
+
+.sticker-stav-4, .sticker-spatny-motor {
+    background: var(--color-primary);
+    color: var(--color-white) !important;
+}
+.sticker-stav-4:before, .sticker-spatny-motor:before {
+    border-color: transparent var(--color-primary) transparent transparent;
+}
+
+.sticker-stav-5 {
+    background: var(--color-sticker-stav-5);
+    color: var(--color-white) !important;
+}
+.sticker-stav-5:before {
+    border-color: transparent var(--color-sticker-stav-5) transparent transparent;
+}
+
+.sticker-sleva {
+    background: var(--color-dark);
+    color: var(--color-prodejni-akce) !important;
+}
+.sticker-sleva:before {
+    border-color: transparent var(--color-dark) transparent transparent;
+}
+
+.sticker-nosnost {
+    background: var(--color-sticker-nosnost);
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 0 5px;
+}
+.sticker-nosnost:before {
+    border-color: transparent var(--color-sticker-nosnost) transparent transparent;
+}
+.sticker-nosnost .svgNosnost {
+    width: 18px;
+    height: 18px;
+    fill: #fff;
+    flex-shrink: 0;
+}
+
+.sticker-baterie {
+    background: var(--color-primary-light);
+}
+.sticker-baterie:before {
+    border-color: transparent var(--color-primary-light) transparent transparent;
+}
+
+.sticker-baterie-li-ion, .sticker-baterie-agm {
+    background: var(--color-sticker-baterie-li-ion);
+}
+.sticker-baterie-li-ion:before, .sticker-baterie-agm:before {
+    border-color: transparent var(--color-sticker-baterie-li-ion) transparent transparent;
+}
+.sticker-nove-dovezeny {
+    background: var(--color-light);
+    color: var(--color-primary);
+}
+.sticker-nove-dovezeny:before {
+    border-color: transparent var(--color-light) transparent transparent;
+}
+.sticker-prodejni-akce {
+    background: var(--color-prodejni-akce);
+    color: var(--color-dark) !important;
+}
+.sticker-prodejni-akce:before {
+    border-color: transparent var(--color-prodejni-akce) transparent transparent;
+}
+
+.sticker-repas {
+    background: var(--color-primary-dark);
+    color: var(--color-white) !important;
+}
+
+.sticker-repas:before {
+    border-color: transparent var(--color-primary-dark) transparent transparent;
+}
+
+.sticker-premiovy {
+    background: var(--color-dark);
+    color: var(--color-white) !important;
+}
+.sticker-premiovy:before {
+    border-color: transparent var(--color-dark) transparent transparent;
+}
+
+.btn-outline-primary {
+    color: var(--color-primary) !important;
+    border-color: var(--color-primary) !important;
+}
+
+.btn-outline-primary:hover, .btn-outline-primary:active, .btn-outline-primary:focus  {
+    color: var(--color-white) !important;
+    background-color: var(--color-primary) !important;
+    border-color: var(--color-primary) !important;
+}
+
+.text-dark svg {
+    color: var(--color-dark) !important;
+    fill: var(--color-dark) !important;
+}
+
+.btn-outline-dark:hover .text-dark svg {
+    color: var(--color-white) !important;
+    fill: var(--color-white) !important;
+}
+
+.btn-check:active+.btn-primary, .btn-check:checked+.btn-primary, .btn-primary.active, .btn-primary:active, .show>.btn-primary.dropdown-toggle {
+    color: #fff;
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+}
+
+.btn-check:focus+.btn-primary, .btn-primary:focus {
+    color: #fff;
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 0.25rem rgba(299,5,5,.5);
+}
+
+.page-item .page-link {
+    color: var(--color-primary);
+    background-color: var(--color-white);
+    border: 1px solid #dee2e6;
+}
+
+.page-item .page-link:hover {
+    color: var(--color-white);
+    background-color: var(--color-primary);
+    border: 1px solid #dee2e6;
+}
+
+.page-item .page-link.bg-primary
+{
+    color: var(--color-white);
+    background-color: var(--color-primary);
+    border: 1px solid #dee2e6;
+    /*transition: color .15sease-in-out, background-color .15sease-in-out, border-color .15sease-in-out, box-shadow .15sease-in-out;*/
+}
+
+.page-item .page-link-disabled:hover {
+    color: var(--color-dark);
+    background-color: var(--color-light);
+    border: 1px solid #dee2e6;
+    cursor: unset;
+}
+
+/* premiovy dark - white */
+/* nově dovzeno white - primary */
