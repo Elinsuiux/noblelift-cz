@@ -742,17 +742,33 @@ function renderCatalog(category, products) {
 </div>`;
 }
 
+function photoPickCard(category) {
+  const href = `${listingPath(category.slug)}/index.html`;
+  const img = `${SITE_PUJCOVNA}/kategorie-foto/${category.slug}.jpg`;
+  return `        <a class="pick-card pick-card--photo" href="${href}">
+          <span class="pick-thumb pick-thumb--photo" aria-hidden="true">
+            <img src="${img}" alt="">
+          </span>
+          <span class="pick-name">${escapeHtml(category.title)}</span>
+        </a>`;
+}
+
 function patchPujcovnaHub(html) {
   let out = html;
   for (const category of CATEGORIES) {
+    const hrefs = [
+      `https://www\\.vzvrent\\.cz/stroje-k-zapujceni/${category.slug}(?:\\?[^"]*)?`,
+      `${SITE_PUJCOVNA.replaceAll("/", "\\/")}/${category.slug}/index\\.html`,
+    ];
     const re = new RegExp(
-      `<a class="pick-card" href="https://www\\.vzvrent\\.cz/stroje-k-zapujceni/${category.slug}"[^>]*>`,
+      `<a class="pick-card(?: pick-card--photo)?" href="(?:${hrefs.join("|")})"[^>]*>[\\s\\S]*?</a>`,
       "g",
     );
-    out = out.replace(
-      re,
-      `<a class="pick-card" href="${listingPath(category.slug)}/index.html">`,
-    );
+    if (!re.test(out)) {
+      throw new Error(`Could not patch Pronájem card for ${category.slug}`);
+    }
+    re.lastIndex = 0;
+    out = out.replace(re, photoPickCard(category));
   }
   if (out.includes("Poptávka pronájmu:")) return out;
   const prefill = `
