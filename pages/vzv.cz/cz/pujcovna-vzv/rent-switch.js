@@ -3,6 +3,18 @@
     const tabs = root.querySelectorAll("[data-tab]");
     const panels = root.querySelectorAll("[data-panel]");
     const nudges = root.querySelectorAll("[data-nudge-for]");
+    const known = new Set([...tabs].map((tab) => tab.dataset.tab));
+
+    function tabFromLocation() {
+      const hash = location.hash.replace("#", "");
+      if (known.has(hash)) return hash;
+      return "pronajem";
+    }
+
+    function urlForTab(key) {
+      const base = `${location.pathname}${location.search}`;
+      return key === "pronajem" ? base : `${base}#${key}`;
+    }
 
     function showTab(key, { historyMode = false } = {}) {
       tabs.forEach((tab) => {
@@ -17,10 +29,11 @@
         nudge.hidden = nudge.dataset.nudgeFor === key;
       });
       if (historyMode && key) {
-        const next = `#${key}`;
-        if (location.hash !== next) {
-          if (historyMode === "push") history.pushState({ rentTab: key }, "", next);
-          else history.replaceState({ rentTab: key }, "", next);
+        const nextUrl = urlForTab(key);
+        const currentUrl = `${location.pathname}${location.search}${location.hash}`;
+        if (currentUrl !== nextUrl) {
+          if (historyMode === "push") history.pushState({ rentTab: key }, "", nextUrl);
+          else history.replaceState({ rentTab: key }, "", nextUrl);
         }
       }
     }
@@ -33,15 +46,10 @@
       btn.addEventListener("click", () => showTab(btn.dataset.tabJump, { historyMode: "push" }));
     });
 
-    window.addEventListener("hashchange", () => {
-      const hash = location.hash.replace("#", "");
-      const fromHash = [...tabs].find((tab) => tab.dataset.tab === hash);
-      if (fromHash) showTab(hash);
-    });
+    window.addEventListener("hashchange", () => showTab(tabFromLocation()));
+    window.addEventListener("popstate", () => showTab(tabFromLocation()));
 
-    const hash = location.hash.replace("#", "");
-    const fromHash = [...tabs].find((tab) => tab.dataset.tab === hash);
-    if (fromHash) showTab(hash);
+    if (location.hash) showTab(tabFromLocation());
     else {
       const active = [...tabs].find((tab) => tab.classList.contains("is-active"));
       if (active) showTab(active.dataset.tab);

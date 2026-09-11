@@ -203,6 +203,18 @@
   overflow-y: auto;
 }
 
+.h-dropdown-menu--pronajem .dropdown-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.h-dropdown-menu--pronajem > li:first-child {
+  border-bottom: 1px solid #ececec;
+  margin-bottom: 6px;
+  padding-bottom: 6px;
+}
+
 .h-dropdown-menu--pronajem .pujcovna-nav-thumb,
 #mobile-menu-3 .pujcovna-nav-thumb {
   width: 40px;
