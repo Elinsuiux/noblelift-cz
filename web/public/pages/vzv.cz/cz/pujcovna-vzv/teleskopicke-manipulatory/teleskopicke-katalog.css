@@ -140,3 +140,58 @@
   background-color: #73fb61;
   border-color: #0e6303;
 }
+
+.rent-detail-photo {
+  background: #f3f3f3;
+  border: 1px solid #e0e0e0;
+  padding: 16px;
+}
+
+.rent-detail-photo img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+.rent-spec {
+  background: #fff;
+  border: 1px solid #e6e6e6;
+  padding: 16px 12px;
+  text-align: center;
+  height: 100%;
+}
+
+.rent-spec-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #666;
+  margin-bottom: 6px;
+}
+
+.rent-spec-value {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: #1a1a1a;
+}
+
+.rent-detail-copy {
+  font-size: 0.95rem;
+  line-height: 1.55;
+  color: #333;
+  margin: 8px 0 20px;
+}
+
+.rent-detail-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.rent-detail-actions .btn {
+  border-radius: 0;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 12px 16px;
+}

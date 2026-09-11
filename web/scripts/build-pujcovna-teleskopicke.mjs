@@ -15,6 +15,9 @@ const tmpDir = "/tmp/vzv-pages";
 const outDir = join(webRoot, "public", "pages", "vzv.cz", "cz", "pujcovna-vzv");
 const listingDir = join(outDir, "teleskopicke-manipulatory");
 const SOURCE_URL = "https://www.vzvrent.cz/stroje-k-zapujceni/teleskopicke-manipulatory";
+const ASSET_ORIGIN = "https://temporary-rapid-breeze-8ofpwza.vercel.app";
+const SITE_PUJCOVNA = "/pages/vzv.cz/cz/pujcovna-vzv";
+const SITE_LISTING = `${SITE_PUJCOVNA}/teleskopicke-manipulatory`;
 
 function parseKgMm(value) {
   const n = parseInt(String(value || "").replace(/\s/g, ""), 10);
@@ -75,17 +78,31 @@ function parseProducts(html) {
   return products;
 }
 
-function nestRelativeUrls(html) {
-  return html.replace(
-    /\b(href|src|data-url)=(['"])(?!https?:|\/\/|mailto:|tel:|javascript:|#|data:)([^'"]+)\2/g,
-    (_full, attr, quote, url) => `${attr}=${quote}../${url}${quote}`,
-  );
+function localPath(product) {
+  return `${SITE_LISTING}/${product.id}/index.html`;
+}
+
+function poptatPath(product) {
+  return `${SITE_PUJCOVNA}/index.html?stroj=${encodeURIComponent(product.name)}#poptavka`;
+}
+
+function absolutizeChrome(html) {
+  return html
+    .replace(/(?:\.\.\/)+assets\//g, `${ASSET_ORIGIN}/assets/`)
+    .replace(/\b(href|src|data-url)=(['"])\.\.\/([^'"]+)\2/g, `$1=$2/pages/vzv.cz/cz/$3$2`)
+    .replace(/\bhref=(['"])index\.html\1/g, `href=$1${SITE_PUJCOVNA}/index.html$1`)
+    .replace(/\bhref=(['"])colors-green\.css\1/g, `href=$1${SITE_PUJCOVNA}/colors-green.css$1`)
+    .replace(/\bhref=(['"])pujcovna-proto\.css[^'"]*\1/g, `href=$1${SITE_PUJCOVNA}/pujcovna-proto.css$1`)
+    .replace(
+      /\bhref=(['"])teleskopicke-manipulatory\/index\.html\1/g,
+      `href=$1${SITE_LISTING}/index.html$1`,
+    );
 }
 
 function patchPujcovnaHub(html) {
   const linked = html.replace(
     /<a class="pick-card" href="https:\/\/www\.vzvrent\.cz\/stroje-k-zapujceni\/teleskopicke-manipulatory" target="_blank" rel="noopener noreferrer">/,
-    '<a class="pick-card" href="teleskopicke-manipulatory/index.html">',
+    `<a class="pick-card" href="${SITE_LISTING}/index.html">`,
   );
 
   const prefill = `
@@ -118,7 +135,8 @@ function renderCard(product) {
                             </div>`,
     )
     .join("");
-  const poptat = `../index.html?stroj=${encodeURIComponent(product.name)}#poptavka`;
+  const detail = localPath(product);
+  const poptat = poptatPath(product);
   const sticker = product.rotary
     ? '<span class="rent-sticker">Rotační</span>'
     : "";
@@ -133,18 +151,76 @@ function renderCard(product) {
                     <article class="card card-vzv">
                         <div class="card-img" style="background-image: url('${escapeHtml(product.img)}');">
                             ${sticker}
-                            <a href="${escapeHtml(product.href)}" target="_blank" rel="noopener noreferrer" title="Detail ${escapeHtml(product.name)}"></a>
+                            <a href="${detail}" title="Detail ${escapeHtml(product.name)}"></a>
                         </div>
                         <div class="card-vzv-body">
-                            <a class="card-vzv-title" href="${escapeHtml(product.href)}" target="_blank" rel="noopener noreferrer">${escapeHtml(product.name)}</a>
+                            <a class="card-vzv-title" href="${detail}">${escapeHtml(product.name)}</a>
                             <div class="card-body-parametry">${specRows}</div>
                         </div>
                         <div class="card-vzv-actions">
-                            <a class="btn btn-dark" href="${escapeHtml(product.href)}" target="_blank" rel="noopener noreferrer">Detail</a>
+                            <a class="btn btn-dark" href="${detail}">Detail</a>
                             <a class="btn btn-primary" href="${poptat}">Poptat</a>
                         </div>
                     </article>
                 </div>`;
+}
+
+function machineDescription(product) {
+  let html = `<p><strong>Teleskopický manipulátor ${escapeHtml(product.name)}</strong> umožňuje díky svému výsuvnému ramenu manipulovat s nákladem jak do výšky, tak i směrem dopředu. Stroj má pohon všech kol 4x4. Velká terénní kola pomáhají zdolávat nerovnosti a manipulátor se tak dostane i na hůře dostupná místa. Své uplatnění nejčastěji nachází ve stavebnictví a zemědělství.</p>
+<p>Manipulátor lze osadit přídavnými zařízeními jako jsou nosné vidle, jeřábový hák, radlice nebo montážní koš.</p>`;
+  if (product.rotary) {
+    html += `<p>Rotační manipulátor se liší od běžného teleskopického manipulátoru možností otáčení kabiny a teleskopického ramene o 360°. Získává tak vlastnosti jeřábu a větší variabilitu dosahu.</p>`;
+  }
+  return html;
+}
+
+function renderDetail(product) {
+  const specBlocks = ["Pohon", "Nosnost", "Výška zdvihu", "Průjezdní výška", "Hmotnost"]
+    .filter((key) => product.specs[key])
+    .map(
+      (key) => `<div class="col-6 col-md-4 mb-4">
+                        <div class="rent-spec">
+                            <div class="rent-spec-label">${escapeHtml(key)}</div>
+                            <div class="rent-spec-value">${escapeHtml(product.specs[key])}</div>
+                        </div>
+                    </div>`,
+    )
+    .join("");
+
+  return `<div class="content-body rent-catalog rent-detail">
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-12 col-xxl-10 px-md-5">
+                <div class="text-center mt-4">
+                    <h1 class="text-uppercase" id="nadpis">${escapeHtml(product.name)}</h1>
+                </div>
+                <div class="mb-3 fs-7" id="breadcrumb">
+                    <a href="${SITE_PUJCOVNA}/index.html" class="new-breadcrumb">Pronájem</a>
+                    <span class="new-breadcrumb"> / </span>
+                    <a href="${SITE_LISTING}/index.html" class="new-breadcrumb">Teleskopické manipulátory</a>
+                    <span class="new-breadcrumb"> / </span>
+                    <span class="new-breadcrumb is-current">${escapeHtml(product.name)}</span>
+                </div>
+                <hr />
+                <div class="row g-4 align-items-start pb-5">
+                    <div class="col-12 col-lg-6">
+                        <div class="rent-detail-photo">
+                            <img src="${escapeHtml(product.img)}" alt="${escapeHtml(product.name)}">
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-6">
+                        <div class="row">${specBlocks}</div>
+                        <div class="rent-detail-copy">${machineDescription(product)}</div>
+                        <div class="rent-detail-actions">
+                            <a class="btn btn-dark" href="${SITE_LISTING}/index.html">Zpět na výpis</a>
+                            <a class="btn btn-primary" href="${poptatPath(product)}">Poptat</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>`;
 }
 
 function renderCatalog(products) {
@@ -278,7 +354,7 @@ function renderCatalog(products) {
                         <a id="popis-vice-btn" href="javascript:void(0)">Číst dále</a>
                     </div>
                     <div class="d-md-none px-3 mt-2 mb-3 col-12 fs-7" id="breadcrumb-mobile">
-                        <a href="../index.html" class="new-breadcrumb">Pronájem</a>
+                        <a href="${SITE_PUJCOVNA}/index.html" class="new-breadcrumb">Pronájem</a>
                         <span class="new-breadcrumb"> / </span>
                         <span class="new-breadcrumb is-current">Teleskopické manipulátory</span>
                     </div>
@@ -327,7 +403,7 @@ function renderCatalog(products) {
 
             <div class="row d-none d-md-flex justify-content-end">
                 <div class="col-12 col-md-10" id="breadcrumb">
-                    <a href="../index.html" class="new-breadcrumb">Pronájem</a>
+                    <a href="${SITE_PUJCOVNA}/index.html" class="new-breadcrumb">Pronájem</a>
                     <span class="new-breadcrumb"> / </span>
                     <span class="new-breadcrumb is-current">Teleskopické manipulátory</span>
                 </div>
@@ -353,7 +429,7 @@ function renderCatalog(products) {
                     </div>
                     <div class="row justify-content-center mt-5 mb-5">
                         <div class="col-12 col-md-8 col-xxl-3 d-grid gap-2 p-0">
-                            <a class="btn btn-primary btn-lg rounded-0" href="../index.html#poptavka">Kontaktní formulář</a>
+                            <a class="btn btn-primary btn-lg rounded-0" href="${SITE_PUJCOVNA}/index.html#poptavka">Kontaktní formulář</a>
                         </div>
                     </div>
                 </div>
@@ -499,27 +575,27 @@ async function loadSourceHtml(fileName, url) {
   }
 }
 
-function updateListingMeta(html) {
-  return html
-    .replace(
-      /<title>[^<]*<\/title>/,
-      "<title>Teleskopické manipulátory | VZV.cz</title>",
-    )
+function updatePageMeta(html, { title, description, ogTitle, extraCss }) {
+  let out = html
+    .replace(/<title>[^<]*<\/title>/, `<title>${title}</title>`)
     .replace(
       /<meta name="description" lang="cs" content="[^"]*" \/>/,
-      '<meta name="description" lang="cs" content="Pronájem teleskopických manipulátorů Manitou, JCB, Genie a Linde po celé ČR. Rotační i standardní stroje s vidlemi, lžící, hákem a montážním košem." />',
+      `<meta name="description" lang="cs" content="${description}" />`,
     )
     .replace(
       /<meta property="og:title" content="[^"]*"\/>/,
-      '<meta property="og:title" content="Teleskopické manipulátory"/>',
+      `<meta property="og:title" content="${ogTitle}"/>`,
     )
     .replace(
-      /<link rel="stylesheet" href="\.\.\/pujcovna-proto\.css[^"]*" \/>/,
-      '<link rel="stylesheet" href="teleskopicke-katalog.css" />',
+      /<link rel="stylesheet" href="[^"]*pujcovna-proto\.css[^"]*" \/>/,
+      `<link rel="stylesheet" href="${extraCss}" />`,
     );
+  return out;
 }
 
-const pujcovna = patchPujcovnaHub(readFileSync(join(tmpDir, "pujcovna.html"), "utf8"));
+const pujcovna = absolutizeChrome(
+  patchPujcovnaHub(readFileSync(join(tmpDir, "pujcovna.html"), "utf8")),
+);
 const vzvrentHtml = await loadSourceHtml("vzvrent-tele.html", SOURCE_URL);
 const products = parseProducts(vzvrentHtml);
 if (products.length < 8) {
@@ -539,10 +615,34 @@ if (contentStart < 0 || containerIdx < 0) {
   throw new Error("Could not split pujcovna chrome from content");
 }
 
-const chromeHead = nestRelativeUrls(pujcovna.slice(0, contentStart));
-const chromeFoot = nestRelativeUrls(pujcovna.slice(containerIdx));
-const listing = updateListingMeta(`${chromeHead}${renderCatalog(products)}${chromeFoot}`);
+const chromeHead = pujcovna.slice(0, contentStart);
+const chromeFoot = pujcovna.slice(containerIdx);
+const catalogCss = `${SITE_LISTING}/teleskopicke-katalog.css`;
+const listing = updatePageMeta(`${chromeHead}${renderCatalog(products)}${chromeFoot}`, {
+  title: "Teleskopické manipulátory | VZV.cz",
+  description:
+    "Pronájem teleskopických manipulátorů Manitou, JCB, Genie a Linde po celé ČR. Rotační i standardní stroje s vidlemi, lžící, hákem a montážním košem.",
+  ogTitle: "Teleskopické manipulátory",
+  extraCss: catalogCss,
+});
 writeFileSync(join(listingDir, "index.html"), listing, "utf8");
 
-console.log(`Wrote ${products.length} machines to ${join(listingDir, "index.html")}`);
+for (const product of products) {
+  const dir = join(listingDir, product.id);
+  mkdirSync(dir, { recursive: true });
+  const detail = updatePageMeta(`${chromeHead}${renderDetail(product)}${chromeFoot}`, {
+    title: `${product.name} | VZV.cz`,
+    description: `Pronájem ${product.name}. Teleskopický manipulátor k zapůjčení po celé ČR.`,
+    ogTitle: product.name,
+    extraCss: catalogCss,
+  });
+  writeFileSync(join(dir, "index.html"), detail, "utf8");
+}
+
+const outbound = listing.match(/https:\/\/www\.vzvrent\.cz\/stroje-k-zapujceni/g);
+if (outbound) {
+  throw new Error(`Listing still links out to vzvrent catalog (${outbound.length} hits)`);
+}
+
+console.log(`Wrote listing + ${products.length} on-site detail pages`);
 console.log(`Patched hub ${join(outDir, "index.html")}`);
