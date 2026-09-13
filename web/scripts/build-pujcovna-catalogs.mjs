@@ -792,6 +792,7 @@ function renderTypePills(currentSlug) {
         <span class="rent-pills-label">Typ:</span>
         <div class="rent-pills-row">
           ${items.join("\n          ")}
+          <a class="rent-pills-nudge" href="${SITE_PUJCOVNA}/index.html#sluzby">Potřebujete servis, dopravu nebo obsluhu? Přepněte na <strong>Služby</strong> <span aria-hidden="true">→</span></a>
         </div>
       </nav>`;
 }
