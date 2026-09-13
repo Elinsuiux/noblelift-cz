@@ -757,17 +757,6 @@ function photoPickCard(category) {
 }
 
 const RENT_SWITCH_SRC = `${SITE_PUJCOVNA}/rent-switch.js`;
-const RENTAL_SERVICES = [
-  { title: "Pronájem VZV s obsluhou", href: "https://www.vzvrent.cz/sluzby-pronajmu/pronajem-vzv-s-obsluhou" },
-  { title: "Doprava", href: "https://www.vzvrent.cz/sluzby-pronajmu/doprava" },
-  { title: "Servis", href: "https://www.vzvrent.cz/sluzby-pronajmu/servis" },
-  { title: "Dlouhodobý pronájem", href: "https://www.vzvrent.cz/sluzby-pronajmu/dlouhodoby-pronajem" },
-  { title: "Eventy", href: "https://www.vzvrent.cz/sluzby-pronajmu" },
-  { title: "Speciální manipulační technika", href: "https://www.vzvrent.cz/sluzby-pronajmu" },
-  { title: "Manipulační technika pro eshopy", href: "https://www.vzvrent.cz/sluzby-pronajmu" },
-  { title: "Terénní manipulační technika", href: "https://www.vzvrent.cz/sluzby-pronajmu" },
-  { title: "Stěhovací technika", href: "https://www.vzvrent.cz/sluzby-pronajmu" },
-];
 const DESKTOP_PRONAJEM_RE =
   /<li class="nav-item dropdown h-dropdown">\s*<a href="[^"]*\/pujcovna-vzv\/index\.html"[\s\S]*?h-dropdown-menu--pronajem[\s\S]*?<\/ul>\s*<\/li>/g;
 
@@ -807,19 +796,6 @@ function renderTypePills(currentSlug) {
       </nav>`;
 }
 
-function renderServicePills() {
-  const items = RENTAL_SERVICES.map(
-    (service) =>
-      `<a class="rent-pill" href="${service.href}" target="_blank" rel="noopener noreferrer">${escapeHtml(service.title)}</a>`,
-  );
-  return `<nav class="rent-pills" aria-label="Služby">
-        <span class="rent-pills-label">Služba:</span>
-        <div class="rent-pills-row">
-          ${items.join("\n          ")}
-        </div>
-      </nav>`;
-}
-
 function currentCategorySlug(filePath) {
   const rel = filePath.replaceAll("\\", "/");
   for (const category of CATEGORIES) {
@@ -844,20 +820,13 @@ function patchPronajemNav(html) {
   return out;
 }
 
-function upsertBeforePickGrid(html, panelKey, pillsHtml) {
-  const re = new RegExp(
-    `(<div class="rent-tab-panel" data-panel="${panelKey}"[^>]*>)(?:\\s*<nav class="rent-pills"[\\s\\S]*?<\\/nav>)?\\s*<div class="pick-grid">`,
-  );
-  const next = html.replace(re, `$1\n        ${pillsHtml}\n        <div class="pick-grid">`);
-  if (next === html) throw new Error(`Could not insert ${panelKey} pills`);
-  return next;
-}
-
 function patchHubPills(html) {
   if (!html.includes('data-panel="pronajem"')) return html;
-  html = upsertBeforePickGrid(html, "pronajem", renderTypePills(""));
-  html = upsertBeforePickGrid(html, "sluzby", renderServicePills());
-  return html;
+  const stripped = html.replace(
+    /(<div class="rent-tab-panel" data-panel="(?:pronajem|sluzby)"[^>]*>)\s*<nav class="rent-pills"[\s\S]*?<\/nav>\s*(<div class="pick-grid">)/g,
+    "$1\n        $2",
+  );
+  return stripped;
 }
 
 function patchListingPills(html, slug) {
