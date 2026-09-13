@@ -378,6 +378,7 @@ function renderDetail(category, product) {
                 <div class="text-center mt-4">
                     <h1 class="text-uppercase" id="nadpis">${escapeHtml(product.name)}</h1>
                 </div>
+                ${renderTypePills(category.slug)}
                 <div class="mb-3 fs-7" id="breadcrumb">
                     <a href="${SITE_PUJCOVNA}/index.html" class="new-breadcrumb">Pronájem</a>
                     <span class="new-breadcrumb"> / </span>
@@ -570,6 +571,7 @@ function renderCatalog(category, products) {
                         <p id="popis" class="collapsed">${escapeHtml(category.intro)}</p>
                         <a id="popis-vice-btn" href="javascript:void(0)">Číst dále</a>
                     </div>
+                    ${renderTypePills(category.slug)}
                     <div class="d-md-none px-3 mt-2 mb-3 col-12 fs-7" id="breadcrumb-mobile">
                         <a href="${SITE_PUJCOVNA}/index.html" class="new-breadcrumb">Pronájem</a>
                         <span class="new-breadcrumb"> / </span>
@@ -755,8 +757,6 @@ function photoPickCard(category) {
 }
 
 const RENT_SWITCH_SRC = `${SITE_PUJCOVNA}/rent-switch.js`;
-const ALL_MACHINES_ICON = `<svg width="26" height="20" viewBox="0 0 26 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect x="1" y="1" width="7" height="7" rx="1" fill="#14aa00"/><rect x="10" y="1" width="7" height="7" rx="1" fill="#14aa00"/><rect x="19" y="1" width="6" height="7" rx="1" fill="#14aa00"/><rect x="1" y="12" width="7" height="7" rx="1" fill="#14aa00"/><rect x="10" y="12" width="7" height="7" rx="1" fill="#14aa00"/><rect x="19" y="12" width="6" height="7" rx="1" fill="#14aa00"/></svg>`;
-const SERVICE_NAV_ICON = `<svg class="pujcovna-nav-icon" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12.4 2.3a3.1 3.1 0 0 0-4.2 4.2L3.1 11.6V14h2.4l5.1-5.1a3.1 3.1 0 0 0 4.2-4.2L12.6 6.9 11.1 5.4 13.3 3.2Z" stroke="#14aa00" stroke-width="1.35" stroke-linejoin="round"/></svg>`;
 const RENTAL_SERVICES = [
   { title: "Pronájem VZV s obsluhou", href: "https://www.vzvrent.cz/sluzby-pronajmu/pronajem-vzv-s-obsluhou" },
   { title: "Doprava", href: "https://www.vzvrent.cz/sluzby-pronajmu/doprava" },
@@ -771,7 +771,7 @@ const RENTAL_SERVICES = [
 const DESKTOP_PRONAJEM_RE =
   /<li class="nav-item dropdown h-dropdown">\s*<a href="[^"]*\/pujcovna-vzv\/index\.html"[\s\S]*?h-dropdown-menu--pronajem[\s\S]*?<\/ul>\s*<\/li>/g;
 
-const DESKTOP_PRONAJEM_OLD = `                                        <li class="nav-item dropdown h-dropdown">
+const DESKTOP_PRONAJEM_PLAIN = `                                        <li class="nav-item dropdown h-dropdown">
                                             <a href="/pages/vzv.cz/cz/pujcovna-vzv/index.html" class="fs-6 nav-link text-uppercase
                                                                                             active-menu-dropdown">
                                                 Pronájem
@@ -781,109 +781,123 @@ const DESKTOP_PRONAJEM_OLD = `                                        <li class=
 const MOBILE_MENU_RE =
   /(<ul class="collapse list-unstyled ps-3"\s+id="mobile-menu-3">)[\s\S]*?(<\/ul>)/;
 
-function desktopServiceItems() {
-  const all = `                                                    <li class="pujcovna-nav-split">
-                                                        <a class="dropdown-item ps-3" href="${SITE_PUJCOVNA}/index.html#sluzby">
-                                                                                                                            ${SERVICE_NAV_ICON}
-                                                                                                                        <span>Všechny služby</span>
-                                                        </a>
-                                                    </li>`;
-  const items = RENTAL_SERVICES.map(
-    (service) => `                                                                                                            <li>
-                                                            <a class="dropdown-item" href="${service.href}" target="_blank" rel="noopener noreferrer">
-                                                                                                                                    ${SERVICE_NAV_ICON}
-                                                                                                                                <span>${escapeHtml(service.title)}</span>
-                                                            </a>
-                                                        </li>`,
-  );
-  return [all, ...items].join("\n");
-}
-
-function desktopPronajemNav() {
-  const items = [
-    `                                                    <li>
-                                                        <a class="dropdown-item ps-3" href="${SITE_PUJCOVNA}/index.html">
-                                                                                                                            ${ALL_MACHINES_ICON}
-                                                                                                                        <span>Všechny stroje</span>
-                                                        </a>
-                                                    </li>`,
-    ...CATEGORIES.map(
-      (category) => `                                                                                                            <li>
-                                                            <a class="dropdown-item" href="${SITE_PUJCOVNA}/${category.slug}/index.html">
-                                                                                                                                    <img class="pujcovna-nav-thumb" src="${SITE_PUJCOVNA}/kategorie-foto/${category.slug}.jpg" alt="" width="40" height="26">
-                                                                                                                                <span>${escapeHtml(category.title)}</span>
-                                                            </a>
-                                                        </li>`,
-    ),
-    desktopServiceItems(),
-  ];
-  return `                                        <li class="nav-item dropdown h-dropdown">
-                                            <a href="${SITE_PUJCOVNA}/index.html" class="fs-6 nav-link text-uppercase
-                                            h-has-submenu                                                active-menu-dropdown">
-                                                Pronájem
-                                            </a>
-                                                                                            <ul class="dropdown-menu h-dropdown-menu h-dropdown-menu--pronajem">
-
-${items.join("\n")}
-                                                                                                    </ul>
-                                                                                    </li>`;
-}
-
-function mobilePronajemNavInner() {
-  const all = `                                    <li>
+const MOBILE_PRONAJEM_SIMPLE = `
+                                    <li>
                                         <a href="${SITE_PUJCOVNA}/index.html"
                                            class="d-flex gap-2 text-white-50 py-2 text-decoration-none text-uppercase">
-                                                                                            ${ALL_MACHINES_ICON}
-                                                                                        Všechny stroje
+                                                                                        Pronájem
                                         </a>
-                                    </li>`;
-  const cats = CATEGORIES.map(
-    (category) => `                                    <li>
-                                        <a href="${SITE_PUJCOVNA}/${category.slug}/index.html"
-                                           class="d-flex gap-2 text-white-50 py-2 text-decoration-none text-uppercase">
-                                                                                            <img class="pujcovna-nav-thumb" src="${SITE_PUJCOVNA}/kategorie-foto/${category.slug}.jpg" alt="" width="40" height="26">
-                                                                                        ${escapeHtml(category.title)}
-                                        </a>
-                                    </li>`,
-  ).join("\n");
-  const allServices = `                                    <li class="pujcovna-nav-split">
-                                        <a href="${SITE_PUJCOVNA}/index.html#sluzby"
-                                           class="d-flex gap-2 text-white-50 py-2 text-decoration-none text-uppercase">
-                                                                                            ${SERVICE_NAV_ICON}
-                                                                                        Všechny služby
-                                        </a>
-                                    </li>`;
-  const services = RENTAL_SERVICES.map(
-    (service) => `                                    <li>
-                                        <a href="${service.href}"
-                                           class="d-flex gap-2 text-white-50 py-2 text-decoration-none text-uppercase"
-                                           target="_blank" rel="noopener noreferrer">
-                                                                                            ${SERVICE_NAV_ICON}
-                                                                                        ${escapeHtml(service.title)}
-                                        </a>
-                                    </li>`,
-  ).join("\n");
-  return `\n${all}\n${cats}\n${allServices}\n${services}\n                                `;
+                                    </li>
+                                `;
+
+function renderTypePills(currentSlug) {
+  const allCurrent = !currentSlug;
+  const items = [
+    `<a class="rent-pill${allCurrent ? " is-current" : ""}" href="${SITE_PUJCOVNA}/index.html">Všechny stroje</a>`,
+    ...CATEGORIES.map((category) => {
+      const current = category.slug === currentSlug;
+      return `<a class="rent-pill${current ? " is-current" : ""}" href="${SITE_PUJCOVNA}/${category.slug}/index.html">${escapeHtml(category.title)}</a>`;
+    }),
+  ];
+  return `<nav class="rent-pills" aria-label="Typ stroje">
+        <span class="rent-pills-label">Typ:</span>
+        <div class="rent-pills-row">
+          ${items.join("\n          ")}
+        </div>
+      </nav>`;
+}
+
+function renderServicePills() {
+  const items = RENTAL_SERVICES.map(
+    (service) =>
+      `<a class="rent-pill" href="${service.href}" target="_blank" rel="noopener noreferrer">${escapeHtml(service.title)}</a>`,
+  );
+  return `<nav class="rent-pills" aria-label="Služby">
+        <span class="rent-pills-label">Služba:</span>
+        <div class="rent-pills-row">
+          ${items.join("\n          ")}
+        </div>
+      </nav>`;
+}
+
+function currentCategorySlug(filePath) {
+  const rel = filePath.replaceAll("\\", "/");
+  for (const category of CATEGORIES) {
+    if (rel.includes(`/pujcovna-vzv/${category.slug}/`)) return category.slug;
+  }
+  return "";
 }
 
 function patchPronajemNav(html) {
   let out = html;
   if (out.includes("h-dropdown-menu--pronajem")) {
-    const next = out.replace(DESKTOP_PRONAJEM_RE, desktopPronajemNav());
-    if (next === out) throw new Error("Could not replace existing Pronájem dropdown");
+    const next = out.replace(DESKTOP_PRONAJEM_RE, DESKTOP_PRONAJEM_PLAIN);
+    if (next === out) throw new Error("Could not remove Pronájem dropdown");
     out = next;
-  } else {
-    if (!out.includes(DESKTOP_PRONAJEM_OLD)) {
-      throw new Error("Could not find desktop Pronájem nav item to patch");
-    }
-    out = out.replaceAll(DESKTOP_PRONAJEM_OLD, desktopPronajemNav());
   }
-  if (!out.includes('id="mobile-menu-3"')) {
-    throw new Error("Could not find mobile Pronájem menu");
+  const mobileMatch = out.match(/id="mobile-menu-3">([\s\S]*?)<\/ul>/);
+  if (mobileMatch && /Všechny stroje|Všechny služby/.test(mobileMatch[1])) {
+    const next = out.replace(MOBILE_MENU_RE, `$1${MOBILE_PRONAJEM_SIMPLE}$2`);
+    if (next === out) throw new Error("Could not restore mobile Pronájem menu");
+    out = next;
   }
-  const next = out.replace(MOBILE_MENU_RE, `$1${mobilePronajemNavInner()}$2`);
-  if (next === out) throw new Error("Could not patch mobile Pronájem menu");
+  return out;
+}
+
+function upsertBeforePickGrid(html, panelKey, pillsHtml) {
+  const re = new RegExp(
+    `(<div class="rent-tab-panel" data-panel="${panelKey}"[^>]*>)(?:\\s*<nav class="rent-pills"[\\s\\S]*?<\\/nav>)?\\s*<div class="pick-grid">`,
+  );
+  const next = html.replace(re, `$1\n        ${pillsHtml}\n        <div class="pick-grid">`);
+  if (next === html) throw new Error(`Could not insert ${panelKey} pills`);
   return next;
+}
+
+function patchHubPills(html) {
+  if (!html.includes('data-panel="pronajem"')) return html;
+  html = upsertBeforePickGrid(html, "pronajem", renderTypePills(""));
+  html = upsertBeforePickGrid(html, "sluzby", renderServicePills());
+  return html;
+}
+
+function patchListingPills(html, slug) {
+  if (!html.includes("katalog-polozky") || html.includes("rent-detail")) return html;
+  const pills = renderTypePills(slug);
+  if (/<nav class="rent-pills"[\s\S]*?<\/nav>/.test(html)) {
+    return html.replace(/<nav class="rent-pills"[\s\S]*?<\/nav>/, pills);
+  }
+  const afterIntro = `                        <a id="popis-vice-btn" href="javascript:void(0)">Číst dále</a>
+                    </div>
+                    ${pills}
+                    <div class="d-md-none px-3 mt-2 mb-3 col-12 fs-7" id="breadcrumb-mobile">`;
+  const needle = `                        <a id="popis-vice-btn" href="javascript:void(0)">Číst dále</a>
+                    </div>
+                    <div class="d-md-none px-3 mt-2 mb-3 col-12 fs-7" id="breadcrumb-mobile">`;
+  if (!html.includes(needle)) throw new Error("Could not find catalog listing to insert type pills");
+  return html.replace(needle, afterIntro);
+}
+
+function patchDetailPills(html, slug) {
+  if (!html.includes("rent-detail")) return html;
+  const pills = renderTypePills(slug);
+  if (/<nav class="rent-pills"[\s\S]*?<\/nav>/.test(html)) {
+    return html.replace(/<nav class="rent-pills"[\s\S]*?<\/nav>/, pills);
+  }
+  const re =
+    /(<div class="text-center mt-4">\s*<h1 class="text-uppercase" id="nadpis">[\s\S]*?<\/h1>\s*<\/div>)/;
+  const next = html.replace(re, `$1\n                ${pills}`);
+  if (next === html) throw new Error("Could not insert type pills on machine detail");
+  return next;
+}
+
+function patchPagePills(html, filePath) {
+  const slug = currentCategorySlug(filePath);
+  if (filePath.replaceAll("\\", "/").endsWith("/pujcovna-vzv/index.html")) {
+    return patchHubPills(html);
+  }
+  html = patchListingPills(html, slug);
+  html = patchDetailPills(html, slug);
+  return html;
 }
 
 function patchRentSwitchSrc(html) {
@@ -968,6 +982,7 @@ function patchPujcovnaHtmlFile(path) {
   if (path.endsWith(`${join("pujcovna-vzv", "index.html")}`)) {
     html = patchHubSwitchUx(html);
   }
+  html = patchPagePills(html, path);
   writeFileSync(path, html, "utf8");
 }
 
@@ -1023,6 +1038,7 @@ function patchPujcovnaHub(html) {
   out = patchPronajemNav(out);
   out = patchRentSwitchSrc(out);
   out = patchHubSwitchUx(out);
+  out = patchHubPills(out);
   return out;
 }
 
