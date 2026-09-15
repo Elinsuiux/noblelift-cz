@@ -269,7 +269,7 @@
 }
 
 /* -------------------------------------------------------------------------- */
-/* Rent switch / tabs — clear segmented control                               */
+/* Rent switch / tabs — light filter chips (not hero CTAs)                    */
 /* -------------------------------------------------------------------------- */
 
 .pujcovna-proto .rent-switch {
@@ -288,16 +288,18 @@
 }
 
 .pujcovna-proto .rent-tabs {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 6px;
-  max-width: 480px;
-  margin: 0 auto 12px;
-  padding: 6px;
-  border: 1px solid rgba(0, 0, 0, 0.12);
-  border-radius: 0.3rem;
-  background: #f0f0f0;
-  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.04);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  width: fit-content;
+  max-width: 100%;
+  margin: 0 0 16px;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
 }
 
 .pujcovna-proto .rent-tab {
@@ -306,18 +308,19 @@
   align-items: center;
   justify-content: center;
   gap: 8px;
-  min-height: 52px;
-  padding: 10px 16px;
-  border: 1px solid transparent;
-  border-radius: 0.25rem;
-  background: transparent;
-  color: var(--pp-icon);
+  min-height: 40px;
+  padding: 8px 16px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 0.3rem;
+  background: var(--pp-white);
+  color: var(--pp-muted);
   font: inherit;
-  font-size: 1.05rem;
+  font-size: 0.92rem;
   font-weight: 700;
   letter-spacing: 0.02em;
   cursor: pointer;
-  transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease, transform 0.15s ease;
+  box-shadow: none;
+  transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
 }
 
 .pujcovna-proto .rent-tab-icon {
@@ -348,15 +351,16 @@
 }
 
 .pujcovna-proto .rent-tab:hover {
-  color: #073201;
-  background: rgba(255, 255, 255, 0.7);
+  color: var(--pp-icon);
+  border-color: rgba(20, 170, 0, 0.4);
+  background: #f7fff5;
 }
 
 .pujcovna-proto .rent-tab.is-active {
-  color: #000;
-  background: var(--pp-green);
-  border-color: transparent;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+  color: var(--pp-icon);
+  background: #f3fff0;
+  border-color: var(--pp-green);
+  box-shadow: none;
 }
 
 .pujcovna-proto .rent-tab.is-active::after {
@@ -364,15 +368,15 @@
 }
 
 .pujcovna-proto .rent-tab:not(.is-active).rent-tab--attention {
-  border-color: rgba(20, 170, 0, 0.45);
-  background: #fff;
-  box-shadow: 0 0 0 0 rgba(20, 170, 0, 0.35);
+  border-color: rgba(20, 170, 0, 0.35);
+  background: var(--pp-white);
+  box-shadow: 0 0 0 0 rgba(20, 170, 0, 0.28);
   animation: rent-tab-pulse 2.4s ease-out 2;
 }
 
 .pujcovna-proto .rent-tab:not(.is-active).rent-tab--attention:hover {
-  border-color: rgba(20, 170, 0, 0.7);
-  background: #f3fff0;
+  border-color: rgba(20, 170, 0, 0.55);
+  background: #f7fff5;
 }
 
 @keyframes rent-tab-pulse {
@@ -393,9 +397,9 @@
 }
 
 .pujcovna-proto .rent-switch-nudge {
-  margin: 0 auto 40px;
-  max-width: 480px;
-  text-align: center;
+  margin: 0 0 28px;
+  max-width: 42rem;
+  text-align: left;
 }
 
 .pujcovna-proto .rent-switch-nudge[hidden] {
@@ -409,7 +413,7 @@
 .pujcovna-proto .rent-switch-nudge-btn {
   display: inline;
   max-width: 100%;
-  padding: 8px 12px;
+  padding: 0;
   border: 0;
   border-radius: 0.25rem;
   background: transparent;
@@ -419,7 +423,7 @@
   font-weight: 600;
   line-height: 1.45;
   cursor: pointer;
-  text-align: center;
+  text-align: left;
   text-decoration: underline;
   text-decoration-color: rgba(20, 170, 0, 0.45);
   text-underline-offset: 3px;
@@ -1236,12 +1240,13 @@
   }
 
   .pujcovna-proto .rent-tabs {
-    max-width: 100%;
+    width: 100%;
   }
 
   .pujcovna-proto .rent-tab {
-    font-size: 0.98rem;
-    min-height: 44px;
+    flex: 1 1 0;
+    font-size: 0.92rem;
+    min-height: 42px;
   }
 
   .pujcovna-proto .pdp-why-grid,
@@ -1289,11 +1294,12 @@
   }
 
   .pujcovna-proto .rent-tabs {
-    gap: 18px;
+    gap: 8px;
   }
 
   .pujcovna-proto .rent-tab {
-    font-size: 1.15rem;
+    font-size: 0.9rem;
+    padding: 8px 12px;
   }
 }
 
