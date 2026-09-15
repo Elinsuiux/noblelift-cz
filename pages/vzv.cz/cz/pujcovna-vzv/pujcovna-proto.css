@@ -350,7 +350,7 @@
   gap: 7px;
   min-height: 36px;
   padding: 6px 14px;
-  border: 1.5px solid var(--pp-green);
+  border: 1.5px solid #1bc605;
   border-radius: 8px;
   background: var(--pp-white);
   color: var(--pp-icon);
