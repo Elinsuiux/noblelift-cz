@@ -664,9 +664,9 @@
 .pujcovna-proto .pick-card--photo.pick-card--icon .pick-thumb,
 .pujcovna-proto .pick-card--photo.pick-card--icon .pick-thumb--icon,
 .pujcovna-proto .pick-card--photo.pick-card--icon .pick-thumb--fill {
-  flex: 0 0 48px;
-  width: 48px;
-  height: 48px;
+  flex: 0 0 64px;
+  width: 64px;
+  height: 64px;
   background: transparent;
   border: 0;
   border-radius: 0;
@@ -675,11 +675,15 @@
 }
 
 .pujcovna-proto .pick-card--icon .pick-thumb svg,
+.pujcovna-proto .pick-card--photo.pick-card--icon .pick-thumb svg {
+  width: 64px;
+  height: 64px;
+}
+
 .pujcovna-proto .pick-card--icon .pick-thumb--fill svg,
-.pujcovna-proto .pick-card--photo.pick-card--icon .pick-thumb svg,
 .pujcovna-proto .pick-card--photo.pick-card--icon .pick-thumb--fill svg {
-  width: 48px;
-  height: 48px;
+  width: 68px;
+  height: 68px;
 }
 
 .pujcovna-proto .pick-card--icon:hover .pick-thumb,
