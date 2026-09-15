@@ -396,14 +396,15 @@
 }
 
 .pujcovna-proto .rent-tab.is-active {
-  color: var(--pp-icon);
-  background: var(--pp-green);
-  border-color: var(--pp-green);
+  color: #000;
+  background: #a6fc9b;
+  border-color: #a6fc9b;
   box-shadow: none;
 }
 
 .pujcovna-proto .rent-tab.is-active:hover {
-  background: #8ffc80;
+  background: #93f888;
+  border-color: #93f888;
 }
 
 .pujcovna-proto .rent-tab.is-active::after {
