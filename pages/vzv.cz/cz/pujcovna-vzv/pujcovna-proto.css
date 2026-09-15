@@ -675,9 +675,14 @@
 }
 
 .pujcovna-proto .pick-card--icon .pick-thumb svg,
-.pujcovna-proto .pick-card--photo.pick-card--icon .pick-thumb svg {
+.pujcovna-proto .pick-card--photo.pick-card--icon .pick-thumb svg,
+.pujcovna-proto .pick-card--icon .pick-thumb img,
+.pujcovna-proto .pick-card--photo.pick-card--icon .pick-thumb img {
   width: 64px;
   height: 64px;
+  max-width: 64px;
+  max-height: 64px;
+  object-fit: contain;
 }
 
 .pujcovna-proto .pick-card--icon .pick-thumb--fill svg,
