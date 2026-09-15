@@ -144,8 +144,38 @@
   padding: 0 24px;
 }
 
+.pujcovna-proto .catalog-hero.catalog-hero-centered {
+  background: none;
+  padding: 40px 0 8px;
+}
+
+.pujcovna-proto .catalog-hero.catalog-hero-centered::after {
+  display: none;
+}
+
 .pujcovna-proto .catalog-hero-centered .catalog-hero-inner {
   text-align: center;
+}
+
+.pujcovna-proto .catalog-hero.catalog-hero-centered h1 {
+  color: var(--pp-text);
+}
+
+.pujcovna-proto .catalog-hero.catalog-hero-centered .catalog-lead {
+  color: var(--pp-muted);
+  font-size: 0.88rem;
+  margin-top: 14px;
+}
+
+.pujcovna-proto .catalog-hero.catalog-hero-centered .parts-contact {
+  margin-top: 18px;
+}
+
+.pujcovna-proto .catalog-hero.catalog-hero-centered .parts-contact .btn-ghost:hover,
+.pujcovna-proto .catalog-hero.catalog-hero-centered .parts-contact a.btn.btn-ghost:hover {
+  background: #f0fff0 !important;
+  color: var(--pp-icon) !important;
+  -webkit-text-fill-color: var(--pp-icon) !important;
 }
 
 .pujcovna-proto .parts-contact {
@@ -269,13 +299,13 @@
 }
 
 /* -------------------------------------------------------------------------- */
-/* Rent switch / tabs — light filter chips (not hero CTAs)                    */
+/* Rent switch / tabs — filled lime + outlined pair (hub mockup)              */
 /* -------------------------------------------------------------------------- */
 
 .pujcovna-proto .rent-switch {
   max-width: 1240px;
   margin: 0 auto 56px;
-  padding: 56px 24px 0;
+  padding: 28px 24px 0;
 }
 
 .pujcovna-proto .rent-switch-hint {
@@ -291,7 +321,7 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
   width: fit-content;
   max-width: 100%;
   margin: 0 0 16px;
@@ -307,20 +337,20 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
-  min-height: 40px;
-  padding: 8px 16px;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  border-radius: 0.3rem;
+  gap: 7px;
+  min-height: 36px;
+  padding: 6px 14px;
+  border: 1.5px solid var(--pp-green);
+  border-radius: 8px;
   background: var(--pp-white);
-  color: var(--pp-muted);
+  color: var(--pp-icon);
   font: inherit;
-  font-size: 0.92rem;
+  font-size: 0.88rem;
   font-weight: 700;
-  letter-spacing: 0.02em;
+  letter-spacing: 0;
   cursor: pointer;
   box-shadow: none;
-  transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
+  transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
 }
 
 .pujcovna-proto .rent-tab-icon {
@@ -334,6 +364,11 @@
   width: 100%;
   height: 100%;
   display: block;
+}
+
+.pujcovna-proto .rent-tab[data-tab="pronajem"] .rent-tab-icon {
+  width: 26px;
+  height: 16px;
 }
 
 .pujcovna-proto .rent-tab-icon--forklift {
@@ -352,15 +387,18 @@
 
 .pujcovna-proto .rent-tab:hover {
   color: var(--pp-icon);
-  border-color: rgba(20, 170, 0, 0.4);
-  background: #f7fff5;
+  background: #f3fff0;
 }
 
 .pujcovna-proto .rent-tab.is-active {
   color: var(--pp-icon);
-  background: #f3fff0;
+  background: var(--pp-green);
   border-color: var(--pp-green);
   box-shadow: none;
+}
+
+.pujcovna-proto .rent-tab.is-active:hover {
+  background: #8ffc80;
 }
 
 .pujcovna-proto .rent-tab.is-active::after {
@@ -368,15 +406,12 @@
 }
 
 .pujcovna-proto .rent-tab:not(.is-active).rent-tab--attention {
-  border-color: rgba(20, 170, 0, 0.35);
-  background: var(--pp-white);
-  box-shadow: 0 0 0 0 rgba(20, 170, 0, 0.28);
-  animation: rent-tab-pulse 2.4s ease-out 2;
+  animation: none;
+  box-shadow: none;
 }
 
 .pujcovna-proto .rent-tab:not(.is-active).rent-tab--attention:hover {
-  border-color: rgba(20, 170, 0, 0.55);
-  background: #f7fff5;
+  background: #f3fff0;
 }
 
 @keyframes rent-tab-pulse {
@@ -397,9 +432,7 @@
 }
 
 .pujcovna-proto .rent-switch-nudge {
-  margin: 0 0 28px;
-  max-width: 42rem;
-  text-align: left;
+  display: none !important;
 }
 
 .pujcovna-proto .rent-switch-nudge[hidden] {
@@ -1240,13 +1273,12 @@
   }
 
   .pujcovna-proto .rent-tabs {
-    width: 100%;
+    width: fit-content;
   }
 
   .pujcovna-proto .rent-tab {
-    flex: 1 1 0;
-    font-size: 0.92rem;
-    min-height: 42px;
+    font-size: 0.88rem;
+    min-height: 36px;
   }
 
   .pujcovna-proto .pdp-why-grid,
