@@ -264,7 +264,7 @@
 .pujcovna-proto .catalog-hero.catalog-hero-centered .parts-contact .btn-ghost,
 .pujcovna-proto .catalog-hero.catalog-hero-centered .parts-contact a.btn.btn-ghost {
   background: #fff !important;
-  border: 2px solid var(--pp-accent) !important;
+  border: 2px solid var(--pp-green) !important;
   color: var(--pp-accent) !important;
   -webkit-text-fill-color: var(--pp-accent) !important;
 }
@@ -272,7 +272,7 @@
 .pujcovna-proto .catalog-hero.catalog-hero-centered .parts-contact .btn-ghost:hover,
 .pujcovna-proto .catalog-hero.catalog-hero-centered .parts-contact a.btn.btn-ghost:hover {
   background: #f3fff0 !important;
-  border-color: var(--pp-accent) !important;
+  border-color: var(--pp-green) !important;
   color: var(--pp-icon) !important;
   -webkit-text-fill-color: var(--pp-icon) !important;
 }
