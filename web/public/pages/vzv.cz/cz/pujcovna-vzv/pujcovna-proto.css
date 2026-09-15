@@ -629,7 +629,7 @@
 
 .pujcovna-proto .pick-card--photo:hover {
   border-color: #1bc605;
-  box-shadow: 0 0 0 2px rgba(27, 198, 5, 0.45);
+  box-shadow: 0 0 0 2px #1bc605;
 }
 
 .pujcovna-proto .pick-card--photo:hover .pick-thumb {
