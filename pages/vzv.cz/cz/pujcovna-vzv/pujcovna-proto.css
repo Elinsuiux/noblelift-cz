@@ -366,17 +366,12 @@
   display: block;
 }
 
-.pujcovna-proto .rent-tab[data-tab="pronajem"] .rent-tab-icon {
-  width: 26px;
-  height: 16px;
-}
-
 .pujcovna-proto .rent-tab-icon--forklift {
-  width: 28px;
-  height: 18px;
+  width: 22px;
+  height: 14px;
   background-color: currentColor;
-  -webkit-mask-image: url("../../../../assets/vzv.cz/assets/img/pujcovna_vzv/rent-tab-forklift.png");
-  mask-image: url("../../../../assets/vzv.cz/assets/img/pujcovna_vzv/rent-tab-forklift.png");
+  -webkit-mask-image: url("rent-tab-forklift.png");
+  mask-image: url("rent-tab-forklift.png");
   -webkit-mask-size: contain;
   mask-size: contain;
   -webkit-mask-repeat: no-repeat;
