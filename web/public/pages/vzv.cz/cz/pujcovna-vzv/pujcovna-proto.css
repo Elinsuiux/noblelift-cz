@@ -267,7 +267,6 @@
   border: 1px solid rgba(14, 99, 3, 0.45) !important;
   color: #0e6303 !important;
   -webkit-text-fill-color: #0e6303 !important;
-  border-radius: 8px;
 }
 
 .pujcovna-proto .catalog-hero.catalog-hero-centered .parts-contact .btn-ghost:hover,
@@ -351,7 +350,7 @@
   min-height: 36px;
   padding: 6px 14px;
   border: 1.5px solid #1bc605;
-  border-radius: 8px;
+  border-radius: 0.3rem;
   background: var(--pp-white);
   color: var(--pp-icon);
   font: inherit;
