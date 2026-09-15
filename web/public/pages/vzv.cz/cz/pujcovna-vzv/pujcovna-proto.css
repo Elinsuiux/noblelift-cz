@@ -144,8 +144,31 @@
   padding: 0 24px;
 }
 
+.pujcovna-proto .catalog-hero.catalog-hero-centered {
+  background: none;
+  padding: 40px 0 8px;
+}
+
+.pujcovna-proto .catalog-hero.catalog-hero-centered::after {
+  display: none;
+}
+
 .pujcovna-proto .catalog-hero-centered .catalog-hero-inner {
   text-align: center;
+}
+
+.pujcovna-proto .catalog-hero.catalog-hero-centered h1 {
+  color: var(--pp-text);
+}
+
+.pujcovna-proto .catalog-hero.catalog-hero-centered .catalog-lead {
+  color: var(--pp-muted);
+  font-size: 0.88rem;
+  margin-top: 14px;
+}
+
+.pujcovna-proto .catalog-hero.catalog-hero-centered .parts-contact {
+  margin-top: 18px;
 }
 
 .pujcovna-proto .parts-contact {
@@ -238,6 +261,22 @@
   -webkit-text-fill-color: #fff !important;
 }
 
+.pujcovna-proto .catalog-hero.catalog-hero-centered .parts-contact .btn-ghost,
+.pujcovna-proto .catalog-hero.catalog-hero-centered .parts-contact a.btn.btn-ghost {
+  background: #fff !important;
+  border: 1px solid rgba(14, 99, 3, 0.45) !important;
+  color: #0e6303 !important;
+  -webkit-text-fill-color: #0e6303 !important;
+}
+
+.pujcovna-proto .catalog-hero.catalog-hero-centered .parts-contact .btn-ghost:hover,
+.pujcovna-proto .catalog-hero.catalog-hero-centered .parts-contact a.btn.btn-ghost:hover {
+  background: #f3fff0 !important;
+  border-color: rgba(14, 99, 3, 0.7) !important;
+  color: #073201 !important;
+  -webkit-text-fill-color: #073201 !important;
+}
+
 /* -------------------------------------------------------------------------- */
 /* Breadcrumb                                                                 */
 /* -------------------------------------------------------------------------- */
@@ -269,13 +308,13 @@
 }
 
 /* -------------------------------------------------------------------------- */
-/* Rent switch / tabs — clear segmented control                               */
+/* Rent switch / tabs — filled lime + outlined pair (hub mockup)              */
 /* -------------------------------------------------------------------------- */
 
 .pujcovna-proto .rent-switch {
   max-width: 1240px;
   margin: 0 auto 56px;
-  padding: 56px 24px 0;
+  padding: 28px 24px 0;
 }
 
 .pujcovna-proto .rent-switch-hint {
@@ -288,16 +327,18 @@
 }
 
 .pujcovna-proto .rent-tabs {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 6px;
-  max-width: 480px;
-  margin: 0 auto 12px;
-  padding: 6px;
-  border: 1px solid rgba(0, 0, 0, 0.12);
-  border-radius: 0.3rem;
-  background: #f0f0f0;
-  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.04);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  width: fit-content;
+  max-width: 100%;
+  margin: 0 0 16px;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
 }
 
 .pujcovna-proto .rent-tab {
@@ -305,19 +346,20 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
-  min-height: 52px;
-  padding: 10px 16px;
-  border: 1px solid transparent;
-  border-radius: 0.25rem;
-  background: transparent;
+  gap: 7px;
+  min-height: 36px;
+  padding: 6px 14px;
+  border: 1.5px solid #1bc605;
+  border-radius: 0.3rem;
+  background: var(--pp-white);
   color: var(--pp-icon);
   font: inherit;
-  font-size: 1.05rem;
+  font-size: 0.88rem;
   font-weight: 700;
-  letter-spacing: 0.02em;
+  letter-spacing: 0;
   cursor: pointer;
-  transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease, transform 0.15s ease;
+  box-shadow: none;
+  transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
 }
 
 .pujcovna-proto .rent-tab-icon {
@@ -334,11 +376,11 @@
 }
 
 .pujcovna-proto .rent-tab-icon--forklift {
-  width: 28px;
-  height: 18px;
+  width: 22px;
+  height: 14px;
   background-color: currentColor;
-  -webkit-mask-image: url("../../../../assets/vzv.cz/assets/img/pujcovna_vzv/rent-tab-forklift.png");
-  mask-image: url("../../../../assets/vzv.cz/assets/img/pujcovna_vzv/rent-tab-forklift.png");
+  -webkit-mask-image: url("rent-tab-forklift.png");
+  mask-image: url("rent-tab-forklift.png");
   -webkit-mask-size: contain;
   mask-size: contain;
   -webkit-mask-repeat: no-repeat;
@@ -348,15 +390,20 @@
 }
 
 .pujcovna-proto .rent-tab:hover {
-  color: #073201;
-  background: rgba(255, 255, 255, 0.7);
+  color: var(--pp-icon);
+  background: #f3fff0;
 }
 
 .pujcovna-proto .rent-tab.is-active {
   color: #000;
-  background: var(--pp-green);
-  border-color: transparent;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+  background: #a6fc9b;
+  border-color: #a6fc9b;
+  box-shadow: none;
+}
+
+.pujcovna-proto .rent-tab.is-active:hover {
+  background: #93f888;
+  border-color: #93f888;
 }
 
 .pujcovna-proto .rent-tab.is-active::after {
@@ -364,14 +411,11 @@
 }
 
 .pujcovna-proto .rent-tab:not(.is-active).rent-tab--attention {
-  border-color: rgba(20, 170, 0, 0.45);
-  background: #fff;
-  box-shadow: 0 0 0 0 rgba(20, 170, 0, 0.35);
-  animation: rent-tab-pulse 2.4s ease-out 2;
+  animation: none;
+  box-shadow: none;
 }
 
 .pujcovna-proto .rent-tab:not(.is-active).rent-tab--attention:hover {
-  border-color: rgba(20, 170, 0, 0.7);
   background: #f3fff0;
 }
 
@@ -393,9 +437,7 @@
 }
 
 .pujcovna-proto .rent-switch-nudge {
-  margin: 0 auto 40px;
-  max-width: 480px;
-  text-align: center;
+  display: none !important;
 }
 
 .pujcovna-proto .rent-switch-nudge[hidden] {
@@ -409,7 +451,7 @@
 .pujcovna-proto .rent-switch-nudge-btn {
   display: inline;
   max-width: 100%;
-  padding: 8px 12px;
+  padding: 0;
   border: 0;
   border-radius: 0.25rem;
   background: transparent;
@@ -419,7 +461,7 @@
   font-weight: 600;
   line-height: 1.45;
   cursor: pointer;
-  text-align: center;
+  text-align: left;
   text-decoration: underline;
   text-decoration-color: rgba(20, 170, 0, 0.45);
   text-underline-offset: 3px;
@@ -585,8 +627,8 @@
 }
 
 .pujcovna-proto .pick-card--photo:hover {
-  border-color: #73fb61;
-  box-shadow: 0 0 0 2px rgba(115, 251, 97, 0.45);
+  border-color: #aff0a6;
+  box-shadow: 0 0 0 2px #aff0a6;
 }
 
 .pujcovna-proto .pick-card--photo:hover .pick-thumb {
@@ -613,27 +655,49 @@
   color: var(--pp-muted);
 }
 
+.pujcovna-proto .pick-card--icon {
+  gap: 16px;
+}
+
 .pujcovna-proto .pick-card--icon .pick-thumb,
-.pujcovna-proto .pick-card--icon .pick-thumb--icon {
-  background: #e8fce8;
-  border: 1px solid rgba(20, 170, 0, 0.35);
-  border-radius: 0.45rem;
+.pujcovna-proto .pick-card--icon .pick-thumb--icon,
+.pujcovna-proto .pick-card--photo.pick-card--icon .pick-thumb,
+.pujcovna-proto .pick-card--photo.pick-card--icon .pick-thumb--icon,
+.pujcovna-proto .pick-card--photo.pick-card--icon .pick-thumb--fill {
+  flex: 0 0 64px;
+  width: 64px;
+  height: 64px;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
   color: var(--pp-icon);
+  overflow: visible;
 }
 
-.pujcovna-proto .pick-card--icon .pick-thumb svg {
-  width: 40px;
-  height: 40px;
+.pujcovna-proto .pick-card--icon .pick-thumb svg,
+.pujcovna-proto .pick-card--photo.pick-card--icon .pick-thumb svg,
+.pujcovna-proto .pick-card--icon .pick-thumb img,
+.pujcovna-proto .pick-card--photo.pick-card--icon .pick-thumb img {
+  width: 64px;
+  height: 64px;
+  max-width: 64px;
+  max-height: 64px;
+  object-fit: contain;
 }
 
-.pujcovna-proto .pick-card--icon .pick-thumb--fill svg {
-  width: 44px;
-  height: 44px;
+.pujcovna-proto .pick-card--icon .pick-thumb--fill svg,
+.pujcovna-proto .pick-card--photo.pick-card--icon .pick-thumb--fill svg {
+  width: 68px;
+  height: 68px;
 }
 
-.pujcovna-proto .pick-card--icon:hover .pick-thumb {
-  background: #c4fdb8;
-  border: 1px solid rgba(20, 170, 0, 0.55);
+.pujcovna-proto .pick-card--icon:hover .pick-thumb,
+.pujcovna-proto .pick-card--photo.pick-card--icon:hover .pick-thumb,
+.pujcovna-proto .pick-card--photo.pick-card--icon:hover .pick-thumb--icon,
+.pujcovna-proto .pick-card--photo.pick-card--icon:hover .pick-thumb--fill {
+  background: transparent;
+  border: 0;
+  box-shadow: none;
   color: var(--pp-icon);
 }
 
@@ -1236,12 +1300,12 @@
   }
 
   .pujcovna-proto .rent-tabs {
-    max-width: 100%;
+    width: fit-content;
   }
 
   .pujcovna-proto .rent-tab {
-    font-size: 0.98rem;
-    min-height: 44px;
+    font-size: 0.88rem;
+    min-height: 36px;
   }
 
   .pujcovna-proto .pdp-why-grid,
@@ -1289,11 +1353,12 @@
   }
 
   .pujcovna-proto .rent-tabs {
-    gap: 18px;
+    gap: 8px;
   }
 
   .pujcovna-proto .rent-tab {
-    font-size: 1.15rem;
+    font-size: 0.9rem;
+    padding: 8px 12px;
   }
 }
 
