@@ -1069,7 +1069,7 @@
   display: grid;
   grid-template-columns: 1fr;
   gap: 8px;
-  margin: 0 0 12px;
+  margin: 0;
   padding: 0;
   list-style: none;
 }
@@ -1214,6 +1214,7 @@
   grid-template-columns: 1fr;
   gap: 16px;
   align-items: start;
+  align-content: space-between;
 }
 
 .pujcovna-proto .rent-form-about {
@@ -1238,12 +1239,21 @@
   color: var(--pp-text);
 }
 
+.pujcovna-proto .rent-form-about .rent-consult-cta {
+  margin-top: 14px;
+  color: var(--pp-text);
+}
+
+.pujcovna-proto .rent-form-about .rent-consult-phone {
+  margin-bottom: 6px;
+}
+
 .pujcovna-proto .rent-form-person {
   display: grid;
   grid-template-columns: auto 88px;
   gap: 12px;
   align-items: center;
-  margin-top: 12px;
+  margin-top: auto;
 }
 
 .pujcovna-proto .rent-form-person-meta {
