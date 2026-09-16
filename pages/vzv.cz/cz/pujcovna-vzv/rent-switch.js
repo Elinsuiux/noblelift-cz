@@ -56,19 +56,4 @@
     }
   });
 
-  document.querySelectorAll("[data-rent-layout]").forEach((root) => {
-    const buttons = root.querySelectorAll(".rent-layout-switch [data-layout]");
-    function setLayout(key) {
-      root.dataset.layout = key;
-      buttons.forEach((btn) => {
-        const on = btn.dataset.layout === key;
-        btn.classList.toggle("is-active", on);
-        btn.setAttribute("aria-selected", on ? "true" : "false");
-      });
-    }
-    buttons.forEach((btn) => {
-      btn.addEventListener("click", () => setLayout(btn.dataset.layout));
-    });
-  });
-
 })();
