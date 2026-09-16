@@ -1459,7 +1459,7 @@
   display: inline-flex;
   align-items: center;
   border: 1px solid #cfcfcf;
-  border-radius: 999px;
+  border-radius: 8px;
   padding: 7px 16px;
   background: #fff;
   color: #222;
