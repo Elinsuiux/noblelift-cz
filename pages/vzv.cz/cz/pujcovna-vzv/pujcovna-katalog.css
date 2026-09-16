@@ -162,12 +162,31 @@
   height: 100%;
 }
 
+.rent-spec-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 44px;
+  margin: 0 0 8px;
+}
+
+.rent-spec-icon img {
+  display: block;
+  width: 44px;
+  height: 44px;
+  object-fit: contain;
+}
+
 .rent-spec-label {
   font-size: 0.75rem;
   text-transform: uppercase;
   letter-spacing: 0.04em;
   color: #666;
   margin-bottom: 6px;
+}
+
+.rent-detail .rent-pills {
+  display: none;
 }
 
 .rent-spec-value {
