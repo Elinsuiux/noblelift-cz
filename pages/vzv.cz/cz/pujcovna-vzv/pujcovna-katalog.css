@@ -298,18 +298,230 @@
   }
 }
 
-/* Catalog footer inquiry form — replaces team / warehouse block */
+/* Catalog footer inquiry: form + hub info columns */
+.rent-catalog-inquiry.container {
+  max-width: 1320px;
+}
+
 .rent-catalog-inquiry {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+  align-items: stretch;
   padding: 8px 12px 48px;
 }
 
-.rent-catalog-inquiry .rent-form {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 24px 28px 20px;
+.rent-catalog-inquiry-cols {
+  display: grid;
+  grid-template-columns: 1fr 1.15fr 1fr;
+  gap: 12px;
+  min-width: 0;
+  align-items: stretch;
+}
+
+.rent-catalog-inquiry .rent-form,
+.rent-catalog-inquiry .rent-check,
+.rent-catalog-inquiry .rent-consult,
+.rent-catalog-inquiry .rent-contact-bar {
+  padding: 18px 20px;
   background: #f5f5f5;
   border-radius: 0.3rem;
   scroll-margin-top: 120px;
+}
+
+.rent-catalog-inquiry .rent-form {
+  margin: 0;
+  max-width: none;
+  padding: 24px 28px 20px;
+}
+
+.rent-catalog-inquiry .rent-check h2,
+.rent-catalog-inquiry .rent-consult h2,
+.rent-catalog-inquiry .rent-form-about-lead {
+  margin: 0 0 20px;
+  font-size: 1.2rem;
+  line-height: 1.25;
+  font-weight: 800;
+  color: #1a1a1a;
+}
+
+.rent-catalog-inquiry .rent-form-about-lead strong {
+  font-weight: 800;
+}
+
+.rent-catalog-inquiry .rent-check ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.rent-catalog-inquiry .rent-check li {
+  position: relative;
+  padding: 7px 0 7px 16px;
+  border-bottom: 1px solid #eee;
+  font-size: 0.86rem;
+  line-height: 1.35;
+  color: #444;
+}
+
+.rent-catalog-inquiry .rent-check li:last-child {
+  border-bottom: 0;
+}
+
+.rent-catalog-inquiry .rent-check li::before {
+  content: "";
+  position: absolute;
+  top: 13px;
+  left: 0;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #14aa00;
+}
+
+.rent-catalog-inquiry .rent-consult > p {
+  margin: 0 0 12px;
+  font-size: 0.84rem;
+  line-height: 1.45;
+  color: #555;
+}
+
+.rent-catalog-inquiry .rent-consult-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.rent-catalog-inquiry .rent-consult-list li {
+  padding: 10px 12px;
+  border-radius: 0.3rem;
+  background: #fff;
+}
+
+.rent-catalog-inquiry .rent-consult-list strong {
+  display: block;
+  margin-bottom: 2px;
+  font-size: 0.82rem;
+  color: #1a1a1a;
+}
+
+.rent-catalog-inquiry .rent-consult-list span {
+  display: block;
+  color: #555;
+  font-size: 0.78rem;
+  line-height: 1.35;
+}
+
+.rent-catalog-inquiry .rent-consult-cta {
+  margin: 14px 0 6px;
+  font-size: 0.84rem;
+  color: #1a1a1a;
+}
+
+.rent-catalog-inquiry .rent-consult-phone {
+  margin: 0 0 8px;
+  font-size: 0.84rem;
+  color: #555;
+}
+
+.rent-catalog-inquiry .rent-consult-phone a,
+.rent-catalog-inquiry .rent-consult-refs a {
+  color: #14aa00;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.rent-catalog-inquiry .rent-consult-phone a:hover,
+.rent-catalog-inquiry .rent-consult-refs a:hover {
+  color: #0e6303;
+}
+
+.rent-catalog-inquiry .rent-consult-refs {
+  margin: 0;
+  font-size: 0.8rem;
+  color: #555;
+}
+
+.rent-catalog-inquiry .rent-contact-bar {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  align-items: start;
+  align-content: space-between;
+}
+
+.rent-catalog-inquiry .rent-form-about {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.rent-catalog-inquiry .rent-form-about > p {
+  margin: 0 0 8px;
+  font-size: 0.86rem;
+  line-height: 1.45;
+  color: #555;
+}
+
+.rent-catalog-inquiry .rent-form-about > p:last-child {
+  margin-bottom: 0;
+}
+
+.rent-catalog-inquiry .rent-form-about .rent-consult-phone {
+  margin-bottom: 6px;
+}
+
+.rent-catalog-inquiry .rent-form-person {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 176px;
+  gap: 10px;
+  align-items: end;
+  margin-top: auto;
+}
+
+.rent-catalog-inquiry .rent-form-person-meta {
+  display: grid;
+  gap: 2px;
+  padding-bottom: 6px;
+}
+
+.rent-catalog-inquiry .rent-form-person-meta strong {
+  font-size: 0.95rem;
+  color: #1a1a1a;
+}
+
+.rent-catalog-inquiry .rent-form-person-meta span {
+  font-size: 0.8rem;
+  color: #666;
+}
+
+.rent-catalog-inquiry .rent-form-person-meta a {
+  color: #14aa00;
+  font-size: 0.84rem;
+  text-decoration: none;
+}
+
+.rent-catalog-inquiry .rent-form-person-meta a:hover {
+  color: #0e6303;
+}
+
+.rent-catalog-inquiry .rent-form-person-photo {
+  width: 176px;
+  height: 198px;
+  min-height: 0;
+  overflow: hidden;
+  background: transparent;
+}
+
+.rent-catalog-inquiry .rent-form-person-photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 12%;
 }
 
 .rent-catalog-inquiry .rent-form h2 {
@@ -428,6 +640,35 @@
   color: #14aa00;
 }
 
+@media (min-width: 1400px) {
+  .rent-catalog-inquiry.container {
+    max-width: 1600px;
+  }
+
+  .rent-catalog-inquiry {
+    grid-template-columns: minmax(400px, 460px) minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 991.98px) {
+  .rent-catalog-inquiry-cols {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .rent-catalog-inquiry .rent-contact-bar {
+    grid-column: 1 / -1;
+  }
+
+  .rent-catalog-inquiry .rent-form-person {
+    grid-template-columns: minmax(0, 1fr) 160px;
+  }
+
+  .rent-catalog-inquiry .rent-form-person-photo {
+    width: 160px;
+    height: 180px;
+  }
+}
+
 @media (max-width: 767.98px) {
   .rent-catalog-inquiry .rent-form {
     padding: 20px 16px 16px;
@@ -435,5 +676,22 @@
 
   .rent-catalog-inquiry .rent-form-fields {
     grid-template-columns: 1fr;
+  }
+
+  .rent-catalog-inquiry-cols {
+    grid-template-columns: 1fr;
+  }
+
+  .rent-catalog-inquiry .rent-contact-bar {
+    grid-column: auto;
+  }
+
+  .rent-catalog-inquiry .rent-form-person {
+    grid-template-columns: minmax(0, 1fr) 176px;
+  }
+
+  .rent-catalog-inquiry .rent-form-person-photo {
+    width: 176px;
+    height: 198px;
   }
 }
