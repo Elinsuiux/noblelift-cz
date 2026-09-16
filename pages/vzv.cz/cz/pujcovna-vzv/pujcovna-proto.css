@@ -701,24 +701,6 @@
   color: var(--pp-icon);
 }
 
-.pujcovna-proto .pick-card--icon .pick-thumb--mask,
-.pujcovna-proto .pick-card--photo.pick-card--icon .pick-thumb--mask {
-  background-color: currentColor;
-  -webkit-mask-image: var(--pp-mask);
-  -webkit-mask-repeat: no-repeat;
-  -webkit-mask-position: center;
-  -webkit-mask-size: 64px 64px;
-  mask-image: var(--pp-mask);
-  mask-repeat: no-repeat;
-  mask-position: center;
-  mask-size: 64px 64px;
-}
-
-.pujcovna-proto .pick-card--icon:hover .pick-thumb--mask,
-.pujcovna-proto .pick-card--photo.pick-card--icon:hover .pick-thumb--mask {
-  background-color: currentColor;
-}
-
 
 /* -------------------------------------------------------------------------- */
 /* Why / výhody                                                               */
