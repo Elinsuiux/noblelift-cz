@@ -22,7 +22,7 @@ const outDir = join(webRoot, "public", "pages", "vzv.cz", "cz", "pujcovna-vzv");
 const dumpDir = join(webRoot, "..", "pages", "vzv.cz", "cz", "pujcovna-vzv");
 const ASSET_ORIGIN = "https://temporary-rapid-breeze-8ofpwza.vercel.app";
 const SITE_PUJCOVNA = "/pages/vzv.cz/cz/pujcovna-vzv";
-const CATALOG_CSS = `${SITE_PUJCOVNA}/pujcovna-katalog.css`;
+const CATALOG_CSS = `${SITE_PUJCOVNA}/pujcovna-katalog.css?v=card-spec-icons-1`;
 
 const SPEC_ORDER = [
   "Pohon",
@@ -33,6 +33,15 @@ const SPEC_ORDER = [
   "Hmotnost",
   "Rozměr",
 ];
+
+const SPEC_ICONS = {
+  Pohon: "pohon.png",
+  Nosnost: "nosnost.png",
+  "Výška zdvihu": "vyska-zdvihu.png",
+  "Pracovní výška": "vyska-zdvihu.png",
+  "Průjezdní výška": "prujezdni-vyska.png",
+  Hmotnost: "hmotnost.png",
+};
 
 const CATEGORIES = [
   {
@@ -307,14 +316,20 @@ function machineDescription(category, product) {
   return map[category.slug] || `<p>Pronájem: ${noun} ${name}.</p>`;
 }
 
+function specIconSrc(key) {
+  const file = SPEC_ICONS[key];
+  return file ? `${SITE_PUJCOVNA}/spec-icons/${file}?v=card-1` : "";
+}
+
 function renderCard(category, product) {
   const specRows = SPEC_ORDER.filter((key) => product.specs[key] && product.specs[key] !== "0")
-    .map(
-      (key) => `<div class="row">
-                                <div class="col-8">${escapeHtml(key)}</div>
-                                <div class="col-4 text-end">${escapeHtml(product.specs[key])}</div>
-                            </div>`,
-    )
+    .map((key) => {
+      const icon = specIconSrc(key);
+      const iconHtml = icon
+        ? `<div class="card-spec-icon" aria-hidden="true"><img src="${icon}" alt=""></div>`
+        : "";
+      return `<div class="card-spec">${iconHtml}<div class="card-spec-label">${escapeHtml(key)}</div><div class="card-spec-value">${escapeHtml(product.specs[key])}</div></div>`;
+    })
     .join("");
   const detail = localPath(category.slug, product);
   const sticker = product.rotary

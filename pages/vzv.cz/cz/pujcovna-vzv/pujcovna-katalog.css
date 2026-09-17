@@ -107,12 +107,45 @@
 }
 
 .rent-catalog .card-body-parametry {
-  font-size: 0.8rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(48px, 1fr));
+  gap: 8px 4px;
+  text-align: center;
   color: #4d4d4d;
 }
 
-.rent-catalog .card-body-parametry .row + .row {
-  margin-top: 2px;
+.rent-catalog .card-spec {
+  min-width: 0;
+}
+
+.rent-catalog .card-spec-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  margin: 0 0 4px;
+}
+
+.rent-catalog .card-spec-icon img {
+  display: block;
+  width: 52px;
+  height: 36px;
+  object-fit: contain;
+}
+
+.rent-catalog .card-spec-label {
+  font-size: 0.62rem;
+  line-height: 1.2;
+  color: #666;
+  margin-bottom: 2px;
+}
+
+.rent-catalog .card-spec-value {
+  font-size: 0.72rem;
+  font-weight: 800;
+  color: #1a1a1a;
+  line-height: 1.25;
+  word-break: break-word;
 }
 
 .rent-catalog .card-vzv-actions {
