@@ -130,17 +130,8 @@
   display: block;
   height: 32px;
   width: auto;
-  max-width: 100%;
+  max-width: none;
   object-fit: contain;
-}
-
-.rent-catalog .card-spec-icon img[src*="pohon.png"],
-.rent-catalog .card-spec-icon img[src*="hmotnost.png"] {
-  height: 22px;
-}
-
-.rent-catalog .card-spec-icon img[src*="prujezdni-vyska.png"] {
-  height: 26px;
 }
 
 .rent-catalog .card-spec-label {
