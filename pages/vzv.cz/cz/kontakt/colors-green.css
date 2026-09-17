@@ -349,3 +349,24 @@ a.text-primary:hover,
   font-size: 0.9rem;
   font-weight: 600;
 }
+
+/* Location overlays on the wide home/contact banner */
+.kontakt-pobocky--wide .kontakt-pobocky-pobocka-cover-overlay {
+  background: rgba(20, 26, 24, 0.84) !important;
+  opacity: 1 !important;
+  mix-blend-mode: normal !important;
+}
+
+.kontakt-pobocky--wide .kontakt-pobocky-pobocka-cover-text {
+  mix-blend-mode: normal !important;
+  color: #fff !important;
+}
+
+.kontakt-pobocky--wide .kontakt-pobocky-pobocka-cover-text h2,
+.kontakt-pobocky--wide .kontakt-pobocky-pobocka-cover-text-gps {
+  color: #fff !important;
+}
+
+.kontakt-pobocky--wide .kontakt-pobocky-pobocka-cover-text a {
+  color: #73fb61 !important;
+}
