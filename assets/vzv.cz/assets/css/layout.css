@@ -3074,7 +3074,7 @@ li.list-disc {
 
 .kontakt-pobocky--wide .kontakt-pobocky-pobocka img {
     width: 100%;
-    height: auto;
+    height: auto !important;
     display: block;
 }
 
