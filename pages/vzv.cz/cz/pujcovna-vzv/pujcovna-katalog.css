@@ -136,7 +136,7 @@
 
 .rent-catalog .card-spec-label {
   font-size: 0.62rem;
-  font-weight: 600;
+  font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 0.02em;
   color: #8e8e8e;
@@ -145,8 +145,8 @@
 }
 
 .rent-catalog .card-spec-value {
-  font-size: 0.78rem;
-  font-weight: 800;
+  font-size: 0.68rem;
+  font-weight: 500;
   color: #1c1c1c;
   line-height: 1.25;
   word-break: break-word;
