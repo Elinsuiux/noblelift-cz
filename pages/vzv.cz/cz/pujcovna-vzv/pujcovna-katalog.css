@@ -41,13 +41,13 @@
 
 .rent-catalog .card-vzv {
   background: #fff;
-  border: 1px solid #e0e0e0;
+  border: 0;
   border-radius: 6px;
   overflow: hidden;
   height: 100%;
   display: flex;
   flex-direction: column;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+  box-shadow: none;
 }
 
 .rent-catalog .card-vzv .card-img {
@@ -125,6 +125,17 @@
   text-transform: uppercase;
   font-size: 0.78rem;
   padding: 10px 8px;
+}
+
+.rent-catalog .card-vzv-actions .btn-dark,
+.rent-catalog .card-vzv-actions .btn-dark:hover,
+.rent-catalog .card-vzv-actions .btn-dark:focus,
+.rent-catalog .card-vzv-actions .btn-dark:active {
+  background: transparent;
+  background-color: transparent;
+  color: #000;
+  border: 1px solid #000;
+  box-shadow: none;
 }
 
 .rent-catalog #forklifts-empty {
