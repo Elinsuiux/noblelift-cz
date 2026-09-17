@@ -3079,53 +3079,25 @@ li.list-disc {
 }
 
 .kontakt-pobocky--wide .kontakt-pobocky-pobocka-cover {
-    top: 3.4%;
-    width: 27%;
-    height: 43.5%;
-    background: transparent;
-}
-
-.kontakt-pobocky--wide .kontakt-pobocky-pobocka-cover-right {
-    right: 0.4%;
-}
-
-.kontakt-pobocky--wide #praha .kontakt-pobocky-pobocka-cover {
-    left: 0.4%;
-}
-
-.kontakt-pobocky--wide .kontakt-pobocky-pobocka-cover-overlay {
-    display: none !important;
-}
-
-.kontakt-pobocky--wide .kontakt-pobocky-pobocka-cover-text {
-    mix-blend-mode: normal !important;
-    color: transparent !important;
-    padding: 0;
-    font-size: 0;
-    line-height: 0;
-    height: 100%;
-}
-
-.kontakt-pobocky--wide .kontakt-pobocky-pobocka-cover-text h2,
-.kontakt-pobocky--wide .kontakt-pobocky-pobocka-cover-text-gps {
     display: none;
 }
 
-.kontakt-pobocky--wide .kontakt-pobocky-pobocka-cover-text a {
+.kontakt-pobocky--wide .kontakt-pobocky-map-hit {
     position: absolute;
-    left: 7%;
-    right: 8%;
-    bottom: 8%;
-    height: 22%;
-    color: transparent !important;
+    top: 3.4%;
+    left: 0.4%;
+    width: 27%;
+    height: 43.5%;
+    z-index: 4;
+    display: block;
     font-size: 0;
-    overflow: hidden;
+    color: transparent;
+    cursor: pointer;
 }
 
-.kontakt-pobocky--wide .kontakt-pobocky-pobocka-cover-text a:after {
-    content: none;
-    background: none;
-    padding: 0;
+.kontakt-pobocky--wide .kontakt-pobocky-map-hit--right {
+    left: auto;
+    right: 0.4%;
 }
 
 @media (max-width: 768px) {
