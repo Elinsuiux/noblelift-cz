@@ -22,7 +22,7 @@ const outDir = join(webRoot, "public", "pages", "vzv.cz", "cz", "pujcovna-vzv");
 const dumpDir = join(webRoot, "..", "pages", "vzv.cz", "cz", "pujcovna-vzv");
 const ASSET_ORIGIN = "https://temporary-rapid-breeze-8ofpwza.vercel.app";
 const SITE_PUJCOVNA = "/pages/vzv.cz/cz/pujcovna-vzv";
-const CATALOG_CSS = `${SITE_PUJCOVNA}/pujcovna-katalog.css?v=card-spec-icons-6`;
+const CATALOG_CSS = `${SITE_PUJCOVNA}/pujcovna-katalog.css?v=card-spec-icons-7`;
 
 const SPEC_ORDER = [
   "Pohon",
@@ -41,6 +41,13 @@ const SPEC_ICONS = {
   "Pracovní výška": "vyska-zdvihu.png",
   "Průjezdní výška": "prujezdni-vyska.png",
   Hmotnost: "hmotnost.png",
+};
+
+const POHON_ICONS = {
+  Diesel: "pohon-diesel.png",
+  AKU: "pohon-aku.png",
+  LPG: "pohon-lpg.png",
+  RUČNÍ: "pohon-rucni.png",
 };
 
 const CATEGORIES = [
@@ -316,15 +323,19 @@ function machineDescription(category, product) {
   return map[category.slug] || `<p>Pronájem: ${noun} ${name}.</p>`;
 }
 
-function specIconSrc(key) {
+function specIconSrc(key, value) {
+  if (key === "Pohon") {
+    const file = POHON_ICONS[value] || "pohon-diesel.png";
+    return `${SITE_PUJCOVNA}/spec-icons/${file}?v=card-7`;
+  }
   const file = SPEC_ICONS[key];
-  return file ? `${SITE_PUJCOVNA}/spec-icons/${file}?v=card-6` : "";
+  return file ? `${SITE_PUJCOVNA}/spec-icons/${file}?v=card-7` : "";
 }
 
 function renderCard(category, product) {
   const specRows = SPEC_ORDER.filter((key) => product.specs[key] && product.specs[key] !== "0")
     .map((key) => {
-      const icon = specIconSrc(key);
+      const icon = specIconSrc(key, product.specs[key]);
       const iconHtml = icon
         ? `<div class="card-spec-icon" aria-hidden="true"><img src="${icon}" alt=""></div>`
         : "";
