@@ -3062,7 +3062,7 @@ li.list-disc {
     color: #fff !important;
 }
 
-/* Home + contact: attached dual-site banner */
+/* Home + contact: attached dual-site banner (text is in the photo) */
 .kontakt-pobocky--wide {
     padding: 0;
 }
@@ -3076,90 +3076,60 @@ li.list-disc {
     width: 100%;
     height: auto;
     display: block;
-    object-fit: cover;
 }
 
 .kontakt-pobocky--wide .kontakt-pobocky-pobocka-cover {
-    top: 5%;
-    width: min(400px, 40%);
-    height: auto;
-    text-align: left;
+    top: 3.4%;
+    width: 27%;
+    height: 43.5%;
+    background: transparent;
 }
 
 .kontakt-pobocky--wide .kontakt-pobocky-pobocka-cover-right {
-    right: 2.2%;
+    right: 0.4%;
 }
 
 .kontakt-pobocky--wide #praha .kontakt-pobocky-pobocka-cover {
-    left: 2.2%;
+    left: 0.4%;
 }
 
 .kontakt-pobocky--wide .kontakt-pobocky-pobocka-cover-overlay {
-    background: rgba(20, 26, 24, 0.84) !important;
-    opacity: 1 !important;
-    mix-blend-mode: normal !important;
-    border-radius: 4px;
-    border: 1px solid rgba(115, 251, 97, 0.28);
+    display: none !important;
 }
 
 .kontakt-pobocky--wide .kontakt-pobocky-pobocka-cover-text {
     mix-blend-mode: normal !important;
-    color: #fff !important;
-    padding: 22px 24px 18px;
-    font-size: 13px;
-    font-weight: 400;
-    line-height: 1.4;
-    text-align: left;
+    color: transparent !important;
+    padding: 0;
+    font-size: 0;
+    line-height: 0;
+    height: 100%;
 }
 
-.kontakt-pobocky--wide .kontakt-pobocky-pobocka-cover-text h2 {
-    text-transform: uppercase;
-    font-size: 20px;
-    font-weight: 700;
-    line-height: 1.2;
-    margin: 0 0 12px;
-    color: #fff !important;
-}
-
+.kontakt-pobocky--wide .kontakt-pobocky-pobocka-cover-text h2,
 .kontakt-pobocky--wide .kontakt-pobocky-pobocka-cover-text-gps {
-    width: auto;
-    margin: 10px 0 12px;
-    font-weight: 400;
-    text-align: left;
-    font-size: 12px;
-    color: rgba(255, 255, 255, 0.88) !important;
+    display: none;
 }
 
 .kontakt-pobocky--wide .kontakt-pobocky-pobocka-cover-text a {
-    color: #73fb61 !important;
-    font-weight: 600;
+    position: absolute;
+    left: 7%;
+    right: 8%;
+    bottom: 8%;
+    height: 22%;
+    color: transparent !important;
+    font-size: 0;
+    overflow: hidden;
 }
 
 .kontakt-pobocky--wide .kontakt-pobocky-pobocka-cover-text a:after {
+    content: none;
     background: none;
-    padding-right: 0;
-    content: " →";
-    color: #73fb61;
+    padding: 0;
 }
 
 @media (max-width: 768px) {
-    .kontakt-pobocky--wide .kontakt-pobocky-pobocka-cover {
-        width: min(320px, 86%);
-        top: 8px;
-    }
-
     .kontakt-pobocky--wide .kontakt-pobocky-pobocka img {
-        height: 220px;
-        object-fit: cover;
-    }
-
-    .kontakt-pobocky--wide .kontakt-pobocky-pobocka-cover-text {
-        padding: 16px 16px 14px;
-        font-size: 12px;
-    }
-
-    .kontakt-pobocky--wide .kontakt-pobocky-pobocka-cover-text h2 {
-        font-size: 16px;
-        margin-bottom: 8px;
+        height: auto;
     }
 }

@@ -674,23 +674,12 @@ a.text-primary:hover,
   font-weight: 600 !important;
 }
 
-/* Location overlays on the wide home/contact banner */
+/* Location overlays on the wide home/contact banner — text is in the photo */
 .kontakt-pobocky--wide .kontakt-pobocky-pobocka-cover-overlay {
-  background: rgba(20, 26, 24, 0.84) !important;
-  opacity: 1 !important;
-  mix-blend-mode: normal !important;
+  display: none !important;
 }
 
-.kontakt-pobocky--wide .kontakt-pobocky-pobocka-cover-text {
-  mix-blend-mode: normal !important;
-  color: #fff !important;
-}
-
-.kontakt-pobocky--wide .kontakt-pobocky-pobocka-cover-text h2,
-.kontakt-pobocky--wide .kontakt-pobocky-pobocka-cover-text-gps {
-  color: #fff !important;
-}
-
+.kontakt-pobocky--wide .kontakt-pobocky-pobocka-cover-text,
 .kontakt-pobocky--wide .kontakt-pobocky-pobocka-cover-text a {
-  color: #73fb61 !important;
+  color: transparent !important;
 }
