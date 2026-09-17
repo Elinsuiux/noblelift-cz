@@ -22,7 +22,7 @@ const outDir = join(webRoot, "public", "pages", "vzv.cz", "cz", "pujcovna-vzv");
 const dumpDir = join(webRoot, "..", "pages", "vzv.cz", "cz", "pujcovna-vzv");
 const ASSET_ORIGIN = "https://temporary-rapid-breeze-8ofpwza.vercel.app";
 const SITE_PUJCOVNA = "/pages/vzv.cz/cz/pujcovna-vzv";
-const CATALOG_CSS = `${SITE_PUJCOVNA}/pujcovna-katalog.css?v=card-spec-icons-1`;
+const CATALOG_CSS = `${SITE_PUJCOVNA}/pujcovna-katalog.css?v=card-spec-icons-2`;
 
 const SPEC_ORDER = [
   "Pohon",
@@ -318,7 +318,7 @@ function machineDescription(category, product) {
 
 function specIconSrc(key) {
   const file = SPEC_ICONS[key];
-  return file ? `${SITE_PUJCOVNA}/spec-icons/${file}?v=card-1` : "";
+  return file ? `${SITE_PUJCOVNA}/spec-icons/${file}?v=card-2` : "";
 }
 
 function renderCard(category, product) {

@@ -122,21 +122,23 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 40px;
-  margin: 0 0 4px;
+  height: 44px;
+  margin: 0 0 6px;
 }
 
 .rent-catalog .card-spec-icon img {
   display: block;
-  width: 52px;
-  height: 36px;
+  width: 56px;
+  height: 40px;
   object-fit: contain;
 }
 
 .rent-catalog .card-spec-label {
   font-size: 0.62rem;
-  line-height: 1.2;
-  color: #666;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #111;
+  line-height: 1.15;
   margin-bottom: 2px;
 }
 
