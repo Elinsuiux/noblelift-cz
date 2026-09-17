@@ -22,7 +22,7 @@ const outDir = join(webRoot, "public", "pages", "vzv.cz", "cz", "pujcovna-vzv");
 const dumpDir = join(webRoot, "..", "pages", "vzv.cz", "cz", "pujcovna-vzv");
 const ASSET_ORIGIN = "https://temporary-rapid-breeze-8ofpwza.vercel.app";
 const SITE_PUJCOVNA = "/pages/vzv.cz/cz/pujcovna-vzv";
-const CATALOG_CSS = `${SITE_PUJCOVNA}/pujcovna-katalog.css?v=card-spec-icons-4`;
+const CATALOG_CSS = `${SITE_PUJCOVNA}/pujcovna-katalog.css?v=card-spec-icons-5`;
 
 const SPEC_ORDER = [
   "Pohon",
@@ -328,7 +328,7 @@ function renderCard(category, product) {
       const iconHtml = icon
         ? `<div class="card-spec-icon" aria-hidden="true"><img src="${icon}" alt=""></div>`
         : "";
-      return `<div class="card-spec">${iconHtml}<div class="card-spec-label">${escapeHtml(key)}</div><div class="card-spec-value">${escapeHtml(product.specs[key])}</div></div>`;
+      return `<div class="card-spec">${iconHtml}<div class="card-spec-value">${escapeHtml(product.specs[key])}</div></div>`;
     })
     .join("");
   const detail = localPath(category.slug, product);
