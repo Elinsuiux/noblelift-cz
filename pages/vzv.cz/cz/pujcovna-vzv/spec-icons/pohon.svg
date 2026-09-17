@@ -1,0 +1,29 @@
+<svg version="1.1" id="pohon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#464647;}
+	.st1{fill:#56a702;}
+</style>
+<g>
+	<!-- Drive pulley — one shared Pohon mark for AKU, Diesel and LPG -->
+	<circle class="st1" cx="124" cy="268" r="96"/>
+	<circle fill="#FFFFFF" cx="124" cy="268" r="38"/>
+	<circle class="st0" cx="124" cy="268" r="18"/>
+	<!-- Shaft into the motor -->
+	<rect class="st0" x="204" y="248" width="32" height="40"/>
+	<!-- Motor / engine housing -->
+	<rect class="st0" x="228" y="168" width="236" height="200" rx="16"/>
+	<!-- Cooling fins -->
+	<rect class="st0" x="250" y="126" width="24" height="50"/>
+	<rect class="st0" x="288" y="126" width="24" height="50"/>
+	<rect class="st0" x="326" y="126" width="24" height="50"/>
+	<!-- Terminal / valve cover -->
+	<rect class="st0" x="368" y="112" width="80" height="64" rx="8"/>
+	<!-- Output shaft -->
+	<rect class="st0" x="464" y="248" width="30" height="40"/>
+	<!-- Mounting feet + base -->
+	<rect class="st0" x="256" y="368" width="42" height="56"/>
+	<rect class="st0" x="394" y="368" width="42" height="56"/>
+	<rect class="st0" x="240" y="410" width="212" height="26"/>
+</g>
+</svg>
