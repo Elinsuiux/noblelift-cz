@@ -39,15 +39,16 @@
   box-shadow: 0 0 0 2px rgba(115, 251, 97, 0.45);
 }
 
-.rent-catalog .card.card-vzv {
+.rent-catalog .card.card-vzv,
+.rent-catalog article.card-vzv {
   background: #fff;
-  border: 0;
+  border: 0 !important;
   border-radius: 6px;
   overflow: hidden;
   height: 100%;
   display: flex;
   flex-direction: column;
-  box-shadow: none;
+  box-shadow: none !important;
   outline: none;
 }
 
@@ -55,7 +56,8 @@
   position: relative;
   width: 100%;
   padding-top: 66.625%;
-  background-color: #f3f3f3;
+  background-color: #fff;
+  border: 0;
   background-repeat: no-repeat !important;
   background-position: center !important;
   background-size: contain !important;
@@ -128,15 +130,16 @@
   padding: 10px 8px;
 }
 
-.rent-catalog .card-vzv-actions .btn-dark,
-.rent-catalog .card-vzv-actions .btn-dark:hover,
-.rent-catalog .card-vzv-actions .btn-dark:focus,
-.rent-catalog .card-vzv-actions .btn-dark:active {
-  background: transparent;
-  background-color: transparent;
-  color: #000;
-  border: 1px solid #000;
-  box-shadow: none;
+.rent-catalog .card-vzv-actions .btn.btn-dark,
+.rent-catalog .card-vzv-actions .btn.btn-dark:hover,
+.rent-catalog .card-vzv-actions .btn.btn-dark:focus,
+.rent-catalog .card-vzv-actions .btn.btn-dark:active,
+.rent-catalog .card-vzv-actions a.btn-dark:hover {
+  background: transparent !important;
+  background-color: transparent !important;
+  color: #1a1a1a !important;
+  border: 1px solid #d0d0d0 !important;
+  box-shadow: none !important;
 }
 
 .rent-catalog #forklifts-empty {
