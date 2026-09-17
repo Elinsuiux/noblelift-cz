@@ -142,6 +142,22 @@
   box-shadow: none !important;
 }
 
+.rent-catalog .card-vzv-actions .btn.btn-primary,
+.rent-catalog .card-vzv-actions .btn.btn-primary:hover,
+.rent-catalog .card-vzv-actions .btn.btn-primary:focus,
+.rent-catalog .card-vzv-actions .btn.btn-primary:active,
+.rent-catalog .card-vzv-actions a.btn-primary:hover,
+.rent-detail .rent-detail-actions .btn.btn-primary,
+.rent-detail .rent-detail-actions .btn.btn-primary:hover,
+.rent-detail .rent-detail-actions .btn.btn-primary:focus,
+.rent-detail .rent-detail-actions .btn.btn-primary:active {
+  background: #73fb61 !important;
+  background-color: #73fb61 !important;
+  border-color: #73fb61 !important;
+  color: #000 !important;
+  box-shadow: none !important;
+}
+
 .rent-catalog #forklifts-empty {
   display: none;
 }
