@@ -349,3 +349,13 @@ a.text-primary:hover,
   font-size: 0.9rem;
   font-weight: 600;
 }
+
+/* Location overlays on the wide home/contact banner — text is in the photo */
+.kontakt-pobocky--wide .kontakt-pobocky-pobocka-cover-overlay {
+  display: none !important;
+}
+
+.kontakt-pobocky--wide .kontakt-pobocky-pobocka-cover-text,
+.kontakt-pobocky--wide .kontakt-pobocky-pobocka-cover-text a {
+  color: transparent !important;
+}
