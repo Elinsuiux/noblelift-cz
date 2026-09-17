@@ -326,7 +326,7 @@ function machineDescription(category, product) {
 function specIconSrc(key, value) {
   if (key === "Pohon") {
     const file = POHON_ICONS[value] || "pohon-diesel.png";
-    return `${SITE_PUJCOVNA}/spec-icons/${file}?v=card-7`;
+    return `${SITE_PUJCOVNA}/spec-icons/${file}?v=card-8`;
   }
   const file = SPEC_ICONS[key];
   return file ? `${SITE_PUJCOVNA}/spec-icons/${file}?v=card-7` : "";
