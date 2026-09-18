@@ -1768,6 +1768,22 @@ label {
     max-width: 80%;
 }
 
+.modal-fluid {
+    top: 105px;
+}
+
+.modal {
+    z-index: 1080;
+}
+
+.modal-backdrop {
+    z-index: 1070;
+}
+
+body.modal-open .h-vzv {
+    z-index: 1040;
+}
+
 .info-text-content-item
 {
     padding: 10% 5%;
@@ -3106,20 +3122,37 @@ li.list-disc {
 
 .kontakt-pobocky--wide .kontakt-pobocky-map-hit {
     position: absolute;
-    top: 3.4%;
-    left: 0.4%;
-    width: 27%;
-    height: 43.5%;
+    top: 2%;
+    left: 0.8%;
+    width: 34%;
+    height: 62%;
     z-index: 4;
     display: block;
     font-size: 0;
     color: transparent;
     cursor: pointer;
+    pointer-events: auto;
 }
 
 .kontakt-pobocky--wide .kontakt-pobocky-map-hit--right {
     left: auto;
-    right: 0.4%;
+    right: 0.8%;
+}
+
+#prodejni-tym-pouzitych-voziku,
+#prodejni-tym-novych-voziku,
+#pujcovna-vzv-rent,
+#vzv-parts,
+#USERVIS,
+#vykupni-tym,
+#cervena-voda,
+#praha,
+#fakturacni-udaje {
+    scroll-margin-top: 120px;
+}
+
+html {
+    scroll-padding-top: 120px;
 }
 
 @media (max-width: 768px) {
