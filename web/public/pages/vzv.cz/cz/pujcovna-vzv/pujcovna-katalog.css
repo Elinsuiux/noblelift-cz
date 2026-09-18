@@ -9,6 +9,11 @@
   background: #eee;
 }
 
+.rent-catalog #filtr .bg-light-dark > .col-12.text-primary {
+  color: #1a1a1a !important;
+  font-weight: 700;
+}
+
 .rent-catalog .new-breadcrumb {
   color: #666;
   text-decoration: none;
