@@ -3061,3 +3061,47 @@ li.list-disc {
 .kontakt-pobocky-pobocka-cover-text a {
     color: #fff !important;
 }
+
+/* Home + contact: attached dual-site banner (text is in the photo) */
+.kontakt-pobocky--wide {
+    padding: 0;
+}
+
+.kontakt-pobocky--wide > [class*="col-"] {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.kontakt-pobocky--wide .kontakt-pobocky-pobocka img {
+    width: 100%;
+    height: auto !important;
+    display: block;
+}
+
+.kontakt-pobocky--wide .kontakt-pobocky-pobocka-cover {
+    display: none;
+}
+
+.kontakt-pobocky--wide .kontakt-pobocky-map-hit {
+    position: absolute;
+    top: 3.4%;
+    left: 0.4%;
+    width: 27%;
+    height: 43.5%;
+    z-index: 4;
+    display: block;
+    font-size: 0;
+    color: transparent;
+    cursor: pointer;
+}
+
+.kontakt-pobocky--wide .kontakt-pobocky-map-hit--right {
+    left: auto;
+    right: 0.4%;
+}
+
+@media (max-width: 768px) {
+    .kontakt-pobocky--wide .kontakt-pobocky-pobocka img {
+        height: auto;
+    }
+}

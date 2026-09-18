@@ -349,3 +349,24 @@ a.text-primary:hover,
   font-size: 0.9rem;
   font-weight: 600;
 }
+
+/* Contact team cards — name bar + email from attached mockup */
+.card-contact .card-body-jmeno {
+  background: #21B30E !important;
+  color: #ffffff !important;
+}
+
+.card-contact .card-body-email a,
+.card-contact .card-body-email a:hover {
+  color: #149404 !important;
+}
+
+/* Location overlays on the wide home/contact banner — text is in the photo */
+.kontakt-pobocky--wide .kontakt-pobocky-pobocka-cover-overlay {
+  display: none !important;
+}
+
+.kontakt-pobocky--wide .kontakt-pobocky-pobocka-cover-text,
+.kontakt-pobocky--wide .kontakt-pobocky-pobocka-cover-text a {
+  color: transparent !important;
+}
