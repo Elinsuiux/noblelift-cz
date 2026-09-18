@@ -22,7 +22,7 @@ const outDir = join(webRoot, "public", "pages", "vzv.cz", "cz", "pujcovna-vzv");
 const dumpDir = join(webRoot, "..", "pages", "vzv.cz", "cz", "pujcovna-vzv");
 const ASSET_ORIGIN = "https://temporary-rapid-breeze-8ofpwza.vercel.app";
 const SITE_PUJCOVNA = "/pages/vzv.cz/cz/pujcovna-vzv";
-const CATALOG_CSS = `${SITE_PUJCOVNA}/pujcovna-katalog.css?v=card-spec-icons-15`;
+const CATALOG_CSS = `${SITE_PUJCOVNA}/pujcovna-katalog.css?v=card-spec-icons-16`;
 
 const SPEC_ORDER = [
   "Pohon",
@@ -375,8 +375,8 @@ function renderCard(category, product) {
                             <div class="card-body-parametry">${specRows}</div>
                         </div>
                         <div class="card-vzv-actions">
-                            <a class="btn btn-dark" href="${detail}">Detail</a>
-                            <a class="btn btn-primary" href="${poptatPath(product)}">Poptat</a>
+                            <a class="btn btn-dark rounded-1" href="${detail}">Detail</a>
+                            <a class="btn btn-primary rounded-1" href="${poptatPath(product)}">Poptat</a>
                         </div>
                     </article>
                 </div>`;
@@ -431,8 +431,8 @@ function renderDetail(category, product) {
                         <div class="row">${specBlocks}</div>
                         <div class="rent-detail-copy">${copy}</div>
                         <div class="rent-detail-actions">
-                            <a class="btn btn-dark" href="${listing}">Technický list</a>
-                            <a class="btn btn-primary" href="${poptatPath(product)}">Poptat</a>
+                            <a class="btn btn-dark rounded-1" href="${listing}">Technický list</a>
+                            <a class="btn btn-primary rounded-1" href="${poptatPath(product)}">Poptat</a>
                         </div>
                     </div>
                 </div>
