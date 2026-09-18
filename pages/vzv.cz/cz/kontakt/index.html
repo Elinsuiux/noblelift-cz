@@ -100,7 +100,7 @@
         <link href='../../../../assets/vzv.cz/assets/dist/slider/css/rSlider.min.css' rel='stylesheet'>
     <script src="../../../../assets/vzv.cz/assets/dist/slider/src/js/rSlider.js"></script>
 
-        <link rel="stylesheet" href="../../../../assets/vzv.cz/assets/css/layout.css?v=loc-6" />
+        <link rel="stylesheet" href="../../../../assets/vzv.cz/assets/css/layout.css?v=loc-8" />
     <link rel="stylesheet" href="../../../../assets/vzv.cz/assets/css/layout_new.css" />
     <link rel="stylesheet" href="../../../../assets/vzv.cz/assets/css/header.css" />
     <link rel="stylesheet" href="../../../../assets/vzv.cz/assets/css/footer.css" />
@@ -3807,22 +3807,43 @@
                         </div>
                         <div class="col-12 text-center mb-5">
                             <div class="col-12 text-center mb-5">
-                                <a href="#prodejni-tym-pouzitych-voziku" class="btn btn-outline-light btn-lg"><div class="fx roundedCircle boxButtonChooseWizardCall">Prodej</div></a>
-                                <a href="#vykupni-tym" class="btn btn-outline-light btn-lg"><div class="fx roundedCircle boxButtonChooseWizardCall">Výkup</div></a>
-                                <a href="#pujcovna-vzv-rent" class="btn btn-outline-light btn-lg"><div class="fx roundedCircle boxButtonChooseWizardCall">Půjčovna</div></a>
-                                <a href="#vzv-parts" class="btn btn-outline-light btn-lg"><div class="fx roundedCircle boxButtonChooseWizardCall">Náhradní díly</div></a>
-                                <a href="#USERVIS" class="btn btn-outline-light btn-lg"><div class="fx roundedCircle boxButtonChooseWizardCall">Servis</div></a>
+                                <a href="#prodejni-tym-pouzitych-voziku" class="btn btn-outline-light btn-lg"><span class="fx roundedCircle boxButtonChooseWizardCall">Prodej</span></a>
+                                <a href="#vykupni-tym" class="btn btn-outline-light btn-lg"><span class="fx roundedCircle boxButtonChooseWizardCall">Výkup</span></a>
+                                <a href="#pujcovna-vzv-rent" class="btn btn-outline-light btn-lg"><span class="fx roundedCircle boxButtonChooseWizardCall">Půjčovna</span></a>
+                                <a href="#vzv-parts" class="btn btn-outline-light btn-lg"><span class="fx roundedCircle boxButtonChooseWizardCall">Náhradní díly</span></a>
+                                <a href="#USERVIS" class="btn btn-outline-light btn-lg"><span class="fx roundedCircle boxButtonChooseWizardCall">Servis</span></a>
                             </div>
                             <div class="col-12 text-center mt-2 mb-2">
                                 <h2>Adresa skladu</h2>
                             </div>
                             <div class="col-12 text-center mt-2">
-                                <a href="#cervena-voda" class="btn btn-outline-light btn-lg"><div class="fx roundedCircle boxButtonChooseWizardCall">Červená Voda</div></a>
-                                <a href="#praha" class="btn btn-outline-light btn-lg"><div class="fx roundedCircle boxButtonChooseWizardCall">Praha</div></a>
-                                <a href="#fakturacni-udaje" class="btn btn-outline-light btn-lg"><div class="fx roundedCircle boxButtonChooseWizardCall">Fakturační adresa</div></a>
+                                <a href="#cervena-voda" class="btn btn-outline-light btn-lg"><span class="fx roundedCircle boxButtonChooseWizardCall">Červená Voda</span></a>
+                                <a href="#praha" class="btn btn-outline-light btn-lg"><span class="fx roundedCircle boxButtonChooseWizardCall">Praha</span></a>
+                                <a href="#fakturacni-udaje" class="btn btn-outline-light btn-lg"><span class="fx roundedCircle boxButtonChooseWizardCall">Fakturační adresa</span></a>
                             </div>
                         </div>
                     </div>
+                    <script>
+                    (function () {
+                        function go(id) {
+                            var target = document.getElementById(id);
+                            if (!target) return false;
+    var header = document.querySelector('.h-vzv');
+    var headerH = header ? header.offsetHeight : 0;
+    var offset = (headerH > 40 ? headerH : 96) + 28;
+                            var top = target.getBoundingClientRect().top + window.pageYOffset - offset;
+                            window.scrollTo({ top: Math.max(0, top), behavior: 'smooth' });
+                            if (history.replaceState) history.replaceState(null, '', '#' + id);
+                            return true;
+                        }
+                        document.querySelectorAll('.kontakt-rozcestnik-oddeleni a[href^="#"]').forEach(function (el) {
+                            el.addEventListener('click', function (e) {
+                                var id = decodeURIComponent((el.getAttribute('href') || '').replace(/^#/, ''));
+                                if (go(id)) e.preventDefault();
+                            });
+                        });
+                    })();
+                    </script>
                 </div>
                 <div class="col-lg-6 col-md-6 col-12">
                     <div class="row">
@@ -4173,6 +4194,7 @@
                                                             </div>
         
                         <div class="container-fluid separator separator-light text-center" id="USERVIS">
+                <span id="servis"></span>
                 <div class="container">
                     <div class="row">
                         <div class="col-12">
@@ -4426,14 +4448,16 @@
     <div class="row kontakt-pobocky kontakt-pobocky--wide">
     <div class="col-lg-6 col-md-6 col-12">
         <div class="kontakt-pobocky-pobocka" id="cervena-voda">
-            <img src="../../../../assets/vzv.cz/assets/img/uvod/areal-cv-2026.webp?v=loc-1" class="img-fluid" alt="Hlavní sklad Červená Voda, 561 61 Červená Voda 535">
-            <a href="#modal-pobocka-cv" class="kontakt-pobocky-map-hit kontakt-pobocky-map-hit--right" data-bs-toggle="modal" data-bs-target="#modal-pobocka-cv" aria-label="Ukázat na mapě">Ukázat na mapě</a>
+            <a href="#" class="kontakt-pobocky-map-link" data-bs-target="#modal-pobocka-cv" role="button" aria-label="Ukázat Červenou Vodu na mapě">
+                <img src="../../../../assets/vzv.cz/assets/img/uvod/areal-cv-2026.webp?v=loc-1" class="img-fluid" alt="Hlavní sklad Červená Voda, 561 61 Červená Voda 535">
+            </a>
         </div>
     </div>
     <div class="col-lg-6 col-md-6 col-12">
         <div class="kontakt-pobocky-pobocka" id="praha">
-            <img src="../../../../assets/vzv.cz/assets/img/uvod/areal-praha-2026.webp?v=loc-1" class="img-fluid" alt="Showroom Praha, Do Čertous 2717/5">
-            <a href="#modal-pobocka-pha" class="kontakt-pobocky-map-hit" data-bs-toggle="modal" data-bs-target="#modal-pobocka-pha" aria-label="Ukázat na mapě">Ukázat na mapě</a>
+            <a href="#" class="kontakt-pobocky-map-link" data-bs-target="#modal-pobocka-pha" role="button" aria-label="Ukázat Prahu na mapě">
+                <img src="../../../../assets/vzv.cz/assets/img/uvod/areal-praha-2026.webp?v=loc-1" class="img-fluid" alt="Showroom Praha, Do Čertous 2717/5">
+            </a>
         </div>
     </div>
 </div>
@@ -4467,23 +4491,32 @@
 </div>
 
 <script>
-
-    $('#modal-pobocka-cv').on('shown.bs.modal', function () {
-        const f = document.getElementById("pobocka-cv-frame");
-        setTimeout(() => {
+(function () {
+    function refreshMapFrame(id) {
+        const f = document.getElementById(id);
+        if (!f) return;
+        setTimeout(function () {
             const src = f.src.split("?")[0];
             f.src = src + "?r=" + Date.now();
         }, 250);
+    }
+    function openPobockaModal(selector) {
+        const modalEl = document.querySelector(selector);
+        if (!modalEl || !window.bootstrap || !bootstrap.Modal) return false;
+        bootstrap.Modal.getOrCreateInstance(modalEl).show();
+        return true;
+    }
+    document.querySelectorAll('.kontakt-pobocky-map-link, .kontakt-pobocky-map-hit').forEach(function (el) {
+        el.addEventListener('click', function (e) {
+            e.preventDefault();
+            openPobockaModal(el.getAttribute('data-bs-target'));
+        });
     });
-
-
-    $('#modal-pobocka-pha').on('shown.bs.modal', function () {
-        const p = document.getElementById("pobocka-praha-frame");
-        setTimeout(() => {
-            const src = p.src.split("?")[0];
-            p.src = src + "?r=" + Date.now();
-        }, 250);
-    });
+    var cv = document.getElementById('modal-pobocka-cv');
+    var pha = document.getElementById('modal-pobocka-pha');
+    if (cv) cv.addEventListener('shown.bs.modal', function () { refreshMapFrame('pobocka-cv-frame'); });
+    if (pha) pha.addEventListener('shown.bs.modal', function () { refreshMapFrame('pobocka-praha-frame'); });
+})();
 </script>
 
 
@@ -4815,7 +4848,7 @@
 <script src="../../../../assets/vzv.cz/assets/dist/bootstrap/js/bootstrap.bundle.min.js"></script>
 <script type="text/javascript" src="../../../../assets/vzv.cz/assets/js/script.js"></script>
 <script type="text/javascript" src="../../../../assets/vzv.cz/assets/js/script_new.js"></script>
-<script type="text/javascript" src="../../../../assets/vzv.cz/assets/js/functions.js"></script>
+<script type="text/javascript" src="../../../../assets/vzv.cz/assets/js/functions.js?v=loc-8"></script>
 <script type="text/javascript" src="../../../../assets/vzv.cz/assets/js/cookies.js"></script>
 <script src="../../../../assets/vzv.cz/assets/js/voziky_skladem.js"></script>
 <script src="../../../../assets/vzv.cz/assets/js/parkoviste.js"></script>
