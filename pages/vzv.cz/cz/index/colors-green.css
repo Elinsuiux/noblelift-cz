@@ -674,6 +674,24 @@ a.text-primary:hover,
   font-weight: 600 !important;
 }
 
+.btn-yellow,
+.btn-yellow.btn-lg,
+a.btn.btn-yellow {
+  color: #ffffff !important;
+  background: transparent !important;
+  background-color: transparent !important;
+  border: 2px solid #73fb61 !important;
+}
+
+.btn-yellow:hover,
+.btn-yellow:focus,
+.btn-yellow:active,
+a.btn.btn-yellow:hover {
+  color: #ffffff !important;
+  background: transparent !important;
+  border-color: #73fb61 !important;
+}
+
 /* Location overlays on the wide home/contact banner — text is in the photo */
 .kontakt-pobocky--wide .kontakt-pobocky-pobocka-cover-overlay {
   display: none !important;

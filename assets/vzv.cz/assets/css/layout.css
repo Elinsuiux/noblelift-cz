@@ -99,14 +99,18 @@ a:hover {
     box-shadow: none!important;
 }
 .btn-yellow {
-    color: #000000;
-    background-color: var(--color-yellow);
-    border-color: var(--color-yellow);
+    color: #ffffff;
+    background-color: transparent;
+    border: 2px solid #73fb61;
+    border-radius: 0.3rem;
 }
 
-.btn-yellow:hover {
-    background-color: var(--color-yellow);
-    border-color: var(--color-yellow);
+.btn-yellow:hover,
+.btn-yellow:focus,
+.btn-yellow:active {
+    color: #ffffff;
+    background-color: transparent;
+    border-color: #73fb61;
 }
 
 
@@ -3064,12 +3068,30 @@ li.list-disc {
 
 /* Home + contact: attached dual-site banner (text is in the photo) */
 .kontakt-pobocky--wide {
-    padding: 0;
+    padding: 0 !important;
+    margin: 0 !important;
+    --bs-gutter-x: 0;
+    --bs-gutter-y: 0;
 }
 
 .kontakt-pobocky--wide > [class*="col-"] {
-    padding-left: 0;
-    padding-right: 0;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+.separator-light + .container-fluid:has(.kontakt-pobocky--wide),
+.container-fluid:has(> .kontakt-pobocky--wide) {
+    padding: 0 !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+.separator-light:has(+ .container-fluid .kontakt-pobocky--wide) .separator-content {
+    padding-bottom: 18px;
+}
+
+.separator-light:has(+ .container-fluid .kontakt-pobocky--wide) .separator-content h2 {
+    margin-bottom: 0;
 }
 
 .kontakt-pobocky--wide .kontakt-pobocky-pobocka img {
