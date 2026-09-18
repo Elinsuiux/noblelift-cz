@@ -165,7 +165,12 @@
 .rent-catalog .card-vzv-actions .btn.btn-dark:hover,
 .rent-catalog .card-vzv-actions .btn.btn-dark:focus,
 .rent-catalog .card-vzv-actions .btn.btn-dark:active,
-.rent-catalog .card-vzv-actions a.btn-dark:hover {
+.rent-catalog .card-vzv-actions a.btn-dark:hover,
+.rent-detail .rent-detail-actions .btn.btn-dark,
+.rent-detail .rent-detail-actions .btn.btn-dark:hover,
+.rent-detail .rent-detail-actions .btn.btn-dark:focus,
+.rent-detail .rent-detail-actions .btn.btn-dark:active,
+.rent-detail .rent-detail-actions a.btn-dark:hover {
   background: transparent !important;
   background-color: transparent !important;
   color: #1a1a1a !important;
@@ -234,8 +239,9 @@
 
 .rent-spec-icon img {
   display: block;
-  width: 44px;
-  height: 44px;
+  height: 40px;
+  width: auto;
+  max-width: none;
   object-fit: contain;
 }
 

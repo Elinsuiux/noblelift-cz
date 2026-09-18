@@ -22,7 +22,7 @@ const outDir = join(webRoot, "public", "pages", "vzv.cz", "cz", "pujcovna-vzv");
 const dumpDir = join(webRoot, "..", "pages", "vzv.cz", "cz", "pujcovna-vzv");
 const ASSET_ORIGIN = "https://temporary-rapid-breeze-8ofpwza.vercel.app";
 const SITE_PUJCOVNA = "/pages/vzv.cz/cz/pujcovna-vzv";
-const CATALOG_CSS = `${SITE_PUJCOVNA}/pujcovna-katalog.css?v=card-spec-icons-7`;
+const CATALOG_CSS = `${SITE_PUJCOVNA}/pujcovna-katalog.css?v=card-spec-icons-8`;
 
 const SPEC_ORDER = [
   "Pohon",
@@ -386,14 +386,19 @@ function renderDetail(category, product) {
   const specBlocks = SPEC_ORDER.filter(
     (key) => product.specs[key] && product.specs[key] !== "0",
   )
-    .map(
-      (key) => `<div class="col-6 col-md-4 mb-4">
+    .map((key) => {
+      const icon = specIconSrc(key, product.specs[key]);
+      const iconHtml = icon
+        ? `<div class="rent-spec-icon" aria-hidden="true"><img src="${icon}" alt=""></div>`
+        : "";
+      return `<div class="col-6 col-md-4 mb-4">
                         <div class="rent-spec">
+                            ${iconHtml}
                             <div class="rent-spec-label">${escapeHtml(key)}</div>
                             <div class="rent-spec-value">${escapeHtml(product.specs[key])}</div>
                         </div>
-                    </div>`,
-    )
+                    </div>`;
+    })
     .join("");
   const listing = `${listingPath(category.slug)}/index.html`;
 
@@ -423,7 +428,7 @@ function renderDetail(category, product) {
                         <div class="row">${specBlocks}</div>
                         <div class="rent-detail-copy">${machineDescription(category, product)}</div>
                         <div class="rent-detail-actions">
-                            <a class="btn btn-dark" href="${listing}">Zpět na výpis</a>
+                            <a class="btn btn-dark" href="${listing}">Technický list</a>
                             <a class="btn btn-primary" href="${poptatPath(product)}">Poptat</a>
                         </div>
                     </div>
