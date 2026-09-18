@@ -107,7 +107,7 @@
     <link rel="stylesheet" href="https://temporary-rapid-breeze-8ofpwza.vercel.app/assets/vzv.cz/assets/css/mobile.css" />
     <link rel="stylesheet" href="https://temporary-rapid-breeze-8ofpwza.vercel.app/assets/vzv.cz/assets/css/colors.css" />
     <link rel="stylesheet" href="/pages/vzv.cz/cz/pujcovna-vzv/colors-green.css" />
-    <link rel="stylesheet" href="/pages/vzv.cz/cz/pujcovna-vzv/pujcovna-katalog.css?v=card-spec-icons-13" />
+    <link rel="stylesheet" href="/pages/vzv.cz/cz/pujcovna-vzv/pujcovna-katalog.css?v=card-spec-icons-14" />
         <script type="text/javascript" src="https://temporary-rapid-breeze-8ofpwza.vercel.app/assets/vzv.cz/assets/js/konverze.js"></script>
 
     <script>
@@ -3881,8 +3881,7 @@
                 <div class="col-xxl-8 col-xl-10 mx-auto">
                     <div class="col-12 text-center">
                         <h1 class="text-uppercase" id="nadpis">Pracovní plošiny</h1>
-                        <p id="popis" class="collapsed">Pracovní plošiny jsou uzpůsobené pro použití v lehkých i těžších terénech. Umožňují montážní a servisní práce ve výškách. Pracovní koš využijete pro časově náročné práce.</p>
-                        <a id="popis-vice-btn" href="javascript:void(0)">Číst dále</a>
+                        <p id="popis">Pracovní plošiny jsou uzpůsobené pro použití v lehkých i těžších terénech. Umožňují montážní a servisní práce ve výškách. Pracovní koš využijete pro časově náročné práce.</p>
                     </div>
                     <nav class="rent-pills" aria-label="Typ stroje">
         <span class="rent-pills-label">Typ:</span>
@@ -4471,15 +4470,6 @@
       apply();
     });
   });
-  var more = document.getElementById("popis-vice-btn");
-  var popis = document.getElementById("popis");
-  if (more && popis) {
-    more.addEventListener("click", function (event) {
-      event.preventDefault();
-      popis.classList.remove("collapsed");
-      more.remove();
-    });
-  }
   apply();
 })();
 </script>

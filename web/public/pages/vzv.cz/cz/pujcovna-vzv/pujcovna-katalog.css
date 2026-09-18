@@ -28,21 +28,8 @@
   font-weight: 700;
 }
 
-.rent-catalog #popis.collapsed {
-  max-height: 4.6em;
-  overflow: hidden;
-}
-
 .rent-catalog #popis {
-  margin-bottom: 28px;
-}
-
-.rent-catalog #popis-vice-btn {
-  color: #0e6303;
-  font-weight: 600;
-  text-decoration: none;
-  display: inline-block;
-  margin-bottom: 20px;
+  margin: 0 auto 32px;
 }
 
 .rent-catalog .category-box.is-active {
@@ -103,7 +90,7 @@
 }
 
 .rent-catalog h1#nadpis {
-  font-weight: 700 !important;
+  font-weight: 500 !important;
   color: #1a1a1a;
 }
 

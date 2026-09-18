@@ -22,7 +22,7 @@ const outDir = join(webRoot, "public", "pages", "vzv.cz", "cz", "pujcovna-vzv");
 const dumpDir = join(webRoot, "..", "pages", "vzv.cz", "cz", "pujcovna-vzv");
 const ASSET_ORIGIN = "https://temporary-rapid-breeze-8ofpwza.vercel.app";
 const SITE_PUJCOVNA = "/pages/vzv.cz/cz/pujcovna-vzv";
-const CATALOG_CSS = `${SITE_PUJCOVNA}/pujcovna-katalog.css?v=card-spec-icons-13`;
+const CATALOG_CSS = `${SITE_PUJCOVNA}/pujcovna-katalog.css?v=card-spec-icons-14`;
 
 const SPEC_ORDER = [
   "Pohon",
@@ -664,8 +664,7 @@ function renderCatalog(category, products) {
                 <div class="col-xxl-8 col-xl-10 mx-auto">
                     <div class="col-12 text-center">
                         <h1 class="text-uppercase" id="nadpis">${escapeHtml(category.title)}</h1>
-                        <p id="popis" class="collapsed">${escapeHtml(category.intro)}</p>
-                        <a id="popis-vice-btn" href="javascript:void(0)">Číst dále</a>
+                        <p id="popis">${escapeHtml(category.intro)}</p>
                     </div>
                     ${renderTypePills(category.slug)}
                     <div class="d-md-none px-3 mt-2 mb-3 col-12 fs-7" id="breadcrumb-mobile">
@@ -826,15 +825,6 @@ function renderCatalog(category, products) {
       apply();
     });
   });
-  var more = document.getElementById("popis-vice-btn");
-  var popis = document.getElementById("popis");
-  if (more && popis) {
-    more.addEventListener("click", function (event) {
-      event.preventDefault();
-      popis.classList.remove("collapsed");
-      more.remove();
-    });
-  }
   apply();
 })();
 </script>
@@ -932,15 +922,15 @@ function patchListingPills(html, slug) {
   if (/<nav class="rent-pills"[\s\S]*?<\/nav>/.test(html)) {
     return html.replace(/<nav class="rent-pills"[\s\S]*?<\/nav>/, pills);
   }
-  const afterIntro = `                        <a id="popis-vice-btn" href="javascript:void(0)">Číst dále</a>
-                    </div>
+  const afterIntro = `                    </div>
                     ${pills}
                     <div class="d-md-none px-3 mt-2 mb-3 col-12 fs-7" id="breadcrumb-mobile">`;
-  const needle = `                        <a id="popis-vice-btn" href="javascript:void(0)">Číst dále</a>
-                    </div>
+  const needle = `                    </div>
                     <div class="d-md-none px-3 mt-2 mb-3 col-12 fs-7" id="breadcrumb-mobile">`;
-  if (!html.includes(needle)) throw new Error("Could not find catalog listing to insert type pills");
-  return html.replace(needle, afterIntro);
+  if (html.includes('<p id="popis"') && html.includes(needle)) {
+    return html.replace(needle, afterIntro);
+  }
+  throw new Error("Could not find catalog listing to insert type pills");
 }
 
 function patchDetailPills(html, slug) {
