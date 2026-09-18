@@ -236,6 +236,14 @@
   object-fit: contain;
 }
 
+.fancybox-container .fancybox-bg {
+  background: #222;
+}
+
+.fancybox-container.fancybox-is-open .fancybox-bg {
+  opacity: 0.82;
+}
+
 .rent-spec {
   background: #fff;
   border: 1px solid #e6e6e6;
