@@ -22,7 +22,7 @@ const outDir = join(webRoot, "public", "pages", "vzv.cz", "cz", "pujcovna-vzv");
 const dumpDir = join(webRoot, "..", "pages", "vzv.cz", "cz", "pujcovna-vzv");
 const ASSET_ORIGIN = "https://temporary-rapid-breeze-8ofpwza.vercel.app";
 const SITE_PUJCOVNA = "/pages/vzv.cz/cz/pujcovna-vzv";
-const CATALOG_CSS = `${SITE_PUJCOVNA}/pujcovna-katalog.css?v=card-spec-icons-8`;
+const CATALOG_CSS = `${SITE_PUJCOVNA}/pujcovna-katalog.css?v=card-spec-icons-9`;
 
 const SPEC_ORDER = [
   "Pohon",
@@ -401,6 +401,7 @@ function renderDetail(category, product) {
     })
     .join("");
   const listing = `${listingPath(category.slug)}/index.html`;
+  const thumbs = renderDetailThumbs(product);
 
   return `<div class="content-body rent-catalog rent-detail">
     <div class="container-fluid">
@@ -420,23 +421,67 @@ function renderDetail(category, product) {
                 <hr />
                 <div class="row g-4 align-items-start pb-5">
                     <div class="col-12 col-lg-6">
-                        <div class="rent-detail-photo">
-                            <img src="${escapeHtml(product.img)}" alt="${escapeHtml(product.name)}">
-                        </div>
+                        ${renderDetailPhoto(product)}
                     </div>
                     <div class="col-12 col-lg-6">
                         <div class="row">${specBlocks}</div>
-                        <div class="rent-detail-copy">${machineDescription(category, product)}</div>
+                        <div class="rent-detail-copy">${product.copy || machineDescription(category, product)}</div>
                         <div class="rent-detail-actions">
                             <a class="btn btn-dark" href="${listing}">Technický list</a>
                             <a class="btn btn-primary" href="${poptatPath(product)}">Poptat</a>
                         </div>
                     </div>
                 </div>
+                ${thumbs}
             </div>
         </div>
     </div>
 </div>`;
+}
+
+function parseFotoPath(img) {
+  const decoded = String(img || "").replaceAll("&amp;", "&");
+  const match = decoded.match(/foto\/(fotorent|fotov)\/([^/]+)\/([^/?&]+)/i);
+  if (!match) return null;
+  return { kind: match[1], folder: match[2], file: match[3] };
+}
+
+function fullFotoUrl(kind, folder, file) {
+  return `https://admin.vzv.cz/foto/${kind}/${folder}/${file}`;
+}
+
+function renderDetailPhoto(product) {
+  const parsed = parseFotoPath(product.img);
+  const name = escapeHtml(product.name);
+  const href = parsed
+    ? fullFotoUrl(parsed.kind, parsed.folder, `${parsed.folder}-01.jpg`)
+    : product.img;
+  const src = parsed
+    ? fullFotoUrl(parsed.kind, parsed.folder, `${parsed.folder}-01.jpg`)
+    : product.img;
+  return `<div class="rent-detail-photo">
+                            <a href="${escapeHtml(href)}" data-fancybox="images" data-caption="${name}">
+                                <img src="${escapeHtml(src)}" alt="${name}">
+                            </a>
+                        </div>`;
+}
+
+function renderDetailThumbs(product) {
+  const photos = product.photos || [];
+  if (photos.length < 2) return "";
+  const name = escapeHtml(product.name);
+  const items = photos
+    .map((photo) => {
+      const thumb = `https://admin.vzv.cz/img.php?img=foto/${photo.kind}/${photo.folder}/${photo.file}&width=400&height=266`;
+      const href = fullFotoUrl(photo.kind, photo.folder, photo.file);
+      return `<div class="col-6 col-sm-4 col-xl-3 p-2">
+                        <a href="${escapeHtml(href)}" data-fancybox="images" data-caption="${name}">
+                            <img src="${escapeHtml(thumb)}" alt="${name}">
+                        </a>
+                    </div>`;
+    })
+    .join("");
+  return `<div class="row g-2 rent-detail-thumbs pb-5">${items}</div>`;
 }
 
 function checkbox(id, value, label, filter) {

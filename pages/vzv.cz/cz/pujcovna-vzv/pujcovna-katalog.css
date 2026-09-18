@@ -209,12 +209,27 @@
 }
 
 .rent-detail-photo {
-  background: #f3f3f3;
-  border: 1px solid #e0e0e0;
-  padding: 16px;
+  background: transparent;
+  border: none;
+  padding: 0;
 }
 
 .rent-detail-photo img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+.rent-detail-thumbs {
+  margin: 0;
+}
+
+.rent-detail-thumbs a {
+  display: block;
+}
+
+.rent-detail-thumbs img {
   width: 100%;
   height: auto;
   display: block;
