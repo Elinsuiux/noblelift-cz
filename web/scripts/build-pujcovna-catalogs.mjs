@@ -402,6 +402,10 @@ function renderDetail(category, product) {
     .join("");
   const listing = `${listingPath(category.slug)}/index.html`;
   const thumbs = renderDetailThumbs(product);
+  const copy = sanitizeCopy(product.copy) || machineDescription(category, product);
+  const heroRowClass = thumbs
+    ? "row g-4 align-items-start"
+    : "row g-4 align-items-start pb-5";
 
   return `<div class="content-body rent-catalog rent-detail">
     <div class="container-fluid">
@@ -419,13 +423,13 @@ function renderDetail(category, product) {
                     <span class="new-breadcrumb is-current">${escapeHtml(product.name)}</span>
                 </div>
                 <hr />
-                <div class="row g-4 align-items-start pb-5">
+                <div class="${heroRowClass}">
                     <div class="col-12 col-lg-6">
                         ${renderDetailPhoto(product)}
                     </div>
                     <div class="col-12 col-lg-6">
                         <div class="row">${specBlocks}</div>
-                        <div class="rent-detail-copy">${product.copy || machineDescription(category, product)}</div>
+                        <div class="rent-detail-copy">${copy}</div>
                         <div class="rent-detail-actions">
                             <a class="btn btn-dark" href="${listing}">Technický list</a>
                             <a class="btn btn-primary" href="${poptatPath(product)}">Poptat</a>
@@ -439,9 +443,25 @@ function renderDetail(category, product) {
 </div>`;
 }
 
+function sanitizeCopy(html) {
+  const raw = String(html || "");
+  const paras = [];
+  const re = /<p\b[^>]*>[\s\S]*?<\/p>/gi;
+  let last = 0;
+  let match;
+  while ((match = re.exec(raw))) {
+    if (paras.length && match.index - last > 40) break;
+    const chunk = match[0];
+    if (/<(meta|link|script|html|head|body)\b/i.test(chunk)) break;
+    paras.push(chunk.replace(/\r\n/g, "\n"));
+    last = match.index + chunk.length;
+  }
+  return paras.join("");
+}
+
 function parseFotoPath(img) {
   const decoded = String(img || "").replaceAll("&amp;", "&");
-  const match = decoded.match(/foto\/(fotorent|fotov)\/([^/]+)\/([^/?&]+)/i);
+  const match = decoded.match(/foto\/(fotorent|fotov|fotoch)\/([^/]+)\/([^/?&]+)/i);
   if (!match) return null;
   return { kind: match[1], folder: match[2], file: match[3] };
 }
