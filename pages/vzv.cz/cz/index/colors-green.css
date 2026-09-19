@@ -679,7 +679,7 @@ a.text-primary:hover,
   opacity: 1;
 }
 
-/* News dates dark grey; Číst více lime, dark green on hover */
+/* News dates dark grey; Číst více grey, dark green on hover */
 .cist-vice,
 .modal-cookies a {
   font-weight: 400 !important;
@@ -690,7 +690,7 @@ a.text-primary:hover,
 }
 
 .cist-vice {
-  color: #73fb61 !important;
+  color: #4d4d4d !important;
 }
 
 .cist-vice:hover {
