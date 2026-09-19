@@ -125,13 +125,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 36px;
+  height: 28px;
   margin: 0 0 4px;
 }
 
 .rent-catalog .card-spec-icon img {
   display: block;
-  height: 32px;
+  height: 24px;
   width: auto;
   max-width: none;
   object-fit: contain;
