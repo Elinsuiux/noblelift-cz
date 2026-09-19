@@ -66,12 +66,12 @@
   fill: #000000 !important;
 }
 
-/* Header CTAs: lime E-SHOP + white phone, outline handset, 10px corners */
+/* Header CTAs: lime E-SHOP + white phone, outline handset, 4px corners */
 .btn-eshop {
   background: #73fb61 !important;
   border: 2px solid #73fb61 !important;
   color: #111 !important;
-  border-radius: 10px !important;
+  border-radius: 4px !important;
   font-weight: 600;
   min-height: 40px;
   display: inline-flex;
@@ -93,7 +93,7 @@
 .btn-phone {
   background-color: #ffffff !important;
   border: 2px solid #ffffff !important;
-  border-radius: 10px !important;
+  border-radius: 4px !important;
   color: #111 !important;
   font-weight: 600;
   min-height: 40px;
