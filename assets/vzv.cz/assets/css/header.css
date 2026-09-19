@@ -54,23 +54,29 @@
 }
 
 .btn-eshop {
-    color: #73fb61 !important;
-    background: rgba(0, 0, 0, 0.55) !important;
+    color: #111 !important;
+    background: #73fb61 !important;
     border: 2px solid #73fb61 !important;
-    font-size: 0.78rem;
-    padding: 0.32rem 0.85rem;
+    border-radius: 4px !important;
+    font-size: 0.82rem;
+    font-weight: 600;
+    line-height: 1.2;
+    padding: 0.55rem 1.35rem;
+    min-height: 40px;
+    display: inline-flex;
+    align-items: center;
 }
 
 .btn-eshop:hover,
 .btn-eshop:focus,
 .btn-eshop:active {
-    background: rgba(0, 0, 0, 0.72) !important;
-    border-color: #73fb61 !important;
-    color: #73fb61 !important;
+    background: #5fe84d !important;
+    border-color: #5fe84d !important;
+    color: #111 !important;
 }
 
 .btn-eshop svg {
-    fill: #73fb61 !important;
+    fill: #111 !important;
 }
 
 .h-bottom-row {
@@ -110,16 +116,46 @@
 }
 
 .btn-phone {
-    font-size: 0.8rem;
-    padding: 0.36rem 0.8rem;
-    background-color: #73fb61 !important;
-    border-color: #73fb61 !important;
-    color: #000 !important;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.7rem;
+    font-size: 0.82rem;
+    font-weight: 600;
+    line-height: 1.2;
+    padding: 0.55rem 1.2rem;
+    min-height: 40px;
+    background-color: #ffffff !important;
+    border: 2px solid #ffffff !important;
+    border-radius: 4px !important;
+    color: #111 !important;
+}
+
+.btn-phone svg,
+.h-bottom .btn-phone svg {
+    width: 18px !important;
+    height: 18px !important;
+    flex-shrink: 0;
+    fill: none !important;
+    stroke: #111 !important;
+    stroke-width: 2;
+}
+
+.btn-phone svg path,
+.h-bottom .btn-phone svg path {
+    fill: none !important;
+    stroke: #111 !important;
 }
 
 .btn-phone span,
 .btn-phone .fw-bold {
-    color: #000000 !important;
+    color: #111 !important;
+}
+
+.btn-phone:hover,
+.btn-phone:focus,
+.btn-phone:active {
+    background-color: #f2f2f2 !important;
+    color: #111 !important;
 }
 
 .h-dropdown {

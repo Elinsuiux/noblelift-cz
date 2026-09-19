@@ -99,14 +99,18 @@ a:hover {
     box-shadow: none!important;
 }
 .btn-yellow {
-    color: #000000;
-    background-color: var(--color-yellow);
-    border-color: var(--color-yellow);
+    color: #ffffff;
+    background-color: transparent;
+    border: 2px solid #73fb61;
+    border-radius: 0.3rem;
 }
 
-.btn-yellow:hover {
-    background-color: var(--color-yellow);
-    border-color: var(--color-yellow);
+.btn-yellow:hover,
+.btn-yellow:focus,
+.btn-yellow:active {
+    color: #ffffff;
+    background-color: transparent;
+    border-color: #73fb61;
 }
 
 
@@ -356,7 +360,7 @@ a:hover {
     top: 0;
     left: 0;
     right: 0;
-
+    pointer-events: none;
 }
 
 .separator-dark {
@@ -476,19 +480,24 @@ ul li
 
 .card-date {
     font-size: 80%;
-    color: var(--color-vzv);
+    color: #4d4d4d;
 }
 
 .cist-vice {
     font-size: 90%;
     font-weight: 400;
-    color: var(--color-dark);
+    color: #4d4d4d;
 }
 .cist-vice:hover {
-    color: #73fb61 !important;
+    color: #0e6303 !important;
     font-weight: 700;
     opacity: 1;
     text-decoration: underline;
+}
+
+.modal-cookies .cist-vice,
+.modal-cookies .cist-vice:hover {
+    color: var(--color-vzv) !important;
 }
 
 .cist-vice:after {
@@ -584,11 +593,31 @@ ul li
 }
 
 .box-vyber-jazyka-jazyk:hover {
-    color: var(--color-vzv);
+    color: var(--color-white);
+}
+
+.btn-language a,
+.btn-language a:hover,
+.btn-language a:focus,
+.btn-language a:active {
+    color: #ffffff;
 }
 
 .modal-header {
     border-bottom: 1px solid var(--color-vzv);
+}
+
+.modal-fluid .modal-header .btn-close,
+#modal-vyber-jazyka .modal-header .btn-close {
+    opacity: 1;
+    filter: none;
+    background: transparent url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23c8c8c8'%3e%3cpath d='M.293.293a1 1 0 011.414 0L8 6.586 14.293.293a1 1 0 111.414 1.414L9.414 8l6.293 6.293a1 1 0 01-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 01-1.414-1.414L6.586 8 .293 1.707A1 1 0 01.293.293z'/%3e%3c/svg%3e") center / 1em auto no-repeat;
+}
+
+.modal-fluid .modal-header .btn-close:hover,
+#modal-vyber-jazyka .modal-header .btn-close:hover {
+    opacity: 1;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23e0e0e0'%3e%3cpath d='M.293.293a1 1 0 011.414 0L8 6.586 14.293.293a1 1 0 111.414 1.414L9.414 8l6.293 6.293a1 1 0 01-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 01-1.414-1.414L6.586 8 .293 1.707A1 1 0 01.293.293z'/%3e%3c/svg%3e");
 }
 
 .modal-logo {}
@@ -1286,6 +1315,12 @@ ul li
     font-weight: 600;
 }
 
+.card-contact .card-body-pozice,
+.card-contact .card-body-email,
+.card-contact .card-body-email a {
+    font-weight: 400;
+}
+
 .card-contact .card-body-cislo {
     margin-top: 10px;
     margin-bottom: 10px;
@@ -1762,6 +1797,22 @@ label {
 
 .modal-fluid .modal-dialog {
     max-width: 80%;
+}
+
+.modal-fluid {
+    top: 105px;
+}
+
+.modal {
+    z-index: 1080;
+}
+
+.modal-backdrop {
+    z-index: 1070;
+}
+
+body.modal-open .h-vzv {
+    z-index: 1040;
 }
 
 .info-text-content-item
@@ -2853,8 +2904,16 @@ table.table-vyhody .btn
 }
 
 .kontakt-rozcestnik-oddeleni {
-    max-height: 320px;
-    overflow: hidden;
+    max-height: none;
+    overflow: visible;
+    position: relative;
+    z-index: 21;
+}
+
+.kontakt-rozcestnik-oddeleni a.btn {
+    position: relative;
+    z-index: 22;
+    pointer-events: auto;
 }
 
 .kontakt-rozcestnik-oddeleni .title-vzvrent {
@@ -3060,4 +3119,92 @@ li.list-disc {
 .kontakt-pobocky-pobocka-cover-text-gps,
 .kontakt-pobocky-pobocka-cover-text a {
     color: #fff !important;
+}
+
+/* Home + contact: attached dual-site banner (text is in the photo) */
+.kontakt-pobocky--wide {
+    padding: 0 !important;
+    margin: 0 !important;
+    --bs-gutter-x: 0;
+    --bs-gutter-y: 0;
+}
+
+.kontakt-pobocky--wide > [class*="col-"] {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+.separator-light + .container-fluid:has(.kontakt-pobocky--wide),
+.container-fluid:has(> .kontakt-pobocky--wide) {
+    padding: 0 !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+.separator-light:has(+ .container-fluid .kontakt-pobocky--wide) .separator-content {
+    padding-bottom: 18px;
+}
+
+.separator-light:has(+ .container-fluid .kontakt-pobocky--wide) .separator-content h2 {
+    margin-bottom: 0;
+}
+
+.kontakt-pobocky--wide .kontakt-pobocky-pobocka img {
+    width: 100%;
+    height: auto !important;
+    display: block;
+}
+
+.kontakt-pobocky--wide .kontakt-pobocky-pobocka-cover {
+    display: none;
+}
+
+.kontakt-pobocky--wide .kontakt-pobocky-map-link {
+    display: block;
+    position: relative;
+    z-index: 4;
+    cursor: pointer;
+    color: inherit;
+    text-decoration: none;
+}
+
+.kontakt-pobocky--wide .kontakt-pobocky-map-link img {
+    width: 100%;
+    height: auto !important;
+    display: block;
+    pointer-events: none;
+}
+
+.kontakt-pobocky--wide .kontakt-pobocky-map-hit {
+    position: absolute;
+    inset: 0;
+    z-index: 4;
+    display: block;
+    font-size: 0;
+    color: transparent;
+    cursor: pointer;
+    pointer-events: auto;
+}
+
+#prodejni-tym-pouzitych-voziku,
+#prodejni-tym-novych-voziku,
+#pujcovna-vzv-rent,
+#vzv-parts,
+#USERVIS,
+#servis,
+#vykupni-tym,
+#cervena-voda,
+#praha,
+#fakturacni-udaje {
+    scroll-margin-top: 140px;
+}
+
+html {
+    scroll-padding-top: 120px;
+}
+
+@media (max-width: 768px) {
+    .kontakt-pobocky--wide .kontakt-pobocky-pobocka img {
+        height: auto;
+    }
 }
