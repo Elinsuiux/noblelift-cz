@@ -135,6 +135,8 @@
   width: auto;
   max-width: none;
   object-fit: contain;
+  opacity: 0.72;
+  filter: contrast(0.78) brightness(1.08);
 }
 
 .rent-catalog .card-spec-label {
