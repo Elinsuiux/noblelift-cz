@@ -365,3 +365,20 @@ a.text-primary:hover,
 #pridavna-zarizeni {
   scroll-margin-top: 140px;
 }
+
+.card-date {
+  color: #4d4d4d !important;
+}
+
+.cist-vice {
+  color: #73fb61 !important;
+}
+
+.cist-vice:hover {
+  color: #0e6303 !important;
+}
+
+.modal-cookies .cist-vice,
+.modal-cookies .cist-vice:hover {
+  color: #73fb61 !important;
+}

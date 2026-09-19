@@ -679,10 +679,27 @@ a.text-primary:hover,
   opacity: 1;
 }
 
-/* Cookies / “Číst více” — less bold */
+/* Cookies / “Číst více” — less bold; news Číst více is dark green */
 .cist-vice,
 .modal-cookies a {
   font-weight: 400 !important;
+}
+
+.card-date {
+  color: #4d4d4d !important;
+}
+
+.cist-vice {
+  color: #73fb61 !important;
+}
+
+.cist-vice:hover {
+  color: #0e6303 !important;
+}
+
+.modal-cookies .cist-vice,
+.modal-cookies .cist-vice:hover {
+  color: #73fb61 !important;
 }
 
 .modal-cookies .font-bold {

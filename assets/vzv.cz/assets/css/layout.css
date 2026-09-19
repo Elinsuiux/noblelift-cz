@@ -480,19 +480,24 @@ ul li
 
 .card-date {
     font-size: 80%;
-    color: var(--color-vzv);
+    color: #4d4d4d;
 }
 
 .cist-vice {
     font-size: 90%;
     font-weight: 400;
-    color: var(--color-dark);
+    color: #73fb61;
 }
 .cist-vice:hover {
-    color: #73fb61 !important;
+    color: #0e6303 !important;
     font-weight: 700;
     opacity: 1;
     text-decoration: underline;
+}
+
+.modal-cookies .cist-vice,
+.modal-cookies .cist-vice:hover {
+    color: var(--color-vzv) !important;
 }
 
 .cist-vice:after {

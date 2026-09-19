@@ -410,3 +410,20 @@ a.btn.btn-yellow:hover {
 .kontakt-pobocky--wide .kontakt-pobocky-pobocka-cover-text a {
   color: transparent !important;
 }
+
+.card-date {
+  color: #4d4d4d !important;
+}
+
+.cist-vice {
+  color: #73fb61 !important;
+}
+
+.cist-vice:hover {
+  color: #0e6303 !important;
+}
+
+.modal-cookies .cist-vice,
+.modal-cookies .cist-vice:hover {
+  color: #73fb61 !important;
+}
