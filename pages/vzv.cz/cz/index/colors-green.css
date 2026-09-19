@@ -732,6 +732,20 @@ a.btn.btn-yellow:hover {
   border-color: #73fb61 !important;
 }
 
+.banner-nove-voziky a.btn.btn-yellow.btn-telefonni-cislo,
+.banner-nove-voziky a.btn.btn-yellow.btn-telefonni-cislo:hover,
+.banner-nove-voziky a.btn.btn-yellow.btn-telefonni-cislo:focus,
+.banner-nove-voziky a.btn.btn-yellow.btn-telefonni-cislo:active {
+  background: transparent !important;
+  border: 2px solid #e05010 !important;
+  color: #ffffff !important;
+}
+
+.banner-nove-voziky a.btn.btn-yellow.btn-telefonni-cislo span,
+.banner-nove-voziky a.btn.btn-yellow.btn-telefonni-cislo:hover span {
+  color: #ffffff !important;
+}
+
 /* Location overlays on the wide home/contact banner — text is in the photo */
 .kontakt-pobocky--wide .kontakt-pobocky-pobocka-cover-overlay {
   display: none !important;
