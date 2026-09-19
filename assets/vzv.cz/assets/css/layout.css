@@ -1315,6 +1315,12 @@ ul li
     font-weight: 600;
 }
 
+.card-contact .card-body-pozice,
+.card-contact .card-body-email,
+.card-contact .card-body-email a {
+    font-weight: 400;
+}
+
 .card-contact .card-body-cislo {
     margin-top: 10px;
     margin-bottom: 10px;

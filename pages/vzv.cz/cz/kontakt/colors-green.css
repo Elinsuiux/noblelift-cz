@@ -383,6 +383,12 @@ a.text-primary:hover,
   color: #149404 !important;
 }
 
+.card-contact .card-body-pozice,
+.card-contact .card-body-email,
+.card-contact .card-body-email a {
+  font-weight: 400 !important;
+}
+
 .btn-yellow,
 .btn-yellow.btn-lg,
 a.btn.btn-yellow {
