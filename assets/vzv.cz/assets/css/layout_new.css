@@ -103,15 +103,16 @@ svg {
 }
 
 .rs-tooltip {
-    color: #ffffff;
-    border: 1px solid #808080;
-    background: #808080;
+    color: #1a1a1a;
+    border: 1px solid #d0d0d0;
+    background: transparent;
     padding: 0.2rem;
     height: unset;
     width: unset;
     min-width: unset;
     font-size: 0.75rem;
     left: 0;
+    white-space: nowrap;
 }
 
 .rs-container .rs-pointer {
