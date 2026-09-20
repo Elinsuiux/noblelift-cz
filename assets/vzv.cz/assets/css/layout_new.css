@@ -105,7 +105,10 @@ svg {
 .rs-tooltip {
     color: #1a1a1a;
     border: 1px solid #d0d0d0;
-    background: transparent;
+    background: #ffffff;
+    background-color: #ffffff;
+    background-image: none;
+    box-shadow: none;
     padding: 0.2rem;
     height: unset;
     width: unset;

@@ -315,11 +315,22 @@ a.text-primary:hover,
 }
 
 .rs-tooltip {
-  background: transparent !important;
-  background-color: transparent !important;
+  background: #ffffff !important;
+  background-color: #ffffff !important;
+  background-image: none !important;
+  box-shadow: none !important;
   color: #1a1a1a !important;
   border: 1px solid #d0d0d0 !important;
   white-space: nowrap !important;
+}
+
+#filtr .rs-tooltip,
+.rs-container .rs-tooltip,
+.rs-pointer .rs-tooltip {
+  background: #ffffff !important;
+  background-color: #ffffff !important;
+  background-image: none !important;
+  box-shadow: none !important;
 }
 
 /* ── Footer ─────────────────────────────────────────────────── */
