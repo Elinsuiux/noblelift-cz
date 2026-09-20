@@ -1354,6 +1354,21 @@ ul li
     background-size: 24px;
 }
 
+.card-footer a.btn.btn-dark,
+.card-footer a.btn.btn-dark:hover,
+.card-footer a.btn.btn-dark:focus,
+.card-footer a.btn.btn-dark:active {
+    background: transparent !important;
+    background-color: transparent !important;
+    color: #1a1a1a !important;
+    border: 1px solid #d0d0d0 !important;
+    box-shadow: none !important;
+}
+
+.card-footer .text-primary {
+    color: #0e6303 !important;
+}
+
 .align-self-center {
     align-self: center!important;
 }
