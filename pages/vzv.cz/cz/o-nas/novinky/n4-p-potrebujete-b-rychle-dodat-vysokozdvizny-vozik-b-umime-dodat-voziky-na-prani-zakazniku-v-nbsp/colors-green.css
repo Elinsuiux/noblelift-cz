@@ -150,7 +150,10 @@ a.text-primary:hover,
 .product-price-nova-cena,
 .text-danger-vzv,
 .card-vzv-body-cena .cena-sleva,
-.card-footer .text-primary {
+.card-footer .text-primary,
+.card .text-primary.fw-bold,
+.card .text-primary.fw-bolder,
+.card .fs-5.text-primary {
   color: #0e6303 !important;
 }
 
@@ -362,6 +365,9 @@ a.box-vyber-jazyka-jazyk:hover {
   box-shadow: none !important;
 }
 
-.card-footer .text-primary {
+.card-footer .text-primary,
+.card .text-primary.fw-bold,
+.card .text-primary.fw-bolder,
+.card .fs-5.text-primary {
   color: #0e6303 !important;
 }
