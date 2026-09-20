@@ -67,8 +67,9 @@
 }
 
 .rs-tooltip {
-  background: #0e6303 !important;
+  background: #808080 !important;
   color: #ffffff !important;
+  border: 1px solid #808080 !important;
 }
 
 /* Links */

@@ -1381,6 +1381,12 @@ ul li
     color: #1a1a1a !important;
 }
 
+.rs-tooltip {
+    background: #808080 !important;
+    color: #ffffff !important;
+    border: 1px solid #808080 !important;
+}
+
 
 .align-self-center {
     align-self: center!important;
