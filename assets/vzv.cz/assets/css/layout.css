@@ -1384,7 +1384,11 @@ ul li
 .rs-tooltip,
 #filtr .rs-tooltip,
 .rs-container .rs-tooltip,
-.rs-pointer .rs-tooltip {
+.rs-pointer .rs-tooltip,
+.rs-container .rs-scale span ins,
+.rs-container .rs-scale span:first-child ins,
+.rs-container .rs-scale span:last-child ins,
+#filtr .rs-scale span ins {
     background: none !important;
     background-color: transparent !important;
     background-image: none !important;
@@ -1396,6 +1400,11 @@ ul li
     min-width: 0 !important;
     height: auto !important;
     white-space: nowrap !important;
+}
+
+.rs-container .rs-scale span:last-child ins,
+.rs-container:has(.rs-pointer[data-dir="right"]) .rs-scale span:first-child ins {
+    visibility: hidden !important;
 }
 
 

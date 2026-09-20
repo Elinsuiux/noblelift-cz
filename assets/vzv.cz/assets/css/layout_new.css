@@ -163,21 +163,24 @@ svg {
 
 
 .rs-container .rs-scale span:first-child ins {
-    color: var(--color-white);
+    color: #1a1a1a;
     display: inline-block;
     margin-top: 20px;
     text-decoration: none;
     position: absolute;
     top: -3.7rem;
     margin-left: -1rem;
-    background-color: #9f9f9f;
+    background: none;
+    background-color: transparent;
     padding: 0.1rem 0.3rem;
-    border-radius: 0.25rem;
+    border-radius: 0;
     font-size: 0.6rem;
+    box-shadow: none;
+    border: 0;
 }
 
 .rs-container .rs-scale span:last-child ins {
-    color: var(--color-dark);
+    color: #1a1a1a;
     display: inline-block;
     font-size: 0.6rem;
     margin-top: 20px;
@@ -185,9 +188,17 @@ svg {
     position: absolute;
     top: -3.7rem;
     /*margin-left: 0!important;*/
-    background-color: #9f9f9f;
+    background: none;
+    background-color: transparent;
     padding: 0.1rem 0.3rem;
-    border-radius: 0.25rem;
+    border-radius: 0;
+    box-shadow: none;
+    border: 0;
+    visibility: hidden;
+}
+
+.rs-container:has(.rs-pointer[data-dir="right"]) .rs-scale span:first-child ins {
+    visibility: hidden;
 }
 
 .rs-container .rs-selected {
