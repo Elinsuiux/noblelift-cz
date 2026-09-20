@@ -349,3 +349,12 @@ a.box-vyber-jazyka-jazyk:hover {
 .card .fs-5.text-primary {
   color: #0e6303 !important;
 }
+
+#filtr .bg-light-dark > .col-12.text-primary {
+  color: #1a1a1a !important;
+  font-weight: 700;
+}
+
+#filtr .filtr-top .text-vzv {
+  color: #1a1a1a !important;
+}

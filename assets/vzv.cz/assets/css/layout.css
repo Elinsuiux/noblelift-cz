@@ -1372,6 +1372,16 @@ ul li
     color: #0e6303 !important;
 }
 
+#filtr .bg-light-dark > .col-12.text-primary {
+    color: #1a1a1a !important;
+    font-weight: 700;
+}
+
+#filtr .filtr-top .text-vzv {
+    color: #1a1a1a !important;
+}
+
+
 .align-self-center {
     align-self: center!important;
 }
