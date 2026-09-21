@@ -2174,6 +2174,28 @@
   grid-template-columns: repeat(5, minmax(0, 1fr));
 }
 
+/* -------------------------------------------------------------------------- */
+/* Service landing: Terénní manipulační technika                              */
+/* -------------------------------------------------------------------------- */
+
+.pujcovna-proto .terenni-intro-photo {
+  background-image: url("terenni-manipulacni-technika/foto/gallery-2.png");
+}
+
+.pujcovna-proto .terenni-attach .doprava-fleet-card img {
+  object-fit: contain;
+  background: var(--pp-section);
+}
+
+.pujcovna-proto .terenni-attach-more {
+  margin: 16px 0 0;
+  text-align: center;
+}
+
+.pujcovna-proto .terenni-videos {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
 @media (max-width: 991.98px) {
   .pujcovna-proto .obsluha-gallery {
     grid-template-columns: repeat(3, 1fr);
@@ -2199,6 +2221,7 @@
 
   .pujcovna-proto .eventy-types,
   .pujcovna-proto .eventy-videos,
+  .pujcovna-proto .terenni-videos,
   .pujcovna-proto .special-grid {
     grid-template-columns: 1fr 1fr;
   }
@@ -2226,6 +2249,7 @@
   .pujcovna-proto .eshopy-logos,
   .pujcovna-proto .eventy-types,
   .pujcovna-proto .eventy-videos,
+  .pujcovna-proto .terenni-videos,
   .pujcovna-proto .special-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
