@@ -3276,3 +3276,49 @@ html {
         height: auto;
     }
 }
+
+/* Filter <select> option highlight — native fallback + custom menu */
+select.form-select option:checked,
+select.form-select option:hover,
+select.form-select-lg option:checked,
+select.form-select-lg option:hover,
+select.form-control option:checked,
+select.form-control option:hover {
+    background-color: #159504 !important;
+    background: #159504 linear-gradient(0deg, #159504 0%, #159504 100%) !important;
+    color: #ffffff !important;
+}
+
+.vzv-select-menu {
+    position: fixed;
+    z-index: 4000;
+    margin: 0;
+    padding: 2px 0;
+    list-style: none;
+    background: #ffffff;
+    border: 1px solid #c8c8c8;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+    max-height: 280px;
+    overflow-y: auto;
+    font-size: 0.95rem;
+    color: #4d4d4d;
+}
+
+.vzv-select-menu li {
+    padding: 6px 12px;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.vzv-select-menu li.vzv-select-sep {
+    cursor: default;
+    color: #b3b3b3;
+    pointer-events: none;
+    letter-spacing: 0.04em;
+}
+
+.vzv-select-menu li[data-value]:hover,
+.vzv-select-menu li[data-value].is-active {
+    background: #159504 !important;
+    color: #ffffff !important;
+}
