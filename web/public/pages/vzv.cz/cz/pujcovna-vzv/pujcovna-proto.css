@@ -2196,6 +2196,19 @@
   grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
+/* -------------------------------------------------------------------------- */
+/* Service landing: Stěhovací technika                                        */
+/* -------------------------------------------------------------------------- */
+
+.pujcovna-proto .stehovaci-types .doprava-fleet-card img {
+  object-fit: contain;
+  background: var(--pp-section);
+}
+
+.pujcovna-proto .stehovaci-types .eventy-type-btn {
+  margin-top: auto;
+}
+
 @media (max-width: 991.98px) {
   .pujcovna-proto .obsluha-gallery {
     grid-template-columns: repeat(3, 1fr);
