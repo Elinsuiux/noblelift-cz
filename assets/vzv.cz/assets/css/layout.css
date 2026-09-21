@@ -107,10 +107,24 @@ a:hover {
 
 .btn-yellow:hover,
 .btn-yellow:focus,
-.btn-yellow:active {
-    color: #ffffff;
-    background-color: transparent;
-    border-color: #73fb61;
+.btn-yellow:active,
+a.btn.btn-yellow:hover,
+a.btn.btn-yellow:focus,
+a.btn.btn-yellow:active,
+.btn-yellow.btn-telefonni-cislo:hover,
+.btn-yellow.btn-telefonni-cislo:focus,
+.btn-yellow.btn-telefonni-cislo:active {
+    color: #ffffff !important;
+    background-color: rgba(115, 251, 97, 0.22) !important;
+    border-color: #73fb61 !important;
+}
+
+.btn-yellow:hover span,
+.btn-yellow:focus span,
+.btn-yellow:active span,
+a.btn.btn-yellow:hover span,
+.btn-yellow.btn-telefonni-cislo:hover span {
+    color: #ffffff !important;
 }
 
 

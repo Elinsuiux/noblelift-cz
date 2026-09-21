@@ -501,9 +501,13 @@ a.text-primary:hover,
   color: #ffffff !important;
 }
 
+.banner-volejte-prodejce-vzv-dark a.btn.btn-yellow.btn-telefonni-cislo:hover,
+.banner-volejte-prodejce-vzv-dark a.btn.btn-yellow.btn-telefonni-cislo:focus,
+.banner-volejte-prodejce-vzv-dark a.btn.btn-yellow.btn-telefonni-cislo:active,
 .banner-volejte-prodejce-vzv-dark .btn-telefonni-cislo:hover,
 .banner-volejte-prodejce-vzv-dark .btn-telefonni-cislo:focus {
-  background: rgba(115, 251, 97, 0.15) !important;
+  background: rgba(115, 251, 97, 0.22) !important;
+  background-color: rgba(115, 251, 97, 0.22) !important;
   border-color: #73fb61 !important;
   color: #ffffff !important;
 }
@@ -523,9 +527,13 @@ a.text-primary:hover,
   color: #ffffff !important;
 }
 
+.banner-nove-voziky a.btn.btn-yellow.btn-telefonni-cislo:hover,
+.banner-nove-voziky a.btn.btn-yellow.btn-telefonni-cislo:focus,
+.banner-nove-voziky a.btn.btn-yellow.btn-telefonni-cislo:active,
 .banner-nove-voziky .btn-telefonni-cislo:hover,
 .banner-nove-voziky .btn-telefonni-cislo:focus {
-  background: rgba(224, 80, 16, 0.15) !important;
+  background: rgba(224, 80, 16, 0.22) !important;
+  background-color: rgba(224, 80, 16, 0.22) !important;
   border-color: #e05010 !important;
   color: #ffffff !important;
 }

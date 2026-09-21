@@ -427,9 +427,12 @@ a.btn.btn-yellow {
 .btn-yellow:hover,
 .btn-yellow:focus,
 .btn-yellow:active,
-a.btn.btn-yellow:hover {
+a.btn.btn-yellow:hover,
+a.btn.btn-yellow:focus,
+a.btn.btn-yellow:active {
   color: #ffffff !important;
-  background: transparent !important;
+  background: rgba(115, 251, 97, 0.22) !important;
+  background-color: rgba(115, 251, 97, 0.22) !important;
   border-color: #73fb61 !important;
 }
 
