@@ -2067,6 +2067,89 @@
   grid-template-columns: repeat(6, minmax(0, 1fr));
 }
 
+/* -------------------------------------------------------------------------- */
+/* Service landing: Speciální manipulační technika                            */
+/* -------------------------------------------------------------------------- */
+
+.pujcovna-proto .special-wrap {
+  max-width: 1240px;
+  margin: 12px auto 0;
+  padding: 24px 24px 0;
+}
+
+.pujcovna-proto .special-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.pujcovna-proto .special-grid .doprava-fleet-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.pujcovna-proto .special-grid .doprava-fleet-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.pujcovna-proto .special-grid .doprava-fleet-card img {
+  object-fit: contain;
+  background: #fff;
+}
+
+.pujcovna-proto .special-grid .doprava-fleet-card p {
+  margin-bottom: 12px;
+}
+
+.pujcovna-proto .special-grid .eventy-type-btn {
+  margin-top: auto;
+}
+
+.pujcovna-proto .special-spec {
+  margin: 0 0 12px;
+  padding: 0;
+  list-style: none;
+}
+
+.pujcovna-proto .special-spec li {
+  position: relative;
+  padding: 6px 0 6px 16px;
+  border-bottom: 1px solid #eee;
+  font-size: 0.86rem;
+  line-height: 1.35;
+  color: #444;
+}
+
+.pujcovna-proto .special-spec li:last-child {
+  border-bottom: 0;
+}
+
+.pujcovna-proto .special-spec li::before {
+  content: "";
+  position: absolute;
+  top: 11px;
+  left: 0;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--pp-accent);
+}
+
+.pujcovna-proto .special-attach {
+  margin: 0 0 12px;
+  font-size: 0.86rem;
+  line-height: 1.45;
+  color: #444;
+}
+
+.pujcovna-proto .special-attach strong {
+  display: block;
+  margin: 0 0 4px;
+  color: var(--pp-text);
+}
+
 @media (max-width: 991.98px) {
   .pujcovna-proto .obsluha-gallery {
     grid-template-columns: repeat(3, 1fr);
@@ -2085,12 +2168,14 @@
   .pujcovna-proto .dlouho-compare-grid,
   .pujcovna-proto .eventy-types,
   .pujcovna-proto .eventy-videos,
+  .pujcovna-proto .special-grid,
   .pujcovna-proto .rent-bottom--service {
     grid-template-columns: 1fr;
   }
 
   .pujcovna-proto .eventy-types,
-  .pujcovna-proto .eventy-videos {
+  .pujcovna-proto .eventy-videos,
+  .pujcovna-proto .special-grid {
     grid-template-columns: 1fr 1fr;
   }
 
@@ -2114,7 +2199,8 @@
   .pujcovna-proto .dlouho-logos,
   .pujcovna-proto .eventy-logos,
   .pujcovna-proto .eventy-types,
-  .pujcovna-proto .eventy-videos {
+  .pujcovna-proto .eventy-videos,
+  .pujcovna-proto .special-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
