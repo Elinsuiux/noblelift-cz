@@ -41,8 +41,7 @@
     "create-pdf-favourite": 1,
     "create-pdf-compare": 1,
     "add-inquiry-favorites": 1,
-    "add-inquiry-compare": 1,
-    "get-forklifts": 1
+    "add-inquiry-compare": 1
   };
 
   function readList(kind) {
@@ -209,61 +208,8 @@
     }).join("");
   }
 
-  function listingCardHtml(it) {
-    var inFav = !!findItem(readList("favourite"), it.id);
-    var inCmp = !!findItem(readList("compare"), it.id);
-    var inBas = !!findItem(readList("basket"), it.id);
-    var favClass = inFav ? "btn-dark text-light" : "btn-outline-dark";
-    var cmpClass = inCmp ? "btn-dark text-light" : "btn-outline-dark";
-    return (
-      '<div class="col-12 col-md-6 col-xxl-4">' +
-        '<div class="card mt-4 mb-4 ms-2 me-2 border-1 border-light position-relative" id="item-' + it.id + '">' +
-          '<a href="' + escapeHtml(it.url) + '"><img src="' + escapeHtml(it.img) + '" class="w-100 border-top" alt="' + escapeHtml(it.short || it.title) + '"></a>' +
-          '<div class="card-body p-0 ps-2 pe-2 pb-1">' +
-            '<div class="fw-bold fs-6 no-wrap overflow-hidden ps-1 pe-1 mt-2">' + escapeHtml(it.short || it.title) + "</div>" +
-            '<div class="d-flex gap-2 ps-1 pe-1 mt-2 mb-2">' +
-              '<button type="button" onclick="addRemoveFavourite(\'' + it.id + '\')" class="favourite-button text-decoration-none fs-6 btn btn-sm rounded-circle ' + favClass + '" title="Oblíbené">♡</button>' +
-              '<button type="button" onclick="addRemoveCompare(\'' + it.id + '\')" class="compare-button text-decoration-none fs-6 btn btn-sm rounded-circle ' + cmpClass + '" title="Porovnat">⇄</button>' +
-            "</div>" +
-            '<div class="text-primary pe-2 mt-2 mb-2 fs-5 fw-bold">' + escapeHtml(it.price) + "</div>" +
-          "</div>" +
-          '<div class="card-footer border-0 bg-transparent p-0 ps-2 pe-2 mt-2 pb-2">' +
-            '<div class="row ps-1 pe-1">' +
-              '<div class="col-6 text-center p-0"><div class="row justify-content-center"><div class="col-10 d-grid">' +
-                '<a href="' + escapeHtml(it.url) + '" class="btn btn-dark rounded-1">Detail</a>' +
-              "</div></div></div>" +
-              '<div class="col-6 text-center p-0"><div class="row justify-content-center"><div class="col-10 d-grid">' +
-                '<a href="' + PATHS.kosik + '" class="btn btn-outline-primary rounded-1' + (inBas ? "" : " d-none") + '" id="item-v-kosiku-' + it.id + '">V košíku</a>' +
-                '<button class="btn btn-primary rounded-1 btn-cart' + (inBas ? " d-none" : "") + '" id="item-pridat-do-kosiku-' + it.id + '" data-bs-toggle="modal" data-bs-target="#obsah-kosiku" onclick="addBasket(\'' + it.id + '\')">Do košíku</button>' +
-              "</div></div></div>" +
-            "</div>" +
-          "</div>" +
-        "</div>" +
-      "</div>"
-    );
-  }
-
-  function listingPayload() {
-    function htmlOf(id) {
-      var el = document.getElementById(id);
-      return el ? el.innerHTML : "";
-    }
-    return JSON.stringify({
-      voziky: CATALOG.map(listingCardHtml).join(""),
-      vzv_paginator: "",
-      filtr_badge_template: htmlOf("filtr-badge"),
-      nadpis: htmlOf("nadpis"),
-      popis: htmlOf("popis"),
-      breadcrumb: htmlOf("breadcrumb"),
-      podkategorie: htmlOf("category-wrap"),
-      pocet_voziku: CATALOG.length,
-      url: window.location.pathname + window.location.search
-    });
-  }
-
   function handle(url, data) {
     var id = data && (data.id_polozky || data.id);
-    if (url === "get-forklifts") return listingPayload();
     if (url === "add-favourite") {
       return JSON.stringify({ favourite_count: addTo("favourite", id).length });
     }
@@ -311,12 +257,23 @@
           setTimeout(function () {
             updateCounts();
             markButtons();
-            if (url === "get-forklifts") rewriteKosikLinks();
           }, 0);
           return result;
         });
       }
-      if (typeof orig === "function") return orig.apply(this, arguments);
+      if (typeof orig === "function") {
+        var pending = orig.apply(this, arguments);
+        if (url === "get-forklifts" && pending && typeof pending.then === "function") {
+          return pending.then(function (result) {
+            setTimeout(function () {
+              rewriteKosikLinks();
+              markButtons();
+            }, 0);
+            return result;
+          });
+        }
+        return pending;
+      }
       return Promise.resolve("");
     };
   }
@@ -506,7 +463,7 @@
     var link = document.createElement("link");
     link.id = "vzv-static-lists-css";
     link.rel = "stylesheet";
-    link.href = "/assets/vzv.cz/assets/css/static-lists.css?v=lists-2";
+    link.href = "/assets/vzv.cz/assets/css/static-lists.css?v=lists-3";
     document.head.appendChild(link);
   }
 
