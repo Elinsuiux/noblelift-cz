@@ -1638,13 +1638,80 @@
   padding-top: 24px;
 }
 
+/* -------------------------------------------------------------------------- */
+/* Service landing: Doprava                                                   */
+/* -------------------------------------------------------------------------- */
+
+.pujcovna-proto .doprava-fleet-wrap,
+.pujcovna-proto .doprava-gallery-wrap {
+  max-width: 1240px;
+  margin: 12px auto 0;
+  padding: 24px 24px 0;
+}
+
+.pujcovna-proto .doprava-fleet-wrap > h2,
+.pujcovna-proto .doprava-gallery-wrap > h2 {
+  margin: 0 0 16px;
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--pp-text);
+}
+
+.pujcovna-proto .doprava-fleet {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.pujcovna-proto .doprava-fleet-card {
+  background: var(--pp-section);
+  border-radius: 0.3rem;
+  overflow: hidden;
+}
+
+.pujcovna-proto .doprava-fleet-card img {
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  background: #e8e8e8;
+}
+
+.pujcovna-proto .doprava-fleet-body {
+  padding: 18px 20px 22px;
+}
+
+.pujcovna-proto .doprava-fleet-card h3 {
+  margin: 0 0 8px;
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--pp-text);
+}
+
+.pujcovna-proto .doprava-fleet-card p {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: #444;
+}
+
+.pujcovna-proto .doprava-gallery-wrap .obsluha-gallery {
+  margin: 0;
+  padding: 0;
+  grid-template-columns: repeat(4, 1fr);
+}
+
 @media (max-width: 991.98px) {
   .pujcovna-proto .obsluha-gallery {
     grid-template-columns: repeat(3, 1fr);
   }
 
+  .pujcovna-proto .doprava-gallery-wrap .obsluha-gallery {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
   .pujcovna-proto .obsluha-copy,
   .pujcovna-proto .obsluha-drivers,
+  .pujcovna-proto .doprava-fleet,
   .pujcovna-proto .rent-bottom--service {
     grid-template-columns: 1fr;
   }
@@ -1657,7 +1724,8 @@
 }
 
 @media (max-width: 575.98px) {
-  .pujcovna-proto .obsluha-gallery {
+  .pujcovna-proto .obsluha-gallery,
+  .pujcovna-proto .doprava-gallery-wrap .obsluha-gallery {
     grid-template-columns: repeat(2, 1fr);
   }
 }
