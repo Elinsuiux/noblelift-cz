@@ -2150,6 +2150,30 @@
   color: var(--pp-text);
 }
 
+/* -------------------------------------------------------------------------- */
+/* Service landing: Manipulační technika pro eshopy                           */
+/* -------------------------------------------------------------------------- */
+
+.pujcovna-proto .eshopy-intro-photo {
+  background-image: url("manipulacni-technika-pro-eshopy/foto/sklad.png");
+}
+
+.pujcovna-proto .eshopy-types {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.pujcovna-proto .eshopy-types .doprava-fleet-card img {
+  background: var(--pp-section);
+}
+
+.pujcovna-proto .eshopy-types .eventy-type-btn {
+  margin-top: auto;
+}
+
+.pujcovna-proto .eshopy-logos {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
 @media (max-width: 991.98px) {
   .pujcovna-proto .obsluha-gallery {
     grid-template-columns: repeat(3, 1fr);
@@ -2179,7 +2203,8 @@
     grid-template-columns: 1fr 1fr;
   }
 
-  .pujcovna-proto .eventy-logos {
+  .pujcovna-proto .eventy-logos,
+  .pujcovna-proto .eshopy-logos {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
@@ -2198,6 +2223,7 @@
 
   .pujcovna-proto .dlouho-logos,
   .pujcovna-proto .eventy-logos,
+  .pujcovna-proto .eshopy-logos,
   .pujcovna-proto .eventy-types,
   .pujcovna-proto .eventy-videos,
   .pujcovna-proto .special-grid {
