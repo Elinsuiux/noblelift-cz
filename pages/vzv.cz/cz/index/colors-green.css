@@ -563,10 +563,21 @@ a.text-primary:hover,
 }
 
 .banner-nove-voziky .banner-button-noblelift:hover,
-.banner-nove-voziky .banner-button-noblelift:focus {
-  background: #ffffff !important;
-  border-color: #ffffff !important;
-  color: #000000 !important;
+.banner-nove-voziky .banner-button-noblelift:focus,
+.banner-nove-voziky .banner-button-noblelift:active,
+.banner-nove-voziky a.btn.btn-dark.banner-button-noblelift:hover,
+.banner-nove-voziky a.btn.btn-dark.banner-button-noblelift:focus,
+.banner-nove-voziky a.btn.btn-dark.banner-button-noblelift:active {
+  background: #e05010 !important;
+  background-color: #e05010 !important;
+  border-color: #e05010 !important;
+  color: #ffffff !important;
+}
+
+.banner-nove-voziky .banner-button-noblelift:hover div,
+.banner-nove-voziky .banner-button-noblelift:focus div,
+.banner-nove-voziky .banner-button-noblelift:active div {
+  color: #ffffff !important;
 }
 
 /* ── Product cards & stickers ───────────────────────────────── */
