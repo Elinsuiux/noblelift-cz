@@ -1700,6 +1700,107 @@
   grid-template-columns: repeat(4, 1fr);
 }
 
+/* -------------------------------------------------------------------------- */
+/* Service landing: Servis                                                    */
+/* -------------------------------------------------------------------------- */
+
+.pujcovna-proto .servis-steps-wrap,
+.pujcovna-proto .servis-people-wrap {
+  max-width: 1240px;
+  margin: 12px auto 0;
+  padding: 24px 24px 0;
+}
+
+.pujcovna-proto .servis-steps-wrap > h2,
+.pujcovna-proto .servis-people-wrap > h2 {
+  margin: 0 0 16px;
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--pp-text);
+}
+
+.pujcovna-proto .servis-people-wrap > h2 {
+  text-align: center;
+}
+
+.pujcovna-proto .servis-steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.pujcovna-proto .servis-people {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  max-width: 840px;
+  margin: 0 auto;
+}
+
+.pujcovna-proto .servis-person {
+  position: relative;
+  background: var(--pp-section);
+  border-radius: 0.3rem;
+  overflow: hidden;
+}
+
+.pujcovna-proto .servis-person > img:not(.servis-person-flag) {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  object-position: center top;
+  background: #e8e8e8;
+}
+
+.pujcovna-proto .servis-person-flag {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 28px;
+  height: 28px;
+  border-radius: 2px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.18);
+}
+
+.pujcovna-proto .servis-person-body {
+  padding: 16px 18px 20px;
+}
+
+.pujcovna-proto .servis-person h3 {
+  margin: 0 0 4px;
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--pp-text);
+}
+
+.pujcovna-proto .servis-person .servis-role {
+  margin: 0 0 10px;
+  font-size: 0.86rem;
+  color: #666;
+}
+
+.pujcovna-proto .servis-person a {
+  display: block;
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--pp-accent);
+  text-decoration: none;
+}
+
+.pujcovna-proto .servis-person a:hover {
+  color: var(--pp-icon);
+}
+
+.pujcovna-proto .servis-step-card a {
+  color: var(--pp-accent);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.pujcovna-proto .servis-step-card a:hover {
+  color: var(--pp-icon);
+}
+
 @media (max-width: 991.98px) {
   .pujcovna-proto .obsluha-gallery {
     grid-template-columns: repeat(3, 1fr);
@@ -1712,6 +1813,8 @@
   .pujcovna-proto .obsluha-copy,
   .pujcovna-proto .obsluha-drivers,
   .pujcovna-proto .doprava-fleet,
+  .pujcovna-proto .servis-steps,
+  .pujcovna-proto .servis-people,
   .pujcovna-proto .rent-bottom--service {
     grid-template-columns: 1fr;
   }
