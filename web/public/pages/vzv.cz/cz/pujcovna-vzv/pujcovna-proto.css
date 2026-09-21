@@ -1971,6 +1971,102 @@
   padding: 24px 26px;
 }
 
+/* -------------------------------------------------------------------------- */
+/* Service landing: Eventy                                                    */
+/* -------------------------------------------------------------------------- */
+
+.pujcovna-proto .eventy-intro-photo {
+  background-image: url("eventy/foto/eventy.jpg");
+}
+
+.pujcovna-proto .eventy-types-wrap,
+.pujcovna-proto .eventy-videos-wrap {
+  max-width: 1240px;
+  margin: 12px auto 0;
+  padding: 24px 24px 0;
+}
+
+.pujcovna-proto .eventy-types-wrap > h2,
+.pujcovna-proto .eventy-videos-wrap > h2 {
+  margin: 0 0 16px;
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--pp-text);
+}
+
+.pujcovna-proto .eventy-types {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.pujcovna-proto .eventy-types .doprava-fleet-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.pujcovna-proto .eventy-types .doprava-fleet-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.pujcovna-proto .eventy-types .doprava-fleet-card img {
+  object-fit: contain;
+  background: #fff;
+}
+
+.pujcovna-proto .eventy-type-btn {
+  margin-top: 14px;
+  align-self: flex-start;
+}
+
+.pujcovna-proto .eventy-videos {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.pujcovna-proto .eventy-video {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  border-radius: 0.3rem;
+  background: #111;
+}
+
+.pujcovna-proto .eventy-video img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+.pujcovna-proto .eventy-video-play {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--pp-green);
+  transform: translate(-50%, -50%);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.28);
+}
+
+.pujcovna-proto .eventy-video-play::before {
+  content: "";
+  position: absolute;
+  left: 22px;
+  top: 18px;
+  border-style: solid;
+  border-width: 10px 0 10px 16px;
+  border-color: transparent transparent transparent #111;
+}
+
+.pujcovna-proto .eventy-logos {
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+}
+
 @media (max-width: 991.98px) {
   .pujcovna-proto .obsluha-gallery {
     grid-template-columns: repeat(3, 1fr);
@@ -1987,8 +2083,19 @@
   .pujcovna-proto .servis-people,
   .pujcovna-proto .dlouho-intro,
   .pujcovna-proto .dlouho-compare-grid,
+  .pujcovna-proto .eventy-types,
+  .pujcovna-proto .eventy-videos,
   .pujcovna-proto .rent-bottom--service {
     grid-template-columns: 1fr;
+  }
+
+  .pujcovna-proto .eventy-types,
+  .pujcovna-proto .eventy-videos {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .pujcovna-proto .eventy-logos {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
   .pujcovna-proto .rent-bottom--service {
@@ -2004,7 +2111,10 @@
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .pujcovna-proto .dlouho-logos {
+  .pujcovna-proto .dlouho-logos,
+  .pujcovna-proto .eventy-logos,
+  .pujcovna-proto .eventy-types,
+  .pujcovna-proto .eventy-videos {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
