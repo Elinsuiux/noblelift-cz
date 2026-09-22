@@ -402,3 +402,57 @@ a.box-vyber-jazyka-jazyk:hover {
 #filtr .filtr-top .text-vzv {
   color: #1a1a1a !important;
 }
+
+/* Listing filter: title beside checkbox, Zrušit filtr #0E6303, badge left #159504 */
+#filtr .filtr-top .form-check {
+  display: flex;
+  align-items: flex-start;
+  padding-left: 0;
+}
+#filtr .filtr-top .form-check-input {
+  float: none;
+  margin-top: 0.18em;
+  margin-left: 0;
+  margin-right: 0.55em;
+  flex-shrink: 0;
+}
+#filtr .filtr-top .form-check-label {
+  padding-top: 0 !important;
+  padding-left: 0;
+  line-height: 1.2;
+}
+#filtr .filtr-top .form-check-label .text-vzv {
+  display: inline-block;
+  white-space: nowrap;
+  font-size: 0.8125rem;
+  line-height: 1.2;
+  letter-spacing: 0;
+}
+.filtr-cancel a,
+.filtr-cancel a.text-primary,
+#filtr .filtr-cancel a,
+#filtr .filtr-cancel a.text-primary {
+  color: #0e6303 !important;
+}
+.filtr-cancel a:hover,
+.filtr-cancel a.text-primary:hover,
+#filtr .filtr-cancel a:hover,
+#filtr .filtr-cancel a.text-primary:hover {
+  color: #073201 !important;
+}
+#filtr-badge,
+#filtr-badge.text-center {
+  text-align: left !important;
+}
+#filtr-badge .badge {
+  display: inline-block;
+  text-align: left;
+  background: transparent !important;
+  padding-left: 0;
+  padding-right: 0;
+}
+#filtr-badge .text-vzv,
+#filtr-badge .fw-bold.text-vzv,
+#filtr-badge .fw-bold {
+  color: #159504 !important;
+}
