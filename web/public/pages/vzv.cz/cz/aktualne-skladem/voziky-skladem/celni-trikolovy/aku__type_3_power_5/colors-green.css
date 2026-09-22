@@ -456,3 +456,19 @@ a.box-vyber-jazyka-jazyk:hover {
 #filtr-badge .fw-bold {
   color: #159504 !important;
 }
+
+.listing-toolbar {
+  align-items: center !important;
+}
+.listing-toolbar #filtr-badge {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  display: flex;
+  align-items: center;
+  min-height: 38px;
+}
+.listing-toolbar #filtr-badge .badge {
+  line-height: 1.2;
+  padding-top: 0;
+  padding-bottom: 0;
+}

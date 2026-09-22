@@ -1475,6 +1475,27 @@ ul li
     color: #159504 !important;
 }
 
+.listing-toolbar {
+    align-items: center !important;
+}
+.listing-toolbar #filtr-badge {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    padding-top: 0;
+    padding-bottom: 0;
+    display: flex;
+    align-items: center;
+    min-height: 38px;
+}
+.listing-toolbar #filtr-badge .badge {
+    line-height: 1.2;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+.listing-toolbar #sort-by {
+    margin-top: 0;
+}
+
 .rs-tooltip,
 #filtr .rs-tooltip,
 .rs-container .rs-tooltip,
