@@ -2836,6 +2836,9 @@ table.table-vyhody .btn
 .first-letter-capitalize:first-letter {
     text-transform: uppercase;
 }
+.first-letter-capitalize .cap-name {
+    text-transform: capitalize;
+}
 
 .katalog-slider img {
     max-height: 200px;
