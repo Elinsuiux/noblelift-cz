@@ -1412,7 +1412,11 @@ ul li
 }
 
 .sticker.sticker-motohodiny {
-    color: #0E6303 !important;
+    background: #E6E6E6 !important;
+    color: #159504 !important;
+}
+.sticker.sticker-motohodiny:before {
+    border-color: transparent #E6E6E6 transparent transparent !important;
 }
 
 .sticker.sticker-baterie {
@@ -1425,19 +1429,19 @@ ul li
 
 .sticker.sticker-repas,
 .sticker.sticker-repas-hotovo {
-    background: #4FFA38 !important;
+    background: #23F906 !important;
     color: #0E6303 !important;
 }
 .sticker.sticker-repas:before,
 .sticker.sticker-repas-hotovo:before {
-    border-color: transparent #4FFA38 transparent transparent !important;
+    border-color: transparent #23F906 transparent transparent !important;
 }
 .sticker.sticker-repas-probiha {
-    background: #73FB61 !important;
+    background: #FFFFFF !important;
     color: #0E6303 !important;
 }
 .sticker.sticker-repas-probiha:before {
-    border-color: transparent #73FB61 transparent transparent !important;
+    border-color: transparent #FFFFFF transparent transparent !important;
 }
 
 #filtr .filtr-top .form-check:has(#top-7) {
