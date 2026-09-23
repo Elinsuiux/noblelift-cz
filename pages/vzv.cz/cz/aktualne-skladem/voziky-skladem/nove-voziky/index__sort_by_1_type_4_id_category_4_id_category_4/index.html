@@ -3738,6 +3738,7 @@ color:#1a1a1a!important}
 
         <div class="row mt-md-3 ms-md-2 pb-3 bg-light-dark filtr-type">
         <div class="col-12 text-primary pt-3 mb-2 text-uppercase">Typ vozíku</div>
+
                                     <div class="col-12">
                     <div class="form-check mb-1">
                         <input class="form-check-input" type="checkbox" value="yes" id="type-3"  onclick="processFiltr()">
@@ -3761,7 +3762,13 @@ color:#1a1a1a!important}
                         <input class="form-check-input" type="checkbox" value="yes" id="type-2"  onclick="processFiltr()">
                         <label class="form-check-label fs-7 text-dark" for="type-2">Ručně vedený vysokozdvižný</label>
                     </div>
-                </div>
+                </div>                    
+                                <div class="col-12">
+                <span class="cursor-pointer fs-6 ps-2 text-lowercase" style="display: none" href="#type-more" role="button" aria-expanded="false" aria-controls="type-more" onclick="showHideMore('type-more-ac', 0); return false;" id="type-more-ac">+ více</span>
+            </div>
+
+            <div class="collapse multi-collapse show" id="type-more">
+
                             <div class="col-12">
                     <div class="form-check mb-1">
                         <input class="form-check-input" type="checkbox" value="yes" id="type-4" checked="checked" onclick="processFiltr()">
@@ -3815,8 +3822,10 @@ color:#1a1a1a!important}
                         <input class="form-check-input" type="checkbox" value="yes" id="type-30"  onclick="processFiltr()">
                         <label class="form-check-label fs-7 text-dark" for="type-30">Ostatní</label>
                     </div>
+                </div>                                                    <div class="col-12">
+                    <span class="cursor-pointer fs-6 ps-2 text-lowercase" href="#type-more" role="button" aria-expanded="false" aria-controls="type-more" onclick="showHideMore('type-more-ac', 1); return false;">- Méně</span>
                 </div>
-                    
+            </div>
             </div>
 
                 <div class="row mt-md-3 ms-md-2 pb-3 bg-light-dark filtr-dostupnost">
