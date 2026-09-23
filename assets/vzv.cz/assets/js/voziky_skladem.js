@@ -114,6 +114,43 @@ function getForklifts(page = 1)
 }
 
 // Zpracování filtru
+function syncDualRange(dataArray, key)
+{
+    if (!dataArray[key] || !$('#' + key + '-from').length)
+    {
+        return;
+    }
+    let parts = String(dataArray[key]).split(',');
+    let fromVal = parts[0];
+    let toVal = parts.length > 1 ? parts[1] : '';
+    let $from = $('#' + key + '-from');
+    let $to = $('#' + key + '-to');
+    $from.val(fromVal);
+    if ($to.length && toVal !== '')
+    {
+        $to.val(toVal);
+    }
+    let minDefault = String($from.data('value-min'));
+    let maxDefault = $to.length ? String($to.data('value-max')) : '';
+    if (toVal === '')
+    {
+        dataArray[key + '-from'] = fromVal;
+        return;
+    }
+    if (String(fromVal) !== minDefault)
+    {
+        dataArray[key + '-from'] = fromVal;
+    }
+    if (String(toVal) !== maxDefault)
+    {
+        dataArray[key + '-to'] = toVal;
+        if (key === 'price' || key === 'overall-height' || key === 'running-hours')
+        {
+            dataArray[key + '-from'] = toVal;
+        }
+    }
+}
+
 function getFiltr()
 {
     let dataArray = {};
@@ -168,11 +205,6 @@ function getFiltr()
         }
     }
 
-    if ($('#year-from').length) {
-        let yearFrom = dataArray['year'].split(',')[0];
-        $('#year-from').val(yearFrom);
-    }
-
     if ($('#capacity-from').length) {
         let capacityFrom = dataArray['capacity'].split(',')[0];
         $('#capacity-from').val(capacityFrom);
@@ -191,17 +223,18 @@ function getFiltr()
         }
     }
 
-    if ($('#overall-height-from').length) {
-        $('#overall-height-from').val(dataArray['overall-height']);
-    }
-
-    if ($('#running-hours-from').length) {
-        $('#running-hours-from').val(dataArray['running-hours']);
-    }
-
-    if ($('#price-from').length) {
-        $('#price-from').val(dataArray['price']);
-    }
+    delete dataArray['year-from'];
+    delete dataArray['year-to'];
+    delete dataArray['overall-height-from'];
+    delete dataArray['overall-height-to'];
+    delete dataArray['running-hours-from'];
+    delete dataArray['running-hours-to'];
+    delete dataArray['price-from'];
+    delete dataArray['price-to'];
+    syncDualRange(dataArray, 'year');
+    syncDualRange(dataArray, 'overall-height');
+    syncDualRange(dataArray, 'running-hours');
+    syncDualRange(dataArray, 'price');
 
     // Nove voziky
     $.each($('#category-box a'), function (key, value) {
@@ -410,13 +443,40 @@ function removeParametrs(dataArray)
     noRefreshslidercapacity = true;
     noRefreshsliderlift = true;
     noRefreshslideryear = true;
+    noRefreshslideroverallheight = true;
+    noRefreshsliderrunninghours = true;
+    noRefreshsliderprice = true;
     slidercapacity.setValues($('#capacity-from').data('value-min'), $('#capacity-to').data('value-max'));
     sliderlift.setValues($('#lift-from').data('value-min'), $('#lift-to').data('value-max'));
+    if (typeof slideroverallheight !== 'undefined' && $('#overall-height-to').length)
+    {
+        slideroverallheight.setValues($('#overall-height-from').data('value-min'), $('#overall-height-to').data('value-max'));
+    }
+    if (typeof sliderrunninghours !== 'undefined' && $('#running-hours-to').length)
+    {
+        sliderrunninghours.setValues($('#running-hours-from').data('value-min'), $('#running-hours-to').data('value-max'));
+    }
+    if (typeof slideryear !== 'undefined' && $('#year-to').length)
+    {
+        slideryear.setValues($('#year-from').data('value-min'), $('#year-to').data('value-max'));
+    }
+    if (typeof sliderprice !== 'undefined' && $('#price-to').length)
+    {
+        sliderprice.setValues($('#price-from').data('value-min'), $('#price-to').data('value-max'));
+    }
 
     delete filtered['capacity-from'];
     delete filtered['capacity-to'];
     delete filtered['lift-from'];
     delete filtered['lift-to'];
+    delete filtered['overall-height-from'];
+    delete filtered['overall-height-to'];
+    delete filtered['running-hours-from'];
+    delete filtered['running-hours-to'];
+    delete filtered['year-from'];
+    delete filtered['year-to'];
+    delete filtered['price-from'];
+    delete filtered['price-to'];
 
     return filtered;
 }

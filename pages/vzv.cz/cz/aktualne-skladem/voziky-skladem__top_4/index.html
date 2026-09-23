@@ -4091,7 +4091,7 @@ color:#1a1a1a!important}
         </div>
     
                 <div class="row mt-md-3 ms-md-2 pb-3 bg-light-dark justify-content-center">
-            <div class="col-12 text-primary pt-3 mb-2 text-uppercase">Stavební výška do</div>
+            <div class="col-12 text-primary pt-3 mb-2 text-uppercase">Stavební výška</div>
             <div class="col-12" id="range-overall-height">
     <div class="row justify-content-center">
         <div class="col-10">
@@ -4103,22 +4103,22 @@ color:#1a1a1a!important}
                 var slideroverallheight = new rSlider({
                     target: '#overall-height',
                     values: [1950,2000,2050,2100,2150,2200,2250,2300,2350,2400,2450,2500,2550,2600,2650,2700,2750,2800,2850,2900,2950,3000,3500,3600,3700,3800,3900,4000,4100,4200,4300,4400,4500,4600,4700,4800,4900,5000,5100,5200,5300,5400,5500,5600,5700,5800,5900,6000],
-                    range: false,
+                    range: true,
                     tooltip: true,
                     scale: false,
                     labels: false,
                     unit: 'mm',
-                    tooltipMax: '>&nbsp;6&nbsp;000&nbsp;mm',
+                    tooltipMax: '>',
                     formatNumber: true,
                     onChange: function (vals) {
-                        setRange('overall-height-from', '', vals, noRefreshslideroverallheight);
+                        setRange('overall-height-from', 'overall-height-to', vals, noRefreshslideroverallheight);
 
                         if (noRefreshslideroverallheight) {
                             noRefreshslideroverallheight = false;
                         }
 
                     },
-                    set: [6000]
+                    set: [1950,6000]
                 });
             </script>
         </div>
@@ -4129,13 +4129,18 @@ color:#1a1a1a!important}
                     <input type="hidden" class="form-control p-0 fs-7 text-center input-number range-input" data-id-parent="overall-height" id="overall-height-from" data-value-min="1950">
                                     </div>
             </div>
+                            <div class="col-6">
+                <div class="input-group">
+                    <input type="hidden" class="form-control p-0 fs-7 text-center input-number range-input" data-id-parent="overall-height" id="overall-height-to" data-value-max="6000">
+                                    </div>
+            </div>
                     </div>
 </div>
 
         </div>
     
                 <div class="row mt-md-3 ms-md-2 pb-3 bg-light-dark justify-content-center">
-            <div class="col-12 text-primary pt-3 mb-2 text-uppercase">Motohodiny do</div>
+            <div class="col-12 text-primary pt-3 mb-2 text-uppercase">Motohodiny</div>
             <div class="col-12" id="range-running-hours">
     <div class="row justify-content-center">
         <div class="col-10">
@@ -4147,22 +4152,22 @@ color:#1a1a1a!important}
                 var sliderrunninghours = new rSlider({
                     target: '#running-hours',
                     values: [1000,2000,3000,4000,5000,6000,7000,8000,9000,10000,11000,12000,13000,14000,15000,20000,25000],
-                    range: false,
+                    range: true,
                     tooltip: true,
                     scale: false,
                     labels: false,
                     unit: 'mth',
-                    tooltipMax: '>&nbsp;25&nbsp;000&nbsp;mth',
+                    tooltipMax: '>',
                     formatNumber: true,
                     onChange: function (vals) {
-                        setRange('running-hours-from', '', vals, noRefreshsliderrunninghours);
+                        setRange('running-hours-from', 'running-hours-to', vals, noRefreshsliderrunninghours);
 
                         if (noRefreshsliderrunninghours) {
                             noRefreshsliderrunninghours = false;
                         }
 
                     },
-                    set: [25000]
+                    set: [1000,25000]
                 });
             </script>
         </div>
@@ -4173,13 +4178,18 @@ color:#1a1a1a!important}
                     <input type="hidden" class="form-control p-0 fs-7 text-center input-number range-input" data-id-parent="running-hours" id="running-hours-from" data-value-min="1000">
                                     </div>
             </div>
+                            <div class="col-6">
+                <div class="input-group">
+                    <input type="hidden" class="form-control p-0 fs-7 text-center input-number range-input" data-id-parent="running-hours" id="running-hours-to" data-value-max="25000">
+                                    </div>
+            </div>
                     </div>
 </div>
 
         </div>
     
                 <div class="row mt-md-3 ms-md-2 pb-3 bg-light-dark justify-content-center filtr-year">
-            <div class="col-12 text-primary pt-3 mb-2 text-uppercase">Rok výroby od</div>
+            <div class="col-12 text-primary pt-3 mb-2 text-uppercase">Rok výroby</div>
             <div class="col-12" id="range-year">
     <div class="row justify-content-center">
         <div class="col-10">
@@ -4191,7 +4201,7 @@ color:#1a1a1a!important}
                 var slideryear = new rSlider({
                     target: '#year',
                     values: [1994,1997,1998,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018,2019,2020,2021,2022,2023,2024,2025],
-                    range: false,
+                    range: true,
                     tooltip: true,
                     scale: false,
                     labels: false,
@@ -4199,14 +4209,14 @@ color:#1a1a1a!important}
                     tooltipMax: '',
                     formatNumber: false,
                     onChange: function (vals) {
-                        setRange('year-from', '', vals, noRefreshslideryear);
+                        setRange('year-from', 'year-to', vals, noRefreshslideryear);
 
                         if (noRefreshslideryear) {
                             noRefreshslideryear = false;
                         }
 
                     },
-                    set: [1994]
+                    set: [1994,2025]
                 });
             </script>
         </div>
@@ -4217,13 +4227,18 @@ color:#1a1a1a!important}
                     <input type="hidden" class="form-control p-0 fs-7 text-center input-number range-input" data-id-parent="year" id="year-from" data-value-min="1994">
                                     </div>
             </div>
+                            <div class="col-6">
+                <div class="input-group">
+                    <input type="hidden" class="form-control p-0 fs-7 text-center input-number range-input" data-id-parent="year" id="year-to" data-value-max="2025">
+                                    </div>
+            </div>
                     </div>
 </div>
 
         </div>
     
                 <div class="row mt-md-3 ms-md-2 pb-3 bg-light-dark justify-content-center">
-            <div class="col-12 text-primary pt-3 mb-2 text-uppercase">Cena do</div>
+            <div class="col-12 text-primary pt-3 mb-2 text-uppercase">Cena</div>
             <div class="col-12" id="range-price">
     <div class="row justify-content-center">
         <div class="col-10">
@@ -4235,22 +4250,22 @@ color:#1a1a1a!important}
                 var sliderprice = new rSlider({
                     target: '#price',
                     values: [50000,100000,150000,200000,250000,300000,350000,400000,450000,500000,550000],
-                    range: false,
+                    range: true,
                     tooltip: true,
                     scale: false,
                     labels: false,
                     unit: 'Kč',
-                    tooltipMax: '>&nbsp;550&nbsp;000&nbsp;Kč',
+                    tooltipMax: '>',
                     formatNumber: true,
                     onChange: function (vals) {
-                        setRange('price-from', '', vals, noRefreshsliderprice);
+                        setRange('price-from', 'price-to', vals, noRefreshsliderprice);
 
                         if (noRefreshsliderprice) {
                             noRefreshsliderprice = false;
                         }
 
                     },
-                    set: [550000]
+                    set: [50000,550000]
                 });
             </script>
         </div>
@@ -4259,6 +4274,11 @@ color:#1a1a1a!important}
                     <div class="col-6">
                 <div class="input-group">
                     <input type="hidden" class="form-control p-0 fs-7 text-center input-number range-input" data-id-parent="price" id="price-from" data-value-min="50000">
+                                    </div>
+            </div>
+                            <div class="col-6">
+                <div class="input-group">
+                    <input type="hidden" class="form-control p-0 fs-7 text-center input-number range-input" data-id-parent="price" id="price-to" data-value-max="550000">
                                     </div>
             </div>
                     </div>
@@ -4820,7 +4840,7 @@ color:#1a1a1a!important}
 <script type="text/javascript" src="../../../../../assets/vzv.cz/assets/js/script_new.js"></script>
 <script type="text/javascript" src="../../../../../assets/vzv.cz/assets/js/functions.js?v=select-native-1"></script>
 <script type="text/javascript" src="../../../../../assets/vzv.cz/assets/js/cookies.js"></script>
-<script src="../../../../../assets/vzv.cz/assets/js/voziky_skladem.js"></script>
+<script src="../../../../../assets/vzv.cz/assets/js/voziky_skladem.js?v=range-dual-1"></script>
 <script src="../../../../../assets/vzv.cz/assets/js/parkoviste.js"></script>
 <script src="../../../../../assets/vzv.cz/assets/js/porovnani.js"></script>
 <script src="../../../../../assets/vzv.cz/assets/js/kosik.js"></script>
