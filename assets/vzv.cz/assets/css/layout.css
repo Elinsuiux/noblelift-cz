@@ -1416,6 +1416,16 @@ ul li
     font-weight: 700;
 }
 
+#filtr #search-text,
+#filtr #search-text[readonly],
+#filtr #search-text:read-only,
+#filtr #search-text:focus {
+    background-color: #ffffff !important;
+    background-image: none !important;
+    color: #1a1a1a;
+    opacity: 1;
+}
+
 #filtr .filtr-top .text-vzv {
     color: #1a1a1a !important;
 }
