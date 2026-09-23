@@ -1411,6 +1411,10 @@ ul li
     color: #159504 !important;
 }
 
+.sticker.sticker-motohodiny {
+    color: #0E6303 !important;
+}
+
 #filtr .bg-light-dark > .col-12.text-primary {
     color: #1a1a1a !important;
     font-weight: 700;
