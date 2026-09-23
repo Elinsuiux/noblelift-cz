@@ -1412,11 +1412,11 @@ ul li
 }
 
 .sticker.sticker-motohodiny {
-    background: #E6E6E6 !important;
-    color: #159504 !important;
+    background: #F5F5F5 !important;
+    color: #14AA00 !important;
 }
 .sticker.sticker-motohodiny:before {
-    border-color: transparent #E6E6E6 transparent transparent !important;
+    border-color: transparent #F5F5F5 transparent transparent !important;
 }
 
 .sticker.sticker-baterie {
