@@ -1426,6 +1426,21 @@ ul li
     opacity: 1;
 }
 
+.page-item .page-link,
+.page-item .page-link:hover,
+.page-item .page-link.bg-primary,
+.page-item .page-link-disabled {
+    color: #000000 !important;
+}
+
+#vzv-paginator .btn.btn-primary:hover,
+#vzv-paginator .btn.btn-primary:focus,
+#vzv-paginator .btn.btn-primary:active {
+    background-color: #1cc705 !important;
+    border-color: #1cc705 !important;
+    color: #000000 !important;
+}
+
 #filtr .filtr-top .text-vzv {
     color: #1a1a1a !important;
 }
