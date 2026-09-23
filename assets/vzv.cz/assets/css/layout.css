@@ -1415,6 +1415,14 @@ ul li
     color: #0E6303 !important;
 }
 
+.sticker.sticker-baterie {
+    background: #A7FC9C !important;
+    color: #0E6303 !important;
+}
+.sticker.sticker-baterie:before {
+    border-color: transparent #A7FC9C transparent transparent !important;
+}
+
 #filtr .bg-light-dark > .col-12.text-primary {
     color: #1a1a1a !important;
     font-weight: 700;
