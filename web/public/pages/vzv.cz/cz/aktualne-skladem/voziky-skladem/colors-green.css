@@ -403,7 +403,7 @@ a.box-vyber-jazyka-jazyk:hover {
   color: #1a1a1a !important;
 }
 
-/* Listing filter: title beside checkbox, Zrušit filtr #0E6303, badge left #159504 */
+/* Listing filter: title beside checkbox, Zrušit filtr #159504, badge left #159504 */
 #filtr .filtr-top .form-check {
   display: flex;
   align-items: flex-start;
@@ -432,7 +432,7 @@ a.box-vyber-jazyka-jazyk:hover {
 .filtr-cancel a.text-primary,
 #filtr .filtr-cancel a,
 #filtr .filtr-cancel a.text-primary {
-  color: #0e6303 !important;
+  color: #159504 !important;
 }
 .filtr-cancel a:hover,
 .filtr-cancel a.text-primary:hover,

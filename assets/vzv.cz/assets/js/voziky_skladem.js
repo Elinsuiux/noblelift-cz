@@ -575,13 +575,23 @@ function changeRangeInputNEW(id, value, parentID)
 }
 function showHideMore(id, action)
 {
+    let $toggle = $('#' + id);
+    let panelId = id.replace(/-ac$/, '');
+    let $panel = $('#' + panelId);
     if (action == 1)
     {
-        $('#' + id).show();
+        $toggle.show();
+        $panel.removeClass('show');
     }
     else
     {
-        $('#' + id).hide();
+        $toggle.hide();
+        $panel.addClass('show');
+    }
+    if (window.event)
+    {
+        window.event.preventDefault();
+        window.event.stopPropagation();
     }
 }
 
