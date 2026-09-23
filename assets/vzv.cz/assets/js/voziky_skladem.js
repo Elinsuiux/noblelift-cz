@@ -15,6 +15,10 @@ $(document).ready(function()
             }
             getForklifts(page);
         }
+        else
+        {
+            tagRepasStickers();
+        }
     }
 
     activeFilter();
@@ -24,6 +28,19 @@ $(document).ready(function()
         changeRangeInputDataNEW($(this));
     });
 });
+
+function tagRepasStickers()
+{
+    $('#forklifts .sticker-repas').each(function () {
+        var t = ($(this).text() || '').replace(/\s+/g, ' ').trim().toLowerCase();
+        $(this).removeClass('sticker-repas-probiha sticker-repas-hotovo');
+        if (t.indexOf('probíhá') !== -1 || t.indexOf('probiha') !== -1) {
+            $(this).addClass('sticker-repas-probiha');
+        } else {
+            $(this).addClass('sticker-repas-hotovo');
+        }
+    });
+}
 
 // Metoda, která je volaná při změně inputu (checkbox, radio, input)
 function processFiltr()
@@ -79,6 +96,7 @@ function getForklifts(page = 1)
             let array = $.parseJSON(response);
 
             $('#forklifts').html(array['voziky']);
+            tagRepasStickers();
             $('#vzv-paginator').html(array['vzv_paginator']);
             $('#filtr-badge').html(array['filtr_badge_template']);
 

@@ -1423,6 +1423,30 @@ ul li
     border-color: transparent #A7FC9C transparent transparent !important;
 }
 
+.sticker.sticker-repas,
+.sticker.sticker-repas-hotovo {
+    background: #4FFA38 !important;
+    color: #0E6303 !important;
+}
+.sticker.sticker-repas:before,
+.sticker.sticker-repas-hotovo:before {
+    border-color: transparent #4FFA38 transparent transparent !important;
+}
+.sticker.sticker-repas-probiha {
+    background: #73FB61 !important;
+    color: #0E6303 !important;
+}
+.sticker.sticker-repas-probiha:before {
+    border-color: transparent #73FB61 transparent transparent !important;
+}
+
+#filtr .filtr-top .form-check:has(#top-7) {
+    align-items: center;
+}
+#filtr .filtr-top .form-check:has(#top-7) .form-check-input {
+    margin-top: 0;
+}
+
 #filtr .bg-light-dark > .col-12.text-primary {
     color: #1a1a1a !important;
     font-weight: 700;
