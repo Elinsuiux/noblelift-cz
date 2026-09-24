@@ -1411,6 +1411,11 @@ ul li
     color: #159504 !important;
 }
 
+.stickers .sticker {
+    justify-content: flex-end !important;
+    text-align: right;
+}
+
 .sticker.sticker-motohodiny {
     background: #F5F5F5 !important;
     color: #14AA00 !important;
@@ -1473,7 +1478,7 @@ ul li
     padding-left: 10px !important;
     padding-right: 10px !important;
     box-sizing: border-box;
-    justify-content: flex-start;
+    justify-content: flex-end;
     white-space: nowrap;
 }
 
