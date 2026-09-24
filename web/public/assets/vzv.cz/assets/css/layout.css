@@ -622,14 +622,16 @@ ul li
 }
 
 .modal-fluid .modal-header .btn-close,
-#modal-vyber-jazyka .modal-header .btn-close {
+#modal-vyber-jazyka .modal-header .btn-close,
+#splatkovaKalkulacka .modal-header .btn-close {
     opacity: 1;
     filter: none;
     background: transparent url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23c8c8c8'%3e%3cpath d='M.293.293a1 1 0 011.414 0L8 6.586 14.293.293a1 1 0 111.414 1.414L9.414 8l6.293 6.293a1 1 0 01-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 01-1.414-1.414L6.586 8 .293 1.707A1 1 0 01.293.293z'/%3e%3c/svg%3e") center / 1em auto no-repeat;
 }
 
 .modal-fluid .modal-header .btn-close:hover,
-#modal-vyber-jazyka .modal-header .btn-close:hover {
+#modal-vyber-jazyka .modal-header .btn-close:hover,
+#splatkovaKalkulacka .modal-header .btn-close:hover {
     opacity: 1;
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23e0e0e0'%3e%3cpath d='M.293.293a1 1 0 011.414 0L8 6.586 14.293.293a1 1 0 111.414 1.414L9.414 8l6.293 6.293a1 1 0 01-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 01-1.414-1.414L6.586 8 .293 1.707A1 1 0 01.293.293z'/%3e%3c/svg%3e");
 }
@@ -3682,4 +3684,65 @@ html {
 .content-body .formatPriceTax,
 .content-body .boxTransportPrice {
     color: #4d4d4d;
+}
+
+/* Splátková kalkulačka: readable title/close on dark header, brand-green accents */
+#splatkovaKalkulacka .modal-header {
+    color: #ffffff;
+}
+#splatkovaKalkulacka .modal-title,
+#splatkovaKalkulacka .modal-header .modal-title {
+    color: #ffffff !important;
+    font-weight: 700;
+    opacity: 1 !important;
+}
+#splatkovaKalkulacka .modal-header .btn-close {
+    opacity: 1 !important;
+    filter: none !important;
+    width: 1.75rem;
+    height: 1.75rem;
+    padding: 0;
+    box-sizing: content-box;
+    background: transparent url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ffffff'%3e%3cpath d='M.293.293a1 1 0 011.414 0L8 6.586 14.293.293a1 1 0 111.414 1.414L9.414 8l6.293 6.293a1 1 0 01-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 01-1.414-1.414L6.586 8 .293 1.707A1 1 0 01.293.293z'/%3e%3c/svg%3e") center / 1.25em auto no-repeat !important;
+}
+#splatkovaKalkulacka .modal-header .btn-close:hover,
+#splatkovaKalkulacka .modal-header .btn-close:focus {
+    opacity: 1 !important;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%2373FB61'%3e%3cpath d='M.293.293a1 1 0 011.414 0L8 6.586 14.293.293a1 1 0 111.414 1.414L9.414 8l6.293 6.293a1 1 0 01-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 01-1.414-1.414L6.586 8 .293 1.707A1 1 0 01.293.293z'/%3e%3c/svg%3e") !important;
+}
+#splatkovaKalkulacka .table {
+    --bs-table-color: #ffffff;
+    --bs-table-bg: #1a1a1a;
+    --bs-table-striped-color: #ffffff;
+    --bs-table-striped-bg: #262626;
+    --bs-table-border-color: #4d4d4d;
+    --bs-table-hover-color: #ffffff;
+    --bs-table-hover-bg: #262626;
+    color: #ffffff !important;
+    background-color: #1a1a1a !important;
+}
+#splatkovaKalkulacka .table > :not(caption) > * > * {
+    color: #ffffff !important;
+    background-color: #1a1a1a !important;
+    border-color: #4d4d4d !important;
+    box-shadow: none !important;
+}
+#splatkovaKalkulacka .table th,
+#splatkovaKalkulacka .table th.text-white,
+#splatkovaKalkulacka .table th.text-center {
+    color: #73FB61 !important;
+    background-color: #1a1a1a !important;
+}
+#splatkovaKalkulacka .table td,
+#splatkovaKalkulacka .table td.text-white {
+    color: #ffffff !important;
+}
+#splatkovaKalkulacka .text-white {
+    color: #ffffff !important;
+}
+#splatkovaKalkulacka iframe[src*="essox"],
+#splatkovaKalkulacka iframe[title*="splátk"],
+#splatkovaKalkulacka iframe[title*="splatk"] {
+    /* ESSOX widget is cross-origin; shift its muted purple (#8C6680) toward #73FB61 */
+    filter: hue-rotate(150deg) saturate(2.6) brightness(1.12);
 }
