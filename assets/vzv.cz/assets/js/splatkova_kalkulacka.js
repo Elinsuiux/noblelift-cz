@@ -41,7 +41,13 @@ function injectEssoxRecolorFilter()
             '<feFlood flood-color="#000000" result="blackFill"/>' +
             '<feComposite in="blackFill" in2="blackMask" operator="in" result="blackParts"/>' +
             '<feComposite in="blackParts" in2="SourceGraphic" operator="over" result="withBlack"/>' +
-            '<feComposite in="greenParts" in2="withBlack" operator="over"/>' +
+            '<feComposite in="greenParts" in2="withBlack" operator="over" result="withGreen"/>' +
+            '<feImage href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAABkCAAAAABiRwW8AAAAEUlEQVR4nGNgGELgPxMDLggAHRkBGoAJv5gAAAAASUVORK5CYII=" x="0%" y="0%" width="100%" height="100%" preserveAspectRatio="none" result="footerZone"/>' +
+            '<feColorMatrix in="withGreen" type="matrix" result="lightPx" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  1 1 1 0 -1.55"/>' +
+            '<feComposite in="lightPx" in2="footerZone" operator="in" result="footerTextMask"/>' +
+            '<feFlood flood-color="#159504" result="phoneGreen"/>' +
+            '<feComposite in="phoneGreen" in2="footerTextMask" operator="in" result="footerGreenText"/>' +
+            '<feComposite in="footerGreenText" in2="withGreen" operator="over"/>' +
         '</filter>';
     document.body.appendChild(svg);
 }
