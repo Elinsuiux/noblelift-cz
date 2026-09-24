@@ -3748,22 +3748,16 @@ html {
 }
 /* ESSOX iframe is cross-origin: SVG filters on the iframe are ignored in Safari
    and some Chrome setups, and color-dodge overlays wash the footer white.
-   mix-blend overlay composites with the iframe bitmap in every browser. */
+   mix-blend and backdrop-filter overlays composite with the iframe bitmap. */
 #splatkovaKalkulacka .vzv-essox-wrap {
     position: relative;
     isolation: isolate;
 }
 #splatkovaKalkulacka .vzv-essox-tint-knob {
     position: absolute;
-    background: #159504;
-    mix-blend-mode: color;
-    pointer-events: none;
-    z-index: 4;
-}
-#splatkovaKalkulacka .vzv-essox-tint-bar {
-    position: absolute;
-    background: #159504;
-    mix-blend-mode: color;
+    background: transparent;
+    backdrop-filter: hue-rotate(154deg) saturate(5);
+    -webkit-backdrop-filter: hue-rotate(154deg) saturate(5);
     pointer-events: none;
     z-index: 4;
 }
@@ -3774,6 +3768,13 @@ html {
     pointer-events: none;
     z-index: 5;
     border-radius: 999px;
+}
+#splatkovaKalkulacka .vzv-essox-tint-bar {
+    position: absolute;
+    background: #159504;
+    mix-blend-mode: color;
+    pointer-events: none;
+    z-index: 4;
 }
 #splatkovaKalkulacka .vzv-essox-footer-cover {
     position: absolute;
