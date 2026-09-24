@@ -3747,12 +3747,27 @@ html {
     position: relative;
     isolation: isolate;
 }
-#splatkovaKalkulacka .vzv-essox-purple-tint {
+#splatkovaKalkulacka .vzv-essox-tint-knob {
     position: absolute;
-    background: #159504;
+    background: #0E6303;
     mix-blend-mode: color;
     pointer-events: none;
     z-index: 4;
+}
+#splatkovaKalkulacka .vzv-essox-tint-bar {
+    position: absolute;
+    background: #0E6303;
+    mix-blend-mode: overlay;
+    pointer-events: none;
+    z-index: 4;
+}
+#splatkovaKalkulacka .vzv-essox-tint-track,
+#splatkovaKalkulacka .vzv-essox-tint-rule {
+    position: absolute;
+    background: #0E6303;
+    mix-blend-mode: darken;
+    pointer-events: none;
+    z-index: 5;
 }
 #splatkovaKalkulacka .vzv-essox-footer-cover {
     position: absolute;

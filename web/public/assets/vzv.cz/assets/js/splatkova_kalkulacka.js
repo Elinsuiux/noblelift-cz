@@ -22,7 +22,8 @@ function essoxFooterMarkup()
 
 function placeEssoxLayer(host, className, html)
 {
-    var el = host.querySelector('.' + className);
+    var unique = className.split(/\s+/).pop();
+    var el = host.querySelector('.' + unique);
     if (!el)
     {
         el = document.createElement('div');
@@ -37,6 +38,16 @@ function placeEssoxLayer(host, className, html)
     return el;
 }
 
+function essoxBox(host, className, ir, hr, fx, fy, fw, fh)
+{
+    var el = placeEssoxLayer(host, className);
+    el.style.left = (ir.left - hr.left + ir.width * fx) + 'px';
+    el.style.top = (ir.top - hr.top + ir.height * fy) + 'px';
+    el.style.width = (ir.width * fw) + 'px';
+    el.style.height = (ir.height * fh) + 'px';
+    return el;
+}
+
 function applyEssoxRecolor()
 {
     var iframe = findEssoxIframe();
@@ -45,7 +56,7 @@ function applyEssoxRecolor()
         return false;
     }
     iframe.style.removeProperty('filter');
-    document.querySelectorAll('.vzv-essox-phone-tint, .vzv-essox-footer-tint').forEach(function (el) {
+    document.querySelectorAll('.vzv-essox-phone-tint, .vzv-essox-footer-tint, .vzv-essox-purple-tint').forEach(function (el) {
         el.remove();
     });
     var host = iframe.parentElement;
@@ -64,16 +75,17 @@ function applyEssoxRecolor()
     host.style.isolation = 'isolate';
     var ir = iframe.getBoundingClientRect();
     var hr = host.getBoundingClientRect();
-    var left = (ir.left - hr.left) + 'px';
-    var width = ir.width + 'px';
-    var tint = placeEssoxLayer(host, 'vzv-essox-purple-tint');
-    tint.style.left = (ir.left - hr.left + ir.width * 0.51) + 'px';
-    tint.style.width = (ir.width * 0.34) + 'px';
-    tint.style.top = (ir.top - hr.top + ir.height * 0.215) + 'px';
-    tint.style.height = (ir.height * 0.54) + 'px';
+    var cardX = 0.511;
+    var cardW = 0.338;
+    essoxBox(host, 'vzv-essox-tint-knob vzv-essox-tint-knob-1', ir, hr, cardX, 0.298, cardW, 0.034);
+    essoxBox(host, 'vzv-essox-tint-knob vzv-essox-tint-knob-2', ir, hr, cardX, 0.448, cardW, 0.034);
+    essoxBox(host, 'vzv-essox-tint-track vzv-essox-tint-track-1', ir, hr, cardX, 0.310, cardW, 0.012);
+    essoxBox(host, 'vzv-essox-tint-track vzv-essox-tint-track-2', ir, hr, cardX, 0.460, cardW, 0.012);
+    essoxBox(host, 'vzv-essox-tint-rule', ir, hr, cardX + 0.02, 0.693, cardW - 0.04, 0.003);
+    essoxBox(host, 'vzv-essox-tint-bar', ir, hr, cardX, 0.538, cardW, 0.094);
     var footer = placeEssoxLayer(host, 'vzv-essox-footer-cover', essoxFooterMarkup());
-    footer.style.left = left;
-    footer.style.width = width;
+    footer.style.left = (ir.left - hr.left) + 'px';
+    footer.style.width = ir.width + 'px';
     footer.style.top = (ir.top - hr.top + ir.height * 0.825) + 'px';
     footer.style.height = (ir.height * 0.175) + 'px';
     return true;
