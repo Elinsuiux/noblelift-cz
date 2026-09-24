@@ -3568,6 +3568,12 @@ html {
 .content-body a:hover {
     color: #073201;
 }
+#wrapSplatkovaKalkulacka a[href^="tel:"] {
+    color: #159504 !important;
+}
+#wrapSplatkovaKalkulacka a[href^="tel:"]:hover {
+    color: #0E6303 !important;
+}
 .content-body .text-vzv,
 .content-body .price-detail .text-vzv,
 .content-body .fs-3.text-vzv {
@@ -3749,25 +3755,25 @@ html {
 }
 #splatkovaKalkulacka .vzv-essox-tint-knob {
     position: absolute;
-    background: #0E6303;
+    background: #159504;
     mix-blend-mode: color;
     pointer-events: none;
     z-index: 4;
 }
 #splatkovaKalkulacka .vzv-essox-tint-bar {
     position: absolute;
-    background: #0E6303;
-    mix-blend-mode: overlay;
+    background: #159504;
+    mix-blend-mode: color;
     pointer-events: none;
     z-index: 4;
 }
-#splatkovaKalkulacka .vzv-essox-tint-track,
-#splatkovaKalkulacka .vzv-essox-tint-rule {
+#splatkovaKalkulacka .vzv-essox-tint-track {
     position: absolute;
-    background: #0E6303;
+    background: #E6E6E6;
     mix-blend-mode: darken;
     pointer-events: none;
     z-index: 5;
+    border-radius: 999px;
 }
 #splatkovaKalkulacka .vzv-essox-footer-cover {
     position: absolute;
