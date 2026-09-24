@@ -1418,7 +1418,7 @@ ul li
 
 .sticker.sticker-motohodiny {
     background: #F5F5F5 !important;
-    color: #14AA00 !important;
+    color: #0E6303 !important;
 }
 .sticker.sticker-motohodiny:before {
     border-color: transparent #F5F5F5 transparent transparent !important;
@@ -1434,12 +1434,12 @@ ul li
 
 .sticker.sticker-repas,
 .sticker.sticker-repas-hotovo {
-    background: #23F906 !important;
+    background: #73FB61 !important;
     color: #0E6303 !important;
 }
 .sticker.sticker-repas:before,
 .sticker.sticker-repas-hotovo:before {
-    border-color: transparent #23F906 transparent transparent !important;
+    border-color: transparent #73FB61 transparent transparent !important;
 }
 .sticker.sticker-repas-probiha {
     background: #D3FECD !important;
