@@ -3740,22 +3740,18 @@ html {
 #splatkovaKalkulacka .text-white {
     color: #ffffff !important;
 }
-#splatkovaKalkulacka iframe[src*="essox"],
-#splatkovaKalkulacka iframe[title*="splátk"],
-#splatkovaKalkulacka iframe[title*="splatk"] {
-    /* Purple controls → #159504, dark heading/footer → black, footer text stays white, logo red stays */
-    filter: url(#essox-recolor);
-}
-#splatkovaKalkulacka .vzv-essox-recolor {
-    filter: url(#essox-recolor);
-}
-#splatkovaKalkulacka .vzv-essox-recolor iframe {
-    filter: none;
-}
 #splatkovaKalkulacka .vzv-essox-footer-tint {
     position: absolute;
     background: #ffffff;
     mix-blend-mode: color-dodge;
     pointer-events: none;
     z-index: 5;
+}
+#splatkovaKalkulacka iframe[src*="essox"],
+#splatkovaKalkulacka iframe[title*="splátk"],
+#splatkovaKalkulacka iframe[title*="splatk"] {
+    /* External SVG filter (url(#id) in this stylesheet never matches the HTML document).
+       JS also injects the same filter and sets iframe.style.filter so Safari can resolve #vzv-essox-recolor.
+       Purple → #159504, dark heading/footer → black, logo red stays. Footer type is whitened by .vzv-essox-footer-tint. */
+    filter: url("../img/essox-recolor.svg#vzv-essox-recolor");
 }
