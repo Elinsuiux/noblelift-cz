@@ -3746,3 +3746,10 @@ html {
     /* Cross-origin ESSOX widget: purple controls → #159504, tinted text/footer → black, logo red stays */
     filter: url(#essox-recolor);
 }
+#splatkovaKalkulacka .vzv-essox-phone-tint {
+    position: absolute;
+    background: #159504;
+    mix-blend-mode: darken;
+    pointer-events: none;
+    z-index: 5;
+}
