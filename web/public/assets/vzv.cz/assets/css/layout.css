@@ -3600,6 +3600,9 @@ html {
 .content-body .ico-vyhody svg path {
     fill: #159504 !important;
 }
+.content-body .ico-vyhody svg rect[fill="#fb4f4f"] {
+    display: none;
+}
 .content-body .banner-volejte-prodejce a.btn.btn-yellow,
 .content-body .banner-volejte-prodejce a.btn.btn-telefonni-cislo {
     color: #ffffff !important;
