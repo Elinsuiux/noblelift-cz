@@ -3743,6 +3743,6 @@ html {
 #splatkovaKalkulacka iframe[src*="essox"],
 #splatkovaKalkulacka iframe[title*="splátk"],
 #splatkovaKalkulacka iframe[title*="splatk"] {
-    /* ESSOX widget is cross-origin; shift its muted purple (#8C6680) toward #73FB61 */
-    filter: hue-rotate(150deg) saturate(2.6) brightness(1.12);
+    /* Cross-origin ESSOX widget: purple controls → #159504, tinted text/footer → black, logo red stays */
+    filter: url(#essox-recolor);
 }
