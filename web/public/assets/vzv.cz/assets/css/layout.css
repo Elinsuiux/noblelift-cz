@@ -3560,6 +3560,16 @@ html {
     background-color: #73fb61 !important;
     border-color: #73fb61 !important;
 }
+.content-body .col-xl-3 .background-grey button.btn-vzv[data-bs-target="#modal-poptat-vozik"] {
+    color: #000000 !important;
+    background-color: #73fb61 !important;
+    border-color: #73fb61 !important;
+}
+.content-body .col-xl-3 .background-grey button.btn-vzv[data-bs-target="#modal-poptat-vozik"]:hover {
+    color: #000000 !important;
+    background-color: #1cc705 !important;
+    border-color: #1cc705 !important;
+}
 .content-body .btn-primary {
     color: #000000 !important;
     background-color: #73fb61 !important;
@@ -3585,6 +3595,32 @@ html {
 }
 .content-body .ico-parameter .svgHighlight {
     fill: #159504;
+}
+.content-body .ico-vyhody svg,
+.content-body .ico-vyhody svg path {
+    fill: #159504 !important;
+}
+.content-body .banner-volejte-prodejce a.btn.btn-yellow,
+.content-body .banner-volejte-prodejce a.btn.btn-telefonni-cislo {
+    color: #ffffff !important;
+    background-color: transparent !important;
+    border: 2px solid #73fb61 !important;
+}
+.content-body .banner-volejte-prodejce a.btn.btn-yellow:hover,
+.content-body .banner-volejte-prodejce a.btn.btn-yellow:focus,
+.content-body .banner-volejte-prodejce a.btn.btn-yellow:active,
+.content-body .banner-volejte-prodejce a.btn.btn-telefonni-cislo:hover,
+.content-body .banner-volejte-prodejce a.btn.btn-telefonni-cislo:focus,
+.content-body .banner-volejte-prodejce a.btn.btn-telefonni-cislo:active {
+    color: #ffffff !important;
+    background-color: rgba(115, 251, 97, 0.38) !important;
+    border-color: #73fb61 !important;
+}
+.content-body .banner-volejte-prodejce a.btn.btn-yellow:hover span,
+.content-body .banner-volejte-prodejce a.btn.btn-yellow:focus span,
+.content-body .banner-volejte-prodejce a.btn.btn-yellow:active span,
+.content-body .banner-volejte-prodejce a.btn.btn-telefonni-cislo:hover span {
+    color: #ffffff !important;
 }
 .content-body .formatPriceNote,
 .content-body .formatPriceTax,
