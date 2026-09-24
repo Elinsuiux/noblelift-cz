@@ -472,3 +472,8 @@ a.box-vyber-jazyka-jazyk:hover {
   padding-top: 0;
   padding-bottom: 0;
 }
+
+.h-dropdown-menu .dropdown-item:hover,
+.h-dropdown-menu .dropdown-item:focus {
+  color: #159504 !important;
+}

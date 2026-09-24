@@ -215,7 +215,7 @@
 .h-dropdown-menu .dropdown-item:hover,
 .h-dropdown-menu .dropdown-item:focus {
     background: var(--color-white);
-    color: #1cc705;
+    color: #159504 !important;
 }
 
 .h-dropdown-menu .dropdown-item svg {

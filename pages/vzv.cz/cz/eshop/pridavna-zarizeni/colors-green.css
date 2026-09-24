@@ -459,3 +459,8 @@ a.box-vyber-jazyka-jazyk:hover {
 #filtr .filtr-top .text-vzv {
   color: #1a1a1a !important;
 }
+
+.h-dropdown-menu .dropdown-item:hover,
+.h-dropdown-menu .dropdown-item:focus {
+  color: #159504 !important;
+}
