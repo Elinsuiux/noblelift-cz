@@ -1437,11 +1437,44 @@ ul li
     border-color: transparent #23F906 transparent transparent !important;
 }
 .sticker.sticker-repas-probiha {
-    background: #FFFFFF !important;
+    background: #D3FECD !important;
     color: #0E6303 !important;
 }
 .sticker.sticker-repas-probiha:before {
-    border-color: transparent #FFFFFF transparent transparent !important;
+    border-color: transparent #D3FECD transparent transparent !important;
+}
+
+.sticker.sticker-nove-dovezeny {
+    background: #4FFA38 !important;
+    color: #0E6303 !important;
+}
+.sticker.sticker-nove-dovezeny:before {
+    border-color: transparent #4FFA38 transparent transparent !important;
+}
+
+.sticker.sticker-stav-4,
+.sticker.sticker-spatny-motor {
+    background: #E6E6E6 !important;
+    color: #000000 !important;
+}
+.sticker.sticker-stav-4:before,
+.sticker.sticker-spatny-motor:before {
+    border-color: transparent #E6E6E6 transparent transparent !important;
+}
+
+.sticker.sticker-nosnost,
+.sticker.sticker-baterie-li-ion,
+.sticker.sticker-baterie-agm {
+    display: flex !important;
+    align-items: center;
+    gap: 6px;
+    min-width: 132px;
+    width: 100%;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+    box-sizing: border-box;
+    justify-content: flex-start;
+    white-space: nowrap;
 }
 
 #filtr .filtr-top .form-check:has(#top-7) {
@@ -3616,7 +3649,7 @@ html {
 .content-body .banner-volejte-prodejce a.btn.btn-telefonni-cislo:focus,
 .content-body .banner-volejte-prodejce a.btn.btn-telefonni-cislo:active {
     color: #ffffff !important;
-    background-color: rgba(21, 149, 4, 0.52) !important;
+    background-color: rgba(14, 99, 3, 0.68) !important;
     border-color: #73fb61 !important;
 }
 .content-body .banner-volejte-prodejce a.btn.btn-yellow:hover span,
