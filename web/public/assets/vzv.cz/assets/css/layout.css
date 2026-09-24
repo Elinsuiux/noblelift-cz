@@ -3641,11 +3641,20 @@ html {
 .content-body .ico-vyhody svg rect[fill="#fb4f4f"] {
     display: none;
 }
+.content-body .banner-volejte-prodejce .banner-img,
+.content-body .banner-volejte-prodejce .banner-volejte-prodejce-img {
+    pointer-events: none;
+}
+.content-body .banner-volejte-prodejce .banner-button,
+.content-body .banner-volejte-prodejce .banner-button a.btn {
+    position: relative;
+    z-index: 6;
+}
 .content-body .banner-volejte-prodejce a.btn.btn-yellow,
 .content-body .banner-volejte-prodejce a.btn.btn-telefonni-cislo {
     color: #ffffff !important;
-    background-color: #0E6303 !important;
-    border: 2px solid #73fb61 !important;
+    background-color: #073201 !important;
+    border: 2px solid #23F906 !important;
 }
 .content-body .banner-volejte-prodejce a.btn.btn-yellow span,
 .content-body .banner-volejte-prodejce a.btn.btn-telefonni-cislo span {
@@ -3658,7 +3667,7 @@ html {
 .content-body .banner-volejte-prodejce a.btn.btn-telefonni-cislo:focus,
 .content-body .banner-volejte-prodejce a.btn.btn-telefonni-cislo:active {
     color: #ffffff !important;
-    background-color: #073201 !important;
+    background-color: #0E6303 !important;
     border-color: #23F906 !important;
 }
 .content-body .banner-volejte-prodejce a.btn.btn-yellow:hover span,
