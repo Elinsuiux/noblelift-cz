@@ -49,8 +49,8 @@ function rewriteDetailLinks()
     }
     $('#forklifts a[href]').each(function () {
         var href = $(this).attr('href') || '';
-        var m = href.match(/aktualne-skladem\/voziky-skladem\/([a-z0-9\-]+)\/?(?:[?#].*)?$/i);
-        if (!m)
+        var m = href.match(/aktualne-skladem\/voziky-skladem\/(?:nove-voziky\/)?([a-z0-9\-]+)\/?(?:[?#].*)?$/i);
+        if (!m || m[1] === 'nove-voziky')
         {
             return;
         }

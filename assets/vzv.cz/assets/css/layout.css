@@ -3550,22 +3550,22 @@ html {
     background-color: #1cc705 !important;
     border-color: #1cc705 !important;
 }
-.content-body button.btn-vzv[data-bs-target="#modal-poptat-vozik"] {
+.content-body button.btn-vzv[data-bs-target^="#modal-poptat-vozik"] {
     color: #000000 !important;
     background-color: #a7fc9c !important;
     border-color: #a7fc9c !important;
 }
-.content-body button.btn-vzv[data-bs-target="#modal-poptat-vozik"]:hover {
+.content-body button.btn-vzv[data-bs-target^="#modal-poptat-vozik"]:hover {
     color: #000000 !important;
     background-color: #73fb61 !important;
     border-color: #73fb61 !important;
 }
-.content-body .col-xl-3 .background-grey button.btn-vzv[data-bs-target="#modal-poptat-vozik"] {
+.content-body .col-xl-3 .background-grey button.btn-vzv[data-bs-target^="#modal-poptat-vozik"] {
     color: #000000 !important;
     background-color: #73fb61 !important;
     border-color: #73fb61 !important;
 }
-.content-body .col-xl-3 .background-grey button.btn-vzv[data-bs-target="#modal-poptat-vozik"]:hover {
+.content-body .col-xl-3 .background-grey button.btn-vzv[data-bs-target^="#modal-poptat-vozik"]:hover {
     color: #000000 !important;
     background-color: #1cc705 !important;
     border-color: #1cc705 !important;
