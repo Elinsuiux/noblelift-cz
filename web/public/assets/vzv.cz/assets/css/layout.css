@@ -3740,18 +3740,44 @@ html {
 #splatkovaKalkulacka .text-white {
     color: #ffffff !important;
 }
-#splatkovaKalkulacka .vzv-essox-footer-tint {
+/* ESSOX iframe is cross-origin: SVG filters on the iframe are ignored in Safari
+   and some Chrome setups, and color-dodge overlays wash the footer white.
+   mix-blend overlay composites with the iframe bitmap in every browser. */
+#splatkovaKalkulacka .vzv-essox-wrap {
+    position: relative;
+    isolation: isolate;
+}
+#splatkovaKalkulacka .vzv-essox-purple-tint {
     position: absolute;
-    background: #ffffff;
-    mix-blend-mode: color-dodge;
+    background: #159504;
+    mix-blend-mode: color;
     pointer-events: none;
-    z-index: 5;
+    z-index: 4;
+}
+#splatkovaKalkulacka .vzv-essox-footer-cover {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2.75rem;
+    background: #000000;
+    color: #ffffff;
+    font-size: 12px;
+    line-height: 1.45;
+    text-align: left;
+    z-index: 6;
+    pointer-events: none;
+    box-sizing: border-box;
+    padding: 0 1rem;
+}
+#splatkovaKalkulacka .vzv-essox-footer-col,
+#splatkovaKalkulacka .vzv-essox-footer-col div,
+#splatkovaKalkulacka .vzv-essox-footer-cover a {
+    color: #ffffff !important;
+    text-decoration: none;
 }
 #splatkovaKalkulacka iframe[src*="essox"],
 #splatkovaKalkulacka iframe[title*="splátk"],
 #splatkovaKalkulacka iframe[title*="splatk"] {
-    /* External SVG filter (url(#id) in this stylesheet never matches the HTML document).
-       JS also injects the same filter and sets iframe.style.filter so Safari can resolve #vzv-essox-recolor.
-       Purple → #159504, dark heading/footer → black, logo red stays. Footer type is whitened by .vzv-essox-footer-tint. */
-    filter: url("../img/essox-recolor.svg#vzv-essox-recolor");
+    filter: none;
 }

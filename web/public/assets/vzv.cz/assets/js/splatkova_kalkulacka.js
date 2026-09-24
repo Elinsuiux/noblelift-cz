@@ -1,33 +1,40 @@
-function ensureEssoxRecolorFilter()
-{
-    if (document.getElementById('vzv-essox-filter-svg'))
-    {
-        return;
-    }
-    var svgNS = 'http://www.w3.org/2000/svg';
-    var markup = '<svg xmlns="http://www.w3.org/2000/svg"><filter id="vzv-essox-recolor" color-interpolation-filters="sRGB" x="0%" y="0%" width="100%" height="100%"><feColorMatrix in="SourceGraphic" type="matrix" result="gChan" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 1 0 0 0"/><feComponentTransfer in="gChan" result="gBand"><feFuncA type="table" tableValues="0 0 0 1 1 0.2 0 0 0"/></feComponentTransfer><feColorMatrix in="SourceGraphic" type="matrix" result="rGtG" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  10 -10 0 0 0"/><feComposite in="gBand" in2="rGtG" operator="arithmetic" k1="1" k2="0" k3="0" k4="0" result="purpleMask"/><feFlood flood-color="#159504" result="greenFill"/><feComposite in="greenFill" in2="purpleMask" operator="in" result="greenParts"/><feColorMatrix in="SourceGraphic" type="matrix" result="luma" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0.2126 0.7152 0.0722 0 0"/><feComponentTransfer in="luma" result="darkMask"><feFuncA type="table" tableValues="1 1 1 1 0.35 0 0 0 0"/></feComponentTransfer><feComponentTransfer in="purpleMask" result="notPurple"><feFuncA type="table" tableValues="1 0"/></feComponentTransfer><feColorMatrix in="SourceGraphic" type="matrix" result="redness" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  2 -1 -1 0 0"/><feComponentTransfer in="redness" result="notRed"><feFuncA type="table" tableValues="1 1 1 0.4 0 0 0 0 0"/></feComponentTransfer><feComposite in="darkMask" in2="notPurple" operator="arithmetic" k1="1" k2="0" k3="0" k4="0" result="darkNotPurple"/><feComposite in="darkNotPurple" in2="notRed" operator="arithmetic" k1="1" k2="0" k3="0" k4="0" result="blackMask"/><feFlood flood-color="#000000" result="blackFill"/><feComposite in="blackFill" in2="blackMask" operator="in" result="blackParts"/><feComposite in="blackParts" in2="SourceGraphic" operator="over" result="withBlack"/><feComposite in="greenParts" in2="withBlack" operator="over"/></filter></svg>';
-    var parsed = new DOMParser().parseFromString(markup, 'image/svg+xml');
-    var filterNode = parsed.documentElement.querySelector('filter');
-    var svg = document.createElementNS(svgNS, 'svg');
-    svg.setAttribute('id', 'vzv-essox-filter-svg');
-    svg.setAttribute('aria-hidden', 'true');
-    svg.setAttribute('focusable', 'false');
-    svg.setAttribute('width', '0');
-    svg.setAttribute('height', '0');
-    svg.style.position = 'absolute';
-    svg.style.width = '0';
-    svg.style.height = '0';
-    svg.style.overflow = 'hidden';
-    if (filterNode)
-    {
-        svg.appendChild(document.importNode(filterNode, true));
-    }
-    document.body.appendChild(svg);
-}
-
 function findEssoxIframe()
 {
     return document.querySelector('#splatkovaKalkulacka iframe[src*="essox"], #splatkovaKalkulacka iframe[title*="splátk"], #splatkovaKalkulacka iframe[title*="splatk"], #splatkovaKalkulacka iframe');
+}
+
+function essoxFooterMarkup()
+{
+    return ''
+        + '<div class="vzv-essox-footer-col">'
+        + '<div><a href="tel:+420389010422">+420 389 010 422</a></div>'
+        + '<div>Po – Pá, od 8:00 do 19:00</div>'
+        + '<div>Nejčastější dotazy, www.essox.cz</div>'
+        + '<div>Nastavení cookies</div>'
+        + '</div>'
+        + '<div class="vzv-essox-footer-col">'
+        + '<div>ESSOX s.r.o.</div>'
+        + '<div>F. A. Gerstnera 52, 370 01 České Budějovice</div>'
+        + '<div>IČO 26764652, DIČ CZ699001182</div>'
+        + '<div>Spisová značka: 12814 C</div>'
+        + '</div>';
+}
+
+function placeEssoxLayer(host, className, html)
+{
+    var el = host.querySelector('.' + className);
+    if (!el)
+    {
+        el = document.createElement('div');
+        el.className = className;
+        el.setAttribute('aria-hidden', 'true');
+        if (html)
+        {
+            el.innerHTML = html;
+        }
+        host.appendChild(el);
+    }
+    return el;
 }
 
 function applyEssoxRecolor()
@@ -37,9 +44,8 @@ function applyEssoxRecolor()
     {
         return false;
     }
-    ensureEssoxRecolorFilter();
-    iframe.style.setProperty('filter', 'url("#vzv-essox-recolor")');
-    document.querySelectorAll('.vzv-essox-phone-tint').forEach(function (el) {
+    iframe.style.removeProperty('filter');
+    document.querySelectorAll('.vzv-essox-phone-tint, .vzv-essox-footer-tint').forEach(function (el) {
         el.remove();
     });
     var host = iframe.parentElement;
@@ -47,25 +53,29 @@ function applyEssoxRecolor()
     {
         return false;
     }
+    if (!host.classList.contains('vzv-essox-wrap'))
+    {
+        host.classList.add('vzv-essox-wrap');
+    }
     if (window.getComputedStyle(host).position === 'static')
     {
         host.style.position = 'relative';
     }
     host.style.isolation = 'isolate';
-    var overlay = host.querySelector('.vzv-essox-footer-tint');
-    if (!overlay)
-    {
-        overlay = document.createElement('div');
-        overlay.className = 'vzv-essox-footer-tint';
-        overlay.setAttribute('aria-hidden', 'true');
-        host.appendChild(overlay);
-    }
     var ir = iframe.getBoundingClientRect();
     var hr = host.getBoundingClientRect();
-    overlay.style.left = (ir.left - hr.left) + 'px';
-    overlay.style.width = ir.width + 'px';
-    overlay.style.top = (ir.top - hr.top + ir.height * 0.825) + 'px';
-    overlay.style.height = (ir.height * 0.175) + 'px';
+    var left = (ir.left - hr.left) + 'px';
+    var width = ir.width + 'px';
+    var tint = placeEssoxLayer(host, 'vzv-essox-purple-tint');
+    tint.style.left = (ir.left - hr.left + ir.width * 0.51) + 'px';
+    tint.style.width = (ir.width * 0.34) + 'px';
+    tint.style.top = (ir.top - hr.top + ir.height * 0.215) + 'px';
+    tint.style.height = (ir.height * 0.54) + 'px';
+    var footer = placeEssoxLayer(host, 'vzv-essox-footer-cover', essoxFooterMarkup());
+    footer.style.left = left;
+    footer.style.width = width;
+    footer.style.top = (ir.top - hr.top + ir.height * 0.825) + 'px';
+    footer.style.height = (ir.height * 0.175) + 'px';
     return true;
 }
 
@@ -87,7 +97,14 @@ function prepareEssoxHtml(html)
     {
         return html;
     }
-    return html.replace(/<iframe\b/gi, '<iframe referrerpolicy="no-referrer"');
+    html = html.replace(/<iframe\b([^>]*)>/gi, function (match, attrs) {
+        if (!/referrerpolicy/i.test(attrs))
+        {
+            attrs = ' referrerpolicy="no-referrer"' + attrs;
+        }
+        return '<div class="vzv-essox-wrap"><iframe' + attrs + '>';
+    });
+    return html.replace(/<\/iframe>/gi, '</iframe></div>');
 }
 
 function bindEssoxRecolorEvents()
@@ -108,7 +125,10 @@ function bindEssoxRecolorEvents()
     if (modal && window.MutationObserver)
     {
         new MutationObserver(function () {
-            scheduleEssoxRecolor();
+            if (findEssoxIframe())
+            {
+                applyEssoxRecolor();
+            }
         }).observe(modal, { childList: true, subtree: true });
     }
 }
