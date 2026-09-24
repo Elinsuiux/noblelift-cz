@@ -11,10 +11,11 @@ function injectEssoxRecolorFilter()
     }
     var svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
     svg.id = 'vzv-essox-filter-svg';
-    svg.setAttribute('width', '0');
-    svg.setAttribute('height', '0');
+    svg.setAttribute('xmlns', 'http://www.w3.org/2000/svg');
+    svg.setAttribute('width', '1');
+    svg.setAttribute('height', '1');
     svg.setAttribute('aria-hidden', 'true');
-    svg.style.position = 'absolute';
+    svg.style.cssText = 'position:absolute;left:-8px;top:-8px;width:1px;height:1px;overflow:hidden;pointer-events:none;';
     svg.innerHTML =
         '<filter id="essox-recolor" color-interpolation-filters="sRGB" x="0%" y="0%" width="100%" height="100%">' +
             '<feColorMatrix in="SourceGraphic" type="matrix" result="gChan" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 1 0 0 0"/>' +
@@ -46,44 +47,70 @@ function injectEssoxRecolorFilter()
     document.body.appendChild(svg);
 }
 
-function tintEssoxFooterPhone()
+function wrapEssoxCalculator()
 {
-    var iframe = document.querySelector('#splatkovaKalkulacka iframe[src*="essox"], #splatkovaKalkulacka iframe[title*="splátk"], #splatkovaKalkulacka iframe[title*="splatk"]');
+    var iframe = document.querySelector('#splatkovaKalkulacka iframe[src*="essox"], #splatkovaKalkulacka iframe[title*="splátk"], #splatkovaKalkulacka iframe[title*="splatk"], #splatkovaKalkulacka iframe');
     if (!iframe || !iframe.offsetHeight)
     {
         return false;
     }
-    var parent = iframe.parentElement;
-    if (!parent)
+    var host = iframe.parentElement;
+    if (!host)
     {
         return false;
     }
-    if (window.getComputedStyle(parent).position === 'static')
+    if (host.classList.contains('vzv-essox-recolor'))
     {
-        parent.style.position = 'relative';
+        host = host.parentElement;
     }
-    parent.style.isolation = 'isolate';
-    var overlay = parent.querySelector('.vzv-essox-phone-tint');
+    if (!host)
+    {
+        return false;
+    }
+    if (window.getComputedStyle(host).position === 'static')
+    {
+        host.style.position = 'relative';
+    }
+    host.style.isolation = 'isolate';
+
+    var wrap = host.querySelector(':scope > .vzv-essox-recolor');
+    if (!wrap)
+    {
+        wrap = document.createElement('div');
+        wrap.className = 'vzv-essox-recolor';
+        iframe.parentNode.insertBefore(wrap, iframe);
+        wrap.appendChild(iframe);
+    }
+    else if (iframe.parentElement !== wrap)
+    {
+        wrap.appendChild(iframe);
+    }
+    iframe.style.filter = 'none';
+    wrap.style.filter = 'url("#essox-recolor")';
+
+    var overlay = host.querySelector(':scope > .vzv-essox-footer-tint');
     if (!overlay)
     {
         overlay = document.createElement('div');
-        overlay.className = 'vzv-essox-phone-tint';
+        overlay.className = 'vzv-essox-footer-tint';
         overlay.setAttribute('aria-hidden', 'true');
-        parent.appendChild(overlay);
+        host.appendChild(overlay);
     }
-    overlay.style.left = iframe.offsetLeft + 'px';
-    overlay.style.width = iframe.offsetWidth + 'px';
-    overlay.style.top = (iframe.offsetTop + iframe.offsetHeight * 0.828) + 'px';
-    overlay.style.height = (iframe.offsetHeight * 0.172) + 'px';
+    var ir = iframe.getBoundingClientRect();
+    var hr = host.getBoundingClientRect();
+    overlay.style.left = (ir.left - hr.left) + 'px';
+    overlay.style.width = ir.width + 'px';
+    overlay.style.top = (ir.top - hr.top + ir.height * 0.83) + 'px';
+    overlay.style.height = (ir.height * 0.17) + 'px';
     return true;
 }
 
-function scheduleEssoxFooterTint()
+function scheduleEssoxRecolor()
 {
     var tries = 0;
     var timer = setInterval(function () {
         tries += 1;
-        if (tintEssoxFooterPhone() || tries > 40)
+        if (wrapEssoxCalculator() || tries > 40)
         {
             clearInterval(timer);
         }
@@ -91,23 +118,23 @@ function scheduleEssoxFooterTint()
 }
 
 injectEssoxRecolorFilter();
-function bindEssoxFooterTintEvents()
+function bindEssoxRecolorEvents()
 {
-    window.addEventListener('resize', tintEssoxFooterPhone);
     document.addEventListener('shown.bs.modal', function (event) {
         if (event.target && event.target.id === 'splatkovaKalkulacka')
         {
-            scheduleEssoxFooterTint();
+            injectEssoxRecolorFilter();
+            scheduleEssoxRecolor();
         }
     });
 }
 if (document.readyState === 'loading')
 {
-    document.addEventListener('DOMContentLoaded', bindEssoxFooterTintEvents);
+    document.addEventListener('DOMContentLoaded', bindEssoxRecolorEvents);
 }
 else
 {
-    bindEssoxFooterTintEvents();
+    bindEssoxRecolorEvents();
 }
 
 function splatkovaKalkulacka(porizovaciCena = 0, zobrazitClassicLeasing = 0)
@@ -121,7 +148,7 @@ function splatkovaKalkulacka(porizovaciCena = 0, zobrazitClassicLeasing = 0)
     {
         ajaxCallPromise('splatkova-kalkulacka-uver', {'cena': porizovaciCena, 'zobrazit-classic-leasing': zobrazitClassicLeasing}, true, 'GET').then((response) => {
             $('#splatkova-kalkulacka-modal-content').html(response);
-            scheduleEssoxFooterTint();
+            scheduleEssoxRecolor();
         });
     }
     else

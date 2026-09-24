@@ -3743,13 +3743,19 @@ html {
 #splatkovaKalkulacka iframe[src*="essox"],
 #splatkovaKalkulacka iframe[title*="splátk"],
 #splatkovaKalkulacka iframe[title*="splatk"] {
-    /* Cross-origin ESSOX widget: purple controls → #159504, tinted text/footer → black, logo red stays */
+    /* Purple controls → #159504, dark heading/footer → black, footer text stays white, logo red stays */
     filter: url(#essox-recolor);
 }
-#splatkovaKalkulacka .vzv-essox-phone-tint {
+#splatkovaKalkulacka .vzv-essox-recolor {
+    filter: url(#essox-recolor);
+}
+#splatkovaKalkulacka .vzv-essox-recolor iframe {
+    filter: none;
+}
+#splatkovaKalkulacka .vzv-essox-footer-tint {
     position: absolute;
-    background: #159504;
-    mix-blend-mode: darken;
+    background: #ffffff;
+    mix-blend-mode: color-dodge;
     pointer-events: none;
     z-index: 5;
 }
