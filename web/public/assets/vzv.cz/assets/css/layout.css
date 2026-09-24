@@ -3639,8 +3639,12 @@ html {
 .content-body .banner-volejte-prodejce a.btn.btn-yellow,
 .content-body .banner-volejte-prodejce a.btn.btn-telefonni-cislo {
     color: #ffffff !important;
-    background-color: transparent !important;
+    background-color: #0E6303 !important;
     border: 2px solid #73fb61 !important;
+}
+.content-body .banner-volejte-prodejce a.btn.btn-yellow span,
+.content-body .banner-volejte-prodejce a.btn.btn-telefonni-cislo span {
+    color: #ffffff !important;
 }
 .content-body .banner-volejte-prodejce a.btn.btn-yellow:hover,
 .content-body .banner-volejte-prodejce a.btn.btn-yellow:focus,
@@ -3649,13 +3653,15 @@ html {
 .content-body .banner-volejte-prodejce a.btn.btn-telefonni-cislo:focus,
 .content-body .banner-volejte-prodejce a.btn.btn-telefonni-cislo:active {
     color: #ffffff !important;
-    background-color: rgba(14, 99, 3, 0.68) !important;
-    border-color: #73fb61 !important;
+    background-color: #073201 !important;
+    border-color: #073201 !important;
 }
 .content-body .banner-volejte-prodejce a.btn.btn-yellow:hover span,
 .content-body .banner-volejte-prodejce a.btn.btn-yellow:focus span,
 .content-body .banner-volejte-prodejce a.btn.btn-yellow:active span,
-.content-body .banner-volejte-prodejce a.btn.btn-telefonni-cislo:hover span {
+.content-body .banner-volejte-prodejce a.btn.btn-telefonni-cislo:hover span,
+.content-body .banner-volejte-prodejce a.btn.btn-telefonni-cislo:focus span,
+.content-body .banner-volejte-prodejce a.btn.btn-telefonni-cislo:active span {
     color: #ffffff !important;
 }
 .content-body .formatPriceNote,
