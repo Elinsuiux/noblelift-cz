@@ -101,7 +101,7 @@ a:hover {
 .btn-yellow {
     color: #ffffff;
     background-color: transparent;
-    border: 2px solid #73fb61;
+    border: 2px solid #159504;
     border-radius: 0.3rem;
 }
 
@@ -114,9 +114,9 @@ a.btn.btn-yellow:active,
 .btn-yellow.btn-telefonni-cislo:hover,
 .btn-yellow.btn-telefonni-cislo:focus,
 .btn-yellow.btn-telefonni-cislo:active {
-    color: #ffffff !important;
-    background-color: rgba(115, 251, 97, 0.22) !important;
-    border-color: #73fb61 !important;
+    color: #073201 !important;
+    background-color: rgba(21, 149, 4, 0.12) !important;
+    border-color: #159504 !important;
 }
 
 .btn-yellow:hover span,
@@ -124,7 +124,7 @@ a.btn.btn-yellow:active,
 .btn-yellow:active span,
 a.btn.btn-yellow:hover span,
 .btn-yellow.btn-telefonni-cislo:hover span {
-    color: #ffffff !important;
+    color: #073201 !important;
 }
 
 
@@ -3550,6 +3550,16 @@ html {
     background-color: #1cc705 !important;
     border-color: #1cc705 !important;
 }
+.content-body button.btn-vzv[data-bs-target="#modal-poptat-vozik"] {
+    color: #000000 !important;
+    background-color: #a7fc9c !important;
+    border-color: #a7fc9c !important;
+}
+.content-body button.btn-vzv[data-bs-target="#modal-poptat-vozik"]:hover {
+    color: #000000 !important;
+    background-color: #73fb61 !important;
+    border-color: #73fb61 !important;
+}
 .content-body .btn-primary {
     color: #000000 !important;
     background-color: #73fb61 !important;
@@ -3574,7 +3584,7 @@ html {
     color: #73fb61;
 }
 .content-body .ico-parameter .svgHighlight {
-    fill: #73fb61;
+    fill: #159504;
 }
 .content-body .formatPriceNote,
 .content-body .formatPriceTax,
