@@ -783,7 +783,7 @@
           '<button type="button" class="btn btn-outline-dark" onclick="getComparePDF()">Uložit do PDF ' + ICO_DL + "</button>" +
         "</div>" +
         '<div class="col-12 col-md-6 text-md-end">' +
-          '<button type="button" class="btn btn-primary" onclick="addInquiryCompare()">Poptat všechny vozíky</button>' +
+          '<button type="button" class="btn compare-poptat-all" onclick="addInquiryCompare()">Poptat všechny vozíky</button>' +
         "</div>" +
       "</div>"
     );
@@ -994,7 +994,7 @@
             '<tr class="compare-row-poptat"><th>Poptat</th>' + cells(function (it) {
               return (
                 '<div class="compare-poptat-btns">' +
-                  '<button type="button" class="btn btn-primary btn-sm" onclick="poptatCompareItem(\'' + it.id + "')\">Poptat</button>" +
+                  '<button type="button" class="btn btn-sm compare-poptat-item" onclick="poptatCompareItem(\'' + it.id + "')\">Poptat</button>" +
                   '<a href="' + PATHS.kosik + '" class="btn btn-outline-primary btn-sm d-none" id="item-v-kosiku-' + it.id + '">V košíku</a>' +
                   '<button type="button" class="btn btn-primary btn-sm btn-cart" id="item-pridat-do-kosiku-' + it.id + '" data-bs-toggle="modal" data-bs-target="#obsah-kosiku" onclick="addBasket(\'' + it.id + "')\">Do košíku</button>" +
                 "</div>"
@@ -1103,7 +1103,7 @@
     var link = document.createElement("link");
     link.id = "vzv-static-lists-css";
     link.rel = "stylesheet";
-    link.href = "/assets/vzv.cz/assets/css/static-lists.css?v=lists-9";
+    link.href = "/assets/vzv.cz/assets/css/static-lists.css?v=lists-10";
     document.head.appendChild(link);
   }
 

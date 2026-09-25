@@ -4265,7 +4265,7 @@ a[id^="item-v-kosiku-"].btn:active,
 #compare-wrap .compare-table {
     width: 100%;
     border-collapse: collapse;
-    background: #f3f3f3;
+    background: #fff;
 }
 #compare-wrap .compare-table th,
 #compare-wrap .compare-table td {
@@ -4278,21 +4278,36 @@ a[id^="item-v-kosiku-"].btn:active,
     text-align: right;
     font-weight: 700;
     color: #111;
-    background: #ebebeb !important;
     white-space: nowrap;
+    background: #ebebeb;
 }
 #compare-wrap .compare-table td {
     text-align: center;
-    background: #fff;
+}
+#compare-wrap .compare-table tbody tr:nth-child(odd) td {
+    background: #ffffff;
+}
+#compare-wrap .compare-table tbody tr:nth-child(even) td {
+    background: #e9e9e9;
+}
+#compare-wrap .compare-table tbody tr:nth-child(odd) th {
+    background: #ebebeb;
+}
+#compare-wrap .compare-table tbody tr:nth-child(even) th {
+    background: #e9e9e9;
 }
 #compare-wrap .first-col-sticky th:first-child {
     position: sticky;
     left: 0;
     z-index: 2;
+}
+#compare-wrap .compare-table tbody tr:nth-child(odd) th:first-child {
     background: #ebebeb !important;
 }
+#compare-wrap .compare-table tbody tr:nth-child(even) th:first-child {
+    background: #e9e9e9 !important;
+}
 #compare-wrap .compare-row-photo td {
-    background: #f3f3f3;
     padding: 12px;
 }
 #compare-wrap .compare-row-photo img,
@@ -4303,7 +4318,7 @@ a[id^="item-v-kosiku-"].btn:active,
     object-fit: contain;
     display: block;
     margin: 0 auto;
-    background: #f3f3f3;
+    background: transparent;
 }
 #compare-wrap .compare-remove {
     color: #159504 !important;
@@ -4340,6 +4355,28 @@ a[id^="item-v-kosiku-"].btn:active,
 }
 #compare-wrap .compare-poptat-btns .btn {
     white-space: nowrap;
+}
+#compare-wrap .compare-poptat-item {
+    background: #A7FC9C !important;
+    border-color: #A7FC9C !important;
+    color: #000 !important;
+}
+#compare-wrap .compare-poptat-item:hover,
+#compare-wrap .compare-poptat-item:focus {
+    background: #73fb61 !important;
+    border-color: #73fb61 !important;
+    color: #000 !important;
+}
+#compare-wrap .compare-poptat-all {
+    background: #159504 !important;
+    border-color: #159504 !important;
+    color: #fff !important;
+}
+#compare-wrap .compare-poptat-all:hover,
+#compare-wrap .compare-poptat-all:focus {
+    background: #0e6303 !important;
+    border-color: #0e6303 !important;
+    color: #fff !important;
 }
 @media print {
     .compare-bar {
