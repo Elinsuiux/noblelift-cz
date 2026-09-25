@@ -174,7 +174,15 @@
       if (moto) {
         item.stickerHtml = '<div class="stickers position-absolute top-0 end-0 mt-3"><div class="sticker fw-bold mt-1 pe-2 sticker-motohodiny">' + escapeHtml(text(moto)) + "</div></div>";
       }
+      var crumb = document.querySelector(".container-carousel-item .mt-2.p-3 a");
+      if (crumb && text(crumb)) item.type = text(crumb);
+      if (!item.type) {
+        var h2el = document.querySelector(".content-body h2");
+        item.type = typeFromText(title) || typeFromText(h2el && h2el.textContent);
+      }
     }
+    if (!item.type) item.type = guessType(item);
+    if (item.type) item.subtitle = itemSubtitle(item);
     if (existing) {
       if (!item.img) item.img = existing.img;
       if (!item.price) item.price = existing.price;
@@ -183,6 +191,8 @@
       if (!item.cardHtml) item.cardHtml = existing.cardHtml;
       if (!item.code) item.code = existing.code;
       if (!item.stickerHtml) item.stickerHtml = existing.stickerHtml;
+      if (!item.type) item.type = existing.type;
+      if (!item.subtitle) item.subtitle = existing.subtitle;
     }
     return item;
   }
@@ -286,11 +296,10 @@
       if (HANDLED[url]) {
         var payload = handle(url, data || {});
         return Promise.resolve(payload).then(function (result) {
-          setTimeout(function () {
-            updateCounts();
-            markButtons();
-            if (/favourite/.test(url)) renderFavourites();
-          }, 0);
+          updateCounts();
+          markButtons();
+          if (/favourite/.test(url)) renderFavourites();
+          if (/basket/.test(url)) renderBasket();
           return result;
         });
       }
@@ -402,6 +411,275 @@
     if (m) return { code: m[1], name: m[2] };
     if (it.code) return { code: it.code, name: t.replace(it.code, "").trim() };
     return { code: "", name: t };
+  }
+
+  var CHECKOUT_KEY = "vzv_checkout";
+  var basketStep = 1;
+
+  function typeFromText(s) {
+    s = String(s || "").replace(/\s+/g, " ").trim();
+    var m = s.match(/^(Čelní tříkolový|Čelní čtyřkolový|Retrak|Ručně vedený vysokozdvižný|Ručně vedený nízkozdvižný|Vychystávací vozík|Boční vozík|Teleskopický manipulátor)/i);
+    return m ? m[1] : "";
+  }
+
+  function guessType(it) {
+    if (it && it.type) return it.type;
+    var s = ((it && it.url) || "") + " " + ((it && it.title) || "");
+    var fromTitle = typeFromText((it && it.title) || "");
+    if (fromTitle) return fromTitle;
+    s = s.toLowerCase();
+    if (/tříkolov|trikolov/.test(s)) return "Čelní tříkolový";
+    if (/čtyřkolov|ctyrkolov/.test(s)) return "Čelní čtyřkolový";
+    if (/retrak/.test(s)) return "Retrak";
+    if (/rucne-vedene-vysoko|ručně vedený vysokozdviž/.test(s)) return "Ručně vedený vysokozdvižný";
+    if (/rucne-vedene-nizko|nízkozdviž/.test(s)) return "Ručně vedený nízkozdvižný";
+    if (/vychystavac/.test(s)) return "Vychystávací vozík";
+    if (/bocni/.test(s)) return "Boční vozík";
+    if (/telescop|teleskop/.test(s)) return "Teleskopický manipulátor";
+    if (/paletov/.test(s)) return "Paletový vozík";
+    return "";
+  }
+
+  function itemSubtitle(it) {
+    if (it && it.subtitle && String(it.subtitle).replace(/\s/g, "")) return it.subtitle;
+    var type = guessType(it);
+    var s = (((it && it.url) || "") + " " + ((it && it.title) || "")).toLowerCase();
+    if (/pridavn|\/eshop\//.test(s)) return type || "Přídavné zařízení";
+    if (/pujcovna|pronajem/.test(s)) return type ? ("Vysokozdvižný vozík - " + type) : "Pronájem VZV";
+    if (type) return "Vysokozdvižný vozík - " + type;
+    return "Vysokozdvižný vozík";
+  }
+
+  function parsePrice(s) {
+    var n = String(s || "").replace(/\u00a0/g, " ").replace(/[^\d]/g, "");
+    return n ? parseInt(n, 10) : 0;
+  }
+
+  function formatPrice(n) {
+    n = parseInt(n, 10) || 0;
+    return String(n).replace(/\B(?=(\d{3})+(?!\d))/g, " ") + " Kč";
+  }
+
+  function basketSum(list) {
+    var sum = 0;
+    (list || []).forEach(function (it) {
+      var qty = it.qty > 0 ? it.qty : 1;
+      sum += parsePrice(it.price) * qty;
+    });
+    return sum;
+  }
+
+  function readCheckout() {
+    try {
+      var raw = sessionStorage.getItem(CHECKOUT_KEY);
+      var o = raw ? JSON.parse(raw) : {};
+      return o && typeof o === "object" ? o : {};
+    } catch (e) {
+      return {};
+    }
+  }
+
+  function writeCheckout(o) {
+    sessionStorage.setItem(CHECKOUT_KEY, JSON.stringify(o || {}));
+  }
+
+  function saveCheckoutForm() {
+    var cur = readCheckout();
+    ["jmeno", "email", "telefon", "ulice", "mesto", "psc", "spolecnost", "ic"].forEach(function (k) {
+      var el = document.getElementById("kosik-" + k);
+      if (el) cur[k] = el.value;
+    });
+    var dop = document.querySelector('input[name="kosik-doprava"]:checked');
+    var pla = document.querySelector('input[name="kosik-platba"]:checked');
+    if (dop) cur.doprava = dop.value;
+    if (pla) cur.platba = pla.value;
+    writeCheckout(cur);
+    return cur;
+  }
+
+  function inputVal(c, key) {
+    return escapeHtml(c[key] || "");
+  }
+
+  function basketStepperHtml(active) {
+    var steps = [
+      [1, "Košík"],
+      [2, "Dodací údaje"],
+      [3, "Doprava a platba"],
+      [4, "Souhrn objednávky"]
+    ];
+    var html = '<nav class="kosik-steps" aria-label="Průběh objednávky">';
+    steps.forEach(function (st, i) {
+      if (i) html += '<span class="kosik-step-line" aria-hidden="true"></span>';
+      var cls = "kosik-step";
+      if (st[0] === active) cls += " stepActive";
+      else if (st[0] < active) cls += " stepSaved";
+      var inner = '<span class="kosik-step-num">' + st[0] + "</span>" +
+        '<span class="kosik-step-label">' + st[1] + "</span>";
+      if (st[0] < active) {
+        html += '<button type="button" class="' + cls + '" onclick="basketGoStep(' + st[0] + ')">' + inner + "</button>";
+      } else {
+        html += '<div class="' + cls + '">' + inner + "</div>";
+      }
+    });
+    html += "</nav>";
+    return html;
+  }
+
+  function basketLineHtml(it) {
+    var parts = splitTitle(it);
+    var title = ((parts.code ? parts.code + " " : "") + parts.name).trim() || it.title || "";
+    var sub = itemSubtitle(it);
+    var qty = it.qty > 0 ? it.qty : 1;
+    var unit = parsePrice(it.price);
+    var line = unit * qty;
+    return (
+      '<div class="kosik-line" id="kosik-polozka-' + it.id + '">' +
+        (it.img
+          ? '<a class="kosik-line-img" href="' + escapeHtml(it.url) + '"><img src="' + escapeHtml(it.img) + '" alt="' + escapeHtml(title) + '"></a>'
+          : '<div class="kosik-line-img"></div>') +
+        '<div class="kosik-line-info">' +
+          '<a class="kosik-line-title" href="' + escapeHtml(it.url) + '">' + escapeHtml(title) + "</a>" +
+          (sub ? '<div class="kosik-line-sub">' + escapeHtml(sub) + "</div>" : "") +
+        "</div>" +
+        '<div class="kosik-line-unit">' +
+          (unit ? escapeHtml(formatPrice(unit)) + '<div class="kosik-line-tax">bez DPH</div>' : "") +
+        "</div>" +
+        '<div class="kosik-line-qty">' + qty + " ks</div>" +
+        '<div class="kosik-line-total">' + (unit ? escapeHtml(formatPrice(line)) : "") + "</div>" +
+        '<button type="button" class="kosik-line-remove" title="Odebrat" aria-label="Odebrat" onclick="removeBasket(\'' + it.id + "')\">&times;</button>" +
+      "</div>"
+    );
+  }
+
+  function basketActionsHtml(prevLabel, prevFn, nextLabel, nextFn, nextIsLink) {
+    var prev = prevFn
+      ? '<button type="button" class="btn btn-outline-dark kosik-btn-continue" onclick="' + prevFn + '">' + prevLabel + "</button>"
+      : '<a class="btn btn-outline-dark kosik-btn-continue" href="' + PATHS.listing + '">' + prevLabel + "</a>";
+    var next = nextIsLink
+      ? '<a class="btn btn-primary kosik-btn-next" href="' + nextFn + '">' + nextLabel + "</a>"
+      : '<button type="button" class="btn btn-primary kosik-btn-next" onclick="' + nextFn + '">' + nextLabel + "</button>";
+    return '<div class="kosik-actions">' + prev + next + "</div>";
+  }
+
+  function fieldHtml(id, label, required, type, c) {
+    return (
+      '<div class="kosik-field">' +
+        '<label for="kosik-' + id + '">' + label + (required ? ' <span class="text-danger">*</span>' : "") + "</label>" +
+        '<input id="kosik-' + id + '" type="' + (type || "text") + '" class="form-control" value="' + inputVal(c, id) + '"' + (required ? " required" : "") + ">" +
+        (required ? '<div id="alert-kosik-' + id + '" class="kosik-field-alert d-none">Vyplňte pole ' + label.toLowerCase() + ".</div>" : "") +
+      "</div>"
+    );
+  }
+
+  function basketStep1Html(list) {
+    var sum = basketSum(list);
+    return (
+      '<div id="basket-items">' + list.map(basketLineHtml).join("") + "</div>" +
+      '<div class="kosik-total-row">' +
+        '<div class="kosik-total-label">Celkem</div>' +
+        '<div class="kosik-total-value">' +
+          '<div class="kosik-total-sum">' + escapeHtml(formatPrice(sum)) + "</div>" +
+          '<div class="kosik-total-note">Ceny jsou uvedeny bez DPH</div>' +
+        "</div>" +
+      "</div>" +
+      basketActionsHtml("Pokračovat ve výběru", "", "Dodací údaje", "basketGoStep(2)")
+    );
+  }
+
+  function basketStep2Html() {
+    var c = readCheckout();
+    return (
+      '<form class="kosik-form" onsubmit="basketSubmitAddress(); return false;">' +
+        '<div class="row g-3">' +
+          '<div class="col-md-6">' + fieldHtml("jmeno", "Jméno a příjmení", true, "text", c) + "</div>" +
+          '<div class="col-md-6">' + fieldHtml("spolecnost", "Společnost", false, "text", c) + "</div>" +
+          '<div class="col-md-6">' + fieldHtml("email", "E-mail", true, "email", c) + "</div>" +
+          '<div class="col-md-6">' + fieldHtml("telefon", "Mobil", true, "tel", c) + "</div>" +
+          '<div class="col-md-6">' + fieldHtml("ulice", "Ulice a č.p.", true, "text", c) + "</div>" +
+          '<div class="col-md-3">' + fieldHtml("psc", "PSČ", true, "text", c) + "</div>" +
+          '<div class="col-md-3">' + fieldHtml("mesto", "Město", true, "text", c) + "</div>" +
+          '<div class="col-md-6">' + fieldHtml("ic", "IČ", false, "text", c) + "</div>" +
+        "</div>" +
+        basketActionsHtml("Zpět na košík", "basketGoStep(1)", "Doprava a platba", "basketSubmitAddress()") +
+      "</form>"
+    );
+  }
+
+  function radioHtml(name, value, label, checked) {
+    var id = name + "-" + value.replace(/\s+/g, "-").toLowerCase();
+    return (
+      '<label class="kosik-radio" for="' + id + '">' +
+        '<input id="' + id + '" type="radio" name="' + name + '" value="' + escapeHtml(value) + '"' + (checked ? " checked" : "") + ">" +
+        "<span>" + label + "</span>" +
+      "</label>"
+    );
+  }
+
+  function basketStep3Html() {
+    var c = readCheckout();
+    return (
+      '<form class="kosik-form" onsubmit="basketSubmitShipping(); return false;">' +
+        '<div class="kosik-choice-block">' +
+          "<h3>Způsob dopravy</h3>" +
+          radioHtml("kosik-doprava", "Osobní odběr", "Osobní odběr — Červená Voda", c.doprava === "Osobní odběr") +
+          radioHtml("kosik-doprava", "Doprava dohodou", "Doprava dohodou", c.doprava === "Doprava dohodou" || !c.doprava) +
+          '<div id="alert-kosik-doprava" class="kosik-field-alert d-none">Vyberte způsob dopravy.</div>' +
+        "</div>" +
+        '<div class="kosik-choice-block">' +
+          "<h3>Způsob platby</h3>" +
+          radioHtml("kosik-platba", "Bankovní převod", "Bankovní převod", c.platba === "Bankovní převod" || !c.platba) +
+          radioHtml("kosik-platba", "Hotově při převzetí", "Hotově při převzetí", c.platba === "Hotově při převzetí") +
+          '<div id="alert-kosik-platba" class="kosik-field-alert d-none">Vyberte způsob platby.</div>' +
+        "</div>" +
+        basketActionsHtml("Zpět", "basketGoStep(2)", "Souhrn objednávky", "basketSubmitShipping()") +
+      "</form>"
+    );
+  }
+
+  function checkoutMailHref(list, c) {
+    var lines = list.map(function (it) {
+      return "- " + it.title + (it.price ? " (" + it.price + ")" : "");
+    });
+    var body = "Dobrý den,\n\nchtěl(a) bych poptat / objednat tyto vozíky:\n\n" +
+      lines.join("\n") +
+      "\n\nCelkem: " + formatPrice(basketSum(list)) + " bez DPH" +
+      "\n\nJméno: " + (c.jmeno || "") +
+      "\nE-mail: " + (c.email || "") +
+      "\nTelefon: " + (c.telefon || "") +
+      "\nAdresa: " + [c.ulice, c.psc, c.mesto].filter(Boolean).join(", ") +
+      (c.spolecnost ? "\nFirma: " + c.spolecnost : "") +
+      (c.ic ? "\nIČ: " + c.ic : "") +
+      "\nDoprava: " + (c.doprava || "") +
+      "\nPlatba: " + (c.platba || "") +
+      "\n";
+    return "mailto:vzv@vzv.cz?subject=" + encodeURIComponent("Poptávka z košíku") +
+      "&body=" + encodeURIComponent(body);
+  }
+
+  function basketStep4Html(list) {
+    var c = readCheckout();
+    var sum = basketSum(list);
+    return (
+      '<div class="kosik-summary">' +
+        '<div id="basket-items">' + list.map(basketLineHtml).join("") + "</div>" +
+        '<div class="kosik-total-row">' +
+          '<div class="kosik-total-label">Celkem</div>' +
+          '<div class="kosik-total-value"><div class="kosik-total-sum">' + escapeHtml(formatPrice(sum)) + "</div></div>" +
+        "</div>" +
+        '<div class="kosik-summary-box">' +
+          "<h3>Dodací údaje</h3>" +
+          "<p>" + escapeHtml(c.jmeno || "") + (c.spolecnost ? "<br>" + escapeHtml(c.spolecnost) : "") + "</p>" +
+          "<p>" + escapeHtml([c.ulice, c.psc, c.mesto].filter(Boolean).join(", ")) + "</p>" +
+          "<p>" + escapeHtml(c.email || "") + (c.telefon ? "<br>" + escapeHtml(c.telefon) : "") + "</p>" +
+        "</div>" +
+        '<div class="kosik-summary-box">' +
+          "<h3>Doprava a platba</h3>" +
+          "<p>" + escapeHtml(c.doprava || "") + "<br>" + escapeHtml(c.platba || "") + "</p>" +
+        "</div>" +
+        basketActionsHtml("Zpět", "basketGoStep(3)", "Odeslat poptávku", checkoutMailHref(list, c), true) +
+      "</div>"
+    );
   }
 
   function specCell(kind, value) {
@@ -604,28 +882,70 @@
       empty.parentNode.insertBefore(wrap, empty);
     }
     if (!list.length) {
+      basketStep = 1;
       wrap.classList.add("d-none");
       empty.classList.remove("d-none");
       return;
     }
+    if (basketStep < 1 || basketStep > 4) basketStep = 1;
     wrap.classList.remove("d-none");
     empty.classList.add("d-none");
-    var mail = "mailto:vzv@vzv.cz?subject=" + encodeURIComponent("Poptávka z košíku") +
-      "&body=" + encodeURIComponent(list.map(function (it) { return it.title + (it.price ? " (" + it.price + ")" : ""); }).join("\n"));
-    wrap.innerHTML =
-      '<div class="row" id="basket-items">' + list.map(function (it) { return cardHtml(it, "basket"); }).join("") + "</div>" +
-      '<div class="d-flex flex-wrap gap-2 mt-4">' +
-        '<a class="btn btn-vzv btn-lg" href="' + mail + '">Poptat vozíky v košíku</a>' +
-        '<a class="btn btn-outline-dark btn-lg" href="' + PATHS.listing + '">Pokračovat ve výběru</a>' +
-      "</div>";
+    var body = basketStep === 2 ? basketStep2Html()
+      : basketStep === 3 ? basketStep3Html()
+      : basketStep === 4 ? basketStep4Html(list)
+      : basketStep1Html(list);
+    wrap.innerHTML = basketStepperHtml(basketStep) + body;
   }
+
+  window.basketGoStep = function (n) {
+    n = parseInt(n, 10) || 1;
+    if (n === 2 || n === 3) saveCheckoutForm();
+    basketStep = n;
+    renderBasket();
+    var wrap = document.getElementById("basket-wrap");
+    if (wrap && wrap.scrollIntoView) wrap.scrollIntoView({ behavior: "smooth", block: "start" });
+  };
+
+  window.basketSubmitAddress = function () {
+    var c = saveCheckoutForm();
+    document.querySelectorAll(".kosik-field-alert").forEach(function (el) { el.classList.add("d-none"); });
+    var missing = ["jmeno", "email", "telefon", "ulice", "mesto", "psc"].filter(function (k) { return !c[k]; });
+    if (missing.length) {
+      missing.forEach(function (k) {
+        var a = document.getElementById("alert-kosik-" + k);
+        if (a) a.classList.remove("d-none");
+      });
+      return;
+    }
+    basketStep = 3;
+    renderBasket();
+  };
+
+  window.basketSubmitShipping = function () {
+    var c = saveCheckoutForm();
+    document.querySelectorAll(".kosik-field-alert").forEach(function (el) { el.classList.add("d-none"); });
+    var ok = true;
+    if (!c.doprava) {
+      var a = document.getElementById("alert-kosik-doprava");
+      if (a) a.classList.remove("d-none");
+      ok = false;
+    }
+    if (!c.platba) {
+      var b = document.getElementById("alert-kosik-platba");
+      if (b) b.classList.remove("d-none");
+      ok = false;
+    }
+    if (!ok) return;
+    basketStep = 4;
+    renderBasket();
+  };
 
   function injectCss() {
     if (document.getElementById("vzv-static-lists-css")) return;
     var link = document.createElement("link");
     link.id = "vzv-static-lists-css";
     link.rel = "stylesheet";
-    link.href = "/assets/vzv.cz/assets/css/static-lists.css?v=lists-5";
+    link.href = "/assets/vzv.cz/assets/css/static-lists.css?v=lists-6";
     document.head.appendChild(link);
   }
 
@@ -639,6 +959,8 @@
     renderCompare();
     renderBasket();
   }
+
+  window.renderBasket = renderBasket;
 
   wrapAjax();
   if (document.readyState === "loading") {
