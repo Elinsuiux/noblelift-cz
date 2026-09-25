@@ -3839,16 +3839,18 @@ html {
     filter: none;
 }
 
-/* Listing-card spec values stay readable; prices stay on one line. */
+/* Listing-card spec values stay readable; five icons stay on one row. */
 #forklifts .card .row.no-wrap,
 #favourite .card .row.no-wrap {
-    --bs-gutter-x: 0.35rem;
+    --bs-gutter-x: 0.2rem;
+    flex-wrap: nowrap;
 }
 
 #forklifts .card .row.no-wrap > .col,
 #favourite .card .row.no-wrap > .col {
-    flex: 1 0 30%;
-    max-width: 34%;
+    flex: 1 1 0;
+    min-width: 0;
+    max-width: none;
     padding-left: 2px;
     padding-right: 2px;
 }
@@ -3859,15 +3861,25 @@ html {
 #favourite .card .row.no-wrap .col-12.text-center {
     padding-left: 0;
     padding-right: 0;
-    font-size: 0.72rem;
+    font-size: 0.68rem;
     line-height: 1.2;
     white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 #forklifts .card .row.no-wrap svg,
 #favourite .card .row.no-wrap svg {
-    width: 26px;
-    height: 26px;
+    width: 22px;
+    height: 22px;
+}
+
+@media (min-width: 992px) {
+    #forklifts > .col-md-6,
+    #forklifts > [class*="col-xxl-3"] {
+        flex: 0 0 33.333333%;
+        max-width: 33.333333%;
+    }
 }
 
 #forklifts .card .fs-5.fw-bold,
