@@ -3911,3 +3911,52 @@ html {
     background-color: transparent !important;
     border-color: #6c757d !important;
 }
+
+/* Cart added modal: machine name and close X white on dark panel. */
+#obsah-kosiku #obsah-kosiku-polozky a,
+#obsah-kosiku #obsah-kosiku-polozky a:hover,
+#obsah-kosiku #obsah-kosiku-polozky a:focus {
+    color: #ffffff !important;
+}
+#obsah-kosiku .modal-header .btn-close,
+#obsah-kosiku .btn-close.kosik-zavrit {
+    opacity: 1 !important;
+    filter: none !important;
+    width: 1.75rem;
+    height: 1.75rem;
+    padding: 0;
+    box-sizing: content-box;
+    background: transparent url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ffffff'%3e%3cpath d='M.293.293a1 1 0 011.414 0L8 6.586 14.293.293a1 1 0 111.414 1.414L9.414 8l6.293 6.293a1 1 0 01-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 01-1.414-1.414L6.586 8 .293 1.707A1 1 0 01.293.293z'/%3e%3c/svg%3e") center / 1.25em auto no-repeat !important;
+}
+#obsah-kosiku .modal-header .btn-close:hover,
+#obsah-kosiku .modal-header .btn-close:focus,
+#obsah-kosiku .btn-close.kosik-zavrit:hover,
+#obsah-kosiku .btn-close.kosik-zavrit:focus {
+    opacity: 1 !important;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ffffff'%3e%3cpath d='M.293.293a1 1 0 011.414 0L8 6.586 14.293.293a1 1 0 111.414 1.414L9.414 8l6.293 6.293a1 1 0 01-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 01-1.414-1.414L6.586 8 .293 1.707A1 1 0 01.293.293z'/%3e%3c/svg%3e") !important;
+}
+
+/* Listing / detail: V košíku state is black with white text. */
+a.btn.btn-outline-primary[id^="item-v-kosiku-"],
+a[id^="item-v-kosiku-"].btn,
+.card-footer a.btn[id^="item-v-kosiku-"] {
+    color: #ffffff !important;
+    background-color: #000000 !important;
+    background: #000000 !important;
+    border-color: #000000 !important;
+    white-space: nowrap !important;
+}
+a.btn.btn-outline-primary[id^="item-v-kosiku-"]:hover,
+a.btn.btn-outline-primary[id^="item-v-kosiku-"]:focus,
+a.btn.btn-outline-primary[id^="item-v-kosiku-"]:active,
+a[id^="item-v-kosiku-"].btn:hover,
+a[id^="item-v-kosiku-"].btn:focus,
+a[id^="item-v-kosiku-"].btn:active,
+.card-footer a.btn[id^="item-v-kosiku-"]:hover,
+.card-footer a.btn[id^="item-v-kosiku-"]:focus,
+.card-footer a.btn[id^="item-v-kosiku-"]:active {
+    color: #ffffff !important;
+    background-color: #1a1a1a !important;
+    background: #1a1a1a !important;
+    border-color: #1a1a1a !important;
+}
