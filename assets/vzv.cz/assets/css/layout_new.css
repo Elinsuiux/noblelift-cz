@@ -319,3 +319,15 @@ a.category-box:focus,
 .content-body:has(#nove-voziky) .listing-toolbar #breadcrumb {
     display: none !important;
 }
+
+.listing-page-title {
+    font-size: 1.35rem;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #000000;
+    margin: 0;
+}
+
+.content-body h1.listing-page-title {
+    color: #000000 !important;
+}
