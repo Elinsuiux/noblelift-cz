@@ -3640,7 +3640,29 @@ html {
     color: #73fb61;
 }
 .content-body .ico-parameter .svgHighlight {
-    fill: #159504;
+    fill: #159504 !important;
+}
+.content-body .boxDetailPictogram .ico-parameter-weight .st0 {
+    fill: #159504 !important;
+}
+.content-body .boxDetailPictogram svg [fill="#73FB61"],
+.content-body .boxDetailPictogram svg [fill="#73fb61"] {
+    fill: #159504 !important;
+}
+.content-body button.btn-vzv[data-bs-target="#modal-poptat-pz"] {
+    color: #000000 !important;
+    background-color: #A7FC9C !important;
+    border-color: #A7FC9C !important;
+}
+.content-body button.btn-vzv[data-bs-target="#modal-poptat-pz"]:hover,
+.content-body button.btn-vzv[data-bs-target="#modal-poptat-pz"]:focus,
+.content-body button.btn-vzv[data-bs-target="#modal-poptat-pz"]:active {
+    color: #000000 !important;
+    background-color: #73fb61 !important;
+    border-color: #73fb61 !important;
+}
+#wrapTechnickeInformace {
+    scroll-margin-top: 110px;
 }
 .content-body .ico-vyhody svg,
 .content-body .ico-vyhody svg path {
