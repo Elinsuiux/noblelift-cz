@@ -3839,47 +3839,45 @@ html {
     filter: none;
 }
 
-/* Listing-card spec values stay readable; five icons stay on one row. */
+/* Listing-card spec icons: five on one row without changing the 4-card grid. */
 #forklifts .card .row.no-wrap,
+#forklifts .card .card-body > .row.fs-7,
 #favourite .card .row.no-wrap {
-    --bs-gutter-x: 0.2rem;
-    flex-wrap: nowrap;
+    --bs-gutter-x: 0.15rem;
+    display: flex;
+    flex-wrap: nowrap !important;
 }
 
 #forklifts .card .row.no-wrap > .col,
+#forklifts .card .card-body > .row.fs-7 > .col,
 #favourite .card .row.no-wrap > .col {
-    flex: 1 1 0;
-    min-width: 0;
-    max-width: none;
-    padding-left: 2px;
-    padding-right: 2px;
+    flex: 1 1 0 !important;
+    min-width: 0 !important;
+    max-width: none !important;
+    width: auto;
+    padding-left: 1px;
+    padding-right: 1px;
 }
 
 #forklifts .card .row.no-wrap .col-12,
 #forklifts .card .row.no-wrap .col-12.text-center,
+#forklifts .card .card-body > .row.fs-7 .col-12,
 #favourite .card .row.no-wrap .col-12,
 #favourite .card .row.no-wrap .col-12.text-center {
     padding-left: 0;
     padding-right: 0;
-    font-size: 0.68rem;
-    line-height: 1.2;
+    font-size: 0.62rem;
+    line-height: 1.15;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
 }
 
 #forklifts .card .row.no-wrap svg,
+#forklifts .card .card-body > .row.fs-7 svg,
 #favourite .card .row.no-wrap svg {
-    width: 22px;
-    height: 22px;
-}
-
-@media (min-width: 992px) {
-    #forklifts > .col-md-6,
-    #forklifts > [class*="col-xxl-3"] {
-        flex: 0 0 33.333333%;
-        max-width: 33.333333%;
-    }
+    width: 18px;
+    height: 18px;
 }
 
 #forklifts .card .fs-5.fw-bold,
