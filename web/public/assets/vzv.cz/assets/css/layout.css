@@ -4343,6 +4343,10 @@ a[id^="item-v-kosiku-"].btn:active,
     margin-left: 0.35rem;
     vertical-align: -2px;
 }
+#compare-wrap .table-responsive + .compare-bar {
+    margin-top: 2.5rem !important;
+    margin-bottom: 0.5rem !important;
+}
 #compare-wrap .compare-table {
     width: 100%;
     border-collapse: collapse;
