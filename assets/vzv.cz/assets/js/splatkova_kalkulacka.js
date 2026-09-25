@@ -126,23 +126,19 @@ function applyEssoxRecolor()
     var hr = host.getBoundingClientRect();
     var cardX = 0.529;
     var cardW = 0.302;
+    essoxBox(host, 'vzv-essox-tint-knob vzv-essox-tint-knob-1', ir, hr, 0.500, 0.255, 0.360, 0.080);
+    essoxBox(host, 'vzv-essox-tint-knob vzv-essox-tint-knob-2', ir, hr, 0.500, 0.400, 0.360, 0.085);
+    essoxBox(host, 'vzv-essox-tint-track vzv-essox-tint-track-1', ir, hr, cardX, 0.312, cardW, 0.008);
+    essoxBox(host, 'vzv-essox-tint-track vzv-essox-tint-track-2', ir, hr, cardX, 0.463, cardW, 0.008);
+    essoxBox(host, 'vzv-essox-tint-bar vzv-essox-tint-bar-main', ir, hr, 0.500, 0.500, 0.360, 0.150);
+    essoxBox(host, 'vzv-essox-tint-bar vzv-essox-tint-bar-alt', ir, hr, 0.500, 0.455, 0.360, 0.120);
     if (isEssoxOutOfRange(iframe))
     {
-        hideEssoxLayer(host, 'vzv-essox-tint-knob-1');
-        hideEssoxLayer(host, 'vzv-essox-tint-knob-2');
-        hideEssoxLayer(host, 'vzv-essox-tint-track-1');
-        hideEssoxLayer(host, 'vzv-essox-tint-track-2');
-        essoxBox(host, 'vzv-essox-tint-bar', ir, hr, 0.508, 0.472, 0.344, 0.094);
-        essoxBox(host, 'vzv-essox-tint-bar vzv-essox-tint-banner', ir, hr, 0.145, 0.212, 0.708, 0.080);
+        essoxBox(host, 'vzv-essox-tint-banner', ir, hr, 0.07, 0.175, 0.44, 0.13);
     }
     else
     {
         hideEssoxLayer(host, 'vzv-essox-tint-banner');
-        essoxBox(host, 'vzv-essox-tint-knob vzv-essox-tint-knob-1', ir, hr, 0.511, 0.298, 0.338, 0.034);
-        essoxBox(host, 'vzv-essox-tint-knob vzv-essox-tint-knob-2', ir, hr, 0.511, 0.448, 0.338, 0.034);
-        essoxBox(host, 'vzv-essox-tint-track vzv-essox-tint-track-1', ir, hr, cardX, 0.312, cardW, 0.008);
-        essoxBox(host, 'vzv-essox-tint-track vzv-essox-tint-track-2', ir, hr, cardX, 0.463, cardW, 0.008);
-        essoxBox(host, 'vzv-essox-tint-bar', ir, hr, 0.510, 0.536, 0.342, 0.098);
     }
     var footer = placeEssoxLayer(host, 'vzv-essox-footer-cover', essoxFooterMarkup());
     footer.style.left = (ir.left - hr.left) + 'px';
