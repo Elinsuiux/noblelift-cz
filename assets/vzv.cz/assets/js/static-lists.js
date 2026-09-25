@@ -1005,6 +1005,26 @@
       "</div>" +
       compareBarHtml();
     markButtons();
+    markAdjacentBestValues();
+  }
+
+  function markAdjacentBestValues() {
+    var table = document.querySelector("#compare-wrap .compare-table");
+    if (!table) return;
+    var rows = table.querySelectorAll("tbody tr");
+    for (var r = 1; r < rows.length; r++) {
+      var prev = rows[r - 1].children;
+      var cur = rows[r].children;
+      var n = Math.min(prev.length, cur.length);
+      for (var c = 1; c < n; c++) {
+        if (
+          prev[c].classList.contains("compare-best-value") &&
+          cur[c].classList.contains("compare-best-value")
+        ) {
+          cur[c].classList.add("compare-best-adjacent");
+        }
+      }
+    }
   }
 
   window.poptatCompareItem = function (id) {
@@ -1103,7 +1123,7 @@
     var link = document.createElement("link");
     link.id = "vzv-static-lists-css";
     link.rel = "stylesheet";
-    link.href = "/assets/vzv.cz/assets/css/static-lists.css?v=lists-10";
+    link.href = "/assets/vzv.cz/assets/css/static-lists.css?v=lists-11";
     document.head.appendChild(link);
   }
 
