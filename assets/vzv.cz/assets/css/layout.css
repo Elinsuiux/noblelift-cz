@@ -3228,6 +3228,36 @@ table.table-vyhody .btn
     text-decoration: underline;
 }
 
+/* Poptat vozík: white close X on the dark header, product code #1CC705. */
+.modal.modal-poptat .modal-header .btn-close,
+.modal.modal-poptat-vse .modal-header .btn-close,
+[id^="modal-poptat"] .modal-header .btn-close {
+    opacity: 1 !important;
+    filter: none !important;
+    width: 1.75rem;
+    height: 1.75rem;
+    padding: 0;
+    box-sizing: content-box;
+    background: transparent url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ffffff'%3e%3cpath d='M.293.293a1 1 0 011.414 0L8 6.586 14.293.293a1 1 0 111.414 1.414L9.414 8l6.293 6.293a1 1 0 01-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 01-1.414-1.414L6.586 8 .293 1.707A1 1 0 01.293.293z'/%3e%3c/svg%3e") center / 1.25em auto no-repeat !important;
+}
+.modal.modal-poptat .modal-header .btn-close:hover,
+.modal.modal-poptat .modal-header .btn-close:focus,
+.modal.modal-poptat-vse .modal-header .btn-close:hover,
+.modal.modal-poptat-vse .modal-header .btn-close:focus,
+[id^="modal-poptat"] .modal-header .btn-close:hover,
+[id^="modal-poptat"] .modal-header .btn-close:focus {
+    opacity: 1 !important;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ffffff'%3e%3cpath d='M.293.293a1 1 0 011.414 0L8 6.586 14.293.293a1 1 0 111.414 1.414L9.414 8l6.293 6.293a1 1 0 01-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 01-1.414-1.414L6.586 8 .293 1.707A1 1 0 01.293.293z'/%3e%3c/svg%3e") !important;
+}
+.modal.modal-poptat .poptavka-item .text-vzv,
+.modal.modal-poptat-vse .poptavka-item .text-vzv,
+[id^="modal-poptat"] .poptavka-item .text-vzv,
+.modal.modal-poptat .poptavka-item .text-vzv:hover,
+.modal.modal-poptat-vse .poptavka-item .text-vzv:hover,
+[id^="modal-poptat"] .poptavka-item .text-vzv:hover {
+    color: #1CC705 !important;
+}
+
 .youtube-video-servis-manipulacni-techniky {
     width: 600px;
     height: 339px;
