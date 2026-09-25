@@ -3871,15 +3871,14 @@ html {
     white-space: nowrap;
 }
 
-/* Sale attachment listing: spec labels/values black; first number (Nosnost) brand green. */
+/* Sale attachment listing: product code green; spec labels/values black. */
 .wrap-zarizeni a.pz-odkaz-card,
 .wrap-zarizeni a.pz-odkaz-card:hover,
 .wrap-zarizeni .card-item-title,
-.wrap-zarizeni .card-item-title .fw-bolder,
 .wrap-zarizeni .card-body .row > .col-6 {
     color: #000000 !important;
 }
 
-.wrap-zarizeni .card-body .row > .col-6:nth-child(4) {
+.wrap-zarizeni .card-item-title .fw-bolder {
     color: #159504 !important;
 }
