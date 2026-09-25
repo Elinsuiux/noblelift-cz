@@ -840,7 +840,7 @@
   function listingCardHtml(it) {
     if (it.cardHtml) {
       return (
-        '<div class="col-12 col-md-6" id="kosik-polozka-' + it.id + '">' +
+        '<div class="col-12 col-md-6 col-lg-4" id="kosik-polozka-' + it.id + '">' +
           rewriteLocalLinks(it.cardHtml) +
         "</div>"
       );
@@ -854,7 +854,7 @@
     }).join("");
     var sticker = it.stickerHtml || "";
     return (
-      '<div class="col-12 col-md-6" id="kosik-polozka-' + it.id + '">' +
+      '<div class="col-12 col-md-6 col-lg-4" id="kosik-polozka-' + it.id + '">' +
         '<div class="card mt-4 mb-4 ms-2 me-2 border-1 border-light position-relative" id="item-' + it.id + '">' +
           (it.img ? '<a href="' + escapeHtml(it.url) + '"><img src="' + escapeHtml(it.img) + '" class="w-100 border-top" alt="' + escapeHtml(it.title) + '"></a>' : "") +
           sticker +
@@ -1103,7 +1103,7 @@
     var link = document.createElement("link");
     link.id = "vzv-static-lists-css";
     link.rel = "stylesheet";
-    link.href = "/assets/vzv.cz/assets/css/static-lists.css?v=lists-8";
+    link.href = "/assets/vzv.cz/assets/css/static-lists.css?v=lists-9";
     document.head.appendChild(link);
   }
 
