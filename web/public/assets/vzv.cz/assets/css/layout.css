@@ -3840,23 +3840,31 @@ html {
 }
 
 /* Listing-card spec icons: five on one row without changing the 4-card grid. */
+#forklifts .card .card-body > .text-muted.mb-4 {
+    margin-bottom: 0.7rem !important;
+}
+
 #forklifts .card .row.no-wrap,
 #forklifts .card .card-body > .row.fs-7,
 #favourite .card .row.no-wrap {
     --bs-gutter-x: 0.15rem;
     display: flex;
     flex-wrap: nowrap !important;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0.7rem;
 }
 
 #forklifts .card .row.no-wrap > .col,
 #forklifts .card .card-body > .row.fs-7 > .col,
 #favourite .card .row.no-wrap > .col {
-    flex: 1 1 0 !important;
+    flex: 0 1 auto !important;
     min-width: 0 !important;
     max-width: none !important;
     width: auto;
-    padding-left: 1px;
-    padding-right: 1px;
+    padding-left: 8px;
+    padding-right: 8px;
 }
 
 #forklifts .card .row.no-wrap .col-12,
