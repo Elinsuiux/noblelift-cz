@@ -334,8 +334,8 @@
             (it.price ? '<p class="vzv-list-price">' + escapeHtml(it.price) + "</p>" : "") +
             (specs ? '<p class="vzv-list-specs">' + specs + "</p>" : "") +
             '<div class="d-flex flex-wrap gap-2">' +
-              '<a class="btn btn-dark btn-sm" href="' + escapeHtml(it.url) + '">Detail</a>' +
-              (kind === "favourite" ? '<button type="button" class="favourite-button btn btn-dark text-light btn-sm" onclick="addRemoveFavourite(\'' + it.id + "')\">Odebrat</button>" : "") +
+              '<a class="btn ' + (kind === "favourite" ? "btn-primary" : "btn-dark") + ' btn-sm" href="' + escapeHtml(it.url) + '">Detail</a>' +
+              (kind === "favourite" ? '<button type="button" class="favourite-button btn btn-outline-dark btn-sm" onclick="addRemoveFavourite(\'' + it.id + "')\">Odebrat</button>" : "") +
               (kind === "basket" ? '<button type="button" class="btn btn-outline-dark btn-sm" onclick="removeBasket(\'' + it.id + "')\">Odebrat</button>" : "") +
             "</div>" +
           "</div>" +

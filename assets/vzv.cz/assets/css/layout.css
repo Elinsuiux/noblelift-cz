@@ -3885,3 +3885,29 @@ html {
 .wrap-zarizeni .card-item-title .fw-bolder {
     color: #159504 !important;
 }
+
+/* Oblíbené cards: Detail green/black, Odebrat transparent grey outline. */
+#favourite-wrap .vzv-list-card a.btn-primary {
+    color: #000000 !important;
+    background-color: #73fb61 !important;
+    border-color: #73fb61 !important;
+}
+#favourite-wrap .vzv-list-card a.btn-primary:hover,
+#favourite-wrap .vzv-list-card a.btn-primary:focus,
+#favourite-wrap .vzv-list-card a.btn-primary:active {
+    color: #000000 !important;
+    background-color: #1cc705 !important;
+    border-color: #1cc705 !important;
+}
+#favourite-wrap .vzv-list-card .favourite-button {
+    color: #000000 !important;
+    background-color: transparent !important;
+    border-color: #adb5bd !important;
+}
+#favourite-wrap .vzv-list-card .favourite-button:hover,
+#favourite-wrap .vzv-list-card .favourite-button:focus,
+#favourite-wrap .vzv-list-card .favourite-button:active {
+    color: #000000 !important;
+    background-color: transparent !important;
+    border-color: #6c757d !important;
+}
