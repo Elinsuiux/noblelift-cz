@@ -613,20 +613,46 @@ a.text-primary:hover,
   z-index: 3;
   display: block;
   border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
 }
 
 .banner-noblelift-hotspot-cta {
   left: 4.4%;
-  top: 44.8%;
+  top: 44.4%;
   width: 28.5%;
-  height: 12.3%;
+  height: 12.7%;
 }
 
 .banner-noblelift-hotspot-phone {
   left: 4.1%;
   top: 71.5%;
-  width: 29.1%;
-  height: 12.5%;
+  width: 29.0%;
+  height: 12.3%;
+}
+
+@media (min-width: 768px) {
+  .banner-noblelift-hotspot-cta {
+    top: 43.4%;
+    height: 14.9%;
+  }
+
+  .banner-noblelift-hotspot-phone {
+    top: 75.1%;
+    height: 14.4%;
+  }
+}
+
+.banner-noblelift-hotspot-cta:hover,
+.banner-noblelift-hotspot-cta:focus,
+.banner-noblelift-hotspot-cta:focus-visible {
+  background: rgba(224, 80, 16, 0.38);
+}
+
+.banner-noblelift-hotspot-phone:hover,
+.banner-noblelift-hotspot-phone:focus,
+.banner-noblelift-hotspot-phone:focus-visible {
+  background: rgba(163, 252, 156, 0.55);
 }
 
 /* ── Product cards & stickers ───────────────────────────────── */
