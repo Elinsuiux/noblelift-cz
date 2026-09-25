@@ -1425,6 +1425,16 @@ ul li
     color: #73FB61 !important;
 }
 
+/* Další novinky "Zobrazit vše": white label, lime hover. */
+a.btn.btn-dark.first-letter-capitalize {
+    color: #ffffff !important;
+}
+a.btn.btn-dark.first-letter-capitalize:hover,
+a.btn.btn-dark.first-letter-capitalize:focus,
+a.btn.btn-dark.first-letter-capitalize:active {
+    color: #73FB61 !important;
+}
+
 .card-footer .text-primary,
 .card .text-primary.fw-bold,
 .card .text-primary.fw-bolder,
