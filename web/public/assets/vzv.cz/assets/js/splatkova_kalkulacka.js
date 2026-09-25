@@ -41,11 +41,60 @@ function placeEssoxLayer(host, className, html)
 function essoxBox(host, className, ir, hr, fx, fy, fw, fh)
 {
     var el = placeEssoxLayer(host, className);
+    el.style.display = '';
     el.style.left = (ir.left - hr.left + ir.width * fx) + 'px';
     el.style.top = (ir.top - hr.top + ir.height * fy) + 'px';
     el.style.width = (ir.width * fw) + 'px';
     el.style.height = (ir.height * fh) + 'px';
     return el;
+}
+
+function hideEssoxLayer(host, unique)
+{
+    var el = host.querySelector('.' + unique);
+    if (el)
+    {
+        el.style.display = 'none';
+    }
+}
+
+function essoxWidgetPrice(iframe)
+{
+    try
+    {
+        var src = iframe.getAttribute('src') || '';
+        var match = src.match(/#\/rc\/([A-Za-z0-9+/=_-]+)/);
+        if (!match)
+        {
+            return 0;
+        }
+        var b64 = match[1].replace(/-/g, '+').replace(/_/g, '/');
+        while (b64.length % 4)
+        {
+            b64 += '=';
+        }
+        var json = JSON.parse(atob(b64));
+        return parseFloat(json.Price) || 0;
+    }
+    catch (e)
+    {
+        return 0;
+    }
+}
+
+function isEssoxOutOfRange(iframe)
+{
+    var price = essoxWidgetPrice(iframe);
+    if (price <= 0)
+    {
+        var el = document.getElementById('porizovaci-cena');
+        var cena = el ? parseFloat(String(el.value).replace(/\s+/g, '').replace(',', '.')) : 0;
+        if (cena > 0)
+        {
+            price = cena * 1.21;
+        }
+    }
+    return price > 0 && price < 150000;
 }
 
 function applyEssoxRecolor()
@@ -77,11 +126,24 @@ function applyEssoxRecolor()
     var hr = host.getBoundingClientRect();
     var cardX = 0.529;
     var cardW = 0.302;
-    essoxBox(host, 'vzv-essox-tint-knob vzv-essox-tint-knob-1', ir, hr, 0.511, 0.298, 0.338, 0.034);
-    essoxBox(host, 'vzv-essox-tint-knob vzv-essox-tint-knob-2', ir, hr, 0.511, 0.448, 0.338, 0.034);
-    essoxBox(host, 'vzv-essox-tint-track vzv-essox-tint-track-1', ir, hr, cardX, 0.312, cardW, 0.008);
-    essoxBox(host, 'vzv-essox-tint-track vzv-essox-tint-track-2', ir, hr, cardX, 0.463, cardW, 0.008);
-    essoxBox(host, 'vzv-essox-tint-bar', ir, hr, 0.510, 0.536, 0.342, 0.098);
+    if (isEssoxOutOfRange(iframe))
+    {
+        hideEssoxLayer(host, 'vzv-essox-tint-knob-1');
+        hideEssoxLayer(host, 'vzv-essox-tint-knob-2');
+        hideEssoxLayer(host, 'vzv-essox-tint-track-1');
+        hideEssoxLayer(host, 'vzv-essox-tint-track-2');
+        essoxBox(host, 'vzv-essox-tint-bar', ir, hr, 0.508, 0.472, 0.344, 0.094);
+        essoxBox(host, 'vzv-essox-tint-bar vzv-essox-tint-banner', ir, hr, 0.145, 0.212, 0.708, 0.080);
+    }
+    else
+    {
+        hideEssoxLayer(host, 'vzv-essox-tint-banner');
+        essoxBox(host, 'vzv-essox-tint-knob vzv-essox-tint-knob-1', ir, hr, 0.511, 0.298, 0.338, 0.034);
+        essoxBox(host, 'vzv-essox-tint-knob vzv-essox-tint-knob-2', ir, hr, 0.511, 0.448, 0.338, 0.034);
+        essoxBox(host, 'vzv-essox-tint-track vzv-essox-tint-track-1', ir, hr, cardX, 0.312, cardW, 0.008);
+        essoxBox(host, 'vzv-essox-tint-track vzv-essox-tint-track-2', ir, hr, cardX, 0.463, cardW, 0.008);
+        essoxBox(host, 'vzv-essox-tint-bar', ir, hr, 0.510, 0.536, 0.342, 0.098);
+    }
     var footer = placeEssoxLayer(host, 'vzv-essox-footer-cover', essoxFooterMarkup());
     footer.style.left = (ir.left - hr.left) + 'px';
     footer.style.width = ir.width + 'px';

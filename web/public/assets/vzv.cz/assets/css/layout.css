@@ -3798,6 +3798,9 @@ html {
     pointer-events: none;
     z-index: 4;
 }
+#splatkovaKalkulacka .vzv-essox-tint-banner {
+    border-radius: 4px;
+}
 #splatkovaKalkulacka .vzv-essox-footer-cover {
     position: absolute;
     display: flex;
