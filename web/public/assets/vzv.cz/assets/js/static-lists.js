@@ -608,7 +608,7 @@
         "</div>" +
         '<div class="kosik-line-qty">' + qty + " ks</div>" +
         '<div class="kosik-line-total">' + (unit ? escapeHtml(formatPrice(line)) : "") + "</div>" +
-        '<button type="button" class="kosik-line-remove" title="Odebrat" aria-label="Odebrat" onclick="removeBasket(\'' + it.id + "')\">&times;</button>" +
+        '<button type="button" class="kosik-line-remove" title="Odebrat" aria-label="Odebrat" onclick="confirmRemoveBasket(\'' + it.id + "')\">&times;</button>" +
       "</div>"
     );
   }
@@ -980,7 +980,13 @@
       var kind = this.getAttribute("data-kind");
       var id = this.getAttribute("data-id");
       hideRemoveModal();
-      if (kind && id) ajaxCallPromise(kind === "compare" ? "remove-compare" : "remove-favourite", { id_polozky: id }, true, "POST");
+      if (!kind || !id) return;
+      if (kind === "basket") {
+        if (typeof window.removeBasket === "function") window.removeBasket(id);
+        else ajaxCallPromise("remove-basket", { id_polozky: id }, true, "POST");
+        return;
+      }
+      ajaxCallPromise(kind === "compare" ? "remove-compare" : "remove-favourite", { id_polozky: id }, true, "POST");
     });
   }
 
@@ -1006,7 +1012,7 @@
     ensureRemoveModal();
     var list = readList(kind);
     var it = findItem(list, id);
-    var where = kind === "compare" ? "porovnání" : "oblíbených";
+    var where = kind === "compare" ? "porovnání" : kind === "basket" ? "košíku" : "oblíbených";
     var name = it && it.title ? " vozík " + it.title : " tento vozík";
     var text = document.getElementById("vzv-remove-confirm-text");
     if (text) text.textContent = "Opravdu chcete odebrat" + name + " z " + where + "?";
@@ -1020,6 +1026,9 @@
 
   window.confirmRemoveFavourite = function (id) {
     askRemoveFromList("favourite", id);
+  };
+  window.confirmRemoveBasket = function (id) {
+    askRemoveFromList("basket", id);
   };
   window.compareRemoveItem = function (id) {
     askRemoveFromList("compare", id);
