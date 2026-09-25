@@ -4268,6 +4268,7 @@ a[id^="item-v-kosiku-"].btn:active,
     width: 100%;
     border-collapse: collapse;
     background: #fff;
+    --compare-photo-h: 245px;
 }
 #compare-wrap .compare-table th,
 #compare-wrap .compare-table td {
@@ -4309,14 +4310,21 @@ a[id^="item-v-kosiku-"].btn:active,
 #compare-wrap .compare-table tbody tr:nth-child(even) th:first-child {
     background: #e9e9e9 !important;
 }
+#compare-wrap .compare-row-photo th,
 #compare-wrap .compare-row-photo td {
+    vertical-align: top;
     padding: 12px;
+}
+#compare-wrap .compare-photo-gutter {
+    display: block;
+    width: 1px;
+    height: var(--compare-photo-h);
 }
 #compare-wrap .compare-row-photo img,
 #compare-wrap .img-porovnani {
     width: 100%;
     max-width: 420px;
-    height: 245px;
+    height: var(--compare-photo-h);
     object-fit: contain;
     display: block;
     margin: 0 auto;
@@ -4349,7 +4357,7 @@ a[id^="item-v-kosiku-"].btn:active,
     color: #fff !important;
 }
 #compare-wrap .compare-best-adjacent {
-    box-shadow: inset 0 2px 0 #e9e9e9;
+    box-shadow: inset 0 4px 0 #e9e9e9;
 }
 #compare-wrap .compare-poptat-btns {
     display: inline-flex;

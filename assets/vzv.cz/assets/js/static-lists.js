@@ -974,7 +974,7 @@
       '<div class="table-responsive" id="compare">' +
         '<table class="compare-table first-col-sticky">' +
           "<tbody>" +
-            '<tr class="compare-row-photo"><th></th>' + cells(function (it) {
+            '<tr class="compare-row-photo"><th><span class="compare-photo-gutter" aria-hidden="true"></span></th>' + cells(function (it) {
               return it.img
                 ? '<a href="' + escapeHtml(it.url) + '"><img class="img-porovnani" src="' + escapeHtml(it.img) + '" alt="' + escapeHtml(it.title) + '"></a>'
                 : "";
@@ -1123,7 +1123,7 @@
     var link = document.createElement("link");
     link.id = "vzv-static-lists-css";
     link.rel = "stylesheet";
-    link.href = "/assets/vzv.cz/assets/css/static-lists.css?v=lists-11";
+    link.href = "/assets/vzv.cz/assets/css/static-lists.css?v=lists-12";
     document.head.appendChild(link);
   }
 
