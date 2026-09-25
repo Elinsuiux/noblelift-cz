@@ -3850,21 +3850,22 @@ html {
     --bs-gutter-x: 0.15rem;
     display: flex;
     flex-wrap: nowrap !important;
-    justify-content: center;
-    margin-left: auto;
-    margin-right: auto;
+    justify-content: space-between;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
     margin-bottom: 0.7rem;
 }
 
 #forklifts .card .row.no-wrap > .col,
 #forklifts .card .card-body > .row.fs-7 > .col,
 #favourite .card .row.no-wrap > .col {
-    flex: 0 1 auto !important;
+    flex: 1 1 0 !important;
     min-width: 0 !important;
-    max-width: none !important;
-    width: auto;
-    padding-left: 8px;
-    padding-right: 8px;
+    max-width: 20% !important;
+    width: 20%;
+    padding-left: 2px;
+    padding-right: 2px;
 }
 
 #forklifts .card .row.no-wrap .col-12,
