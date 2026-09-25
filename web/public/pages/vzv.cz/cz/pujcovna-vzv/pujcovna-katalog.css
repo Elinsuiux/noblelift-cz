@@ -1,12 +1,17 @@
 /* On-site rental catalogs — Nové vozíky layout */
 
 .rent-catalog {
-  background: #fafafa;
+  background: #ffffff;
   padding-bottom: 48px;
 }
 
 .rent-catalog .katalog-filtr .bg-light-dark {
   background: #eee;
+}
+
+.rent-catalog #filtr .bg-light-dark > .col-12.text-primary {
+  color: #1a1a1a !important;
+  font-weight: 700;
 }
 
 .rent-catalog .new-breadcrumb {
@@ -23,15 +28,8 @@
   font-weight: 700;
 }
 
-.rent-catalog #popis.collapsed {
-  max-height: 4.6em;
-  overflow: hidden;
-}
-
-.rent-catalog #popis-vice-btn {
-  color: #0e6303;
-  font-weight: 600;
-  text-decoration: none;
+.rent-catalog #popis {
+  margin: 0 auto 32px;
 }
 
 .rent-catalog .category-box.is-active {
@@ -41,7 +39,8 @@
 
 .rent-catalog .card.card-vzv,
 .rent-catalog article.card-vzv {
-  background: #fff;
+  background: #ffffff !important;
+  background-color: #ffffff !important;
   border: 0 !important;
   border-radius: 6px;
   overflow: hidden;
@@ -56,7 +55,7 @@
   position: relative;
   width: 100%;
   padding-top: 66.625%;
-  background-color: #fff;
+  background-color: #ffffff !important;
   border: 0;
   background-repeat: no-repeat !important;
   background-position: center !important;
@@ -86,15 +85,26 @@
   padding: 4px 8px;
 }
 
+.rent-catalog .card-vzv-body,
+.rent-catalog .card-vzv-actions {
+  background: #ffffff !important;
+  background-color: #ffffff !important;
+}
+
 .rent-catalog .card-vzv-body {
   padding: 16px 16px 8px;
   flex: 1 1 auto;
 }
 
+.rent-catalog h1#nadpis {
+  font-weight: 500 !important;
+  color: #1a1a1a;
+}
+
 .rent-catalog .card-vzv-title {
   display: block;
   color: #1a1a1a;
-  font-weight: 800;
+  font-weight: 700;
   text-transform: uppercase;
   text-decoration: none;
   font-size: 1.16rem;
@@ -122,16 +132,18 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 36px;
+  height: 28px;
   margin: 0 0 4px;
 }
 
 .rent-catalog .card-spec-icon img {
   display: block;
-  height: 32px;
+  height: 24px;
   width: auto;
   max-width: none;
   object-fit: contain;
+  opacity: 0.72;
+  filter: contrast(0.78) brightness(1.08);
 }
 
 .rent-catalog .card-spec-label {
@@ -143,7 +155,8 @@
   font-weight: 400;
   color: #1c1c1c;
   line-height: 1.25;
-  word-break: break-word;
+  white-space: nowrap;
+  word-break: normal;
 }
 
 .rent-catalog .card-vzv-actions {
@@ -154,7 +167,7 @@
 }
 
 .rent-catalog .card-vzv-actions .btn {
-  border-radius: 0;
+  border-radius: 0.2rem;
   font-weight: 700;
   text-transform: uppercase;
   font-size: 0.78rem;
@@ -165,7 +178,12 @@
 .rent-catalog .card-vzv-actions .btn.btn-dark:hover,
 .rent-catalog .card-vzv-actions .btn.btn-dark:focus,
 .rent-catalog .card-vzv-actions .btn.btn-dark:active,
-.rent-catalog .card-vzv-actions a.btn-dark:hover {
+.rent-catalog .card-vzv-actions a.btn-dark:hover,
+.rent-detail .rent-detail-actions .btn.btn-dark,
+.rent-detail .rent-detail-actions .btn.btn-dark:hover,
+.rent-detail .rent-detail-actions .btn.btn-dark:focus,
+.rent-detail .rent-detail-actions .btn.btn-dark:active,
+.rent-detail .rent-detail-actions a.btn-dark:hover {
   background: transparent !important;
   background-color: transparent !important;
   color: #1a1a1a !important;
@@ -204,9 +222,9 @@
 }
 
 .rent-detail-photo {
-  background: #f3f3f3;
-  border: 1px solid #e0e0e0;
-  padding: 16px;
+  background: transparent;
+  border: none;
+  padding: 0;
 }
 
 .rent-detail-photo img {
@@ -214,6 +232,29 @@
   height: auto;
   display: block;
   object-fit: contain;
+}
+
+.rent-detail-thumbs {
+  margin: 0;
+}
+
+.rent-detail-thumbs a {
+  display: block;
+}
+
+.rent-detail-thumbs img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+.fancybox-container .fancybox-bg {
+  background: #222;
+}
+
+.fancybox-container.fancybox-is-open .fancybox-bg {
+  opacity: 0.82;
 }
 
 .rent-spec {
@@ -234,8 +275,9 @@
 
 .rent-spec-icon img {
   display: block;
-  width: 44px;
-  height: 44px;
+  height: 40px;
+  width: auto;
+  max-width: none;
   object-fit: contain;
 }
 
@@ -271,7 +313,7 @@
 }
 
 .rent-detail-actions .btn {
-  border-radius: 0;
+  border-radius: 0.2rem;
   font-weight: 700;
   text-transform: uppercase;
   padding: 12px 16px;

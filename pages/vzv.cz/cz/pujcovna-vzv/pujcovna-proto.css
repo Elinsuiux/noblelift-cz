@@ -1486,3 +1486,784 @@
     white-space: normal;
   }
 }
+
+/* -------------------------------------------------------------------------- */
+/* Service landing: Pronájem VZV s obsluhou                                   */
+/* -------------------------------------------------------------------------- */
+
+.pujcovna-proto .service-crumb {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin: 0 0 14px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--pp-soft);
+}
+
+.pujcovna-proto .service-crumb a {
+  color: var(--pp-accent);
+}
+
+.pujcovna-proto .service-crumb a:hover {
+  color: var(--pp-icon);
+}
+
+.pujcovna-proto .obsluha-gallery {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 8px;
+  max-width: 1240px;
+  margin: 28px auto 8px;
+  padding: 0 24px;
+}
+
+.pujcovna-proto .obsluha-gallery a {
+  display: block;
+  aspect-ratio: 3 / 2;
+  overflow: hidden;
+  border-radius: 0.3rem;
+  background: #ececec;
+}
+
+.pujcovna-proto .obsluha-gallery img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.pujcovna-proto .obsluha-copy {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  max-width: 1240px;
+  margin: 24px auto 0;
+  padding: 0 24px;
+}
+
+.pujcovna-proto .obsluha-copy article {
+  padding: 24px 26px;
+  background: var(--pp-section);
+  border-radius: 0.3rem;
+}
+
+.pujcovna-proto .obsluha-copy h2 {
+  margin: 0 0 12px;
+  font-size: 1.2rem;
+  line-height: 1.25;
+  font-weight: 800;
+  color: var(--pp-text);
+}
+
+.pujcovna-proto .obsluha-copy p {
+  margin: 0 0 12px;
+  font-size: 0.92rem;
+  line-height: 1.5;
+  color: #444;
+}
+
+.pujcovna-proto .obsluha-copy p:last-child {
+  margin-bottom: 0;
+}
+
+.pujcovna-proto .obsluha-points {
+  max-width: 1240px;
+  margin: 12px auto 0;
+  padding: 24px 24px 0;
+}
+
+.pujcovna-proto .obsluha-points .rent-check {
+  background: var(--pp-section);
+  border-radius: 0.3rem;
+  padding: 24px 26px;
+}
+
+.pujcovna-proto .obsluha-drivers-wrap {
+  max-width: 1240px;
+  margin: 12px auto 0;
+  padding: 24px 24px 0;
+}
+
+.pujcovna-proto .obsluha-drivers-wrap > h2 {
+  margin: 0 0 16px;
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--pp-text);
+}
+
+.pujcovna-proto .obsluha-drivers {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.pujcovna-proto .obsluha-driver {
+  background: var(--pp-section);
+  border-radius: 0.3rem;
+  overflow: hidden;
+}
+
+.pujcovna-proto .obsluha-driver img {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  background: #e8e8e8;
+}
+
+.pujcovna-proto .obsluha-driver-body {
+  padding: 16px 18px 20px;
+}
+
+.pujcovna-proto .obsluha-driver h3 {
+  margin: 0 0 8px;
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--pp-text);
+}
+
+.pujcovna-proto .obsluha-driver p {
+  margin: 0;
+  font-size: 0.86rem;
+  line-height: 1.45;
+  color: #444;
+}
+
+.pujcovna-proto .rent-bottom--service {
+  grid-template-columns: 1.35fr 1fr;
+  grid-template-areas:
+    "form contact";
+  padding-top: 24px;
+}
+
+/* -------------------------------------------------------------------------- */
+/* Service landing: Doprava                                                   */
+/* -------------------------------------------------------------------------- */
+
+.pujcovna-proto .doprava-fleet-wrap,
+.pujcovna-proto .doprava-gallery-wrap {
+  max-width: 1240px;
+  margin: 12px auto 0;
+  padding: 24px 24px 0;
+}
+
+.pujcovna-proto .doprava-fleet-wrap > h2,
+.pujcovna-proto .doprava-gallery-wrap > h2 {
+  margin: 0 0 16px;
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--pp-text);
+}
+
+.pujcovna-proto .doprava-fleet {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.pujcovna-proto .doprava-fleet-card {
+  background: var(--pp-section);
+  border-radius: 0.3rem;
+  overflow: hidden;
+}
+
+.pujcovna-proto .doprava-fleet-card img {
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  background: #e8e8e8;
+}
+
+.pujcovna-proto .doprava-fleet-body {
+  padding: 18px 20px 22px;
+}
+
+.pujcovna-proto .doprava-fleet-card h3 {
+  margin: 0 0 8px;
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--pp-text);
+}
+
+.pujcovna-proto .doprava-fleet-card p {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: #444;
+}
+
+.pujcovna-proto .doprava-gallery-wrap .obsluha-gallery {
+  margin: 0;
+  padding: 0;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+/* -------------------------------------------------------------------------- */
+/* Service landing: Servis                                                    */
+/* -------------------------------------------------------------------------- */
+
+.pujcovna-proto .servis-steps-wrap,
+.pujcovna-proto .servis-people-wrap {
+  max-width: 1240px;
+  margin: 12px auto 0;
+  padding: 24px 24px 0;
+}
+
+.pujcovna-proto .servis-steps-wrap > h2,
+.pujcovna-proto .servis-people-wrap > h2 {
+  margin: 0 0 16px;
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--pp-text);
+}
+
+.pujcovna-proto .servis-people-wrap > h2 {
+  text-align: center;
+}
+
+.pujcovna-proto .servis-steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.pujcovna-proto .servis-people {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  max-width: 840px;
+  margin: 0 auto;
+}
+
+.pujcovna-proto .servis-person {
+  position: relative;
+  background: var(--pp-section);
+  border-radius: 0.3rem;
+  overflow: hidden;
+}
+
+.pujcovna-proto .servis-person > img:not(.servis-person-flag) {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  object-position: center top;
+  background: #e8e8e8;
+}
+
+.pujcovna-proto .servis-person-flag {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 28px;
+  height: 28px;
+  border-radius: 2px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.18);
+}
+
+.pujcovna-proto .servis-person-body {
+  padding: 16px 18px 20px;
+}
+
+.pujcovna-proto .servis-person h3 {
+  margin: 0 0 4px;
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--pp-text);
+}
+
+.pujcovna-proto .servis-person .servis-role {
+  margin: 0 0 10px;
+  font-size: 0.86rem;
+  color: #666;
+}
+
+.pujcovna-proto .servis-person a {
+  display: block;
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--pp-accent);
+  text-decoration: none;
+}
+
+.pujcovna-proto .servis-person a:hover {
+  color: var(--pp-icon);
+}
+
+.pujcovna-proto .servis-step-card a {
+  color: var(--pp-accent);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.pujcovna-proto .servis-step-card a:hover {
+  color: var(--pp-icon);
+}
+
+/* -------------------------------------------------------------------------- */
+/* Service landing: Dlouhodobý pronájem                                       */
+/* -------------------------------------------------------------------------- */
+
+.pujcovna-proto .dlouho-intro-wrap,
+.pujcovna-proto .dlouho-compare-wrap,
+.pujcovna-proto .dlouho-who-wrap {
+  max-width: 1240px;
+  margin: 12px auto 0;
+  padding: 24px 24px 0;
+}
+
+.pujcovna-proto .dlouho-compare-wrap > h2,
+.pujcovna-proto .dlouho-who-wrap > h2,
+.pujcovna-proto .dlouho-intro-copy h2 {
+  margin: 0 0 12px;
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--pp-text);
+}
+
+.pujcovna-proto .dlouho-compare-lead {
+  margin: 0 0 16px;
+  font-size: 0.92rem;
+  line-height: 1.5;
+  color: #444;
+}
+
+.pujcovna-proto .dlouho-intro {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
+  gap: 12px;
+  align-items: stretch;
+}
+
+.pujcovna-proto .dlouho-intro-photo,
+.pujcovna-proto .dlouho-intro-copy {
+  grid-area: auto;
+}
+
+.pujcovna-proto .dlouho-intro-photo {
+  position: relative;
+  min-height: 420px;
+  border-radius: 0.3rem;
+  overflow: hidden;
+  background-color: #ececec;
+  background-image: url("dlouhodoby-pronajem/foto/dlouhodoby-pronajem.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.pujcovna-proto .dlouho-intro-photo img {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  overflow: hidden;
+}
+
+.pujcovna-proto .dlouho-intro-copy {
+  background: var(--pp-section);
+  border-radius: 0.3rem;
+  padding: 24px 26px;
+}
+
+.pujcovna-proto .dlouho-intro-copy ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.pujcovna-proto .dlouho-intro-copy li {
+  position: relative;
+  padding: 7px 0 7px 16px;
+  border-bottom: 1px solid #eee;
+  font-size: 0.86rem;
+  line-height: 1.35;
+  color: #444;
+}
+
+.pujcovna-proto .dlouho-intro-copy li:last-child {
+  border-bottom: 0;
+}
+
+.pujcovna-proto .dlouho-intro-copy li::before {
+  content: "";
+  position: absolute;
+  top: 13px;
+  left: 0;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--pp-accent);
+}
+
+.pujcovna-proto .dlouho-compare-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.pujcovna-proto .dlouho-col {
+  background: var(--pp-section);
+  border-radius: 0.3rem;
+  padding: 22px 24px 10px;
+}
+
+.pujcovna-proto .dlouho-col h3 {
+  margin: 0 0 14px;
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--pp-text);
+}
+
+.pujcovna-proto .dlouho-col p {
+  position: relative;
+  margin: 0;
+  padding: 12px 0 12px 22px;
+  border-top: 1px solid #eee;
+  font-size: 0.88rem;
+  line-height: 1.45;
+  color: #444;
+}
+
+.pujcovna-proto .dlouho-col p:first-of-type {
+  border-top: 0;
+  padding-top: 0;
+}
+
+.pujcovna-proto .dlouho-col p strong {
+  color: var(--pp-text);
+}
+
+.pujcovna-proto .dlouho-col.is-no p::before,
+.pujcovna-proto .dlouho-col.is-yes p::before {
+  position: absolute;
+  left: 0;
+  top: 12px;
+  font-weight: 800;
+}
+
+.pujcovna-proto .dlouho-col.is-no p:first-of-type::before,
+.pujcovna-proto .dlouho-col.is-yes p:first-of-type::before {
+  top: 2px;
+}
+
+.pujcovna-proto .dlouho-col.is-no p::before {
+  content: "×";
+  color: #b35b5b;
+}
+
+.pujcovna-proto .dlouho-col.is-yes p::before {
+  content: "✓";
+  color: var(--pp-accent);
+}
+
+.pujcovna-proto .dlouho-logos {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+  margin: 0 0 18px;
+}
+
+.pujcovna-proto .dlouho-who-wrap .rent-consult {
+  background: var(--pp-section);
+  border-radius: 0.3rem;
+  padding: 24px 26px;
+}
+
+/* -------------------------------------------------------------------------- */
+/* Service landing: Eventy                                                    */
+/* -------------------------------------------------------------------------- */
+
+.pujcovna-proto .eventy-intro-photo {
+  background-image: url("eventy/foto/eventy.jpg");
+}
+
+.pujcovna-proto .eventy-types-wrap,
+.pujcovna-proto .eventy-videos-wrap {
+  max-width: 1240px;
+  margin: 12px auto 0;
+  padding: 24px 24px 0;
+}
+
+.pujcovna-proto .eventy-types-wrap > h2,
+.pujcovna-proto .eventy-videos-wrap > h2 {
+  margin: 0 0 16px;
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--pp-text);
+}
+
+.pujcovna-proto .eventy-types {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.pujcovna-proto .eventy-types .doprava-fleet-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.pujcovna-proto .eventy-types .doprava-fleet-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.pujcovna-proto .eventy-types .doprava-fleet-card img {
+  object-fit: contain;
+  background: #fff;
+}
+
+.pujcovna-proto .eventy-type-btn {
+  margin-top: 14px;
+  align-self: flex-start;
+}
+
+.pujcovna-proto .eventy-videos {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.pujcovna-proto .eventy-video {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  border-radius: 0.3rem;
+  background: #111;
+}
+
+.pujcovna-proto .eventy-video img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+.pujcovna-proto .eventy-video-play {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--pp-green);
+  transform: translate(-50%, -50%);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.28);
+}
+
+.pujcovna-proto .eventy-video-play::before {
+  content: "";
+  position: absolute;
+  left: 22px;
+  top: 18px;
+  border-style: solid;
+  border-width: 10px 0 10px 16px;
+  border-color: transparent transparent transparent #111;
+}
+
+.pujcovna-proto .eventy-logos {
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+}
+
+/* -------------------------------------------------------------------------- */
+/* Service landing: Speciální manipulační technika                            */
+/* -------------------------------------------------------------------------- */
+
+.pujcovna-proto .special-wrap {
+  max-width: 1240px;
+  margin: 12px auto 0;
+  padding: 24px 24px 0;
+}
+
+.pujcovna-proto .special-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.pujcovna-proto .special-grid .doprava-fleet-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.pujcovna-proto .special-grid .doprava-fleet-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.pujcovna-proto .special-grid .doprava-fleet-card img {
+  object-fit: contain;
+  background: #fff;
+}
+
+.pujcovna-proto .special-grid .doprava-fleet-card p {
+  margin-bottom: 12px;
+}
+
+.pujcovna-proto .special-grid .eventy-type-btn {
+  margin-top: auto;
+}
+
+.pujcovna-proto .special-spec {
+  margin: 0 0 12px;
+  padding: 0;
+  list-style: none;
+}
+
+.pujcovna-proto .special-spec li {
+  position: relative;
+  padding: 6px 0 6px 16px;
+  border-bottom: 1px solid #eee;
+  font-size: 0.86rem;
+  line-height: 1.35;
+  color: #444;
+}
+
+.pujcovna-proto .special-spec li:last-child {
+  border-bottom: 0;
+}
+
+.pujcovna-proto .special-spec li::before {
+  content: "";
+  position: absolute;
+  top: 11px;
+  left: 0;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--pp-accent);
+}
+
+.pujcovna-proto .special-attach {
+  margin: 0 0 12px;
+  font-size: 0.86rem;
+  line-height: 1.45;
+  color: #444;
+}
+
+.pujcovna-proto .special-attach strong {
+  display: block;
+  margin: 0 0 4px;
+  color: var(--pp-text);
+}
+
+/* -------------------------------------------------------------------------- */
+/* Service landing: Manipulační technika pro eshopy                           */
+/* -------------------------------------------------------------------------- */
+
+.pujcovna-proto .eshopy-intro-photo {
+  background-image: url("manipulacni-technika-pro-eshopy/foto/sklad.png");
+}
+
+.pujcovna-proto .eshopy-types {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.pujcovna-proto .eshopy-types .doprava-fleet-card img {
+  background: var(--pp-section);
+}
+
+.pujcovna-proto .eshopy-types .eventy-type-btn {
+  margin-top: auto;
+}
+
+.pujcovna-proto .eshopy-logos {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
+/* -------------------------------------------------------------------------- */
+/* Service landing: Terénní manipulační technika                              */
+/* -------------------------------------------------------------------------- */
+
+.pujcovna-proto .terenni-intro-photo {
+  background-image: url("terenni-manipulacni-technika/foto/gallery-2.png");
+}
+
+.pujcovna-proto .terenni-attach .doprava-fleet-card img {
+  object-fit: contain;
+  background: var(--pp-section);
+}
+
+.pujcovna-proto .terenni-attach-more {
+  margin: 16px 0 0;
+  text-align: center;
+}
+
+.pujcovna-proto .terenni-videos {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+/* -------------------------------------------------------------------------- */
+/* Service landing: Stěhovací technika                                        */
+/* -------------------------------------------------------------------------- */
+
+.pujcovna-proto .stehovaci-types .doprava-fleet-card img {
+  object-fit: contain;
+  background: var(--pp-section);
+}
+
+.pujcovna-proto .stehovaci-types .eventy-type-btn {
+  margin-top: auto;
+}
+
+@media (max-width: 991.98px) {
+  .pujcovna-proto .obsluha-gallery {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .pujcovna-proto .doprava-gallery-wrap .obsluha-gallery {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .pujcovna-proto .obsluha-copy,
+  .pujcovna-proto .obsluha-drivers,
+  .pujcovna-proto .doprava-fleet,
+  .pujcovna-proto .servis-steps,
+  .pujcovna-proto .servis-people,
+  .pujcovna-proto .dlouho-intro,
+  .pujcovna-proto .dlouho-compare-grid,
+  .pujcovna-proto .eventy-types,
+  .pujcovna-proto .eventy-videos,
+  .pujcovna-proto .special-grid,
+  .pujcovna-proto .rent-bottom--service {
+    grid-template-columns: 1fr;
+  }
+
+  .pujcovna-proto .eventy-types,
+  .pujcovna-proto .eventy-videos,
+  .pujcovna-proto .terenni-videos,
+  .pujcovna-proto .special-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .pujcovna-proto .eventy-logos,
+  .pujcovna-proto .eshopy-logos {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .pujcovna-proto .rent-bottom--service {
+    grid-template-areas:
+      "form"
+      "contact";
+  }
+}
+
+@media (max-width: 575.98px) {
+  .pujcovna-proto .obsluha-gallery,
+  .pujcovna-proto .doprava-gallery-wrap .obsluha-gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .pujcovna-proto .dlouho-logos,
+  .pujcovna-proto .eventy-logos,
+  .pujcovna-proto .eshopy-logos,
+  .pujcovna-proto .eventy-types,
+  .pujcovna-proto .eventy-videos,
+  .pujcovna-proto .terenni-videos,
+  .pujcovna-proto .special-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}

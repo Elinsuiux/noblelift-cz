@@ -22,7 +22,7 @@ const outDir = join(webRoot, "public", "pages", "vzv.cz", "cz", "pujcovna-vzv");
 const dumpDir = join(webRoot, "..", "pages", "vzv.cz", "cz", "pujcovna-vzv");
 const ASSET_ORIGIN = "https://temporary-rapid-breeze-8ofpwza.vercel.app";
 const SITE_PUJCOVNA = "/pages/vzv.cz/cz/pujcovna-vzv";
-const CATALOG_CSS = `${SITE_PUJCOVNA}/pujcovna-katalog.css?v=card-spec-icons-7`;
+const CATALOG_CSS = `${SITE_PUJCOVNA}/pujcovna-katalog.css?v=card-spec-icons-18`;
 
 const SPEC_ORDER = [
   "Pohon",
@@ -375,8 +375,8 @@ function renderCard(category, product) {
                             <div class="card-body-parametry">${specRows}</div>
                         </div>
                         <div class="card-vzv-actions">
-                            <a class="btn btn-dark" href="${detail}">Detail</a>
-                            <a class="btn btn-primary" href="${poptatPath(product)}">Poptat</a>
+                            <a class="btn btn-dark rounded-1" href="${detail}">Detail</a>
+                            <a class="btn btn-primary rounded-1" href="${poptatPath(product)}">Poptat</a>
                         </div>
                     </article>
                 </div>`;
@@ -386,16 +386,26 @@ function renderDetail(category, product) {
   const specBlocks = SPEC_ORDER.filter(
     (key) => product.specs[key] && product.specs[key] !== "0",
   )
-    .map(
-      (key) => `<div class="col-6 col-md-4 mb-4">
+    .map((key) => {
+      const icon = specIconSrc(key, product.specs[key]);
+      const iconHtml = icon
+        ? `<div class="rent-spec-icon" aria-hidden="true"><img src="${icon}" alt=""></div>`
+        : "";
+      return `<div class="col-6 col-md-4 mb-4">
                         <div class="rent-spec">
+                            ${iconHtml}
                             <div class="rent-spec-label">${escapeHtml(key)}</div>
                             <div class="rent-spec-value">${escapeHtml(product.specs[key])}</div>
                         </div>
-                    </div>`,
-    )
+                    </div>`;
+    })
     .join("");
   const listing = `${listingPath(category.slug)}/index.html`;
+  const thumbs = renderDetailThumbs(product);
+  const copy = sanitizeCopy(product.copy) || machineDescription(category, product);
+  const heroRowClass = thumbs
+    ? "row g-4 align-items-start"
+    : "row g-4 align-items-start pb-5";
 
   return `<div class="content-body rent-catalog rent-detail">
     <div class="container-fluid">
@@ -413,25 +423,85 @@ function renderDetail(category, product) {
                     <span class="new-breadcrumb is-current">${escapeHtml(product.name)}</span>
                 </div>
                 <hr />
-                <div class="row g-4 align-items-start pb-5">
+                <div class="${heroRowClass}">
                     <div class="col-12 col-lg-6">
-                        <div class="rent-detail-photo">
-                            <img src="${escapeHtml(product.img)}" alt="${escapeHtml(product.name)}">
-                        </div>
+                        ${renderDetailPhoto(product)}
                     </div>
                     <div class="col-12 col-lg-6">
                         <div class="row">${specBlocks}</div>
-                        <div class="rent-detail-copy">${machineDescription(category, product)}</div>
+                        <div class="rent-detail-copy">${copy}</div>
                         <div class="rent-detail-actions">
-                            <a class="btn btn-dark" href="${listing}">Zpět na výpis</a>
-                            <a class="btn btn-primary" href="${poptatPath(product)}">Poptat</a>
+                            <a class="btn btn-dark rounded-1" href="${listing}">Technický list</a>
+                            <a class="btn btn-primary rounded-1" href="${poptatPath(product)}">Poptat</a>
                         </div>
                     </div>
                 </div>
+                ${thumbs}
             </div>
         </div>
     </div>
 </div>`;
+}
+
+function sanitizeCopy(html) {
+  const raw = String(html || "");
+  const paras = [];
+  const re = /<p\b[^>]*>[\s\S]*?<\/p>/gi;
+  let last = 0;
+  let match;
+  while ((match = re.exec(raw))) {
+    if (paras.length && match.index - last > 40) break;
+    const chunk = match[0];
+    if (/<(meta|link|script|html|head|body)\b/i.test(chunk)) break;
+    paras.push(chunk.replace(/\r\n/g, "\n"));
+    last = match.index + chunk.length;
+  }
+  return paras.join("");
+}
+
+function parseFotoPath(img) {
+  const decoded = String(img || "").replaceAll("&amp;", "&");
+  const match = decoded.match(/foto\/(fotorent|fotov|fotoch)\/([^/]+)\/([^/?&]+)/i);
+  if (!match) return null;
+  return { kind: match[1], folder: match[2], file: match[3] };
+}
+
+function fullFotoUrl(kind, folder, file) {
+  return `https://admin.vzv.cz/foto/${kind}/${folder}/${file}`;
+}
+
+function renderDetailPhoto(product) {
+  const parsed = parseFotoPath(product.img);
+  const name = escapeHtml(product.name);
+  const href = parsed
+    ? fullFotoUrl(parsed.kind, parsed.folder, `${parsed.folder}-01.jpg`)
+    : product.img;
+  const src = parsed
+    ? fullFotoUrl(parsed.kind, parsed.folder, `${parsed.folder}-01.jpg`)
+    : product.img;
+  return `<div class="rent-detail-photo">
+                            <a href="${escapeHtml(href)}" data-fancybox="images" data-caption="${name}">
+                                <img src="${escapeHtml(src)}" alt="${name}">
+                            </a>
+                        </div>`;
+}
+
+function renderDetailThumbs(product) {
+  const photos = product.photos || [];
+  if (photos.length < 2) return "";
+  const name = escapeHtml(product.name);
+  const items = photos
+    .map((photo) => {
+      const thumb = `https://admin.vzv.cz/img.php?img=foto/${photo.kind}/${photo.folder}/${photo.file}&width=400&height=266`;
+      const href = fullFotoUrl(photo.kind, photo.folder, photo.file);
+      return `<div class="col-6 col-sm-4 col-xl-3 p-2">
+                        <a href="${escapeHtml(href)}" data-fancybox="images" data-caption="${name}">
+                            <img src="${escapeHtml(thumb)}" alt="${name}">
+                        </a>
+                    </div>`;
+    })
+    .join("");
+  return `<div class="row g-2 rent-detail-thumbs pb-5">${items}</div>`;
 }
 
 function checkbox(id, value, label, filter) {
@@ -594,8 +664,7 @@ function renderCatalog(category, products) {
                 <div class="col-xxl-8 col-xl-10 mx-auto">
                     <div class="col-12 text-center">
                         <h1 class="text-uppercase" id="nadpis">${escapeHtml(category.title)}</h1>
-                        <p id="popis" class="collapsed">${escapeHtml(category.intro)}</p>
-                        <a id="popis-vice-btn" href="javascript:void(0)">Číst dále</a>
+                        <p id="popis">${escapeHtml(category.intro)}</p>
                     </div>
                     ${renderTypePills(category.slug)}
                     <div class="d-md-none px-3 mt-2 mb-3 col-12 fs-7" id="breadcrumb-mobile">
@@ -756,15 +825,6 @@ function renderCatalog(category, products) {
       apply();
     });
   });
-  var more = document.getElementById("popis-vice-btn");
-  var popis = document.getElementById("popis");
-  if (more && popis) {
-    more.addEventListener("click", function (event) {
-      event.preventDefault();
-      popis.classList.remove("collapsed");
-      more.remove();
-    });
-  }
   apply();
 })();
 </script>
@@ -862,15 +922,15 @@ function patchListingPills(html, slug) {
   if (/<nav class="rent-pills"[\s\S]*?<\/nav>/.test(html)) {
     return html.replace(/<nav class="rent-pills"[\s\S]*?<\/nav>/, pills);
   }
-  const afterIntro = `                        <a id="popis-vice-btn" href="javascript:void(0)">Číst dále</a>
-                    </div>
+  const afterIntro = `                    </div>
                     ${pills}
                     <div class="d-md-none px-3 mt-2 mb-3 col-12 fs-7" id="breadcrumb-mobile">`;
-  const needle = `                        <a id="popis-vice-btn" href="javascript:void(0)">Číst dále</a>
-                    </div>
+  const needle = `                    </div>
                     <div class="d-md-none px-3 mt-2 mb-3 col-12 fs-7" id="breadcrumb-mobile">`;
-  if (!html.includes(needle)) throw new Error("Could not find catalog listing to insert type pills");
-  return html.replace(needle, afterIntro);
+  if (html.includes('<p id="popis"') && html.includes(needle)) {
+    return html.replace(needle, afterIntro);
+  }
+  throw new Error("Could not find catalog listing to insert type pills");
 }
 
 function patchDetailPills(html, slug) {
