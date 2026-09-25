@@ -264,14 +264,23 @@ svg {
     border: 1px solid #bfbfbf;
     border-radius: 10px;
     transition: all 0.2s ease;
-    color: #111;
+    color: #000000;
 }
 
 .category-box:hover {
     border-color: #999;
     box-shadow: 0 4px 14px rgba(0,0,0,0.08);
     transform: translateY(-2px);
-    color: #111;
+    color: #000000;
+}
+
+a.category-box,
+a.category-box:hover,
+a.category-box:focus,
+.content-body a.category-box,
+.content-body a.category-box:hover,
+.content-body a.category-box:focus {
+    color: #000000 !important;
 }
 
 .category-box__image {
@@ -295,6 +304,7 @@ svg {
     font-weight: 500;
     line-height: 1.15;
     text-transform: uppercase;
+    color: #000000 !important;
 }
 
 .new-breadcrumb {
