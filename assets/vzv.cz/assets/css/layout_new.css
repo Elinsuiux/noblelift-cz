@@ -314,3 +314,8 @@ a.category-box:focus,
 #breadcrumb a:hover {
     color: var(--color-red-light);
 }
+
+/* Duplicate "Nové vozíky" heading under the NOBLELIFT line */
+.content-body:has(#nove-voziky) .listing-toolbar #breadcrumb {
+    display: none !important;
+}
