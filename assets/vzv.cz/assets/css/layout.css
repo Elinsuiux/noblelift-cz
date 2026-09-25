@@ -3848,3 +3848,16 @@ html {
 .wrap-zarizeni .fw-bolder.fs-5 {
     white-space: nowrap;
 }
+
+/* Sale attachment listing: spec labels/values black; first number (Nosnost) brand green. */
+.wrap-zarizeni a.pz-odkaz-card,
+.wrap-zarizeni a.pz-odkaz-card:hover,
+.wrap-zarizeni .card-item-title,
+.wrap-zarizeni .card-item-title .fw-bolder,
+.wrap-zarizeni .card-body .row > .col-6 {
+    color: #000000 !important;
+}
+
+.wrap-zarizeni .card-body .row > .col-6:nth-child(4) {
+    color: #159504 !important;
+}
