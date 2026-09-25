@@ -206,7 +206,27 @@ a.text-primary:hover,
 }
 
 .pruvodce-vyberem-voziku {
-  background: #0e6303 !important;
+  background: transparent !important;
+}
+
+.pruvodce-vyberem-voziku-title {
+  background: #159504 !important;
+  color: #ffffff !important;
+}
+
+.pruvodce-vyberem-voziku .btn-dark {
+  background: #73fb61 !important;
+  border-color: #73fb61 !important;
+  color: #000000 !important;
+  font-weight: 600 !important;
+}
+
+.pruvodce-vyberem-voziku .btn-dark:hover,
+.pruvodce-vyberem-voziku .btn-dark:focus,
+.pruvodce-vyberem-voziku .btn-dark:active {
+  background: #73fb61 !important;
+  border-color: #73fb61 !important;
+  color: #000000 !important;
 }
 
 .banner-pruvodce-vyberem,
@@ -406,4 +426,84 @@ a.box-vyber-jazyka-jazyk:hover {
 .h-dropdown-menu .dropdown-item:hover,
 .h-dropdown-menu .dropdown-item:focus {
   color: #159504 !important;
+}
+
+/* ── Průvodce výběrem vozíku page ───────────────────────────── */
+
+.content-body .separator-vzv-dark h2 {
+  color: #ffffff !important;
+}
+
+.content-body .separator-vzv-dark h3 {
+  color: #73fb61 !important;
+}
+
+.content-body .background-grey h2,
+.content-body .container-fluid.text-center:not(.separator-vzv-dark) h2,
+.content-body h2.fs-2 {
+  color: #1a1a1a !important;
+}
+
+.content-body .background-grey p,
+.content-body .container-fluid.text-center p {
+  color: #333333;
+}
+
+.pruvodce-vyberem-voziku-page .card,
+.content-body .card {
+  background: #ffffff !important;
+  border: 2px solid #e6e6e6;
+  border-radius: 6px;
+  box-shadow: none;
+  height: 100%;
+  cursor: pointer;
+}
+
+.content-body label:hover .card {
+  border-color: #73fb61;
+}
+
+.content-body label:has(:checked) .card {
+  border-color: #73fb61;
+  box-shadow: 0 0 0 2px rgba(115, 251, 97, 0.45);
+}
+
+.content-body .form-check-input-large {
+  width: 1.35em;
+  height: 1.35em;
+}
+
+.content-body .form-check-input:checked {
+  background-color: #73fb61 !important;
+  border-color: #0e6303 !important;
+}
+
+.content-body .irs--big .irs-bar,
+.content-body .irs--big .irs-handle,
+.content-body .irs--big .irs-from,
+.content-body .irs--big .irs-to,
+.content-body .irs--big .irs-single {
+  background-color: #73fb61 !important;
+  border-color: #0e6303 !important;
+  color: #000000 !important;
+  text-shadow: none !important;
+}
+
+.content-body .irs--big .irs-handle {
+  background: #73fb61 !important;
+  border: 2px solid #0e6303 !important;
+}
+
+.content-body #butGuideShowForklfits.btn-vzv {
+  background: #73fb61 !important;
+  border-color: #73fb61 !important;
+  color: #000000 !important;
+  font-weight: 700 !important;
+  text-transform: uppercase;
+}
+
+.content-body #butGuideShowForklfits.btn-vzv:hover {
+  background: #1cc705 !important;
+  border-color: #1cc705 !important;
+  color: #000000 !important;
 }
