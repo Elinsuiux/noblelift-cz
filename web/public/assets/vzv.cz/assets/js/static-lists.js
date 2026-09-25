@@ -529,6 +529,9 @@
   function basketLineHtml(it) {
     var parts = splitTitle(it);
     var title = ((parts.code ? parts.code + " " : "") + parts.name).trim() || it.title || "";
+    var titleHtml = parts.code
+      ? '<span class="kosik-line-code">' + escapeHtml(parts.code) + "</span> " + escapeHtml(parts.name)
+      : escapeHtml(title);
     var sub = itemSubtitle(it);
     var qty = it.qty > 0 ? it.qty : 1;
     var unit = parsePrice(it.price);
@@ -539,7 +542,7 @@
           ? '<a class="kosik-line-img" href="' + escapeHtml(it.url) + '"><img src="' + escapeHtml(it.img) + '" alt="' + escapeHtml(title) + '"></a>'
           : '<div class="kosik-line-img"></div>') +
         '<div class="kosik-line-info">' +
-          '<a class="kosik-line-title" href="' + escapeHtml(it.url) + '">' + escapeHtml(title) + "</a>" +
+          '<a class="kosik-line-title" href="' + escapeHtml(it.url) + '">' + titleHtml + "</a>" +
           (sub ? '<div class="kosik-line-sub">' + escapeHtml(sub) + "</div>" : "") +
         "</div>" +
         '<div class="kosik-line-unit">' +
@@ -945,7 +948,7 @@
     var link = document.createElement("link");
     link.id = "vzv-static-lists-css";
     link.rel = "stylesheet";
-    link.href = "/assets/vzv.cz/assets/css/static-lists.css?v=lists-6";
+    link.href = "/assets/vzv.cz/assets/css/static-lists.css?v=lists-7";
     document.head.appendChild(link);
   }
 

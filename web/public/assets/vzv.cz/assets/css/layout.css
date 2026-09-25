@@ -4061,15 +4061,22 @@ a[id^="item-v-kosiku-"].btn:active,
     background: #eee;
 }
 #basket-wrap .kosik-line-title {
-    color: #73fb61 !important;
+    color: #111111 !important;
     font-weight: 700;
     text-decoration: none;
     display: block;
     line-height: 1.3;
 }
+#basket-wrap .kosik-line-title .kosik-line-code {
+    color: #159504 !important;
+}
 #basket-wrap .kosik-line-title:hover,
 #basket-wrap .kosik-line-title:focus {
-    color: #159504 !important;
+    color: #111111 !important;
+}
+#basket-wrap .kosik-line-title:hover .kosik-line-code,
+#basket-wrap .kosik-line-title:focus .kosik-line-code {
+    color: #0e6303 !important;
 }
 #basket-wrap .kosik-line-sub {
     color: #111;
