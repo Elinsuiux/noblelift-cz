@@ -1401,6 +1401,16 @@ ul li
     box-shadow: none !important;
 }
 
+/* Contact team CTAs (VZVParts.cz, Sjednat schůzku): white label, green hover. */
+.content-body .container .text-center > a.btn.btn-dark {
+    color: #ffffff !important;
+}
+.content-body .container .text-center > a.btn.btn-dark:hover,
+.content-body .container .text-center > a.btn.btn-dark:focus,
+.content-body .container .text-center > a.btn.btn-dark:active {
+    color: #73fb61 !important;
+}
+
 .card-footer .text-primary,
 .card .text-primary.fw-bold,
 .card .text-primary.fw-bolder,
