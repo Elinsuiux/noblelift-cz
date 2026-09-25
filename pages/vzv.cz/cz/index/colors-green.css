@@ -527,11 +527,42 @@ a.text-primary:hover,
   color: #ffffff !important;
 }
 
+/* Homepage: Tomáš + Noblelift share the left carousel height, equal tiles */
+@media (min-width: 768px) {
+  .slider-baner-edit > .row {
+    align-items: stretch;
+  }
+
+  .slider-baner-edit > .row > .col-md-5 {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .slider-baner-edit > .row > .col-md-5 > .row.height-50 {
+    flex: 1 1 auto;
+    width: 100%;
+    max-width: 100%;
+    height: 100% !important;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .slider-baner-edit > .row > .col-md-5 > .row.height-50 > [class*="col-12"] {
+    flex: 1 1 0;
+    flex-shrink: 1;
+    width: 100%;
+    max-width: 100%;
+    min-height: 0;
+    height: auto !important;
+  }
+}
+
 /* Homepage: Noblelift banner — attached artwork, phone +420 773 997 314 */
 .banner-nove-voziky.banner-noblelift-asset,
 .content-body .banner-nove-voziky.banner-noblelift-asset {
-  height: auto !important;
-  min-height: 0 !important;
   padding: 0 !important;
   background: #000000 !important;
   background-image: none !important;
@@ -548,13 +579,33 @@ a.text-primary:hover,
 .banner-noblelift-asset .banner-noblelift-frame {
   position: relative;
   display: block;
+  height: 100%;
   line-height: 0;
 }
 
 .banner-noblelift-asset img {
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
   display: block;
+}
+
+@media (max-width: 767.98px) {
+  .banner-nove-voziky.banner-noblelift-asset,
+  .content-body .banner-nove-voziky.banner-noblelift-asset {
+    height: auto !important;
+    min-height: 0 !important;
+  }
+
+  .banner-noblelift-asset .banner-noblelift-frame {
+    height: auto;
+  }
+
+  .banner-noblelift-asset img {
+    height: auto;
+    object-fit: unset;
+  }
 }
 
 .banner-noblelift-hotspot {
