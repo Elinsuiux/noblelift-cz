@@ -150,11 +150,22 @@ a.text-primary:hover,
   color: #073201 !important;
 }
 
-/* Keep dark buttons readable on hover (e.g. VZVParts.cz carousel CTA) */
+/* VZVParts.cz carousel CTA: white label, lime hover */
+.carousel-caption-option-button a.btn.btn-dark,
+.carousel-caption-option-button .btn.btn-dark {
+  color: #ffffff !important;
+}
+
+.carousel-caption-option-button a.btn.btn-dark:hover,
+.carousel-caption-option-button a.btn.btn-dark:focus,
+.carousel-caption-option-button a.btn.btn-dark:active,
+.carousel-caption-option-button .btn.btn-dark:hover,
+.carousel-caption-option-button .btn.btn-dark:focus,
+.carousel-caption-option-button .btn.btn-dark:active,
 .btn-dark:hover,
 .btn-dark:focus,
 .btn-dark:active {
-  color: #73fb61 !important;
+  color: #73FB61 !important;
 }
 
 .card-vzv-body-cena,

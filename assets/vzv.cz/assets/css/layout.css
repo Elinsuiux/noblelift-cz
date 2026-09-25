@@ -1411,6 +1411,20 @@ ul li
     color: #73fb61 !important;
 }
 
+/* Homepage VZVParts.cz carousel CTA: white label, lime hover. */
+.carousel-caption-option-button a.btn.btn-dark,
+.carousel-caption-option-button .btn.btn-dark {
+    color: #ffffff !important;
+}
+.carousel-caption-option-button a.btn.btn-dark:hover,
+.carousel-caption-option-button a.btn.btn-dark:focus,
+.carousel-caption-option-button a.btn.btn-dark:active,
+.carousel-caption-option-button .btn.btn-dark:hover,
+.carousel-caption-option-button .btn.btn-dark:focus,
+.carousel-caption-option-button .btn.btn-dark:active {
+    color: #73FB61 !important;
+}
+
 .card-footer .text-primary,
 .card .text-primary.fw-bold,
 .card .text-primary.fw-bolder,
