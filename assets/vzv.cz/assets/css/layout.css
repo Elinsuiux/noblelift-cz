@@ -3803,3 +3803,48 @@ html {
 #splatkovaKalkulacka iframe[title*="splatk"] {
     filter: none;
 }
+
+/* Listing-card spec values stay readable; prices stay on one line. */
+#forklifts .card .row.no-wrap {
+    --bs-gutter-x: 0.35rem;
+}
+
+#forklifts .card .row.no-wrap > .col {
+    flex: 1 0 30%;
+    max-width: 34%;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+#forklifts .card .row.no-wrap .col-12,
+#forklifts .card .row.no-wrap .col-12.text-center {
+    padding-left: 0;
+    padding-right: 0;
+    font-size: 0.72rem;
+    line-height: 1.2;
+    white-space: nowrap;
+}
+
+#forklifts .card .row.no-wrap svg {
+    width: 26px;
+    height: 26px;
+}
+
+#forklifts .card .fs-5.fw-bold,
+#forklifts .card .text-primary.fs-5,
+#forklifts .card .fw-bolder.fs-5,
+#forklifts .card .card-footer .text-primary {
+    white-space: nowrap !important;
+    font-size: 1.05rem !important;
+    line-height: 1.2;
+}
+
+.wrapProduct .card-item-title,
+.wrap-zarizeni .card-item-title {
+    overflow-wrap: anywhere;
+}
+
+.wrap-zarizeni .row .col-6.text-right.font-bold,
+.wrap-zarizeni .fw-bolder.fs-5 {
+    white-space: nowrap;
+}

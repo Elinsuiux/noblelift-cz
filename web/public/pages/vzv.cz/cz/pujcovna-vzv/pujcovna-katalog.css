@@ -148,7 +148,8 @@
   font-weight: 400;
   color: #1c1c1c;
   line-height: 1.25;
-  word-break: break-word;
+  white-space: nowrap;
+  word-break: normal;
 }
 
 .rent-catalog .card-vzv-actions {
