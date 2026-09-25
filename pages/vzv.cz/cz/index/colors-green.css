@@ -527,126 +527,55 @@ a.text-primary:hover,
   color: #ffffff !important;
 }
 
-/* Homepage: Noblelift banner — green panel, orange logo, white copy */
-.banner-nove-voziky {
-  background-color: #073201 !important;
-  border-top-color: #73fb61 !important;
+/* Homepage: Noblelift banner — attached artwork, phone +420 773 997 314 */
+.banner-nove-voziky.banner-noblelift-asset,
+.content-body .banner-nove-voziky.banner-noblelift-asset {
+  height: auto !important;
+  min-height: 0 !important;
+  padding: 0 !important;
+  background: #000000 !important;
+  background-image: none !important;
+  border-top: 0 !important;
   position: relative;
+  overflow: hidden;
 }
 
-.banner-nove-voziky::before {
-  content: "";
+.banner-nove-voziky.banner-noblelift-asset::before {
+  display: none !important;
+  content: none !important;
+}
+
+.banner-noblelift-asset .banner-noblelift-frame {
+  position: relative;
+  display: block;
+  line-height: 0;
+}
+
+.banner-noblelift-asset img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.banner-noblelift-hotspot {
   position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    90deg,
-    rgba(7, 50, 1, 0.92) 0%,
-    rgba(7, 50, 1, 0.62) 38%,
-    rgba(14, 99, 3, 0.22) 68%,
-    rgba(14, 99, 3, 0.08) 100%
-  );
-  pointer-events: none;
-  z-index: 1;
+  z-index: 3;
+  display: block;
+  border-radius: 10px;
 }
 
-.banner-nove-voziky .banner-content,
-.banner-nove-voziky .container-fluid {
-  position: relative;
-  z-index: 2;
+.banner-noblelift-hotspot-cta {
+  left: 4.4%;
+  top: 44.8%;
+  width: 28.5%;
+  height: 12.3%;
 }
 
-.banner-nove-voziky .text-noblelift,
-.banner-nove-voziky .font-noblelift {
-  color: #e05010 !important;
-}
-
-.banner-nove-voziky .banner-content,
-.banner-nove-voziky .banner-content .fs-6,
-.banner-nove-voziky .banner-content .fs-6 strong,
-.banner-nove-voziky .banner-title,
-.banner-nove-voziky .banner-title span {
-  color: #ffffff !important;
-}
-
-/* Vybrat vozík — black fill, white text, orange glow outline */
-.banner-nove-voziky .banner-button-noblelift,
-.content-body .banner-nove-voziky a.btn.banner-button-noblelift {
-  background: #000000 !important;
-  background-color: #000000 !important;
-  border: 2px solid #e05010 !important;
-  color: #ffffff !important;
-  font-weight: 700 !important;
-  box-shadow: 0 0 12px 2px rgba(224, 80, 16, 0.75) !important;
-}
-
-.banner-nove-voziky .banner-button-noblelift div {
-  color: #ffffff !important;
-  font-weight: 700 !important;
-}
-
-.banner-nove-voziky .banner-button-noblelift:hover,
-.banner-nove-voziky .banner-button-noblelift:focus,
-.banner-nove-voziky .banner-button-noblelift:active,
-.banner-nove-voziky a.btn.btn-dark.banner-button-noblelift:hover,
-.banner-nove-voziky a.btn.btn-dark.banner-button-noblelift:focus,
-.banner-nove-voziky a.btn.btn-dark.banner-button-noblelift:active,
-.content-body .banner-nove-voziky a.btn.banner-button-noblelift:hover,
-.content-body .banner-nove-voziky a.btn.banner-button-noblelift:focus,
-.content-body .banner-nove-voziky a.btn.banner-button-noblelift:active {
-  background: #000000 !important;
-  background-color: #000000 !important;
-  border-color: #e05010 !important;
-  color: #ffffff !important;
-  box-shadow: 0 0 16px 3px rgba(224, 80, 16, 0.95) !important;
-}
-
-.banner-nove-voziky .banner-button-noblelift:hover div,
-.banner-nove-voziky .banner-button-noblelift:focus div,
-.banner-nove-voziky .banner-button-noblelift:active div {
-  color: #ffffff !important;
-}
-
-/* Phone — filled lime, black text (same style as Tomáš Rýce crop) */
-.banner-nove-voziky .btn-telefonni-cislo,
-.banner-nove-voziky a.btn.btn-yellow.btn-telefonni-cislo,
-.content-body .banner-nove-voziky a.btn.btn-yellow,
-.content-body .banner-nove-voziky a.btn.btn-telefonni-cislo {
-  background: #73fb61 !important;
-  background-color: #73fb61 !important;
-  border: 2px solid #73fb61 !important;
-  color: #000000 !important;
-  font-weight: 700 !important;
-}
-
-.banner-nove-voziky .btn-telefonni-cislo span,
-.banner-nove-voziky a.btn.btn-yellow.btn-telefonni-cislo span,
-.content-body .banner-nove-voziky a.btn.btn-yellow span,
-.content-body .banner-nove-voziky a.btn.btn-telefonni-cislo span {
-  color: #000000 !important;
-}
-
-.banner-nove-voziky a.btn.btn-yellow.btn-telefonni-cislo:hover,
-.banner-nove-voziky a.btn.btn-yellow.btn-telefonni-cislo:focus,
-.banner-nove-voziky a.btn.btn-yellow.btn-telefonni-cislo:active,
-.banner-nove-voziky .btn-telefonni-cislo:hover,
-.banner-nove-voziky .btn-telefonni-cislo:focus,
-.content-body .banner-nove-voziky a.btn.btn-yellow:hover,
-.content-body .banner-nove-voziky a.btn.btn-yellow:focus,
-.content-body .banner-nove-voziky a.btn.btn-yellow:active,
-.content-body .banner-nove-voziky a.btn.btn-telefonni-cislo:hover,
-.content-body .banner-nove-voziky a.btn.btn-telefonni-cislo:focus,
-.content-body .banner-nove-voziky a.btn.btn-telefonni-cislo:active {
-  background: #1cc705 !important;
-  background-color: #1cc705 !important;
-  border-color: #1cc705 !important;
-  color: #000000 !important;
-}
-
-.banner-nove-voziky .btn-telefonni-cislo:hover span,
-.banner-nove-voziky a.btn.btn-yellow.btn-telefonni-cislo:hover span,
-.content-body .banner-nove-voziky a.btn.btn-yellow:hover span,
-.content-body .banner-nove-voziky a.btn.btn-telefonni-cislo:hover span {
-  color: #000000 !important;
+.banner-noblelift-hotspot-phone {
+  left: 4.1%;
+  top: 78.9%;
+  width: 29.1%;
+  height: 12.5%;
 }
 
 /* ── Product cards & stickers ───────────────────────────────── */
