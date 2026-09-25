@@ -3931,27 +3931,43 @@ html {
 }
 #favourite .btn-card-remove {
     position: absolute;
-    top: 10px;
-    right: 10px;
+    top: 6px;
+    right: 8px;
     z-index: 6;
-    width: 32px;
-    height: 32px;
+    width: 40px;
+    height: 40px;
     border: 0;
-    border-radius: 50%;
-    background: #1a1a1a;
+    border-radius: 0;
+    background: transparent;
     color: #ffffff;
-    font-size: 26px;
+    font-size: 42px;
+    font-weight: 400;
     line-height: 1;
-    padding: 0 0 3px;
+    padding: 0;
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
+    box-shadow: none;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.7);
 }
 #favourite .btn-card-remove:hover,
 #favourite .btn-card-remove:focus {
-    background: #000000;
+    background: transparent;
     color: #ffffff;
+    opacity: 0.85;
+    box-shadow: none;
+}
+#favourite-wrap .favorite-bar .btn-primary {
+    background: #159504 !important;
+    border-color: #159504 !important;
+    color: #ffffff !important;
+}
+#favourite-wrap .favorite-bar .btn-primary:hover,
+#favourite-wrap .favorite-bar .btn-primary:focus {
+    background: #0e6303 !important;
+    border-color: #0e6303 !important;
+    color: #ffffff !important;
 }
 #vzv-remove-confirm .modal-content {
     background: #ffffff !important;
