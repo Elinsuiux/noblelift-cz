@@ -1,6 +1,8 @@
 VZV.cz — complete static prototype for IT
 =========================================
 
+Updated 25. 9. 2026 (same format as the 18. 9. 2026 package).
+
 This folder is the whole prototype website as HTML + CSS + JS + images
 (the same tree served at http://127.0.0.1:8082/pages/vzv.cz/cz/index/index.html).
 
@@ -37,8 +39,11 @@ Notes for implementation
 
 Key pages
 ---------
-  Home:     /pages/vzv.cz/cz/index/index.html
-  Contact:  /pages/vzv.cz/cz/kontakt/index.html
-  Rental:   /pages/vzv.cz/cz/pujcovna-vzv/index.html
-  Listing:  /pages/vzv.cz/cz/pujcovna-vzv/teleskopicke-manipulatory/index.html
-  Detail:   /pages/vzv.cz/cz/pujcovna-vzv/teleskopicke-manipulatory/34394-manitou-mrt-2150/index.html
+  Home:       /pages/vzv.cz/cz/index/index.html
+  Contact:    /pages/vzv.cz/cz/kontakt/index.html
+  Oblíbené:   /pages/vzv.cz/cz/parkoviste/index.html
+  Porovnání:  /pages/vzv.cz/cz/porovnani-voziku/index.html
+  Košík:      /pages/vzv.cz/cz/kosik/index.html
+  Listing:    /pages/vzv.cz/cz/aktualne-skladem/voziky-skladem/index.html
+  Rental:     /pages/vzv.cz/cz/pujcovna-vzv/index.html
+  Detail:     /pages/vzv.cz/cz/pujcovna-vzv/teleskopicke-manipulatory/34394-manitou-mrt-2150/index.html
