@@ -4132,7 +4132,9 @@ a[id^="item-v-kosiku-"].btn:active,
 }
 #basket-wrap .kosik-total-sum {
     font-weight: 700;
-    color: #111;
+    color: #159504;
+    font-size: 28px;
+    line-height: 1.2;
 }
 #basket-wrap .kosik-total-note {
     color: #9a9a9a;
