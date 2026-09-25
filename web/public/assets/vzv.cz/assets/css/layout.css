@@ -3830,11 +3830,13 @@ html {
 }
 
 /* Listing-card spec values stay readable; prices stay on one line. */
-#forklifts .card .row.no-wrap {
+#forklifts .card .row.no-wrap,
+#favourite .card .row.no-wrap {
     --bs-gutter-x: 0.35rem;
 }
 
-#forklifts .card .row.no-wrap > .col {
+#forklifts .card .row.no-wrap > .col,
+#favourite .card .row.no-wrap > .col {
     flex: 1 0 30%;
     max-width: 34%;
     padding-left: 2px;
@@ -3842,7 +3844,9 @@ html {
 }
 
 #forklifts .card .row.no-wrap .col-12,
-#forklifts .card .row.no-wrap .col-12.text-center {
+#forklifts .card .row.no-wrap .col-12.text-center,
+#favourite .card .row.no-wrap .col-12,
+#favourite .card .row.no-wrap .col-12.text-center {
     padding-left: 0;
     padding-right: 0;
     font-size: 0.72rem;
@@ -3850,7 +3854,8 @@ html {
     white-space: nowrap;
 }
 
-#forklifts .card .row.no-wrap svg {
+#forklifts .card .row.no-wrap svg,
+#favourite .card .row.no-wrap svg {
     width: 26px;
     height: 26px;
 }
@@ -3858,7 +3863,11 @@ html {
 #forklifts .card .fs-5.fw-bold,
 #forklifts .card .text-primary.fs-5,
 #forklifts .card .fw-bolder.fs-5,
-#forklifts .card .card-footer .text-primary {
+#forklifts .card .card-footer .text-primary,
+#favourite .card .fs-5.fw-bold,
+#favourite .card .text-primary.fs-5,
+#favourite .card .fw-bolder.fs-5,
+#favourite .card .card-footer .text-primary {
     white-space: nowrap !important;
     font-size: 1.05rem !important;
     line-height: 1.2;
@@ -3886,30 +3895,36 @@ html {
     color: #159504 !important;
 }
 
-/* Oblíbené cards: Detail green/black, Odebrat transparent grey outline. */
-#favourite-wrap .vzv-list-card a.btn-primary {
-    color: #000000 !important;
-    background-color: #73fb61 !important;
-    border-color: #73fb61 !important;
+/* Oblíbené filled list: live Parkoviště toolbar + listing card chrome. */
+.favorite-bar .btn svg {
+    width: 14px;
+    height: 14px;
+    margin-left: 0.35rem;
+    vertical-align: -2px;
 }
-#favourite-wrap .vzv-list-card a.btn-primary:hover,
-#favourite-wrap .vzv-list-card a.btn-primary:focus,
-#favourite-wrap .vzv-list-card a.btn-primary:active {
-    color: #000000 !important;
-    background-color: #1cc705 !important;
-    border-color: #1cc705 !important;
+#favourite .favourite-button svg,
+#favourite .compare-button svg {
+    width: 16px;
+    height: 16px;
 }
-#favourite-wrap .vzv-list-card .favourite-button {
-    color: #000000 !important;
-    background-color: transparent !important;
-    border-color: #adb5bd !important;
+#favourite .btn-cart .svgShoppingCart {
+    width: 16px;
+    height: 16px;
+    margin-left: 4px;
+    vertical-align: -2px;
 }
-#favourite-wrap .vzv-list-card .favourite-button:hover,
-#favourite-wrap .vzv-list-card .favourite-button:focus,
-#favourite-wrap .vzv-list-card .favourite-button:active {
-    color: #000000 !important;
-    background-color: transparent !important;
-    border-color: #6c757d !important;
+#favourite .fw-bold.fs-6 .text-primary {
+    color: #73fb61 !important;
+}
+@media print {
+    .h-vzv, .footer-wrap, .cookie-souhlas, #modal-menu, .favorite-bar,
+    .offcanvas, .modal, #loading-screen {
+        display: none !important;
+    }
+    #favourite-wrap, #favourite-wrap .card {
+        display: block !important;
+        break-inside: avoid;
+    }
 }
 
 /* Cart added modal: machine name and close X white on dark panel. */
