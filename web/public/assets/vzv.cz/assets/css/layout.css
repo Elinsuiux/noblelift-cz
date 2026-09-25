@@ -3285,6 +3285,21 @@ table.table-vyhody .btn
     position: relative;
     z-index: 22;
     pointer-events: auto;
+    color: #ffffff !important;
+}
+
+.kontakt-rozcestnik-oddeleni a.btn,
+.kontakt-rozcestnik-oddeleni a.btn span {
+    color: #ffffff !important;
+}
+
+.kontakt-rozcestnik-oddeleni a.btn:hover,
+.kontakt-rozcestnik-oddeleni a.btn:focus,
+.kontakt-rozcestnik-oddeleni a.btn:active,
+.kontakt-rozcestnik-oddeleni a.btn:hover span,
+.kontakt-rozcestnik-oddeleni a.btn:focus span,
+.kontakt-rozcestnik-oddeleni a.btn:active span {
+    color: #ffffff !important;
 }
 
 .kontakt-rozcestnik-oddeleni .title-vzvrent {
