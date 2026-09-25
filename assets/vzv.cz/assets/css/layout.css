@@ -3926,9 +3926,78 @@ html {
 #favourite .fw-bold.fs-6 .text-primary {
     color: #159504 !important;
 }
+#favourite .card {
+    position: relative;
+}
+#favourite .btn-card-remove {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 6;
+    width: 32px;
+    height: 32px;
+    border: 0;
+    border-radius: 50%;
+    background: #1a1a1a;
+    color: #ffffff;
+    font-size: 26px;
+    line-height: 1;
+    padding: 0 0 3px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#favourite .btn-card-remove:hover,
+#favourite .btn-card-remove:focus {
+    background: #000000;
+    color: #ffffff;
+}
+#vzv-remove-confirm .modal-content {
+    background: #ffffff !important;
+    color: #111111 !important;
+    border: 0;
+    border-radius: 8px;
+}
+#vzv-remove-confirm .modal-header {
+    border-bottom: 1px solid #e6e6e6;
+}
+#vzv-remove-confirm .modal-footer {
+    border-top: 1px solid #e6e6e6;
+}
+#vzv-remove-confirm .modal-title,
+#vzv-remove-confirm .modal-body,
+#vzv-remove-confirm .modal-body p {
+    color: #111111 !important;
+    font-weight: 700;
+}
+#vzv-remove-confirm .modal-body p {
+    font-weight: 400;
+    margin: 0;
+}
+#vzv-remove-confirm .btn-close {
+    filter: none !important;
+    opacity: 1 !important;
+    background: transparent url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23111111'%3e%3cpath d='M.293.293a1 1 0 011.414 0L8 6.586 14.293.293a1 1 0 111.414 1.414L9.414 8l6.293 6.293a1 1 0 01-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 01-1.414-1.414L6.586 8 .293 1.707A1 1 0 01.293.293z'/%3e%3c/svg%3e") center / 1em auto no-repeat !important;
+}
+#vzv-remove-confirm .btn-outline-dark {
+    color: #111111 !important;
+    background: #ffffff !important;
+    border: 1px solid #111111 !important;
+}
+#vzv-remove-confirm .btn-dark {
+    background: #1a1a1a !important;
+    border-color: #1a1a1a !important;
+    color: #ffffff !important;
+}
+#vzv-remove-confirm .btn-dark:hover,
+#vzv-remove-confirm .btn-dark:focus,
+#vzv-remove-confirm .btn-dark:active {
+    color: #73fb61 !important;
+}
 @media print {
     .h-vzv, .footer-wrap, .cookie-souhlas, #modal-menu, .favorite-bar,
-    .offcanvas, .modal, #loading-screen {
+    .offcanvas, .modal, #loading-screen, #favourite .btn-card-remove {
         display: none !important;
     }
     #favourite-wrap, #favourite-wrap .card {

@@ -856,6 +856,7 @@
     return (
       '<div class="col-12 col-md-6 col-lg-4" id="kosik-polozka-' + it.id + '">' +
         '<div class="card mt-4 mb-4 ms-2 me-2 border-1 border-light position-relative" id="item-' + it.id + '">' +
+          favouriteRemoveBtnHtml(it.id) +
           (it.img ? '<a href="' + escapeHtml(it.url) + '"><img src="' + escapeHtml(it.img) + '" class="w-100 border-top" alt="' + escapeHtml(it.title) + '"></a>' : "") +
           sticker +
           '<div class="card-body p-0 ps-2 pe-2 pb-1">' +
@@ -935,7 +936,94 @@
       '<div class="row" id="favourite">' + list.map(listingCardHtml).join("") + "</div>" +
       favouriteBarHtml();
     markButtons();
+    decorateFavouriteRemoveButtons();
   }
+
+  function favouriteRemoveBtnHtml(id) {
+    return (
+      '<button type="button" class="btn-card-remove" title="Odebrat" aria-label="Odebrat" onclick="confirmRemoveFavourite(\'' +
+      id +
+      "')\">&times;</button>"
+    );
+  }
+
+  function decorateFavouriteRemoveButtons() {
+    document.querySelectorAll("#favourite .card[id^='item-']").forEach(function (card) {
+      if (card.querySelector(".btn-card-remove")) return;
+      var id = String(card.id || "").replace(/^item-/, "");
+      if (!id) return;
+      card.classList.add("position-relative");
+      card.insertAdjacentHTML("afterbegin", favouriteRemoveBtnHtml(id));
+    });
+  }
+
+  function ensureRemoveModal() {
+    if (document.getElementById("vzv-remove-confirm")) return;
+    var html =
+      '<div class="modal fade" id="vzv-remove-confirm" tabindex="-1" aria-labelledby="vzv-remove-confirm-title" aria-hidden="true">' +
+        '<div class="modal-dialog modal-dialog-centered">' +
+          '<div class="modal-content">' +
+            '<div class="modal-header">' +
+              '<h5 class="modal-title" id="vzv-remove-confirm-title">Odebrat vozík</h5>' +
+              '<button type="button" class="btn-close" data-bs-dismiss="modal" data-dismiss="modal" aria-label="Zavřít"></button>' +
+            "</div>" +
+            '<div class="modal-body"><p id="vzv-remove-confirm-text"></p></div>' +
+            '<div class="modal-footer">' +
+              '<button type="button" class="btn btn-outline-dark" data-bs-dismiss="modal" data-dismiss="modal">Zrušit</button>' +
+              '<button type="button" class="btn btn-dark" id="vzv-remove-confirm-ok">Odebrat</button>' +
+            "</div>" +
+          "</div>" +
+        "</div>" +
+      "</div>";
+    document.body.insertAdjacentHTML("beforeend", html);
+    document.getElementById("vzv-remove-confirm-ok").addEventListener("click", function () {
+      var kind = this.getAttribute("data-kind");
+      var id = this.getAttribute("data-id");
+      hideRemoveModal();
+      if (kind && id) ajaxCallPromise(kind === "compare" ? "remove-compare" : "remove-favourite", { id_polozky: id }, true, "POST");
+    });
+  }
+
+  function showRemoveModal() {
+    var el = document.getElementById("vzv-remove-confirm");
+    if (!el) return;
+    if (window.jQuery && window.jQuery.fn && window.jQuery.fn.modal) window.jQuery(el).modal("show");
+    else if (window.bootstrap && bootstrap.Modal) bootstrap.Modal.getOrCreateInstance(el).show();
+    else el.classList.add("show"), (el.style.display = "block");
+  }
+
+  function hideRemoveModal() {
+    var el = document.getElementById("vzv-remove-confirm");
+    if (!el) return;
+    if (window.jQuery && window.jQuery.fn && window.jQuery.fn.modal) window.jQuery(el).modal("hide");
+    else if (window.bootstrap && bootstrap.Modal) {
+      var inst = bootstrap.Modal.getInstance(el);
+      if (inst) inst.hide();
+    } else el.classList.remove("show"), (el.style.display = "none");
+  }
+
+  function askRemoveFromList(kind, id) {
+    ensureRemoveModal();
+    var list = readList(kind);
+    var it = findItem(list, id);
+    var where = kind === "compare" ? "porovnání" : "oblíbených";
+    var name = it && it.title ? " vozík " + it.title : " tento vozík";
+    var text = document.getElementById("vzv-remove-confirm-text");
+    if (text) text.textContent = "Opravdu chcete odebrat" + name + " z " + where + "?";
+    var ok = document.getElementById("vzv-remove-confirm-ok");
+    if (ok) {
+      ok.setAttribute("data-kind", kind);
+      ok.setAttribute("data-id", String(id));
+    }
+    showRemoveModal();
+  }
+
+  window.confirmRemoveFavourite = function (id) {
+    askRemoveFromList("favourite", id);
+  };
+  window.compareRemoveItem = function (id) {
+    askRemoveFromList("compare", id);
+  };
 
   function renderCompare() {
     var empty = document.getElementById("compare-empty");
@@ -1123,7 +1211,7 @@
     var link = document.createElement("link");
     link.id = "vzv-static-lists-css";
     link.rel = "stylesheet";
-    link.href = "/assets/vzv.cz/assets/css/static-lists.css?v=lists-12";
+    link.href = "/assets/vzv.cz/assets/css/static-lists.css?v=lists-13";
     document.head.appendChild(link);
   }
 
