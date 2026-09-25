@@ -79,13 +79,60 @@
 
   function specLabel(svg) {
     var id = (svg && svg.id) || "";
-    if (/nosnost/i.test(id)) return "Nosnost";
-    if (/zdvih/i.test(id)) return "Zdvih";
+    if (/nosnost/i.test(id)) return "Nosnost kg";
+    if (/zdvih/i.test(id)) return "Zdvih mm";
     if (/mth/i.test(id)) return "Motohodiny";
     if (/rok/i.test(id)) return "Rok výroby";
-    if (/vyska/i.test(id)) return "Výška";
+    if (/aku/i.test(id)) return "Pohon";
+    if (/vyska/i.test(id)) return "Stavební výška mm";
     if (/delka|šířka|sirka/i.test(id)) return "Rozměry";
     return "";
+  }
+
+  function normalizeCompareLabel(label) {
+    var s = String(label || "").replace(/\s+/g, " ").trim();
+    if (/nosnost/i.test(s)) return "Nosnost kg";
+    if (/výška zdvihu|vyska zdvihu|zdvih/i.test(s)) return "Zdvih mm";
+    if (/celková výška|celkova vyska|stavební výška|stavebni vyska/i.test(s)) return "Stavební výška mm";
+    if (/zvedací|zvedaci/i.test(s)) return "Zvedací zařízení";
+    if (/pohon|parametr/i.test(s)) return "Pohon";
+    if (/baterie|motor/i.test(s)) return "Motor / Baterie";
+    if (/rok/i.test(s)) return "Rok výroby";
+    if (/motohodin/i.test(s)) return "Motohodiny";
+    if (/hmotnost/i.test(s)) return "Hmotnost kg";
+    if (/lokace/i.test(s)) return "Lokace";
+    return s;
+  }
+
+  function collectTechSpecs(root) {
+    var specs = [];
+    if (!root || root.classList.contains("card")) return specs;
+    var table = root.querySelector("#wrapTechnickeInformace .table-technicky");
+    if (!table) return specs;
+    table.querySelectorAll("tr").forEach(function (tr) {
+      var tds = tr.querySelectorAll("td");
+      if (tds.length < 2) return;
+      var label = normalizeCompareLabel(text(tds[0]));
+      var value = text(tds[1]).replace(/^pouze\s+/i, "").replace(/\s+/g, " ").trim();
+      if (!label || /technické údaje|evidenční/i.test(label) || !value) return;
+      if (/Motor \/ Baterie/.test(label)) {
+        value = value.replace(/\s*(Olověná|Lithiová|Lithium).*$/i, "").replace(/,\s*$/, "").trim();
+      }
+      specs.push({ label: label, value: value });
+    });
+    return specs;
+  }
+
+  function mergeSpecs(primary, extra) {
+    var byLabel = {};
+    (extra || []).concat(primary || []).forEach(function (s) {
+      if (!s || !s.label) return;
+      var label = normalizeCompareLabel(s.label);
+      var value = String(s.value || "").replace(/^pouze\s+/i, "").replace(/\s+/g, " ").trim();
+      if (!value) return;
+      byLabel[label] = { label: label, value: value };
+    });
+    return Object.keys(byLabel).map(function (k) { return byLabel[k]; });
   }
 
   function ownEl(root, el) {
@@ -127,8 +174,16 @@
         var t = text(cell);
         if (t) value = t;
       });
-      if (value) specs.push({ label: specLabel(svg) || "Parametr", value: value });
+      if (value) specs.push({ label: normalizeCompareLabel(specLabel(svg) || "Parametr"), value: value });
     });
+    if (!root.classList.contains("card")) {
+      var techSpecs = collectTechSpecs(root);
+      if (techSpecs.length) specs = mergeSpecs(techSpecs, specs);
+      var locBtn = root.querySelector("#aDetailShowMap span");
+      if (locBtn && text(locBtn)) {
+        specs = mergeSpecs([{ label: "Lokace", value: text(locBtn) }], specs);
+      }
+    }
     var title = text(titleEl);
     if (!title || /^podobné/i.test(title)) {
       title = (fromCatalog && fromCatalog.title) || (imgEl && imgEl.alt) || (existing && existing.title) || ("Položka " + id);
@@ -187,6 +242,7 @@
       if (!item.img) item.img = existing.img;
       if (!item.price) item.price = existing.price;
       if (!item.specs.length) item.specs = existing.specs || [];
+      else if (existing.specs && existing.specs.length) item.specs = mergeSpecs(item.specs, existing.specs);
       if (item.url === "#" || !item.url) item.url = existing.url;
       if (!item.cardHtml) item.cardHtml = existing.cardHtml;
       if (!item.code) item.code = existing.code;
@@ -281,6 +337,7 @@
       return "";
     }
     if (url === "create-pdf-compare") {
+      setTimeout(printCompare, 0);
       return "";
     }
     if (url === "add-inquiry-favorites") return inquiryHtml("favourite");
@@ -300,6 +357,7 @@
           markButtons();
           if (/favourite/.test(url)) renderFavourites();
           if (/basket/.test(url)) renderBasket();
+          if (/compare/.test(url)) renderCompare();
           return result;
         });
       }
@@ -713,6 +771,72 @@
     window.print();
   }
 
+  function printCompare() {
+    window.print();
+  }
+
+  function compareBarHtml() {
+    return (
+      '<div class="compare-bar row align-items-center mb-3 mt-2">' +
+        '<div class="col-12 col-md-6 d-flex flex-wrap gap-2 mb-2 mb-md-0">' +
+          '<button type="button" class="btn btn-outline-dark" onclick="removeCompareAll()">Odstranit vše ' + ICO_TRASH + "</button>" +
+          '<button type="button" class="btn btn-outline-dark" onclick="getComparePDF()">Uložit do PDF ' + ICO_DL + "</button>" +
+        "</div>" +
+        '<div class="col-12 col-md-6 text-md-end">' +
+          '<button type="button" class="btn btn-primary" onclick="addInquiryCompare()">Poptat všechny vozíky</button>' +
+        "</div>" +
+      "</div>"
+    );
+  }
+
+  var COMPARE_ROWS = [
+    "Nosnost kg",
+    "Zdvih mm",
+    "Stavební výška mm",
+    "Zvedací zařízení",
+    "Pohon",
+    "Motor / Baterie",
+    "Rok výroby",
+    "Motohodiny",
+    "Hmotnost kg",
+    "Lokace"
+  ];
+  var COMPARE_BEST = {
+    "Nosnost kg": "max",
+    "Zdvih mm": "max",
+    "Rok výroby": "max",
+    "Motohodiny": "min"
+  };
+
+  function specNumber(v) {
+    var n = String(v || "").replace(/\u00a0/g, " ").replace(/[^\d.,]/g, "").replace(/\s/g, "").replace(",", ".");
+    return n ? parseFloat(n) : NaN;
+  }
+
+  function displaySpecValue(value) {
+    return String(value || "").replace(/^pouze\s+/i, "").replace(/\s+/g, " ").replace(/\s*(kg|mm|mth)\s*$/i, "").trim();
+  }
+
+  function specValueFor(it, label) {
+    var hit = (it.specs || []).filter(function (s) {
+      return normalizeCompareLabel(s.label) === label;
+    })[0];
+    return hit ? displaySpecValue(hit.value) : "";
+  }
+
+  function compareBestClass(list, label, it) {
+    var dir = COMPARE_BEST[label];
+    if (!dir) return "";
+    var nums = list.map(function (item) { return specNumber(specValueFor(item, label)); });
+    var valid = nums.filter(function (n) { return !isNaN(n); });
+    if (valid.length < 2) return "";
+    var target = dir === "min" ? Math.min.apply(null, valid) : Math.max.apply(null, valid);
+    var unique = valid.filter(function (n) { return n === target; }).length;
+    if (unique === valid.length) return "";
+    var mine = specNumber(specValueFor(it, label));
+    return mine === target ? " compare-best-value" : "";
+  }
+
   function listingCardHtml(it) {
     if (it.cardHtml) {
       return (
@@ -831,42 +955,73 @@
     }
     wrap.classList.remove("d-none");
     empty.classList.add("d-none");
-    var labels = [];
-    list.forEach(function (it) {
-      (it.specs || []).forEach(function (s) {
-        if (s.label && labels.indexOf(s.label) === -1) labels.push(s.label);
-      });
-    });
-    function cells(fn) {
-      return list.map(function (it) { return '<td class="compare-item-' + it.id + '">' + fn(it) + "</td>"; }).join("");
+    function cells(fn, classFn) {
+      return list.map(function (it) {
+        var extra = classFn ? classFn(it) : "";
+        return '<td class="compare-item-' + it.id + extra + '">' + fn(it) + "</td>";
+      }).join("");
     }
-    var specRows = labels.map(function (label) {
+    var visibleRows = COMPARE_ROWS.filter(function (label) {
+      return list.some(function (it) { return specValueFor(it, label); });
+    });
+    var specRows = visibleRows.map(function (label) {
       return "<tr><th>" + escapeHtml(label) + "</th>" + cells(function (it) {
-        var hit = (it.specs || []).filter(function (s) { return s.label === label; })[0];
-        return hit ? escapeHtml(hit.value) : "—";
-      }) + "</tr>";
+        return escapeHtml(specValueFor(it, label) || "");
+      }, function (it) { return compareBestClass(list, label, it); }) + "</tr>";
     }).join("");
     wrap.innerHTML =
-      '<div class="compare-bar d-flex flex-wrap gap-2 mb-3">' +
-        '<button type="button" class="btn btn-outline-dark" onclick="removeCompareAll()">Odebrat vše</button>' +
-        '<button type="button" class="btn btn-vzv" onclick="addInquiryCompare()">Poptat porovnávané</button>' +
-      "</div>" +
+      compareBarHtml() +
       '<div class="table-responsive" id="compare">' +
-        '<table class="table align-middle vzv-compare-table">' +
-          "<thead><tr><th></th>" + cells(function (it) {
-            return (it.img ? '<img src="' + escapeHtml(it.img) + '" alt="">' : "") +
-              '<div class="fw-bold mt-2"><a href="' + escapeHtml(it.url) + '">' + escapeHtml(it.title) + "</a></div>";
-          }) + "</tr></thead>" +
+        '<table class="compare-table first-col-sticky">' +
           "<tbody>" +
-            "<tr><th>Cena</th>" + cells(function (it) { return escapeHtml(it.price || "—"); }) + "</tr>" +
+            '<tr class="compare-row-photo"><th></th>' + cells(function (it) {
+              return it.img
+                ? '<a href="' + escapeHtml(it.url) + '"><img class="img-porovnani" src="' + escapeHtml(it.img) + '" alt="' + escapeHtml(it.title) + '"></a>'
+                : "";
+            }) + "</tr>" +
+            '<tr class="compare-row-remove"><th></th>' + cells(function (it) {
+              return '<button type="button" class="btn btn-sm compare-remove" onclick="compareRemoveItem(\'' + it.id + "')\">Odebrat</button>";
+            }) + "</tr>" +
+            "<tr><th>Výrobce Model</th>" + cells(function (it) {
+              var parts = splitTitle(it);
+              var titleHtml = parts.code
+                ? '<span class="compare-code">' + escapeHtml(parts.code) + "</span> " + escapeHtml(parts.name)
+                : escapeHtml(it.title || "");
+              return '<a class="compare-model" href="' + escapeHtml(it.url) + '">' + titleHtml + "</a>";
+            }) + "</tr>" +
+            "<tr><th>Cena</th>" + cells(function (it) { return escapeHtml(it.price || ""); }) + "</tr>" +
             specRows +
-            "<tr><th></th>" + cells(function (it) {
-              return '<button type="button" class="btn btn-sm btn-outline-dark" onclick="compareRemoveItem(\'' + it.id + "')\">Odebrat</button>";
+            '<tr class="compare-row-poptat"><th>Poptat</th>' + cells(function (it) {
+              return (
+                '<div class="compare-poptat-btns">' +
+                  '<button type="button" class="btn btn-primary btn-sm" onclick="poptatCompareItem(\'' + it.id + "')\">Poptat</button>" +
+                  '<a href="' + PATHS.kosik + '" class="btn btn-outline-primary btn-sm d-none" id="item-v-kosiku-' + it.id + '">V košíku</a>' +
+                  '<button type="button" class="btn btn-primary btn-sm btn-cart" id="item-pridat-do-kosiku-' + it.id + '" data-bs-toggle="modal" data-bs-target="#obsah-kosiku" onclick="addBasket(\'' + it.id + "')\">Do košíku</button>" +
+                "</div>"
+              );
             }) + "</tr>" +
           "</tbody>" +
         "</table>" +
-      "</div>";
+      "</div>" +
+      compareBarHtml();
+    markButtons();
   }
+
+  window.poptatCompareItem = function (id) {
+    var it = findItem(readList("compare"), id);
+    var modal = document.getElementById("poptavka");
+    if (!modal || !it) return;
+    var body = modal.querySelector(".modal-body");
+    if (body) {
+      body.innerHTML =
+        "<p>Chcete poptat tento vozík?</p><ul><li>" + escapeHtml(it.title) +
+        (it.price ? " — " + escapeHtml(it.price) : "") + "</li></ul>" +
+        "<p>Volejte <a href=\"tel:+420777711378\">+420 777 711 378</a> nebo pište na <a href=\"mailto:vzv@vzv.cz\">vzv@vzv.cz</a>.</p>";
+    }
+    if (window.jQuery) window.jQuery(modal).modal("show");
+  };
+
+  window.renderCompare = renderCompare;
 
   function renderBasket() {
     var empty = document.getElementById("basket-empty") || document.querySelector(".content-body .container.mt-5");
@@ -948,7 +1103,7 @@
     var link = document.createElement("link");
     link.id = "vzv-static-lists-css";
     link.rel = "stylesheet";
-    link.href = "/assets/vzv.cz/assets/css/static-lists.css?v=lists-7";
+    link.href = "/assets/vzv.cz/assets/css/static-lists.css?v=lists-8";
     document.head.appendChild(link);
   }
 
