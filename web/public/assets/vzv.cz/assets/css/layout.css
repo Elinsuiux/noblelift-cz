@@ -4021,19 +4021,28 @@ html {
 #favourite .card {
     position: relative;
 }
+#favourite .fav-card-slot,
+#favourite > [id^="kosik-polozka-"] {
+    position: relative;
+    padding-top: 32px;
+}
+#favourite .fav-card-slot > .card,
+#favourite > [id^="kosik-polozka-"] > .card {
+    margin-top: 0 !important;
+}
 #favourite .btn-card-remove {
     position: absolute;
-    top: 6px;
-    right: 8px;
+    top: 0;
+    right: 16px;
     z-index: 6;
-    width: 40px;
-    height: 40px;
+    width: 32px;
+    height: 32px;
     border: 0;
     border-radius: 0;
     background: transparent;
-    color: #ffffff;
-    font-size: 42px;
-    font-weight: 400;
+    color: #9a9a9a;
+    font-size: 36px;
+    font-weight: 300;
     line-height: 1;
     padding: 0;
     cursor: pointer;
@@ -4041,13 +4050,13 @@ html {
     align-items: center;
     justify-content: center;
     box-shadow: none;
-    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.7);
+    text-shadow: none;
 }
 #favourite .btn-card-remove:hover,
 #favourite .btn-card-remove:focus {
     background: transparent;
-    color: #ffffff;
-    opacity: 0.85;
+    color: #4d4d4d;
+    opacity: 1;
     box-shadow: none;
 }
 #favourite-wrap .favorite-bar .btn-primary {

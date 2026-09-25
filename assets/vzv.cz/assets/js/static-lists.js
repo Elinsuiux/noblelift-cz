@@ -757,7 +757,7 @@
     return (
       '<div class="favorite-bar row align-items-center mb-3 mt-2">' +
         '<div class="col-12 col-md-6 d-flex flex-wrap gap-2 mb-2 mb-md-0">' +
-          '<button type="button" class="btn btn-outline-dark" onclick="removeFavouriteAll()">Odstranit vše ' + ICO_TRASH + "</button>" +
+          '<button type="button" class="btn btn-outline-dark" onclick="confirmRemoveFavouriteAll()">Odstranit vše ' + ICO_TRASH + "</button>" +
           '<button type="button" class="btn btn-outline-dark" onclick="getFavouritePDF()">Uložit do PDF ' + ICO_DL + "</button>" +
         "</div>" +
         '<div class="col-12 col-md-6 text-md-end">' +
@@ -779,7 +779,7 @@
     return (
       '<div class="compare-bar row align-items-center mb-3 mt-2">' +
         '<div class="col-12 col-md-6 d-flex flex-wrap gap-2 mb-2 mb-md-0">' +
-          '<button type="button" class="btn btn-outline-dark" onclick="removeCompareAll()">Odstranit vše ' + ICO_TRASH + "</button>" +
+          '<button type="button" class="btn btn-outline-dark" onclick="confirmRemoveCompareAll()">Odstranit vše ' + ICO_TRASH + "</button>" +
           '<button type="button" class="btn btn-outline-dark" onclick="getComparePDF()">Uložit do PDF ' + ICO_DL + "</button>" +
         "</div>" +
         '<div class="col-12 col-md-6 text-md-end">' +
@@ -840,7 +840,7 @@
   function listingCardHtml(it) {
     if (it.cardHtml) {
       return (
-        '<div class="col-12 col-md-6 col-lg-4" id="kosik-polozka-' + it.id + '">' +
+        '<div class="col-12 col-md-6 col-lg-4 fav-card-slot" id="kosik-polozka-' + it.id + '">' +
           rewriteLocalLinks(it.cardHtml) +
         "</div>"
       );
@@ -854,9 +854,8 @@
     }).join("");
     var sticker = it.stickerHtml || "";
     return (
-      '<div class="col-12 col-md-6 col-lg-4" id="kosik-polozka-' + it.id + '">' +
+      '<div class="col-12 col-md-6 col-lg-4 fav-card-slot" id="kosik-polozka-' + it.id + '">' +
         '<div class="card mt-4 mb-4 ms-2 me-2 border-1 border-light position-relative" id="item-' + it.id + '">' +
-          favouriteRemoveBtnHtml(it.id) +
           (it.img ? '<a href="' + escapeHtml(it.url) + '"><img src="' + escapeHtml(it.img) + '" class="w-100 border-top" alt="' + escapeHtml(it.title) + '"></a>' : "") +
           sticker +
           '<div class="card-body p-0 ps-2 pe-2 pb-1">' +
@@ -949,11 +948,18 @@
 
   function decorateFavouriteRemoveButtons() {
     document.querySelectorAll("#favourite .card[id^='item-']").forEach(function (card) {
-      if (card.querySelector(".btn-card-remove")) return;
+      var col = card.closest("[id^='kosik-polozka-']") || card.parentElement;
+      if (col) col.classList.add("fav-card-slot");
+      var existing = col ? col.querySelector(".btn-card-remove") : card.querySelector(".btn-card-remove");
+      if (existing) {
+        if (existing.parentElement !== card.parentElement || existing.nextElementSibling !== card) {
+          card.parentNode.insertBefore(existing, card);
+        }
+        return;
+      }
       var id = String(card.id || "").replace(/^item-/, "");
       if (!id) return;
-      card.classList.add("position-relative");
-      card.insertAdjacentHTML("afterbegin", favouriteRemoveBtnHtml(id));
+      card.insertAdjacentHTML("beforebegin", favouriteRemoveBtnHtml(id));
     });
   }
 
@@ -980,7 +986,16 @@
       var kind = this.getAttribute("data-kind");
       var id = this.getAttribute("data-id");
       hideRemoveModal();
-      if (!kind || !id) return;
+      if (!kind) return;
+      if (kind === "favourite-all") {
+        if (typeof window.removeFavouriteAll === "function") window.removeFavouriteAll();
+        return;
+      }
+      if (kind === "compare-all") {
+        if (typeof window.removeCompareAll === "function") window.removeCompareAll();
+        return;
+      }
+      if (!id) return;
       if (kind === "basket") {
         if (typeof window.removeBasket === "function") window.removeBasket(id);
         else ajaxCallPromise("remove-basket", { id_polozky: id }, true, "POST");
@@ -1008,19 +1023,40 @@
     } else el.classList.remove("show"), (el.style.display = "none");
   }
 
+  function setRemoveConfirmCopy(titleText, bodyText, okText, kind, id) {
+    var title = document.getElementById("vzv-remove-confirm-title");
+    if (title) title.textContent = titleText;
+    var text = document.getElementById("vzv-remove-confirm-text");
+    if (text) text.textContent = bodyText;
+    var ok = document.getElementById("vzv-remove-confirm-ok");
+    if (ok) {
+      ok.textContent = okText;
+      ok.setAttribute("data-kind", kind);
+      if (id == null) ok.removeAttribute("data-id");
+      else ok.setAttribute("data-id", String(id));
+    }
+  }
+
   function askRemoveFromList(kind, id) {
     ensureRemoveModal();
     var list = readList(kind);
     var it = findItem(list, id);
     var where = kind === "compare" ? "porovnání" : kind === "basket" ? "košíku" : "oblíbených";
     var name = it && it.title ? " vozík " + it.title : " tento vozík";
-    var text = document.getElementById("vzv-remove-confirm-text");
-    if (text) text.textContent = "Opravdu chcete odebrat" + name + " z " + where + "?";
-    var ok = document.getElementById("vzv-remove-confirm-ok");
-    if (ok) {
-      ok.setAttribute("data-kind", kind);
-      ok.setAttribute("data-id", String(id));
-    }
+    setRemoveConfirmCopy("Odebrat vozík", "Opravdu chcete odebrat" + name + " z " + where + "?", "Odebrat", kind, id);
+    showRemoveModal();
+  }
+
+  function askRemoveAllFromList(kind) {
+    ensureRemoveModal();
+    var where = kind === "compare" ? "porovnání" : "oblíbených";
+    setRemoveConfirmCopy(
+      "Odstranit vše",
+      "Opravdu chcete odstranit všechny vozíky z " + where + "?",
+      "Odstranit vše",
+      kind + "-all",
+      null
+    );
     showRemoveModal();
   }
 
@@ -1032,6 +1068,12 @@
   };
   window.compareRemoveItem = function (id) {
     askRemoveFromList("compare", id);
+  };
+  window.confirmRemoveFavouriteAll = function () {
+    askRemoveAllFromList("favourite");
+  };
+  window.confirmRemoveCompareAll = function () {
+    askRemoveAllFromList("compare");
   };
 
   function renderCompare() {
