@@ -1,7 +1,7 @@
 VZV.cz — complete static prototype for IT
 =========================================
 
-Updated 25. 9. 2026 (same format as the 18. 9. 2026 package).
+Updated 27. 9. 2026 (same format as the 18. 9. 2026 package).
 
 This folder is the whole prototype website as HTML + CSS + JS + images
 (the same tree served at http://127.0.0.1:8082/pages/vzv.cz/cz/index/index.html).
@@ -33,6 +33,8 @@ Notes for implementation
     pujcovna-katalog.css
     spec-icons/*.png
     colors-green.css
+- Homepage Noblelift banner: assets/vzv.cz/assets/img/layout/banner-noblelift-hubert.webp
+  Hover hotspots and colors live in pages/vzv.cz/cz/index/colors-green.css
 - Some machine photos still load from admin.vzv.cz (live image server).
   Layout, icons and copy are local.
 - Czech characters need UTF-8 (the start script sets charset=utf-8).
