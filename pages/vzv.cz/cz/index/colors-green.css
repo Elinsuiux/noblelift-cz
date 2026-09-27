@@ -611,10 +611,38 @@ a.text-primary:hover,
 .banner-noblelift-hotspot {
   position: absolute;
   z-index: 3;
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border-radius: 10px;
   cursor: pointer;
+  text-decoration: none !important;
+  overflow: hidden;
+  color: transparent;
+}
+
+.banner-noblelift-hotspot::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  z-index: 0;
+  pointer-events: none;
   transition: background-color 0.15s ease;
+}
+
+.banner-noblelift-hotspot-label {
+  position: relative;
+  z-index: 2;
+  color: transparent;
+  font-family: Montserrat, "Tasa Orbiter", sans-serif;
+  font-weight: 700;
+  font-size: clamp(14px, 1.35vw, 20px);
+  line-height: 1;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+  pointer-events: none;
+  transition: color 0.15s ease;
 }
 
 .banner-noblelift-hotspot-cta {
@@ -643,16 +671,28 @@ a.text-primary:hover,
   }
 }
 
-.banner-noblelift-hotspot-cta:hover,
-.banner-noblelift-hotspot-cta:focus,
-.banner-noblelift-hotspot-cta:focus-visible {
+.banner-noblelift-hotspot-cta:hover::before,
+.banner-noblelift-hotspot-cta:focus::before,
+.banner-noblelift-hotspot-cta:focus-visible::before {
   background: rgba(224, 80, 16, 0.38);
 }
 
-.banner-noblelift-hotspot-phone:hover,
-.banner-noblelift-hotspot-phone:focus,
-.banner-noblelift-hotspot-phone:focus-visible {
-  background: rgba(163, 252, 156, 0.55);
+.banner-noblelift-hotspot-cta:hover .banner-noblelift-hotspot-label,
+.banner-noblelift-hotspot-cta:focus .banner-noblelift-hotspot-label,
+.banner-noblelift-hotspot-cta:focus-visible .banner-noblelift-hotspot-label {
+  color: #ffffff;
+}
+
+.banner-noblelift-hotspot-phone:hover::before,
+.banner-noblelift-hotspot-phone:focus::before,
+.banner-noblelift-hotspot-phone:focus-visible::before {
+  background: rgba(163, 252, 156, 0.45);
+}
+
+.banner-noblelift-hotspot-phone:hover .banner-noblelift-hotspot-label,
+.banner-noblelift-hotspot-phone:focus .banner-noblelift-hotspot-label,
+.banner-noblelift-hotspot-phone:focus-visible .banner-noblelift-hotspot-label {
+  color: #ffffff;
 }
 
 /* ── Product cards & stickers ───────────────────────────────── */
