@@ -611,14 +611,11 @@ a.text-primary:hover,
 .banner-noblelift-hotspot {
   position: absolute;
   z-index: 3;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: block;
   border-radius: 10px;
   cursor: pointer;
-  text-decoration: none !important;
   overflow: hidden;
-  color: transparent;
+  isolation: isolate;
 }
 
 .banner-noblelift-hotspot::before {
@@ -626,73 +623,35 @@ a.text-primary:hover,
   position: absolute;
   inset: 0;
   border-radius: inherit;
-  z-index: 0;
   pointer-events: none;
+  mix-blend-mode: screen;
   transition: background-color 0.15s ease;
 }
 
-.banner-noblelift-hotspot-label {
-  position: relative;
-  z-index: 2;
-  color: transparent;
-  font-family: Montserrat, "Tasa Orbiter", sans-serif;
-  font-weight: 700;
-  font-size: clamp(14px, 1.35vw, 20px);
-  line-height: 1;
-  letter-spacing: 0.01em;
-  white-space: nowrap;
-  pointer-events: none;
-  transition: color 0.15s ease;
-}
-
 .banner-noblelift-hotspot-cta {
-  left: 4.4%;
-  top: 44.4%;
-  width: 28.5%;
-  height: 12.7%;
+  left: 5.8%;
+  top: 43.3%;
+  width: 28.1%;
+  height: 14.7%;
 }
 
 .banner-noblelift-hotspot-phone {
-  left: 4.1%;
-  top: 71.5%;
-  width: 29.0%;
-  height: 12.3%;
-}
-
-@media (min-width: 768px) {
-  .banner-noblelift-hotspot-cta {
-    top: 43.4%;
-    height: 14.9%;
-  }
-
-  .banner-noblelift-hotspot-phone {
-    top: 75.1%;
-    height: 14.4%;
-  }
+  left: 5.5%;
+  top: 74.4%;
+  width: 28.6%;
+  height: 14.3%;
 }
 
 .banner-noblelift-hotspot-cta:hover::before,
 .banner-noblelift-hotspot-cta:focus::before,
 .banner-noblelift-hotspot-cta:focus-visible::before {
-  background: rgba(224, 80, 16, 0.38);
-}
-
-.banner-noblelift-hotspot-cta:hover .banner-noblelift-hotspot-label,
-.banner-noblelift-hotspot-cta:focus .banner-noblelift-hotspot-label,
-.banner-noblelift-hotspot-cta:focus-visible .banner-noblelift-hotspot-label {
-  color: #ffffff;
+  background: rgba(224, 80, 16, 0.92);
 }
 
 .banner-noblelift-hotspot-phone:hover::before,
 .banner-noblelift-hotspot-phone:focus::before,
 .banner-noblelift-hotspot-phone:focus-visible::before {
-  background: rgba(163, 252, 156, 0.45);
-}
-
-.banner-noblelift-hotspot-phone:hover .banner-noblelift-hotspot-label,
-.banner-noblelift-hotspot-phone:focus .banner-noblelift-hotspot-label,
-.banner-noblelift-hotspot-phone:focus-visible .banner-noblelift-hotspot-label {
-  color: #ffffff;
+  background: rgba(115, 251, 97, 0.72);
 }
 
 /* ── Product cards & stickers ───────────────────────────────── */
