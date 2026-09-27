@@ -614,7 +614,8 @@ a.text-primary:hover,
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 10px;
+  border-radius: 8px;
+  box-sizing: border-box;
   cursor: pointer;
   overflow: hidden;
   text-decoration: none !important;
@@ -623,8 +624,8 @@ a.text-primary:hover,
 .banner-noblelift-hotspot::before {
   content: "";
   position: absolute;
-  inset: 0;
-  border-radius: inherit;
+  inset: 2px;
+  border-radius: 6px;
   z-index: 0;
   pointer-events: none;
   transition: background-color 0.15s ease, box-shadow 0.15s ease;
@@ -645,17 +646,17 @@ a.text-primary:hover,
 }
 
 .banner-noblelift-hotspot-cta {
-  left: 5.8%;
-  top: 43.3%;
-  width: 28.1%;
-  height: 14.7%;
+  left: 5.3%;
+  top: 44.6%;
+  width: 26.8%;
+  height: 12.5%;
 }
 
 .banner-noblelift-hotspot-phone {
-  left: 5.5%;
-  top: 74.4%;
-  width: 28.6%;
-  height: 14.3%;
+  left: 4.9%;
+  top: 76.3%;
+  width: 27.6%;
+  height: 11.7%;
 }
 
 .banner-noblelift-hotspot-phone .banner-noblelift-hotspot-label {
