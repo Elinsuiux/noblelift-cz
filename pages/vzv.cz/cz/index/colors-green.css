@@ -636,7 +636,7 @@ a.text-primary:hover,
   color: transparent;
   font-family: Montserrat, "Tasa Orbiter", sans-serif;
   font-weight: 700;
-  font-size: 15px;
+  font-size: 16px;
   line-height: 1;
   letter-spacing: 0.01em;
   white-space: nowrap;
@@ -662,18 +662,18 @@ a.text-primary:hover,
   font-size: 14px;
 }
 
-/* Orange button hover — dark fill, orange text, orange outline */
+/* Orange button hover — solid orange fill, white text */
 .banner-noblelift-hotspot-cta:hover::before,
 .banner-noblelift-hotspot-cta:focus::before,
 .banner-noblelift-hotspot-cta:focus-visible::before {
-  background: #111111;
-  box-shadow: inset 0 0 0 2px #e05010, 0 0 10px 1px rgba(224, 80, 16, 0.55);
+  background: #e05010;
+  box-shadow: 0 0 10px 1px rgba(224, 80, 16, 0.55);
 }
 
 .banner-noblelift-hotspot-cta:hover .banner-noblelift-hotspot-label,
 .banner-noblelift-hotspot-cta:focus .banner-noblelift-hotspot-label,
 .banner-noblelift-hotspot-cta:focus-visible .banner-noblelift-hotspot-label {
-  color: #e05010;
+  color: #ffffff;
 }
 
 /* Green button hover — solid lime fill, white text */
