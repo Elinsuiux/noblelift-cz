@@ -662,32 +662,29 @@ a.text-primary:hover,
   font-size: 14px;
 }
 
-/* Orange button hover — solid orange fill, white text */
+/* Orange button hover — same translucent wash as Tomáš, in orange */
 .banner-noblelift-hotspot-cta:hover::before,
 .banner-noblelift-hotspot-cta:focus::before,
 .banner-noblelift-hotspot-cta:focus-visible::before {
-  background: #e05010;
-  box-shadow: 0 0 10px 1px rgba(224, 80, 16, 0.55);
+  background: rgba(224, 80, 16, 0.22);
+  box-shadow: none;
 }
 
 .banner-noblelift-hotspot-cta:hover .banner-noblelift-hotspot-label,
 .banner-noblelift-hotspot-cta:focus .banner-noblelift-hotspot-label,
-.banner-noblelift-hotspot-cta:focus-visible .banner-noblelift-hotspot-label {
-  color: #ffffff;
-}
-
-/* Green button hover — solid lime fill, white text */
-.banner-noblelift-hotspot-phone:hover::before,
-.banner-noblelift-hotspot-phone:focus::before,
-.banner-noblelift-hotspot-phone:focus-visible::before {
-  background: #73fb61;
-  box-shadow: inset 0 0 0 2px #23f906, 0 0 10px 1px rgba(115, 251, 97, 0.45);
-}
-
+.banner-noblelift-hotspot-cta:focus-visible .banner-noblelift-hotspot-label,
 .banner-noblelift-hotspot-phone:hover .banner-noblelift-hotspot-label,
 .banner-noblelift-hotspot-phone:focus .banner-noblelift-hotspot-label,
 .banner-noblelift-hotspot-phone:focus-visible .banner-noblelift-hotspot-label {
-  color: #ffffff;
+  color: transparent;
+}
+
+/* Green button hover — same translucent green as Tomáš Rýce phone CTA */
+.banner-noblelift-hotspot-phone:hover::before,
+.banner-noblelift-hotspot-phone:focus::before,
+.banner-noblelift-hotspot-phone:focus-visible::before {
+  background: rgba(115, 251, 97, 0.22);
+  box-shadow: none;
 }
 
 /* ── Product cards & stickers ───────────────────────────────── */
