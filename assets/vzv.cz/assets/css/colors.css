@@ -196,7 +196,7 @@ a.text-primary:hover {
 
 .sticker-sleva {
     background: var(--color-dark);
-    color: var(--color-prodejni-akce) !important;
+    color: #73fb61 !important;
 }
 .sticker-sleva:before {
     border-color: transparent var(--color-dark) transparent transparent;
