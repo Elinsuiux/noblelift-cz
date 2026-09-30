@@ -229,7 +229,19 @@ a.text-primary:hover,
 
 .sticker-sleva,
 .wrap-sticker.stickerSale {
-  color: #0e6303 !important;
+  background: #73fb61 !important;
+  color: #000000 !important;
+}
+.sticker-sleva:before {
+  border-color: transparent #73fb61 transparent transparent !important;
+}
+.wrap-sticker.stickerSale:before {
+  border-right-color: #73fb61 !important;
+}
+
+.bg-sleva .text-decoration-line-through,
+.bg-sleva .text-primary.text-decoration-line-through {
+  color: #000000 !important;
 }
 
 .wrap-sticker.stickerBattery {

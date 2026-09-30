@@ -2968,8 +2968,8 @@ table.table-vyhody .btn
 .wrap-sticker.stickerPremium { background: var(--color-dark); color: var(--color-white); }
 .wrap-sticker.stickerPremium:before { border-right-color: var(--color-dark); }
 
-.wrap-sticker.stickerSale { background: var(--color-dark); color: #0e6303; }
-.wrap-sticker.stickerSale:before { border-right-color: var(--color-dark); }
+.wrap-sticker.stickerSale { background: #73fb61; color: #000000; }
+.wrap-sticker.stickerSale:before { border-right-color: #73fb61; }
 
 .wrapSticker.stickerSomethingIsWrong { background: var(--color-grey-5); }
 .wrapSticker.stickerSomethingIsWrong:before { border-right-color: var(--color-grey-5); }
