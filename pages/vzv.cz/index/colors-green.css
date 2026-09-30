@@ -725,6 +725,13 @@ a.text-primary:hover,
   border-right-color: #4ffa38 !important;
 }
 
+.sticker.sticker-motohodiny {
+  background: #ffffff !important;
+}
+.sticker.sticker-motohodiny:before {
+  border-color: transparent #ffffff transparent transparent !important;
+}
+
 /* ── Forms & filters ────────────────────────────────────────── */
 
 .form-check-input:checked {

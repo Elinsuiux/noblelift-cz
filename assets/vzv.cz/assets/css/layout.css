@@ -1453,11 +1453,11 @@ a.btn.btn-dark.first-letter-capitalize:active {
 }
 
 .sticker.sticker-motohodiny {
-    background: #F5F5F5 !important;
+    background: #ffffff !important;
     color: #159504 !important;
 }
 .sticker.sticker-motohodiny:before {
-    border-color: transparent #F5F5F5 transparent transparent !important;
+    border-color: transparent #ffffff transparent transparent !important;
 }
 
 .sticker.sticker-baterie {
