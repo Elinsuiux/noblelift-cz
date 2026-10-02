@@ -20,7 +20,11 @@ function removeBasket(idPolozky)
         }
         if ($('#kosik-polozka-' + idPolozky).length > 0)
         {
-            location.reload();
+            if (typeof window.renderBasket === "function") {
+                window.renderBasket();
+            } else {
+                location.reload();
+            }
         }
         else
         {

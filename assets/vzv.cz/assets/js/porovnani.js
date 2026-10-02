@@ -41,6 +41,7 @@ function removeCompareAll()
 
 function compareSetEmptyTemplate()
 {
+    $('#compare-wrap').addClass('d-none');
     $('.compare-bar').addClass('d-none');
     $('#compare-empty').removeClass('d-none');
     $('#compare').addClass('d-none');
@@ -48,9 +49,7 @@ function compareSetEmptyTemplate()
 
 function getComparePDF()
 {
-    ajaxCallPromise('create-pdf-compare').then( result => {
-        downloadFile(result, 'favourite');
-    });
+    window.print();
 }
 
 function addInquiryCompare()
