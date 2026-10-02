@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Náhled rebrand bannerů VZV</title>
-  <link href="https://fonts.googleapis.com/css2?family=Tasa+Orbiter:wght@600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Tasa+Orbiter:wght@600;700;800&display=swap&subset=latin-ext" rel="stylesheet">
   <style>
     :root {
       --lime: #73FB61;
@@ -168,13 +168,135 @@
       width: auto;
       display: block;
     }
+
+    /* —— Option B: minimal —— */
+    .slogan {
+      margin: 0;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      line-height: 1.28;
+      color: #ffffff;
+    }
+    .banner-web-b {
+      position: relative;
+      width: 870px;
+      height: 580px;
+      overflow: hidden;
+      background: var(--black);
+      display: grid;
+      grid-template-columns: 1fr 96px;
+    }
+    .banner-web-b .copy {
+      padding: 56px 56px 48px 64px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .banner-web-b .hero {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 28px;
+    }
+    .banner-web-b .logo-now {
+      width: 360px;
+      height: auto;
+      display: block;
+    }
+    .banner-web-b .slogan {
+      font-size: 26px;
+      max-width: 14em;
+    }
+    .banner-web-b .claim {
+      width: 168px;
+      height: auto;
+      display: block;
+      opacity: 0.92;
+    }
+    .banner-web-b .old {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+    }
+    .banner-web-b .old img {
+      height: 36px;
+      width: auto;
+      display: block;
+      opacity: 0.9;
+    }
+    .banner-web-b .pattern {
+      background-color: #000;
+      background-image: url("pattern.png");
+      background-repeat: repeat-y;
+      background-size: 100% auto;
+      background-position: center top;
+    }
+
+    .banner-social-b {
+      position: relative;
+      width: 1080px;
+      height: 1080px;
+      overflow: hidden;
+      background: var(--black);
+      display: flex;
+      flex-direction: column;
+    }
+    .banner-social-b .rail {
+      height: 96px;
+      flex: 0 0 96px;
+      background-color: #000;
+      background-image: url("pattern.png");
+      background-repeat: repeat-x;
+      background-size: auto 100%;
+      background-position: center;
+    }
+    .banner-social-b .mid {
+      flex: 1 1 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 32px;
+      padding: 48px 80px 24px;
+      text-align: center;
+    }
+    .banner-social-b .logo-now {
+      width: 560px;
+      height: auto;
+      display: block;
+    }
+    .banner-social-b .claim {
+      width: 220px;
+      height: auto;
+      display: block;
+    }
+    .banner-social-b .slogan {
+      font-size: 32px;
+      max-width: 12em;
+    }
+    .banner-social-b .was {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+      padding: 0 0 56px;
+    }
+    .banner-social-b .old {
+      display: flex;
+      gap: 8px;
+    }
+    .banner-social-b .old img {
+      height: 42px;
+      width: auto;
+      display: block;
+    }
   </style>
 </head>
 <body>
   <div class="page">
     <p class="kicker">VZV · rebrand</p>
     <h1>Bannery k novému logu a claimu</h1>
-    <p>870×580 pro web (homepage slot) a 1080×1080 pro sociální sítě. Staré loga, nové VZV, VEZEME VOZÍKY a vidlicový pattern.</p>
+    <p>Možnost A je výraznější. Možnost B je čistší, s claimem „Měníme tvář, spolehlivost zůstává“.</p>
   </div>
 
   <h2 class="sec">Web 870 × 580</h2>
@@ -215,6 +337,42 @@
         </div>
       </div>
       <div class="rail" aria-hidden="true"></div>
+    </section>
+  </div>
+
+  <h2 class="sec">Možnost B · web 870 × 580 · minimal</h2>
+  <div class="stage web">
+    <section class="banner-web-b" id="banner-web-b">
+      <div class="copy">
+        <div class="hero">
+          <img class="claim" src="claim-white.png" alt="Vezeme vozíky">
+          <img class="logo-now" src="logo-vzv.png" alt="VZV">
+          <p class="slogan">Měníme tvář,<br>spolehlivost zůstává</p>
+        </div>
+        <div class="old">
+          <img src="logo-old-red.png" alt="VZV.cz">
+          <img src="logo-old-yellow.png" alt="VZVRENT.cz">
+        </div>
+      </div>
+      <div class="pattern" aria-hidden="true"></div>
+    </section>
+  </div>
+
+  <h2 class="sec">Možnost B · sociální sítě 1080 × 1080 · minimal</h2>
+  <div class="stage social">
+    <section class="banner-social-b" id="banner-social-b">
+      <div class="rail" aria-hidden="true"></div>
+      <div class="mid">
+        <img class="claim" src="claim-white.png" alt="Vezeme vozíky">
+        <img class="logo-now" src="logo-vzv.png" alt="VZV">
+        <p class="slogan">Měníme tvář,<br>spolehlivost zůstává</p>
+      </div>
+      <div class="was">
+        <div class="old">
+          <img src="logo-old-red.png" alt="VZV.cz">
+          <img src="logo-old-yellow.png" alt="VZVRENT.cz">
+        </div>
+      </div>
     </section>
   </div>
 </body>
