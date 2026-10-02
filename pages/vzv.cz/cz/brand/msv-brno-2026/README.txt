@@ -8,9 +8,23 @@ Funguje i bez serveru, pokud jsou ve stejné složce `logo-vzv.png`, `claim-whit
 
 Účel
 ----
-Vizuální a datový prototyp karty z veletrhu MSV Brno 6.–9. 10. 2026
+Kompletní vizuální a datový prototyp karty z veletrhu MSV Brno 6.–9. 10. 2026
 pro implementaci v Power Apps (canvas) + AI Builder Business Card Reader.
 
-Není to produkční aplikace. Uložení jen ukáže JSON payload.
+Stejný princip jako Logimat Standard Pack: jedna HTML karta pro obchodníka
++ tabulka polí a JSON payload pro IT.
 
-Pole a chování jsou popsané v dolní části HTML stránky (tabulka pro IT).
+Není to produkční aplikace. Uložení jen zapíše kartu do seznamu „Dnešní karty“
+a ukáže JSON dole na stránce.
+
+Obsah formuláře
+---------------
+1. Foto vizitky (AI Builder)
+2. Typ klienta, Role, Firma*, IČO/DIČ, Kategorie A–D
+3. Kontakt: jméno*, funkce, telefon, e-mail
+4. Sídlo: město, PSČ, země, web
+5. Zájem: prodej/pronájem/servis/díly/přídavná/financování,
+   stav, typ vozíku, pohon, nosnost, zdvih, počet, termín, poznámka
+6. Další krok: follow-up, datum, GDPR*
+7. Dnešní karty (seznam uložených)
+8. Zadání pro IT (tabulka polí + poslední JSON)
