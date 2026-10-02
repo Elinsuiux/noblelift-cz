@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>VZV · MSV BRNO 2026 — karta (Power Apps prototyp)</title>
+  <link href="https://fonts.googleapis.com/css2?family=Tasa+Orbiter:wght@600;700;800&family=Montserrat:wght@400;500;600;700;800&display=swap&subset=latin-ext" rel="stylesheet">
+  <style>
+    :root {
+      --lime: #73FB61;
+      --lime-hover: #5FE84D;
+      --green-900: #073201;
+      --green-800: #0E6303;
+      --black: #000000;
+      --ink: #111111;
+      --muted: #6b6b6b;
+      --line: #e6e6e6;
+      --page: #ececec;
+      --white: #ffffff;
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; }
+    body {
+      font-family: Montserrat, "Tasa Orbiter", system-ui, sans-serif;
+      background: var(--page);
+      color: var(--ink);
+    }
+    img { max-width: 100%; display: block; }
+
+    .hero {
+      position: relative;
+      background: #000;
+      color: #fff;
+      text-align: center;
+      padding: 42px 20px 0;
+      overflow: hidden;
+      min-height: 340px;
+    }
+    .hero .logo { width: min(280px, 72vw); margin: 0 auto 18px; }
+    .hero .claim { width: min(220px, 58vw); margin: 0 auto 16px; }
+    .hero .dates {
+      font-size: 12px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #cfcfcf;
+      font-weight: 600;
+    }
+    .hero-pattern {
+      height: 168px;
+      margin-top: 18px;
+      background:
+        linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,.15) 40%, #000 100%),
+        url("pattern.png") center 10% / 920px auto no-repeat;
+      filter: drop-shadow(0 0 28px rgba(115,251,97,.22));
+    }
+    .hero-rule { height: 4px; background: var(--lime); }
+
+    .wrap {
+      max-width: 560px;
+      margin: -36px auto 48px;
+      padding: 0 16px 24px;
+      position: relative;
+      z-index: 2;
+    }
+    .card {
+      background: var(--white);
+      border-radius: 18px;
+      box-shadow: 0 18px 40px rgba(0,0,0,.12);
+      overflow: hidden;
+    }
+    .card-head {
+      background: #000;
+      color: #fff;
+      padding: 14px 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+    .card-head h1 {
+      margin: 0;
+      font-family: "Tasa Orbiter", Montserrat, sans-serif;
+      font-size: 16px;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+    .card-head h1 span { color: var(--lime); }
+    .card-head p {
+      margin: 4px 0 0;
+      font-size: 13px;
+      color: #cfcfcf;
+    }
+    .days { display: flex; gap: 6px; flex-shrink: 0; }
+    .pill {
+      border: 1.5px solid #d9d9d9;
+      background: #fff;
+      color: var(--ink);
+      border-radius: 999px;
+      min-height: 34px;
+      padding: 0 14px;
+      font: 700 13px/1 Montserrat, sans-serif;
+      cursor: pointer;
+    }
+    .pill.on, .days .pill.on {
+      background: var(--lime);
+      border-color: var(--lime);
+      color: #111;
+    }
+    .days .pill {
+      min-width: 38px;
+      padding: 0 8px;
+      min-height: 32px;
+      background: #111;
+      color: #fff;
+      border-color: #333;
+    }
+    .days .pill.on { background: var(--lime); color: #111; border-color: var(--lime); }
+
+    .body { padding: 18px 18px 22px; }
+    .proto {
+      display: inline-block;
+      background: var(--lime);
+      color: #111;
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 5px 8px;
+      border-radius: 4px;
+      margin-bottom: 16px;
+    }
+    .label {
+      display: block;
+      font-size: 13px;
+      font-weight: 700;
+      margin: 0 0 6px;
+    }
+    .hint { margin: 0 0 12px; font-size: 12px; color: var(--muted); line-height: 1.45; }
+    .row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    @media (max-width: 520px) { .row { grid-template-columns: 1fr; } }
+
+    .field { margin: 0 0 16px; }
+    input[type="text"], input[type="tel"], input[type="email"], textarea, select {
+      width: 100%;
+      border: 1.5px solid #ddd;
+      border-radius: 8px;
+      min-height: 42px;
+      padding: 8px 12px;
+      font: 500 14px/1.3 Montserrat, sans-serif;
+      background: #fff;
+    }
+    textarea { min-height: 88px; resize: vertical; }
+    input:focus, textarea:focus { outline: 2px solid var(--lime); border-color: var(--lime); }
+
+    .scan {
+      border: 1.5px dashed #cfcfcf;
+      border-radius: 14px;
+      padding: 14px;
+      margin-bottom: 18px;
+    }
+    .drop {
+      border: 1.5px solid #eee;
+      background: #fafafa;
+      border-radius: 12px;
+      padding: 28px 12px;
+      text-align: center;
+      cursor: pointer;
+    }
+    .drop strong { display: block; margin-top: 8px; font-size: 14px; }
+    .drop span { display: block; font-size: 12px; color: var(--muted); margin-top: 4px; }
+    .drop img.preview {
+      width: 100%;
+      max-height: 180px;
+      object-fit: contain;
+      margin: 0 auto 8px;
+      border-radius: 8px;
+    }
+    .cam {
+      width: 42px; height: 42px; margin: 0 auto;
+      border-radius: 50%;
+      background: var(--lime);
+      display: grid; place-items: center;
+      color: #111; font-size: 20px;
+    }
+    .pills { display: flex; flex-wrap: wrap; gap: 8px; }
+    .cat .pill {
+      width: 36px; min-width: 36px; height: 36px; padding: 0;
+      border-radius: 50%;
+    }
+    .tag {
+      display: inline-block;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      background: #eee;
+      color: #666;
+      padding: 3px 6px;
+      border-radius: 4px;
+      margin-bottom: 8px;
+    }
+
+    .actions {
+      display: flex;
+      gap: 8px;
+      margin-top: 8px;
+    }
+    .btn {
+      flex: 1;
+      border: 0;
+      border-radius: 10px;
+      min-height: 46px;
+      font: 800 14px Montserrat, sans-serif;
+      cursor: pointer;
+    }
+    .btn-save { background: var(--lime); color: #111; }
+    .btn-save:hover { background: var(--lime-hover); }
+    .btn-ghost { background: #111; color: #fff; }
+
+    .toast {
+      display: none;
+      margin-top: 12px;
+      background: #111;
+      color: var(--lime);
+      padding: 12px 14px;
+      border-radius: 10px;
+      font-size: 13px;
+      font-weight: 700;
+    }
+    .toast.on { display: block; }
+
+    .it {
+      max-width: 860px;
+      margin: 0 auto 64px;
+      padding: 0 16px;
+    }
+    .it h2 {
+      font-family: "Tasa Orbiter", Montserrat, sans-serif;
+      font-size: 18px;
+    }
+    .it p, .it li { font-size: 13px; line-height: 1.5; color: #333; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: #fff;
+      font-size: 12px;
+    }
+    th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid #eee; vertical-align: top; }
+    th { background: #000; color: #fff; font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; }
+    code { font-size: 11px; background: #f4f4f4; padding: 1px 4px; }
+    pre {
+      background: #111;
+      color: #A7FC9C;
+      padding: 14px;
+      overflow: auto;
+      font-size: 12px;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <img class="logo" src="logo-vzv.png" alt="VZV">
+    <img class="claim" src="claim-white.png" alt="Vezeme vozíky">
+    <div class="dates">MSV Brno · 6.–9. 10. 2026</div>
+    <div class="hero-pattern" aria-hidden="true"></div>
+  </header>
+  <div class="hero-rule"></div>
+
+  <main class="wrap">
+    <form class="card" id="card" autocomplete="off">
+      <div class="card-head">
+        <div>
+          <h1>VZV · MSV BRNO — <span>karta</span></h1>
+          <p>Obchodník: <strong id="salesName">Karel Novák</strong></p>
+        </div>
+        <div class="days" role="radiogroup" aria-label="Den veletrhu">
+          <button type="button" class="pill" data-group="den" data-value="UT">ÚT</button>
+          <button type="button" class="pill on" data-group="den" data-value="ST">ST</button>
+          <button type="button" class="pill" data-group="den" data-value="CT">ČT</button>
+          <button type="button" class="pill" data-group="den" data-value="PA">PÁ</button>
+        </div>
+      </div>
+
+      <div class="body">
+        <div class="proto">Power Apps · prototyp</div>
+
+        <div class="scan">
+          <div class="label">Foto vizitky</div>
+          <p class="hint">Vyfoťte vizitku — AI Builder vyplní jméno, firmu, telefon a e-mail. IČO/DIČ doplňte ručně, pokud na vizitce nejsou.</p>
+          <label class="drop" for="vizitka">
+            <img class="preview" id="vizitkaPreview" alt="" hidden>
+            <div class="cam" aria-hidden="true">📷</div>
+            <strong>Vyfotit vizitku</strong>
+            <span>nebo vyberte foto z galerie</span>
+          </label>
+          <input id="vizitka" name="vizitka" type="file" accept="image/*" capture="environment" hidden>
+        </div>
+
+        <div class="field">
+          <span class="label">Typ klienta</span>
+          <div class="pills" role="radiogroup">
+            <button type="button" class="pill on" data-group="typKlienta" data-value="novy">Nový</button>
+            <button type="button" class="pill" data-group="typKlienta" data-value="stavajici">Stávající</button>
+          </div>
+        </div>
+
+        <div class="field">
+          <span class="label">Role</span>
+          <div class="pills" role="radiogroup">
+            <button type="button" class="pill on" data-group="role" data-value="koncovy_klient">Koncový klient</button>
+            <button type="button" class="pill" data-group="role" data-value="dealer">Dealer</button>
+            <button type="button" class="pill" data-group="role" data-value="dodavatel">Dodavatel</button>
+          </div>
+        </div>
+
+        <div class="field">
+          <label class="label" for="firma">Firma *</label>
+          <input id="firma" name="firma" type="text" required>
+        </div>
+
+        <div class="row">
+          <div class="field">
+            <label class="label" for="ico">IČO</label>
+            <input id="ico" name="ico" type="text" inputmode="numeric" placeholder="27082440" maxlength="8">
+          </div>
+          <div class="field">
+            <label class="label" for="dic">DIČ</label>
+            <input id="dic" name="dic" type="text" placeholder="CZ27082440">
+          </div>
+        </div>
+
+        <div class="field cat">
+          <span class="tag">Kategorie</span>
+          <div class="pills" role="radiogroup" aria-label="Kategorie">
+            <button type="button" class="pill" data-group="kategorie" data-value="A">A</button>
+            <button type="button" class="pill on" data-group="kategorie" data-value="B">B</button>
+            <button type="button" class="pill" data-group="kategorie" data-value="C">C</button>
+            <button type="button" class="pill" data-group="kategorie" data-value="D">D</button>
+          </div>
+        </div>
+
+        <div class="field">
+          <label class="label" for="jmeno">Kontakt — jméno *</label>
+          <input id="jmeno" name="jmeno" type="text" required>
+        </div>
+
+        <div class="row">
+          <div class="field">
+            <label class="label" for="telefon">Telefon</label>
+            <input id="telefon" name="telefon" type="tel" placeholder="+420">
+          </div>
+          <div class="field">
+            <label class="label" for="email">E-mail</label>
+            <input id="email" name="email" type="email">
+          </div>
+        </div>
+
+        <div class="field">
+          <span class="label">Zájem o</span>
+          <div class="pills" id="zajem">
+            <button type="button" class="pill" data-multi="zajem" data-value="prodej">Prodej</button>
+            <button type="button" class="pill" data-multi="zajem" data-value="pronajem">Pronájem</button>
+            <button type="button" class="pill" data-multi="zajem" data-value="servis">Servis</button>
+            <button type="button" class="pill" data-multi="zajem" data-value="dily">Díly</button>
+          </div>
+        </div>
+
+        <div class="field">
+          <label class="label" for="poznamka">Poznámka</label>
+          <textarea id="poznamka" name="poznamka" placeholder="Co řeší, vozíky, termín…"></textarea>
+        </div>
+
+        <div class="actions">
+          <button class="btn btn-save" type="submit">Uložit kartu</button>
+          <button class="btn btn-ghost" type="reset">Vymazat</button>
+        </div>
+        <div class="toast" id="toast">Karta uložena (prototyp — JSON níže pro IT).</div>
+      </div>
+    </form>
+  </main>
+
+  <section class="it" id="it">
+    <h2>Zadání pro IT / Power Apps</h2>
+    <p>Toto je vizuální prototyp karty z veletrhu <strong>MSV Brno 6.–9. 10. 2026</strong>. Není napojený na Dataverse. Úkolem je postavit stejný formulář v Power Apps (canvas) s AI Builder Business Card Reader.</p>
+    <ul>
+      <li>Obchodník = přihlášený uživatel (<code>User().FullName</code>), v mocku Karel Novák.</li>
+      <li>Den veletrhu: ÚT 6. 10. · ST 7. 10. · ČT 8. 10. · PÁ 9. 10. 2026.</li>
+      <li>Foto vizitky: Camera / Add picture → AI Builder vyplní <code>jmeno</code>, <code>firma</code>, <code>telefon</code>, <code>email</code>.</li>
+      <li>IČO/DIČ se nedají z vizitky spolehlivě; doplnit ručně, případně ARES podle IČO.</li>
+      <li>Po uložení vytvořit záznam v tabulce leadů a volitelně úkol na follow-up.</li>
+    </ul>
+    <table>
+      <thead>
+        <tr><th>Pole</th><th>Klíč</th><th>Typ</th><th>Povinné</th><th>Poznámka</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Den</td><td><code>den</code></td><td>choice UT/ST/CT/PA</td><td>ano</td><td>default ST</td></tr>
+        <tr><td>Obchodník</td><td><code>obchodnik</code></td><td>text / person</td><td>ano</td><td>z účtu</td></tr>
+        <tr><td>Foto vizitky</td><td><code>vizitka</code></td><td>image</td><td>ne</td><td>AI Builder</td></tr>
+        <tr><td>Typ klienta</td><td><code>typKlienta</code></td><td>novy / stavajici</td><td>ano</td><td></td></tr>
+        <tr><td>Role</td><td><code>role</code></td><td>koncovy_klient / dealer / dodavatel</td><td>ano</td><td></td></tr>
+        <tr><td>Firma</td><td><code>firma</code></td><td>text</td><td>ano</td><td></td></tr>
+        <tr><td>IČO</td><td><code>ico</code></td><td>text 8</td><td>ne</td><td></td></tr>
+        <tr><td>DIČ</td><td><code>dic</code></td><td>text</td><td>ne</td><td>CZ + IČO</td></tr>
+        <tr><td>Kategorie</td><td><code>kategorie</code></td><td>A/B/C/D</td><td>ano</td><td></td></tr>
+        <tr><td>Jméno</td><td><code>jmeno</code></td><td>text</td><td>ano</td><td></td></tr>
+        <tr><td>Telefon</td><td><code>telefon</code></td><td>text</td><td>ne</td><td>z vizitky</td></tr>
+        <tr><td>E-mail</td><td><code>email</code></td><td>email</td><td>ne</td><td>z vizitky</td></tr>
+        <tr><td>Zájem o</td><td><code>zajem</code></td><td>multi</td><td>ne</td><td>prodej, pronajem, servis, dily</td></tr>
+        <tr><td>Poznámka</td><td><code>poznamka</code></td><td>long text</td><td>ne</td><td></td></tr>
+        <tr><td>Zdroj</td><td><code>zdroj</code></td><td>text</td><td>ano</td><td>konstanta MSV_BRNO_2026</td></tr>
+      </tbody>
+    </table>
+    <p>Ukázkový payload po uložení:</p>
+    <pre id="payload">{
+  "zdroj": "MSV_BRNO_2026",
+  "den": "ST",
+  "obchodnik": "Karel Novák",
+  "typKlienta": "novy",
+  "role": "koncovy_klient",
+  "kategorie": "B"
+}</pre>
+  </section>
+
+  <script>
+    const state = {
+      den: "ST",
+      typKlienta: "novy",
+      role: "koncovy_klient",
+      kategorie: "B",
+      zajem: []
+    };
+
+    document.querySelectorAll("[data-group]").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const g = btn.dataset.group;
+        document.querySelectorAll(`[data-group="${g}"]`).forEach((b) => b.classList.remove("on"));
+        btn.classList.add("on");
+        state[g] = btn.dataset.value;
+      });
+    });
+
+    document.querySelectorAll("[data-multi]").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const v = btn.dataset.value;
+        btn.classList.toggle("on");
+        if (btn.classList.contains("on")) state.zajem.push(v);
+        else state.zajem = state.zajem.filter((x) => x !== v);
+      });
+    });
+
+    const ico = document.getElementById("ico");
+    const dic = document.getElementById("dic");
+    ico.addEventListener("input", () => {
+      const n = ico.value.replace(/\D/g, "").slice(0, 8);
+      ico.value = n;
+      if (n.length === 8 && !dic.value) dic.value = "CZ" + n;
+    });
+
+    const file = document.getElementById("vizitka");
+    const preview = document.getElementById("vizitkaPreview");
+    file.addEventListener("change", () => {
+      const f = file.files[0];
+      if (!f) return;
+      preview.src = URL.createObjectURL(f);
+      preview.hidden = false;
+    });
+
+    function payload() {
+      const fd = new FormData(document.getElementById("card"));
+      return {
+        zdroj: "MSV_BRNO_2026",
+        veletrh: "MSV Brno",
+        datumOd: "2026-10-06",
+        datumDo: "2026-10-09",
+        den: state.den,
+        obchodnik: document.getElementById("salesName").textContent,
+        vizitka: file.files[0] ? file.files[0].name : null,
+        typKlienta: state.typKlienta,
+        role: state.role,
+        firma: fd.get("firma"),
+        ico: fd.get("ico"),
+        dic: fd.get("dic"),
+        kategorie: state.kategorie,
+        jmeno: fd.get("jmeno"),
+        telefon: fd.get("telefon"),
+        email: fd.get("email"),
+        zajem: state.zajem,
+        poznamka: fd.get("poznamka")
+      };
+    }
+
+    const form = document.getElementById("card");
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      if (!form.reportValidity()) return;
+      const data = payload();
+      document.getElementById("payload").textContent = JSON.stringify(data, null, 2);
+      document.getElementById("toast").classList.add("on");
+      document.getElementById("it").scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+    form.addEventListener("reset", () => {
+      document.getElementById("toast").classList.remove("on");
+      preview.hidden = true;
+      preview.removeAttribute("src");
+    });
+  </script>
+</body>
+</html>
