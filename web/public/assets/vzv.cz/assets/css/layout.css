@@ -3677,7 +3677,16 @@ html {
     display: none;
 }
 .content-body .price-detail > .block:not(.priceIoLeasing):has(.formatPriceNote) {
-    order: -1;
+    order: 1;
+}
+.content-body .price-detail > [itemprop="price"]:has(.fs-3) {
+    order: 2;
+}
+.content-body .price-detail > [itemprop="price"]:has(.formatPriceTax):not(:has(.fs-3)) {
+    order: 3;
+}
+.content-body .price-detail > .priceIoLeasing {
+    order: 4;
 }
 .content-body .price-detail > .block:not(.priceIoLeasing) .formatPriceNote {
     text-decoration: line-through;
