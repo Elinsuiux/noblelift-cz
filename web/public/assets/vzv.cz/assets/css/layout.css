@@ -3704,8 +3704,11 @@ html {
 .content-body .price-detail > .block:not(.priceIoLeasing) .formatPriceNote {
     text-decoration: line-through;
     text-decoration-thickness: 1px;
-    text-decoration-color: #c4c4c4;
+    text-decoration-color: #8a8a8a;
     text-underline-offset: 0;
+}
+#forklifts .card {
+    cursor: pointer;
 }
 .content-body .background-white {
     background: #ffffff;
