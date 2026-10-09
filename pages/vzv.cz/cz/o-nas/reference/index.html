@@ -3689,61 +3689,70 @@
 <style>
 /* Reference page — light version */
 .content-body { background: #f5f5f5; }
-.ref-page-wrap { background: #f5f5f5; color: #212529; }
+.ref-page-wrap {
+  background: #f5f5f5; color: #212529;
+  font-family: Montserrat, sans-serif;
+}
 .ref-page-wrap a { color: #0e6303; }
 .ref-hero {
   max-width: 1240px; margin: 0 auto; padding: 36px 24px 12px;
 }
 .ref-hero .pdp-breadcrumb {
   display: flex; flex-wrap: wrap; gap: 8px; align-items: center;
-  font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.04em;
+  font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.04em;
   margin-bottom: 16px; color: rgba(0,0,0,0.45);
+  font-family: Montserrat, sans-serif;
 }
 .ref-hero .pdp-breadcrumb a { color: rgba(0,0,0,0.55); text-decoration: none; }
 .ref-hero .pdp-breadcrumb a:hover { color: #0e6303; }
 .ref-hero h1 {
-  margin: 0; font-family: "Bebas Neue", "Teko", sans-serif;
-  font-size: clamp(2.4rem, 5vw, 3.6rem); letter-spacing: 0.04em; color: #111;
+  margin: 0; font-family: Montserrat, sans-serif; font-weight: 700;
+  font-size: clamp(2rem, 4vw, 2.8rem); letter-spacing: 0; color: #111;
+  text-transform: uppercase;
 }
-.ref-videos { background: #ececec; padding: 48px 24px; }
+.ref-videos { background: #ececec; padding: 36px 24px; }
 .ref-videos-inner {
   max-width: 1240px; margin: 0 auto;
-  display: grid; grid-template-columns: 1fr auto; gap: 36px; align-items: center;
+  display: grid; grid-template-columns: 1fr auto; gap: 28px; align-items: center;
 }
-.ref-videos-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+.ref-videos-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
 .ref-video-card {
-  position: relative; display: block; overflow: hidden; border-radius: 10px;
+  position: relative; display: block; overflow: hidden; border-radius: 12px;
   text-decoration: none; color: #fff;
 }
 .ref-video-card img { display: block; width: 100%; height: auto; }
 .ref-video-play {
-  position: absolute; left: 50%; top: 42%; transform: translate(-50%, -50%);
-  width: 54px; height: 54px; border-radius: 50%;
+  position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);
+  width: 56px; height: 56px; border-radius: 50%;
   display: grid; place-items: center;
-  background: rgba(0,0,0,0.55); border: 2px solid #73FB61;
-  color: #73FB61; font-size: 1.1rem;
+  background: #73FB61; border: 0;
 }
-.ref-video-label, .ref-video-sub, .ref-video-title {
-  position: absolute; left: 14px; text-shadow: 0 1px 8px rgba(0,0,0,0.8);
+.ref-video-play-icon {
+  display: block; width: 0; height: 0;
+  border-style: solid;
+  border-width: 8px 0 8px 14px;
+  border-color: transparent transparent transparent #111;
+  margin-left: 3px;
 }
-.ref-video-label { bottom: 52px; font-size: 0.72rem; letter-spacing: 0.08em; color: #73FB61; font-weight: 700; }
-.ref-video-sub { bottom: 34px; font-size: 0.72rem; color: rgba(255,255,255,0.75); }
-.ref-video-title { bottom: 12px; font-size: 0.95rem; font-weight: 700; letter-spacing: 0.02em; }
-.ref-videos-cta { text-align: center; max-width: 220px; }
-.ref-videos-cta p { margin: 0 0 14px; color: #444; }
+.ref-videos-cta { text-align: center; max-width: 240px; }
+.ref-videos-cta p {
+  margin: 0 0 14px; color: #222;
+  font-family: Montserrat, sans-serif; font-size: 0.95rem; font-weight: 500;
+}
 .ref-videos-cta .btn-ghost {
-  display: inline-block; padding: 10px 16px; border: 1px solid #073201;
-  color: #111; background: #73FB61; text-decoration: none; text-transform: uppercase;
-  font-size: 0.78rem; font-weight: 700; letter-spacing: 0.04em;
+  display: inline-block; padding: 12px 18px; border: 0; border-radius: 8px;
+  color: #111; background: #73FB61; text-decoration: none;
+  text-transform: none; letter-spacing: 0; white-space: nowrap;
+  font-family: Montserrat, sans-serif; font-size: 0.92rem; font-weight: 700;
 }
-.ref-videos-cta .btn-ghost:hover { background: #1cc705; color: #111; border-color: #073201; }
+.ref-videos-cta .btn-ghost:hover { background: #1cc705; color: #111; }
 .ref-clients, .ref-projects, .ref-testimonials {
   max-width: 1240px; margin: 0 auto; padding: 64px 24px;
 }
 .ref-clients h2, .ref-projects h2, .ref-testimonials h2 {
   margin: 0 0 28px; text-align: center; text-transform: uppercase;
-  font-family: "Bebas Neue", "Teko", sans-serif;
-  font-size: clamp(1.8rem, 3vw, 2.4rem); letter-spacing: 0.04em; color: #111;
+  font-family: Montserrat, sans-serif; font-weight: 700;
+  font-size: clamp(1.5rem, 2.6vw, 2rem); letter-spacing: 0; color: #111;
 }
 .ref-clients-grid {
   display: grid; grid-template-columns: repeat(6, 1fr); gap: 12px;
@@ -3822,7 +3831,7 @@
 }
 .ref-bottom h2 {
   margin: 0 0 16px; text-transform: uppercase;
-  font-family: "Bebas Neue", "Teko", sans-serif; letter-spacing: 0.04em; color: #111;
+  font-family: Montserrat, sans-serif; font-weight: 700; letter-spacing: 0; color: #111;
 }
 .ref-bottom h3 { margin: 22px 0 10px; font-size: 1.05rem; color: #111; }
 .ref-bottom ul { margin: 0 0 14px; padding-left: 18px; color: #444; }
@@ -3857,11 +3866,12 @@
 }
 @media (max-width: 992px) {
   .ref-videos-inner, .ref-bottom, .ref-projects-grid, .ref-testimonials-grid { grid-template-columns: 1fr; }
+  .ref-videos-grid { grid-template-columns: 1fr; }
   .ref-clients-grid { grid-template-columns: repeat(3, 1fr); }
   .ref-videos-cta { max-width: none; }
 }
 @media (max-width: 576px) {
-  .ref-videos-grid, .rent-form-fields, .ref-clients-grid { grid-template-columns: 1fr 1fr; }
+  .rent-form-fields, .ref-clients-grid { grid-template-columns: 1fr 1fr; }
   .ref-form-person { grid-template-columns: 1fr; }
 }
 </style>
@@ -3881,19 +3891,17 @@
   <section class="ref-videos">
     <div class="ref-videos-inner">
       <div class="ref-videos-grid">
-        <a class="ref-video-card" href="https://www.youtube.com/embed/vs9rPqomeJg?rel=0" target="_blank" rel="noopener noreferrer">
-          <img src="https://www.vzvrent.cz/assets/img/templates/video-david.png" alt="Quo Vadis - David Černý" loading="lazy" />
-          <span class="ref-video-play" aria-hidden="true">&#9654;</span>
-          <span class="ref-video-label">VZVRENT.cz</span>
-          <span class="ref-video-sub">realizace</span>
-          <strong class="ref-video-title">QUO VADIS — DAVID ČERNÝ</strong>
-        </a>
         <a class="ref-video-card" href="https://www.youtube.com/embed/x9N9fLwH6rg?rel=0" target="_blank" rel="noopener noreferrer">
-          <img src="https://www.vzvrent.cz/assets/img/templates/video-manipulator.png" alt="Teleskopický manipulátor JCB" loading="lazy" />
-          <span class="ref-video-play" aria-hidden="true">&#9654;</span>
-          <span class="ref-video-label">VZVRENT.cz</span>
-          <span class="ref-video-sub">realizace</span>
-          <strong class="ref-video-title">TELESKOPICKÝ MANIPULÁTOR JCB</strong>
+          <img src="https://www.vzvrent.cz/assets/img/templates/video-manipulator-jcb.png" alt="Teleskopický manipulátor JCB" loading="lazy" />
+          <span class="ref-video-play" aria-hidden="true"><span class="ref-video-play-icon"></span></span>
+        </a>
+        <a class="ref-video-card" href="https://www.youtube.com/user/VZVCZ" target="_blank" rel="noopener noreferrer">
+          <img src="https://www.vzvrent.cz/assets/img/templates/video-rotacni-manipulator.png" alt="Rotační manipulátor MANITOU MRT 2150" loading="lazy" />
+          <span class="ref-video-play" aria-hidden="true"><span class="ref-video-play-icon"></span></span>
+        </a>
+        <a class="ref-video-card" href="https://www.youtube.com/user/VZVCZ" target="_blank" rel="noopener noreferrer">
+          <img src="https://www.vzvrent.cz/assets/img/templates/video-letofest.png" alt="Létofest Liberec" loading="lazy" />
+          <span class="ref-video-play" aria-hidden="true"><span class="ref-video-play-icon"></span></span>
         </a>
       </div>
       <div class="ref-videos-cta">
