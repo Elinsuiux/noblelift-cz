@@ -3772,27 +3772,35 @@
   display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;
 }
 .ref-project-card {
+  display: flex; flex-direction: column;
   background: #ffffff; border: 1px solid #e4e4e4;
   border-radius: 12px; padding: 0 0 18px; overflow: hidden;
 }
 .ref-project-thumb {
-  height: 160px;
-  background:
-    linear-gradient(135deg, rgba(115,251,97,0.35), rgba(255,255,255,0.15)),
-    #d7d7d7;
+  display: block; height: 220px; overflow: hidden; background: #e8e8e8;
+}
+.ref-project-thumb img {
+  display: block; width: 100%; height: 100%; object-fit: cover; object-position: center;
 }
 .ref-project-date {
-  display: block; margin: 14px 16px 6px; font-size: 0.78rem; color: #0e6303;
+  display: block; margin: 16px 18px 8px;
+  font-size: 0.82rem; font-weight: 700; color: #14aa00;
 }
 .ref-project-card h3 {
-  margin: 0 16px 10px; font-size: 1.05rem; line-height: 1.35; color: #111;
+  margin: 0 18px 10px; font-size: 1.15rem; font-weight: 700;
+  line-height: 1.35; color: #111;
 }
+.ref-project-card h3 a { color: inherit; text-decoration: none; }
+.ref-project-card h3 a:hover { color: #0e6303; }
 .ref-project-card p {
-  margin: 0 16px 12px; font-size: 0.9rem; color: #555; line-height: 1.5;
+  margin: 0 18px 16px; flex: 1;
+  font-size: 0.92rem; color: #555; line-height: 1.5;
 }
-.ref-project-more {
-  margin: 0 16px; font-size: 0.82rem; font-weight: 700; color: #0e6303;
+.content-body .ref-project-more {
+  margin: 0 18px; font-size: 0.88rem; font-weight: 700;
+  color: #111; text-decoration: none;
 }
+.content-body .ref-project-more:hover { color: #14aa00; }
 .ref-projects-pagination {
   display: flex; justify-content: center; gap: 8px; margin-top: 28px;
 }
@@ -3967,25 +3975,31 @@
     <h2>Realizace</h2>
     <div class="ref-projects-grid">
       <article class="ref-project-card">
-        <div class="ref-project-thumb"></div>
-        <span class="ref-project-date">08.06.2026</span>
-        <h3>Ohlédnutí za březnem: pestré realizace napříč průmyslem</h3>
+        <a class="ref-project-thumb" href="https://www.vzvrent.cz/novinky/ohlednuti-za-breznem-pestre-realizace-napric-prumyslem" target="_blank" rel="noopener noreferrer">
+          <img src="../../../../../assets/vzv.cz/assets/img/pujcovna_vzv/teleskopicke-manipulatory.webp" alt="Teleskopický manipulátor JCB" loading="lazy" />
+        </a>
+        <time class="ref-project-date" datetime="2026-06-08">08.06.2026</time>
+        <h3><a href="https://www.vzvrent.cz/novinky/ohlednuti-za-breznem-pestre-realizace-napric-prumyslem" target="_blank" rel="noopener noreferrer">Ohlédnutí za březnem: pestré realizace napříč průmyslem</a></h3>
         <p>Březen přinesl několik zajímavých realizací, při kterých jsme opět využili manipulační techniku pro práci s technologickými zařízeními, rozměrnými náklady i těžkými průmyslovými celky.</p>
-        <span class="ref-project-more">Číst více →</span>
+        <a class="ref-project-more" href="https://www.vzvrent.cz/novinky/ohlednuti-za-breznem-pestre-realizace-napric-prumyslem" target="_blank" rel="noopener noreferrer">Číst více →</a>
       </article>
       <article class="ref-project-card">
-        <div class="ref-project-thumb"></div>
-        <span class="ref-project-date">12.05.2026</span>
-        <h3>Ohlédnutí za únorem: rozmanité zakázky v praxi</h3>
+        <a class="ref-project-thumb" href="https://www.vzvrent.cz/novinky/ohlednuti-za-unorem-rozmanite-zakazky-v-praxi" target="_blank" rel="noopener noreferrer">
+          <img src="../../../../../assets/vzv.cz/assets/img/pujcovna_vzv/celni-vysokozdvizne-voziky.webp" alt="Čelní vysokozdvižné vozíky Linde" loading="lazy" />
+        </a>
+        <time class="ref-project-date" datetime="2026-05-12">12.05.2026</time>
+        <h3><a href="https://www.vzvrent.cz/novinky/ohlednuti-za-unorem-rozmanite-zakazky-v-praxi" target="_blank" rel="noopener noreferrer">Ohlédnutí za únorem: rozmanité zakázky v praxi</a></h3>
         <p>Únor byl ve znamení pestrých realizací, které znovu potvrdily, že správná technika a zkušenosti jdou ruku v ruce.</p>
-        <span class="ref-project-more">Číst více →</span>
+        <a class="ref-project-more" href="https://www.vzvrent.cz/novinky/ohlednuti-za-unorem-rozmanite-zakazky-v-praxi" target="_blank" rel="noopener noreferrer">Číst více →</a>
       </article>
       <article class="ref-project-card">
-        <div class="ref-project-thumb"></div>
-        <span class="ref-project-date">13.04.2026</span>
-        <h3>Manipulace součástek lanové dráhy na Petříně</h3>
+        <a class="ref-project-thumb" href="https://www.vzvrent.cz/novinky/manipulace-soucastek-lanove-drahy-na-petrine" target="_blank" rel="noopener noreferrer">
+          <img src="../../../../../assets/vzv.cz/assets/img/pujcovna_vzv/pracovni-plosiny.webp" alt="Pracovní plošina JLG" loading="lazy" />
+        </a>
+        <time class="ref-project-date" datetime="2026-04-13">13.04.2026</time>
+        <h3><a href="https://www.vzvrent.cz/novinky/manipulace-soucastek-lanove-drahy-na-petrine" target="_blank" rel="noopener noreferrer">Manipulace součástek lanové dráhy na Petříně</a></h3>
         <p>Podíleli jsme se na manipulaci a usazení technologických součástek lanové dráhy na Petříně — jedné z nejvýznamnějších technických a turistických památek v Praze.</p>
-        <span class="ref-project-more">Číst více →</span>
+        <a class="ref-project-more" href="https://www.vzvrent.cz/novinky/manipulace-soucastek-lanove-drahy-na-petrine" target="_blank" rel="noopener noreferrer">Číst více →</a>
       </article>
     </div>
     <div class="ref-projects-pagination">
