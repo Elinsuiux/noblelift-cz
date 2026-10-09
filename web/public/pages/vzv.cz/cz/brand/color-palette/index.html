@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>VZV.cz — barevná paleta pro IT</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap&subset=latin-ext" rel="stylesheet">
+  <style>
+    :root {
+      --lime: #73FB61;
+      --lime-hover: #5FE84D;
+      --green-900: #073201;
+      --green-800: #0E6303;
+      --green-700: #159504;
+      --green-600: #1CC705;
+      --green-500: #23F906;
+      --green-400: #4FFA38;
+      --green-300: #73FB61;
+      --green-200: #A7FC9C;
+      --green-100: #D3FECD;
+      --noblelift: #E05010;
+      --black: #000000;
+      --ink: #111111;
+      --dark: #1A1A1A;
+      --gray-700: #4D4D4D;
+      --gray-600: #666666;
+      --gray-500: #808080;
+      --gray-400: #999999;
+      --gray-300: #B3B3B3;
+      --gray-200: #CCCCCC;
+      --gray-100: #E6E6E6;
+      --page: #FAFAFA;
+      --white: #FFFFFF;
+      --phone-wash: rgba(115, 251, 97, 0.22);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Montserrat, system-ui, sans-serif;
+      background: var(--page);
+      color: var(--dark);
+      line-height: 1.45;
+    }
+    header {
+      background: var(--black);
+      color: var(--white);
+      padding: 28px 32px;
+    }
+    header .brand {
+      color: var(--lime);
+      font-weight: 800;
+      letter-spacing: 0.04em;
+      font-size: 14px;
+      text-transform: uppercase;
+    }
+    header h1 {
+      margin: 8px 0 6px;
+      font-size: 28px;
+      font-weight: 800;
+    }
+    header p { margin: 0; color: #cccccc; max-width: 720px; }
+    main { max-width: 1180px; margin: 0 auto; padding: 32px 24px 64px; }
+    h2 {
+      font-size: 13px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--green-800);
+      margin: 40px 0 14px;
+    }
+    .lead { color: var(--gray-700); max-width: 760px; margin: 0 0 24px; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: 14px; }
+    .grid.wide { grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); }
+    .swatch {
+      background: var(--white);
+      border: 1px solid var(--gray-200);
+      overflow: hidden;
+    }
+    .chip {
+      height: 88px;
+      display: flex;
+      align-items: flex-end;
+      padding: 10px 12px;
+      font-weight: 700;
+      font-size: 13px;
+    }
+    .chip.dark { color: var(--white); }
+    .chip.ink { color: var(--ink); }
+    .meta { padding: 12px; font-size: 12px; }
+    .hex {
+      font-weight: 800;
+      font-size: 16px;
+      cursor: pointer;
+      letter-spacing: 0.02em;
+    }
+    .hex:hover { color: var(--green-800); }
+    .meta code {
+      display: block;
+      margin-top: 4px;
+      color: var(--gray-600);
+      font-size: 11px;
+      word-break: break-all;
+    }
+    .use { margin-top: 8px; color: var(--gray-700); }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: var(--white);
+      font-size: 13px;
+    }
+    th, td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--gray-200); vertical-align: top; }
+    th { background: var(--black); color: var(--white); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; }
+    .dot { display: inline-block; width: 14px; height: 14px; border-radius: 50%; margin-right: 8px; vertical-align: -2px; border: 1px solid rgba(0,0,0,.12); }
+    .recipes { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 14px; }
+    .recipe {
+      background: var(--white);
+      border: 1px solid var(--gray-200);
+      padding: 18px;
+    }
+    .recipe h3 { margin: 0 0 12px; font-size: 14px; }
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center;
+      min-height: 40px; padding: 0 16px; font-weight: 700; font-size: 13px;
+      border-radius: 4px; text-decoration: none; margin: 0 8px 8px 0;
+    }
+    .btn-lime { background: var(--lime); color: var(--ink); border: 2px solid var(--lime); }
+    .btn-phone { background: transparent; color: var(--white); border: 2px solid var(--lime); }
+    .btn-phone-hover { background: var(--phone-wash); color: var(--white); border: 2px solid var(--lime); }
+    .btn-nl { background: var(--white); color: var(--ink); border: 2px solid var(--white); }
+    .btn-nl-hover { background: var(--noblelift); color: var(--white); border: 2px solid var(--noblelift); }
+    .on-dark { background: var(--black); padding: 16px; margin: 0 -18px -18px; }
+    pre {
+      background: var(--dark);
+      color: var(--green-200);
+      padding: 16px;
+      overflow: auto;
+      font-size: 12px;
+      line-height: 1.55;
+    }
+    .note {
+      background: var(--white);
+      border-left: 4px solid var(--green-700);
+      padding: 12px 16px;
+      color: var(--gray-700);
+      font-size: 13px;
+    }
+    .do { color: var(--green-800); font-weight: 700; }
+    .dont { color: #b42318; font-weight: 700; }
+    footer { color: var(--gray-600); font-size: 12px; margin-top: 40px; }
+    .toast {
+      position: fixed; bottom: 16px; right: 16px; background: var(--dark); color: var(--lime);
+      padding: 8px 12px; font-size: 12px; font-weight: 700; display: none;
+    }
+    @media print {
+      header { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      .chip, .btn, .on-dark, pre, .dot { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="brand">VZV.cz · brand tokens</div>
+    <h1>Barevná paleta pro implementaci</h1>
+    <p>Inspirace a instrukce pro IT. Hodnoty berou se ze živého webu (colors-green.css). Kliknutím na HEX se kód zkopíruje.</p>
+  </header>
+  <main>
+    <p class="lead">Na světlém pozadí se limetková <strong>#73FB61</strong> používá na velká tlačítka a pruhy, ne na drobný text. Čitelná zelená na bílém je <strong>#0E6303</strong> (odkazy, ceny) a <strong>#159504</strong> (čísla vozíků v katalogu).</p>
+
+    <h2>1. Základní barvy — tyhle stačí na 90 % UI</h2>
+    <div class="grid">
+      <article class="swatch">
+        <div class="chip ink" style="background:#73FB61">Primary lime</div>
+        <div class="meta">
+          <div class="hex" data-hex="#73FB61">#73FB61</div>
+          <code>RGB 115 251 97 · --color-primary / --color-vzv</code>
+          <div class="use">E-SHOP, Hledat, Do košíku, aktivní menu, stickery. Text na ní je #111 / #000.</div>
+        </div>
+      </article>
+      <article class="swatch">
+        <div class="chip dark" style="background:#0E6303">Contrast green</div>
+        <div class="meta">
+          <div class="hex" data-hex="#0E6303">#0E6303</div>
+          <code>RGB 14 99 3 · --color-primary-dark / --color-green-800</code>
+          <div class="use">Odkazy, ceny, čitelný text a ikony na světlém pozadí.</div>
+        </div>
+      </article>
+      <article class="swatch">
+        <div class="chip dark" style="background:#159504">Catalog green</div>
+        <div class="meta">
+          <div class="hex" data-hex="#159504">#159504</div>
+          <code>RGB 21 149 4 · --color-green-700</code>
+          <div class="use">Inventární číslo na kartě vozíku (57328). Overlay poboček.</div>
+        </div>
+      </article>
+      <article class="swatch">
+        <div class="chip dark" style="background:#000000">Header black</div>
+        <div class="meta">
+          <div class="hex" data-hex="#000000">#000000</div>
+          <code>RGB 0 0 0 · --color-header-background</code>
+          <div class="use">Hlavička, zápatí, tmavé panely. Limetka na černé je OK.</div>
+        </div>
+      </article>
+      <article class="swatch">
+        <div class="chip ink" style="background:#FFFFFF;border-bottom:1px solid #e6e6e6">White</div>
+        <div class="meta">
+          <div class="hex" data-hex="#FFFFFF">#FFFFFF</div>
+          <code>RGB 255 255 255 · --color-true-white</code>
+          <div class="use">Karty, header telefonní CTA, text na zelených flat tlačítkách ne — tam #111.</div>
+        </div>
+      </article>
+      <article class="swatch">
+        <div class="chip dark" style="background:#E05010">NobleLift</div>
+        <div class="meta">
+          <div class="hex" data-hex="#E05010">#E05010</div>
+          <code>RGB 224 80 16 · --color-noblelift</code>
+          <div class="use">Jen NobleLift: hover tlačítka Vybrat vozík, oranžové phone CTA.</div>
+        </div>
+      </article>
+    </div>
+
+    <h2>2. Zelená škála</h2>
+    <div class="grid">
+      <article class="swatch"><div class="chip dark" style="background:#073201"></div><div class="meta"><div class="hex" data-hex="#073201">#073201</div><code>--color-green-900</code><div class="use">Hover odkazu</div></div></article>
+      <article class="swatch"><div class="chip dark" style="background:#0E6303"></div><div class="meta"><div class="hex" data-hex="#0E6303">#0E6303</div><code>--color-green-800</code><div class="use">Text / link</div></div></article>
+      <article class="swatch"><div class="chip dark" style="background:#159504"></div><div class="meta"><div class="hex" data-hex="#159504">#159504</div><code>--color-green-700</code><div class="use">Čísla v katalogu</div></div></article>
+      <article class="swatch"><div class="chip ink" style="background:#1CC705"></div><div class="meta"><div class="hex" data-hex="#1CC705">#1CC705</div><code>--color-green-600</code><div class="use">Podpora / ikony</div></div></article>
+      <article class="swatch"><div class="chip ink" style="background:#23F906"></div><div class="meta"><div class="hex" data-hex="#23F906">#23F906</div><code>--color-green-500</code><div class="use">Ne na text</div></div></article>
+      <article class="swatch"><div class="chip ink" style="background:#4FFA38"></div><div class="meta"><div class="hex" data-hex="#4FFA38">#4FFA38</div><code>--color-green-400</code><div class="use">Světlý accent</div></div></article>
+      <article class="swatch"><div class="chip ink" style="background:#73FB61"></div><div class="meta"><div class="hex" data-hex="#73FB61">#73FB61</div><code>--color-green-300</code><div class="use">Primary CTA</div></div></article>
+      <article class="swatch"><div class="chip ink" style="background:#A7FC9C"></div><div class="meta"><div class="hex" data-hex="#A7FC9C">#A7FC9C</div><code>--color-green-200</code><div class="use">Tint</div></div></article>
+      <article class="swatch"><div class="chip ink" style="background:#D3FECD"></div><div class="meta"><div class="hex" data-hex="#D3FECD">#D3FECD</div><code>--color-green-100 / --color-vzvrent</code><div class="use">Jemné pozadí, VZV Rent tint</div></div></article>
+      <article class="swatch"><div class="chip ink" style="background:#5FE84D"></div><div class="meta"><div class="hex" data-hex="#5FE84D">#5FE84D</div><code>E-SHOP hover</code><div class="use">Hover header E-SHOP</div></div></article>
+    </div>
+
+    <h2>3. Neutrální</h2>
+    <div class="grid">
+      <article class="swatch"><div class="chip dark" style="background:#111111"></div><div class="meta"><div class="hex" data-hex="#111111">#111111</div><code>text na limetce</code></div></article>
+      <article class="swatch"><div class="chip dark" style="background:#1A1A1A"></div><div class="meta"><div class="hex" data-hex="#1A1A1A">#1A1A1A</div><code>--color-dark</code></div></article>
+      <article class="swatch"><div class="chip dark" style="background:#333333"></div><div class="meta"><div class="hex" data-hex="#333333">#333333</div><code>--color-dark-light</code></div></article>
+      <article class="swatch"><div class="chip dark" style="background:#4D4D4D"></div><div class="meta"><div class="hex" data-hex="#4D4D4D">#4D4D4D</div><code>--color-gray-700 · body</code></div></article>
+      <article class="swatch"><div class="chip dark" style="background:#666666"></div><div class="meta"><div class="hex" data-hex="#666666">#666666</div><code>--color-gray-600</code></div></article>
+      <article class="swatch"><div class="chip dark" style="background:#808080"></div><div class="meta"><div class="hex" data-hex="#808080">#808080</div><code>--color-gray-500</code></div></article>
+      <article class="swatch"><div class="chip ink" style="background:#999999"></div><div class="meta"><div class="hex" data-hex="#999999">#999999</div><code>--color-gray-400</code></div></article>
+      <article class="swatch"><div class="chip ink" style="background:#B3B3B3"></div><div class="meta"><div class="hex" data-hex="#B3B3B3">#B3B3B3</div><code>--color-gray-300</code></div></article>
+      <article class="swatch"><div class="chip ink" style="background:#CCCCCC"></div><div class="meta"><div class="hex" data-hex="#CCCCCC">#CCCCCC</div><code>--color-gray-200 · obrysy</code></div></article>
+      <article class="swatch"><div class="chip ink" style="background:#E6E6E6"></div><div class="meta"><div class="hex" data-hex="#E6E6E6">#E6E6E6</div><code>--color-light-dark</code></div></article>
+      <article class="swatch"><div class="chip ink" style="background:#FAFAFA"></div><div class="meta"><div class="hex" data-hex="#FAFAFA">#FAFAFA</div><code>pozadí stránek</code></div></article>
+      <article class="swatch"><div class="chip ink" style="background:#F2F2F2"></div><div class="meta"><div class="hex" data-hex="#F2F2F2">#F2F2F2</div><code>hover bílého header phone</code></div></article>
+    </div>
+
+    <h2>4. Kde co použít</h2>
+    <table>
+      <thead><tr><th>Prvek</th><th>Default</th><th>Hover / stav</th></tr></thead>
+      <tbody>
+        <tr><td>Header</td><td><span class="dot" style="background:#000"></span>#000000</td><td>aktivní odkaz <span class="dot" style="background:#73FB61"></span>#73FB61</td></tr>
+        <tr><td>Header E-SHOP</td><td><span class="dot" style="background:#73FB61"></span>#73FB61 fill, text #111</td><td><span class="dot" style="background:#5FE84D"></span>#5FE84D</td></tr>
+        <tr><td>Header telefon</td><td>bílá výplň, text #111, stroke #111</td><td>výplň #F2F2F2</td></tr>
+        <tr><td>Phone CTA v banneru (.btn-yellow)</td><td>průhledná výplň, obrys #73FB61, text bílá</td><td>výplň rgba(115,251,97,0.22), stejný obrys, text bílá</td></tr>
+        <tr><td>Hledat / Do košíku / primary</td><td><span class="dot" style="background:#73FB61"></span>#73FB61, text #000</td><td>tmavší limetka / černý text</td></tr>
+        <tr><td>Odkazy na světlém</td><td><span class="dot" style="background:#0E6303"></span>#0E6303</td><td><span class="dot" style="background:#073201"></span>#073201</td></tr>
+        <tr><td>Cena na kartě</td><td><span class="dot" style="background:#0E6303"></span>#0E6303</td><td>—</td></tr>
+        <tr><td>Inventární číslo (57328)</td><td><span class="dot" style="background:#159504"></span>#159504</td><td>nepoužívat #73FB61 — na bílé je málo čitelné</td></tr>
+        <tr><td>NobleLift Vybrat vozík</td><td>bílá, text černý</td><td><span class="dot" style="background:#E05010"></span>#E05010, text bílá</td></tr>
+        <tr><td>NobleLift phone CTA</td><td>obrys #E05010</td><td>výplň rgba analogicky oranžová 0.22</td></tr>
+      </tbody>
+    </table>
+
+    <h2>5. Ukázky tlačítek</h2>
+    <div class="recipes">
+      <div class="recipe">
+        <h3>Primary lime</h3>
+        <a class="btn btn-lime">Hledat</a>
+        <a class="btn btn-lime">Do košíku</a>
+      </div>
+      <div class="recipe" style="background:#111;color:#fff">
+        <h3>Phone CTA na tmavém</h3>
+        <a class="btn btn-phone">+420 777 711 378</a>
+        <a class="btn btn-phone-hover">hover</a>
+      </div>
+      <div class="recipe" style="background:#111;color:#fff">
+        <h3>NobleLift</h3>
+        <a class="btn btn-nl">Vybrat vozík</a>
+        <a class="btn btn-nl-hover">hover</a>
+      </div>
+    </div>
+
+    <h2>6. Pravidla pro IT</h2>
+    <p class="note"><span class="do">DO:</span> limetku na černé a na velká CTA. Čísla a text na bílé v #159504 / #0E6303. Text na limetce vždy tmavý (#111). NobleLift oranž jen na NobleLift bloky.</p>
+    <p class="note" style="margin-top:10px"><span class="dont">DON’T:</span> #73FB61 jako barva malého textu na bílém (katalogové číslo). Neměnit header phone na limetku. Nemíchat NobleLift oranž do VZV zelených CTA.</p>
+
+    <h2>7. CSS tokeny ke zkopírování</h2>
+    <pre>:root {
+  --color-primary: #73FB61;
+  --color-primary-light: #A7FC9C;
+  --color-primary-dark: #0E6303;
+  --color-vzv: #73FB61;
+  --color-green-900: #073201;
+  --color-green-800: #0E6303;
+  --color-green-700: #159504;
+  --color-green-600: #1CC705;
+  --color-green-500: #23F906;
+  --color-green-400: #4FFA38;
+  --color-green-300: #73FB61;
+  --color-green-200: #A7FC9C;
+  --color-green-100: #D3FECD;
+  --color-noblelift: #E05010;
+  --color-header-background: #000000;
+  --color-dark: #1A1A1A;
+  --color-gray-700: #4D4D4D;
+  --color-page: #FAFAFA;
+  --phone-hover-wash: rgba(115, 251, 97, 0.22);
+}</pre>
+
+    <footer>Zdroj: pages/vzv.cz/cz/index/colors-green.css a aktuální UI VZV.cz. Paleta je instrukce, ne nový branding.</footer>
+  </main>
+  <div class="toast" id="toast">Zkopírováno</div>
+  <script>
+    document.querySelectorAll('.hex').forEach(function (el) {
+      el.title = 'Kliknutím zkopírovat';
+      el.addEventListener('click', function () {
+        var v = el.getAttribute('data-hex');
+        navigator.clipboard.writeText(v).then(function () {
+          var t = document.getElementById('toast');
+          t.textContent = v + ' zkopírováno';
+          t.style.display = 'block';
+          setTimeout(function () { t.style.display = 'none'; }, 1400);
+        });
+      });
+    });
+  </script>
+</body>
+</html>

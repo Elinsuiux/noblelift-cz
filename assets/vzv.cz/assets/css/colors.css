@@ -13,7 +13,7 @@
     --color-dark-light: #464646;
 
     --color-warning: #ff890a;
-    --color-sleva: #fef200;
+    --color-sleva: #73fb61;
     --color-prodejni-akce: #ffc90d;
 
     --color-call: #04af04;
@@ -124,9 +124,69 @@ a.text-primary:hover {
     border-color: var(--color-primary-dark);
 }
 
-.btn-cart:hover {
-    background-color: var(--color-primary);
-    border-color: var(--color-primary);
+.btn-cart,
+.btn-primary.btn-cart,
+button.btn-cart {
+    color: #ffffff !important;
+    background: #000000 !important;
+    background-color: #000000 !important;
+    border-color: #000000 !important;
+}
+
+.btn-cart svg,
+.btn-primary.btn-cart svg,
+.btn-cart svg path {
+    fill: #ffffff !important;
+}
+
+.btn-cart:hover,
+.btn-cart:focus,
+.btn-cart:active,
+.btn-primary.btn-cart:hover,
+.btn-primary.btn-cart:focus,
+.btn-primary.btn-cart:active {
+    color: #ffffff !important;
+    background: #111111 !important;
+    background-color: #111111 !important;
+    border-color: #111111 !important;
+}
+
+.btn-cart:hover svg,
+.btn-primary.btn-cart:hover svg,
+.btn-cart:hover svg path {
+    fill: #ffffff !important;
+}
+
+a.btn.btn-outline-primary[id^="item-v-kosiku-"],
+a[id^="item-v-kosiku-"].btn,
+.card-footer a.btn[id^="item-v-kosiku-"],
+[id^="item-v-kosiku"],
+a[id^="item-v-kosiku"].btn-outline-primary {
+    background: #f0f0f0 !important;
+    background-color: #f0f0f0 !important;
+    color: #073201 !important;
+    border: 1px solid #073201 !important;
+}
+
+a.btn.btn-outline-primary[id^="item-v-kosiku-"]:hover,
+a.btn.btn-outline-primary[id^="item-v-kosiku-"]:focus,
+a.btn.btn-outline-primary[id^="item-v-kosiku-"]:active,
+a[id^="item-v-kosiku-"].btn:hover,
+a[id^="item-v-kosiku-"].btn:focus,
+a[id^="item-v-kosiku-"].btn:active,
+.card-footer a.btn[id^="item-v-kosiku-"]:hover,
+.card-footer a.btn[id^="item-v-kosiku-"]:focus,
+.card-footer a.btn[id^="item-v-kosiku-"]:active,
+[id^="item-v-kosiku"]:hover,
+[id^="item-v-kosiku"]:focus,
+[id^="item-v-kosiku"]:active,
+a[id^="item-v-kosiku"].btn-outline-primary:hover,
+a[id^="item-v-kosiku"].btn-outline-primary:focus,
+a[id^="item-v-kosiku"].btn-outline-primary:active {
+    background: #f0f0f0 !important;
+    background-color: #f0f0f0 !important;
+    color: #073201 !important;
+    border-color: #073201 !important;
 }
 
 .btn-primary svg {
@@ -138,6 +198,105 @@ a.text-primary:hover {
 }
 .bg-sleva {
     background: var(--color-sleva) !important;
+    color: #000000 !important;
+    border-radius: 0.25rem;
+    overflow: hidden;
+}
+.bg-sleva .text-sleva,
+.bg-sleva .text-decoration-line-through,
+.bg-sleva .text-primary.text-decoration-line-through {
+    color: #000000 !important;
+}
+
+/* Listing card: lime price sits on the same right column as Do košíku */
+.card-body > .row:has(.favourite-button),
+.card-footer.bg-transparent > .row {
+    display: flex;
+    align-items: center;
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
+    margin-left: 0;
+    margin-right: 0;
+}
+.card-body > .row:has(.favourite-button) > .col-7,
+.card-footer.bg-transparent > .row > .col-6:first-child {
+    flex: 0 0 50%;
+    max-width: 50%;
+    display: flex;
+    justify-content: flex-start !important;
+    align-items: center;
+    padding-left: 0 !important;
+    padding-right: 0.35rem !important;
+}
+.card-body > .row:has(.favourite-button) > .col-7 > :first-child {
+    margin-left: 0 !important;
+}
+.card-body > .row:has(.favourite-button) > .col-5,
+.card-footer.bg-transparent > .row > .col-6:last-child {
+    flex: 0 0 50%;
+    max-width: 50%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-left: 0.35rem !important;
+    padding-right: 0 !important;
+}
+.card-footer .col-6 .row.justify-content-center {
+    width: 100%;
+    max-width: 100%;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    --bs-gutter-x: 0;
+    flex: 1 1 auto;
+    display: flex;
+}
+.card-footer .col-6 .col-10.d-grid {
+    flex: 0 0 100%;
+    max-width: 100%;
+    width: 100%;
+    padding: 0 !important;
+}
+.card .bg-sleva,
+.card-footer .btn-cart,
+.card-footer [id^="item-v-kosiku"],
+.card-footer a.btn-dark.rounded-1 {
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    height: 38px;
+    box-sizing: border-box;
+}
+.card .bg-sleva {
+    margin: 0 !important;
+    padding: 0 8px !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.25rem !important;
+    overflow: hidden;
+}
+.card .bg-sleva > div {
+    margin: 0 !important;
+    padding: 0 !important;
+    line-height: 1.15;
+    white-space: nowrap;
+}
+.card .bg-sleva .text-sleva,
+.card .bg-sleva .text-decoration-line-through {
+    font-size: 0.7rem !important;
+}
+.card .bg-sleva .fw-bold {
+    font-size: 0.95rem !important;
+}
+
+.price-detail,
+.price-detail .text-vzv,
+.price-detail .fs-3,
+.price-detail [itemprop="price"] span,
+.content-body .price-detail .text-vzv,
+.content-body .price-detail .fs-3.text-vzv {
+    color: #000000 !important;
 }
 
 .text-prodejni-akce {
@@ -195,11 +354,11 @@ a.text-primary:hover {
 }
 
 .sticker-sleva {
-    background: var(--color-dark);
-    color: var(--color-prodejni-akce) !important;
+    background: #73fb61;
+    color: #000000 !important;
 }
 .sticker-sleva:before {
-    border-color: transparent var(--color-dark) transparent transparent;
+    border-color: transparent #73fb61 transparent transparent;
 }
 
 .sticker-nosnost {
