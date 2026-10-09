@@ -223,13 +223,15 @@ a[id^="item-v-kosiku"].btn-outline-primary:active {
     flex: 0 0 50%;
     max-width: 50%;
     display: flex;
-    justify-content: flex-start;
+    justify-content: flex-start !important;
     align-items: center;
     padding-left: 0 !important;
     padding-right: 0.35rem !important;
 }
+.card-body > .row:has(.favourite-button) > .col-7 > :first-child {
+    margin-left: 0 !important;
+}
 .card-body > .row:has(.favourite-button) > .col-5,
-.card-body > .row:has(.favourite-button) > .col-xxl-6,
 .card-footer.bg-transparent > .row > .col-6:last-child {
     flex: 0 0 50%;
     max-width: 50%;
