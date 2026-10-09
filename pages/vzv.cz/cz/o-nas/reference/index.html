@@ -3773,31 +3773,32 @@
 }
 .ref-project-card {
   display: flex; flex-direction: column;
-  background: #ffffff; border: 1px solid #e4e4e4;
-  border-radius: 12px; padding: 0 0 18px; overflow: hidden;
+  background: transparent; border: 0;
+  border-radius: 0; padding: 0;
 }
 .ref-project-thumb {
-  display: block; height: 220px; overflow: hidden; background: #e8e8e8;
+  display: block; height: 220px; overflow: hidden;
+  background: #e8e8e8; border-radius: 6px;
 }
 .ref-project-thumb img {
   display: block; width: 100%; height: 100%; object-fit: cover; object-position: center;
 }
 .ref-project-date {
-  display: block; margin: 16px 18px 8px;
+  display: block; margin: 16px 0 8px;
   font-size: 0.82rem; font-weight: 700; color: #14aa00;
 }
 .ref-project-card h3 {
-  margin: 0 18px 10px; font-size: 1.15rem; font-weight: 700;
+  margin: 0 0 10px; font-size: 1.15rem; font-weight: 700;
   line-height: 1.35; color: #111;
 }
 .ref-project-card h3 a { color: inherit; text-decoration: none; }
 .ref-project-card h3 a:hover { color: #0e6303; }
 .ref-project-card p {
-  margin: 0 18px 16px; flex: 1;
+  margin: 0 0 16px; flex: 1;
   font-size: 0.92rem; color: #555; line-height: 1.5;
 }
 .content-body .ref-project-more {
-  margin: 0 18px; font-size: 0.88rem; font-weight: 700;
+  margin: 0; font-size: 0.88rem; font-weight: 700;
   color: #111; text-decoration: none;
 }
 .content-body .ref-project-more:hover { color: #14aa00; }
