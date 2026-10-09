@@ -13,7 +13,7 @@
     --color-dark-light: #464646;
 
     --color-warning: #ff890a;
-    --color-sleva: #fef200;
+    --color-sleva: #73fb61;
     --color-prodejni-akce: #ffc90d;
 
     --color-call: #04af04;
@@ -198,6 +198,9 @@ a[id^="item-v-kosiku"].btn-outline-primary:active {
 }
 .bg-sleva {
     background: var(--color-sleva) !important;
+    color: #000000 !important;
+    border-radius: 8px;
+    overflow: hidden;
 }
 .bg-sleva .text-decoration-line-through,
 .bg-sleva .text-primary.text-decoration-line-through {
