@@ -3860,58 +3860,161 @@
   color: #666; font-size: 0.88rem; font-weight: 500;
 }
 .ref-testimonial footer span { font-size: 0.82rem; color: #888; }
-.ref-bottom {
-  max-width: 1240px; margin: 0 auto; padding: 24px 24px 72px;
-  display: grid; grid-template-columns: 1fr 1fr; gap: 24px;
+.ref-page-wrap .rent-bottom {
+  display: grid;
+  grid-template-columns: 1fr 1.15fr 1fr;
+  grid-template-areas:
+    "form form form"
+    "check consult contact";
+  gap: 12px;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 24px 24px 72px;
 }
-.ref-bottom article {
-  background: #ffffff; border: 1px solid #e4e4e4;
-  border-radius: 12px; padding: 28px;
+.ref-page-wrap .rent-check { grid-area: check; }
+.ref-page-wrap .rent-consult { grid-area: consult; }
+.ref-page-wrap .rent-form { grid-area: form; }
+.ref-page-wrap .rent-contact-bar { grid-area: contact; }
+.ref-page-wrap .rent-check,
+.ref-page-wrap .rent-consult,
+.ref-page-wrap .rent-form,
+.ref-page-wrap .rent-contact-bar {
+  padding: 18px 20px;
+  background: #f5f5f5;
+  border: 0;
+  border-radius: 6px;
 }
-.ref-bottom h2 {
-  margin: 0 0 16px; text-transform: uppercase;
-  font-family: Montserrat, sans-serif; font-weight: 700; letter-spacing: 0; color: #111;
+.ref-page-wrap .rent-check h2,
+.ref-page-wrap .rent-consult h2,
+.ref-page-wrap .rent-form h2,
+.ref-page-wrap .rent-form-about-lead {
+  margin: 0 0 20px;
+  font-family: Montserrat, sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.25;
+  font-weight: 800;
+  letter-spacing: 0;
+  text-transform: none;
+  text-align: left;
+  color: #111;
 }
-.ref-bottom h3 { margin: 22px 0 10px; font-size: 1.05rem; color: #111; }
-.ref-bottom ul { margin: 0 0 14px; padding-left: 18px; color: #444; }
-.ref-bottom li { margin: 0 0 8px; }
-.ref-bottom p { color: #444; line-height: 1.5; }
-.rent-form-fields {
-  display: grid; grid-template-columns: 1fr 1fr; gap: 12px;
+.ref-page-wrap .rent-check ul {
+  margin: 0; padding: 0; list-style: none;
 }
-.rent-form-fields label {
-  display: flex; flex-direction: column; gap: 6px;
-  font-size: 0.82rem; color: #555;
+.ref-page-wrap .rent-check li {
+  position: relative;
+  padding: 7px 0 7px 16px;
+  border-bottom: 1px solid #eee;
+  font-size: 0.86rem;
+  line-height: 1.35;
+  color: #444;
 }
-.rent-form-fields .is-wide, .rent-form-fields .rent-consent { grid-column: 1 / -1; }
-.rent-form-fields input, .rent-form-fields textarea {
-  background: #ffffff; border: 1px solid #cfcfcf;
-  color: #111; padding: 10px 12px; border-radius: 6px;
+.ref-page-wrap .rent-check li:last-child { border-bottom: 0; }
+.ref-page-wrap .rent-check li::before {
+  content: "";
+  position: absolute; top: 13px; left: 0;
+  width: 6px; height: 6px; border-radius: 50%;
+  background: #14aa00;
 }
-.rent-form-fields input::placeholder, .rent-form-fields textarea::placeholder { color: #999; }
-.rent-form-fields textarea { min-height: 96px; resize: vertical; }
-.rent-consent { flex-direction: row !important; align-items: flex-start; gap: 10px !important; }
-.btn-green {
-  border: 0; background: #73FB61; color: #111; font-weight: 700;
-  text-transform: uppercase; letter-spacing: 0.04em; padding: 12px 16px; cursor: pointer;
+.ref-page-wrap .rent-consult > p {
+  margin: 0 0 12px; font-size: 0.84rem; line-height: 1.45; color: #555;
 }
-.ref-form-help { margin-top: 14px; font-size: 0.9rem; }
-.ref-form-person {
-  display: grid; grid-template-columns: 1fr 120px; gap: 16px; margin-top: 18px;
+.ref-page-wrap .rent-consult-list {
+  display: grid; gap: 8px; margin: 0; padding: 0; list-style: none;
 }
-.ref-form-person-photo {
-  width: 120px; height: 140px; border-radius: 8px;
-  background: linear-gradient(180deg, #ececec, #d0d0d0);
+.ref-page-wrap .rent-consult-list li {
+  padding: 10px 12px; border-radius: 6px; background: #fff;
+}
+.ref-page-wrap .rent-consult-list strong {
+  display: block; margin-bottom: 2px; font-size: 0.82rem; color: #111;
+}
+.ref-page-wrap .rent-consult-list span {
+  display: block; color: #555; font-size: 0.78rem; line-height: 1.35;
+}
+.ref-page-wrap .rent-consult-cta {
+  margin: 14px 0 6px; font-size: 0.84rem; color: #111;
+}
+.ref-page-wrap .rent-consult-phone {
+  margin: 0 0 8px; font-size: 0.84rem; color: #555;
+}
+.ref-page-wrap .rent-consult-phone a,
+.ref-page-wrap .rent-consult-refs a,
+.ref-page-wrap .pdp-phone strong,
+.ref-page-wrap .rent-form-person-meta a {
+  color: #14aa00; font-weight: 700;
+}
+.ref-page-wrap .rent-consult-refs {
+  margin: 0; font-size: 0.8rem; color: #555;
+}
+.ref-page-wrap .rent-form-fields {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 10px;
+}
+.ref-page-wrap .rent-form-fields label {
+  display: grid; gap: 6px;
+  font-size: 0.72rem; font-weight: 700;
+  letter-spacing: 0.06em; text-transform: uppercase; color: #777;
+}
+.ref-page-wrap .rent-form-fields .is-wide,
+.ref-page-wrap .rent-form-fields .rent-consent,
+.ref-page-wrap .rent-form-fields .btn-green { grid-column: 1 / -1; }
+.ref-page-wrap .rent-form-fields input:not([type="checkbox"]),
+.ref-page-wrap .rent-form-fields textarea {
+  width: 100%; padding: 10px 12px; border: 0; border-radius: 6px;
+  background: #fff; color: #333; font: inherit; font-size: 0.9rem; font-weight: 400;
+}
+.ref-page-wrap .rent-form-fields input::placeholder,
+.ref-page-wrap .rent-form-fields textarea::placeholder { color: #b3b3b3; }
+.ref-page-wrap .rent-form-fields textarea { min-height: 72px; resize: vertical; }
+.ref-page-wrap .rent-form-fields .rent-consent {
+  display: flex; flex-direction: row; align-items: center; gap: 8px;
+  font-size: 0.8rem; font-weight: 400; letter-spacing: 0; text-transform: none; color: #444;
+}
+.ref-page-wrap .rent-form-fields .rent-consent input {
+  width: 16px; height: 16px; margin: 0; flex-shrink: 0; accent-color: #73FB61;
+}
+.ref-page-wrap .btn-green {
+  display: inline-flex; align-items: center; justify-content: center;
+  min-height: 44px; width: 100%; padding: 10px 18px;
+  border: 0; border-radius: 6px; cursor: pointer;
+  background: #73FB61; color: #111; font-weight: 700; font-size: 0.88rem;
+  text-transform: none; letter-spacing: 0;
+}
+.ref-page-wrap .pdp-phone {
+  display: block; margin: 12px 0 0; font-size: 0.86rem; color: #333; text-decoration: none;
+}
+.ref-page-wrap .rent-contact-bar {
+  display: grid; grid-template-columns: 1fr; gap: 16px;
+  align-items: start; align-content: space-between;
+}
+.ref-page-wrap .rent-form-about > p {
+  margin: 0 0 8px; font-size: 0.86rem; line-height: 1.45; color: #555;
+}
+.ref-page-wrap .rent-form-person {
+  display: grid; grid-template-columns: minmax(0, 1fr) 176px;
+  gap: 10px; align-items: end; margin-top: auto;
+}
+.ref-page-wrap .rent-form-person-meta { display: grid; gap: 2px; padding-bottom: 6px; }
+.ref-page-wrap .rent-form-person-meta strong { font-size: 0.95rem; color: #111; }
+.ref-page-wrap .rent-form-person-meta span { font-size: 0.8rem; color: #666; }
+.ref-page-wrap .rent-form-person-photo {
+  width: 176px; height: 198px; overflow: hidden; background: transparent;
+}
+.ref-page-wrap .rent-form-person-photo img {
+  display: block; width: 100%; height: 100%; object-fit: cover; object-position: center 12%;
 }
 @media (max-width: 992px) {
-  .ref-videos-inner, .ref-bottom, .ref-projects-grid, .ref-testimonials-grid, .ref-testimonials-logos { grid-template-columns: 1fr; }
+  .ref-videos-inner, .ref-projects-grid, .ref-testimonials-grid, .ref-testimonials-logos { grid-template-columns: 1fr; }
   .ref-videos-grid { grid-template-columns: 1fr; }
   .ref-clients-grid { grid-template-columns: repeat(3, 1fr); }
   .ref-videos-cta { max-width: none; }
+  .ref-page-wrap .rent-bottom {
+    grid-template-columns: 1fr;
+    grid-template-areas: "form" "check" "consult" "contact";
+  }
+  .ref-page-wrap .rent-form-fields, .ref-page-wrap .rent-form-person { grid-template-columns: 1fr; }
 }
 @media (max-width: 576px) {
-  .rent-form-fields, .ref-clients-grid { grid-template-columns: 1fr 1fr; }
-  .ref-form-person { grid-template-columns: 1fr; }
+  .ref-clients-grid { grid-template-columns: 1fr 1fr; }
 }
 </style>
 
@@ -4106,8 +4209,8 @@
     </div>
   </section>
 
-  <section class="ref-bottom" id="poptavka">
-    <article>
+  <section class="rent-bottom" id="poptavka">
+    <article class="rent-check">
       <h2>Zjistěte si před poptávkou</h2>
       <ul>
         <li>V jakých podmínkách bude vozík pracovat</li>
@@ -4116,12 +4219,30 @@
         <li>Výšku vrat, kterými vozík bude projíždět</li>
         <li>Máte zkušenou obsluhu vozíku?</li>
       </ul>
-      <h3>Osobní konzultace u vás ve firmě — zdarma a nezávazně</h3>
-      <p>Nechte si poradit od odborníka, který rozumí manipulační technice i vašemu provozu. Přijedeme za vámi, navrhneme řešení na míru a zůstaneme vaším partnerem i do budoucna.</p>
-      <p><strong>Zanechte nám kontakt — ozveme se do 24 hodin.</strong></p>
-      <p>Nebo volejte rovnou na <a href="tel:+420777333296"><strong>+420 777 333 296</strong></a></p>
     </article>
-    <article>
+    <article class="rent-consult">
+      <h2>Osobní konzultace u vás ve firmě – zdarma a nezávazně</h2>
+      <p>Nechte si poradit od odborníka, který rozumí manipulační technice i vašemu provozu. <strong>Přijedeme za vámi, navrhneme řešení na míru a zůstaneme vaším partnerem i do budoucna.</strong></p>
+      <ul class="rent-consult-list">
+        <li>
+          <strong>Osobní přístup</strong>
+          <span>Jeden obchodník – jeden kontakt. Náš business developer vás navštíví a zůstává vaším kontaktem i po schůzce.</span>
+        </li>
+        <li>
+          <strong>Řešení na míru</strong>
+          <span>Navrhneme optimální techniku podle vašich potřeb a provozních podmínek.</span>
+        </li>
+        <li>
+          <strong>Rychlá konzultace u vás</strong>
+          <span>Přijedeme kamkoli v ČR. Konzultace je zdarma a nezávazná.</span>
+        </li>
+        <li>
+          <strong>Cenová nabídka do 24 hodin</strong>
+          <span>Jasná a přehledná nabídka bez skrytých poplatků.</span>
+        </li>
+      </ul>
+    </article>
+    <article class="rent-form">
       <h2>Rychlá poptávka</h2>
       <form class="rent-form-fields" action="#poptavka" method="get">
         <label>
@@ -4141,6 +4262,10 @@
           <input type="email" name="email" placeholder="Zadejte svůj e-mail" required />
         </label>
         <label class="is-wide">
+          Adresa společnosti
+          <input type="text" name="address" placeholder="Ulice, město" />
+        </label>
+        <label class="is-wide">
           Poznámka
           <textarea name="note" placeholder="Jaký stroj potřebujete a na jak dlouho"></textarea>
         </label>
@@ -4150,16 +4275,27 @@
         </label>
         <button type="submit" class="btn-green is-wide">Odeslat poptávku</button>
       </form>
-      <p class="ref-form-help">Potřebujete pomoc? Volejte <a href="tel:+420777333131"><strong>+420 777 333 131</strong></a></p>
-      <div class="ref-form-person">
-        <div class="ref-form-person-text">
-          <p><strong>VZVRENT.cz je půjčovna manipulační techniky</strong> pro celou ČR.</p>
-          <p>Přemístíme paletu i velké technologické celky. Zapůjčíme Vám vysokozdvižné vozíky a speciální techniku na den, dva i rok.</p>
-          <p><strong>Tomáš Heralt</strong><br />obchodní ředitel<br /><a href="mailto:info@vzvrent.cz">info@vzvrent.cz</a></p>
-        </div>
-        <div class="ref-form-person-photo" aria-hidden="true"></div>
-      </div>
+      <a class="pdp-phone" href="tel:+420777333131">Potřebujete pomoc? Volejte <strong>+420 777 333 131</strong></a>
     </article>
+    <aside class="rent-contact-bar">
+      <div class="rent-form-about">
+        <h2 class="rent-form-about-lead"><strong>VZV je půjčovna manipulační techniky</strong> pro celou ČR.</h2>
+        <p>Přemístíme paletu i velké technologické celky. Zapůjčíme vám vysokozdvižné vozíky a speciální techniku na den, dva i rok. Neznáme slovo problém, nemáme předsudky.</p>
+        <p class="rent-consult-cta"><strong>Zanechte nám kontakt – ozveme se do 24 hodin.</strong></p>
+        <p class="rent-consult-phone">Nebo volejte rovnou na <a href="tel:+420777333296">+420 777 333 296</a></p>
+        <p class="rent-consult-refs">Důvěřují nám firmy z celé ČR – <a href="#reference">podívejte se na naše reference.</a></p>
+      </div>
+      <div class="rent-form-person">
+        <div class="rent-form-person-meta">
+          <strong>Tomáš Heralt</strong>
+          <span>obchodní ředitel</span>
+          <a href="mailto:info@vzvrent.cz">info@vzvrent.cz</a>
+        </div>
+        <div class="rent-form-person-photo">
+          <img src="../../../../../assets/vzv.cz/assets/img/pujcovna_vzv/tomas-heralt.webp" alt="Tomáš Heralt" />
+        </div>
+      </div>
+    </aside>
   </section>
 </div>
 
