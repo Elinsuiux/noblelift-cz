@@ -3668,6 +3668,20 @@ html {
 .content-body .fs-3.text-vzv {
     color: #000000 !important;
 }
+.content-body .price-detail {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+}
+.content-body .price-detail > br {
+    display: none;
+}
+.content-body .price-detail > .block:not(.priceIoLeasing):has(.formatPriceNote) {
+    order: -1;
+}
+.content-body .price-detail > .block:not(.priceIoLeasing) .formatPriceNote {
+    text-decoration: line-through;
+}
 .content-body .background-white {
     background: #ffffff;
 }
@@ -3687,13 +3701,13 @@ html {
 }
 .content-body button.btn-vzv[data-bs-target^="#modal-poptat-vozik"] {
     color: #000000 !important;
-    background-color: #a7fc9c !important;
-    border-color: #a7fc9c !important;
+    background-color: #73fb61 !important;
+    border-color: #73fb61 !important;
 }
 .content-body button.btn-vzv[data-bs-target^="#modal-poptat-vozik"]:hover {
     color: #000000 !important;
-    background-color: #73fb61 !important;
-    border-color: #73fb61 !important;
+    background-color: #1cc705 !important;
+    border-color: #1cc705 !important;
 }
 .content-body .col-xl-3 .background-grey button.btn-vzv[data-bs-target^="#modal-poptat-vozik"] {
     color: #000000 !important;
