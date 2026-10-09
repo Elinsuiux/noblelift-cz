@@ -2547,12 +2547,14 @@ a.stepSaved:hover
     max-height: 20px;
     margin: 0px 10px;
     transition: margin 700ms;
+    fill: #ffffff !important;
 }
 
 .btn-cart:hover svg {
     margin-right: 0px;
     margin-left: 20px;
     transition: margin 700ms;
+    fill: #ffffff !important;
 }
 
 .btn-compare svg {
@@ -4152,14 +4154,14 @@ html {
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ffffff'%3e%3cpath d='M.293.293a1 1 0 011.414 0L8 6.586 14.293.293a1 1 0 111.414 1.414L9.414 8l6.293 6.293a1 1 0 01-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 01-1.414-1.414L6.586 8 .293 1.707A1 1 0 01.293.293z'/%3e%3c/svg%3e") !important;
 }
 
-/* Listing / detail: V košíku state is black with white text. */
+/* Listing / detail: V košíku — white fill, green outline */
 a.btn.btn-outline-primary[id^="item-v-kosiku-"],
 a[id^="item-v-kosiku-"].btn,
 .card-footer a.btn[id^="item-v-kosiku-"] {
-    color: #ffffff !important;
-    background-color: #000000 !important;
-    background: #000000 !important;
-    border-color: #000000 !important;
+    color: #0e6303 !important;
+    background-color: #ffffff !important;
+    background: #ffffff !important;
+    border: 1px solid #0e6303 !important;
     white-space: nowrap !important;
 }
 a.btn.btn-outline-primary[id^="item-v-kosiku-"]:hover,
@@ -4171,10 +4173,10 @@ a[id^="item-v-kosiku-"].btn:active,
 .card-footer a.btn[id^="item-v-kosiku-"]:hover,
 .card-footer a.btn[id^="item-v-kosiku-"]:focus,
 .card-footer a.btn[id^="item-v-kosiku-"]:active {
-    color: #ffffff !important;
-    background-color: #1a1a1a !important;
-    background: #1a1a1a !important;
-    border-color: #1a1a1a !important;
+    color: #0e6303 !important;
+    background-color: #ffffff !important;
+    background: #ffffff !important;
+    border-color: #0e6303 !important;
 }
 
 /* Košík checkout step 1 — live layout, our greens */
