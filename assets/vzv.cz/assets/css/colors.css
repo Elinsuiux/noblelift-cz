@@ -162,10 +162,10 @@ a[id^="item-v-kosiku-"].btn,
 .card-footer a.btn[id^="item-v-kosiku-"],
 [id^="item-v-kosiku"],
 a[id^="item-v-kosiku"].btn-outline-primary {
-    background: #ffffff !important;
-    background-color: #ffffff !important;
-    color: #0e6303 !important;
-    border: 1px solid #0e6303 !important;
+    background: #f0f0f0 !important;
+    background-color: #f0f0f0 !important;
+    color: #073201 !important;
+    border: 1px solid #073201 !important;
 }
 
 a.btn.btn-outline-primary[id^="item-v-kosiku-"]:hover,
@@ -183,10 +183,10 @@ a[id^="item-v-kosiku-"].btn:active,
 a[id^="item-v-kosiku"].btn-outline-primary:hover,
 a[id^="item-v-kosiku"].btn-outline-primary:focus,
 a[id^="item-v-kosiku"].btn-outline-primary:active {
-    background: #ffffff !important;
-    background-color: #ffffff !important;
-    color: #0e6303 !important;
-    border-color: #0e6303 !important;
+    background: #f0f0f0 !important;
+    background-color: #f0f0f0 !important;
+    color: #073201 !important;
+    border-color: #073201 !important;
 }
 
 .btn-primary svg {
@@ -199,11 +199,67 @@ a[id^="item-v-kosiku"].btn-outline-primary:active {
 .bg-sleva {
     background: var(--color-sleva) !important;
     color: #000000 !important;
-    border-radius: 8px;
+    border-radius: 0.25rem;
     overflow: hidden;
 }
+.bg-sleva .text-sleva,
 .bg-sleva .text-decoration-line-through,
 .bg-sleva .text-primary.text-decoration-line-through {
+    color: #000000 !important;
+}
+
+/* Listing card: sale price box matches Do košíku button */
+.card-body .row:has(.bg-sleva) > .col-7 {
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+.card-body .row:has(.bg-sleva) > .col-5,
+.card-body .row:has(.bg-sleva) > .col-xxl-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card .bg-sleva,
+.card-footer .btn-cart,
+.card-footer [id^="item-v-kosiku"] {
+    width: 146px;
+    min-width: 146px;
+    max-width: 146px;
+    height: 38px;
+    box-sizing: border-box;
+}
+.card .bg-sleva {
+    margin: 0 !important;
+    padding: 0 8px !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.25rem !important;
+    overflow: hidden;
+}
+.card .bg-sleva > div {
+    margin: 0 !important;
+    padding: 0 !important;
+    line-height: 1.15;
+    white-space: nowrap;
+}
+.card .bg-sleva .text-sleva,
+.card .bg-sleva .text-decoration-line-through {
+    font-size: 0.7rem !important;
+}
+.card .bg-sleva .fw-bold {
+    font-size: 0.95rem !important;
+}
+
+.price-detail,
+.price-detail .text-vzv,
+.price-detail .fs-3,
+.price-detail [itemprop="price"] span,
+.content-body .price-detail .text-vzv,
+.content-body .price-detail .fs-3.text-vzv {
     color: #000000 !important;
 }
 
