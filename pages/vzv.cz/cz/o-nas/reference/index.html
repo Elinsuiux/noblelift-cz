@@ -3687,24 +3687,25 @@
 </div>
 <div class="content-body">
 <style>
-/* Reference page (from prototype) */
-.ref-page-wrap { background: #0f0f0f; color: #f2f2f2; }
-.ref-page-wrap a { color: #73FB61; }
+/* Reference page — light version */
+.content-body { background: #f5f5f5; }
+.ref-page-wrap { background: #f5f5f5; color: #212529; }
+.ref-page-wrap a { color: #0e6303; }
 .ref-hero {
   max-width: 1240px; margin: 0 auto; padding: 36px 24px 12px;
 }
 .ref-hero .pdp-breadcrumb {
   display: flex; flex-wrap: wrap; gap: 8px; align-items: center;
   font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.04em;
-  margin-bottom: 16px; color: rgba(255,255,255,0.55);
+  margin-bottom: 16px; color: rgba(0,0,0,0.45);
 }
-.ref-hero .pdp-breadcrumb a { color: rgba(255,255,255,0.7); text-decoration: none; }
-.ref-hero .pdp-breadcrumb a:hover { color: #73FB61; }
+.ref-hero .pdp-breadcrumb a { color: rgba(0,0,0,0.55); text-decoration: none; }
+.ref-hero .pdp-breadcrumb a:hover { color: #0e6303; }
 .ref-hero h1 {
   margin: 0; font-family: "Bebas Neue", "Teko", sans-serif;
-  font-size: clamp(2.4rem, 5vw, 3.6rem); letter-spacing: 0.04em; color: #fff;
+  font-size: clamp(2.4rem, 5vw, 3.6rem); letter-spacing: 0.04em; color: #111;
 }
-.ref-videos { background: #1a1a1a; padding: 48px 24px; }
+.ref-videos { background: #ececec; padding: 48px 24px; }
 .ref-videos-inner {
   max-width: 1240px; margin: 0 auto;
   display: grid; grid-template-columns: 1fr auto; gap: 36px; align-items: center;
@@ -3729,20 +3730,20 @@
 .ref-video-sub { bottom: 34px; font-size: 0.72rem; color: rgba(255,255,255,0.75); }
 .ref-video-title { bottom: 12px; font-size: 0.95rem; font-weight: 700; letter-spacing: 0.02em; }
 .ref-videos-cta { text-align: center; max-width: 220px; }
-.ref-videos-cta p { margin: 0 0 14px; color: rgba(255,255,255,0.8); }
+.ref-videos-cta p { margin: 0 0 14px; color: #444; }
 .ref-videos-cta .btn-ghost {
-  display: inline-block; padding: 10px 16px; border: 1px solid #73FB61;
-  color: #73FB61; text-decoration: none; text-transform: uppercase;
+  display: inline-block; padding: 10px 16px; border: 1px solid #073201;
+  color: #111; background: #73FB61; text-decoration: none; text-transform: uppercase;
   font-size: 0.78rem; font-weight: 700; letter-spacing: 0.04em;
 }
-.ref-videos-cta .btn-ghost:hover { background: #73FB61; color: #111; }
+.ref-videos-cta .btn-ghost:hover { background: #1cc705; color: #111; border-color: #073201; }
 .ref-clients, .ref-projects, .ref-testimonials {
   max-width: 1240px; margin: 0 auto; padding: 64px 24px;
 }
 .ref-clients h2, .ref-projects h2, .ref-testimonials h2 {
   margin: 0 0 28px; text-align: center; text-transform: uppercase;
   font-family: "Bebas Neue", "Teko", sans-serif;
-  font-size: clamp(1.8rem, 3vw, 2.4rem); letter-spacing: 0.04em; color: #fff;
+  font-size: clamp(1.8rem, 3vw, 2.4rem); letter-spacing: 0.04em; color: #111;
 }
 .ref-clients-grid {
   display: grid; grid-template-columns: repeat(6, 1fr); gap: 12px;
@@ -3750,95 +3751,96 @@
 .ref-client-logo {
   display: flex; align-items: center; justify-content: center;
   min-height: 88px; padding: 14px 12px;
-  background: linear-gradient(180deg, #1a1a1a 0%, #0d0d0d 100%);
-  border: 1px solid rgba(255,255,255,0.08); border-radius: 12px;
+  background: #ffffff;
+  border: 1px solid #e4e4e4; border-radius: 12px;
 }
 .ref-client-logo img {
   max-width: 100%; max-height: 52px; width: auto; height: auto;
-  object-fit: contain; filter: brightness(0) invert(1);
+  object-fit: contain; filter: none;
 }
 .ref-projects-grid {
   display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;
 }
 .ref-project-card {
-  background: #161616; border: 1px solid rgba(255,255,255,0.08);
+  background: #ffffff; border: 1px solid #e4e4e4;
   border-radius: 12px; padding: 0 0 18px; overflow: hidden;
 }
 .ref-project-thumb {
   height: 160px;
   background:
-    linear-gradient(135deg, rgba(115,251,97,0.18), rgba(0,0,0,0.4)),
-    #222;
+    linear-gradient(135deg, rgba(115,251,97,0.35), rgba(255,255,255,0.15)),
+    #d7d7d7;
 }
 .ref-project-date {
-  display: block; margin: 14px 16px 6px; font-size: 0.78rem; color: #73FB61;
+  display: block; margin: 14px 16px 6px; font-size: 0.78rem; color: #0e6303;
 }
 .ref-project-card h3 {
-  margin: 0 16px 10px; font-size: 1.05rem; line-height: 1.35; color: #fff;
+  margin: 0 16px 10px; font-size: 1.05rem; line-height: 1.35; color: #111;
 }
 .ref-project-card p {
-  margin: 0 16px 12px; font-size: 0.9rem; color: rgba(255,255,255,0.72); line-height: 1.5;
+  margin: 0 16px 12px; font-size: 0.9rem; color: #555; line-height: 1.5;
 }
 .ref-project-more {
-  margin: 0 16px; font-size: 0.82rem; font-weight: 700; color: #73FB61;
+  margin: 0 16px; font-size: 0.82rem; font-weight: 700; color: #0e6303;
 }
 .ref-projects-pagination {
   display: flex; justify-content: center; gap: 8px; margin-top: 28px;
 }
 .ref-page {
   display: inline-grid; place-items: center; min-width: 34px; height: 34px;
-  padding: 0 8px; border: 1px solid rgba(255,255,255,0.2);
-  color: rgba(255,255,255,0.75); text-decoration: none; font-size: 0.85rem;
+  padding: 0 8px; border: 1px solid #d0d0d0;
+  color: #555; text-decoration: none; font-size: 0.85rem; background: #fff;
 }
-.ref-page.is-active, .ref-page:hover { border-color: #73FB61; color: #73FB61; }
+.ref-page.is-active, .ref-page:hover { border-color: #73FB61; color: #111; background: #73FB61; }
 .ref-testimonials-grid {
   display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px;
 }
 .ref-testimonial {
-  background: #161616; border: 1px solid rgba(255,255,255,0.08);
+  background: #ffffff; border: 1px solid #e4e4e4;
   border-radius: 12px; overflow: hidden; padding-bottom: 18px;
 }
 .ref-testimonial img { display: block; width: 100%; height: 220px; object-fit: cover; }
 .ref-testimonial > p {
-  margin: 14px 16px 0; font-size: 0.92rem; line-height: 1.5; color: rgba(255,255,255,0.8);
+  margin: 14px 16px 0; font-size: 0.92rem; line-height: 1.5; color: #444;
 }
 .ref-testimonial-quote {
   border-left: 3px solid #73FB61; padding-left: 12px !important;
-  font-style: italic; color: rgba(255,255,255,0.7) !important;
+  font-style: italic; color: #555 !important;
 }
 .ref-testimonial footer {
   margin: 16px 16px 0; display: flex; flex-direction: column; gap: 2px;
 }
-.ref-testimonial footer strong { color: #fff; }
-.ref-testimonial footer span { font-size: 0.82rem; color: rgba(255,255,255,0.55); }
+.ref-testimonial footer strong { color: #111; }
+.ref-testimonial footer span { font-size: 0.82rem; color: #777; }
 .ref-bottom {
   max-width: 1240px; margin: 0 auto; padding: 24px 24px 72px;
   display: grid; grid-template-columns: 1fr 1fr; gap: 24px;
 }
 .ref-bottom article {
-  background: #161616; border: 1px solid rgba(255,255,255,0.08);
+  background: #ffffff; border: 1px solid #e4e4e4;
   border-radius: 12px; padding: 28px;
 }
 .ref-bottom h2 {
   margin: 0 0 16px; text-transform: uppercase;
-  font-family: "Bebas Neue", "Teko", sans-serif; letter-spacing: 0.04em; color: #fff;
+  font-family: "Bebas Neue", "Teko", sans-serif; letter-spacing: 0.04em; color: #111;
 }
-.ref-bottom h3 { margin: 22px 0 10px; font-size: 1.05rem; color: #fff; }
-.ref-bottom ul { margin: 0 0 14px; padding-left: 18px; color: rgba(255,255,255,0.8); }
+.ref-bottom h3 { margin: 22px 0 10px; font-size: 1.05rem; color: #111; }
+.ref-bottom ul { margin: 0 0 14px; padding-left: 18px; color: #444; }
 .ref-bottom li { margin: 0 0 8px; }
-.ref-bottom p { color: rgba(255,255,255,0.78); line-height: 1.5; }
+.ref-bottom p { color: #444; line-height: 1.5; }
 .rent-form-fields {
   display: grid; grid-template-columns: 1fr 1fr; gap: 12px;
 }
 .rent-form-fields label {
   display: flex; flex-direction: column; gap: 6px;
-  font-size: 0.82rem; color: rgba(255,255,255,0.7);
+  font-size: 0.82rem; color: #555;
 }
 .rent-form-fields .is-wide, .rent-form-fields .rent-consent { grid-column: 1 / -1; }
 .rent-form-fields input, .rent-form-fields textarea {
-  background: #0f0f0f; border: 1px solid rgba(255,255,255,0.18);
-  color: #fff; padding: 10px 12px; border-radius: 6px;
+  background: #ffffff; border: 1px solid #cfcfcf;
+  color: #111; padding: 10px 12px; border-radius: 6px;
 }
+.rent-form-fields input::placeholder, .rent-form-fields textarea::placeholder { color: #999; }
 .rent-form-fields textarea { min-height: 96px; resize: vertical; }
 .rent-consent { flex-direction: row !important; align-items: flex-start; gap: 10px !important; }
 .btn-green {
@@ -3851,7 +3853,7 @@
 }
 .ref-form-person-photo {
   width: 120px; height: 140px; border-radius: 8px;
-  background: linear-gradient(180deg, #2a2a2a, #111);
+  background: linear-gradient(180deg, #ececec, #d0d0d0);
 }
 @media (max-width: 992px) {
   .ref-videos-inner, .ref-bottom, .ref-projects-grid, .ref-testimonials-grid { grid-template-columns: 1fr; }
