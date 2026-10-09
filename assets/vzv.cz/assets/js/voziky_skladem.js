@@ -55,6 +55,37 @@ function rewriteDetailLinks()
             return;
         }
         $(this).attr('href', prefix + m[1] + '/index.html');
+        $(this).removeAttr('target');
+    });
+    bindForkliftCardClicks();
+}
+
+function bindForkliftCardClicks()
+{
+    $('#forklifts .card').each(function () {
+        var $card = $(this);
+        $card.find('a[target="_blank"]').removeAttr('target');
+        var href = $card.find('a[href]').filter(function () {
+            var h = $(this).attr('href') || '';
+            return /index\.html/i.test(h) && !/kosik|youtu|mailto:|tel:/i.test(h);
+        }).first().attr('href');
+        if (!href)
+        {
+            return;
+        }
+        $card.off('click.vzvcard').on('click.vzvcard', function (e) {
+            if ($(e.target).closest('button, .btn, a[href*="youtu"], a[href*="kosik"], .favourite-button, .compare-button, input, select, textarea').length)
+            {
+                return;
+            }
+            var $link = $(e.target).closest('a[href]');
+            if ($link.length)
+            {
+                $link.removeAttr('target');
+                return;
+            }
+            window.location.href = href;
+        });
     });
 }
 
