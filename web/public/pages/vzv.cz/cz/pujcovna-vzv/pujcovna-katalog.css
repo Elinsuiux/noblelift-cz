@@ -39,22 +39,25 @@
   box-shadow: 0 0 0 2px rgba(115, 251, 97, 0.45);
 }
 
-.rent-catalog .card-vzv {
+.rent-catalog .card.card-vzv,
+.rent-catalog article.card-vzv {
   background: #fff;
-  border: 1px solid #e0e0e0;
+  border: 0 !important;
   border-radius: 6px;
   overflow: hidden;
   height: 100%;
   display: flex;
   flex-direction: column;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+  box-shadow: none !important;
+  outline: none;
 }
 
 .rent-catalog .card-vzv .card-img {
   position: relative;
   width: 100%;
   padding-top: 66.625%;
-  background-color: #f3f3f3;
+  background-color: #fff;
+  border: 0;
   background-repeat: no-repeat !important;
   background-position: center !important;
   background-size: contain !important;
@@ -127,6 +130,34 @@
   padding: 10px 8px;
 }
 
+.rent-catalog .card-vzv-actions .btn.btn-dark,
+.rent-catalog .card-vzv-actions .btn.btn-dark:hover,
+.rent-catalog .card-vzv-actions .btn.btn-dark:focus,
+.rent-catalog .card-vzv-actions .btn.btn-dark:active,
+.rent-catalog .card-vzv-actions a.btn-dark:hover {
+  background: transparent !important;
+  background-color: transparent !important;
+  color: #1a1a1a !important;
+  border: 1px solid #d0d0d0 !important;
+  box-shadow: none !important;
+}
+
+.rent-catalog .card-vzv-actions .btn.btn-primary,
+.rent-catalog .card-vzv-actions .btn.btn-primary:hover,
+.rent-catalog .card-vzv-actions .btn.btn-primary:focus,
+.rent-catalog .card-vzv-actions .btn.btn-primary:active,
+.rent-catalog .card-vzv-actions a.btn-primary:hover,
+.rent-detail .rent-detail-actions .btn.btn-primary,
+.rent-detail .rent-detail-actions .btn.btn-primary:hover,
+.rent-detail .rent-detail-actions .btn.btn-primary:focus,
+.rent-detail .rent-detail-actions .btn.btn-primary:active {
+  background: #73fb61 !important;
+  background-color: #73fb61 !important;
+  border-color: #73fb61 !important;
+  color: #000 !important;
+  box-shadow: none !important;
+}
+
 .rent-catalog #forklifts-empty {
   display: none;
 }
@@ -162,12 +193,31 @@
   height: 100%;
 }
 
+.rent-spec-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 44px;
+  margin: 0 0 8px;
+}
+
+.rent-spec-icon img {
+  display: block;
+  width: 44px;
+  height: 44px;
+  object-fit: contain;
+}
+
 .rent-spec-label {
   font-size: 0.75rem;
   text-transform: uppercase;
   letter-spacing: 0.04em;
   color: #666;
   margin-bottom: 6px;
+}
+
+.rent-detail .rent-pills {
+  display: none;
 }
 
 .rent-spec-value {
@@ -225,7 +275,7 @@
   display: inline-flex;
   align-items: center;
   border: 1px solid #cfcfcf;
-  border-radius: 999px;
+  border-radius: 8px;
   padding: 7px 16px;
   background: #fff;
   color: #222;
@@ -250,29 +300,448 @@
 .rent-pills-nudge {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   align-self: center;
-  gap: 4px;
-  padding: 7px 2px;
-  color: #14aa00;
+  gap: 8px;
+  padding: 7px 16px;
+  border: 1px solid #1bc605;
+  border-radius: 8px;
+  background: #fff;
+  color: #0e6303;
   font-size: 0.92rem;
-  font-weight: 600;
-  line-height: 1.3;
-  text-decoration: underline;
-  text-decoration-color: rgba(20, 170, 0, 0.45);
-  text-underline-offset: 3px;
+  font-weight: 700;
+  line-height: 1.2;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.rent-pills-nudge::before {
+  content: "";
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  background: currentColor;
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z'/%3E%3C/svg%3E");
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z'/%3E%3C/svg%3E");
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
 }
 
 .rent-pills-nudge strong {
-  font-weight: 800;
+  font-weight: 700;
 }
 
 .rent-pills-nudge:hover {
-  color: #073201;
-  text-decoration-color: #14aa00;
+  background: #f3fff0;
+  border-color: #1bc605;
+  color: #0e6303;
+  text-decoration: none;
 }
 
 @media (max-width: 767.98px) {
   .rent-pill {
     white-space: normal;
+  }
+}
+
+/* Catalog footer inquiry: form + hub info columns */
+.rent-catalog-inquiry.container {
+  max-width: 1320px;
+}
+
+.rent-catalog-inquiry {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+  align-items: stretch;
+  padding: 8px 12px 48px;
+}
+
+.rent-catalog-inquiry-cols {
+  display: grid;
+  grid-template-columns: 1fr 1.15fr 1fr;
+  gap: 12px;
+  min-width: 0;
+  align-items: stretch;
+}
+
+.rent-catalog-inquiry .rent-form,
+.rent-catalog-inquiry .rent-check,
+.rent-catalog-inquiry .rent-consult,
+.rent-catalog-inquiry .rent-contact-bar {
+  padding: 18px 20px;
+  background: #f5f5f5;
+  border-radius: 0.3rem;
+  scroll-margin-top: 120px;
+}
+
+.rent-catalog-inquiry .rent-form {
+  margin: 0;
+  max-width: none;
+  padding: 24px 28px 20px;
+}
+
+.rent-catalog-inquiry .rent-check h2,
+.rent-catalog-inquiry .rent-consult h2,
+.rent-catalog-inquiry .rent-form-about-lead {
+  margin: 0 0 20px;
+  font-size: 1.2rem;
+  line-height: 1.25;
+  font-weight: 800;
+  color: #1a1a1a;
+}
+
+.rent-catalog-inquiry .rent-form-about-lead strong {
+  font-weight: 800;
+}
+
+.rent-catalog-inquiry .rent-check ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.rent-catalog-inquiry .rent-check li {
+  position: relative;
+  padding: 7px 0 7px 16px;
+  border-bottom: 1px solid #eee;
+  font-size: 0.86rem;
+  line-height: 1.35;
+  color: #444;
+}
+
+.rent-catalog-inquiry .rent-check li:last-child {
+  border-bottom: 0;
+}
+
+.rent-catalog-inquiry .rent-check li::before {
+  content: "";
+  position: absolute;
+  top: 13px;
+  left: 0;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #14aa00;
+}
+
+.rent-catalog-inquiry .rent-consult > p {
+  margin: 0 0 12px;
+  font-size: 0.84rem;
+  line-height: 1.45;
+  color: #555;
+}
+
+.rent-catalog-inquiry .rent-consult-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.rent-catalog-inquiry .rent-consult-list li {
+  padding: 10px 12px;
+  border-radius: 0.3rem;
+  background: #fff;
+}
+
+.rent-catalog-inquiry .rent-consult-list strong {
+  display: block;
+  margin-bottom: 2px;
+  font-size: 0.82rem;
+  color: #1a1a1a;
+}
+
+.rent-catalog-inquiry .rent-consult-list span {
+  display: block;
+  color: #555;
+  font-size: 0.78rem;
+  line-height: 1.35;
+}
+
+.rent-catalog-inquiry .rent-consult-cta {
+  margin: 14px 0 6px;
+  font-size: 0.84rem;
+  color: #1a1a1a;
+}
+
+.rent-catalog-inquiry .rent-consult-phone {
+  margin: 0 0 8px;
+  font-size: 0.84rem;
+  color: #555;
+}
+
+.rent-catalog-inquiry .rent-consult-phone a,
+.rent-catalog-inquiry .rent-consult-refs a {
+  color: #14aa00;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.rent-catalog-inquiry .rent-consult-phone a:hover,
+.rent-catalog-inquiry .rent-consult-refs a:hover {
+  color: #0e6303;
+}
+
+.rent-catalog-inquiry .rent-consult-refs {
+  margin: 0;
+  font-size: 0.8rem;
+  color: #555;
+}
+
+.rent-catalog-inquiry .rent-contact-bar {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  align-items: start;
+  align-content: space-between;
+}
+
+.rent-catalog-inquiry .rent-form-about {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.rent-catalog-inquiry .rent-form-about > p {
+  margin: 0 0 8px;
+  font-size: 0.86rem;
+  line-height: 1.45;
+  color: #555;
+}
+
+.rent-catalog-inquiry .rent-form-about > p:last-child {
+  margin-bottom: 0;
+}
+
+.rent-catalog-inquiry .rent-form-about .rent-consult-phone {
+  margin-bottom: 6px;
+}
+
+.rent-catalog-inquiry .rent-form-person {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 176px;
+  gap: 10px;
+  align-items: end;
+  margin-top: auto;
+}
+
+.rent-catalog-inquiry .rent-form-person-meta {
+  display: grid;
+  gap: 2px;
+  padding-bottom: 6px;
+}
+
+.rent-catalog-inquiry .rent-form-person-meta strong {
+  font-size: 0.95rem;
+  color: #1a1a1a;
+}
+
+.rent-catalog-inquiry .rent-form-person-meta span {
+  font-size: 0.8rem;
+  color: #666;
+}
+
+.rent-catalog-inquiry .rent-form-person-meta a {
+  color: #14aa00;
+  font-size: 0.84rem;
+  text-decoration: none;
+}
+
+.rent-catalog-inquiry .rent-form-person-meta a:hover {
+  color: #0e6303;
+}
+
+.rent-catalog-inquiry .rent-form-person-photo {
+  width: 176px;
+  height: 198px;
+  min-height: 0;
+  overflow: hidden;
+  background: transparent;
+}
+
+.rent-catalog-inquiry .rent-form-person-photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 12%;
+}
+
+.rent-catalog-inquiry .rent-form h2 {
+  margin: 0 0 20px;
+  font-size: 1.2rem;
+  line-height: 1.25;
+  font-weight: 800;
+  color: #1a1a1a;
+}
+
+.rent-catalog-inquiry .rent-form-fields {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.rent-catalog-inquiry .rent-form-fields label {
+  display: grid;
+  gap: 6px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #777;
+}
+
+.rent-catalog-inquiry .rent-form-fields .is-wide {
+  grid-column: 1 / -1;
+}
+
+.rent-catalog-inquiry .rent-form-fields input:not([type="checkbox"]),
+.rent-catalog-inquiry .rent-form-fields textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 0;
+  border-radius: 0.3rem;
+  background: #fff;
+  color: #333;
+  font: inherit;
+  font-size: 0.9rem;
+  font-weight: 400;
+  outline: none;
+  box-shadow: none;
+}
+
+.rent-catalog-inquiry .rent-form-fields input::placeholder,
+.rent-catalog-inquiry .rent-form-fields textarea::placeholder {
+  color: #b3b3b3;
+  font-weight: 400;
+  opacity: 1;
+}
+
+.rent-catalog-inquiry .rent-form-fields textarea {
+  min-height: 72px;
+  resize: vertical;
+}
+
+.rent-catalog-inquiry .rent-form-fields .rent-consent {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  grid-column: 1 / -1;
+  font-size: 0.8rem;
+  font-weight: 400;
+  letter-spacing: 0;
+  text-transform: none;
+  color: #444;
+}
+
+.rent-catalog-inquiry .rent-form-fields .rent-consent input {
+  width: 16px;
+  height: 16px;
+  margin: 0;
+  padding: 0;
+  flex-shrink: 0;
+  accent-color: #73fb61;
+}
+
+.rent-catalog-inquiry .btn-green {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 10px 18px;
+  border: 0;
+  border-radius: 0.3rem;
+  background: #73fb61;
+  color: #000;
+  font-weight: 700;
+  font-size: 0.88rem;
+  line-height: 1.2;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.rent-catalog-inquiry .btn-green:hover {
+  background: #65ee53;
+  color: #000;
+}
+
+.rent-catalog-inquiry .pdp-phone {
+  display: block;
+  margin: 12px 0 0;
+  font-size: 0.86rem;
+  color: #333;
+  text-decoration: none;
+}
+
+.rent-catalog-inquiry .pdp-phone:hover {
+  text-decoration: none;
+  color: #333;
+}
+
+.rent-catalog-inquiry .pdp-phone strong {
+  color: #14aa00;
+}
+
+@media (min-width: 1400px) {
+  .rent-catalog-inquiry.container {
+    max-width: 1600px;
+  }
+
+  .rent-catalog-inquiry {
+    grid-template-columns: minmax(400px, 460px) minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 991.98px) {
+  .rent-catalog-inquiry-cols {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .rent-catalog-inquiry .rent-contact-bar {
+    grid-column: 1 / -1;
+  }
+
+  .rent-catalog-inquiry .rent-form-person {
+    grid-template-columns: minmax(0, 1fr) 160px;
+  }
+
+  .rent-catalog-inquiry .rent-form-person-photo {
+    width: 160px;
+    height: 180px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .rent-catalog-inquiry .rent-form {
+    padding: 20px 16px 16px;
+  }
+
+  .rent-catalog-inquiry .rent-form-fields {
+    grid-template-columns: 1fr;
+  }
+
+  .rent-catalog-inquiry-cols {
+    grid-template-columns: 1fr;
+  }
+
+  .rent-catalog-inquiry .rent-contact-bar {
+    grid-column: auto;
+  }
+
+  .rent-catalog-inquiry .rent-form-person {
+    grid-template-columns: minmax(0, 1fr) 176px;
+  }
+
+  .rent-catalog-inquiry .rent-form-person-photo {
+    width: 176px;
+    height: 198px;
   }
 }
