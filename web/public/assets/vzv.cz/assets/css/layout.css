@@ -3922,6 +3922,16 @@ a.btn.btn-primary[href*="vzvparts"]:active,
 .content-body .ico-parameter .svgHighlight {
     fill: #159504 !important;
 }
+.content-body .boxDetailPictogram .ico-parameter svg.svgParamsRucni {
+    width: 24%;
+    max-width: 24%;
+    height: auto;
+    fill: #159504;
+}
+.content-body .boxDetailPictogram .ico-parameter svg.svgParamsRucni path {
+    fill: #159504 !important;
+}
+
 .content-body .boxDetailPictogram .ico-parameter-weight .st0 {
     fill: #159504 !important;
 }
