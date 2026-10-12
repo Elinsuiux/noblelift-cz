@@ -66,10 +66,32 @@
   background: #73fb61 !important;
 }
 
-.rs-tooltip {
-  background: #0e6303 !important;
-  color: #ffffff !important;
+.rs-tooltip,
+#filtr .rs-tooltip,
+.rs-container .rs-tooltip,
+.rs-pointer .rs-tooltip,
+.rs-container .rs-scale span ins,
+.rs-container .rs-scale span:first-child ins,
+.rs-container .rs-scale span:last-child ins,
+#filtr .rs-scale span ins {
+  background: none !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+  color: #1a1a1a !important;
+  border: 0 none transparent !important;
+  outline: none !important;
+  border-radius: 0 !important;
+  min-width: 0 !important;
+  height: auto !important;
+  white-space: nowrap !important;
 }
+
+.rs-container .rs-scale span:last-child ins,
+.rs-container:has(.rs-pointer[data-dir="right"]) .rs-scale span:first-child ins {
+  visibility: hidden !important;
+}
+
 
 /* Links */
 a.text-primary:hover {
@@ -118,4 +140,77 @@ a.text-primary:hover {
 .text-danger-vzv,
 .card-vzv-body-cena .cena-sleva {
   color: #0e6303 !important;
+}
+
+.card-date {
+  color: #4d4d4d !important;
+}
+
+.cist-vice {
+  color: #4d4d4d !important;
+}
+
+.cist-vice:hover {
+  color: #0e6303 !important;
+}
+
+.modal-cookies .cist-vice,
+.modal-cookies .cist-vice:hover {
+  color: #73fb61 !important;
+}
+
+.btn-language a,
+.btn-language a:hover,
+.btn-language a:focus,
+.btn-language a:active {
+  color: #ffffff !important;
+}
+
+.box-vyber-jazyka-jazyk,
+.box-vyber-jazyka-jazyk:hover,
+a.box-vyber-jazyka-jazyk:hover {
+  color: #ffffff !important;
+}
+
+#modal-vyber-jazyka .modal-header .btn-close {
+  opacity: 1 !important;
+  filter: none !important;
+  background: transparent url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23c8c8c8'%3e%3cpath d='M.293.293a1 1 0 011.414 0L8 6.586 14.293.293a1 1 0 111.414 1.414L9.414 8l6.293 6.293a1 1 0 01-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 01-1.414-1.414L6.586 8 .293 1.707A1 1 0 01.293.293z'/%3e%3c/svg%3e") center / 1em auto no-repeat !important;
+}
+
+#modal-vyber-jazyka .modal-header .btn-close:hover {
+  opacity: 1 !important;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23e0e0e0'%3e%3cpath d='M.293.293a1 1 0 011.414 0L8 6.586 14.293.293a1 1 0 111.414 1.414L9.414 8l6.293 6.293a1 1 0 01-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 01-1.414-1.414L6.586 8 .293 1.707A1 1 0 01.293.293z'/%3e%3c/svg%3e") !important;
+}
+
+.card-footer a.btn.btn-dark,
+.card-footer a.btn.btn-dark:hover,
+.card-footer a.btn.btn-dark:focus,
+.card-footer a.btn.btn-dark:active {
+  background: transparent !important;
+  background-color: transparent !important;
+  color: #1a1a1a !important;
+  border: 1px solid #d0d0d0 !important;
+  box-shadow: none !important;
+}
+
+.card-footer .text-primary,
+.card .text-primary.fw-bold,
+.card .text-primary.fw-bolder,
+.card .fs-5.text-primary {
+  color: #0e6303 !important;
+}
+
+#filtr .bg-light-dark > .col-12.text-primary {
+  color: #1a1a1a !important;
+  font-weight: 700;
+}
+
+#filtr .filtr-top .text-vzv {
+  color: #1a1a1a !important;
+}
+
+.h-dropdown-menu .dropdown-item:hover,
+.h-dropdown-menu .dropdown-item:focus {
+  color: #159504 !important;
 }

@@ -66,33 +66,55 @@
   fill: #000000 !important;
 }
 
-/* Header CTAs: E-SHOP outline + green phone (sitewide header match) */
+/* Header CTAs: lime E-SHOP + white phone, outline handset, 4px corners */
 .btn-eshop {
-  background: rgba(0, 0, 0, 0.55) !important;
+  background: #73fb61 !important;
   border: 2px solid #73fb61 !important;
-  color: #73fb61 !important;
+  color: #111 !important;
+  border-radius: 4px !important;
+  font-weight: 600;
+  min-height: 40px;
+  display: inline-flex;
+  align-items: center;
 }
 
 .btn-eshop:hover,
 .btn-eshop:focus,
 .btn-eshop:active {
-  background: rgba(0, 0, 0, 0.72) !important;
-  border-color: #73fb61 !important;
-  color: #73fb61 !important;
+  background: #5fe84d !important;
+  border-color: #5fe84d !important;
+  color: #111 !important;
 }
 
 .btn-eshop svg {
-  fill: #73fb61 !important;
+  fill: #111 !important;
 }
 
 .btn-phone {
-  background-color: #73fb61 !important;
-  border-color: #73fb61 !important;
+  background-color: #ffffff !important;
+  border: 2px solid #ffffff !important;
+  border-radius: 4px !important;
+  color: #111 !important;
+  font-weight: 600;
+  min-height: 40px;
 }
 
 .btn-phone span,
 .btn-phone .fw-bold {
-  color: #000000 !important;
+  color: #111 !important;
+}
+
+.btn-phone svg,
+.btn-phone svg path {
+  fill: none !important;
+  stroke: #111 !important;
+}
+
+.btn-phone:hover,
+.btn-phone:focus,
+.btn-phone:active {
+  background-color: #f2f2f2 !important;
+  color: #111 !important;
 }
 
 
@@ -123,7 +145,13 @@ a.text-primary:hover,
   color: #073201 !important;
 }
 
-/* Keep dark buttons readable on hover (e.g. VZVParts.cz) */
+/* Keep dark buttons readable (e.g. VZVParts.cz, Sjednat schůzku) */
+.content-body .container .text-center > a.btn.btn-dark {
+  color: #ffffff !important;
+}
+.content-body .container .text-center > a.btn.btn-dark:hover,
+.content-body .container .text-center > a.btn.btn-dark:focus,
+.content-body .container .text-center > a.btn.btn-dark:active,
 .btn-dark:hover,
 .btn-dark:focus,
 .btn-dark:active {
@@ -134,7 +162,11 @@ a.text-primary:hover,
 .card-vzv-body-cena .cena,
 .product-price-nova-cena,
 .text-danger-vzv,
-.card-vzv-body-cena .cena-sleva {
+.card-vzv-body-cena .cena-sleva,
+.card-footer .text-primary,
+.card .text-primary.fw-bold,
+.card .text-primary.fw-bolder,
+.card .fs-5.text-primary {
   color: #0e6303 !important;
 }
 
@@ -288,10 +320,32 @@ a.text-primary:hover,
   background: #73fb61 !important;
 }
 
-.rs-tooltip {
-  background: #0e6303 !important;
-  color: #ffffff !important;
+.rs-tooltip,
+#filtr .rs-tooltip,
+.rs-container .rs-tooltip,
+.rs-pointer .rs-tooltip,
+.rs-container .rs-scale span ins,
+.rs-container .rs-scale span:first-child ins,
+.rs-container .rs-scale span:last-child ins,
+#filtr .rs-scale span ins {
+  background: none !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+  color: #1a1a1a !important;
+  border: 0 none transparent !important;
+  outline: none !important;
+  border-radius: 0 !important;
+  min-width: 0 !important;
+  height: auto !important;
+  white-space: nowrap !important;
 }
+
+.rs-container .rs-scale span:last-child ins,
+.rs-container:has(.rs-pointer[data-dir="right"]) .rs-scale span:first-child ins {
+  visibility: hidden !important;
+}
+
 
 /* ── Footer ─────────────────────────────────────────────────── */
 
@@ -348,4 +402,157 @@ a.text-primary:hover,
   color: #1a1a1a;
   font-size: 0.9rem;
   font-weight: 600;
+}
+
+/* Contact team cards — name bar + email from attached mockup */
+.card-contact .card-body-jmeno {
+  background: #21B30E !important;
+  color: #ffffff !important;
+}
+
+.card-contact .card-body-email a,
+.card-contact .card-body-email a:hover {
+  color: #149404 !important;
+}
+
+.card-contact .card-body-pozice,
+.card-contact .card-body-email,
+.card-contact .card-body-email a {
+  font-weight: 400 !important;
+}
+
+.btn-yellow,
+.btn-yellow.btn-lg,
+a.btn.btn-yellow {
+  color: #ffffff !important;
+  background: transparent !important;
+  background-color: transparent !important;
+  border: 2px solid #73fb61 !important;
+}
+
+.btn-yellow:hover,
+.btn-yellow:focus,
+.btn-yellow:active,
+a.btn.btn-yellow:hover,
+a.btn.btn-yellow:focus,
+a.btn.btn-yellow:active {
+  color: #ffffff !important;
+  background: rgba(115, 251, 97, 0.22) !important;
+  background-color: rgba(115, 251, 97, 0.22) !important;
+  border-color: #73fb61 !important;
+}
+
+/* Location overlays on the wide home/contact banner — text is in the photo */
+.kontakt-pobocky--wide .kontakt-pobocky-pobocka-cover-overlay {
+  display: none !important;
+}
+
+.kontakt-pobocky--wide .kontakt-pobocky-pobocka-cover-text,
+.kontakt-pobocky--wide .kontakt-pobocky-pobocka-cover-text a {
+  color: transparent !important;
+}
+
+.modal-fluid .modal-header .btn-close {
+  opacity: 1 !important;
+  filter: none !important;
+  background: transparent url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23c8c8c8'%3e%3cpath d='M.293.293a1 1 0 011.414 0L8 6.586 14.293.293a1 1 0 111.414 1.414L9.414 8l6.293 6.293a1 1 0 01-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 01-1.414-1.414L6.586 8 .293 1.707A1 1 0 01.293.293z'/%3e%3c/svg%3e") center / 1em auto no-repeat !important;
+}
+
+.modal-fluid .modal-header .btn-close:hover {
+  opacity: 1 !important;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23e0e0e0'%3e%3cpath d='M.293.293a1 1 0 011.414 0L8 6.586 14.293.293a1 1 0 111.414 1.414L9.414 8l6.293 6.293a1 1 0 01-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 01-1.414-1.414L6.586 8 .293 1.707A1 1 0 01.293.293z'/%3e%3c/svg%3e") !important;
+}
+
+.card-date {
+  color: #4d4d4d !important;
+}
+
+.cist-vice {
+  color: #4d4d4d !important;
+}
+
+.cist-vice:hover {
+  color: #0e6303 !important;
+}
+
+.modal-cookies .cist-vice,
+.modal-cookies .cist-vice:hover {
+  color: #73fb61 !important;
+}
+
+.btn-language a,
+.btn-language a:hover,
+.btn-language a:focus,
+.btn-language a:active {
+  color: #ffffff !important;
+}
+
+.box-vyber-jazyka-jazyk,
+.box-vyber-jazyka-jazyk:hover,
+a.box-vyber-jazyka-jazyk:hover {
+  color: #ffffff !important;
+}
+
+#modal-vyber-jazyka .modal-header .btn-close {
+  opacity: 1 !important;
+  filter: none !important;
+  background: transparent url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23c8c8c8'%3e%3cpath d='M.293.293a1 1 0 011.414 0L8 6.586 14.293.293a1 1 0 111.414 1.414L9.414 8l6.293 6.293a1 1 0 01-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 01-1.414-1.414L6.586 8 .293 1.707A1 1 0 01.293.293z'/%3e%3c/svg%3e") center / 1em auto no-repeat !important;
+}
+
+#modal-vyber-jazyka .modal-header .btn-close:hover {
+  opacity: 1 !important;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23e0e0e0'%3e%3cpath d='M.293.293a1 1 0 011.414 0L8 6.586 14.293.293a1 1 0 111.414 1.414L9.414 8l6.293 6.293a1 1 0 01-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 01-1.414-1.414L6.586 8 .293 1.707A1 1 0 01.293.293z'/%3e%3c/svg%3e") !important;
+}
+
+/* Kontakt hero: white headings; white button labels; black text on hover fill */
+.kontakt-rozcestnik-oddeleni h2,
+.content-body .separator-vzv-dark .kontakt-rozcestnik-oddeleni h2,
+.content-body .separator-vzv-dark .separator-content h2 {
+  color: #ffffff !important;
+}
+
+.kontakt-rozcestnik-oddeleni a.btn.btn-outline-light,
+.kontakt-rozcestnik-oddeleni a.btn.btn-outline-light span {
+  color: #ffffff !important;
+}
+
+.kontakt-rozcestnik-oddeleni a.btn.btn-outline-light:hover,
+.kontakt-rozcestnik-oddeleni a.btn.btn-outline-light:focus,
+.kontakt-rozcestnik-oddeleni a.btn.btn-outline-light:active,
+.kontakt-rozcestnik-oddeleni a.btn.btn-outline-light:hover span,
+.kontakt-rozcestnik-oddeleni a.btn.btn-outline-light:focus span,
+.kontakt-rozcestnik-oddeleni a.btn.btn-outline-light:active span {
+  color: #000000 !important;
+}
+
+.card-footer a.btn.btn-dark,
+.card-footer a.btn.btn-dark:hover,
+.card-footer a.btn.btn-dark:focus,
+.card-footer a.btn.btn-dark:active {
+  background: transparent !important;
+  background-color: transparent !important;
+  color: #1a1a1a !important;
+  border: 1px solid #d0d0d0 !important;
+  box-shadow: none !important;
+}
+
+.card-footer .text-primary,
+.card .text-primary.fw-bold,
+.card .text-primary.fw-bolder,
+.card .fs-5.text-primary {
+  color: #0e6303 !important;
+}
+
+#filtr .bg-light-dark > .col-12.text-primary {
+  color: #1a1a1a !important;
+  font-weight: 700;
+}
+
+#filtr .filtr-top .text-vzv {
+  color: #1a1a1a !important;
+}
+
+.h-dropdown-menu .dropdown-item:hover,
+.h-dropdown-menu .dropdown-item:focus {
+  color: #159504 !important;
 }

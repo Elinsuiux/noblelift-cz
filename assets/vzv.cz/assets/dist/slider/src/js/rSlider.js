@@ -238,8 +238,7 @@
 		{
 			if (this.conf.tooltip)
 			{
-				this.tipL.innerHTML = numberFormat(this.conf.values[this.values.start], this.conf.formatNumber) + this.conf.unit;
-
+				let lValue = numberFormat(this.conf.values[this.values.start], this.conf.formatNumber) + this.conf.unit;
 				let rValue = numberFormat(this.conf.values[this.values.end], this.conf.formatNumber) + this.conf.unit;
 				if (this.conf.tooltipMax != '')
 				{
@@ -249,10 +248,31 @@
 						rValue = this.conf.tooltipMax + '&nbsp;' + rValue;
 					}
 				}
-				this.tipR.innerHTML = rValue;
+				this.pointerR.style.left = (this.values.end * this.step - (this.pointerWidth / 2)) + 'px';
+				let leftPx = this.values.start * this.step;
+				let rightPx = this.values.end * this.step;
+				let gapPx = Math.abs(rightPx - leftPx);
+				this.slider.style.setProperty('--rs-gap', gapPx + 'px');
+				this.slider.classList.toggle('rs-tips-left-edge', leftPx < 80);
+				this.slider.classList.toggle('rs-tips-right-edge', rightPx > this.sliderWidth - 80);
+				if (gapPx < 64)
+				{
+					this.slider.classList.add('rs-tips-close');
+					this.tipL.innerHTML = lValue + '&nbsp;–&nbsp;' + rValue;
+					this.tipR.innerHTML = '';
+				}
+				else
+				{
+					this.slider.classList.remove('rs-tips-close');
+					this.tipL.innerHTML = lValue;
+					this.tipR.innerHTML = rValue;
+				}
+			}
+			else
+			{
+				this.pointerR.style.left = (this.values.end * this.step - (this.pointerWidth / 2)) + 'px';
 			}
 			this.input.value = this.conf.values[this.values.start] + ',' + this.conf.values[this.values.end];
-			this.pointerR.style.left = (this.values.end * this.step - (this.pointerWidth / 2)) + 'px';
 		}
 		else
 		{

@@ -772,8 +772,29 @@ function showButProductsAbove()
 
 
 
+function scrollToKontaktAnchor(id) {
+    var target = document.getElementById(id);
+    if (!target) return false;
+    var header = document.querySelector('.h-vzv');
+    var headerH = header ? header.offsetHeight : 0;
+    var offset = (headerH > 40 ? headerH : 96) + 28;
+    var top = target.getBoundingClientRect().top + window.pageYOffset - offset;
+    window.scrollTo({ top: Math.max(0, top), behavior: 'smooth' });
+    if (history.replaceState) {
+        history.replaceState(null, '', '#' + id);
+    }
+    return true;
+}
+
 var lastScrollTop = 0;
 $( document ).ready(function() {
+    if (location.hash) {
+        var startId = decodeURIComponent(location.hash.replace(/^#/, ''));
+        if (document.getElementById(startId)) {
+            setTimeout(function () { scrollToKontaktAnchor(startId); }, 50);
+        }
+    }
+
 
     $(window).scroll(function(event){
         var st = $(this).scrollTop();

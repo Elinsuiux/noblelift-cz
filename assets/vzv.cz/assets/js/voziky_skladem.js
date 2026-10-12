@@ -15,8 +15,14 @@ $(document).ready(function()
             }
             getForklifts(page);
         }
+        else
+        {
+            rewriteDetailLinks();
+            tagRepasStickers();
+        }
     }
 
+    injectRucniPohonIcon();
     activeFilter();
 
     // Nastavíme change event na inputy k range
@@ -24,6 +30,78 @@ $(document).ready(function()
         changeRangeInputDataNEW($(this));
     });
 });
+
+function rewriteDetailLinks()
+{
+    var path = window.location.pathname || '';
+    var marker = '/voziky-skladem/';
+    var prefix = '';
+    var idx = path.indexOf(marker);
+    if (idx !== -1)
+    {
+        var rest = path.slice(idx + marker.length);
+        var extra = rest.split('/').filter(function (p) {
+            return p && p !== 'index.html';
+        }).length;
+        if (extra > 0)
+        {
+            prefix = '../'.repeat(extra);
+        }
+    }
+    $('#forklifts a[href]').each(function () {
+        var href = $(this).attr('href') || '';
+        var m = href.match(/aktualne-skladem\/voziky-skladem\/(?:nove-voziky\/)?([a-z0-9\-]+)\/?(?:[?#].*)?$/i);
+        if (!m || m[1] === 'nove-voziky')
+        {
+            return;
+        }
+        $(this).attr('href', prefix + m[1] + '/index.html');
+        $(this).removeAttr('target');
+    });
+    bindForkliftCardClicks();
+}
+
+function bindForkliftCardClicks()
+{
+    $('#forklifts .card').each(function () {
+        var $card = $(this);
+        $card.find('a[target="_blank"]').removeAttr('target');
+        var href = $card.find('a[href]').filter(function () {
+            var h = $(this).attr('href') || '';
+            return /index\.html/i.test(h) && !/kosik|youtu|mailto:|tel:/i.test(h);
+        }).first().attr('href');
+        if (!href)
+        {
+            return;
+        }
+        $card.off('click.vzvcard').on('click.vzvcard', function (e) {
+            if ($(e.target).closest('button, .btn, a[href*="youtu"], a[href*="kosik"], .favourite-button, .compare-button, input, select, textarea').length)
+            {
+                return;
+            }
+            var $link = $(e.target).closest('a[href]');
+            if ($link.length)
+            {
+                $link.removeAttr('target');
+                return;
+            }
+            window.location.href = href;
+        });
+    });
+}
+
+function tagRepasStickers()
+{
+    $('#forklifts .sticker-repas').each(function () {
+        var t = ($(this).text() || '').replace(/\s+/g, ' ').trim().toLowerCase();
+        $(this).removeClass('sticker-repas-probiha sticker-repas-hotovo');
+        if (t.indexOf('probíhá') !== -1 || t.indexOf('probiha') !== -1) {
+            $(this).addClass('sticker-repas-probiha');
+        } else {
+            $(this).addClass('sticker-repas-hotovo');
+        }
+    });
+}
 
 // Metoda, která je volaná při změně inputu (checkbox, radio, input)
 function processFiltr()
@@ -79,6 +157,8 @@ function getForklifts(page = 1)
             let array = $.parseJSON(response);
 
             $('#forklifts').html(array['voziky']);
+            rewriteDetailLinks();
+            tagRepasStickers();
             $('#vzv-paginator').html(array['vzv_paginator']);
             $('#filtr-badge').html(array['filtr_badge_template']);
 
@@ -114,6 +194,43 @@ function getForklifts(page = 1)
 }
 
 // Zpracování filtru
+function syncDualRange(dataArray, key)
+{
+    if (!dataArray[key] || !$('#' + key + '-from').length)
+    {
+        return;
+    }
+    let parts = String(dataArray[key]).split(',');
+    let fromVal = parts[0];
+    let toVal = parts.length > 1 ? parts[1] : '';
+    let $from = $('#' + key + '-from');
+    let $to = $('#' + key + '-to');
+    $from.val(fromVal);
+    if ($to.length && toVal !== '')
+    {
+        $to.val(toVal);
+    }
+    let minDefault = String($from.data('value-min'));
+    let maxDefault = $to.length ? String($to.data('value-max')) : '';
+    if (toVal === '')
+    {
+        dataArray[key + '-from'] = fromVal;
+        return;
+    }
+    if (String(fromVal) !== minDefault)
+    {
+        dataArray[key + '-from'] = fromVal;
+    }
+    if (String(toVal) !== maxDefault)
+    {
+        dataArray[key + '-to'] = toVal;
+        if (key === 'price' || key === 'overall-height' || key === 'running-hours')
+        {
+            dataArray[key + '-from'] = toVal;
+        }
+    }
+}
+
 function getFiltr()
 {
     let dataArray = {};
@@ -168,11 +285,6 @@ function getFiltr()
         }
     }
 
-    if ($('#year-from').length) {
-        let yearFrom = dataArray['year'].split(',')[0];
-        $('#year-from').val(yearFrom);
-    }
-
     if ($('#capacity-from').length) {
         let capacityFrom = dataArray['capacity'].split(',')[0];
         $('#capacity-from').val(capacityFrom);
@@ -191,17 +303,18 @@ function getFiltr()
         }
     }
 
-    if ($('#overall-height-from').length) {
-        $('#overall-height-from').val(dataArray['overall-height']);
-    }
-
-    if ($('#running-hours-from').length) {
-        $('#running-hours-from').val(dataArray['running-hours']);
-    }
-
-    if ($('#price-from').length) {
-        $('#price-from').val(dataArray['price']);
-    }
+    delete dataArray['year-from'];
+    delete dataArray['year-to'];
+    delete dataArray['overall-height-from'];
+    delete dataArray['overall-height-to'];
+    delete dataArray['running-hours-from'];
+    delete dataArray['running-hours-to'];
+    delete dataArray['price-from'];
+    delete dataArray['price-to'];
+    syncDualRange(dataArray, 'year');
+    syncDualRange(dataArray, 'overall-height');
+    syncDualRange(dataArray, 'running-hours');
+    syncDualRange(dataArray, 'price');
 
     // Nove voziky
     $.each($('#category-box a'), function (key, value) {
@@ -410,13 +523,40 @@ function removeParametrs(dataArray)
     noRefreshslidercapacity = true;
     noRefreshsliderlift = true;
     noRefreshslideryear = true;
+    noRefreshslideroverallheight = true;
+    noRefreshsliderrunninghours = true;
+    noRefreshsliderprice = true;
     slidercapacity.setValues($('#capacity-from').data('value-min'), $('#capacity-to').data('value-max'));
     sliderlift.setValues($('#lift-from').data('value-min'), $('#lift-to').data('value-max'));
+    if (typeof slideroverallheight !== 'undefined' && $('#overall-height-to').length)
+    {
+        slideroverallheight.setValues($('#overall-height-from').data('value-min'), $('#overall-height-to').data('value-max'));
+    }
+    if (typeof sliderrunninghours !== 'undefined' && $('#running-hours-to').length)
+    {
+        sliderrunninghours.setValues($('#running-hours-from').data('value-min'), $('#running-hours-to').data('value-max'));
+    }
+    if (typeof slideryear !== 'undefined' && $('#year-to').length)
+    {
+        slideryear.setValues($('#year-from').data('value-min'), $('#year-to').data('value-max'));
+    }
+    if (typeof sliderprice !== 'undefined' && $('#price-to').length)
+    {
+        sliderprice.setValues($('#price-from').data('value-min'), $('#price-to').data('value-max'));
+    }
 
     delete filtered['capacity-from'];
     delete filtered['capacity-to'];
     delete filtered['lift-from'];
     delete filtered['lift-to'];
+    delete filtered['overall-height-from'];
+    delete filtered['overall-height-to'];
+    delete filtered['running-hours-from'];
+    delete filtered['running-hours-to'];
+    delete filtered['year-from'];
+    delete filtered['year-to'];
+    delete filtered['price-from'];
+    delete filtered['price-to'];
 
     return filtered;
 }
@@ -515,13 +655,23 @@ function changeRangeInputNEW(id, value, parentID)
 }
 function showHideMore(id, action)
 {
+    let $toggle = $('#' + id);
+    let panelId = id.replace(/-ac$/, '');
+    let $panel = $('#' + panelId);
     if (action == 1)
     {
-        $('#' + id).show();
+        $toggle.show();
+        $panel.removeClass('show');
     }
     else
     {
-        $('#' + id).hide();
+        $toggle.hide();
+        $panel.addClass('show');
+    }
+    if (window.event)
+    {
+        window.event.preventDefault();
+        window.event.stopPropagation();
     }
 }
 
@@ -831,4 +981,25 @@ function getPDF(idPolozky)
 
 function openFiltr() {
     $('#offcanvasFiltr').addClass('show');
+}
+
+function injectRucniPohonIcon()
+{
+    var hand = '<svg enable-background="new 0 0 32 32" viewBox="0 0 32 32" id="svgParamsRucni" class="svgParams svgParamsRucni" xmlns="http://www.w3.org/2000/svg"><g id="five_x2C__gesture_x2C__hand_x2C__stop_3_"><g><path class="svgHighlight" d="m15.01 31c-6.24 0-7.75-5.7-8.68-9.25-.3-1.13-.56-2.1-.87-2.61l-4.32-7.74c-.23-.42-.28-.89-.14-1.35.15-.5.51-.92.97-1.16.9-.47 1.96-.19 2.47.65l4.16 6.86c.04.07.14.23.2.26-.03-.05-.1-.24-.12-.3l-3.73-9.78c-.35-1 .15-2.13 1.11-2.53.48-.21 1.05-.21 1.55-.01.49.2.87.56 1.07 1.03l4 9.6c.05.14.09.2.12.23 0-.03 0-.11-.03-.23l-2.31-11.17c-.21-1.15.6-2.24 1.83-2.48 1.09-.21 2.25.54 2.49 1.58l2.33 10.88c.04.17.07.22.09.24-.01-.04 0-.18 0-.23l.11-9.29c-.01-.48.22-1.02.6-1.4.39-.39.87-.59 1.47-.58 1.27.02 2.02 1.09 2 2.11l.02 10.08c-.02 1.31.37 2.77.98 3.72.09.13.23.29.43.3.19.03.41-.12.59-.35.76-.94 1.9-2.3 3.11-3.3.67-.56 1.55-.8 2.43-.66.89.15 1.67.68 2.15 1.46.12.2.09.46-.08.62l-1.43 1.38c-1.39 1.35-2.48 2.98-3.22 4.83-.85 2.12-1.73 3.89-2.6 5.24-1.48 2.29-3.58 2.63-5.62 2.96-.29.05-.59.1-.88.15-.81.17-1.56.24-2.25.24zm-12.13-21.34c-.15 0-.29.04-.44.11 0 0 0 0-.01 0-.23.12-.41.33-.48.57-.04.14-.07.35.05.57l4.31 7.72c.38.62.66 1.66.98 2.87 1.07 4.07 2.54 9.65 9.78 8.31.3-.06.6-.1.9-.15 1.98-.32 3.7-.6 4.94-2.52.84-1.3 1.69-3.01 2.52-5.07.8-1.98 1.96-3.72 3.46-5.17l1.12-1.08c-.32-.36-.75-.6-1.22-.68-.59-.1-1.18.06-1.62.44-1.14.95-2.24 2.26-2.97 3.16-.39.48-.9.74-1.42.72-.48-.02-.91-.29-1.22-.76-.73-1.13-1.16-2.76-1.14-4.27l-.03-10.1c0-.29-.17-1.08-1.02-1.1-.29-.02-.54.09-.74.29-.22.22-.31.5-.31.68l-.11 9.29c-.08.94-.56 1.17-.94 1.21-.33.03-.91-.06-1.13-.98l-2.34-10.91c-.11-.52-.76-.91-1.32-.81-.77.15-1.13.79-1.04 1.31l2.32 11.15c.18.85-.23 1.28-.68 1.4-.2.06-.92.2-1.32-.82l-4-9.59c-.08-.21-.27-.39-.51-.48-.26-.1-.55-.1-.79 0-.48.2-.74.78-.57 1.26l3.72 9.78c.34.93-.02 1.35-.39 1.53-.32.16-.93.29-1.47-.61l-4.16-6.88c-.15-.25-.42-.39-.71-.39z"></path></g></g></svg>';
+    $('.boxDetailPictogram').each(function () {
+        var $box = $(this);
+        var label = $.trim($box.find('.boxProductDataPictogramLabel').first().text());
+        var value = $.trim($box.find('.fw-bold').first().text());
+        if (label !== 'Pohon') {
+            return;
+        }
+        if (!/ru[cč]n/i.test(value)) {
+            return;
+        }
+        var $ico = $box.find('.ico-parameter').first();
+        if ($ico.find('svg').length) {
+            return;
+        }
+        $ico.html(hand);
+    });
 }

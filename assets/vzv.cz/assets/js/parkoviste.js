@@ -60,9 +60,7 @@ function addRemoveFavourite(idPolozky)
 
 function getFavouritePDF()
 {
-    ajaxCallPromise('create-pdf-favourite').then( result => {
-        downloadFile(result, 'favourite');
-    });
+    window.print();
 }
 
 function favouriteSetEmptyTemplate()
@@ -70,6 +68,7 @@ function favouriteSetEmptyTemplate()
     $('.favorite-bar').addClass('d-none');
     $('#favorite-empty').removeClass('d-none');
     $('#favourite').addClass('d-none');
+    $('#favourite-wrap').addClass('d-none');
 }
 
 function removeFavouriteAll()
