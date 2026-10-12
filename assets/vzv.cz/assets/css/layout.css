@@ -1550,10 +1550,10 @@ a.btn.btn-dark.first-letter-capitalize:active {
 #vzv-paginator .btn.btn-primary,
 .content-body #vzv-paginator .btn.btn-primary,
 .content-body #vzv-paginator a.btn.btn-primary {
-    color: #159504 !important;
+    color: #000000 !important;
     background: transparent !important;
     background-color: transparent !important;
-    border: 2px solid #159504 !important;
+    border: 2px solid #000000 !important;
 }
 #vzv-paginator .btn.btn-primary:hover,
 #vzv-paginator .btn.btn-primary:focus,
@@ -1561,14 +1561,23 @@ a.btn.btn-dark.first-letter-capitalize:active {
 .content-body #vzv-paginator .btn.btn-primary:hover,
 .content-body #vzv-paginator .btn.btn-primary:focus,
 .content-body #vzv-paginator .btn.btn-primary:active {
-    color: #159504 !important;
+    color: #000000 !important;
     background: transparent !important;
     background-color: transparent !important;
-    border: 2px solid #159504 !important;
+    border: 2px solid #000000 !important;
 }
 #vzv-paginator .page-item .page-link.bg-primary,
 .content-body #vzv-paginator .page-item .page-link.bg-primary,
-.content-body .pagination .page-link.bg-primary {
+.content-body .pagination .page-link.bg-primary,
+#vzv-paginator .page-item .page-link:hover,
+#vzv-paginator .page-item .page-link:focus,
+#vzv-paginator .page-item .page-link:active,
+.content-body #vzv-paginator .page-item .page-link:hover,
+.content-body #vzv-paginator .page-item .page-link:focus,
+.content-body #vzv-paginator .page-item .page-link:active,
+.content-body .pagination .page-link:hover,
+.content-body .pagination .page-link:focus,
+.content-body .pagination .page-link:active {
     color: #ffffff !important;
     background: #000000 !important;
     background-color: #000000 !important;
