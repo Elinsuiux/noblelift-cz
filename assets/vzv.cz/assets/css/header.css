@@ -179,7 +179,7 @@
     left: 0;
     z-index: 2000;
     margin-top: 0;
-    border-top-color: var(--color-vzv);
+    border-top-color: #73fb61;
     background: var(--color-white);
     min-width: 320px;
     padding-bottom: 30px;

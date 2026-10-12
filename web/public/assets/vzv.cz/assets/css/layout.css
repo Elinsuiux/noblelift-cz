@@ -2467,8 +2467,12 @@ body.modal-open .h-vzv {
     display: flex;
 }
 
-.dropdown-menu {
-    border-top: 5px solid var(--color-vzv);
+.dropdown-menu,
+.h-dropdown-menu,
+header .dropdown-menu,
+header .h-dropdown-menu {
+    border-top: 5px solid #73fb61 !important;
+    border-top-color: #73fb61 !important;
 }
 .btn-previous:hover{
     fill: var(--color-white) !important;
