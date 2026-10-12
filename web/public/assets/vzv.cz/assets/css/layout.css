@@ -3689,6 +3689,12 @@ html {
 .content-body a:hover {
     color: #073201;
 }
+.content-body a.btn.btn-light-outline,
+.content-body a.btn.btn-light-outline:hover,
+.content-body a.btn.btn-light-outline:focus,
+.content-body a.btn.btn-light-outline:active {
+    color: #000000 !important;
+}
 #wrapSplatkovaKalkulacka a[href^="tel:"] {
     color: #159504 !important;
 }
@@ -3900,15 +3906,15 @@ html {
 }
 .content-body button.btn-vzv[data-bs-target="#modal-poptat-pz"] {
     color: #000000 !important;
-    background-color: #A7FC9C !important;
-    border-color: #A7FC9C !important;
+    background-color: #73fb61 !important;
+    border-color: #73fb61 !important;
 }
 .content-body button.btn-vzv[data-bs-target="#modal-poptat-pz"]:hover,
 .content-body button.btn-vzv[data-bs-target="#modal-poptat-pz"]:focus,
 .content-body button.btn-vzv[data-bs-target="#modal-poptat-pz"]:active {
     color: #000000 !important;
-    background-color: #73fb61 !important;
-    border-color: #73fb61 !important;
+    background-color: #1cc705 !important;
+    border-color: #1cc705 !important;
 }
 #wrapTechnickeInformace {
     scroll-margin-top: 110px;
@@ -4166,6 +4172,19 @@ html {
 
 .wrap-zarizeni .card-item-title .fw-bolder {
     color: #159504 !important;
+}
+
+.wrap-zarizeni .card-footer .text-primary,
+.wrap-zarizeni .card .text-primary.fw-bold,
+.wrap-zarizeni .card .text-primary.fw-bolder,
+.wrap-zarizeni .card .fs-5.text-primary,
+.wrap-zarizeni .fw-bolder.fs-5.text-primary {
+    color: #000000 !important;
+}
+
+.content-body #wrapTechnickeInformace .text-vzv,
+.content-body #wrapTechnickeInformace .fw-bold.text-vzv {
+    color: #000000 !important;
 }
 
 /* Oblíbené filled list: live Parkoviště toolbar + listing card chrome. */
