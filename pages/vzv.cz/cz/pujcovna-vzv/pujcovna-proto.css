@@ -786,6 +786,7 @@
 
 .pujcovna-proto .rent-history,
 .pujcovna-proto .rent-stories,
+.pujcovna-proto .rent-testimonials,
 .pujcovna-proto .rent-refs {
   max-width: 1240px;
   margin: 0 auto 72px;
@@ -1036,6 +1037,114 @@
 .pujcovna-proto .story-all .btn-ghost:hover {
   border-color: var(--pp-accent);
   color: var(--pp-accent);
+}
+
+/* -------------------------------------------------------------------------- */
+/* Reference — Naši klienti                                                   */
+/* -------------------------------------------------------------------------- */
+
+.pujcovna-proto .ref-testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px;
+  text-align: left;
+}
+
+.pujcovna-proto .ref-testimonials-logos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px 48px;
+  text-align: left;
+}
+
+.pujcovna-proto .ref-testimonials-rule {
+  border: 0;
+  border-top: 1px solid #e0e0e0;
+  margin: 44px 0 36px;
+}
+
+.pujcovna-proto .ref-testimonial {
+  display: flex;
+  flex-direction: column;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  padding: 0;
+  text-align: left;
+}
+
+.pujcovna-proto .ref-testimonial-photo {
+  display: block;
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 6px;
+  background: #e8e8e8;
+}
+
+.pujcovna-proto .ref-testimonial-logo {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  max-width: 400px;
+  min-height: 160px;
+  margin: 0 0 18px;
+}
+
+.pujcovna-proto .ref-testimonial-logo img {
+  display: block;
+  width: 100%;
+  max-width: 400px;
+  max-height: 250px;
+  height: auto;
+  object-fit: contain;
+}
+
+.pujcovna-proto .ref-testimonial-lead {
+  margin: 16px 0 14px;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #222;
+}
+
+.pujcovna-proto .ref-testimonial-quote {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-style: normal;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.pujcovna-proto .ref-testimonial-quote p {
+  margin: 0 0 14px;
+  font-size: 0.88rem;
+  line-height: 1.5;
+  color: #6a6a6a;
+}
+
+.pujcovna-proto .ref-testimonial footer {
+  margin: 0;
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  align-items: flex-end;
+  text-align: right;
+}
+
+.pujcovna-proto .ref-testimonial footer strong {
+  color: #666;
+  font-size: 0.88rem;
+  font-weight: 500;
+}
+
+.pujcovna-proto .ref-testimonial footer span {
+  font-size: 0.82rem;
+  color: #888;
 }
 
 /* -------------------------------------------------------------------------- */
@@ -1460,7 +1569,9 @@
   .pujcovna-proto .rent-form-fields,
   .pujcovna-proto .story-grid,
   .pujcovna-proto .ref-grid,
-  .pujcovna-proto .history-grid {
+  .pujcovna-proto .history-grid,
+  .pujcovna-proto .ref-testimonials-grid,
+  .pujcovna-proto .ref-testimonials-logos {
     grid-template-columns: 1fr 1fr;
   }
 
@@ -1490,6 +1601,7 @@
   .pujcovna-proto .rent-why,
   .pujcovna-proto .rent-history,
   .pujcovna-proto .rent-stories,
+  .pujcovna-proto .rent-testimonials,
   .pujcovna-proto .rent-refs,
   .pujcovna-proto .rent-bottom {
     padding-left: 16px;
@@ -1504,7 +1616,9 @@
   .pujcovna-proto .story-grid,
   .pujcovna-proto .ref-grid,
   .pujcovna-proto .history-grid,
-  .pujcovna-proto .rent-videos-grid {
+  .pujcovna-proto .rent-videos-grid,
+  .pujcovna-proto .ref-testimonials-grid,
+  .pujcovna-proto .ref-testimonials-logos {
     grid-template-columns: 1fr;
   }
 
