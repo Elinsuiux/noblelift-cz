@@ -3842,6 +3842,28 @@ html {
 .content-body [id^="item-pridat-do-kosiku-"]:hover svg path {
     fill: #73fb61 !important;
 }
+a.btn.btn-primary[href*="vzvparts"],
+.card-footer a.btn.btn-primary[href*="vzvparts"],
+.content-body a.btn.btn-primary[href*="vzvparts"] {
+    color: #ffffff !important;
+    background: #000000 !important;
+    background-color: #000000 !important;
+    border-color: #000000 !important;
+}
+a.btn.btn-primary[href*="vzvparts"]:hover,
+a.btn.btn-primary[href*="vzvparts"]:focus,
+a.btn.btn-primary[href*="vzvparts"]:active,
+.card-footer a.btn.btn-primary[href*="vzvparts"]:hover,
+.card-footer a.btn.btn-primary[href*="vzvparts"]:focus,
+.card-footer a.btn.btn-primary[href*="vzvparts"]:active,
+.content-body a.btn.btn-primary[href*="vzvparts"]:hover,
+.content-body a.btn.btn-primary[href*="vzvparts"]:focus,
+.content-body a.btn.btn-primary[href*="vzvparts"]:active {
+    color: #73fb61 !important;
+    background: #000000 !important;
+    background-color: #000000 !important;
+    border-color: #000000 !important;
+}
 .content-body .carousel-video a.btn,
 .content-body .carousel-video a.btn-vzv {
     width: 60px;

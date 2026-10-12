@@ -161,6 +161,29 @@ button.btn-cart {
     fill: #73fb61 !important;
 }
 
+a.btn.btn-primary[href*="vzvparts"],
+.card-footer a.btn.btn-primary[href*="vzvparts"],
+.content-body a.btn.btn-primary[href*="vzvparts"] {
+    color: #ffffff !important;
+    background: #000000 !important;
+    background-color: #000000 !important;
+    border-color: #000000 !important;
+}
+a.btn.btn-primary[href*="vzvparts"]:hover,
+a.btn.btn-primary[href*="vzvparts"]:focus,
+a.btn.btn-primary[href*="vzvparts"]:active,
+.card-footer a.btn.btn-primary[href*="vzvparts"]:hover,
+.card-footer a.btn.btn-primary[href*="vzvparts"]:focus,
+.card-footer a.btn.btn-primary[href*="vzvparts"]:active,
+.content-body a.btn.btn-primary[href*="vzvparts"]:hover,
+.content-body a.btn.btn-primary[href*="vzvparts"]:focus,
+.content-body a.btn.btn-primary[href*="vzvparts"]:active {
+    color: #73fb61 !important;
+    background: #000000 !important;
+    background-color: #000000 !important;
+    border-color: #000000 !important;
+}
+
 a.btn.btn-outline-primary[id^="item-v-kosiku-"],
 a[id^="item-v-kosiku-"].btn,
 .card-footer a.btn[id^="item-v-kosiku-"],
