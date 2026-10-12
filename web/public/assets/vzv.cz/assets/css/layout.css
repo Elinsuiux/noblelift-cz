@@ -1547,12 +1547,32 @@ a.btn.btn-dark.first-letter-capitalize:active {
     color: #000000 !important;
 }
 
+#vzv-paginator .btn.btn-primary,
+.content-body #vzv-paginator .btn.btn-primary,
+.content-body #vzv-paginator a.btn.btn-primary {
+    color: #159504 !important;
+    background: transparent !important;
+    background-color: transparent !important;
+    border: 2px solid #159504 !important;
+}
 #vzv-paginator .btn.btn-primary:hover,
 #vzv-paginator .btn.btn-primary:focus,
-#vzv-paginator .btn.btn-primary:active {
-    background-color: #1cc705 !important;
-    border-color: #1cc705 !important;
-    color: #000000 !important;
+#vzv-paginator .btn.btn-primary:active,
+.content-body #vzv-paginator .btn.btn-primary:hover,
+.content-body #vzv-paginator .btn.btn-primary:focus,
+.content-body #vzv-paginator .btn.btn-primary:active {
+    color: #159504 !important;
+    background: transparent !important;
+    background-color: transparent !important;
+    border: 2px solid #159504 !important;
+}
+#vzv-paginator .page-item .page-link.bg-primary,
+.content-body #vzv-paginator .page-item .page-link.bg-primary,
+.content-body .pagination .page-link.bg-primary {
+    color: #ffffff !important;
+    background: #000000 !important;
+    background-color: #000000 !important;
+    border-color: #000000 !important;
 }
 
 #filtr .filtr-top .text-vzv {
