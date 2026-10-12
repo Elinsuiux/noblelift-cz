@@ -3757,6 +3757,46 @@ html {
     background-color: #1cc705 !important;
     border-color: #1cc705 !important;
 }
+.content-body .btn-cart,
+.content-body .btn.btn-primary.btn-cart,
+.content-body button.btn-primary.btn-cart,
+.content-body [id^="item-pridat-do-kosiku-"] {
+    color: #ffffff !important;
+    background: #000000 !important;
+    background-color: #000000 !important;
+    border-color: #000000 !important;
+}
+.content-body .btn-cart svg,
+.content-body .btn.btn-primary.btn-cart svg,
+.content-body .btn-cart svg path,
+.content-body [id^="item-pridat-do-kosiku-"] svg,
+.content-body [id^="item-pridat-do-kosiku-"] svg path {
+    fill: #ffffff !important;
+}
+.content-body .btn-cart:hover,
+.content-body .btn-cart:focus,
+.content-body .btn-cart:active,
+.content-body .btn.btn-primary.btn-cart:hover,
+.content-body .btn.btn-primary.btn-cart:focus,
+.content-body .btn.btn-primary.btn-cart:active,
+.content-body button.btn-primary.btn-cart:hover,
+.content-body [id^="item-pridat-do-kosiku-"]:hover,
+.content-body [id^="item-pridat-do-kosiku-"]:focus,
+.content-body [id^="item-pridat-do-kosiku-"]:active {
+    color: #73fb61 !important;
+    background: #000000 !important;
+    background-color: #000000 !important;
+    border-color: #000000 !important;
+}
+.content-body .btn-cart:hover svg,
+.content-body .btn-cart:focus svg,
+.content-body .btn-cart:active svg,
+.content-body .btn.btn-primary.btn-cart:hover svg,
+.content-body .btn-cart:hover svg path,
+.content-body [id^="item-pridat-do-kosiku-"]:hover svg,
+.content-body [id^="item-pridat-do-kosiku-"]:hover svg path {
+    fill: #73fb61 !important;
+}
 .content-body .first-row-dark tr:first-child,
 .content-body table.table-vyhody tr:first-child {
     background: #1a1a1a !important;

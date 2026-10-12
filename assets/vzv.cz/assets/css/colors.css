@@ -145,16 +145,16 @@ button.btn-cart {
 .btn-primary.btn-cart:hover,
 .btn-primary.btn-cart:focus,
 .btn-primary.btn-cart:active {
-    color: #ffffff !important;
-    background: #111111 !important;
-    background-color: #111111 !important;
-    border-color: #111111 !important;
+    color: #73fb61 !important;
+    background: #000000 !important;
+    background-color: #000000 !important;
+    border-color: #000000 !important;
 }
 
 .btn-cart:hover svg,
 .btn-primary.btn-cart:hover svg,
 .btn-cart:hover svg path {
-    fill: #ffffff !important;
+    fill: #73fb61 !important;
 }
 
 a.btn.btn-outline-primary[id^="item-v-kosiku-"],

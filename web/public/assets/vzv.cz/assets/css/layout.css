@@ -1453,11 +1453,11 @@ a.btn.btn-dark.first-letter-capitalize:active {
 }
 
 .sticker.sticker-motohodiny {
-    background: #F5F5F5 !important;
+    background: #ffffff !important;
     color: #159504 !important;
 }
 .sticker.sticker-motohodiny:before {
-    border-color: transparent #F5F5F5 transparent transparent !important;
+    border-color: transparent #ffffff transparent transparent !important;
 }
 
 .sticker.sticker-baterie {
@@ -2970,8 +2970,8 @@ table.table-vyhody .btn
 .wrap-sticker.stickerPremium { background: var(--color-dark); color: var(--color-white); }
 .wrap-sticker.stickerPremium:before { border-right-color: var(--color-dark); }
 
-.wrap-sticker.stickerSale { background: var(--color-dark); color: var(--color-yellow); }
-.wrap-sticker.stickerSale:before { border-right-color: var(--color-dark); }
+.wrap-sticker.stickerSale { background: #73fb61; color: #000000; }
+.wrap-sticker.stickerSale:before { border-right-color: #73fb61; }
 
 .wrapSticker.stickerSomethingIsWrong { background: var(--color-grey-5); }
 .wrapSticker.stickerSomethingIsWrong:before { border-right-color: var(--color-grey-5); }
@@ -3757,6 +3757,46 @@ html {
     background-color: #1cc705 !important;
     border-color: #1cc705 !important;
 }
+.content-body .btn-cart,
+.content-body .btn.btn-primary.btn-cart,
+.content-body button.btn-primary.btn-cart,
+.content-body [id^="item-pridat-do-kosiku-"] {
+    color: #ffffff !important;
+    background: #000000 !important;
+    background-color: #000000 !important;
+    border-color: #000000 !important;
+}
+.content-body .btn-cart svg,
+.content-body .btn.btn-primary.btn-cart svg,
+.content-body .btn-cart svg path,
+.content-body [id^="item-pridat-do-kosiku-"] svg,
+.content-body [id^="item-pridat-do-kosiku-"] svg path {
+    fill: #ffffff !important;
+}
+.content-body .btn-cart:hover,
+.content-body .btn-cart:focus,
+.content-body .btn-cart:active,
+.content-body .btn.btn-primary.btn-cart:hover,
+.content-body .btn.btn-primary.btn-cart:focus,
+.content-body .btn.btn-primary.btn-cart:active,
+.content-body button.btn-primary.btn-cart:hover,
+.content-body [id^="item-pridat-do-kosiku-"]:hover,
+.content-body [id^="item-pridat-do-kosiku-"]:focus,
+.content-body [id^="item-pridat-do-kosiku-"]:active {
+    color: #73fb61 !important;
+    background: #000000 !important;
+    background-color: #000000 !important;
+    border-color: #000000 !important;
+}
+.content-body .btn-cart:hover svg,
+.content-body .btn-cart:focus svg,
+.content-body .btn-cart:active svg,
+.content-body .btn.btn-primary.btn-cart:hover svg,
+.content-body .btn-cart:hover svg path,
+.content-body [id^="item-pridat-do-kosiku-"]:hover svg,
+.content-body [id^="item-pridat-do-kosiku-"]:hover svg path {
+    fill: #73fb61 !important;
+}
 .content-body .first-row-dark tr:first-child,
 .content-body table.table-vyhody tr:first-child {
     background: #1a1a1a !important;
@@ -3931,10 +3971,8 @@ html {
 }
 #splatkovaKalkulacka .vzv-essox-tint-banner {
     position: absolute;
-    background: transparent;
-    mix-blend-mode: normal;
-    backdrop-filter: hue-rotate(154deg) saturate(6);
-    -webkit-backdrop-filter: hue-rotate(154deg) saturate(6);
+    background: #159504;
+    mix-blend-mode: hue;
     pointer-events: none;
     z-index: 4;
     border-radius: 4px;
