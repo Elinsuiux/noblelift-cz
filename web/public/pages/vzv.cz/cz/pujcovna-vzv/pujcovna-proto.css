@@ -855,6 +855,92 @@
   color: var(--pp-text);
 }
 
+.pujcovna-proto .rent-videos {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 28px;
+  align-items: center;
+  margin: 0 0 40px;
+}
+
+.pujcovna-proto .rent-videos-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.pujcovna-proto .rent-video-card {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  border-radius: 12px;
+  text-decoration: none;
+  color: #fff !important;
+}
+
+.pujcovna-proto .rent-video-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.pujcovna-proto .rent-video-play {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: rgba(0, 0, 0, 0.8);
+  border: 0;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
+}
+
+.pujcovna-proto .rent-video-play-icon {
+  display: block;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 10px 0 10px 17px;
+  border-color: transparent transparent transparent #73fb61;
+  margin-left: 3px;
+}
+
+.pujcovna-proto .rent-videos-cta {
+  text-align: center;
+  max-width: 240px;
+}
+
+.pujcovna-proto .rent-videos-cta p {
+  margin: 0 0 14px;
+  color: #222;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.pujcovna-proto .rent-videos-cta a.rent-videos-youtube,
+.pujcovna-proto a.rent-videos-youtube {
+  display: inline-block;
+  padding: 12px 18px;
+  border: 0;
+  border-radius: 8px;
+  color: #111 !important;
+  background: #73fb61;
+  text-decoration: none;
+  white-space: nowrap;
+  font-size: 0.92rem;
+  font-weight: 700;
+}
+
+.pujcovna-proto .rent-videos-cta a.rent-videos-youtube:hover,
+.pujcovna-proto a.rent-videos-youtube:hover {
+  background: #1cc705;
+  color: #111 !important;
+}
+
 .pujcovna-proto .story-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -1377,6 +1463,18 @@
     grid-template-columns: 1fr 1fr;
   }
 
+  .pujcovna-proto .rent-videos {
+    grid-template-columns: 1fr;
+  }
+
+  .pujcovna-proto .rent-videos-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .pujcovna-proto .rent-videos-cta {
+    max-width: none;
+  }
+
   .pujcovna-proto .pdp-why-grid {
     grid-template-columns: 1fr;
   }
@@ -1416,7 +1514,8 @@
   .pujcovna-proto .pick-grid,
   .pujcovna-proto .story-grid,
   .pujcovna-proto .ref-grid,
-  .pujcovna-proto .history-grid {
+  .pujcovna-proto .history-grid,
+  .pujcovna-proto .rent-videos-grid {
     grid-template-columns: 1fr;
   }
 
