@@ -416,7 +416,6 @@ a.box-vyber-jazyka-jazyk:hover {
   display: flex;
   flex-direction: column;
   position: relative;
-  z-index: 1030;
   overflow: visible;
 }
 
@@ -447,9 +446,11 @@ a.box-vyber-jazyka-jazyk:hover {
 }
 
 .content-body .form-pujcit-text {
+  display: flex;
+  flex-direction: column;
   height: 100% !important;
-  min-height: 100%;
-  padding: 12px 12px 0 0;
+  min-height: 640px;
+  padding: 8px 8px 0 0;
   overflow: visible;
   position: relative;
 }
@@ -461,37 +462,35 @@ a.box-vyber-jazyka-jazyk:hover {
 }
 
 .content-body .form-pujcit-name {
-  position: absolute;
-  left: 0;
-  bottom: 12px;
-  margin-top: 0 !important;
+  margin-top: auto;
+  margin-bottom: 18px;
+  position: relative;
   z-index: 2;
+  align-self: flex-start;
 }
 
 .content-body .img-developer {
   left: 36%;
-  bottom: -72px;
-  width: 420px;
-  z-index: 3;
+  bottom: 0;
+  width: 430px;
+  z-index: 1;
 }
 
 @media (max-width: 767.98px) {
   .content-body {
     display: block;
-    z-index: auto;
   }
 
   .content-body .form-pujcit-text {
+    display: block;
     height: auto !important;
     min-height: 0;
     padding: 12px 0 16px;
   }
 
   .content-body .form-pujcit-name {
-    position: relative;
-    left: auto;
-    bottom: auto;
-    margin-top: 24px !important;
+    margin-top: 24px;
+    margin-bottom: 0;
   }
 
   .content-body .img-developer {
