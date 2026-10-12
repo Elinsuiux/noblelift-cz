@@ -3797,6 +3797,47 @@ html {
 .content-body [id^="item-pridat-do-kosiku-"]:hover svg path {
     fill: #73fb61 !important;
 }
+.content-body .carousel-video a.btn,
+.content-body .carousel-video a.btn-vzv {
+    width: 52px;
+    height: 52px;
+    padding: 0 !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.8) !important;
+    background-color: rgba(0, 0, 0, 0.8) !important;
+    border: 0 !important;
+    border-radius: 50% !important;
+    box-shadow: none !important;
+    color: transparent !important;
+}
+.content-body .carousel-video a.btn:hover,
+.content-body .carousel-video a.btn:focus,
+.content-body .carousel-video a.btn:active,
+.content-body .carousel-video a.btn-vzv:hover,
+.content-body .carousel-video a.btn-vzv:focus,
+.content-body .carousel-video a.btn-vzv:active {
+    background: rgba(0, 0, 0, 0.8) !important;
+    background-color: rgba(0, 0, 0, 0.8) !important;
+    border: 0 !important;
+}
+.content-body .carousel-video .boxPlayVideoButton svg,
+.content-body .carousel-video a.btn svg,
+.content-body .carousel-video a.btn-vzv svg {
+    width: 18px;
+    height: 18px;
+    margin: 0 0 0 2px;
+    display: block;
+}
+.content-body .carousel-video .boxPlayVideoButton svg,
+.content-body .carousel-video .boxPlayVideoButton svg path,
+.content-body .carousel-video a.btn svg,
+.content-body .carousel-video a.btn svg path,
+.content-body .carousel-video a.btn-vzv svg,
+.content-body .carousel-video a.btn-vzv svg path {
+    fill: #73fb61 !important;
+}
 .content-body .first-row-dark tr:first-child,
 .content-body table.table-vyhody tr:first-child {
     background: #1a1a1a !important;
