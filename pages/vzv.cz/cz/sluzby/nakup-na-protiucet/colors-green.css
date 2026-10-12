@@ -407,3 +407,8 @@ a.box-vyber-jazyka-jazyk:hover {
 .h-dropdown-menu .dropdown-item:focus {
   color: #159504 !important;
 }
+
+.card.card-info-text {
+  height: 100%;
+  width: 100%;
+}
