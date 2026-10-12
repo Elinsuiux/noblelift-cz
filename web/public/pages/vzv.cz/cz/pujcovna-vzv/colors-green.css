@@ -66,33 +66,55 @@
   fill: #000000 !important;
 }
 
-/* Header CTAs: E-SHOP outline + green phone (sitewide header match) */
+/* Header CTAs: lime E-SHOP + white phone, outline handset, 4px corners */
 .btn-eshop {
-  background: rgba(0, 0, 0, 0.55) !important;
+  background: #73fb61 !important;
   border: 2px solid #73fb61 !important;
-  color: #73fb61 !important;
+  color: #111 !important;
+  border-radius: 4px !important;
+  font-weight: 600;
+  min-height: 40px;
+  display: inline-flex;
+  align-items: center;
 }
 
 .btn-eshop:hover,
 .btn-eshop:focus,
 .btn-eshop:active {
-  background: rgba(0, 0, 0, 0.72) !important;
-  border-color: #73fb61 !important;
-  color: #73fb61 !important;
+  background: #5fe84d !important;
+  border-color: #5fe84d !important;
+  color: #111 !important;
 }
 
 .btn-eshop svg {
-  fill: #73fb61 !important;
+  fill: #111 !important;
 }
 
 .btn-phone {
-  background-color: #73fb61 !important;
-  border-color: #73fb61 !important;
+  background-color: #ffffff !important;
+  border: 2px solid #ffffff !important;
+  border-radius: 4px !important;
+  color: #111 !important;
+  font-weight: 600;
+  min-height: 40px;
 }
 
 .btn-phone span,
 .btn-phone .fw-bold {
-  color: #000000 !important;
+  color: #111 !important;
+}
+
+.btn-phone svg,
+.btn-phone svg path {
+  fill: none !important;
+  stroke: #111 !important;
+}
+
+.btn-phone:hover,
+.btn-phone:focus,
+.btn-phone:active {
+  background-color: #f2f2f2 !important;
+  color: #111 !important;
 }
 
 
@@ -215,9 +237,36 @@ a.text-primary:hover,
 
 /* ── Forms & filters ────────────────────────────────────────── */
 
+.filtr-cancel a,
+.filtr-cancel a.text-primary,
+#filtr .filtr-cancel a,
+#filtr .filtr-cancel a.text-primary,
+#reset-filtr,
+a#reset-filtr.text-primary {
+  color: #159504 !important;
+}
+.filtr-cancel a:hover,
+.filtr-cancel a.text-primary:hover,
+#filtr .filtr-cancel a:hover,
+#filtr .filtr-cancel a.text-primary:hover,
+#reset-filtr:hover,
+a#reset-filtr.text-primary:hover {
+  color: #073201 !important;
+}
+
+#filtr .form-check-input:hover {
+  border-color: #73fb61;
+}
+
 .form-check-input:checked {
   background-color: #73fb61;
   border-color: #0e6303;
+}
+#filtr .form-check-input:checked[type=checkbox] {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23333333' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.15' d='M3.3 8.3l2.9 3 6.5-6.7'/%3e%3c/svg%3e") !important;
+  background-size: 14px 14px !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
 }
 
 .form-check-input:focus {

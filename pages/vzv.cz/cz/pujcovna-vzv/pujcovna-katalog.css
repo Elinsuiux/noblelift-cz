@@ -222,9 +222,41 @@
   color: #666;
 }
 
-.rent-catalog .form-check-input:checked {
+.rent-catalog .filtr-cancel a,
+.rent-catalog .filtr-cancel a.text-primary,
+.rent-catalog #filtr .filtr-cancel a,
+.rent-catalog #filtr .filtr-cancel a.text-primary,
+.rent-catalog #reset-filtr,
+.rent-catalog a#reset-filtr.text-primary,
+.rent-catalog #reset-filtr-mobile {
+  color: #159504 !important;
+}
+.rent-catalog .filtr-cancel a:hover,
+.rent-catalog .filtr-cancel a.text-primary:hover,
+.rent-catalog #filtr .filtr-cancel a:hover,
+.rent-catalog #filtr .filtr-cancel a.text-primary:hover,
+.rent-catalog #reset-filtr:hover,
+.rent-catalog a#reset-filtr.text-primary:hover,
+.rent-catalog #reset-filtr-mobile:hover {
+  color: #073201 !important;
+}
+
+.rent-catalog .form-check-input:hover,
+.rent-catalog #filtr .form-check-input:hover {
+  border-color: #73fb61;
+}
+
+.rent-catalog .form-check-input:checked,
+.rent-catalog #filtr .form-check-input:checked {
   background-color: #73fb61;
   border-color: #0e6303;
+}
+.rent-catalog .form-check-input:checked[type=checkbox],
+.rent-catalog #filtr .form-check-input:checked[type=checkbox] {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23333333' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.15' d='M3.3 8.3l2.9 3 6.5-6.7'/%3e%3c/svg%3e") !important;
+  background-size: 14px 14px !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
 }
 
 .rent-detail-photo {
