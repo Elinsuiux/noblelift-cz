@@ -1087,15 +1087,17 @@
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  width: 100%;
+  max-width: 400px;
   min-height: 160px;
   margin: 0 0 18px;
 }
 
 .pujcovna-proto .ref-testimonial-logo img {
   display: block;
-  max-width: 340px;
-  max-height: 200px;
-  width: auto;
+  width: 100%;
+  max-width: 400px;
+  max-height: 250px;
   height: auto;
   object-fit: contain;
 }
@@ -1112,6 +1114,9 @@
   padding: 0;
   border: 0;
   font-style: normal;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 
 .pujcovna-proto .ref-testimonial-quote p {
