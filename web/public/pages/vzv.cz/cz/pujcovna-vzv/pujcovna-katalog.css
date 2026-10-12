@@ -97,7 +97,7 @@
   font-weight: 800;
   text-transform: uppercase;
   text-decoration: none;
-  font-size: 1.02rem;
+  font-size: 1.16rem;
   line-height: 1.25;
   margin-bottom: 12px;
 }
@@ -107,12 +107,43 @@
 }
 
 .rent-catalog .card-body-parametry {
-  font-size: 0.8rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(48px, 1fr));
+  gap: 8px 4px;
+  text-align: center;
   color: #4d4d4d;
 }
 
-.rent-catalog .card-body-parametry .row + .row {
-  margin-top: 2px;
+.rent-catalog .card-spec {
+  min-width: 0;
+}
+
+.rent-catalog .card-spec-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 36px;
+  margin: 0 0 4px;
+}
+
+.rent-catalog .card-spec-icon img {
+  display: block;
+  height: 32px;
+  width: auto;
+  max-width: none;
+  object-fit: contain;
+}
+
+.rent-catalog .card-spec-label {
+  display: none;
+}
+
+.rent-catalog .card-spec-value {
+  font-size: 0.62rem;
+  font-weight: 400;
+  color: #1c1c1c;
+  line-height: 1.25;
+  word-break: break-word;
 }
 
 .rent-catalog .card-vzv-actions {
