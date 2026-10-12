@@ -857,9 +857,9 @@
 
 .pujcovna-proto .rent-videos {
   display: grid;
-  grid-template-columns: 1fr auto;
-  gap: 28px;
-  align-items: center;
+  grid-template-columns: 1fr;
+  gap: 22px;
+  justify-items: center;
   margin: 0 0 40px;
 }
 
@@ -867,6 +867,7 @@
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 14px;
+  width: 100%;
 }
 
 .pujcovna-proto .rent-video-card {
@@ -911,7 +912,7 @@
 
 .pujcovna-proto .rent-videos-cta {
   text-align: center;
-  max-width: 240px;
+  max-width: none;
 }
 
 .pujcovna-proto .rent-videos-cta p {
@@ -924,9 +925,9 @@
 .pujcovna-proto .rent-videos-cta a.rent-videos-youtube,
 .pujcovna-proto a.rent-videos-youtube {
   display: inline-block;
-  padding: 12px 18px;
+  padding: 12px 22px;
   border: 0;
-  border-radius: 8px;
+  border-radius: 999px;
   color: #111 !important;
   background: #73fb61;
   text-decoration: none;
@@ -1461,18 +1462,6 @@
   .pujcovna-proto .ref-grid,
   .pujcovna-proto .history-grid {
     grid-template-columns: 1fr 1fr;
-  }
-
-  .pujcovna-proto .rent-videos {
-    grid-template-columns: 1fr;
-  }
-
-  .pujcovna-proto .rent-videos-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .pujcovna-proto .rent-videos-cta {
-    max-width: none;
   }
 
   .pujcovna-proto .pdp-why-grid {
