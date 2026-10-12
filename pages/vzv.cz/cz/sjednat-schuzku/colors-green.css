@@ -412,6 +412,55 @@ a.box-vyber-jazyka-jazyk:hover {
   color: #0e6303 !important;
 }
 
+.content-body .form-pujcit {
+  overflow: visible;
+}
+
+.content-body .form-pujcit-text {
+  height: auto !important;
+  min-height: 0;
+  padding: 12px 12px 148px 0;
+  overflow: visible;
+}
+
+.content-body .form-pujcit-text p {
+  position: relative;
+  z-index: 2;
+  max-width: 92%;
+}
+
+.content-body .form-pujcit-name {
+  margin-top: 280px;
+  position: relative;
+  z-index: 2;
+}
+
+.content-body .img-developer {
+  left: 40%;
+  bottom: 24px;
+  width: 400px;
+  z-index: 1;
+}
+
+@media (max-width: 767.98px) {
+  .content-body .form-pujcit-text {
+    padding: 12px 0 16px;
+  }
+
+  .content-body .form-pujcit-name {
+    margin-top: 24px;
+  }
+
+  .content-body .img-developer {
+    position: relative;
+    left: auto;
+    bottom: auto;
+    width: min(320px, 100%);
+    display: block;
+    margin: 12px 0 0;
+  }
+}
+
 .schuzka-form {
   padding: 18px 20px;
   background: #f5f5f5;
