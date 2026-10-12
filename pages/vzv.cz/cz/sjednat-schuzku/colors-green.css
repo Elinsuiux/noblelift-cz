@@ -407,3 +407,127 @@ a.box-vyber-jazyka-jazyk:hover {
 .h-dropdown-menu .dropdown-item:focus {
   color: #159504 !important;
 }
+
+.form-pujcit-name span {
+  color: #0e6303 !important;
+}
+
+.schuzka-form {
+  padding: 18px 20px;
+  background: #f5f5f5;
+  border-radius: 0.3rem;
+}
+
+.schuzka-form-fields {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.schuzka-form-fields label {
+  display: grid;
+  gap: 6px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #777;
+}
+
+.schuzka-form-fields .is-wide {
+  grid-column: 1 / -1;
+}
+
+.schuzka-form-fields input:not([type="checkbox"]),
+.schuzka-form-fields textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 0;
+  border-radius: 0.3rem;
+  background: #fff;
+  color: #333;
+  font: inherit;
+  font-size: 0.9rem;
+  font-weight: 400;
+  outline: none;
+  box-shadow: none;
+}
+
+.schuzka-form-fields input::placeholder,
+.schuzka-form-fields textarea::placeholder {
+  color: #b3b3b3;
+  font-weight: 400;
+  opacity: 1;
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+.schuzka-form-fields textarea {
+  min-height: 72px;
+  height: 72px;
+  resize: vertical;
+}
+
+.schuzka-form-fields .schuzka-consent {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  grid-column: 1 / -1;
+  font-size: 0.8rem;
+  font-weight: 400;
+  letter-spacing: 0;
+  text-transform: none;
+  color: #444;
+}
+
+.schuzka-form-fields .schuzka-consent input {
+  width: 16px;
+  height: 16px;
+  margin: 0;
+  flex-shrink: 0;
+}
+
+.schuzka-form-fields .schuzka-consent .invalid-feedback {
+  flex-basis: 100%;
+  margin: 0;
+}
+
+.schuzka-form-submit {
+  width: 100%;
+  min-height: 44px;
+  padding: 12px 18px;
+  border: 0;
+  border-radius: 0.3rem;
+  background: #73fb61;
+  color: #111;
+  font-size: 0.92rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.schuzka-form-submit:hover {
+  background: #1cc705;
+  color: #111;
+}
+
+.content-body a.schuzka-form-phone,
+.schuzka-form-phone {
+  display: block;
+  margin: 12px 0 0;
+  font-size: 0.86rem;
+  color: #333 !important;
+  text-decoration: none;
+}
+
+.schuzka-form-phone strong {
+  color: #0e6303;
+  font-weight: 700;
+}
+
+@media (max-width: 640px) {
+  .schuzka-form-fields {
+    grid-template-columns: 1fr;
+  }
+}

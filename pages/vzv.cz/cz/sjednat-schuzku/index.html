@@ -106,7 +106,7 @@
     <link rel="stylesheet" href="../../../../assets/vzv.cz/assets/css/footer.css" />
     <link rel="stylesheet" href="../../../../assets/vzv.cz/assets/css/mobile.css" />
     <link rel="stylesheet" href="../../../../assets/vzv.cz/assets/css/colors.css" />
-    <link rel="stylesheet" href="colors-green.css?v=dropdown-hover-1" />
+    <link rel="stylesheet" href="colors-green.css?v=schuzka-form-1" />
         <script type="text/javascript" src="../../../../assets/vzv.cz/assets/js/konverze.js"></script>
 
     <script>
@@ -3714,61 +3714,46 @@
                 </div>
             </div>
             <div class="col-md-6 col-12">
-                <div class="row form-lg form-light-background form-light-background-dark needs-validation">
-                    <div class="row g-3">
-                        <div class="col-12 col-md-6">
-                            <label for="nazev_spolecnosti" class="form-label">Název společnosti</label>
-                            <input type="text" class="form-input" id="nazev_spolecnosti" name="nazev_spolecnosti" value="">
+                <div class="schuzka-form">
+                    <form class="schuzka-form-fields needs-validation" action="#" method="post" onsubmit="event.preventDefault(); sendPujcovnaVZV(2);">
+                        <label>
+                            Název společnosti
+                            <input type="text" id="nazev_spolecnosti" name="nazev_spolecnosti" placeholder="Zadejte název společnosti" value="">
+                        </label>
+                        <label>
+                            Jméno a příjmení *
+                            <input type="text" id="jmeno_a_prijmeni" name="jmeno_a_prijmeni" placeholder="Zadejte jméno a příjmení" value="" required>
+                            <div class="invalid-feedback" id="jmeno_a_prijmeni_invalid">Vyplňte prosím jméno a příjmení!</div>
+                        </label>
+                        <label>
+                            Telefon *
+                            <input type="text" id="telefon" name="telefon" placeholder="Zadejte telefonní číslo" value="" required>
+                            <div class="invalid-feedback" id="telefon_invalid">Vyplňte prosím telefon!</div>
+                        </label>
+                        <label>
+                            E-mail *
+                            <input type="text" id="email" name="email" placeholder="Zadejte svůj e-mail" value="" required>
+                            <div class="invalid-feedback" id="email_invalid">Vyplňte prosím email!</div>
+                        </label>
+                        <label class="is-wide">
+                            Adresa společnosti
+                            <input type="text" id="adresa_spolecnosti" name="adresa_spolecnosti" placeholder="Ulice, město" value="">
+                        </label>
+                        <label class="is-wide">
+                            Poznámka
+                            <textarea name="poznamka" id="poznamka" placeholder="Jaký stroj potřebujete a na jak dlouho"></textarea>
+                        </label>
+                        <label class="schuzka-consent">
+                            <input class="form-check-input" type="checkbox" id="souhlas_gdpr" name="souhlas_gdpr" required>
+                            <span>Souhlasím se zpracováním osobních údajů</span>
+                            <div class="invalid-feedback" id="souhlas_gdpr_invalid">Souhlasím se zpracováním osobních údajů</div>
+                        </label>
+                        <div class="is-wide text-danger d-none" id="pujcovna_vzv_form_valid"></div>
+                        <div class="is-wide" id="pujcovna_vzv_form">
+                            <button type="submit" class="schuzka-form-submit">Odeslat poptávku</button>
                         </div>
-                        <div class="col-12 col-md-6">
-                            <label for="jmeno_a_prijmeni" class="form-label label-required">Jméno a příjmení</label>
-                            <input type="text" class="form-input form-control" id="jmeno_a_prijmeni"  name="jmeno_a_prijmeni" value="" required>
-                            <div class="invalid-feedback" id="jmeno_a_prijmeni_invalid">
-                                Vyplňte prosím jméno a příjmení!
-                            </div>
-                        </div>
-                        <div class="col-12 col-md-6">
-                            <label for="telefon" class="form-label label-required">Telefon</label>
-                            <input type="text" class="form-input form-control" id="telefon" name="telefon" value="" required>
-                            <div class="invalid-feedback" id="telefon_invalid">
-                                Vyplňte prosím telefon!
-                            </div>
-                        </div>
-                        <div class="col-12 col-md-6">
-                            <label for="email" class="form-label label-required">E-mail</label>
-                            <input type="text" class="form-input form-control" id="email" name="email" value="" required>
-                            <div class="invalid-feedback" id="email_invalid">
-                                Vyplňte prosím email!
-                            </div>
-                        </div>
-
-                        <div class="col-12 col-md-12">
-                            <label for="poznamka" class="form-label">Poznámka</label>
-                            <textarea name="poznamka" id="poznamka" class="form-textarea form-input" placeholder="Poznámka" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Poznámka'"></textarea>
-                        </div>
-                        <div class="col-md-12">
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" id="souhlas_gdpr" name="souhlas_gdpr" required>
-                                <label class="form-label mt-2" for="souhlas_gdpr">
-                                    Souhlasím se zpracováním osobních údajů
-                                </label>
-                                <div class="invalid-feedback" id="souhlas_gdpr_invalid">
-                                    Souhlasím se zpracováním osobních údajů
-                                </div>
-                            </div>
-                            <br>
-                            <a href="../../index/index.html" data-bs-toggle="modal" data-bs-target="#modal-zasady-ochrany-osobnich-udaju" class="udaje">Zásady ochrany osobních údajů</a>
-
-                        </div>
-
-                        <div class="col-12 text-center text-danger d-none" id="pujcovna_vzv_form_valid">
-
-                        </div>
-
-                        <div class="col-12 col-md-12 text-right" id="pujcovna_vzv_form">
-                            <button type="submit" class="btn-pujcit btn btn-vzv btn-200" onclick="sendPujcovnaVZV(2)">Odeslat</button>
-                        </div>
-                    </div>
+                    </form>
+                    <a class="schuzka-form-phone" href="tel:+420777333131">Potřebujete pomoc? Volejte <strong>+420 777 333 131</strong></a>
                 </div>
             </div>
         </div>
