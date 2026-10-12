@@ -218,25 +218,88 @@ a.text-primary:hover,
 /* ── Product cards & stickers ───────────────────────────────── */
 
 .sticker-stav-4,
-.sticker-spatny-motor,
-.sticker-repas {
+.sticker-spatny-motor {
   color: #000000 !important;
 }
 
-.sticker-nove-dovezeny {
-  color: #0e6303 !important;
-}
-
+.sticker.sticker-sleva,
 .sticker-sleva,
 .wrap-sticker.stickerSale {
   background: #73fb61 !important;
   color: #000000 !important;
 }
+.sticker.sticker-sleva:before,
 .sticker-sleva:before {
   border-color: transparent #73fb61 transparent transparent !important;
 }
 .wrap-sticker.stickerSale:before {
   border-right-color: #73fb61 !important;
+}
+
+.sticker.sticker-nove-dovezeny,
+.sticker-nove-dovezeny,
+.wrap-sticker.stickerNew {
+  background: #ffffff !important;
+  color: #159504 !important;
+}
+.sticker.sticker-nove-dovezeny:before,
+.sticker-nove-dovezeny:before {
+  border-color: transparent #ffffff transparent transparent !important;
+}
+.wrap-sticker.stickerNew:before {
+  border-right-color: #ffffff !important;
+}
+
+.sticker.sticker-motohodiny,
+.sticker-motohodiny {
+  background: #f5f5f5 !important;
+  color: #0e6303 !important;
+}
+.sticker.sticker-motohodiny:before,
+.sticker-motohodiny:before {
+  border-color: transparent #f5f5f5 transparent transparent !important;
+}
+
+.sticker.sticker-baterie,
+.sticker-baterie,
+.wrap-sticker.stickerBattery {
+  background: #a7fc9c !important;
+  color: #0e6303 !important;
+}
+.sticker.sticker-baterie:before,
+.sticker-baterie:before {
+  border-color: transparent #a7fc9c transparent transparent !important;
+}
+.wrap-sticker.stickerBattery:before {
+  border-right-color: #a7fc9c !important;
+}
+
+.sticker.sticker-repas,
+.sticker.sticker-repas-hotovo,
+.sticker-repas-hotovo,
+.wrap-sticker.stickerReconditioned {
+  background: #d3fecd !important;
+  color: #0a5421 !important;
+}
+.sticker.sticker-repas:before,
+.sticker.sticker-repas-hotovo:before,
+.sticker-repas-hotovo:before {
+  border-color: transparent #d3fecd transparent transparent !important;
+}
+.wrap-sticker.stickerReconditioned:before {
+  border-right-color: #d3fecd !important;
+}
+
+.sticker.sticker-repas-probiha,
+.sticker-repas.sticker-repas-probiha,
+.sticker-repas-probiha {
+  background: #0e6303 !important;
+  color: #ffffff !important;
+}
+.sticker.sticker-repas-probiha:before,
+.sticker-repas.sticker-repas-probiha:before,
+.sticker-repas-probiha:before {
+  border-color: transparent #0e6303 transparent transparent !important;
 }
 
 .bg-sleva .text-decoration-line-through,
@@ -254,20 +317,6 @@ a.text-primary:hover,
   line-height: 1.25 !important;
 }
 
-.wrap-sticker.stickerBattery {
-  background: #4ffa38 !important;
-}
-
-.wrap-sticker.stickerBattery:before {
-  border-right-color: #4ffa38 !important;
-}
-
-.sticker.sticker-motohodiny {
-  background: #ffffff !important;
-}
-.sticker.sticker-motohodiny:before {
-  border-color: transparent #ffffff transparent transparent !important;
-}
 
 /* ── Forms & filters ────────────────────────────────────────── */
 

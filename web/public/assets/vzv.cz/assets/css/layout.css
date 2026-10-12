@@ -1453,11 +1453,11 @@ a.btn.btn-dark.first-letter-capitalize:active {
 }
 
 .sticker.sticker-motohodiny {
-    background: #ffffff !important;
-    color: #159504 !important;
+    background: #f5f5f5 !important;
+    color: #0E6303 !important;
 }
 .sticker.sticker-motohodiny:before {
-    border-color: transparent #ffffff transparent transparent !important;
+    border-color: transparent #f5f5f5 transparent transparent !important;
 }
 
 .sticker.sticker-baterie {
@@ -1470,27 +1470,27 @@ a.btn.btn-dark.first-letter-capitalize:active {
 
 .sticker.sticker-repas,
 .sticker.sticker-repas-hotovo {
-    background: #73FB61 !important;
-    color: #0E6303 !important;
+    background: #D3FECD !important;
+    color: #0A5421 !important;
 }
 .sticker.sticker-repas:before,
 .sticker.sticker-repas-hotovo:before {
-    border-color: transparent #73FB61 transparent transparent !important;
+    border-color: transparent #D3FECD transparent transparent !important;
 }
 .sticker.sticker-repas-probiha {
-    background: #D3FECD !important;
-    color: #0E6303 !important;
+    background: #0E6303 !important;
+    color: #ffffff !important;
 }
 .sticker.sticker-repas-probiha:before {
-    border-color: transparent #D3FECD transparent transparent !important;
+    border-color: transparent #0E6303 transparent transparent !important;
 }
 
 .sticker.sticker-nove-dovezeny {
-    background: #4FFA38 !important;
-    color: #0E6303 !important;
+    background: #ffffff !important;
+    color: #159504 !important;
 }
 .sticker.sticker-nove-dovezeny:before {
-    border-color: transparent #4FFA38 transparent transparent !important;
+    border-color: transparent #ffffff transparent transparent !important;
 }
 
 .sticker.sticker-stav-4,
@@ -2994,14 +2994,14 @@ table.table-vyhody .btn
 .wrap-sticker.stickerDefault {background: var(--color-vzv);}
 .wrap-sticker.stickerDefault:before { border-right-color: var(--color-vzv);}
 
-.wrap-sticker.stickerReconditioned { background: #b80303; }
-.wrap-sticker.stickerReconditioned:before { border-right-color: #b80303; }
+.wrap-sticker.stickerReconditioned { background: #d3fecd; color: #0a5421; }
+.wrap-sticker.stickerReconditioned:before { border-right-color: #d3fecd; }
 
-.wrap-sticker.stickerBattery { background: #e23b30; }
-.wrap-sticker.stickerBattery:before { border-right-color: #e23b30; }
+.wrap-sticker.stickerBattery { background: #a7fc9c; color: #0e6303; }
+.wrap-sticker.stickerBattery:before { border-right-color: #a7fc9c; }
 
-.wrap-sticker.stickerNew { background: var(--color-white); color: var(--color-vzv); }
-.wrap-sticker.stickerNew:before { border-right-color:var(--color-white); }
+.wrap-sticker.stickerNew { background: #ffffff; color: #159504; }
+.wrap-sticker.stickerNew:before { border-right-color: #ffffff; }
 
 .wrap-sticker.stickerBlackFriday { background: #119e25; color: var(--color-white); }
 .wrap-sticker.stickerBlackFriday:before { border-right-color: #119e25; }
