@@ -409,76 +409,74 @@ a.box-vyber-jazyka-jazyk:hover {
 }
 
 .form-pujcit-name span {
-  color: #0e6303 !important;
-}
-
-.content-body {
-  min-height: 0 !important;
-  overflow: visible;
-}
-
-.content-body > .container-fluid:last-of-type > .container {
-  margin-bottom: 0 !important;
-  overflow: visible;
+  color: #111 !important;
+  font-size: 22px;
 }
 
 .content-body .form-pujcit {
-  overflow: visible;
-  align-items: flex-start;
-}
-
-.content-body .form-pujcit > [class*="col-"] {
-  overflow: visible;
+  align-items: stretch;
 }
 
 .content-body .form-pujcit-text {
-  height: auto !important;
-  min-height: 540px;
-  padding: 8px 8px 0 0;
-  overflow: visible;
+  height: 100% !important;
+  min-height: 100%;
+  padding: 22px 24px 20px;
+  background: #f5f5f5;
+  border-radius: 0.3rem;
+  overflow: hidden;
   position: relative;
+  font-size: 15px;
 }
 
 .content-body .form-pujcit-text p {
   position: relative;
   z-index: 2;
-  max-width: 92%;
+  max-width: 100%;
+  margin-top: 0;
+  margin-bottom: 8px;
+  font-size: 15px;
+  line-height: 1.45;
 }
 
 .content-body .form-pujcit-name {
   position: absolute;
-  left: 0;
-  bottom: 88px;
+  left: 24px;
+  bottom: 20px;
   margin: 0;
   z-index: 2;
+  font-size: 14px;
+  color: #333;
 }
 
 .content-body .img-developer {
   position: absolute;
-  left: 36%;
-  top: 124px;
-  bottom: auto;
-  width: 400px;
+  left: 32%;
+  top: auto;
+  bottom: 0;
+  width: 340px;
   z-index: 1;
 }
 
 @media (max-width: 767.98px) {
   .content-body .form-pujcit-text {
+    height: auto !important;
     min-height: 0;
-    padding: 12px 0 16px;
+    overflow: visible;
+    padding: 18px 18px 16px;
   }
 
   .content-body .form-pujcit-name {
     position: relative;
     left: auto;
     bottom: auto;
-    margin-top: 24px;
+    margin-top: 20px;
   }
 
   .content-body .img-developer {
     position: relative;
     left: auto;
     top: auto;
+    bottom: auto;
     width: min(320px, 100%);
     display: block;
     margin: 12px 0 0;
