@@ -244,6 +244,16 @@ a.text-primary:hover,
   color: #000000 !important;
 }
 
+.card .bg-sleva {
+  height: auto !important;
+  min-height: 54px;
+  padding: 9px 8px 8px !important;
+  gap: 4px;
+}
+.card .bg-sleva > div {
+  line-height: 1.25 !important;
+}
+
 .wrap-sticker.stickerBattery {
   background: #4ffa38 !important;
 }
