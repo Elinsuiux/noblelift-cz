@@ -517,3 +517,8 @@ a.box-vyber-jazyka-jazyk:hover {
 .h-dropdown-menu .dropdown-item:focus {
   color: #159504 !important;
 }
+
+.card .text-primary-dark,
+#forklifts .card .text-primary-dark {
+  color: #159504 !important;
+}

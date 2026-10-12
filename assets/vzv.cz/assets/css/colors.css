@@ -39,6 +39,10 @@
 .text-primary {
     color: var(--color-primary) !important;
 }
+.card .text-primary-dark,
+#forklifts .card .text-primary-dark {
+    color: #159504 !important;
+}
 .text-noblelift {
     color: var(--color-noblelift) !important;
 }
