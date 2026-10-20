@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>VZV.cz rebrand — from red to black + green</title>
+  <link href="https://fonts.googleapis.com/css2?family=Tasa+Orbiter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --lime: #73FB61;
+      --green: #0E6303;
+      --black: #0a0a0a;
+      --red: #e50505;
+      --yellow: #d3fa00;
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; height: 100%; background: var(--black); color: #fff;
+      font-family: "Tasa Orbiter", system-ui, sans-serif; }
+    .deck { height: 100%; overflow: hidden; }
+    .slide {
+      display: none; height: 100%; padding: 48px 64px 72px;
+      flex-direction: column; justify-content: center;
+    }
+    .slide.on { display: flex; }
+    .kicker { color: var(--lime); letter-spacing: .18em; text-transform: uppercase;
+      font-size: 12px; font-weight: 700; margin: 0 0 12px; }
+    h1 { font-size: clamp(32px, 5vw, 56px); line-height: 1.05; margin: 0 0 16px; font-weight: 800; }
+    h2 { font-size: clamp(26px, 3.4vw, 40px); margin: 0 0 14px; font-weight: 800; }
+    p, li { font-size: 18px; line-height: 1.45; color: #e8e8e8; }
+    .lead { max-width: 720px; font-size: 20px; color: #ccc; }
+    .row { display: grid; gap: 20px; align-items: start; }
+    .row.two { grid-template-columns: 1fr 1fr; }
+    .row.three { grid-template-columns: 1fr 1fr 1fr; }
+    figure { margin: 0; }
+    figure img { width: 100%; height: auto; display: block; border: 1px solid #222; }
+    figcaption { font-size: 12px; letter-spacing: .08em; text-transform: uppercase;
+      color: #9a9a9a; margin-top: 8px; font-weight: 700; }
+    .chip { display: inline-flex; align-items: center; gap: 8px; margin: 0 12px 10px 0;
+      font-size: 14px; font-weight: 700; }
+    .sw { width: 18px; height: 18px; display: inline-block; }
+    ul.plain { margin: 8px 0 0; padding: 0 0 0 18px; }
+    ul.plain li { margin: 6px 0; }
+    .nav {
+      position: fixed; left: 0; right: 0; bottom: 0; height: 56px;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 24px; background: #000; border-top: 1px solid #1c1c1c; z-index: 5;
+    }
+    .nav button {
+      background: transparent; color: #fff; border: 1px solid #333; padding: 8px 14px;
+      cursor: pointer; font: inherit; font-size: 13px; letter-spacing: .08em; text-transform: uppercase;
+    }
+    .nav button:hover { border-color: var(--lime); color: var(--lime); }
+    .dots { display: flex; gap: 8px; }
+    .dots i { width: 8px; height: 8px; border-radius: 50%; background: #333; display: block; }
+    .dots i.on { background: var(--lime); }
+    .count { font-size: 12px; color: #888; letter-spacing: .12em; }
+    a { color: var(--lime); }
+    .mark { color: var(--lime); font-weight: 800; }
+    @media (max-width: 900px) {
+      .slide { padding: 28px 20px 72px; }
+      .row.two, .row.three { grid-template-columns: 1fr; }
+      h1 { font-size: 32px; } p, li { font-size: 16px; }
+    }
+  </style>
+</head>
+<body>
+<div class="deck" id="deck">
+
+  <section class="slide on">
+    <p class="kicker">VZV.cz · 2026</p>
+    <h1>From two brands<br>to one green VZV</h1>
+    <p class="lead">Red VZV.cz and yellow VZVRENT.cz become a single black-and-green site. Sale, rental and service live together.</p>
+    <p style="margin-top:28px">
+      <span class="chip"><span class="sw" style="background:#e50505"></span> VZV.cz was red</span>
+      <span class="chip"><span class="sw" style="background:#d3fa00"></span> VZVRENT.cz was yellow</span>
+      <span class="chip"><span class="sw" style="background:#73FB61"></span> New VZV is lime on black</span>
+    </p>
+  </section>
+
+  <section class="slide">
+    <p class="kicker">Before</p>
+    <h2>Two websites, two colors</h2>
+    <div class="row two">
+      <figure>
+        <img src="before-vzv.jpg" alt="Old red VZV.cz homepage">
+        <figcaption>vzv.cz — red logo, red header, red claim</figcaption>
+      </figure>
+      <figure>
+        <img src="before-vzvrent.jpg" alt="Old VZVRENT.cz homepage">
+        <figcaption>vzvrent.cz — yellow logo, yellow CTAs, rental only</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="slide">
+    <p class="kicker">After</p>
+    <h2>One black header, green VZV mark</h2>
+    <figure>
+      <img src="after-home.jpg" alt="New green VZV homepage">
+      <figcaption>New vzv.cz — black chrome, lime wordmark, VEZEME VOZÍKY</figcaption>
+    </figure>
+  </section>
+
+  <section class="slide">
+    <p class="kicker">What changed on VZV.cz</p>
+    <h2>Red UI → black + green</h2>
+    <div class="row two">
+      <div>
+        <ul class="plain">
+          <li>Logo: red forklift plate → green <span class="mark">VZV↗</span></li>
+          <li>Header: red bar → black, lime E-SHOP, white phone</li>
+          <li>Claim: red “VOZÍKY” → white + green arrow</li>
+          <li>Buttons and links: red → lime fill / #0E6303 text</li>
+          <li>Listing cards: lime SLEVA, black strikethrough on yellow price</li>
+          <li>Brand tokens documented for IT</li>
+        </ul>
+      </div>
+      <figure>
+        <img src="after-listing.jpg" alt="New listing cards in green">
+        <figcaption>Catalog — green numbers, lime badges, lime Do košíku</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="slide">
+    <p class="kicker">VZVRENT → VZV.cz</p>
+    <h2>Rental content is now inside VZV</h2>
+    <p class="lead" style="margin-bottom:18px">The whole půjčovna from vzvrent.cz (machines, services, poptávka, contacts) sits under <strong>Pronájem</strong> on the new green site — same information, VZV colors.</p>
+    <div class="row two">
+      <figure>
+        <img src="before-vzvrent.jpg" alt="VZVRENT homepage">
+        <figcaption>Before — separate vzvrent.cz</figcaption>
+      </figure>
+      <figure>
+        <img src="after-rent.jpg" alt="New Pronájem on VZV.cz">
+        <figcaption>After — /pujcovna-vzv on VZV.cz</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="slide">
+    <p class="kicker">System</p>
+    <h2>Black + green palette</h2>
+    <div class="row two">
+      <div>
+        <p><span class="chip"><span class="sw" style="background:#73FB61"></span> #73FB61 primary lime</span></p>
+        <p><span class="chip"><span class="sw" style="background:#0E6303"></span> #0E6303 text on white</span></p>
+        <p><span class="chip"><span class="sw" style="background:#159504"></span> #159504 catalog numbers</span></p>
+        <p><span class="chip"><span class="sw" style="background:#000"></span> #000000 header / dark panels</span></p>
+        <p style="margin-top:18px">Lime on black. Readable green on white. Old red and VZVRENT yellow stay only as “dříve” marks if we tell the rebrand story.</p>
+      </div>
+      <figure>
+        <img src="after-palette.jpg" alt="Color palette sheet">
+        <figcaption>IT color sheet on the prototype</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="slide">
+    <p class="kicker">In short</p>
+    <h1>One site.<br>One green VZV.</h1>
+    <ul class="plain">
+      <li>Sale from the old red vzv.cz — restyled black / green</li>
+      <li>Rental from vzvrent.cz — moved into Pronájem on VZV.cz</li>
+      <li>Same machines, services and story: Měníme tvář, spolehlivost zůstává</li>
+    </ul>
+    <p style="margin-top:28px">
+      Prototype: <a href="../../index/index.html">new VZV.cz homepage</a>
+      · <a href="https://www.vzv.cz/">live red vzv.cz</a>
+      · <a href="https://www.vzvrent.cz/">live vzvrent.cz</a>
+    </p>
+  </section>
+
+</div>
+<nav class="nav">
+  <button type="button" id="prev">Prev</button>
+  <div class="dots" id="dots"></div>
+  <span class="count" id="count"></span>
+  <button type="button" id="next">Next</button>
+</nav>
+<script>
+(function () {
+  var slides = [].slice.call(document.querySelectorAll(".slide"));
+  var dots = document.getElementById("dots");
+  var count = document.getElementById("count");
+  var i = 0;
+  slides.forEach(function (_, n) {
+    var el = document.createElement("i");
+    if (n === 0) el.className = "on";
+    dots.appendChild(el);
+  });
+  function show(n) {
+    i = (n + slides.length) % slides.length;
+    slides.forEach(function (s, k) { s.classList.toggle("on", k === i); });
+    [].forEach.call(dots.children, function (d, k) { d.classList.toggle("on", k === i); });
+    count.textContent = (i + 1) + " / " + slides.length;
+  }
+  document.getElementById("prev").onclick = function () { show(i - 1); };
+  document.getElementById("next").onclick = function () { show(i + 1); };
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "ArrowRight" || e.key === " ") { e.preventDefault(); show(i + 1); }
+    if (e.key === "ArrowLeft") { e.preventDefault(); show(i - 1); }
+  });
+  document.querySelector(".deck").addEventListener("click", function (e) {
+    if (e.target.closest("a,button")) return;
+    show(i + 1);
+  });
+  show(0);
+})();
+</script>
+</body>
+</html>
