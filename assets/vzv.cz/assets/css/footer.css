@@ -1,0 +1,121 @@
+.footer {
+    /*margin-top: 25px;*/
+    background: var(--color-dark);
+}
+
+.footer-content {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    color: var(--color-white);
+}
+
+.footer-content .company-address {
+    font-size: 24px;
+    margin-bottom: 34px;
+    font-weight: 700;
+}
+
+.footer-content .company-email {
+    margin-top: 30px;
+}
+
+.footer-content .company-email a {
+    color: var(--color-vzv);
+    text-decoration: underline;
+}
+
+.footer-content .company-email a:hover {
+    color: var(--color-white);
+}
+
+.footer-content .social-buttons {
+    display: inline;
+    float: right;
+    padding-top: 80px;
+}
+.footer-content .social-buttons a{
+    font-size: 10px;
+    opacity: 0.75;
+    margin-left: 10px;
+}
+
+.footer-content .social-buttons a:hover {
+    opacity: 1;
+}
+
+.footer-content .social-buttons a svg {
+    width: 23px;
+    background: var(--color-white);
+    padding: 3px;
+    border-radius: 6px;
+    opacity: 0.75;
+    fill: #000000;
+}
+
+.footer-content .footer-nav {
+    margin-top: 30px;
+}
+
+.footer-content .footer-nav-nav {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    align-items: center;
+    white-space: nowrap;
+    gap: 0;
+}
+
+.footer-content .footer-nav a{
+    font-size: 13px;
+    padding-left: 18px;
+    text-transform: uppercase;
+    color: var(--color-white);
+    opacity: 0.75;
+    flex-shrink: 0;
+    white-space: nowrap;
+}
+
+.footer-content .footer-nav a:hover {
+    opacity: 1;
+    color: #73fb61 !important;
+}
+
+.footer-content .footer-nav a:after {
+    display : inline-grid;
+    width: 10px;
+    height: 2px;
+    background: var(--color-vzv);
+    content: "";
+    margin-left: 12px;
+    padding-top: 2px;
+    line-height: 1.618;
+    position: relative;
+    bottom: 4px;
+}
+
+.footer-content .footer-nav a:last-child:after {
+    display: none;
+}
+
+.footer-copyright {
+    background: var(--color-darker);
+}
+
+.footer-copyright .footer-copyright-content {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    opacity: 0.7;
+    color: var(--color-white);
+    font-size: 12px;
+}
+
+.footer-copyright .footer-copyright-content a{
+    color: var(--color-white);
+    text-decoration: underline;
+    margin-top: 10px;
+}
+
+.footer-wrap {
+    position: relative;
+    z-index: 1029;
+}

@@ -1,0 +1,693 @@
+/**
+ * VZV green brand theme — overrides legacy red stylesheet variables.
+ * Palette: primary #73FB61, contrast #0E6303, supporting greens & grays from brand guide.
+ */
+:root {
+  /* Primary greens */
+  --color-primary: #73fb61;
+  --color-primary-light: #a7fc9c;
+  --color-primary-dark: #0e6303;
+  --color-vzv: #73fb61;
+
+  /* Legacy red aliases → green */
+  --color-red: #0e6303;
+  --color-red-light: #4ffa38;
+
+  /* Supporting palette */
+  --color-green-900: #073201;
+  --color-green-800: #0e6303;
+  --color-green-700: #159504;
+  --color-green-600: #1cc705;
+  --color-green-500: #23f906;
+  --color-green-400: #4ffa38;
+  --color-green-300: #73fb61;
+  --color-green-200: #a7fc9c;
+  --color-green-100: #d3fecd;
+
+  /* Grays */
+  --color-dark: #1a1a1a;
+  --color-dark-light: #333333;
+  --color-gray-700: #4d4d4d;
+  --color-gray-600: #666666;
+  --color-gray-500: #808080;
+  --color-gray-400: #999999;
+  --color-gray-300: #b3b3b3;
+  --color-gray-200: #cccccc;
+  --color-light-dark: #e6e6e6;
+  --color-light-dark-dark: #666666;
+
+  /* Brand accents */
+  --color-vzvrent: #d3fecd;
+  --color-vzvrent-dark: #159504;
+  --color-noblelift: #e05010;
+  --color-header-background: #000000;
+}
+
+/* ── Buttons & CTAs ─────────────────────────────────────────── */
+
+.btn-primary,
+.btn-vzv,
+.btn-eshop,
+.bg-primary,
+.page-item .page-link:hover,
+.page-item .page-link.bg-primary,
+.btn-check:active + .btn-primary,
+.btn-check:checked + .btn-primary,
+.btn-primary.active,
+.btn-primary:active,
+.show > .btn-primary.dropdown-toggle,
+.btn-check:focus + .btn-primary,
+.btn-primary:focus {
+  color: #000000 !important;
+}
+
+.btn-primary svg,
+.btn-vzv svg,
+.btn-eshop svg {
+  fill: #000000 !important;
+}
+
+/* Header CTAs: E-SHOP transparent button + green phone number */
+.btn-eshop {
+  background: rgba(0, 0, 0, 0.55) !important;
+  border: 2px solid #73fb61 !important;
+  color: #73fb61 !important;
+}
+
+.btn-eshop:hover,
+.btn-eshop:focus,
+.btn-eshop:active {
+  background: rgba(0, 0, 0, 0.72) !important;
+  border-color: #73fb61 !important;
+  color: #73fb61 !important;
+}
+
+.btn-eshop svg {
+  fill: #73fb61 !important;
+}
+
+.btn-phone {
+  background-color: #73fb61 !important;
+}
+
+.btn-phone span,
+.btn-phone .fw-bold {
+  color: #000000 !important;
+}
+
+.btn-telefonni-cislo,
+.btn-telefonni-cislo span {
+  color: #73fb61 !important;
+}
+
+.btn-outline-primary {
+  color: #0e6303 !important;
+  border-color: #0e6303 !important;
+}
+
+.btn-outline-primary:hover,
+.btn-outline-primary:active,
+.btn-outline-primary:focus {
+  color: #000000 !important;
+  background-color: #73fb61 !important;
+  border-color: #73fb61 !important;
+}
+
+/* ── Links, prices & readable accents (#0E6303 on light bg) ── */
+
+a,
+.text-primary,
+.text-vzv {
+  color: #0e6303;
+}
+
+a:hover,
+a.text-primary:hover,
+.text-vzv:hover {
+  color: #073201 !important;
+}
+
+/* Keep dark buttons readable on hover (e.g. VZVParts.cz carousel CTA) */
+.btn-dark:hover,
+.btn-dark:focus,
+.btn-dark:active {
+  color: #73fb61 !important;
+}
+
+.card-vzv-body-cena,
+.card-vzv-body-cena .cena,
+.product-price-nova-cena,
+.text-danger-vzv,
+.card-vzv-body-cena .cena-sleva {
+  color: #0e6303 !important;
+}
+
+/* ── Homepage hero — match 8766 prototype (Tasa Orbiter + claim image) ─── */
+
+.homepage-vzv-video-wrap {
+  position: relative;
+  min-height: calc(100vh - 96px);
+  overflow: hidden;
+  background: #111 center/cover no-repeat;
+  background-image: url("/assets/vzv.cz/assets/img/uvod/areal-cv-2022.webp");
+}
+
+.homepage-vzv-video,
+.homepage-video-empty {
+  min-height: calc(100vh - 96px);
+}
+
+/* Slightly darker video overlay for white claim/text contrast */
+.homepage-vzv-video:before {
+  background: #000000 !important;
+  opacity: 0.42 !important;
+}
+
+.homepage-vzv-video-text.homepage-hero-v2 {
+  position: absolute;
+  left: 0 !important;
+  right: 0 !important;
+  top: 50% !important;
+  bottom: auto !important;
+  transform: translateY(-50%) !important;
+  width: 100% !important;
+  text-align: center !important;
+  padding: 0 1.25rem !important;
+  box-sizing: border-box;
+  z-index: 11;
+}
+
+.homepage-hero-v2 .homepage-hero-inner.hero-content {
+  max-width: 1240px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+}
+
+.homepage-hero-v2 .hero-eyebrow {
+  margin: 0 0 14px;
+  font-family: "Tasa Orbiter", system-ui, sans-serif !important;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #73fb61 !important;
+}
+
+.homepage-hero-v2 .hero-claim {
+  margin: 10px 0 0;
+  line-height: 0;
+}
+
+.homepage-vzv-video-text.homepage-hero-v2 h1.hero-claim,
+.homepage-vzv-video-text.homepage-hero-v2 h1.hero-claim span {
+  font-family: inherit !important;
+  font-size: inherit !important;
+  font-weight: inherit !important;
+  line-height: 0 !important;
+  letter-spacing: normal !important;
+  text-transform: none !important;
+}
+
+.homepage-hero-v2 .hero-claim-img {
+  display: block;
+  width: min(560px, 88vw);
+  height: auto;
+  margin: 0 auto;
+  /* Make claim text fully white (VEZEME + VOZÍKY) */
+  filter: brightness(0) invert(1);
+}
+
+.homepage-hero-v2 .hero-lead {
+  margin: 22px auto 0;
+  max-width: 40rem;
+  font-family: "Tasa Orbiter", system-ui, sans-serif !important;
+  font-size: 1.05rem;
+  line-height: 1.55;
+  color: rgba(255, 255, 255, 0.82) !important;
+  font-weight: 400;
+  text-align: center !important;
+}
+
+.homepage-hero-v2 .hero-lead strong {
+  font-weight: 700;
+  color: #fff !important;
+}
+
+.homepage-hero-v2 > .row.mt-4 {
+  margin-top: 2.75rem !important;
+}
+
+.homepage-hero-v2 .btn-grey {
+  background: rgba(0, 0, 0, 0.55) !important;
+  border: 2px solid #73fb61 !important;
+  color: #ffffff !important;
+  font-weight: 700 !important;
+}
+
+.homepage-hero-v2 .btn-grey:hover,
+.homepage-hero-v2 .btn-grey:focus,
+.homepage-hero-v2 .btn-grey:active {
+  background: rgba(0, 0, 0, 0.72) !important;
+  border-color: #73fb61 !important;
+  color: #73fb61 !important;
+}
+
+.card-info-box .card-body {
+  color: #1cc705 !important;
+}
+
+@media (max-width: 575px) {
+  .homepage-hero-v2 .hero-eyebrow {
+    font-size: 0.72rem;
+    letter-spacing: 0.12em;
+  }
+
+  .homepage-hero-v2 .hero-lead {
+    font-size: 0.95rem;
+  }
+}
+
+/* ── Header & navigation ────────────────────────────────────── */
+
+.h-vzv {
+  background: #000000 !important;
+}
+
+/* Keep Kontakt on the same row as other nav items */
+@media (min-width: 1200px) {
+  .h-menu.navbar-nav {
+    flex-wrap: nowrap !important;
+    gap: 12px !important;
+  }
+
+  .navbar-collapse {
+    flex-wrap: nowrap !important;
+  }
+}
+
+.h-vzv .nav-link.active,
+.h-vzv .nav-link:hover {
+  color: #73fb61 !important;
+}
+
+.h-email:hover,
+.h-bottom a.h-email:hover {
+  color: #73fb61 !important;
+}
+
+.h-bottom .icon-link:hover,
+.h-bottom .icon-link:hover svg,
+.h-bottom .icon-link:hover svg path {
+  color: #73fb61 !important;
+  fill: #73fb61 !important;
+}
+
+#aHeaderLogo {
+  background: #000000 !important;
+}
+
+#aHeaderLogo .logo-inner {
+  padding: 6px 10px;
+}
+
+#aHeaderLogo img {
+  max-width: 160px;
+  height: auto;
+  display: block;
+}
+
+.badge-count {
+  background: #73fb61 !important;
+  color: #000000 !important;
+  font-weight: 600 !important;
+}
+
+.h-dropdown-menu::before {
+  background: #0e6303 !important;
+}
+
+.h-dropdown-menu .dropdown-item:hover,
+.h-dropdown-menu .dropdown-item:focus {
+  color: #1cc705 !important;
+}
+
+.h-dropdown-menu .dropdown-item svg,
+.h-dropdown-menu .dropdown-item svg *,
+.h-dropdown-menu .dropdown-item svg path,
+.h-dropdown-menu .dropdown-item svg g path,
+.h-menu-mobile svg,
+.h-menu-mobile svg *,
+.h-menu-mobile svg path,
+.h-menu-mobile svg g path,
+#modal-menu .dropdown-item svg,
+#modal-menu .dropdown-item svg *,
+#modal-menu .dropdown-item svg path,
+#modal-menu .dropdown-item svg g path {
+  fill: #14aa00 !important;
+  stroke: none !important;
+  stroke-width: 0 !important;
+}
+
+/* ── Homepage sections ──────────────────────────────────────── */
+
+.homepage-body-wrap {
+  background: #fafafa;
+}
+
+/* Homepage search filter: Hledat */
+.homepage-body-wrap .bg-light-dark .btn-vzv {
+  background-color: #6fe84a !important;
+  border-color: #6fe84a !important;
+  color: #000000 !important;
+  font-weight: 700 !important;
+}
+
+.homepage-body-wrap .bg-light-dark .btn-vzv:hover,
+.homepage-body-wrap .bg-light-dark .btn-vzv:focus,
+.homepage-body-wrap .bg-light-dark .btn-vzv:active {
+  background-color: #5fd43c !important;
+  border-color: #5fd43c !important;
+  color: #000000 !important;
+  font-weight: 700 !important;
+}
+
+.carousel-caption {
+  background-color: #1cc705 !important;
+  opacity: 0.8 !important;
+}
+
+.carousel-indicators-own [data-bs-target] {
+  background-color: #4d4d4d !important;
+  border-color: #4d4d4d !important;
+}
+
+.carousel-indicators-own button.active,
+.carousel-indicators-own .active {
+  background-color: #333333 !important;
+  border-color: #333333 !important;
+}
+
+.pruvodce-vyberem-voziku {
+  background: transparent !important;
+}
+
+/* Tab: solid #159504, full panel height (rotated width = 374px) */
+.pruvodce-vyberem-voziku-title {
+  background: #159504 !important;
+  color: #ffffff !important;
+  opacity: 1 !important;
+  width: 374px !important;
+  height: 52px !important;
+  top: 161px !important;
+  left: -161px !important;
+}
+
+.pruvodce-vyberem-voziku-content-wrap,
+.banner-pruvodce-vyberem {
+  background-color: transparent !important;
+  background-image: none !important;
+  background-blend-mode: normal !important;
+}
+
+/* Panel: same transparent black as hero E-SHOP buttons */
+.pruvodce-vyberem-voziku-content-wrap {
+  margin-top: 0 !important;
+  height: 100% !important;
+}
+
+.pruvodce-vyberem-voziku-content-wrap::before,
+.banner-pruvodce-vyberem::before {
+  content: "" !important;
+  display: block !important;
+  position: absolute;
+  inset: 0;
+  background: #4d4d4d !important;
+  opacity: 1 !important;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.pruvodce-vyberem-voziku .btn-dark {
+  background: #73fb61 !important;
+  border-color: #73fb61 !important;
+  color: #000000 !important;
+  font-weight: 600 !important;
+  position: relative;
+  z-index: 3;
+  pointer-events: auto !important;
+}
+
+.pruvodce-vyberem-voziku .btn-dark:hover,
+.pruvodce-vyberem-voziku .btn-dark:focus,
+.pruvodce-vyberem-voziku .btn-dark:active {
+  background: #73fb61 !important;
+  border-color: #73fb61 !important;
+  color: #000000 !important;
+}
+
+.pruvodce-vyberem-voziku-content-box,
+.banner-pruvodce-vyberem .banner-content {
+  z-index: 3;
+  pointer-events: auto;
+}
+
+.pruvodce-vyberem-voziku-vzv {
+  z-index: 2;
+  pointer-events: none !important;
+}
+
+.banner-pruvodce-vyberem,
+.banner-volejte-prodejce-vzv-dark {
+  border-top-color: #1cc705;
+}
+
+/* Homepage: Tomáše Rýce phone CTA — green outline */
+.banner-volejte-prodejce-vzv-dark .btn-telefonni-cislo {
+  background: transparent !important;
+  border: 2px solid #73fb61 !important;
+  color: #ffffff !important;
+}
+
+.banner-volejte-prodejce-vzv-dark .btn-telefonni-cislo span {
+  color: #ffffff !important;
+}
+
+.banner-volejte-prodejce-vzv-dark .btn-telefonni-cislo:hover,
+.banner-volejte-prodejce-vzv-dark .btn-telefonni-cislo:focus {
+  background: rgba(115, 251, 97, 0.15) !important;
+  border-color: #73fb61 !important;
+  color: #ffffff !important;
+}
+
+.banner-volejte-prodejce-vzv-dark .btn-telefonni-cislo:hover span {
+  color: #ffffff !important;
+}
+
+/* Homepage: Noblelift phone CTA — orange outline */
+.banner-nove-voziky .btn-telefonni-cislo {
+  background: transparent !important;
+  border: 2px solid #e05010 !important;
+  color: #ffffff !important;
+}
+
+.banner-nove-voziky .btn-telefonni-cislo span {
+  color: #ffffff !important;
+}
+
+.banner-nove-voziky .btn-telefonni-cislo:hover,
+.banner-nove-voziky .btn-telefonni-cislo:focus {
+  background: rgba(224, 80, 16, 0.15) !important;
+  border-color: #e05010 !important;
+  color: #ffffff !important;
+}
+
+.banner-nove-voziky .btn-telefonni-cislo:hover span {
+  color: #ffffff !important;
+}
+
+.banner-nove-voziky {
+  border-top-color: #e05010;
+}
+
+.banner-nove-voziky .text-noblelift,
+.banner-nove-voziky .font-noblelift {
+  color: #e05010 !important;
+}
+
+.banner-nove-voziky .banner-button-noblelift {
+  background: #ffffff !important;
+  border: 2px solid #ffffff !important;
+  color: #000000 !important;
+  font-weight: 600 !important;
+}
+
+.banner-nove-voziky .banner-button-noblelift div {
+  font-weight: 600 !important;
+}
+
+.banner-nove-voziky .banner-button-noblelift:hover,
+.banner-nove-voziky .banner-button-noblelift:focus {
+  background: #ffffff !important;
+  border-color: #ffffff !important;
+  color: #000000 !important;
+}
+
+/* ── Product cards & stickers ───────────────────────────────── */
+
+.sticker-stav-4,
+.sticker-spatny-motor,
+.sticker-repas {
+  color: #000000 !important;
+}
+
+.sticker-nove-dovezeny {
+  color: #0e6303 !important;
+}
+
+.wrap-sticker.stickerBattery {
+  background: #4ffa38 !important;
+}
+
+.wrap-sticker.stickerBattery:before {
+  border-right-color: #4ffa38 !important;
+}
+
+/* ── Forms & filters ────────────────────────────────────────── */
+
+.form-check-input:checked {
+  background-color: #73fb61;
+  border-color: #0e6303;
+}
+
+.form-check-input:focus {
+  border-color: #4ffa38;
+  box-shadow: 0 0 0 0.25rem rgba(115, 251, 97, 0.35);
+}
+
+.rs-selected {
+  background: #73fb61 !important;
+}
+
+.rs-tooltip {
+  background: #0e6303 !important;
+  color: #ffffff !important;
+}
+
+/* ── Footer ─────────────────────────────────────────────────── */
+
+.footer,
+.footer-copyright {
+  background: #000000 !important;
+}
+
+.footer-copyright-content a:hover {
+  color: #73fb61 !important;
+}
+
+/* ── Pronájem / půjčovna page ───────────────────────────────── */
+
+.pujcovna-hero .pujcovna-breadcrumb a {
+  color: #73fb61;
+  text-decoration: none;
+}
+
+.pujcovna-hero .pujcovna-breadcrumb span {
+  color: #999;
+  margin: 0 0.35rem;
+}
+
+.pujcovna-tabs .nav-link {
+  color: #0e6303;
+  border-radius: 999px;
+  padding: 0.55rem 1.4rem;
+  margin: 0 0.25rem;
+}
+
+.pujcovna-tabs .nav-link.active {
+  background: #73fb61 !important;
+  color: #000 !important;
+}
+
+.pujcovna-pick-card {
+  transition: transform 0.15s ease;
+}
+
+.pujcovna-pick-card:hover {
+  transform: translateY(-2px);
+}
+
+.pujcovna-ref-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  justify-content: center;
+}
+
+.pujcovna-ref-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.45rem 0.85rem;
+  border: 1px solid #d3fecd;
+  border-radius: 999px;
+  background: #fafafa;
+  color: #1a1a1a;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+/* Footer nav: keep Kontakt on the same row */
+.footer-content .footer-nav-nav {
+  display: flex !important;
+  flex-wrap: nowrap !important;
+  justify-content: flex-end;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.footer-content .footer-nav a {
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+.footer-content .footer-nav a:hover {
+  color: #73fb61 !important;
+  opacity: 1;
+}
+
+/* Cookies / “Číst více” — less bold */
+.cist-vice,
+.modal-cookies a {
+  font-weight: 400 !important;
+}
+
+.modal-cookies .font-bold {
+  font-weight: 500 !important;
+}
+
+.modal-cookies .btn-vzv.cookies-edit {
+  font-weight: 600 !important;
+}
+
+.btn-vzv.btn-cookies {
+  font-weight: 600 !important;
+}
+
+/* Location overlays — #159504 @ 0.8 (match reference translucent green) */
+.kontakt-pobocky-pobocka-cover-overlay {
+  background: #159504 !important;
+  opacity: 0.8 !important;
+  mix-blend-mode: normal !important;
+}
+
+.kontakt-pobocky-pobocka-cover-text {
+  mix-blend-mode: normal !important;
+  color: #fff !important;
+}
+
+.kontakt-pobocky-pobocka-cover-text h2,
+.kontakt-pobocky-pobocka-cover-text-gps,
+.kontakt-pobocky-pobocka-cover-text a {
+  color: #fff !important;
+}

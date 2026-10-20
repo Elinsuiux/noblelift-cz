@@ -1,0 +1,288 @@
+/**
+ * VZV green brand theme — overrides legacy red stylesheet variables.
+ * Palette: primary #73FB61, contrast #0E6303, supporting greens & grays from brand guide.
+ */
+:root {
+  /* Primary greens */
+  --color-primary: #73fb61;
+  --color-primary-light: #a7fc9c;
+  --color-primary-dark: #0e6303;
+  --color-vzv: #73fb61;
+
+  /* Legacy red aliases → green */
+  --color-red: #0e6303;
+  --color-red-light: #4ffa38;
+
+  /* Supporting palette */
+  --color-green-900: #073201;
+  --color-green-800: #0e6303;
+  --color-green-700: #159504;
+  --color-green-600: #1cc705;
+  --color-green-500: #23f906;
+  --color-green-400: #4ffa38;
+  --color-green-300: #73fb61;
+  --color-green-200: #a7fc9c;
+  --color-green-100: #d3fecd;
+
+  /* Grays */
+  --color-dark: #1a1a1a;
+  --color-dark-light: #333333;
+  --color-gray-700: #4d4d4d;
+  --color-gray-600: #666666;
+  --color-gray-500: #808080;
+  --color-gray-400: #999999;
+  --color-gray-300: #b3b3b3;
+  --color-gray-200: #cccccc;
+  --color-light-dark: #e6e6e6;
+  --color-light-dark-dark: #666666;
+
+  /* Brand accents */
+  --color-vzvrent: #d3fecd;
+  --color-vzvrent-dark: #159504;
+  --color-noblelift: #1cc705;
+}
+
+/* ── Buttons & CTAs ─────────────────────────────────────────── */
+
+.btn-primary,
+.btn-vzv,
+.btn-eshop,
+.bg-primary,
+.page-item .page-link:hover,
+.page-item .page-link.bg-primary,
+.btn-check:active + .btn-primary,
+.btn-check:checked + .btn-primary,
+.btn-primary.active,
+.btn-primary:active,
+.show > .btn-primary.dropdown-toggle,
+.btn-check:focus + .btn-primary,
+.btn-primary:focus {
+  color: #000000 !important;
+}
+
+.btn-primary svg,
+.btn-vzv svg,
+.btn-eshop svg {
+  fill: #000000 !important;
+}
+
+/* Header CTAs: E-SHOP outline + green phone (sitewide header match) */
+.btn-eshop {
+  background: rgba(0, 0, 0, 0.55) !important;
+  border: 2px solid #73fb61 !important;
+  color: #73fb61 !important;
+}
+
+.btn-eshop:hover,
+.btn-eshop:focus,
+.btn-eshop:active {
+  background: rgba(0, 0, 0, 0.72) !important;
+  border-color: #73fb61 !important;
+  color: #73fb61 !important;
+}
+
+.btn-eshop svg {
+  fill: #73fb61 !important;
+}
+
+.btn-phone {
+  background-color: #73fb61 !important;
+  border-color: #73fb61 !important;
+}
+
+.btn-phone span,
+.btn-phone .fw-bold {
+  color: #000000 !important;
+}
+
+
+.btn-outline-primary {
+  color: #0e6303 !important;
+  border-color: #0e6303 !important;
+}
+
+.btn-outline-primary:hover,
+.btn-outline-primary:active,
+.btn-outline-primary:focus {
+  color: #000000 !important;
+  background-color: #73fb61 !important;
+  border-color: #73fb61 !important;
+}
+
+/* ── Links, prices & readable accents (#0E6303 on light bg) ── */
+
+a,
+.text-primary,
+.text-vzv {
+  color: #0e6303;
+}
+
+a:hover,
+a.text-primary:hover,
+.text-vzv:hover {
+  color: #073201 !important;
+}
+
+.card-vzv-body-cena,
+.card-vzv-body-cena .cena,
+.product-price-nova-cena,
+.text-danger-vzv,
+.card-vzv-body-cena .cena-sleva {
+  color: #0e6303 !important;
+}
+
+/* Hero h1 accent stays bright green on dark video overlay */
+.homepage-vzv-video-text h1 span,
+.homepage-vzv-video-text .obdobi span:before,
+.homepage-vzv-video-text .obdobi span:after {
+  color: #73fb61 !important;
+}
+
+/* ── Header & navigation ────────────────────────────────────── */
+
+.h-vzv .nav-link.active,
+.h-vzv .nav-link:hover {
+  color: #73fb61 !important;
+}
+
+#aHeaderLogo {
+  background: #000000 !important;
+}
+
+#aHeaderLogo .logo-inner {
+  padding: 6px 10px;
+}
+
+#aHeaderLogo img {
+  max-width: 160px;
+  height: auto;
+  display: block;
+}
+
+.badge-count {
+  background: #73fb61 !important;
+  color: #000000 !important;
+  font-weight: 600 !important;
+}
+
+.h-dropdown-menu::before {
+  background: #0e6303 !important;
+}
+
+/* ── Homepage sections ──────────────────────────────────────── */
+
+.homepage-body-wrap {
+  background: #fafafa;
+}
+
+.carousel-indicators-own button.active {
+  background-color: #73fb61 !important;
+}
+
+.pruvodce-vyberem-voziku {
+  background: #0e6303 !important;
+}
+
+.banner-pruvodce-vyberem,
+.banner-volejte-prodejce-vzv-dark,
+.banner-nove-voziky {
+  border-top-color: #73fb61;
+}
+
+/* ── Product cards & stickers ───────────────────────────────── */
+
+.sticker-stav-4,
+.sticker-spatny-motor,
+.sticker-repas {
+  color: #000000 !important;
+}
+
+.sticker-nove-dovezeny {
+  color: #0e6303 !important;
+}
+
+.wrap-sticker.stickerBattery {
+  background: #4ffa38 !important;
+}
+
+.wrap-sticker.stickerBattery:before {
+  border-right-color: #4ffa38 !important;
+}
+
+/* ── Forms & filters ────────────────────────────────────────── */
+
+.form-check-input:checked {
+  background-color: #73fb61;
+  border-color: #0e6303;
+}
+
+.form-check-input:focus {
+  border-color: #4ffa38;
+  box-shadow: 0 0 0 0.25rem rgba(115, 251, 97, 0.35);
+}
+
+.rs-selected {
+  background: #73fb61 !important;
+}
+
+.rs-tooltip {
+  background: #0e6303 !important;
+  color: #ffffff !important;
+}
+
+/* ── Footer ─────────────────────────────────────────────────── */
+
+.footer-copyright-content a:hover {
+  color: #73fb61 !important;
+}
+
+/* ── Pronájem / půjčovna page ───────────────────────────────── */
+
+.pujcovna-hero .pujcovna-breadcrumb a {
+  color: #73fb61;
+  text-decoration: none;
+}
+
+.pujcovna-hero .pujcovna-breadcrumb span {
+  color: #999;
+  margin: 0 0.35rem;
+}
+
+.pujcovna-tabs .nav-link {
+  color: #0e6303;
+  border-radius: 999px;
+  padding: 0.55rem 1.4rem;
+  margin: 0 0.25rem;
+}
+
+.pujcovna-tabs .nav-link.active {
+  background: #73fb61 !important;
+  color: #000 !important;
+}
+
+.pujcovna-pick-card {
+  transition: transform 0.15s ease;
+}
+
+.pujcovna-pick-card:hover {
+  transform: translateY(-2px);
+}
+
+.pujcovna-ref-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  justify-content: center;
+}
+
+.pujcovna-ref-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.45rem 0.85rem;
+  border: 1px solid #d3fecd;
+  border-radius: 999px;
+  background: #fafafa;
+  color: #1a1a1a;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
