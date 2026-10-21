@@ -1,0 +1,1817 @@
+@media (max-width: 2220px)
+{
+    .box-ss-info {
+        font-size: 320%;
+    }
+    .box-ss-jmeno
+    {
+        font-size: 200%;
+    }
+    .box-ss-pozice
+    {
+        font-size:120%;
+    }
+    .katalog-slider-row
+    {
+        width: 97%;
+        margin-left: 3%;
+    }
+}
+
+@media (max-width: 2096px) {
+    .katalog-slider-wrap {
+        width: 70%;
+    }
+
+    .category-box__image {
+        flex: 0;
+    }
+}
+
+@media (min-width: 1921px)
+{
+    .katalog-vzv .col-xxl-4{
+        width: 25%;
+    }
+}
+
+@media (max-width: 1920px) {
+    .href-email {
+        position: absolute;
+        top: -16px;
+        right: 160px;
+    }
+    .box-ss {
+        background-position-y: -150px;
+    }
+    .katalog-vzv {
+        width: 97%;
+        margin-left: 3%;
+    }
+
+    #vzv_filter_tags {
+        padding-left: 60px;
+    }
+
+}
+
+@media (min-width: 1855px)
+{
+    .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+        max-width: 1520px;
+    }
+}
+
+@media (max-width: 1854px)
+{
+    .header-nav a
+    {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+    .form-lg .btn-lg {
+        margin-top: 21%;
+    }
+    .slider-baner-edit
+    {
+        top:100px;
+    }
+}
+@media (max-width: 1709px)
+{
+    .homepage-vzv-video-text
+    {
+        width: 70%;
+        left: 15%;
+    }
+
+    .box-ss-info {
+        font-size: 260%;
+    }
+    .box-ss-jmeno
+    {
+        font-size: 140%;
+    }
+    .box-ss-pozice
+    {
+        font-size:90%;
+    }
+    .katalog-slider-wrap {
+        width: 75%;
+    }
+
+
+
+}
+@media (max-width: 1600px)
+{
+    .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+        max-width: 1520px;
+    }
+    .user-box-pracovni-doba
+    {
+        padding-right: 21px;
+    }
+    .user-box
+    {
+        width: 40%;
+        margin-right: 0;
+    }
+    .href-email {
+        position: absolute;
+        top: -16px;
+        right: 140px;
+    }
+    .user-box a
+    {
+        width: 46px;
+    }
+    #aHeaderChooseLanguage
+    {
+        bottom: 50px;
+        left: 87px;
+    }
+    .header-logo
+    {
+        margin-left:  17px;
+    }
+    .header-nav a
+    {
+        font-size: 15px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .form-lg .btn-lg
+    {
+        margin-top: 18%;
+    }
+    .slider-baner-edit {
+        top: 100px;
+    }
+
+    .box-ss {
+        background-position-y: -100px;
+    }
+    .banner-david_priesol-img
+    {
+        margin-right: 50px;
+    }
+    .banner-img
+    {
+        margin-right: 50px;
+    }
+    .card-novinka .card-img img
+    {
+        height: 330px;
+    }
+    .katalog-vzv {
+        width: 95%;
+        margin-left: 5%;
+    }
+    .katalog-filtr{
+        font-size: 0.9rem;
+        width: 350px;
+    }
+
+    @media (min-width: 1506px) and (max-width: 1600px)
+    {
+        .katalog-polozky .col-xxl-3 {
+            width: 33%;
+        }
+    }
+
+}
+
+@media (min-width: 1000px) AND (max-width: 1600px)
+{
+    .katalog-polozky {
+        width: calc(100% - 350px);
+    }
+}
+
+
+@media (max-width: 1505px)
+{
+    .slider-baner-edit {
+        top: 100px;
+    }
+    .form-light-background
+    {
+        margin-right: 35px;
+        padding: 0px 10px 25px 25px;
+    }
+    .p-0
+    {
+        padding: 0px 8px !important;
+    }
+    .katalog-slider-wrap {
+        width: 83%;
+    }
+}
+
+@media (max-width: 1400px)
+{
+    .href-email {
+        position: absolute;
+        top: -4px;
+        right: 140px;
+        font-size: 1.1rem;
+    }
+    .user-box-pracovni-doba
+    {
+        padding-right: 21px;
+    }
+    .user-box
+    {
+        width: 40%;
+    }
+    .user-box a
+    {
+        width: 46px;
+    }
+    #aHeaderChooseLanguage
+    {
+        bottom: 50px;
+        left: 87px;
+    }
+    .header-nav a
+    {
+        padding-right: 10px;
+        padding-left: 10px;
+        font-size: 14px;
+        margin-left: 5px;
+    }
+    .header-logo
+    {
+        width: 212px;
+        margin-left: 15px;
+    }
+
+    .header-logo img
+    {
+        width: 120px;
+    }
+    .header-logo
+    {
+        width: 167px;
+        height: 66px;
+        top: 16px;
+    }
+    .slider-baner-edit {
+        top: 100px;
+    }
+
+    .card-novinka .card-img {
+        height: 270px;
+    }
+    .box-ss-info {
+        font-size: 200%;
+    }
+
+    .katalog-vzv {
+        width: 95%;
+        margin-left: 5%;
+    }
+    .katalog-filtr{
+        font-size: 0.8rem;
+        width: 320px;
+    }
+
+    .katalog-filtr .form-check {
+        display: flex;
+    }
+
+    .katalog-vzv {
+        font-size: 0.8rem;
+    }
+    .katalog-vzv .btn-md {
+        font-size: 0.8rem;
+    }
+    .katalog-vzv .btn-cart svg {
+        max-width: 15px;
+        max-height: 15px;
+    }
+    .card-body-parametry {
+        font-size: 10px;
+    }
+
+    .card-circle-icon svg {
+        max-width: 30px;
+        width: 30px;
+        border-radius: 13px;
+    }
+    .container-carousel-item .banner-img
+    {
+        /*background-size: 140px;*/
+    }
+    .container-carousel-item table.table-vyhody td
+    {
+        font-size: 12px;
+    }
+    .nalepka-detail
+    {
+        right: 65px;
+    }
+    .wrap-zarizeni img
+    {
+        width: 100%;
+    }
+
+}
+@media (max-width: 1287px)
+{
+    /*footer*/
+    .footer-content .footer-nav a
+    {
+        font-size: 11px;
+        padding-left: 10px;
+    }
+    .footer-content .footer-nav a:after
+    {
+        margin-left: 8px;
+    }
+    .footer-nav-nav
+    {
+        text-align: center;
+        justify-content: center;
+        flex-wrap: nowrap;
+    }
+    .carousel-control-row .text-right
+    {
+        position: absolute;
+        right: 79px;
+        z-index: 19;
+    }
+    .basket-step:after
+    {
+        width: 50px;
+    }
+    .wrap-zarizeni img
+    {
+        width: auto;
+    }
+    .cookie-souhlas .card-body {
+        width: 100%;
+    }
+}
+@media (max-width: 1200px)
+{
+    .header-vyber-jazyka
+    {
+        margin-left: 60px;
+    }
+
+    .header-logo
+    {
+        width: 167px;
+        margin-left: 15px;
+    }
+    .header-nav
+    {
+        margin-left: 10px;
+        justify-content: flex-start;
+        margin-top: 40px;
+        float: none;
+    }
+    .header-nav a
+    {
+        padding-right: 3px;
+        padding-left: 3px;
+        font-size: 13px;
+        margin-left: 5px;
+    }
+    .header-row
+    {
+        height: 105px;
+    }
+    .header
+    {
+        height: 105px;
+    }
+    .btn-novinky
+    {
+        margin-bottom: 10px;
+        padding: 5px;
+    }
+    .form-lg .btn-lg
+    {
+        margin-top: 24%;
+    }
+    .slider-baner-wrap
+    {
+        height:280px;
+    }
+
+    .homepage-vzv-video-text .obdobi span
+    {
+        font-size: 17px;
+    }
+    .slider-baner-edit {
+        top: 100px;
+    }
+    .box-ss
+    {
+        background-position-y: 0px;
+    }
+    .card-novinka .card-img img
+    {
+        height: 230px;
+    }
+    .container-carousel-item table.table-vyhody td
+    {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 1109px)
+{
+
+    .homepage-body-wrap
+    {
+        margin-top: 100px;
+    }
+    #aHeaderChooseLanguage
+    {
+        bottom: 0;
+        left: 10px;
+    }
+    .user-box
+    {
+        position: absolute;
+        left: 67%;
+    }
+
+    .user-box a
+    {
+        width: 38px;
+        height: 40px;
+    }
+    .header-vyber-jazyka img
+    {
+        margin-left: 6px;
+    }
+    .header-vyber-jazyka
+    {
+        margin-left: 0;
+    }
+    .box-ss-content {
+        font-size: 10px;
+    }
+    .box-ss-info {
+        font-size: 260%;
+    }
+
+    .homepage-vzv-video-text {
+        top: 25%;
+        width: 80%;
+        left: 10%;
+    }
+
+    .homepage-vzv-video-text h1,
+    .homepage-vzv-video-text h1 span
+    {
+        font-size: 120px;
+    }
+
+
+    .homepage-vzv-video-text .obdobi span
+    {
+        font-size: 19px;
+    }
+    .homepage-body-content
+    {
+        margin-top: 0px;
+    }
+    .carousel-caption-option-title
+    {
+        font-size: 36px;
+    }
+    .form-lg .btn-lg
+    {
+        padding: 0.5rem 0.5rem;
+        font-size: 1.2rem;
+        border-radius: 0.3rem;
+    }
+    /*baner-slider*/
+    .container-50
+    {
+        margin-left: 5%;
+    }
+    .banner-content
+    {
+        padding-top: 10%;
+    }
+    .banner-text
+    {
+        font-size: 22px;
+    }
+    /*kontakt pobocka*/
+    .info-box-content-item
+    {
+        height: 100%;
+    }
+    .carousel-item img
+    {
+        min-height: 402px;
+    }
+    .carousel-caption-option-button .btn-dark
+    {
+        width: 180px;
+    }
+    .img-developer
+    {
+        width: 300px;
+    }
+    .carousel-control-wrap-pujcit button
+    {
+        top: 0;
+    }
+    .carousel-control-wrap-pujcit
+    {
+        top: 150px;
+    }
+    .carousel-control-wrap-pujcit .text-right button
+    {
+        right: 0;
+    }
+    .slider-baner-edit
+    {
+        position:relative;
+        top: 10px;
+    }
+    .homepage-body-content
+    {
+        margin-top:40px;
+    }
+    .homepage-body-wrap
+    {
+        margin-top: -40px;
+    }
+    .mt-100-px {
+        margin-top: 0px;
+    }
+    .banner-text
+    {
+        margin-bottom: 11px;
+    }
+
+    .katalog-vzv {
+
+    }
+
+    .katalog-vzv .btn-md {
+        padding: 1rem 0.2rem;
+    }
+
+    .katalog-vzv .card-vzv-body-parkoviste svg {
+        width: 25px;
+    }
+    .katalog-vzv .card-vzv-body-cena {
+        font-size: 0.9rem;
+    }
+    .katalog-vzv .card-body-parametry {
+        font-size: 8px;
+    }
+    .nalepka-detail {
+        right: 40px;
+    }
+    .katalog-slider-wrap {
+        width: 100%;
+    }
+}
+
+@media (max-width: 1024px)
+{
+    .katalog-slider .carousel-item img {
+        height: 200px;
+        min-height: 200px;
+    }
+    .katalog-slider .carousel-caption-option .carousel-caption-option-title{
+        font-size: 1.5rem;
+    }
+}
+
+@media (min-width: 1024px)
+{
+    .pobocka-sluzby-left {
+        padding-right: 50px;
+    }
+
+    .pobocka-sluzby-right {
+        padding-left: 50px;
+    }
+
+}
+
+@media (max-width: 1020px)
+{
+    .form-lg .btn-lg {
+        margin-top: 36%;
+    }
+    .basket-step:after
+    {
+        right: -15px;
+        width: 30px;
+    }
+}
+@media (min-width: 992px) and (max-width: 1200px)
+{
+    .col-lg-2
+    {
+        width: 24.666667%;
+    }
+}
+
+@media (max-width: 768px) {
+    #hpBgVideo
+    {
+        display: none;
+    }
+
+    .homepage-vzv-video
+    {
+        height: 100%;
+        background: var(--color-dark);
+    }
+}
+
+@media (max-width: 992px)
+{
+    .homepage-wrap .header-fixed-top
+    {
+        position: fixed;
+        top: 0px;
+        background: var(--color-darker);
+    }
+    .pruvodce-vyberem-voziku:hover {
+        right: -668px;
+        transition: right 700ms;
+    }
+    .homepage-vzv-video:before
+    {
+        background: none;
+    }
+    .header-nav
+    {
+        display: none;
+    }
+    .homepage-vzv-video-text
+    {
+        top: 33%;
+    }
+    .homepage-vzv-video-text h1,
+    .homepage-vzv-video-text h1 span
+    {
+        font-size: 70px;
+    }
+
+    .user-box
+    {
+        position: absolute;
+        right: 9%;
+        bottom: 26px;
+    }
+
+    .user-box a
+    {
+        width: 40px;
+        height: 50px;
+    }
+    .header-vyber-jazyka img
+    {
+        margin-left: 13px;
+    }
+    .modal-body
+    {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .box-vyber-jazyka
+    {
+        width: 33%;
+        margin-left: 0;
+    }
+    .box-ss-content {
+        font-size: 10px;
+    }
+    /*info-block*/
+    .info-block
+    {
+        margin-bottom: 10px;
+    }
+    .content-usp-item
+    {
+        padding: 10% 0;
+    }
+
+    /*baner-slider*/
+    .carousel-caption-option
+    {
+        margin-top: 30px;
+    }
+    .carousel-caption-option-title
+    {
+        font-size: 18px;
+    }
+    .carousel-caption-option-description
+    {
+        font-size: 12px;
+    }
+    .carousel-caption-option-validate
+    {
+        font-size: 15px;
+    }
+    .carousel-caption-option-button
+    {
+        padding: 9px;
+    }
+    .carousel-control-row
+    {
+        margin-right: 0;
+        margin-left: 10px;
+        margin-top: 0;
+    }
+    .carousel-control-row .text-right
+    {
+        right: 54px;
+    }
+    .homepage-vzv-video
+    {
+
+    }
+    .kontakt-pobocky
+    {
+        padding: 0;
+    }
+    .info-box
+    {
+        padding:160px 0 40px;
+    }
+    .col-column-2
+    {
+        column-count: 1;
+    }
+    .box-ss-info
+    {
+        font-size: 400%;
+    }
+    .box-ss-jmeno
+    {
+        font-size: 230%;
+    }
+    .box-ss-pozice
+    {
+        font-size: 130%;
+    }
+    .katalog-caption-option
+    {
+        font-size: 1.2rem;
+        margin-top: 15px;
+    }
+}
+
+@media (max-width: 991px)
+{
+    .katalog-vzv .btn-md {
+        padding: 1rem 0.2rem;
+    }
+
+    .katalog-vzv .card-vzv-body-parkoviste svg {
+        width: 30px;
+    }
+    .katalog-vzv .card-vzv-body-cena {
+        font-size: 1.2rem;
+    }
+    .katalog-vzv .card-body-parametry {
+        font-size: 14px;
+    }
+    .nalepka-detail {
+        right: 18px;
+    }
+}
+
+@media (max-width: 768px)
+{
+    .homepage-vzv-video-wrap {
+        height: 865px !important;
+    }
+
+    .homepage-vzv-video {
+        height: 980px !important;
+    }
+
+    .carousel-homepage {
+        margin-bottom: 1rem;
+    }
+
+    .carousel-homepage, .carousel-homepage img{
+        width: 365px;
+        height: 385px;
+    }
+    .box-ss {
+        background-position: unset;
+        background-position-y: 0px;
+        background-position-x: -80px;
+    }
+    .carousel, .slide
+    {
+        margin-bottom: 30px;
+    }
+
+    .user-box
+    {
+        left: 62%;
+    }
+    .footer-content .social-buttons
+    {
+        text-align: center;
+    }
+
+    .homepage-vzv-video-text
+    {
+        width: 100%;
+        left: 0;
+        top: 15%;
+    }
+    .homepage-vzv-video
+    {
+        height: 580px;
+    }
+    .carousel-caption
+    {
+        width: 100%;
+        height: 100%;
+        display: block !important;
+    }
+    .carousel-caption-option
+    {
+        width: 100%;
+        margin-left: 0;
+    }
+    .carousel-control-wrap
+    {
+        width: 100%;
+    }
+
+    .carousel.pointer-event
+    {
+        margin-bottom: 1rem;
+    }
+    .col-12 .height-50
+    {
+        padding: 0 10px;
+    }
+    .container-50
+    {
+        margin-left: 3%;
+    }
+    .banner-content
+    {
+        margin: 50px 0;
+        padding: 0;
+    }
+    .carousel-caption-option-title
+    {
+        font-size: 25px;
+    }
+    .carousel-caption-option-validate
+    {
+        font-size: 16px;
+    }
+    .carousel-caption-option-description
+    {
+        font-size: 16px;
+    }
+    .banner-button .btn-lg .banner-button-noblelift
+    {
+        padding: 10px 3px;
+        font-size: 17px;
+        font-weight: 800;
+        width: 231px;
+    }
+    .banner-pruvodce-vyberem
+    {
+        margin-bottom: 20px;
+    }
+
+    .carousel-caption-option-button .btn-dark
+    {
+        padding: 10px 3px;
+        font-size: 17px;
+        font-weight: 800;
+    }
+    .form-lg .btn-lg {
+        margin-top: 40%;
+    }
+    .info-box
+    {
+        padding:20px 0 20px;
+    }
+
+    /*kontakty pobocky*/
+    .kontakt-pobocky-pobocka
+    {
+        margin-bottom: 10px;
+    }
+
+    .form-pujcit-name
+    {
+        display: inline-block;
+    }
+
+    .form-pujcit-text
+    {
+        padding: 30px 30px 0;
+    }
+    .col-form-pujcit
+    {
+        margin-bottom: 30px;
+    }
+    .img-developer
+    {
+        left: 62%;
+        bottom: -22px;
+        width: 250px;
+    }
+    .basket-step span
+    {
+        display: none;
+    }
+    .but-del-item
+    {
+        float: none;
+        display: inline-block;
+        padding: 2px 8px 20px;
+    }
+    .mobile
+    {
+        display: block;
+    }
+    .device
+    {
+        display: none;
+    }
+    .form-light-background
+    {
+        margin-right: 20px;
+    }
+    .card-novinka .card-img
+    {
+        height: auto;
+    }
+    .card-novinka .card-img img
+    {
+        height: auto;
+    }
+    .carousel-video
+    {
+        margin-bottom: 27px;
+        margin-top: 0px;
+    }
+    .btn-lg-large {
+        font-size: 1rem;
+        padding: 0.6rem 0.8rem;
+    }
+    .novinky-carousel .carousel-product-item .carousel-inner .carousel-item > div
+    {
+        display: block;
+    }
+    .card-contact .card-img {
+        background-position-y: -21px!important;
+    }
+    .card-contact .card-body-cislo {
+        font-size: 1rem;
+    }
+
+    .col-form-pujcit .img-developer {
+        left: 25%;
+        width: 235px;
+        bottom: -30px;
+    }
+    .col-form-pujcit-sjednat-schuzku .img-developer {
+        left: 30%;
+    }
+    .katalog-slider-wrap .carousel-item img
+    {
+        /* display: none; */
+    }
+    .katalog-slider-row .carousel-item
+    {
+        height: 85px;
+    }
+    .carousel-control-katalog
+    {
+        width: 100%;
+    }
+    .katalog-caption-option
+    {
+        font-size: 1.5rem;
+        width: 100%;
+        justify-content: center;
+        margin-top: 0px;
+        width: 100%;
+    }
+
+    .banner-img {
+        width: 82%;
+        margin-right: unset;
+    }
+    .banner-volejte-prodejce-img {
+        width: 65%;
+    }
+}
+@media (max-width: 650px)
+{
+    .user-box
+    {
+        left: 66%;
+    }
+    .header-vyber-jazyka img
+    {
+        margin-left: 5px;
+    }
+    #aHeaderChooseLanguage
+    {
+        bottom: 0px;
+        top: 12px;
+        left: 45px;
+    }
+
+    /*baner-slider*/
+    .homepage-vzv-video-text
+    {
+        font-size: 33px;
+    }
+    .homepage-vzv-video-text .obdobi span
+    {
+        font-size: 17px;
+    }
+    .form-lg .btn-lg {
+        margin-top: 1%;
+    }
+    .kariera-volna-mista img
+    {
+        height: 42px;
+    }
+    .repas-pred-po .contentBeforeAfter, .repas-pred-po .cndkbeforeafter-item-before, .repas-pred-po .cndkbeforeafter-item-after, .repas-pred-po .cndkbeforeafter-item  {
+        width: 400px!important;
+        height: 266px!important;
+    }
+
+    .youtube-video-servis-manipulacni-techniky {
+        width: 400px;
+        height: 225px;
+    }
+
+}
+@media (max-width: 605px)
+{
+    #aHeaderChooseLanguage
+    {
+        left: 35px;
+    }
+}
+@media (max-width: 576px)
+{
+    .box-ss-info
+    {
+        font-size: 250%;
+    }
+    .header, .header-row {
+        height: 115px;
+    }
+
+    .header-email {
+        text-align: left;
+    }
+
+    .href-email {
+        position: absolute;
+        left: 11px;
+        top: 70px;
+        right: 0;
+        font-size: 1rem;
+        color: var(--color-light);
+    }
+
+    .header-img .header-logo{
+        height: 52px;
+        margin-left: 10px;
+        width: 130px;
+        top: 0px;
+        margin-top: 9px;
+    }
+    .header-logo img {
+        width: 75px;
+    }
+
+    .header-nav {
+        display: none;
+    }
+
+    .box-foto-prodejci {
+        min-height: 300px;
+    }
+
+    .separator-dark h2 {
+        padding: 30px 0px;
+        font-size: 30px;
+        text-transform: uppercase;
+        font-weight: 800;
+    }
+
+    .col-ns {
+        display: none;
+    }
+
+    .social-buttons-footer-nav {
+        text-align: center;
+    }
+
+    .footer-content .footer-nav a {
+        font-size: 12px;
+        padding-left: 10px;
+        display: inline-block;
+        margin-top: 40px;
+    }
+
+    .footer-content .footer-nav a:after {
+
+        width: 0px;
+        height: 0px;
+    }
+
+    .user-box-icons {
+        position: absolute;
+        left: 140px;
+        top: 10px;
+    }
+
+    .user-box-pracovni-doba .user-box{
+        margin-top: 10px;
+        position: static;
+    }
+
+    .user-box a {
+        position: relative;
+        float: left;
+        overflow: visible;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 40px;
+        height: 35px;
+        color: #fff;
+        font-size: 12px;
+        margin-left: 12px;
+    }
+
+    .ps-0 {
+        padding: 0;
+    }
+
+    .header-vyber-jazyka {
+        left: 60px;
+        top: 45px;
+    }
+    #aHeaderChooseLanguage
+    {
+        left: 60%;
+        top: 41px;
+    }
+    .user-box-icons
+    {
+        left: 40%;
+        top: 15px;
+    }
+    /*baner-slider*/
+    .carousel-caption-option-button
+    {
+        margin-top: 35px;
+    }
+    /*footer*/
+    .footer-content
+    {
+        padding-top: 97px;
+        padding-bottom: 75px;
+    }
+    .footer-content .social-buttons
+    {
+        padding-top: 55px;
+    }
+    .nalepka-detail {
+        right: 0px;
+    }
+}
+@media (max-width: 540px)
+{
+    #aHeaderChooseLanguage
+    {
+        left: 23%;
+        top:39px;
+    }
+    .user-box-icons
+    {
+        left: 40%;
+        top: 15px;
+    }
+    .header-img .header-logo
+    {
+        width: 130px;
+        margin-top: 9px;
+    }
+    .user-box a
+    {
+        width: 40px;
+    }
+    .pruvodce-vyberem-voziku-title
+    {
+        top: 163px;
+        left: -98px;
+        width: 267px;
+        height: 47px;
+    }
+    .img-developer
+    {
+        width: 200px;
+    }
+    .form-pujcit-name span
+    {
+        font-size: 20px;
+    }
+    .form-pujcit-name
+    {
+        font-size: 18px;
+    }
+    .form-light-background label
+    {
+        display: inline;
+    }
+    .wrap-filter label
+    {
+        display: inline-block;
+    }
+
+    .table-technicky tr
+    {
+        font-size: 11px;
+    }
+    .container-carousel-item table.table-vyhody td
+    {
+        font-size: 11px;
+    }
+    .table-technicky .btn
+    {
+        padding: 10px;
+    }
+    .table-technicky .btn span
+    {
+        font-size: 12px;
+    }
+    .table-technicky .btn svg
+    {
+        width: 35px;
+    }
+    .novinky-carousel .carousel-product-item .carousel-inner .carousel-item > div
+    {
+        display: none;
+    }
+    .novinky-carousel .carousel-product-item .carousel-inner .carousel-item > div:first-child {
+        display: block;
+    }
+    .novinky-carousel img
+    {
+        width: 90%;
+    }
+}
+
+@media (max-width: 445px)
+{
+    #aHeaderChooseLanguage
+    {
+        left: 7%;
+        top: 50px;
+    }
+
+    .user-box-icons
+    {
+        left: 40%;
+        top: 15px;
+    }
+    .header-img .header-logo
+    {
+        width: 130px;
+        margin-top: 9px;
+    }
+    .user-box a
+    {
+        width: 40px;
+    }
+    /*kontakt pobocky*/
+    .kontakt-pobocky-pobocka-cover
+    {
+        width: 100%;
+    }
+    .homepage-vzv-video-text
+    {
+        top: 12%;
+    }
+
+    .form-pujcit-name span
+    {
+        font-size: 20px;
+    }
+    .form-pujcit-name
+    {
+        font-size: 18px;
+    }
+    .img-developer
+    {
+        left: 36%;
+    }
+    .cndkbeforeafter-item
+    {
+        height: 280px !important;
+    }
+    .pred-po-box {
+        height: 308px !important;
+    }
+    .btn-200 {
+        width: 165px;
+    }
+    .btn-250 {
+        width: 200px;
+    }
+    .kontakt-pobocky-pobocka img
+    {
+        height: 258px;
+        width: 100%;
+    }
+    .banner-david_priesol-img
+    {
+        margin-right: 30px;
+    }
+    .banner-img
+    {
+        margin-right: 25px;
+    }
+
+    .katalog-filtr {
+        width: 100%;
+    }
+    .katalog-filtr.offcanvas-start {
+        left: 0px;
+    }
+    .katalog-vzv .card-vzv-body-cena {
+        font-size: 1.3rem;
+    }
+    .katalog-vzv .card-body-parametry {
+        font-size: 12px;
+    }
+
+    .repas-pred-po .contentBeforeAfter, .repas-pred-po .cndkbeforeafter-item-before, .repas-pred-po .cndkbeforeafter-item-after, .repas-pred-po .cndkbeforeafter-item  {
+        width: 300px!important;
+        height: 200px!important;
+    }
+
+    .youtube-video-servis-manipulacni-techniky {
+        width: 100%;
+        height: 180px;
+    }
+
+    .table-responsive {
+        font-size: 0.7rem;
+    }
+}
+
+@media (max-width: 446px) and (min-width: 412px)
+{
+    .own-badge {
+
+    }
+
+    .col-form-pujcit-sjednat-schuzku img {
+        width: 200px!important;
+        bottom: -30px!important;
+        left: 50% !important;
+    }
+}
+
+
+
+@media (max-width: 401px)
+{
+
+    .content-body {
+        min-height: calc(100vh);
+    }
+
+    #aHeaderChooseLanguage
+    {
+        left: 7%;
+    }
+}
+@media (max-width: 370px)
+{
+    #aHeaderChooseLanguage
+    {
+        left: 74%;
+        top:5px;
+    }
+    .user-box-icons
+    {
+        left: 40%;
+        top: 15px;
+    }
+    .header-img .header-logo
+    {
+        width: 130px;
+        margin-top: 9px;
+    }
+
+    .user-box a
+    {
+        width: 40px;
+    }
+    .banner-volejte-radku-img
+    {
+        margin-right: 0;
+    }
+
+    .card-vzv-body-cena {
+        font-size: 1rem!important;
+    }
+
+    .kontakt-rozcestnik-oddeleni {
+        max-height: unset;
+    }
+}
+
+@media (max-width: 2500px) and (min-width: 1366px)
+{
+    .katalog-slider img {
+        max-height: 200px;
+    }
+
+    .katalog-slider .carousel-control-row {
+        margin-top: -15px;
+        width: 80%;
+        margin-left: 40px;
+        margin-right: unset;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    .katalog-slider .carousel-caption-option {
+        margin-left: unset;
+        margin-top: unset;
+        width: 50%;
+        height: 120px;
+        overflow: hidden;
+    }
+
+    .katalog-slider .carousel-indicators {
+        margin-bottom: -5px;
+    }
+
+    .katalog-slider .carousel-caption-option-title {
+        font-size: 1.5rem;
+    }
+    .katalog-slider .carousel-caption-option-description {
+        font-size: 0.7rem;
+    }
+    .katalog-slider .carousel-caption-option-validate {
+        font-size: 1rem;
+    }
+
+    .katalog-slider .carousel-caption-option-button {
+        margin-top: 0px;
+    }
+}
+
+@media (max-width: 1920px) and (min-width: 1110px)
+{
+    .katalog-slider img {
+        max-height: 200px;
+    }
+
+    .katalog-slider .carousel-control-row {
+        margin-top: -15px;
+        width: 80%;
+        margin-left: 40px;
+        margin-right: unset;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    .katalog-slider .carousel-caption-option {
+        margin-left: unset;
+        margin-top: unset;
+        width: 50%;
+        height: 120px;
+        overflow: hidden;
+    }
+
+    .katalog-slider .carousel-indicators {
+        margin-bottom: -5px;
+    }
+
+    .katalog-slider .carousel-caption-option-title {
+        font-size: 1.5rem;
+    }
+    .katalog-slider .carousel-caption-option-description {
+        font-size: 0.7rem;
+    }
+    .katalog-slider .carousel-caption-option-validate {
+        font-size: 1rem;
+    }
+
+    .katalog-slider .carousel-caption-option-button {
+        margin-top: 0px;
+    }
+}
+
+@media (max-width: 1818px) and (min-width: 1110px)
+{
+    .katalog-slider img {
+        height: 230px;
+    }
+
+    .katalog-slider .carousel-control-row {
+
+        width: 100%;
+        margin-left: unset;
+        text-align: center!important;
+    }
+
+    .katalog-slider .carousel-indicators {
+        position: relative;
+        margin-top: 40px;
+    }
+
+    .katalog-slider .carousel-control-row .col-1 {
+        width: 20%;
+    }
+    .katalog-slider .carousel-control-row .col-10 {
+        width: 60%;
+    }
+
+
+    .katalog-slider .carousel-caption-option {
+        height: 160px;
+    }
+
+    .katalog-slider .carousel-indicators {
+        margin-bottom: -5px;
+    }
+
+    .katalog-slider .carousel-caption-option-title {
+        font-size: 1.5rem;
+    }
+    .katalog-slider .carousel-caption-option-description {
+        font-size: 0.7rem;
+    }
+    .katalog-slider .carousel-caption-option-validate {
+        font-size: 1rem;
+    }
+
+    .katalog-slider .carousel-caption-option-button {
+        margin-top: 0px;
+    }
+}
+
+@media (max-width: 2500px) and (min-width: 1920px)
+{
+    #form_vzv .offcanvas-start {
+        width: 18%;
+    }
+}
+@media (max-width: 2500px) and (min-width: 1366px)
+{
+    #form_vzv .offcanvas-start {
+        width: 20%;
+    }
+}
+@media (max-width: 1830px) and (min-width: 1366px)
+{
+    #form_vzv .filtr-blok .text-title {
+        font-size: 100%;
+    }
+    #form_vzv .filtr-blok .form-check-label {
+
+    }
+    #form_vzv .filtr-blok .form-check-input
+    {
+        margin-right: 0.5rem;
+    }
+}
+
+@media (max-width: 1770px) and (min-width: 1366px)
+{
+    #form_vzv .offcanvas-start {
+        width: 21%;
+    }
+    #form_vzv .offcanvas-body {
+        padding: 1rem 0.3rem;
+        padding-top: 0px;
+    }
+}
+
+@media (max-width: 1465px) and (min-width: 1366px)
+{
+    #form_vzv .form-check-input {
+        width: 1em;
+        height: 1em;
+    }
+    #form_vzv .form-check-label {
+        margin-top: 4px;
+    }
+}
+@media (max-width: 767px)
+{
+    .slider-baner-edit {
+        top : 10px;
+    }
+
+    .filtr-katalog {
+        margin-top: 20px;
+    }
+
+    .category-box__image {
+        flex: 0 0 110px;
+    }
+
+    #popis {
+        padding: 0 20px;
+    }
+
+    #popis.collapsed {
+        position: relative;
+        line-height: 1.5em;
+        max-height: 6em;
+        overflow: hidden;
+        padding-right: 1.2em;
+
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 4;
+    }
+
+    /* Safari fallback */
+    @supports not (-webkit-line-clamp: 4) {
+        #popis.colapsed {
+            display: block;
+            line-height: 1.5em;
+            max-height: 6em;
+            overflow: hidden;
+            position: relative;
+        }
+
+        #popis.colapsed::after {
+            content: "...";
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            background: #fff;
+        }
+    }
+
+}
+@media (min-width: 767px)
+{
+    #popis-vice-btn {
+        display: none;
+    }
+}
+@media (max-width: 767px) and (min-width: 730px)
+{
+    .card-contact .card-body-email a {
+        font-size: 0.9rem!important;
+    }
+}
+
+
+@media (max-width: 1023px) and (min-width: 768px)
+{
+    .card-info-box .card-title {
+        font-size: 1.5rem;
+        height: 30px;
+    }
+    .card-info-box .card-body {
+        font-size: 1rem;
+        height: 50px;
+    }
+}
+
+@media (max-width: 700px)
+{
+    .card-onas-pobocka {
+        height: auto;
+    }
+    .pruvodce-vyberem-voziku-ousko {
+        display: none!important;
+    }
+}
+
+
+@media (max-width: 1500px) {
+    .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+        max-width: 1440px;
+    }
+}
+@media (max-width: 1400px) {
+    .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+        max-width: 1340px;
+    }
+}
+@media (max-width: 1300px) {
+    .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+        max-width: 1240px;
+    }
+}
+
+@media (max-width: 1855px)
+{
+    .kontakt-rozcestnik-oddeleni .title-vzvrent {
+        font-size: 4rem!important;
+    }
+}
+
+@media (max-width: 1110px)
+{
+    .kontakt-rozcestnik-oddeleni .title-vzvrent {
+        font-size: 3rem!important;
+        padding-top: 1rem!important;
+    }
+}
+
+@media (max-width: 1024px) and (min-width: 1000px)
+{
+    .banner-volejte-prodejce .banner-img {
+        height: 280px;
+    }
+
+    .card-contact .card-img {
+        background-position-y: -28px!important;
+    }
+
+    .banner-volejte-prodejce-img {
+        margin-top: 0px;
+        height: calc(100% + 20px - 20px) !important;
+    }
+}
+
+@media (max-width: 1300px) {
+    .o-nas-video{
+        width: 80%;
+    }
+}
+@media (max-width: 550px) {
+    .o-nas-video{
+        width: 100%;
+    }
+
+    .homepage-vzv-video-text {
+        top: 12%;
+    }
+
+    .btn-250 {
+        width: 300px;
+    }
+
+}
+
+@media (max-width: 504px) {
+    .katalog-vzv {
+        width: 100%;
+        margin-left: unset;
+        margin-right: unset;
+    }
+    .container-vzv {
+        padding-right: unset;
+    }
+    .katalog-vzv .wrapProduct {
+        padding-left: 1px;
+        padding-right: 1px;
+    }
+    .katalog-vzv .card-body-parametry {
+        white-space: nowrap;
+        font-size: 10px;
+    }
+    .katalog-caption-option, .katalog-caption-option .fs-5 {
+        font-size: 0.8rem !important;
+    }
+
+    .katalog-caption-option, .katalog-caption-option .fs-6 {
+        font-size: 0.7rem !important;
+    }
+
+    .katalog-caption-option {
+        top: 2px!important;
+    }
+}
+
+.select-btn {
+    padding-top: .55rem;
+    padding-bottom: .55rem;
+}
