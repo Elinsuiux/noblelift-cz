@@ -3669,7 +3669,7 @@
   font-size: clamp(1.5rem, 2.6vw, 2rem); letter-spacing: 0; color: #111;
 }
 .ref-clients-grid {
-  display: grid; grid-template-columns: repeat(6, 1fr); gap: 12px;
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px;
 }
 .ref-client-logo {
   display: flex; align-items: center; justify-content: center;
@@ -3929,7 +3929,7 @@
   .ref-page-wrap .rent-form-fields, .ref-page-wrap .rent-form-person { grid-template-columns: 1fr; }
 }
 @media (max-width: 576px) {
-  .ref-clients-grid { grid-template-columns: 1fr 1fr; }
+  .ref-clients-grid { grid-template-columns: repeat(3, 1fr); }
 }
 </style>
 
@@ -3948,15 +3948,15 @@
   <section class="ref-videos">
     <div class="ref-videos-inner">
       <div class="ref-videos-grid">
-        <a class="ref-video-card" href="https://www.youtube.com/embed/x9N9fLwH6rg?rel=0" target="_blank" rel="noopener noreferrer">
+        <a id="terenni-video-1" class="ref-video-card" data-fancybox="terenni-video" href="https://www.youtube.com/embed/P49jJHlW0Zc?rel=0&amp;wmode=transparent">
           <img src="https://www.vzvrent.cz/assets/img/templates/video-manipulator-jcb.png" alt="Teleskopický manipulátor JCB" loading="lazy" />
           <span class="ref-video-play" aria-hidden="true"><span class="ref-video-play-icon"></span></span>
         </a>
-        <a class="ref-video-card" href="https://www.youtube.com/user/VZVCZ" target="_blank" rel="noopener noreferrer">
+        <a id="terenni-video-2" class="ref-video-card" data-fancybox="terenni-video" href="https://www.youtube.com/embed/ronf4wMxS4c?rel=0&amp;wmode=transparent">
           <img src="https://www.vzvrent.cz/assets/img/templates/video-rotacni-manipulator.png" alt="Rotační manipulátor MANITOU MRT 2150" loading="lazy" />
           <span class="ref-video-play" aria-hidden="true"><span class="ref-video-play-icon"></span></span>
         </a>
-        <a class="ref-video-card" href="https://www.youtube.com/user/VZVCZ" target="_blank" rel="noopener noreferrer">
+        <a id="terenni-video-3" class="ref-video-card" data-fancybox="terenni-video" href="https://www.youtube.com/embed/E1zoW8hCO_g?rel=0&amp;wmode=transparent">
           <img src="https://www.vzvrent.cz/assets/img/templates/video-letofest.png" alt="Létofest Liberec" loading="lazy" />
           <span class="ref-video-play" aria-hidden="true"><span class="ref-video-play-icon"></span></span>
         </a>

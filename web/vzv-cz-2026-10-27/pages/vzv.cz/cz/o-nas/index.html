@@ -106,7 +106,7 @@
     <link rel="stylesheet" href="../../../../assets/vzv.cz/assets/css/footer.css" />
     <link rel="stylesheet" href="../../../../assets/vzv.cz/assets/css/mobile.css" />
     <link rel="stylesheet" href="../../../../assets/vzv.cz/assets/css/colors.css" />
-    <link rel="stylesheet" href="colors-green.css?v=onas-overlay-1" />
+    <link rel="stylesheet" href="colors-green.css?v=onas-frames-side-1" />
         <script type="text/javascript" src="../../../../assets/vzv.cz/assets/js/konverze.js"></script>
 
     <script>
@@ -3801,9 +3801,38 @@
 <div class="container mt-2">
     <div class="row">
         <div class="col-12 justify-content-center text-center">
-            <video autoplay="false" muted="" loop="" id="" class="o-nas-video">
-                <source src="../../../../assets/vzv.cz/assets/video/720tw.mp4" type="video/mp4">
-            </video>
+            <div class="o-nas-video-wrap">
+                <video id="o-nas-video" class="o-nas-video" autoplay muted loop playsinline webkit-playsinline preload="auto" controls controlslist="nodownload">
+                    <source src="../../../../assets/vzv.cz/assets/video/720tw.mp4" type="video/mp4">
+                </video>
+                <button type="button" class="o-nas-video-play" aria-label="Přehrát video" hidden>
+                    <span></span>
+                </button>
+            </div>
+            <script>
+            (function () {
+              var v = document.getElementById('o-nas-video');
+              var btn = document.querySelector('.o-nas-video-play');
+              if (!v || !btn) return;
+              function showPlay() { btn.hidden = false; }
+              function hidePlay() { btn.hidden = true; }
+              function tryPlay() {
+                v.muted = true;
+                var p = v.play();
+                if (p && p.then) p.then(hidePlay).catch(showPlay);
+                else if (v.paused) showPlay(); else hidePlay();
+              }
+              btn.addEventListener('click', function () {
+                v.muted = true;
+                v.play().then(hidePlay).catch(showPlay);
+              });
+              v.addEventListener('play', hidePlay);
+              v.addEventListener('pause', function () { if (v.currentTime > 0.1) showPlay(); });
+              if (v.readyState >= 2) tryPlay();
+              else v.addEventListener('loadeddata', tryPlay, { once: true });
+              document.addEventListener('DOMContentLoaded', tryPlay);
+            })();
+            </script>
         </div>
     </div>
 </div>
@@ -3814,7 +3843,7 @@
             <div class="kontakt-pobocky-pobocka text-right" id="pobocka_cervena_voda">
                 <img src="../../../../assets/vzv.cz/assets/img/o_nas/sklad-cv.webp" class="img-fluid">
                 <div class="kontakt-pobocky-pobocka-cover kontakt-pobocky-pobocka-cover-right">
-                    <div class="kontakt-pobocky-pobocka-cover-text">
+                    <div class="kontakt-pobocky-pobocka-cover-text pt-2">
                         <h2>Hlavní sklad<br/>Červená Voda</h2>
                         561 61 Červená Voda 535<br/>
                         Česká republika

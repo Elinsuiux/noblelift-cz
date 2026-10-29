@@ -412,3 +412,38 @@ a.box-vyber-jazyka-jazyk:hover {
   background: #159504 !important;
   background-color: #159504 !important;
 }
+
+/* Volejte banner: Tomáš a bit larger */
+.banner-volejte-prodejce.banner-tomas .banner-img {
+  background-size: auto 118% !important;
+  background-position: right bottom !important;
+  width: 108%;
+  height: calc(100% + 36px);
+  margin-top: -28px;
+}
+
+/* Mobile: contact cards use full width with side margins */
+@media (max-width: 767.98px) {
+  .vykup-contact-col {
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
+  .vykup-contact-col .card-contact {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  /* Jakub OK higher; Tomáš a bit lower so heads align the same */
+  .vykup-contact-col .card-contact .card-img-jakub {
+    background-position: center -90px !important;
+    background-position-y: -90px !important;
+  }
+
+  .vykup-contact-col .card-contact .card-img-tomas {
+    background-position: center -55px !important;
+    background-position-y: -55px !important;
+  }
+}

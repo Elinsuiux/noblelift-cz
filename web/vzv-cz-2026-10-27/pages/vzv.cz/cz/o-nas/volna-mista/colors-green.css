@@ -441,14 +441,27 @@ a.box-vyber-jazyka-jazyk:hover {
   height: auto;
 }
 
-/* Warehouse overlays — same dark chrome as O nás */
+/* Warehouse overlays — green covers the whole photo */
+.kontakt-pobocky-pobocka-cover {
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+}
+
 .kontakt-pobocky-pobocka-cover-overlay {
   background: #003103 !important;
   opacity: 0.77 !important;
   mix-blend-mode: multiply !important;
-  width: 90% !important;
-  height: 90% !important;
-  margin: 5% !important;
+  width: 100% !important;
+  height: 100% !important;
+  margin: 0 !important;
+  inset: 0 !important;
 }
 
 .kontakt-pobocky-pobocka-cover-text {

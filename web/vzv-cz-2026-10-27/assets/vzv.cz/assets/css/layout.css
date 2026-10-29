@@ -4321,6 +4321,12 @@ a.btn.btn-primary[href*="vzvparts"]:active,
     color: #ffffff !important;
     background-color: #073201 !important;
     border: 2px solid #23F906 !important;
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    width: max-content !important;
+    max-width: none !important;
+    white-space: nowrap !important;
 }
 .content-body .banner-david .container-50 {
     width: 56%;
@@ -4332,11 +4338,11 @@ a.btn.btn-primary[href*="vzvparts"]:active,
 .content-body .banner-david .banner-img {
     top: 0;
     right: 0;
-    bottom: 0;
+    bottom: auto;
     left: auto;
-    width: 50%;
-    height: 100%;
-    margin-top: 0;
+    width: 100%;
+    height: calc(100% + 20px);
+    margin-top: -20px;
     background-repeat: no-repeat !important;
     background-size: contain !important;
     background-position: right bottom !important;

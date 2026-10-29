@@ -408,19 +408,67 @@ a.box-vyber-jazyka-jazyk:hover {
   color: #159504 !important;
 }
 
-/* O nás warehouse + Historie overlays (live vzv.cz chrome) */
+/* Sklady video under heading, before warehouse cards */
+.o-nas-video-wrap {
+  position: relative;
+  width: 100%;
+  max-width: 960px;
+  margin: 0.75rem auto 1rem;
+}
+
+.o-nas-video {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  display: block;
+  background: #111;
+  object-fit: cover;
+}
+
+.o-nas-video-play {
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: 72px;
+  height: 72px;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.55);
+  cursor: pointer;
+  z-index: 2;
+  display: grid;
+  place-items: center;
+  padding: 0;
+}
+
+.o-nas-video-play[hidden] {
+  display: none !important;
+}
+
+.o-nas-video-play span {
+  display: block;
+  width: 0;
+  height: 0;
+  margin-left: 4px;
+  border-style: solid;
+  border-width: 14px 0 14px 24px;
+  border-color: transparent transparent transparent #73fb61;
+}
+
 .kontakt-pobocky-pobocka-cover-overlay {
   background: #003103 !important;
   opacity: 0.77 !important;
   mix-blend-mode: multiply !important;
-  width: 90% !important;
-  height: 90% !important;
-  margin: 5% !important;
 }
 
 .kontakt-pobocky-pobocka-cover-text {
   mix-blend-mode: normal !important;
   color: #fff !important;
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  padding: 1rem;
+  box-sizing: border-box;
 }
 
 .kontakt-pobocky-pobocka-cover-text h2,
@@ -436,6 +484,162 @@ a.box-vyber-jazyka-jazyk:hover {
 
 .kontakt-pobocky-pobocka-cover-text a:hover {
   color: #fff !important;
+}
+
+/* Historie: thin green title bar only — never full-image overlay */
+.kontakt-pobocky-historie .kontakt-pobocky-pobocka-cover,
+.kontakt-pobocky-historie .kontakt-pobocky-pobocka-cover-small {
+  top: 0 !important;
+  bottom: auto !important;
+  left: 0 !important;
+  right: auto !important;
+  width: 100% !important;
+  height: 80px !important;
+  transform: none !important;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+}
+
+.kontakt-pobocky-historie .kontakt-pobocky-pobocka-cover-right {
+  left: auto !important;
+  right: 0 !important;
+}
+
+.kontakt-pobocky-historie .kontakt-pobocky-pobocka-cover-overlay {
+  width: 100% !important;
+  height: 100% !important;
+  margin: 0 !important;
+  inset: auto !important;
+  top: 0 !important;
+  left: 0 !important;
+}
+
+.kontakt-pobocky-historie .kontakt-pobocky-pobocka-cover-text {
+  height: auto !important;
+  padding: 0 1rem !important;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+}
+
+.kontakt-pobocky-historie .kontakt-pobocky-pobocka-cover-text h2 {
+  margin: 0 !important;
+}
+
+@media (min-width: 992px) {
+  .kontakt-pobocky-historie .kontakt-pobocky-pobocka-cover,
+  .kontakt-pobocky-historie .kontakt-pobocky-pobocka-cover-small {
+    width: 440px !important;
+  }
+}
+
+/* Desktop: floating green frames — CV right, Praha left (as on live site) */
+@media (min-width: 992px) {
+  .kontakt-pobocky:not(.kontakt-pobocky-historie) .kontakt-pobocky-pobocka-cover {
+    display: flex !important;
+    align-items: stretch;
+    justify-content: center;
+    width: 440px !important;
+    height: 260px !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: auto !important;
+    bottom: auto !important;
+    transform: none !important;
+  }
+
+  .kontakt-pobocky:not(.kontakt-pobocky-historie) .kontakt-pobocky-pobocka-cover-right {
+    left: auto !important;
+    right: 0 !important;
+  }
+
+  .kontakt-pobocky:not(.kontakt-pobocky-historie) .kontakt-pobocky-pobocka-cover-text {
+    display: flex !important;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    padding: 0.5rem 1rem 1.5rem !important;
+    box-sizing: border-box;
+    text-align: center;
+  }
+
+  .kontakt-pobocky:not(.kontakt-pobocky-historie) .kontakt-pobocky-pobocka-cover-text h2 {
+    margin-top: 1rem !important;
+    margin-bottom: 0.75rem !important;
+  }
+
+  .kontakt-pobocky:not(.kontakt-pobocky-historie) .kontakt-pobocky-pobocka-cover-text-gps {
+    margin: 1rem 0 0.75rem !important;
+  }
+
+  .kontakt-pobocky:not(.kontakt-pobocky-historie) .kontakt-pobocky-pobocka-cover-text a {
+    display: inline-block;
+    margin-top: auto;
+    margin-bottom: 0;
+  }
+}
+
+/* Mobile / tablet: green covers the whole warehouse photo (Sklady only) */
+@media (max-width: 991.98px) {
+  .o-nas-video-wrap {
+    max-width: 100%;
+    margin: 0.5rem 0 1rem;
+  }
+
+  .o-nas-video {
+    width: 100% !important;
+    max-width: 100%;
+  }
+
+  .kontakt-pobocky:not(.kontakt-pobocky-historie) .kontakt-pobocky-pobocka-cover {
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    transform: none !important;
+    display: flex !important;
+    align-items: stretch;
+    justify-content: center;
+  }
+
+  .kontakt-pobocky:not(.kontakt-pobocky-historie) .kontakt-pobocky-pobocka-cover-overlay {
+    width: 100% !important;
+    height: 100% !important;
+    margin: 0 !important;
+    inset: 0 !important;
+  }
+
+  /* Same bottom space under “Ukázat na mapě” on both warehouse cards */
+  .kontakt-pobocky:not(.kontakt-pobocky-historie) .kontakt-pobocky-pobocka-cover-text {
+    display: flex !important;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 1.5rem 1rem 2.5rem !important;
+    box-sizing: border-box;
+    text-align: center;
+  }
+
+  .kontakt-pobocky:not(.kontakt-pobocky-historie) .kontakt-pobocky-pobocka-cover-text h2 {
+    margin-top: 0.75rem !important;
+    margin-bottom: 0.75rem !important;
+  }
+
+  .kontakt-pobocky:not(.kontakt-pobocky-historie) .kontakt-pobocky-pobocka-cover-text-gps {
+    margin: 1rem 0 0.75rem !important;
+  }
+
+  .kontakt-pobocky:not(.kontakt-pobocky-historie) .kontakt-pobocky-pobocka-cover-text a {
+    display: inline-block;
+    margin-top: auto;
+    margin-bottom: 0;
+  }
 }
 
 .pobocka-sluzby-left .separator-dark,
