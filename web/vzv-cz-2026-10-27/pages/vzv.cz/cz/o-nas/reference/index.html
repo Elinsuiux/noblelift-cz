@@ -3663,13 +3663,15 @@
 .ref-clients, .ref-projects, .ref-testimonials {
   max-width: 1240px; margin: 0 auto; padding: 64px 24px;
 }
+.ref-clients { padding-bottom: 28px; }
+.ref-projects { padding-top: 28px; }
 .ref-clients h2, .ref-projects h2, .ref-testimonials h2 {
   margin: 0 0 28px; text-align: center; text-transform: uppercase;
   font-family: Montserrat, sans-serif; font-weight: 700;
   font-size: clamp(1.5rem, 2.6vw, 2rem); letter-spacing: 0; color: #111;
 }
 .ref-clients-grid {
-  display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px;
+  display: grid; grid-template-columns: repeat(6, 1fr); gap: 12px;
 }
 .ref-client-logo {
   display: flex; align-items: center; justify-content: center;
@@ -3726,6 +3728,11 @@
 .ref-page.is-active, .ref-page:hover {
   border-color: #000; color: #fff !important; background: #000;
 }
+.ref-projects-pagination .ref-page {
+  cursor: pointer; font: inherit; appearance: none; -webkit-appearance: none;
+}
+.ref-projects-pagination .ref-page-dots { cursor: default; pointer-events: none; }
+
 .ref-testimonials-grid {
   display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px;
   text-align: left;
@@ -3803,7 +3810,7 @@
 .ref-page-wrap .rent-consult h2,
 .ref-page-wrap .rent-form h2,
 .ref-page-wrap .rent-form-about-lead {
-  margin: 0 0 20px;
+  margin: 0 0 10px;
   font-family: Montserrat, sans-serif;
   font-size: 1.2rem;
   line-height: 1.25;
@@ -3847,10 +3854,10 @@
   display: block; color: #555; font-size: 0.78rem; line-height: 1.35;
 }
 .ref-page-wrap .rent-consult-cta {
-  margin: 14px 0 6px; font-size: 0.84rem; color: #111;
+  margin: 10px 0 4px; font-size: 0.84rem; color: #111;
 }
 .ref-page-wrap .rent-consult-phone {
-  margin: 0 0 8px; font-size: 0.84rem; color: #555;
+  margin: 0 0 4px; font-size: 0.84rem; color: #555;
 }
 .ref-page-wrap .rent-consult-phone a,
 .ref-page-wrap .rent-consult-refs a,
@@ -3898,24 +3905,49 @@
   display: block; margin: 12px 0 0; font-size: 0.86rem; color: #333; text-decoration: none;
 }
 .ref-page-wrap .rent-contact-bar {
-  display: grid; grid-template-columns: 1fr; gap: 16px;
-  align-items: start; align-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  align-items: start;
+  align-content: space-between;
+  padding: 18px 20px 0;
+  overflow: hidden;
+}
+.ref-page-wrap .rent-form-about {
+  max-width: none;
+  padding: 0;
 }
 .ref-page-wrap .rent-form-about > p {
   margin: 0 0 8px; font-size: 0.86rem; line-height: 1.45; color: #555;
 }
 .ref-page-wrap .rent-form-person {
-  display: grid; grid-template-columns: minmax(0, 1fr) 176px;
-  gap: 10px; align-items: end; margin-top: auto;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 176px;
+  gap: 10px;
+  align-items: end;
+  margin-top: 0;
 }
-.ref-page-wrap .rent-form-person-meta { display: grid; gap: 2px; padding-bottom: 6px; }
+.ref-page-wrap .rent-form-person-meta {
+  display: grid;
+  gap: 2px;
+  padding-bottom: 18px;
+  align-self: end;
+}
 .ref-page-wrap .rent-form-person-meta strong { font-size: 0.95rem; color: #111; }
 .ref-page-wrap .rent-form-person-meta span { font-size: 0.8rem; color: #666; }
 .ref-page-wrap .rent-form-person-photo {
-  width: 176px; height: 198px; overflow: hidden; background: transparent;
+  width: 176px;
+  height: 198px;
+  margin: 0;
+  margin-bottom: 0;
+  overflow: hidden;
+  background: transparent;
+  justify-self: end;
+  align-self: end;
 }
 .ref-page-wrap .rent-form-person-photo img {
-  display: block; width: 100%; height: 100%; object-fit: cover; object-position: center 12%;
+  display: block; width: 100%; height: 100%;
+  object-fit: cover; object-position: 50% 12%;
 }
 @media (max-width: 992px) {
   .ref-videos-inner, .ref-projects-grid, .ref-testimonials-grid, .ref-testimonials-logos { grid-template-columns: 1fr; }
@@ -3926,10 +3958,29 @@
     grid-template-columns: 1fr;
     grid-template-areas: "form" "check" "consult" "contact";
   }
-  .ref-page-wrap .rent-form-fields, .ref-page-wrap .rent-form-person { grid-template-columns: 1fr; }
+  .ref-page-wrap .rent-form-fields { grid-template-columns: 1fr; }
+  .ref-page-wrap .rent-form-person {
+    grid-template-columns: minmax(0, 1fr) 176px;
+  }
 }
 @media (max-width: 576px) {
   .ref-clients-grid { grid-template-columns: repeat(3, 1fr); }
+  .ref-videos { padding: 24px 16px; }
+  .ref-clients,
+  .ref-projects,
+  .ref-testimonials {
+    padding: 28px 16px;
+  }
+  .ref-clients h2,
+  .ref-projects h2,
+  .ref-testimonials h2 {
+    margin-bottom: 20px;
+  }
+  .ref-page-wrap .rent-bottom {
+    padding-top: 28px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
 }
 </style>
 
@@ -4021,10 +4072,19 @@
 
   <section class="ref-projects" id="realizace">
     <h2>Realizace</h2>
-    <div class="ref-projects-grid">
+    <div class="ref-projects-grid" data-ref-projects-grid>
+      <article class="ref-project-card">
+        <a class="ref-project-thumb" href="https://www.vzvrent.cz/novinky/z-realizaci-vzv-rent-manipulace-s-tezkou-technikou-a-technologiemi" target="_blank" rel="noopener noreferrer">
+          <img src="https://www.vzvrent.cz/?img-webp=novinky/275/275_1787821249.png&amp;webp-width=500" alt="Z realizací VZV RENT: Manipulace s těžkou technikou a technologiemi" loading="lazy" />
+        </a>
+        <time class="ref-project-date" datetime="2026-08-19">19.08.2026</time>
+        <h3><a href="https://www.vzvrent.cz/novinky/z-realizaci-vzv-rent-manipulace-s-tezkou-technikou-a-technologiemi" target="_blank" rel="noopener noreferrer">Z realizací VZV RENT: Manipulace s těžkou technikou a technologiemi</a></h3>
+        <p>V uplynulém období jsme zajistili několik zajímavých realizací, při kterých jsme využili vysokozdvižné vozíky, terénní techniku i teleskopické manipulátory.</p>
+        <a class="ref-project-more" href="https://www.vzvrent.cz/novinky/z-realizaci-vzv-rent-manipulace-s-tezkou-technikou-a-technologiemi" target="_blank" rel="noopener noreferrer">Číst více →</a>
+      </article>
       <article class="ref-project-card">
         <a class="ref-project-thumb" href="https://www.vzvrent.cz/novinky/ohlednuti-za-breznem-pestre-realizace-napric-prumyslem" target="_blank" rel="noopener noreferrer">
-          <img src="../../../../../assets/vzv.cz/assets/img/pujcovna_vzv/teleskopicke-manipulatory.webp" alt="Teleskopický manipulátor JCB" loading="lazy" />
+          <img src="https://www.vzvrent.cz/?img-webp=novinky/272/272_1780558357.png&amp;webp-width=500" alt="Ohlédnutí za březnem: pestré realizace napříč průmyslem" loading="lazy" />
         </a>
         <time class="ref-project-date" datetime="2026-06-08">08.06.2026</time>
         <h3><a href="https://www.vzvrent.cz/novinky/ohlednuti-za-breznem-pestre-realizace-napric-prumyslem" target="_blank" rel="noopener noreferrer">Ohlédnutí za březnem: pestré realizace napříč průmyslem</a></h3>
@@ -4033,31 +4093,72 @@
       </article>
       <article class="ref-project-card">
         <a class="ref-project-thumb" href="https://www.vzvrent.cz/novinky/ohlednuti-za-unorem-rozmanite-zakazky-v-praxi" target="_blank" rel="noopener noreferrer">
-          <img src="../../../../../assets/vzv.cz/assets/img/pujcovna_vzv/celni-vysokozdvizne-voziky.webp" alt="Čelní vysokozdvižné vozíky Linde" loading="lazy" />
+          <img src="https://www.vzvrent.cz/?img-webp=novinky/264/264_1776239462.png&amp;webp-width=500" alt="Ohlédnutí za únorem: rozmanité zakázky v praxi" loading="lazy" />
         </a>
         <time class="ref-project-date" datetime="2026-05-12">12.05.2026</time>
         <h3><a href="https://www.vzvrent.cz/novinky/ohlednuti-za-unorem-rozmanite-zakazky-v-praxi" target="_blank" rel="noopener noreferrer">Ohlédnutí za únorem: rozmanité zakázky v praxi</a></h3>
         <p>Únor byl ve znamení pestrých realizací, které znovu potvrdily, že správná technika a zkušenosti jdou ruku v ruce.</p>
         <a class="ref-project-more" href="https://www.vzvrent.cz/novinky/ohlednuti-za-unorem-rozmanite-zakazky-v-praxi" target="_blank" rel="noopener noreferrer">Číst více →</a>
       </article>
-      <article class="ref-project-card">
-        <a class="ref-project-thumb" href="https://www.vzvrent.cz/novinky/manipulace-soucastek-lanove-drahy-na-petrine" target="_blank" rel="noopener noreferrer">
-          <img src="../../../../../assets/vzv.cz/assets/img/pujcovna_vzv/pracovni-plosiny.webp" alt="Pracovní plošina JLG" loading="lazy" />
-        </a>
-        <time class="ref-project-date" datetime="2026-04-13">13.04.2026</time>
-        <h3><a href="https://www.vzvrent.cz/novinky/manipulace-soucastek-lanove-drahy-na-petrine" target="_blank" rel="noopener noreferrer">Manipulace součástek lanové dráhy na Petříně</a></h3>
-        <p>Podíleli jsme se na manipulaci a usazení technologických součástek lanové dráhy na Petříně — jedné z nejvýznamnějších technických a turistických památek v Praze.</p>
-        <a class="ref-project-more" href="https://www.vzvrent.cz/novinky/manipulace-soucastek-lanove-drahy-na-petrine" target="_blank" rel="noopener noreferrer">Číst více →</a>
-      </article>
     </div>
-    <div class="ref-projects-pagination">
-      <span class="ref-page is-active">1</span>
-      <span class="ref-page">2</span>
-      <span class="ref-page">3</span>
-      <span class="ref-page">4</span>
-      <span class="ref-page ref-page-dots">—</span>
-      <span class="ref-page">8</span>
+    <div class="ref-projects-pagination" data-ref-pages="8">
+      <button type="button" class="ref-page is-active" data-page="1" aria-current="page">1</button>
+      <button type="button" class="ref-page" data-page="2">2</button>
+      <button type="button" class="ref-page" data-page="3">3</button>
+      <button type="button" class="ref-page" data-page="4">4</button>
+      <span class="ref-page ref-page-dots" aria-hidden="true">—</span>
+      <button type="button" class="ref-page" data-page="8">8</button>
     </div>
+    <script type="application/json" id="ref-projects-data">[{"url":"https://www.vzvrent.cz/novinky/z-realizaci-vzv-rent-manipulace-s-tezkou-technikou-a-technologiemi","img":"https://www.vzvrent.cz/?img-webp=novinky/275/275_1787821249.png&webp-width=500","alt":"Z realizací VZV RENT: Manipulace s těžkou technikou a technologiemi","date":"19.08.2026","iso":"2026-08-19","title":"Z realizací VZV RENT: Manipulace s těžkou technikou a technologiemi","excerpt":"V uplynulém období jsme zajistili několik zajímavých realizací, při kterých jsme využili vysokozdvižné vozíky, terénní techniku i teleskopické manipulátory."},{"url":"https://www.vzvrent.cz/novinky/ohlednuti-za-breznem-pestre-realizace-napric-prumyslem","img":"https://www.vzvrent.cz/?img-webp=novinky/272/272_1780558357.png&webp-width=500","alt":"Ohlédnutí za březnem: pestré realizace napříč průmyslem","date":"08.06.2026","iso":"2026-06-08","title":"Ohlédnutí za březnem: pestré realizace napříč průmyslem","excerpt":"Březen přinesl několik zajímavých realizací, při kterých jsme opět využili manipulační techniku pro práci s technologickými zařízeními, rozměrnými náklady i těžkými průmyslovými celky."},{"url":"https://www.vzvrent.cz/novinky/ohlednuti-za-unorem-rozmanite-zakazky-v-praxi","img":"https://www.vzvrent.cz/?img-webp=novinky/264/264_1776239462.png&webp-width=500","alt":"Ohlédnutí za únorem: rozmanité zakázky v praxi","date":"12.05.2026","iso":"2026-05-12","title":"Ohlédnutí za únorem: rozmanité zakázky v praxi","excerpt":"Únor byl ve znamení pestrých realizací, které znovu potvrdily, že správná technika a zkušenosti jdou ruku v ruce."},{"url":"https://www.vzvrent.cz/novinky/manipulace-soucastek-lanove-drahy-na-petrine","img":"https://www.vzvrent.cz/?img-webp=novinky/263/263_1773996932.jpg&webp-width=500","alt":"Manipulace součástek lanové dráhy na Petříně","date":"13.04.2026","iso":"2026-04-13","title":"Manipulace součástek lanové dráhy na Petříně","excerpt":"Podíleli jsme se na manipulaci a usazení technologických součástek lanové dráhy na Petříně – jedné z nejvýznamnějších technických a turistických památek v Praze."},{"url":"https://www.vzvrent.cz/novinky/dalsi-realizace-s-technikou-vzv-rent","img":"https://www.vzvrent.cz/?img-webp=novinky/262/262_1773389007.png&webp-width=500","alt":"Další realizace s technikou VZV RENT","date":"07.04.2026","iso":"2026-04-07","title":"Další realizace s technikou VZV RENT","excerpt":"Naše technika se pravidelně podílí na manipulaci s materiálem i technologickými zařízeními v různých provozech po celé republice."},{"url":"https://www.vzvrent.cz/novinky/nase-technika-opet-v-akci-realizace-z-poslednich-tydnu","img":"https://www.vzvrent.cz/?img-webp=novinky/261/261_1773307735.png&webp-width=500","alt":"Naše technika opět v akci: realizace z posledních týdnů","date":"16.03.2026","iso":"2026-03-16","title":"Naše technika opět v akci: realizace z posledních týdnů","excerpt":"Naše technika je pravidelně v terénu a pomáhá firmám napříč různými obory – od citlivé manipulace v omezených prostorách až po přesuny těžkých technologických zařízení."},{"url":"https://www.vzvrent.cz/novinky/vzv-rent-v-terenu-ukazka-realizaci-z-poslednich-tydnu","img":"https://www.vzvrent.cz/?img-webp=novinky/260/260_1770642993.png&webp-width=500","alt":"VZV RENT v terénu: ukázka realizací z posledních týdnů","date":"08.02.2026","iso":"2026-02-08","title":"VZV RENT v terénu: ukázka realizací z posledních týdnů","excerpt":"Naše technika je každý týden v provozu a pomáhá firmám napříč různými obory – od stavebnictví a průmyslu až po logistiku a komerční projekty."},{"url":"https://www.vzvrent.cz/novinky/nase-technika-opet-v-akci-co-jsme-zvladli-v-poslednich-tydnech","img":"https://www.vzvrent.cz/?img-webp=novinky/257/257_1765868408.png&webp-width=500","alt":"Naše technika opět v akci: co jsme zvládli v posledních týdnech","date":"16.12.2025","iso":"2025-12-16","title":"Naše technika opět v akci: co jsme zvládli v posledních týdnech","excerpt":"Naše technika je každý týden v terénu a pomáhá firmám napříč odlišnými obory."},{"url":"https://www.vzvrent.cz/novinky/nase-technika-opet-v-akci-co-jsme-zvladli-behem-srpna","img":"https://www.vzvrent.cz/?img-webp=novinky/252/252_1760429034.png&webp-width=500","alt":"Naše technika opět v akci: co jsme zvládli během srpna","date":"14.10.2025","iso":"2025-10-14","title":"Naše technika opět v akci: co jsme zvládli během srpna","excerpt":"Srpen přinesl řadu rozmanitých projektů, kde jsme se opět mohli opřít o naše stroje i zkušený tým."},{"url":"https://www.vzvrent.cz/novinky/instalace-sochy-na-dvoreckem-moste-v-praze","img":"https://www.vzvrent.cz/?img-webp=novinky/243/243_1756814362.png&webp-width=500","alt":"Instalace sochy na Dvoreckém mostě v Praze","date":"09.09.2025","iso":"2025-09-09","title":"Instalace sochy na Dvoreckém mostě v Praze","excerpt":"Na vznikajícím Dvoreckém mostě v Praze jsme se podíleli na jedinečné instalaci dvanáctitunové železobetonové sochy Heavy Head Boy – chlapec s těžkou hlavou od umělce Krištofa Kintery."},{"url":"https://www.vzvrent.cz/novinky/letni-vyzva-ve-skoda-auto-mlada-boleslav","img":"https://www.vzvrent.cz/?img-webp=novinky/226/226_1754547096.png&webp-width=500","alt":"Letní výzva ve Škoda Auto Mladá Boleslav","date":"18.08.2025","iso":"2025-08-18","title":"Letní výzva ve Škoda Auto Mladá Boleslav","excerpt":"V červenci jsme se podíleli na jedné z klíčových akcí měsíce – plánované odstávce ve výrobním závodě Škoda Auto."},{"url":"https://www.vzvrent.cz/novinky/cervenec-prinesl-dalsi-zajimave-nasazeni-techniky-vzv-rent-napric-celou-cr","img":"https://www.vzvrent.cz/?img-webp=novinky/225/225_1754300888.png&webp-width=500","alt":"Červenec přinesl další zajímavé nasazení techniky VZV RENT napříč celou ČR","date":"04.08.2025","iso":"2025-08-04","title":"Červenec přinesl další zajímavé nasazení techniky VZV RENT napříč celou ČR","excerpt":"Každá realizace měla svá specifika – a právě v tom je naše silná stránka. Umíme se přizpůsobit prostoru, náročnosti manipulace i časovému harmonogramu."},{"url":"https://www.vzvrent.cz/novinky/spolehlivi-v-kazdem-prostredi-vzv-rent-pomaha-napric-ceskem","img":"https://www.vzvrent.cz/?img-webp=novinky/221/221_1750938450.png&webp-width=500","alt":"Spolehliví v každém prostředí – VZV RENT pomáhá napříč Českem","date":"26.06.2025","iso":"2025-06-26","title":"Spolehliví v každém prostředí – VZV RENT pomáhá napříč Českem","excerpt":"Za poslední měsíc naše technika VZV RENT opět pomohla realizovat celou řadu úkolů a výzev, od manipulace v historických prostorách až po přípravy sportovních akcí."},{"url":"https://www.vzvrent.cz/novinky/dalsi-uspesne-kvetnove-realizace-technika-vzv-rent-v-akci","img":"https://www.vzvrent.cz/?img-webp=novinky/216/216_1747989102.png&webp-width=500","alt":"Další úspěšné květnové realizace: technika VZV RENT v akci","date":"27.05.2025","iso":"2025-05-27","title":"Další úspěšné květnové realizace: technika VZV RENT v akci","excerpt":"V tomto měsíci jsme opět pomáhali našim klientům zvládnout celou řadu specifických úkolů. Díky flexibilnímu přístupu, široké nabídce strojů a možnosti krátkodobého i dlouhodobého pronájmu, včetně služby pronájem s obsluhou – jsme schopni přizpůsobit se rů"},{"url":"https://www.vzvrent.cz/novinky/vzv-rent-soucasti-jedne-z-nejvetsich-technologickych-odstavek-v-cr","img":"https://www.vzvrent.cz/?img-webp=novinky/215/215_1747988123.png&webp-width=500","alt":"VZV RENT součástí jedné z největších technologických odstávek v ČR","date":"26.05.2025","iso":"2025-05-26","title":"VZV RENT součástí jedné z největších technologických odstávek v ČR","excerpt":"V areálu společnosti ORLEN Unipetrol v Litvínově probíhá jedna z největších technologických odstávek v České republice. Jde o logisticky i technicky mimořádně náročnou akci, jejíž součástí je také technika z flotily VZV RENT."},{"url":"https://www.vzvrent.cz/novinky/dubnove-realizace-vzv-rent-kdyz-zalezi-na-vykonu-i-presnosti","img":"https://www.vzvrent.cz/?img-webp=novinky/214/214_1747143874.png&webp-width=500","alt":"Dubnové realizace VZV RENT: Když záleží na výkonu i přesnosti","date":"16.05.2025","iso":"2025-05-16","title":"Dubnové realizace VZV RENT: Když záleží na výkonu i přesnosti","excerpt":"Stroje VZV RENT se v dubnu podílely na různých projektech v terénu, kde bylo potřeba rychlé, flexibilní řešení a spolehlivá technika. Na těchto realizacích opět naše stroje prokázaly svou spolehlivost. Ať už šlo o manipulaci s těžkými materiály, složité ú"},{"url":"https://www.vzvrent.cz/novinky/nase-uspesne-realizace-spolehliva-manipulacni-technika-v-akci","img":"https://www.vzvrent.cz/?img-webp=novinky/209/209_1743680974.jpg&webp-width=500","alt":"Naše úspěšné realizace: Spolehlivá manipulační technika v akci","date":"07.04.2025","iso":"2025-04-07","title":"Naše úspěšné realizace: Spolehlivá manipulační technika v akci","excerpt":"VZVRENT nabízí širokou škálu vysokozdvižných vozíků a manipulační techniky, kterou poskytujeme jak firmám, tak jednotlivcům pro různé příležitosti."},{"url":"https://www.vzvrent.cz/novinky/pripravy-na-oktagon-2024","img":"https://www.vzvrent.cz/?img-webp=novinky/196/oktagon.jpg&webp-width=500","alt":"Přípravy na Oktagon 2024","date":"06.06.2024","iso":"2024-06-06","title":"Přípravy na Oktagon 2024","excerpt":"přípravy na Oktagon 2024 jsou v plném proudu!"},{"url":"https://www.vzvrent.cz/novinky/demontaz-simulatoru-boeingu-737","img":"https://www.vzvrent.cz/?img-webp=novinky/173/uvod.jpg&webp-width=500","alt":"Demontáž simulátoru Boeingu 737","date":"23.02.2023","iso":"2023-02-23","title":"Demontáž simulátoru Boeingu 737","excerpt":"V areálu Letiště Václava Havla, kde sídlí společnost Czech Aviation Training Centre s.r.o., jsme měli další zakázku. Šlo o demontáž trenažeru Boeingu 737. Školící centrum se zabývá výcvikem pilotů, palubních průvodčích a nabízí i spoustu dalších kurzů."},{"url":"https://www.vzvrent.cz/novinky/stavba-hangaru","img":"https://www.vzvrent.cz/?img-webp=novinky/172/uvod.jpg&webp-width=500","alt":"Stavba hangáru","date":"15.02.2023","iso":"2023-02-15","title":"Stavba hangáru","excerpt":"Teleskopický manipulátor JCB 535-140 využil svoji sílu a se svým teleskopickým ramenem pomohl se stavbou hangáru na soukromém letišti."},{"url":"https://www.vzvrent.cz/novinky/prevoz-ct","img":"https://www.vzvrent.cz/?img-webp=novinky/136/6.jpg&webp-width=500","alt":"Převoz CT","date":"13.12.2022","iso":"2022-12-13","title":"Převoz CT","excerpt":"Vysokozdvižný vozík Linde H 50 T s nosností 5 tun a výškou zdvihu až 5,85 m byl vyslán na pomoc do Ústřední vojenské nemocnice v Praze. Náš zkušený řidič měl na starost převoz CNC stroje."},{"url":"https://www.vzvrent.cz/novinky/ulozeni-stroje-v-klasterci-nad-ohri","img":"https://www.vzvrent.cz/?img-webp=novinky/137/pf22.jpg&webp-width=500","alt":"Uložení stroje v Klášterci nad Ohří","date":"25.11.2022","iso":"2022-11-25","title":"Uložení stroje v Klášterci nad Ohří","excerpt":"Tentokrát jsme z naší flotily do terénu vyslaly plynový vysokozdvižný vozík Linde..."},{"url":"https://www.vzvrent.cz/novinky/nataceni-filmu-stockholm-bloodbath","img":"https://www.vzvrent.cz/?img-webp=novinky/61/7.jpg&webp-width=500","alt":"Natáčení filmu Stockholm Bloodbath","date":"15.11.2022","iso":"2022-11-15","title":"Natáčení filmu Stockholm Bloodbath","excerpt":"Několik našich teleskopických manipulátorů bylo..."},{"url":"https://www.vzvrent.cz/novinky/vytazeni-berana-z-lisu","img":"https://www.vzvrent.cz/?img-webp=novinky/62/1.jpg&webp-width=500","alt":"Vytažení berana z lisu","date":"03.11.2022","iso":"2022-11-03","title":"Vytažení berana z lisu","excerpt":"Tentokrát byl k pronájmu z naší flotily vybrán elektrický vysokozdvižný vozík Linde E 50 HL-01. V Českém Brodě byl spolu s ním vytažen..."}]</script>
+    <script>
+(function () {
+  var root = document.getElementById("realizace");
+  if (!root) return;
+  var dataEl = document.getElementById("ref-projects-data");
+  var grid = root.querySelector("[data-ref-projects-grid]");
+  var pager = root.querySelector(".ref-projects-pagination");
+  if (!dataEl || !grid || !pager) return;
+  var items = [];
+  try { items = JSON.parse(dataEl.textContent || "[]"); } catch (e) { return; }
+  var perPage = 3;
+  function esc(s) {
+    return String(s == null ? "" : s)
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;");
+  }
+  function render(page) {
+    var start = (page - 1) * perPage;
+    var slice = items.slice(start, start + perPage);
+    grid.innerHTML = slice.map(function (a) {
+      return '<article class="ref-project-card">' +
+        '<a class="ref-project-thumb" href="' + esc(a.url) + '" target="_blank" rel="noopener noreferrer">' +
+          '<img src="' + esc(a.img) + '" alt="' + esc(a.alt || a.title) + '" loading="lazy" />' +
+        '</a>' +
+        '<time class="ref-project-date" datetime="' + esc(a.iso) + '">' + esc(a.date) + '</time>' +
+        '<h3><a href="' + esc(a.url) + '" target="_blank" rel="noopener noreferrer">' + esc(a.title) + '</a></h3>' +
+        '<p>' + esc(a.excerpt) + '</p>' +
+        '<a class="ref-project-more" href="' + esc(a.url) + '" target="_blank" rel="noopener noreferrer">Číst více →</a>' +
+      '</article>';
+    }).join('');
+    pager.querySelectorAll(".ref-page[data-page]").forEach(function (btn) {
+      var active = Number(btn.getAttribute("data-page")) === page;
+      btn.classList.toggle("is-active", active);
+      if (active) btn.setAttribute("aria-current", "page");
+      else btn.removeAttribute("aria-current");
+    });
+  }
+  pager.addEventListener("click", function (e) {
+    var btn = e.target.closest(".ref-page[data-page]");
+    if (!btn || !pager.contains(btn)) return;
+    var page = Number(btn.getAttribute("data-page"));
+    if (!page) return;
+    render(page);
+    root.scrollIntoView({ behavior: "smooth", block: "start" });
+  });
+})();
+    </script>
   </section>
 
   <section class="ref-testimonials">
@@ -4207,7 +4308,7 @@
           <a href="mailto:info@vzvrent.cz">info@vzvrent.cz</a>
         </div>
         <div class="rent-form-person-photo">
-          <img src="../../../../../assets/vzv.cz/assets/img/pujcovna_vzv/tomas-heralt.webp" alt="Tomáš Heralt" />
+          <img src="../../../../../assets/vzv.cz/assets/img/pujcovna_vzv/poptavkovy_formular/tomas-heralt.webp" alt="Tomáš Heralt" />
         </div>
       </div>
     </aside>

@@ -18,12 +18,17 @@
   padding-bottom: 1.5rem;
 }
 
-.repas-nabidka-btn {
+/* Bottom CTA: solid green, black text */
+.repas-nabidka-btn,
+a.repas-nabidka-btn,
+a.btn.repas-nabidka-btn {
   display: inline-flex !important;
   align-items: center;
   justify-content: center;
   background: #73fb61 !important;
+  background-color: #73fb61 !important;
   border: 2px solid #73fb61 !important;
+  border-color: #73fb61 !important;
   color: #111 !important;
   font-weight: 700 !important;
   text-decoration: none !important;
@@ -34,10 +39,40 @@
 }
 
 .repas-nabidka-btn:hover,
-.repas-nabidka-btn:focus {
+.repas-nabidka-btn:focus,
+a.repas-nabidka-btn:hover,
+a.repas-nabidka-btn:focus,
+a.btn.repas-nabidka-btn:hover,
+a.btn.repas-nabidka-btn:focus {
   background: #4ffa38 !important;
+  background-color: #4ffa38 !important;
   border-color: #4ffa38 !important;
   color: #111 !important;
+}
+
+/* Hero CTA: transparent + white outline/text → green text on hover */
+.kontakt-rozcestnik-oddeleni a.btn.btn-outline-light,
+.separator-vzv-dark .kontakt-rozcestnik-oddeleni a.btn.btn-outline-light {
+  background: transparent !important;
+  background-color: transparent !important;
+  border: 1px solid #fff !important;
+  border-color: #fff !important;
+  color: #fff !important;
+  -webkit-text-fill-color: #fff !important;
+  border-radius: 4px !important;
+}
+
+.kontakt-rozcestnik-oddeleni a.btn.btn-outline-light:hover,
+.kontakt-rozcestnik-oddeleni a.btn.btn-outline-light:focus,
+.kontakt-rozcestnik-oddeleni a.btn.btn-outline-light:active,
+.separator-vzv-dark .kontakt-rozcestnik-oddeleni a.btn.btn-outline-light:hover,
+.separator-vzv-dark .kontakt-rozcestnik-oddeleni a.btn.btn-outline-light:focus,
+.separator-vzv-dark .kontakt-rozcestnik-oddeleni a.btn.btn-outline-light:active {
+  background: transparent !important;
+  background-color: transparent !important;
+  border-color: #fff !important;
+  color: #73fb61 !important;
+  -webkit-text-fill-color: #73fb61 !important;
 }
 
 :root {

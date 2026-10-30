@@ -2622,8 +2622,14 @@ header .h-dropdown-menu {
     fill: var(--color-white) !important;
 }
 
-.repas-video video {
+/* Content videos must shrink to the column — intrinsic 960px overflows mobile */
+.repas-video video,
+.content-body .container > .row > .col-12 > video,
+.content-body .container video {
     width: 100%;
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
 
 .card-info-box-svg #svgCalendar {

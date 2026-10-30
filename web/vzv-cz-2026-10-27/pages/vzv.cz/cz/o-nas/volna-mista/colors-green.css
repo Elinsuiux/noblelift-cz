@@ -422,16 +422,23 @@ a.box-vyber-jazyka-jazyk:hover {
 }
 
 .content-body a.btn.btn-dark:hover,
-.content-body a.btn.btn-dark.form-control:hover {
-  background: #111 !important;
-  color: #fff !important;
-  -webkit-text-fill-color: #fff !important;
+.content-body a.btn.btn-dark:focus,
+.content-body a.btn.btn-dark:active,
+.content-body a.btn.btn-dark.form-control:hover,
+.content-body a.btn.btn-dark.form-control:focus,
+.content-body a.btn.btn-dark.form-control:active {
+  background: #000 !important;
+  background-color: #000 !important;
+  color: #73fb61 !important;
+  -webkit-text-fill-color: #73fb61 !important;
+  border-color: transparent !important;
 }
 
 .volna-mista-kariera-logo {
-  max-width: 280px;
+  max-width: 320px;
+  width: 100%;
   height: auto;
-  background: #1a1a1a;
+  background: transparent;
 }
 
 .volna-mista-video video,
@@ -441,27 +448,25 @@ a.box-vyber-jazyka-jazyk:hover {
   height: auto;
 }
 
-/* Warehouse overlays — green covers the whole photo */
-.kontakt-pobocky-pobocka-cover {
-  top: 0 !important;
-  left: 0 !important;
-  right: 0 !important;
-  bottom: 0 !important;
-  width: 100% !important;
-  height: 100% !important;
-  display: flex !important;
-  align-items: center;
-  justify-content: center;
+/* Map modals — wider than default Bootstrap dialog */
+#modal-pobocka-cv .modal-dialog,
+#modal-pobocka-pha .modal-dialog {
+  max-width: min(1200px, 94vw) !important;
+  width: 94vw !important;
+  margin-left: auto;
+  margin-right: auto;
 }
 
+#modal-pobocka-cv .modal-body,
+#modal-pobocka-pha .modal-body {
+  padding: 0;
+}
+
+/* Warehouse overlays — green tint + white text / green map link */
 .kontakt-pobocky-pobocka-cover-overlay {
   background: #003103 !important;
   opacity: 0.77 !important;
   mix-blend-mode: multiply !important;
-  width: 100% !important;
-  height: 100% !important;
-  margin: 0 !important;
-  inset: 0 !important;
 }
 
 .kontakt-pobocky-pobocka-cover-text {
@@ -482,4 +487,111 @@ a.box-vyber-jazyka-jazyk:hover {
 
 .kontakt-pobocky-pobocka-cover-text a:hover {
   color: #fff !important;
+}
+
+/* Desktop: two green frames (440×260), photo visible on the sides */
+@media (min-width: 992px) {
+  .kontakt-pobocky-pobocka-cover {
+    display: flex !important;
+    align-items: stretch;
+    justify-content: center;
+    width: 440px !important;
+    height: 260px !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: auto !important;
+    bottom: auto !important;
+    transform: none !important;
+  }
+
+  .kontakt-pobocky-pobocka-cover-right {
+    left: auto !important;
+    right: 0 !important;
+  }
+
+  .kontakt-pobocky-pobocka-cover-overlay {
+    width: 100% !important;
+    height: 100% !important;
+    margin: 0 !important;
+  }
+
+  .kontakt-pobocky-pobocka-cover-text {
+    display: flex !important;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    padding: 0.5rem 1rem 1.5rem !important;
+    box-sizing: border-box;
+    text-align: center;
+  }
+
+  .kontakt-pobocky-pobocka-cover-text h2 {
+    margin-top: 1rem !important;
+    margin-bottom: 0.75rem !important;
+  }
+
+  .kontakt-pobocky-pobocka-cover-text-gps {
+    margin: 1rem 0 0.75rem !important;
+  }
+
+  .kontakt-pobocky-pobocka-cover-text a {
+    display: inline-block;
+    margin-top: auto;
+    margin-bottom: 0;
+  }
+}
+
+/* Mobile: green covers the whole warehouse photo */
+@media (max-width: 991.98px) {
+  .repas-video {
+    margin-bottom: 1.5rem !important;
+  }
+
+  .kontakt-pobocky-pobocka-cover {
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    transform: none !important;
+    display: flex !important;
+    align-items: stretch;
+    justify-content: center;
+  }
+
+  .kontakt-pobocky-pobocka-cover-overlay {
+    width: 100% !important;
+    height: 100% !important;
+    margin: 0 !important;
+    inset: 0 !important;
+  }
+
+  .kontakt-pobocky-pobocka-cover-text {
+    display: flex !important;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 1.5rem 1rem 2.5rem !important;
+    box-sizing: border-box;
+    text-align: center;
+  }
+
+  .kontakt-pobocky-pobocka-cover-text h2 {
+    margin-top: 0.75rem !important;
+    margin-bottom: 0.75rem !important;
+  }
+
+  .kontakt-pobocky-pobocka-cover-text-gps {
+    margin: 1rem 0 0.75rem !important;
+  }
+
+  .kontakt-pobocky-pobocka-cover-text a {
+    display: inline-block;
+    margin-top: auto;
+    margin-bottom: 0;
+  }
 }
